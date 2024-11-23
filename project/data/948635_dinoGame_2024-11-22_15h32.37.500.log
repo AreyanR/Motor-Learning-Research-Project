@@ -1,0 +1,15 @@
+5.7141 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1920, 1080]. Using actual size
+6.2555 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002165788FC70>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002165788FC10>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002165788FA60>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000021657DFF640>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+6.2556 	EXP 	window1: mouseVisible = True
+6.2556 	EXP 	window1: backgroundImage = ''
+6.2556 	EXP 	window1: backgroundFit = 'none'
+6.2564 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+6.2564 	EXP 	window1: recordFrameIntervals = False
+6.2971 	EXP 	window1: recordFrameIntervals = True
+6.3430 	EXP 	Screen (0) actual frame rate measured at 240.14Hz
+6.3430 	EXP 	window1: recordFrameIntervals = False
+6.3431 	EXP 	window1: mouseVisible = False
+7.6400 	EXP 	dinoGame: status = STARTED
+7.6411 	EXP 	window1: mouseVisible = True
+7.6795 	EXP 	Created text1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text1', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+0.0520 	EXP 	window1: mouseVisible = True
