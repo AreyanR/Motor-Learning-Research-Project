@@ -1,0 +1,28 @@
+4.9529 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000015E26D53BE0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000015E26D53B80>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000015E26D539D0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000015E27200430>, multiSample=False, name='window1', numSamples=2, pos=(560, 140), screen=0, size=array([800, 800]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+4.9529 	EXP 	window1: mouseVisible = True
+4.9529 	EXP 	window1: backgroundImage = ''
+4.9529 	EXP 	window1: backgroundFit = 'none'
+4.9538 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+4.9539 	EXP 	window1: recordFrameIntervals = False
+4.9943 	EXP 	window1: recordFrameIntervals = True
+5.0276 	WARNING 	t of last frame was 8.23ms (=1/121)
+5.0446 	WARNING 	t of last frame was 8.84ms (=1/113)
+5.0616 	WARNING 	t of last frame was 9.01ms (=1/111)
+5.1028 	EXP 	Screen (0) actual frame rate measured at 243.46Hz
+5.1028 	EXP 	window1: recordFrameIntervals = False
+5.1029 	EXP 	window1: mouseVisible = True
+5.1298 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+6.4909 	EXP 	PSURP: status = STARTED
+6.4912 	EXP 	window1: mouseVisible = True
+6.5298 	EXP 	Created t_reset_PSURP = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='t_reset_PSURP', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='reseting PSURP', units='height', win=Window(...), wrapWidth=1)
+6.5299 	EXP 	window1: mouseVisible = True
+6.5355 	EXP 	Created t_tare = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='t_tare', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='loading each cell with 1 sec delay', units='height', win=Window(...), wrapWidth=1)
+6.5356 	EXP 	window1: mouseVisible = True
+6.5384 	EXP 	Created T_RUNE = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='T_RUNE', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Entering streaming mode ...', units='height', win=Window(...), wrapWidth=1)
+6.5385 	EXP 	window1: mouseVisible = True
+6.5411 	EXP 	Created feedback_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='feedback_text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Loading forces...', units='height', win=Window(...), wrapWidth=1)
+0.0135 	EXP 	t_reset_PSURP: autoDraw = True
+6.1263 	EXP 	t_reset_PSURP: autoDraw = False
+6.1263 	EXP 	t_tare: autoDraw = False
+6.1263 	EXP 	T_RUNE: autoDraw = True
+7.0159 	EXP 	window1: mouseVisible = True

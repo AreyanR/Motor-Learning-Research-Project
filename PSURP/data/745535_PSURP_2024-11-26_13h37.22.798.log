@@ -1,0 +1,27 @@
+17.7707 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001D9F14D6D90>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001D9F14D6D30>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001D9F14D6B50>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001D9F19A5D30>, multiSample=False, name='window1', numSamples=2, pos=(560, 140), screen=0, size=array([800, 800]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+17.7708 	EXP 	window1: mouseVisible = True
+17.7708 	EXP 	window1: backgroundImage = ''
+17.7708 	EXP 	window1: backgroundFit = 'none'
+17.7717 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+17.7717 	EXP 	window1: recordFrameIntervals = False
+17.8292 	EXP 	window1: recordFrameIntervals = True
+17.8456 	WARNING 	t of last frame was 8.48ms (=1/117)
+17.8636 	WARNING 	t of last frame was 9.83ms (=1/101)
+17.8794 	WARNING 	t of last frame was 9.01ms (=1/110)
+17.8960 	WARNING 	t of last frame was 8.87ms (=1/112)
+17.9056 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+17.9375 	EXP 	Screen (0) actual frame rate measured at 241.26Hz
+17.9375 	EXP 	window1: recordFrameIntervals = False
+17.9376 	EXP 	window1: mouseVisible = True
+18.0855 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+19.9802 	EXP 	PSURP: status = STARTED
+19.9804 	EXP 	window1: mouseVisible = True
+20.1335 	EXP 	Created t_reset_PSURP = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='t_reset_PSURP', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='reseting PSURP', units='height', win=Window(...), wrapWidth=1)
+20.1336 	EXP 	window1: mouseVisible = True
+20.1391 	EXP 	Created t_tare = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='t_tare', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='loading each cell with 1 sec delay', units='height', win=Window(...), wrapWidth=1)
+0.0152 	EXP 	t_reset_PSURP: autoDraw = True
+1.1055 	EXP 	t_reset_PSURP: autoDraw = False
+1.1055 	EXP 	t_tare: autoDraw = True
+6.0063 	EXP 	t_tare: autoDraw = False
+6.0064 	EXP 	PSURP: status = STOPPED
+6.0237 	EXP 	window1: mouseVisible = True
