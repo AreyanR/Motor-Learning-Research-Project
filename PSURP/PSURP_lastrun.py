@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on November 26, 2024, at 15:28
+    on November 27, 2024, at 15:43
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -328,7 +328,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "TARE" ---
     t_tare = visual.TextStim(win=win, name='t_tare',
-        text='loading each cell with 1 sec delay',
+        text='loading each cell with 1 sec delay (5 seconds)',
         font='Open Sans',
         pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -462,6 +462,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # Run 'End Routine' code from code
     ser.flush()
     ser.write("X".encode())
+    
+    # clear out the data from the IO buffers (Fresh commands)
+    # the "X" command puts tje PSURP into command mode
+    
+    
+    
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if routineForceEnded:
         routineTimer.reset()
@@ -566,6 +572,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     time.sleep(1)
     ser.write("TAR4\n".encode())
     time.sleep(1)
+    
+    
+    # the tar command zeros out all of the force messurements
+    # halt for one second to make sure command was processed 
+    
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if routineForceEnded:
         routineTimer.reset()
@@ -661,6 +672,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     thisExp.addData('RUNE.stopped', globalClock.getTime())
     # Run 'End Routine' code from Code_RUNE
     ser.write("RUNE\n".encode())
+    
+    # the rune command sets the PSURP to streaming mode. (for getting vals)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if routineForceEnded:
         routineTimer.reset()
@@ -764,20 +777,20 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         while intCounter < 1000:
             keys = event.getKeys()
             if keys:
-                if keys[0] == 'q':  # Quit key
+                if keys[0] == 'q':  # Quit key (only works during samples)
                     ser.flush()
-                    ser.write("X".encode())  # Reset command
+                    ser.write("X".encode())  
                     ser.flush()
                     ser.close()
                     core.quit()
         
             intCounter = intCounter + 1
-            strSerialData = ser.readline()  # Read a '\n' terminated line
+            strSerialData = ser.readline()  
         
             strMsg = ""
             strMsg += "BUT0 BUT1 BUT2 BUT3 BUT4 TTL\n"
         
-            output = strSerialData.decode()  # Decode raw serial data
+            output = strSerialData.decode()  
             outputlength = len(output)
         
             if outputlength == 12:
@@ -791,7 +804,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 strMsg += "" + output[7]
                 strMsg += "" + output[8]
                 strMsg += "" + output[9]
-                strMsg += "" + output[10] + "/n/n"
+                strMsg += "" + output[10] + "\n\n"
         
                 for i in range(71):
                     if Base71Lookup[i] == output[0]:
@@ -853,6 +866,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         
                 ser.reset_input_buffer()  # This clears the serial buffer so it doesn't overfill. This means you will miss samples!
                 win.flip()
+        
+        
+        
         
         
         # check for quit (typically the Esc key)
