@@ -1,0 +1,17 @@
+8.8614 	INFO 	Loaded monitor calibration from ['2024_11_11 13:57']
+9.1548 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002000C7F0190>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002000C7F01F0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000200170CF970>, multiSample=False, name='window1', numSamples=2, pos=[880.0, 140.0], screen=0, size=array([800, 800]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+9.1549 	EXP 	window1: backgroundImage = ''
+9.1549 	EXP 	window1: backgroundFit = 'none'
+9.1940 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+9.1940 	EXP 	window1: recordFrameIntervals = False
+9.2461 	EXP 	window1: recordFrameIntervals = True
+9.3005 	EXP 	Screen (0) actual frame rate measured at 198.56Hz
+9.3005 	EXP 	window1: recordFrameIntervals = False
+9.3053 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+11.5699 	INFO 	keyboard.Keyboard is using iohub backend.
+11.5699 	EXP 	game: status = STARTED
+11.8951 	EXP 	Created Background = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='Assets/background.jpg', interpolate=True, mask=None, maskParams=None, name='Background', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128.0, units='height', win=Window(...))
+11.9581 	EXP 	Created dino_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='Assets/dino.png', interpolate=True, mask=None, maskParams=None, name='dino_image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+11.9591 	EXP 	Created floor = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-3.0, draggable=False, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=array([-1., -1., -1.]), lineWidth=1.0, name='floor', opacity=1, ori=0.0, pos=array([ 0. , -0.5]), size=array([1. , 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+0.0361 	INFO 	saved data to D:\Users\areya\Desktop\work\motor-learning-research-project\Game\data/977558_game_2024-12-02_14h37.06.234.psydat
+0.0367 	INFO 	saved data to 'D:\\Users\\areya\\Desktop\\work\\motor-learning-research-project\\Game\\data/977558_game_2024-12-02_14h37.06.234.csv'

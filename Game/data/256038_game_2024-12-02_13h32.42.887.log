@@ -1,0 +1,16 @@
+4.7298 	INFO 	Loaded monitor calibration from ['2024_11_11 13:57']
+4.9880 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000021557F6D8D0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000021557F6DC30>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000002155803E5C0>, multiSample=False, name='window1', numSamples=2, pos=[830.0, 90.0], screen=0, size=array([900, 900]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+4.9881 	EXP 	window1: backgroundImage = ''
+4.9881 	EXP 	window1: backgroundFit = 'none'
+5.0295 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+5.0295 	EXP 	window1: recordFrameIntervals = False
+5.0880 	EXP 	window1: recordFrameIntervals = True
+5.1428 	EXP 	Screen (0) actual frame rate measured at 200.13Hz
+5.1428 	EXP 	window1: recordFrameIntervals = False
+5.1476 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+7.4137 	INFO 	keyboard.Keyboard is using iohub backend.
+7.4138 	EXP 	game: status = STARTED
+7.7438 	EXP 	Created Background = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='Assets/background.jpg', interpolate=True, mask=None, maskParams=None, name='Background', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128.0, units='height', win=Window(...))
+7.8042 	EXP 	Created dino = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='Assets/dino.png', interpolate=True, mask=None, maskParams=None, name='dino', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+0.0227 	INFO 	saved data to D:\Users\areya\Desktop\work\motor-learning-research-project\Game\data/256038_game_2024-12-02_13h32.42.887.psydat
+0.0242 	INFO 	saved data to 'D:\\Users\\areya\\Desktop\\work\\motor-learning-research-project\\Game\\data/256038_game_2024-12-02_13h32.42.887.csv'
