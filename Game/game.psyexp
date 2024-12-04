@@ -70,7 +70,7 @@
     <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
     <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
     <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
-    <Param val="1" valType="code" updates="None" name="runMode"/>
+    <Param val="0" valType="code" updates="None" name="runMode"/>
     <Param val="False" valType="bool" updates="None" name="rush"/>
     <Param val="time" valType="str" updates="None" name="sortColumns"/>
     <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
@@ -99,6 +99,35 @@
       </RoutineSettingsComponent>
     </Routine>
     <Routine name="MainGame">
+      <ImageComponent name="background1" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="Assets/7.png" valType="file" updates="constant" name="image"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="" valType="str" updates="constant" name="mask"/>
+        <Param val="background1" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="(2, 1)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+      </ImageComponent>
       <RoutineSettingsComponent name="MainGame" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
         <Param val="" valType="str" updates="None" name="backgroundImg"/>
@@ -115,7 +144,7 @@
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
-      <ImageComponent name="Background" plugin="None">
+      <ImageComponent name="background2" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -125,15 +154,15 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
-        <Param val="Assets/background.jpg" valType="file" updates="constant" name="image"/>
+        <Param val="Assets/7.png" valType="file" updates="constant" name="image"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
         <Param val="" valType="str" updates="constant" name="mask"/>
-        <Param val="Background" valType="code" updates="None" name="name"/>
+        <Param val="background2" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(2, 2)" valType="list" updates="constant" name="size"/>
+        <Param val="(2, 1)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
@@ -173,23 +202,6 @@
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
-      <CodeComponent name="DinoMovement" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="# Import the Keyboard class&amp;#10;from psychopy.hardware import keyboard&amp;#10;&amp;#10;# Initialize the Keyboard&amp;#10;kb = keyboard.Keyboard()&amp;#10;&amp;#10;# Initialize Dino's position and movement variables&amp;#10;dino_pos = [0, 0]  # Starting position [x, y]&amp;#10;dino_speed = 0  # Initial vertical speed&amp;#10;gravity = -0.00006  # Downward acceleration&amp;#10;jump_speed = 0.005  # Jumping speed&amp;#10;move_speed = 0.01  # Horizontal movement speed&amp;#10;ground_offset = 0.03" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="# Get the current state of the keyboard&amp;#10;keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)&amp;#10;&amp;#10;# Initialize key state flags&amp;#10;left_pressed = False&amp;#10;right_pressed = False&amp;#10;up_pressed = False&amp;#10;&amp;#10;# Update key state flags based on keys currently pressed&amp;#10;for key in keys_pressed:&amp;#10;    if key.name == 'left':&amp;#10;        left_pressed = True&amp;#10;    if key.name == 'right':&amp;#10;        right_pressed = True&amp;#10;    if key.name == 'up':&amp;#10;        up_pressed = True&amp;#10;&amp;#10;# Apply gravity to Dino's vertical speed&amp;#10;dino_speed += gravity&amp;#10;&amp;#10;# Jumping mechanism&amp;#10;dino_height = dino_image.size[1] / 2  # Half the Dino's height&amp;#10;floor_top = floor.pos[1] + (floor.size[1] / 2)  # Top of the floor&amp;#10;dino_bottom = dino_pos[1] - dino_height  # Bottom of the Dino&amp;#10;&amp;#10;# Collision with the floor: Prevent falling through the ground&amp;#10;if dino_bottom &lt;= floor_top:  # Collision detection&amp;#10;    # Snap Dino visually closer to the floor only if it's falling&amp;#10;    if dino_speed &lt; 0:  # Only snap when Dino is moving downward&amp;#10;        dino_pos[1] = floor_top + dino_height - ground_offset&amp;#10;        dino_speed = 0  # Reset vertical speed to stop falling&amp;#10;&amp;#10;# Jumping logic: Allow jump any time the 'up' key is pressed&amp;#10;if up_pressed:&amp;#10;    dino_speed = jump_speed  # Apply upward movement&amp;#10;&amp;#10;# Update Dino's vertical position&amp;#10;dino_pos[1] += dino_speed  # Update vertical position&amp;#10;&amp;#10;# Continuous horizontal movement only if keys are pressed&amp;#10;if left_pressed:&amp;#10;    dino_pos[0] -= move_speed  # Move Dino to the left&amp;#10;if right_pressed:&amp;#10;    dino_pos[0] += move_speed  # Move Dino to the right&amp;#10;&amp;#10;# Update the Dino's position in the game&amp;#10;dino_image.pos = dino_pos  # Set Dino's position based on updated values&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;keys = psychoJS.eventManager.getKeys();&amp;#10;if (_pj.in_es6(&quot;right&quot;, keys)) {&amp;#10;    trex.pos += [5, 0];&amp;#10;}&amp;#10;if (_pj.in_es6(&quot;left&quot;, keys)) {&amp;#10;    trex.pos -= [5, 0];&amp;#10;}&amp;#10;if ((_pj.in_es6(&quot;up&quot;, keys) &amp;&amp; (trex.pos[1] === (- 150)))) {&amp;#10;    trex.pos += [0, 200];&amp;#10;}&amp;#10;if ((trex.pos[1] &gt; (- 150))) {&amp;#10;    trex.pos -= [0, 10];&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="DinoMovement" valType="code" updates="None" name="name"/>
-      </CodeComponent>
       <PolygonComponent name="floor" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -219,6 +231,23 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="list" updates="constant" name="vertices"/>
       </PolygonComponent>
+      <CodeComponent name="DinoMovement" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="&amp;#10;&amp;#10;# Import the Keyboard class from PsychoPy&amp;#10;from psychopy.hardware import keyboard&amp;#10;&amp;#10;# Initialize the Keyboard&amp;#10;kb = keyboard.Keyboard()&amp;#10;&amp;#10;# Initialize Dino's position and movement variables&amp;#10;dino_pos = [0, 0]  # Starting position [x, y]&amp;#10;dino_speed = 0  # Initial vertical speed&amp;#10;gravity = -0.00006  # Downward acceleration&amp;#10;jump_speed = 0.005  # Jumping speed&amp;#10;move_speed = 0.01  # Horizontal movement speed&amp;#10;ground_offset = 0.03  # Offset to avoid sinking into the ground visually&amp;#10;&amp;#10;# Camera variables&amp;#10;camera_offset_x = 0  # Initial horizontal camera offset&amp;#10;&amp;#10;# Save original positions of objects for camera adjustments&amp;#10;original_floor_pos = floor.pos  # Save the floor's original position&amp;#10;&amp;#10;# Initialize backgrounds (two for seamless scrolling)&amp;#10;background1_start = background1.pos  # Save initial position for background1&amp;#10;background2_start = [background1_start[0] + background1.size[0], background1_start[1]]  # Position background2 to the right&amp;#10;background2.pos = background2_start  # Set background2's starting position" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="&amp;#10;&amp;#10;&amp;#10;# Get the current state of the keyboard&amp;#10;keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)&amp;#10;&amp;#10;# Initialize key state flags&amp;#10;left_pressed = False&amp;#10;right_pressed = False&amp;#10;up_pressed = False&amp;#10;&amp;#10;# Update key state flags based on keys currently pressed&amp;#10;for key in keys_pressed:&amp;#10;    if key.name == 'left':&amp;#10;        left_pressed = True&amp;#10;    if key.name == 'right':&amp;#10;        right_pressed = True&amp;#10;    if key.name == 'up':&amp;#10;        up_pressed = True&amp;#10;&amp;#10;# Apply gravity to Dino's vertical speed&amp;#10;dino_speed += gravity&amp;#10;&amp;#10;# Collision detection with the floor&amp;#10;dino_height = dino_image.size[1] / 2  # Half the Dino's height&amp;#10;floor_top = floor.pos[1] + (floor.size[1] / 2)  # Top of the floor&amp;#10;dino_bottom = dino_pos[1] - dino_height  # Bottom of the Dino&amp;#10;&amp;#10;# Align Dino with the floor if it collides&amp;#10;if dino_bottom &lt;= floor_top:  # If Dino's bottom is below the floor's top&amp;#10;    dino_pos[1] = floor_top + dino_height # Align Dino's bottom with the floor's top&amp;#10;    dino_speed = 0  # Reset vertical speed&amp;#10;&amp;#10;# Jumping logic: Allow jump when the 'up' key is pressed&amp;#10;if up_pressed and dino_bottom &lt;= floor_top:&amp;#10;    dino_speed = jump_speed  # Apply upward movement&amp;#10;&amp;#10;# Update Dino's vertical position&amp;#10;dino_pos[1] += dino_speed&amp;#10;&amp;#10;# Continuous horizontal movement&amp;#10;if left_pressed:&amp;#10;    dino_pos[0] -= move_speed  # Move Dino to the left&amp;#10;if right_pressed:&amp;#10;    dino_pos[0] += move_speed  # Move Dino to the right&amp;#10;&amp;#10;# Update the camera offset to match Dino's position&amp;#10;camera_offset_x = dino_pos[0]  # Camera follows Dino's X-position&amp;#10;&amp;#10;# Adjust positions of the floor and Dino&amp;#10;floor.pos = [original_floor_pos[0] - camera_offset_x, floor.pos[1]]&amp;#10;dino_image.pos = [0, dino_pos[1]]  # Center Dino horizontally, only update vertical&amp;#10;&amp;#10;# Move both backgrounds based on Dino's horizontal position (camera offset)&amp;#10;background1.pos = [background1_start[0] - camera_offset_x * 0.5, background1.pos[1]]&amp;#10;background2.pos = [background2_start[0] - camera_offset_x * 0.5, background2.pos[1]]&amp;#10;&amp;#10;# Reset background1 when it moves off-screen&amp;#10;if background1.pos[0] &lt;= -background1.size[0]:&amp;#10;    background1.pos[0] = background2.pos[0] + background2.size[0]  # Place it to the right of background2&amp;#10;&amp;#10;# Reset background2 when it moves off-screen&amp;#10;if background2.pos[0] &lt;= -background2.size[0]:&amp;#10;    background2.pos[0] = background1.pos[0] + background1.size[0]  # Place it to the right of background1&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;keys = psychoJS.eventManager.getKeys();&amp;#10;if (_pj.in_es6(&quot;right&quot;, keys)) {&amp;#10;    trex.pos += [5, 0];&amp;#10;}&amp;#10;if (_pj.in_es6(&quot;left&quot;, keys)) {&amp;#10;    trex.pos -= [5, 0];&amp;#10;}&amp;#10;if ((_pj.in_es6(&quot;up&quot;, keys) &amp;&amp; (trex.pos[1] === (- 150)))) {&amp;#10;    trex.pos += [0, 200];&amp;#10;}&amp;#10;if ((trex.pos[1] &gt; (- 150))) {&amp;#10;    trex.pos -= [0, 10];&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="DinoMovement" valType="code" updates="None" name="name"/>
+      </CodeComponent>
     </Routine>
   </Routines>
   <Flow>

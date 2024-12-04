@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on December 02, 2024, at 15:27
+    on December 04, 2024, at 05:02
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -359,14 +359,22 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Start Code - component code to be run after the window creation
     
     # --- Initialize components for Routine "MainGame" ---
-    Background = visual.ImageStim(
+    background1 = visual.ImageStim(
         win=win,
-        name='Background', 
-        image='Assets/background.jpg', mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), draggable=False, size=(2, 2),
+        name='background1', 
+        image='Assets/7.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), draggable=False, size=(2, 1),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
+    background2 = visual.ImageStim(
+        win=win,
+        name='background2', 
+        image='Assets/7.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), draggable=False, size=(2, 1),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-1.0)
     dino_image = visual.ImageStim(
         win=win,
         name='dino_image', 
@@ -374,9 +382,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         ori=0.0, pos=(0,0), draggable=False, size=(0.2, 0.2),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
-        texRes=128.0, interpolate=True, depth=-1.0)
+        texRes=128.0, interpolate=True, depth=-2.0)
+    floor = visual.Rect(
+        win=win, name='floor',
+        width=(1,0.3)[0], height=(1,0.3)[1],
+        ori=0.0, pos=(0,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-3.0, interpolate=True)
     # Run 'Begin Experiment' code from DinoMovement
-    # Import the Keyboard class
+    
+    
+    # Import the Keyboard class from PsychoPy
     from psychopy.hardware import keyboard
     
     # Initialize the Keyboard
@@ -388,14 +405,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     gravity = -0.00006  # Downward acceleration
     jump_speed = 0.005  # Jumping speed
     move_speed = 0.01  # Horizontal movement speed
-    ground_offset = 0.03
-    floor = visual.Rect(
-        win=win, name='floor',
-        width=(1,0.3)[0], height=(1,0.3)[1],
-        ori=0.0, pos=(0,-.5), draggable=False, anchor='center',
-        lineWidth=1.0,
-        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
-        opacity=None, depth=-3.0, interpolate=True)
+    ground_offset = 0.03  # Offset to avoid sinking into the ground visually
+    
+    # Camera variables
+    camera_offset_x = 0  # Initial horizontal camera offset
+    
+    # Save original positions of objects for camera adjustments
+    original_floor_pos = floor.pos  # Save the floor's original position
+    
+    # Initialize backgrounds (two for seamless scrolling)
+    background1_start = background1.pos  # Save initial position for background1
+    background2_start = [background1_start[0] + background1.size[0], background1_start[1]]  # Position background2 to the right
+    background2.pos = background2_start  # Set background2's starting position
     
     # create some handy timers
     
@@ -429,7 +450,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # create an object to store info about Routine MainGame
     MainGame = data.Routine(
         name='MainGame',
-        components=[Background, dino_image, floor],
+        components=[background1, background2, dino_image, floor],
     )
     MainGame.status = NOT_STARTED
     continueRoutine = True
@@ -464,23 +485,43 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *Background* updates
+        # *background1* updates
         
-        # if Background is starting this frame...
-        if Background.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # if background1 is starting this frame...
+        if background1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            Background.frameNStart = frameN  # exact frame index
-            Background.tStart = t  # local t and not account for scr refresh
-            Background.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(Background, 'tStartRefresh')  # time at next scr refresh
+            background1.frameNStart = frameN  # exact frame index
+            background1.tStart = t  # local t and not account for scr refresh
+            background1.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(background1, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'Background.started')
+            thisExp.timestampOnFlip(win, 'background1.started')
             # update status
-            Background.status = STARTED
-            Background.setAutoDraw(True)
+            background1.status = STARTED
+            background1.setAutoDraw(True)
         
-        # if Background is active this frame...
-        if Background.status == STARTED:
+        # if background1 is active this frame...
+        if background1.status == STARTED:
+            # update params
+            pass
+        
+        # *background2* updates
+        
+        # if background2 is starting this frame...
+        if background2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            background2.frameNStart = frameN  # exact frame index
+            background2.tStart = t  # local t and not account for scr refresh
+            background2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(background2, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'background2.started')
+            # update status
+            background2.status = STARTED
+            background2.setAutoDraw(True)
+        
+        # if background2 is active this frame...
+        if background2.status == STARTED:
             # update params
             pass
         
@@ -503,55 +544,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if dino_image.status == STARTED:
             # update params
             pass
-        # Run 'Each Frame' code from DinoMovement
-        # Get the current state of the keyboard
-        keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
-        
-        # Initialize key state flags
-        left_pressed = False
-        right_pressed = False
-        up_pressed = False
-        
-        # Update key state flags based on keys currently pressed
-        for key in keys_pressed:
-            if key.name == 'left':
-                left_pressed = True
-            if key.name == 'right':
-                right_pressed = True
-            if key.name == 'up':
-                up_pressed = True
-        
-        # Apply gravity to Dino's vertical speed
-        dino_speed += gravity
-        
-        # Jumping mechanism
-        dino_height = dino_image.size[1] / 2  # Half the Dino's height
-        floor_top = floor.pos[1] + (floor.size[1] / 2)  # Top of the floor
-        dino_bottom = dino_pos[1] - dino_height  # Bottom of the Dino
-        
-        # Collision with the floor: Prevent falling through the ground
-        if dino_bottom <= floor_top:  # Collision detection
-            # Snap Dino visually closer to the floor only if it's falling
-            if dino_speed < 0:  # Only snap when Dino is moving downward
-                dino_pos[1] = floor_top + dino_height - ground_offset
-                dino_speed = 0  # Reset vertical speed to stop falling
-        
-        # Jumping logic: Allow jump any time the 'up' key is pressed
-        if up_pressed:
-            dino_speed = jump_speed  # Apply upward movement
-        
-        # Update Dino's vertical position
-        dino_pos[1] += dino_speed  # Update vertical position
-        
-        # Continuous horizontal movement only if keys are pressed
-        if left_pressed:
-            dino_pos[0] -= move_speed  # Move Dino to the left
-        if right_pressed:
-            dino_pos[0] += move_speed  # Move Dino to the right
-        
-        # Update the Dino's position in the game
-        dino_image.pos = dino_pos  # Set Dino's position based on updated values
-        
         
         # *floor* updates
         
@@ -572,6 +564,81 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if floor.status == STARTED:
             # update params
             pass
+        # Run 'Each Frame' code from DinoMovement
+        
+        
+        
+        # Get the current state of the keyboard
+        keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
+        
+        # Initialize key state flags
+        left_pressed = False
+        right_pressed = False
+        up_pressed = False
+        
+        # Update key state flags based on keys currently pressed
+        for key in keys_pressed:
+            if key.name == 'left':
+                left_pressed = True
+            if key.name == 'right':
+                right_pressed = True
+            if key.name == 'up':
+                up_pressed = True
+        
+        # Apply gravity to Dino's vertical speed
+        dino_speed += gravity
+        
+        # Collision detection with the floor
+        dino_height = dino_image.size[1] / 2  # Half the Dino's height
+        floor_top = floor.pos[1] + (floor.size[1] / 2)  # Top of the floor
+        dino_bottom = dino_pos[1] - dino_height  # Bottom of the Dino
+        
+        # Align Dino with the floor if it collides
+        if dino_bottom <= floor_top:  # If Dino's bottom is below the floor's top
+            dino_pos[1] = floor_top + dino_height # Align Dino's bottom with the floor's top
+            dino_speed = 0  # Reset vertical speed
+        
+        # Jumping logic: Allow jump when the 'up' key is pressed
+        if up_pressed and dino_bottom <= floor_top:
+            dino_speed = jump_speed  # Apply upward movement
+        
+        # Update Dino's vertical position
+        dino_pos[1] += dino_speed
+        
+        # Continuous horizontal movement
+        if left_pressed:
+            dino_pos[0] -= move_speed  # Move Dino to the left
+        if right_pressed:
+            dino_pos[0] += move_speed  # Move Dino to the right
+        
+        # Update the camera offset to match Dino's position
+        camera_offset_x = dino_pos[0]  # Camera follows Dino's X-position
+        
+        # Adjust positions of the floor and Dino
+        floor.pos = [original_floor_pos[0] - camera_offset_x, floor.pos[1]]
+        dino_image.pos = [0, dino_pos[1]]  # Center Dino horizontally, only update vertical
+        
+        # Move both backgrounds based on Dino's horizontal position (camera offset)
+        background1.pos = [background1_start[0] - camera_offset_x * 0.5, background1.pos[1]]
+        background2.pos = [background2_start[0] - camera_offset_x * 0.5, background2.pos[1]]
+        
+        # Reset background1 when it moves off-screen
+        if background1.pos[0] <= -background1.size[0]:
+            background1.pos[0] = background2.pos[0] + background2.size[0]  # Place it to the right of background2
+        
+        # Reset background2 when it moves off-screen
+        if background2.pos[0] <= -background2.size[0]:
+            background2.pos[0] = background1.pos[0] + background1.size[0]  # Place it to the right of background1
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
