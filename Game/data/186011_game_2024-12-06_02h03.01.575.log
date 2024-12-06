@@ -1,0 +1,45 @@
+4.7490 	INFO 	Loaded monitor calibration from ['2024_11_11 13:57']
+4.9903 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000177820DA7D0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000177820DA470>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=True, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000177821A6650>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([2560, 1080]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+4.9903 	EXP 	window1: backgroundImage = ''
+4.9903 	EXP 	window1: backgroundFit = 'none'
+5.0412 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+5.0412 	EXP 	window1: recordFrameIntervals = False
+5.1250 	EXP 	window1: recordFrameIntervals = True
+5.1800 	EXP 	Screen (0) actual frame rate measured at 200.02Hz
+5.1800 	EXP 	window1: recordFrameIntervals = False
+7.5530 	INFO 	keyboard.Keyboard is using iohub backend.
+7.5530 	EXP 	game: status = STARTED
+7.5640 	EXP 	Created background1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='Assets/7.png', interpolate=True, mask=None, maskParams=None, name='background1', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 1.]), texRes=128.0, units='height', win=Window(...))
+7.5734 	EXP 	Created background2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='Assets/7.png', interpolate=True, mask=None, maskParams=None, name='background2', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 1.]), texRes=128.0, units='height', win=Window(...))
+7.5831 	EXP 	Created background3 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, image='Assets/7.png', interpolate=True, mask=None, maskParams=None, name='background3', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 1.]), texRes=128.0, units='height', win=Window(...))
+7.6435 	EXP 	Created dino_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, image='Assets/dino.png', interpolate=True, mask=None, maskParams=None, name='dino_image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.2, 0.2]), texRes=128.0, units='height', win=Window(...))
+7.6444 	EXP 	Created floor = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-4.0, draggable=False, fillColor=array([-1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([-1., -1., -1.]), interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=array([-1., -1., -1.]), lineWidth=1.0, name='floor', opacity=1, ori=0.0, pos=array([-0.5, -0.5]), size=array([0.5, 0.3]), units='height', vertices=ndarray(...), win=Window(...))
+7.6445 	INFO 	keyboard.Keyboard is using iohub backend.
+0.0202 	EXP 	background1: autoDraw = True
+0.0202 	EXP 	background2: autoDraw = True
+0.0202 	EXP 	background3: autoDraw = True
+0.0202 	EXP 	dino_image: autoDraw = True
+0.0202 	EXP 	floor: autoDraw = True
+1.5352 	DATA 	Keypress: right
+3.5820 	DATA 	Keypress: up
+5.3469 	DATA 	Keypress: right
+6.2770 	DATA 	Keypress: up
+6.9072 	DATA 	Keypress: right
+8.1669 	DATA 	Keypress: left
+8.7025 	DATA 	Keypress: up
+9.3171 	DATA 	Keypress: left
+16.2070 	DATA 	Keypress: right
+17.1768 	DATA 	Keypress: right
+17.7768 	DATA 	Keypress: right
+23.9964 	DATA 	Keypress: left
+39.3923 	DATA 	Keypress: q
+40.0671 	DATA 	Keypress: escape
+40.1753 	EXP 	game: status = STOPPED
+40.1793 	EXP 	background1: autoDraw = False
+40.1793 	EXP 	background2: autoDraw = False
+40.1793 	EXP 	background3: autoDraw = False
+40.1793 	EXP 	dino_image: autoDraw = False
+40.1793 	EXP 	floor: autoDraw = False
+40.1794 	EXP 	game: status = STOPPED
+40.1809 	INFO 	saved data to 'D:\\Users\\areya\\Desktop\\work\\motor-learning-research-project\\Game\\data/186011_game_2024-12-06_02h03.01.575.csv'
+40.1814 	INFO 	saved data to D:\Users\areya\Desktop\work\motor-learning-research-project\Game\data/186011_game_2024-12-06_02h03.01.575.psydat

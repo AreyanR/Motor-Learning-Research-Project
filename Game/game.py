@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on December 06, 2024, at 14:10
+    on December 05, 2024, at 14:16
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -126,7 +126,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='D:\\Users\\areya\\Desktop\\work\\motor-learning-research-project\\Game\\game_lastrun.py',
+        originPath='D:\\Users\\areya\\Desktop\\work\\motor-learning-research-project\\Game\\game.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -399,49 +399,30 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
         opacity=None, depth=-4.0, interpolate=True)
     # Run 'Begin Experiment' code from DinoMovement
+    
+    
+    # Import the Keyboard class from PsychoPy
     from psychopy.hardware import keyboard
     
     # Initialize the Keyboard
     kb = keyboard.Keyboard()
     
-    # Dino movement variables
-    dino_pos = [-0.5, -0.3]  # Starting position [x, y]
+    # Initialize Dino's position and movement variables
+    dino_pos = [0, 0]  # Starting position [x, y]
     dino_speed = 0  # Initial vertical speed
     gravity = -0.00006  # Downward acceleration
     jump_speed = 0.005  # Jumping speed
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
-    min_x = -0.6  # Left boundary
-    respawn_position = [-0.5, -0.3]  # Starting position for Dino
     
-    # Get the floor vertices from the Floor Controller
-    floor_vertices = floor.vertices  # Assuming 'floor' is a Polygon or Rect stimulus
-    
-    # Calculate the floor's top and fall threshold
-    floor_top = max(v[1] for v in floor_vertices)  # Highest point of the floor
-    fall_threshold = min(v[1] for v in floor_vertices) - 1  # Slightly below the lowest floor point
-    
-    print(f"Fall Threshold: {fall_threshold}")
-    
-    # Function to check if Dino is on the floor
-    def is_on_floor(dino_pos):
-        """Check if Dino's bottom is within the bounds of the floor."""
-        dino_bottom = dino_pos[1] - (dino_image.size[1] / 2)  # Dino's bottom Y-position
-    
-        # Extract horizontal and vertical bounds from the floor vertices
-        x_min = min(v[0] for v in floor_vertices)
-        x_max = max(v[0] for v in floor_vertices)
-    
-        # Check if Dino's bottom is within the floor bounds
-        return x_min <= dino_pos[0] <= x_max and dino_bottom <= floor_top
-    # Run 'Begin Experiment' code from BackgroundController
     # Camera variables
     camera_offset_x = 0  # Initial horizontal camera offset
     
     # Save original positions of objects for camera adjustments
     original_floor_pos = floor.pos  # Save the floor's original position
     
-    # Initialize background positions
+    
+    # Initialize backgrounds (three for seamless scrolling)
     overlap = 0.009  # Amount to overlap backgrounds (adjust as needed)
     background1_start = background1.pos  # Save initial position for background1
     background2_start = [background1_start[0] + background1.size[0] - overlap, background1_start[1]]  # Overlap background2
@@ -451,48 +432,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     background1.pos = background1_start
     background2.pos = background2_start
     background3.pos = background3_start
-    
-    # Run 'Begin Experiment' code from FloorControler
-    from psychopy.visual import Rect
-    
-    # Floor properties
-    floor_height = 0.3  # Thickness of the floor
-    floor_width = .5  # Width of the floor
-    floor_pos = [-0.5, -0.5]  # Position of the floor (centered)
-    
-    # Create the floor stimulus
-    floor = Rect(
-        win=win,
-        width=floor_width,
-        height=floor_height,
-        pos=floor_pos,
-        fillColor="black",  # Floor color
-        lineColor=None  # No border
-    )
-    
-    # Calculate vertices of the Rect
-    def calculate_rect_vertices(rect):
-        """Calculate the vertices of a Rect stimulus."""
-        half_width = rect.width / 2
-        half_height = rect.height / 2
-        center_x, center_y = rect.pos
-    
-        # Calculate the corners of the rectangle
-        vertices = [
-            [center_x - half_width, center_y - half_height],  # Bottom-left
-            [center_x + half_width, center_y - half_height],  # Bottom-right
-            [center_x + half_width, center_y + half_height],  # Top-right
-            [center_x - half_width, center_y + half_height],  # Top-left
-        ]
-        return vertices
-    
-    # Get the floor's vertices
-    floor_vertices = calculate_rect_vertices(floor)
-    
-    # Calculate floor top and fall threshold
-    floor_top = max(v[1] for v in floor_vertices)  # Highest point of the floor
-    fall_threshold = min(v[1] for v in floor_vertices) - 0.5  # Slightly below the lowest floor point
-    
     
     # create some handy timers
     
@@ -661,6 +600,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update params
             pass
         # Run 'Each Frame' code from DinoMovement
+        
+        # Get the current state of the keyboard
         keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
         
         # Initialize key state flags
@@ -680,51 +621,53 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Apply gravity to Dino's vertical speed
         dino_speed += gravity
         
-        # Check if Dino is on the floor
-        if is_on_floor(dino_pos) and dino_speed <= 0:  # Falling or stationary
-            dino_pos[1] = floor_top + (dino_image.size[1] / 2) - ground_offset  # Align Dino with the floor
+        # Collision detection with the floor
+        dino_height = dino_image.size[1] / 2  # Half the Dino's height
+        floor_top = floor.pos[1] + (floor.size[1] / 2)  # Top of the floor
+        dino_bottom = dino_pos[1] - dino_height  # Bottom of the Dino
+        
+        # Align Dino with the floor if it collides
+        if dino_bottom <= floor_top:  # If Dino's bottom is below the floor's top
+            dino_pos[1] = floor_top + dino_height - 0.03 # Align Dino's bottom with the floor's top
             dino_speed = 0  # Reset vertical speed
         
-        # Respawn if Dino falls below the floor threshold
-        if dino_pos[1] < fall_threshold:
-            print("Dino fell below threshold, respawning...")
-            dino_pos = respawn_position[:]  # Reset Dino to starting position
-            dino_speed = 0  # Reset vertical speed
-        
-        # Jumping logic: Allow jump whenever the 'up' key is pressed
-        if up_pressed:  # Check if the up key is pressed
-            dino_speed = jump_speed  # Apply upward movement
+        # Jumping logic: Allow jump when the 'up' key is pressed
+        if up_pressed:
+            dino_speed = jump_speed + 0.03  # Apply upward movement
         
         # Update Dino's vertical position
         dino_pos[1] += dino_speed
         
         # Continuous horizontal movement
-        if left_pressed and dino_pos[0] > min_x:
+        if left_pressed:
             dino_pos[0] -= move_speed  # Move Dino to the left
         if right_pressed:
             dino_pos[0] += move_speed  # Move Dino to the right
         
-        # Update Dino's position
-        dino_image.pos = [0, dino_pos[1]]  # Center Dino horizontally, only update vertical
-        # Run 'Each Frame' code from BackgroundController
         # Update the camera offset to match Dino's position
         camera_offset_x = dino_pos[0]  # Camera follows Dino's X-position
         
-        # Adjust positions of the floor
+        # Adjust positions of the floor and Dino
         floor.pos = [original_floor_pos[0] - camera_offset_x, floor.pos[1]]
+        dino_image.pos = [0, dino_pos[1]]  # Center Dino horizontally, only update vertical
         
         # Move all three backgrounds based on Dino's horizontal position (camera offset)
         background1.pos = [background1_start[0] - camera_offset_x * 0.5, background1.pos[1]]
         background2.pos = [background2_start[0] - camera_offset_x * 0.5, background2.pos[1]]
         background3.pos = [background3_start[0] - camera_offset_x * 0.5, background3.pos[1]]
         
-        # Optional: Debugging - Print Dino's position
+        
+        
+        
+        # Check if the 'p' key is pressed for debugging
         if 'p' in kb.getKeys(['p'], waitRelease=False):
             print(f"Dino's Position: {dino_pos}")
         
-        # Run 'Each Frame' code from FloorControler
         
-        floor.draw()
+        
+        
+        
+        
         
         
         # check for quit (typically the Esc key)

@@ -1,0 +1,60 @@
+6.6641 	INFO 	Loaded monitor calibration from ['2024_11_11 13:57']
+7.0624 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000018036315AE0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000018036315A80>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000180363A61D0>, multiSample=False, name='window1', numSamples=2, pos=[880.0, 240.0], screen=0, size=array([800, 600]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+7.0625 	EXP 	window1: backgroundImage = ''
+7.0625 	EXP 	window1: backgroundFit = 'none'
+7.0695 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0702 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0711 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0724 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0734 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0738 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0745 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0758 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0765 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0769 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0777 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0784 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0790 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0797 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0803 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0811 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0822 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0827 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0831 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0840 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0844 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0848 	DEBUG 	Uploading Texture Font fontname to graphics card
+7.0879 	DEBUG 	Upload of Texture Font fontname complete
+7.0944 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0953 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0963 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.0968 	DEBUG 	Uploading Texture Font fontname to graphics card
+7.0984 	DEBUG 	Upload of Texture Font fontname complete
+7.1003 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+7.1003 	EXP 	window1: recordFrameIntervals = False
+7.1672 	EXP 	window1: recordFrameIntervals = True
+7.2218 	EXP 	Screen (0) actual frame rate measured at 200.27Hz
+7.2218 	EXP 	window1: recordFrameIntervals = False
+7.2272 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.2277 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.2284 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.2294 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.2302 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.2312 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.2318 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.2326 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.2335 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.2344 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.2346 	DEBUG 	Uploading Texture Font fontname to graphics card
+7.2359 	DEBUG 	Upload of Texture Font fontname complete
+7.2470 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+10.0195 	INFO 	keyboard.Keyboard is using iohub backend.
+10.0196 	EXP 	game: status = STARTED
+10.0316 	EXP 	Created background1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='Assets/7.png', interpolate=True, mask=None, maskParams=None, name='background1', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 1.]), texRes=128.0, units='height', win=Window(...))
+10.0420 	EXP 	Created background2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, image='Assets/7.png', interpolate=True, mask=None, maskParams=None, name='background2', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 1.]), texRes=128.0, units='height', win=Window(...))
+10.0522 	EXP 	Created background3 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, image='Assets/7.png', interpolate=True, mask=None, maskParams=None, name='background3', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([2., 1.]), texRes=128.0, units='height', win=Window(...))
+10.1199 	EXP 	Created dino_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, image='Assets/dino.png', interpolate=True, mask=None, maskParams=None, name='dino_image', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.2, 0.2]), texRes=128.0, units='height', win=Window(...))
+10.1200 	INFO 	keyboard.Keyboard is using iohub backend.
+10.1443 	DEBUG 	Saving data for game ExperimentHandler
+10.1449 	INFO 	saved data to D:\Users\areya\Desktop\work\motor-learning-research-project\Game\data/175834_game_2024-12-06_13h28.10.961.psydat
+10.1461 	INFO 	saved data to 'D:\\Users\\areya\\Desktop\\work\\motor-learning-research-project\\Game\\data/175834_game_2024-12-06_13h28.10.961.csv'
