@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on December 06, 2024, at 14:10
+    on December 16, 2024, at 23:12
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -126,7 +126,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='D:\\Users\\areya\\Desktop\\work\\motor-learning-research-project\\Game\\game_lastrun.py',
+        originPath='C:\\Users\\Max Hoac\\Desktop\\Areyan\\motor-learning-research-project\\Game\\game_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -391,8 +391,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-3.0)
-    floor = visual.Rect(
-        win=win, name='floor',
+    floor1 = visual.Rect(
+        win=win, name='floor1',
         width=(.5,0.3)[0], height=(.5,0.3)[1],
         ori=0.0, pos=(-.5,-.5), draggable=False, anchor='center',
         lineWidth=1.0,
@@ -415,11 +415,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     respawn_position = [-0.5, -0.3]  # Starting position for Dino
     
     # Get the floor vertices from the Floor Controller
-    floor_vertices = floor.vertices  # Assuming 'floor' is a Polygon or Rect stimulus
+    floor1_vertices = floor1.vertices  # Assuming 'floor' is a Polygon or Rect stimulus
     
     # Calculate the floor's top and fall threshold
-    floor_top = max(v[1] for v in floor_vertices)  # Highest point of the floor
-    fall_threshold = min(v[1] for v in floor_vertices) - 1  # Slightly below the lowest floor point
+    floor_top = max(v[1] for v in floor1_vertices)  # Highest point of the floor
+    fall_threshold = min(v[1] for v in floor1_vertices) - 1  # Slightly below the lowest floor point
     
     print(f"Fall Threshold: {fall_threshold}")
     
@@ -429,17 +429,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         dino_bottom = dino_pos[1] - (dino_image.size[1] / 2)  # Dino's bottom Y-position
     
         # Extract horizontal and vertical bounds from the floor vertices
-        x_min = min(v[0] for v in floor_vertices)
-        x_max = max(v[0] for v in floor_vertices)
+        x_min = min(v[0] for v in floor1_vertices)
+        x_max = max(v[0] for v in floor1_vertices)
     
         # Check if Dino's bottom is within the floor bounds
-        return x_min <= dino_pos[0] <= x_max and dino_bottom <= floor_top
+        return x_min <= dino_pos[0] <= x_max and dino_bottom <= floor1_top
     # Run 'Begin Experiment' code from BackgroundController
     # Camera variables
     camera_offset_x = 0  # Initial horizontal camera offset
     
     # Save original positions of objects for camera adjustments
-    original_floor_pos = floor.pos  # Save the floor's original position
+    original_floor1_pos = floor1.pos  # Save the floor's original position
     
     # Initialize background positions
     overlap = 0.009  # Amount to overlap backgrounds (adjust as needed)
@@ -461,7 +461,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     floor_pos = [-0.5, -0.5]  # Position of the floor (centered)
     
     # Create the floor stimulus
-    floor = Rect(
+    floor1 = Rect(
         win=win,
         width=floor_width,
         height=floor_height,
@@ -487,11 +487,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         return vertices
     
     # Get the floor's vertices
-    floor_vertices = calculate_rect_vertices(floor)
+    floor1_vertices = calculate_rect_vertices(floor1)
     
     # Calculate floor top and fall threshold
-    floor_top = max(v[1] for v in floor_vertices)  # Highest point of the floor
-    fall_threshold = min(v[1] for v in floor_vertices) - 0.5  # Slightly below the lowest floor point
+    floor1_top = max(v[1] for v in floor1_vertices)  # Highest point of the floor
+    fall_threshold = min(v[1] for v in floor1_vertices) - 0.5  # Slightly below the lowest floor point
     
     
     # create some handy timers
@@ -526,7 +526,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # create an object to store info about Routine MainGame
     MainGame = data.Routine(
         name='MainGame',
-        components=[background1, background2, background3, dino_image, floor],
+        components=[background1, background2, background3, dino_image, floor1],
     )
     MainGame.status = NOT_STARTED
     continueRoutine = True
@@ -641,23 +641,23 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update params
             pass
         
-        # *floor* updates
+        # *floor1* updates
         
-        # if floor is starting this frame...
-        if floor.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # if floor1 is starting this frame...
+        if floor1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            floor.frameNStart = frameN  # exact frame index
-            floor.tStart = t  # local t and not account for scr refresh
-            floor.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(floor, 'tStartRefresh')  # time at next scr refresh
+            floor1.frameNStart = frameN  # exact frame index
+            floor1.tStart = t  # local t and not account for scr refresh
+            floor1.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(floor1, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'floor.started')
+            thisExp.timestampOnFlip(win, 'floor1.started')
             # update status
-            floor.status = STARTED
-            floor.setAutoDraw(True)
+            floor1.status = STARTED
+            floor1.setAutoDraw(True)
         
-        # if floor is active this frame...
-        if floor.status == STARTED:
+        # if floor1 is active this frame...
+        if floor1.status == STARTED:
             # update params
             pass
         # Run 'Each Frame' code from DinoMovement
@@ -682,7 +682,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         # Check if Dino is on the floor
         if is_on_floor(dino_pos) and dino_speed <= 0:  # Falling or stationary
-            dino_pos[1] = floor_top + (dino_image.size[1] / 2) - ground_offset  # Align Dino with the floor
+            dino_pos[1] = floor1_top + (dino_image.size[1] / 2) - ground_offset  # Align Dino with the floor
             dino_speed = 0  # Reset vertical speed
         
         # Respawn if Dino falls below the floor threshold
@@ -711,7 +711,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         camera_offset_x = dino_pos[0]  # Camera follows Dino's X-position
         
         # Adjust positions of the floor
-        floor.pos = [original_floor_pos[0] - camera_offset_x, floor.pos[1]]
+        floor1.pos = [original_floor1_pos[0] - camera_offset_x, floor1.pos[1]]
         
         # Move all three backgrounds based on Dino's horizontal position (camera offset)
         background1.pos = [background1_start[0] - camera_offset_x * 0.5, background1.pos[1]]
@@ -724,7 +724,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         # Run 'Each Frame' code from FloorControler
         
-        floor.draw()
+        floor1.draw()
         
         
         # check for quit (typically the Esc key)
