@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on December 17, 2024, at 14:41
+    on December 17, 2024, at 15:33
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -367,22 +367,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
-    background2 = visual.ImageStim(
-        win=win,
-        name='background2', 
-        image='Assets/7.png', mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), draggable=False, size=(2, 1),
-        color=[1,1,1], colorSpace='rgb', opacity=None,
-        flipHoriz=False, flipVert=False,
-        texRes=128.0, interpolate=True, depth=-1.0)
-    background3 = visual.ImageStim(
-        win=win,
-        name='background3', 
-        image='Assets/7.png', mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), draggable=False, size=(2, 1),
-        color=[1,1,1], colorSpace='rgb', opacity=None,
-        flipHoriz=False, flipVert=False,
-        texRes=128.0, interpolate=True, depth=-2.0)
     dino_image = visual.ImageStim(
         win=win,
         name='dino_image', 
@@ -390,21 +374,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         ori=0.0, pos=(0,0), draggable=False, size=(0.2, 0.2),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
-        texRes=128.0, interpolate=True, depth=-3.0)
+        texRes=128.0, interpolate=True, depth=-1.0)
     floor1 = visual.Rect(
         win=win, name='floor1',
         width=(.5,0.3)[0], height=(.5,0.3)[1],
         ori=0.0, pos=(-.5,-.5), draggable=False, anchor='center',
         lineWidth=1.0,
         colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
-        opacity=None, depth=-4.0, interpolate=True)
+        opacity=None, depth=-2.0, interpolate=True)
     floor2 = visual.Rect(
         win=win, name='floor2',
         width=(.5,0.3)[0], height=(.5,0.3)[1],
         ori=0.0, pos=(0,-.5), draggable=False, anchor='center',
         lineWidth=1.0,
         colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
-        opacity=None, depth=-5.0, interpolate=True)
+        opacity=None, depth=-3.0, interpolate=True)
     # Run 'Begin Experiment' code from DinoMovement
     from psychopy.hardware import keyboard
     
@@ -450,7 +434,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         return on_floor1 or on_floor2
     
     # Run 'Begin Experiment' code from worldController
-    from psychopy.visual import Rect
+    from psychopy.visual import Rect, ImageStim
     
     # Function to calculate vertices of a Rect stimulus
     def calculate_rect_vertices(rect):
@@ -458,8 +442,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         half_width = rect.width / 2
         half_height = rect.height / 2
         center_x, center_y = rect.pos
-    
-        # Calculate the corners of the rectangle
         vertices = [
             [center_x - half_width, center_y - half_height],  # Bottom-left
             [center_x + half_width, center_y - half_height],  # Bottom-right
@@ -469,23 +451,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         return vertices
     
     # Camera variables
-    camera_offset_x = 0  # Initial horizontal camera offset
+    camera_offset_x = 0  # Tracks the camera offset to follow Dino
     
-    # Background positions
-    overlap = 0.009  # Amount to overlap backgrounds
-    background1_start = background1.pos  # Save initial position for background1
-    background2_start = [background1_start[0] + background1.size[0] - overlap, background1_start[1]]  # Overlap background2
-    background3_start = [background2_start[0] + background2.size[0] - overlap, background2_start[1]]  # Overlap background3
+    # Background properties
+    background_width = 2.0  # Width of a single background image
+    background_height = 1.0
+    background_image = 'Assets/7.png'  # Path to your custom background image
     
-    # Set initial positions for all backgrounds
-    background1.pos = background1_start
-    background2.pos = background2_start
-    background3.pos = background3_start
+    # Create two background images for seamless scrolling
+    background1 = ImageStim(win, image=background_image, size=[background_width, background_height], pos=[0, 0])
+    background2 = ImageStim(win, image=background_image, size=[background_width, background_height], pos=[background_width, 0])
     
     # Floor1 properties
     floor1_height = 0.3
     floor1_width = 0.5
-    floor1_pos = [-0.5, -0.5]  # Position of floor1
+    floor1_pos = [-0.5, -0.5]
     
     floor1 = Rect(
         win=win,
@@ -496,28 +476,28 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         lineColor=None
     )
     floor1_vertices = calculate_rect_vertices(floor1)
-    floor1_top = max(v[1] for v in floor1_vertices)
     
-    # Floor2 properties (aligned with background2)
+    # Floor2 properties - Place it further into the map
+    floor2_x_static = 3.0  # Fixed X position where floor2 appears
     floor2_height = 0.3
     floor2_width = 0.5
-    floor2_pos = [1.2, -0.5]
-    
-    
     
     floor2 = Rect(
         win=win,
         width=floor2_width,
         height=floor2_height,
-        pos=floor2_pos,
+        pos=[floor2_x_static, -0.5],
         fillColor="black",
         lineColor=None
     )
     floor2_vertices = calculate_rect_vertices(floor2)
+    
+    
+    # Floor thresholds
+    floor1_top = max(v[1] for v in floor1_vertices)
     floor2_top = max(v[1] for v in floor2_vertices)
     
-    # Fall threshold (slightly below the floor level)
-    fall_threshold = min(v[1] for v in floor1_vertices) - 0.5
+    
     
     # create some handy timers
     
@@ -551,7 +531,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # create an object to store info about Routine MainGame
     MainGame = data.Routine(
         name='MainGame',
-        components=[background1, background2, background3, dino_image, floor1, floor2],
+        components=[background1, dino_image, floor1, floor2],
     )
     MainGame.status = NOT_STARTED
     continueRoutine = True
@@ -603,46 +583,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         # if background1 is active this frame...
         if background1.status == STARTED:
-            # update params
-            pass
-        
-        # *background2* updates
-        
-        # if background2 is starting this frame...
-        if background2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            background2.frameNStart = frameN  # exact frame index
-            background2.tStart = t  # local t and not account for scr refresh
-            background2.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(background2, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'background2.started')
-            # update status
-            background2.status = STARTED
-            background2.setAutoDraw(True)
-        
-        # if background2 is active this frame...
-        if background2.status == STARTED:
-            # update params
-            pass
-        
-        # *background3* updates
-        
-        # if background3 is starting this frame...
-        if background3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            background3.frameNStart = frameN  # exact frame index
-            background3.tStart = t  # local t and not account for scr refresh
-            background3.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(background3, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'background3.started')
-            # update status
-            background3.status = STARTED
-            background3.setAutoDraw(True)
-        
-        # if background3 is active this frame...
-        if background3.status == STARTED:
             # update params
             pass
         
@@ -758,30 +698,32 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             print(f"Dino Position: X = {dino_pos[0]:.3f}, Y = {dino_pos[1]:.3f}")
         
         # Run 'Each Frame' code from worldController
-        #Update the camera offset to follow Dino's position
-        camera_offset_x = dino_pos[0]  # Dino's X position drives the camera offset
+        # Get Dino's position from your Dino movement code
+        # Assume dino_pos[0] tracks Dino's X position (horizontal movement)
         
-        # Move floors based on camera offset
-        floor1.pos = [floor1_pos[0] - camera_offset_x, floor1.pos[1]]  # Floor1 moves with the camera
-        # Align Floor2 with Background2's movement
-        floor2_x_offset = background2_start[0] + (floor2_pos[0] - background2_start[0])
-        floor2.pos = [floor2_x_offset - camera_offset_x * 0.5, floor2.pos[1]]  # Scrolls with background2
+        # Update the camera offset based on Dino's X position
+        camera_offset_x = dino_pos[0]  # The camera offset follows Dino's position
         
+        # Move backgrounds relative to Dino's position (seamless wrap-around)
+        background1.pos = [-(camera_offset_x % background_width), 0]
+        background2.pos = [background1.pos[0] + background_width, 0]
         
+        # Update floor positions relative to Dino's position
+        floor1.pos = [floor1_pos[0] - camera_offset_x, floor1.pos[1]]  # Floor1 moves with Dino
+        floor2.pos = [floor2_x_static - camera_offset_x, floor2.pos[1]]  # Floor2 moves with Dino
         
-        # Move backgrounds based on camera offset
-        background1.pos = [background1_start[0] - camera_offset_x * 0.5, background1.pos[1]]
-        background2.pos = [background2_start[0] - camera_offset_x * 0.5, background2.pos[1]]
-        background3.pos = [background3_start[0] - camera_offset_x * 0.5, background3.pos[1]]
-        
-        # Draw floors
+        # Draw the backgrounds and floors
+        background1.draw()
+        background2.draw()
         floor1.draw()
         floor2.draw()
         
-        # Optional: Debugging - Print positions for verification
+        # Debugging: Check positions if needed
         if 'p' in kb.getKeys(['p'], waitRelease=False):
+            print(f"Background1 Position: {background1.pos}, Background2 Position: {background2.pos}")
             print(f"Floor1 Position: {floor1.pos}, Floor2 Position: {floor2.pos}")
-            print(f"Background2 Position: {background2.pos}, Camera Offset: {camera_offset_x}")
+            print(f"Dino Position: {dino_pos}")
+        
         
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
