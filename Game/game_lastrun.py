@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on December 16, 2024, at 23:12
+    on December 17, 2024, at 14:41
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -398,6 +398,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         lineWidth=1.0,
         colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
         opacity=None, depth=-4.0, interpolate=True)
+    floor2 = visual.Rect(
+        win=win, name='floor2',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(0,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-5.0, interpolate=True)
     # Run 'Begin Experiment' code from DinoMovement
     from psychopy.hardware import keyboard
     
@@ -425,52 +432,27 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Function to check if Dino is on the floor
     def is_on_floor(dino_pos):
-        """Check if Dino's bottom is within the bounds of the floor."""
+        """Check if Dino's bottom is within the bounds of floor1 or floor2."""
         dino_bottom = dino_pos[1] - (dino_image.size[1] / 2)  # Dino's bottom Y-position
     
-        # Extract horizontal and vertical bounds from the floor vertices
-        x_min = min(v[0] for v in floor1_vertices)
-        x_max = max(v[0] for v in floor1_vertices)
+        # Floor1 bounds
+        x_min1 = min(v[0] for v in floor1_vertices)
+        x_max1 = max(v[0] for v in floor1_vertices)
+        
+        # Floor2 bounds
+        x_min2 = min(v[0] for v in floor2_vertices)
+        x_max2 = max(v[0] for v in floor2_vertices)
     
-        # Check if Dino's bottom is within the floor bounds
-        return x_min <= dino_pos[0] <= x_max and dino_bottom <= floor1_top
-    # Run 'Begin Experiment' code from BackgroundController
-    # Camera variables
-    camera_offset_x = 0  # Initial horizontal camera offset
+        # Check floor1 or floor2
+        on_floor1 = x_min1 <= dino_pos[0] <= x_max1 and dino_bottom <= floor1_top
+        on_floor2 = x_min2 <= dino_pos[0] <= x_max2 and dino_bottom <= floor2_top
     
-    # Save original positions of objects for camera adjustments
-    original_floor1_pos = floor1.pos  # Save the floor's original position
+        return on_floor1 or on_floor2
     
-    # Initialize background positions
-    overlap = 0.009  # Amount to overlap backgrounds (adjust as needed)
-    background1_start = background1.pos  # Save initial position for background1
-    background2_start = [background1_start[0] + background1.size[0] - overlap, background1_start[1]]  # Overlap background2
-    background3_start = [background2_start[0] + background2.size[0] - overlap, background2_start[1]]  # Overlap background3
-    
-    # Set initial positions for all backgrounds
-    background1.pos = background1_start
-    background2.pos = background2_start
-    background3.pos = background3_start
-    
-    # Run 'Begin Experiment' code from FloorControler
+    # Run 'Begin Experiment' code from worldController
     from psychopy.visual import Rect
     
-    # Floor properties
-    floor_height = 0.3  # Thickness of the floor
-    floor_width = .5  # Width of the floor
-    floor_pos = [-0.5, -0.5]  # Position of the floor (centered)
-    
-    # Create the floor stimulus
-    floor1 = Rect(
-        win=win,
-        width=floor_width,
-        height=floor_height,
-        pos=floor_pos,
-        fillColor="black",  # Floor color
-        lineColor=None  # No border
-    )
-    
-    # Calculate vertices of the Rect
+    # Function to calculate vertices of a Rect stimulus
     def calculate_rect_vertices(rect):
         """Calculate the vertices of a Rect stimulus."""
         half_width = rect.width / 2
@@ -486,13 +468,56 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         ]
         return vertices
     
-    # Get the floor's vertices
+    # Camera variables
+    camera_offset_x = 0  # Initial horizontal camera offset
+    
+    # Background positions
+    overlap = 0.009  # Amount to overlap backgrounds
+    background1_start = background1.pos  # Save initial position for background1
+    background2_start = [background1_start[0] + background1.size[0] - overlap, background1_start[1]]  # Overlap background2
+    background3_start = [background2_start[0] + background2.size[0] - overlap, background2_start[1]]  # Overlap background3
+    
+    # Set initial positions for all backgrounds
+    background1.pos = background1_start
+    background2.pos = background2_start
+    background3.pos = background3_start
+    
+    # Floor1 properties
+    floor1_height = 0.3
+    floor1_width = 0.5
+    floor1_pos = [-0.5, -0.5]  # Position of floor1
+    
+    floor1 = Rect(
+        win=win,
+        width=floor1_width,
+        height=floor1_height,
+        pos=floor1_pos,
+        fillColor="black",
+        lineColor=None
+    )
     floor1_vertices = calculate_rect_vertices(floor1)
+    floor1_top = max(v[1] for v in floor1_vertices)
     
-    # Calculate floor top and fall threshold
-    floor1_top = max(v[1] for v in floor1_vertices)  # Highest point of the floor
-    fall_threshold = min(v[1] for v in floor1_vertices) - 0.5  # Slightly below the lowest floor point
+    # Floor2 properties (aligned with background2)
+    floor2_height = 0.3
+    floor2_width = 0.5
+    floor2_pos = [1.2, -0.5]
     
+    
+    
+    floor2 = Rect(
+        win=win,
+        width=floor2_width,
+        height=floor2_height,
+        pos=floor2_pos,
+        fillColor="black",
+        lineColor=None
+    )
+    floor2_vertices = calculate_rect_vertices(floor2)
+    floor2_top = max(v[1] for v in floor2_vertices)
+    
+    # Fall threshold (slightly below the floor level)
+    fall_threshold = min(v[1] for v in floor1_vertices) - 0.5
     
     # create some handy timers
     
@@ -526,7 +551,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # create an object to store info about Routine MainGame
     MainGame = data.Routine(
         name='MainGame',
-        components=[background1, background2, background3, dino_image, floor1],
+        components=[background1, background2, background3, dino_image, floor1, floor2],
     )
     MainGame.status = NOT_STARTED
     continueRoutine = True
@@ -660,6 +685,26 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if floor1.status == STARTED:
             # update params
             pass
+        
+        # *floor2* updates
+        
+        # if floor2 is starting this frame...
+        if floor2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            floor2.frameNStart = frameN  # exact frame index
+            floor2.tStart = t  # local t and not account for scr refresh
+            floor2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(floor2, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'floor2.started')
+            # update status
+            floor2.status = STARTED
+            floor2.setAutoDraw(True)
+        
+        # if floor2 is active this frame...
+        if floor2.status == STARTED:
+            # update params
+            pass
         # Run 'Each Frame' code from DinoMovement
         keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
         
@@ -706,26 +751,37 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         # Update Dino's position
         dino_image.pos = [0, dino_pos[1]]  # Center Dino horizontally, only update vertical
-        # Run 'Each Frame' code from BackgroundController
-        # Update the camera offset to match Dino's position
-        camera_offset_x = dino_pos[0]  # Camera follows Dino's X-position
         
-        # Adjust positions of the floor
-        floor1.pos = [original_floor1_pos[0] - camera_offset_x, floor1.pos[1]]
         
-        # Move all three backgrounds based on Dino's horizontal position (camera offset)
+        keys_pressed = kb.getKeys(['o'], waitRelease=False, clear=False)
+        if 'o' in [key.name for key in keys_pressed]:
+            print(f"Dino Position: X = {dino_pos[0]:.3f}, Y = {dino_pos[1]:.3f}")
+        
+        # Run 'Each Frame' code from worldController
+        #Update the camera offset to follow Dino's position
+        camera_offset_x = dino_pos[0]  # Dino's X position drives the camera offset
+        
+        # Move floors based on camera offset
+        floor1.pos = [floor1_pos[0] - camera_offset_x, floor1.pos[1]]  # Floor1 moves with the camera
+        # Align Floor2 with Background2's movement
+        floor2_x_offset = background2_start[0] + (floor2_pos[0] - background2_start[0])
+        floor2.pos = [floor2_x_offset - camera_offset_x * 0.5, floor2.pos[1]]  # Scrolls with background2
+        
+        
+        
+        # Move backgrounds based on camera offset
         background1.pos = [background1_start[0] - camera_offset_x * 0.5, background1.pos[1]]
         background2.pos = [background2_start[0] - camera_offset_x * 0.5, background2.pos[1]]
         background3.pos = [background3_start[0] - camera_offset_x * 0.5, background3.pos[1]]
         
-        # Optional: Debugging - Print Dino's position
-        if 'p' in kb.getKeys(['p'], waitRelease=False):
-            print(f"Dino's Position: {dino_pos}")
-        
-        # Run 'Each Frame' code from FloorControler
-        
+        # Draw floors
         floor1.draw()
+        floor2.draw()
         
+        # Optional: Debugging - Print positions for verification
+        if 'p' in kb.getKeys(['p'], waitRelease=False):
+            print(f"Floor1 Position: {floor1.pos}, Floor2 Position: {floor2.pos}")
+            print(f"Background2 Position: {background2.pos}, Camera Offset: {camera_offset_x}")
         
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
