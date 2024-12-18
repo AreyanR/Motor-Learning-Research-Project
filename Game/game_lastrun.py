@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on December 17, 2024, at 15:33
+    on December 18, 2024, at 14:19
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -389,6 +389,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         lineWidth=1.0,
         colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
         opacity=None, depth=-3.0, interpolate=True)
+    human_image = visual.ImageStim(
+        win=win,
+        name='human_image', 
+        image='Assets/stickFigure/stick_figure_normal.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-4.0)
     # Run 'Begin Experiment' code from DinoMovement
     from psychopy.hardware import keyboard
     
@@ -498,6 +506,16 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     floor2_top = max(v[1] for v in floor2_vertices)
     
     
+    # Run 'Begin Experiment' code from GoalController
+    # Human goal size
+    human_size = [0.2, 0.2]  # Example size (width, height)
+    human_image.size = human_size
+    offset = 0.01  # Adjust to align the human properly with floor2
+    
+    human_collision_image = "Assets\stickFigure\squished.png"
+    
+    
+    human_collided = False
     
     # create some handy timers
     
@@ -531,7 +549,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # create an object to store info about Routine MainGame
     MainGame = data.Routine(
         name='MainGame',
-        components=[background1, dino_image, floor1, floor2],
+        components=[background1, dino_image, floor1, floor2, human_image],
     )
     MainGame.status = NOT_STARTED
     continueRoutine = True
@@ -645,6 +663,26 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if floor2.status == STARTED:
             # update params
             pass
+        
+        # *human_image* updates
+        
+        # if human_image is starting this frame...
+        if human_image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            human_image.frameNStart = frameN  # exact frame index
+            human_image.tStart = t  # local t and not account for scr refresh
+            human_image.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(human_image, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'human_image.started')
+            # update status
+            human_image.status = STARTED
+            human_image.setAutoDraw(True)
+        
+        # if human_image is active this frame...
+        if human_image.status == STARTED:
+            # update params
+            pass
         # Run 'Each Frame' code from DinoMovement
         keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
         
@@ -718,11 +756,33 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         floor1.draw()
         floor2.draw()
         
+        """
         # Debugging: Check positions if needed
         if 'p' in kb.getKeys(['p'], waitRelease=False):
             print(f"Background1 Position: {background1.pos}, Background2 Position: {background2.pos}")
             print(f"Floor1 Position: {floor1.pos}, Floor2 Position: {floor2.pos}")
             print(f"Dino Position: {dino_pos}")
+        
+        """
+        # Run 'Each Frame' code from GoalController
+        # Update human position to match floor2's top
+        human_x = floor2.pos[0]  # Update X position based on floor2
+        human_y = floor2_top + (human_size[1] / 2) - offset  # Keep the human on top of floor2
+        
+        human_pos = [human_x, human_y]
+        human_image.pos = human_pos
+        
+        
+        if not human_collided and -0.05 <= human_x <= 0.05:
+            print("Dino touched the human!")
+            human_image.image = human_collision_image  # Change to collision image
+            human_collided = True  # Set collision flag to prevent further updates
+        
+        # Check if the 'p' key is pressed to print human position
+        keys_pressed = kb.getKeys(['p'], waitRelease=False)
+        if 'p' in [key.name for key in keys_pressed]:
+            print(f"Human Position: X = {human_pos[0]:.3f}, Y = {human_pos[1]:.3f}")
+         
         
         
         # check for quit (typically the Esc key)
