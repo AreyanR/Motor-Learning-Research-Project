@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on December 19, 2024, at 13:21
+    on December 19, 2024, at 13:52
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -411,6 +411,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
     min_x = -0.6  # Left boundary
+    max_x = 5.3
     respawn_position = [-0.5, -0.3]  # Starting position for Dino
     
     # Get the floor vertices from the Floor Controller
@@ -485,7 +486,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     floor1_vertices = calculate_rect_vertices(floor1)
     
     # Floor2 properties - Place it further into the map
-    floor2_x_static = 3.0  # Fixed X position where floor2 appears
+    floor2_x_static = 5.0  # Fixed X position where floor2 appears
     floor2_height = 0.3
     floor2_width = 0.5
     
@@ -723,7 +724,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Continuous horizontal movement
         if left_pressed and dino_pos[0] > min_x:
             dino_pos[0] -= move_speed  # Move Dino to the left
-        if right_pressed:
+        if right_pressed and dino_pos[0] < max_x:
             dino_pos[0] += move_speed  # Move Dino to the right
         
         # Update Dino's position
