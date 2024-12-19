@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on December 18, 2024, at 14:19
+    on December 19, 2024, at 13:21
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -420,7 +420,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     floor_top = max(v[1] for v in floor1_vertices)  # Highest point of the floor
     fall_threshold = min(v[1] for v in floor1_vertices) - 1  # Slightly below the lowest floor point
     
-    print(f"Fall Threshold: {fall_threshold}")
     
     # Function to check if Dino is on the floor
     def is_on_floor(dino_pos):
@@ -773,9 +772,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         human_image.pos = human_pos
         
         
-        if not human_collided and -0.05 <= human_x <= 0.05:
-            print("Dino touched the human!")
-            human_image.image = human_collision_image  # Change to collision image
+        if not human_collided and -0.05 <= human_x <= 0.05 and -0.140 <= dino_pos[1] <= -0.125:
+            print("Dino stomped the human!")
+            human_image.image = human_collision_image  # Change to collision image 
             human_collided = True  # Set collision flag to prevent further updates
         
         # Check if the 'p' key is pressed to print human position
