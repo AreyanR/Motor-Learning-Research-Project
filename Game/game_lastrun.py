@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on December 20, 2024, at 00:50
+    on December 23, 2024, at 19:03
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -428,6 +428,29 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         on_floor2 = x_min2 <= dino_pos[0] <= x_max2 and dino_bottom <= floor2_top
     
         return on_floor1 or on_floor2
+        
+        
+        
+    # Animation-related variables
+    frame_paths = [
+        "Assets/dino_frames/f1.png", "Assets/dino_frames/f2.png", 
+        "Assets/dino_frames/f3.png", "Assets/dino_frames/f4.png", 
+        "Assets/dino_frames/f5.png", "Assets/dino_frames/f6.png", 
+        "Assets/dino_frames/f7.png", "Assets/dino_frames/f8.png", 
+        "Assets/dino_frames/f9.png", "Assets/dino_frames/f10.png", 
+        "Assets/dino_frames/f11.png", "Assets/dino_frames/f12.png"
+    ]
+    
+    
+    
+    frame_index = 0  # Start with the first frame
+    frame_index_update_counter = 0  # Counter to manage animation speed
+    total_frames = len(frame_paths)  # Total number of frames in the animation
+    
+    # Initialize the Dino's first frame
+    dino_image.image = frame_paths[frame_index]
+    
+      
     
     # Run 'Begin Experiment' code from worldController
     from psychopy.visual import Rect, ImageStim
@@ -712,8 +735,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Continuous horizontal movement
         if left_pressed and dino_pos[0] > min_x:
             dino_pos[0] -= move_speed  # Move Dino to the left
+            dino_image.size = [-1 * abs(dino_image.size[0]), dino_image.size[1]]
+        
         if right_pressed and dino_pos[0] < max_x:
             dino_pos[0] += move_speed  # Move Dino to the right
+            dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]  # Reset Dino to face right
         
         # Update Dino's position
         dino_image.pos = [0, dino_pos[1]]  # Center Dino horizontally, only update vertical
@@ -722,6 +748,22 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         keys_pressed = kb.getKeys(['o'], waitRelease=False, clear=False)
         if 'o' in [key.name for key in keys_pressed]:
             print(f"Dino Position: X = {dino_pos[0]:.3f}, Y = {dino_pos[1]:.3f}")
+            
+            
+            
+        
+        # Update the Dino's animation
+        if (frame_index_update_counter % 4) == 0:  # Adjust 4 to control animation speed
+            dino_image.image = frame_paths[frame_index]  # Update the current frame
+        
+            # Advance to the next frame
+            frame_index += 1
+            if frame_index >= total_frames:
+                frame_index = 0  # Loop back to the first frame
+        
+        # Increment the animation frame counter
+        frame_index_update_counter += 1
+        
         
         # Run 'Each Frame' code from worldController
         # Get Dino's position from your Dino movement code
