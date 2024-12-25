@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on December 24, 2024, at 23:23
+    on December 24, 2024, at 23:46
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -380,7 +380,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     meatbone_image = visual.ImageStim(
         win=win,
         name='meatbone_image', 
-        image='Assets/Meat_Bone.png', mask=None, anchor='center',
+        image='Assets/meat_bone.png', mask=None, anchor='center',
         ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
