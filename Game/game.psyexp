@@ -231,7 +231,7 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="list" updates="constant" name="vertices"/>
       </PolygonComponent>
-      <ImageComponent name="human_image" plugin="None">
+      <ImageComponent name="meatbone_image" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -241,10 +241,10 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
-        <Param val="Assets/stickFigure/stick_figure_normal.png" valType="file" updates="constant" name="image"/>
+        <Param val="Assets/Meat_Bone.png" valType="file" updates="constant" name="image"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
         <Param val="" valType="str" updates="constant" name="mask"/>
-        <Param val="human_image" valType="code" updates="None" name="name"/>
+        <Param val="meatbone_image" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
@@ -297,12 +297,12 @@
       <CodeComponent name="GoalController" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="# Human goal size&amp;#10;human_size = [0.2, 0.2]  # Example size (width, height)&amp;#10;human_image.size = human_size&amp;#10;offset = 0.01  # Adjust to align the human properly with floor2&amp;#10;&amp;#10;human_collision_image = &quot;Assets\stickFigure\squished.png&quot;&amp;#10;&amp;#10;&amp;#10;human_collided = False" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="# Meatbone goal size&amp;#10;meatbone_size = [0.1, 0.1]  # Example size (width, height)&amp;#10;meatbone_image.size = meatbone_size&amp;#10;offset = 0.01  # Adjust to align the meatbone properly with floor2&amp;#10;&amp;#10;meatbone_collided = False  # Track whether the meatbone has been stomped" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="# Update human position to match floor2's top&amp;#10;human_x = floor2.pos[0]  # Update X position based on floor2&amp;#10;human_y = floor2_top + (human_size[1] / 2) - offset  # Keep the human on top of floor2&amp;#10;&amp;#10;human_pos = [human_x, human_y]&amp;#10;human_image.pos = human_pos&amp;#10;&amp;#10;&amp;#10;if not human_collided and -0.05 &lt;= human_x &lt;= 0.05 and -0.140 &lt;= dino_pos[1] &lt;= -0.125:&amp;#10;    print(&quot;Dino stomped the human!&quot;)&amp;#10;    human_image.image = human_collision_image  # Change to collision image &amp;#10;    human_collided = True  # Set collision flag to prevent further updates&amp;#10;&amp;#10;# Check if the 'p' key is pressed to print human position&amp;#10;keys_pressed = kb.getKeys(['p'], waitRelease=False)&amp;#10;if 'p' in [key.name for key in keys_pressed]:&amp;#10;    print(f&quot;Human Position: X = {human_pos[0]:.3f}, Y = {human_pos[1]:.3f}&quot;)&amp;#10; &amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="# Update meatbone position to match floor2's top&amp;#10;meatbone_x = floor2.pos[0]  # Update X position based on floor2&amp;#10;meatbone_y = floor2_top + (meatbone_size[1] / 2) - offset  # Keep the meatbone on top of floor2&amp;#10;&amp;#10;meatbone_pos = [meatbone_x, meatbone_y]&amp;#10;meatbone_image.pos = meatbone_pos&amp;#10;&amp;#10;# Check for collision&amp;#10;if not meatbone_collided and -0.05 &lt;= meatbone_x &lt;= 0.05 and -0.280 &lt;= dino_pos[1] &lt;= -0.200:&amp;#10;    print(&quot;Dino stomped the meatbone!&quot;)&amp;#10;    meatbone_image.opacity = 0  # Make the meatbone disappear&amp;#10;    meatbone_collided = True  # Set collision flag to prevent further updates&amp;#10;&amp;#10;# Check if the 'p' key is pressed to print meatbone position&amp;#10;keys_pressed = kb.getKeys(['p'], waitRelease=False)&amp;#10;if 'p' in [key.name for key in keys_pressed]:&amp;#10;    print(f&quot;Meatbone Position: X = {meatbone_pos[0]:.3f}, Y = {meatbone_pos[1]:.3f}&quot;)" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>

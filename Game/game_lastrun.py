@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on December 23, 2024, at 19:03
+    on December 24, 2024, at 23:23
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -377,10 +377,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         lineWidth=1.0,
         colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
         opacity=None, depth=-3.0, interpolate=True)
-    human_image = visual.ImageStim(
+    meatbone_image = visual.ImageStim(
         win=win,
-        name='human_image', 
-        image='Assets/stickFigure/stick_figure_normal.png', mask=None, anchor='center',
+        name='meatbone_image', 
+        image='Assets/Meat_Bone.png', mask=None, anchor='center',
         ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
@@ -518,15 +518,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     # Run 'Begin Experiment' code from GoalController
-    # Human goal size
-    human_size = [0.2, 0.2]  # Example size (width, height)
-    human_image.size = human_size
-    offset = 0.01  # Adjust to align the human properly with floor2
+    # Meatbone goal size
+    meatbone_size = [0.1, 0.1]  # Example size (width, height)
+    meatbone_image.size = meatbone_size
+    offset = 0.01  # Adjust to align the meatbone properly with floor2
     
-    human_collision_image = "Assets\stickFigure\squished.png"
-    
-    
-    human_collided = False
+    meatbone_collided = False  # Track whether the meatbone has been stomped
     
     # create some handy timers
     
@@ -560,7 +557,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # create an object to store info about Routine MainGame
     MainGame = data.Routine(
         name='MainGame',
-        components=[background1, dino_image, floor1, floor2, human_image],
+        components=[background1, dino_image, floor1, floor2, meatbone_image],
     )
     MainGame.status = NOT_STARTED
     continueRoutine = True
@@ -675,23 +672,23 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update params
             pass
         
-        # *human_image* updates
+        # *meatbone_image* updates
         
-        # if human_image is starting this frame...
-        if human_image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # if meatbone_image is starting this frame...
+        if meatbone_image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            human_image.frameNStart = frameN  # exact frame index
-            human_image.tStart = t  # local t and not account for scr refresh
-            human_image.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(human_image, 'tStartRefresh')  # time at next scr refresh
+            meatbone_image.frameNStart = frameN  # exact frame index
+            meatbone_image.tStart = t  # local t and not account for scr refresh
+            meatbone_image.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(meatbone_image, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'human_image.started')
+            thisExp.timestampOnFlip(win, 'meatbone_image.started')
             # update status
-            human_image.status = STARTED
-            human_image.setAutoDraw(True)
+            meatbone_image.status = STARTED
+            meatbone_image.setAutoDraw(True)
         
-        # if human_image is active this frame...
-        if human_image.status == STARTED:
+        # if meatbone_image is active this frame...
+        if meatbone_image.status == STARTED:
             # update params
             pass
         # Run 'Each Frame' code from DinoMovement
@@ -795,25 +792,23 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         """
         # Run 'Each Frame' code from GoalController
-        # Update human position to match floor2's top
-        human_x = floor2.pos[0]  # Update X position based on floor2
-        human_y = floor2_top + (human_size[1] / 2) - offset  # Keep the human on top of floor2
+        # Update meatbone position to match floor2's top
+        meatbone_x = floor2.pos[0]  # Update X position based on floor2
+        meatbone_y = floor2_top + (meatbone_size[1] / 2) - offset  # Keep the meatbone on top of floor2
         
-        human_pos = [human_x, human_y]
-        human_image.pos = human_pos
+        meatbone_pos = [meatbone_x, meatbone_y]
+        meatbone_image.pos = meatbone_pos
         
+        # Check for collision
+        if not meatbone_collided and -0.05 <= meatbone_x <= 0.05 and -0.280 <= dino_pos[1] <= -0.200:
+            print("Dino stomped the meatbone!")
+            meatbone_image.opacity = 0  # Make the meatbone disappear
+            meatbone_collided = True  # Set collision flag to prevent further updates
         
-        if not human_collided and -0.05 <= human_x <= 0.05 and -0.140 <= dino_pos[1] <= -0.125:
-            print("Dino stomped the human!")
-            human_image.image = human_collision_image  # Change to collision image 
-            human_collided = True  # Set collision flag to prevent further updates
-        
-        # Check if the 'p' key is pressed to print human position
+        # Check if the 'p' key is pressed to print meatbone position
         keys_pressed = kb.getKeys(['p'], waitRelease=False)
         if 'p' in [key.name for key in keys_pressed]:
-            print(f"Human Position: X = {human_pos[0]:.3f}, Y = {human_pos[1]:.3f}")
-         
-        
+            print(f"Meatbone Position: X = {meatbone_pos[0]:.3f}, Y = {meatbone_pos[1]:.3f}")
         
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
