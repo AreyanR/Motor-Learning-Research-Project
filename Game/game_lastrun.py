@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on December 24, 2024, at 23:46
+    on December 26, 2024, at 13:22
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -519,7 +519,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Run 'Begin Experiment' code from GoalController
     # Meatbone goal size
-    meatbone_size = [0.1, 0.1]  # Example size (width, height)
+    meatbone_size = [0.15, 0.1]  # Example size (width, height)
     meatbone_image.size = meatbone_size
     offset = 0.01  # Adjust to align the meatbone properly with floor2
     
