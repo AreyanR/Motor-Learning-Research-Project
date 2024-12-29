@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on December 26, 2024, at 13:22
+    on December 28, 2024, at 17:31
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -347,14 +347,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Start Code - component code to be run after the window creation
     
     # --- Initialize components for Routine "MainGame" ---
-    background1 = visual.ImageStim(
-        win=win,
-        name='background1', 
-        image='Assets/7.png', mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), draggable=False, size=(2, 1),
-        color=[1,1,1], colorSpace='rgb', opacity=None,
-        flipHoriz=False, flipVert=False,
-        texRes=128.0, interpolate=True, depth=0.0)
     dino_image = visual.ImageStim(
         win=win,
         name='dino_image', 
@@ -362,21 +354,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         ori=0.0, pos=(0,0), draggable=False, size=(0.2, 0.2),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
-        texRes=128.0, interpolate=True, depth=-1.0)
+        texRes=128.0, interpolate=True, depth=0.0)
     floor1 = visual.Rect(
         win=win, name='floor1',
         width=(.5,0.3)[0], height=(.5,0.3)[1],
         ori=0.0, pos=(-.5,-.5), draggable=False, anchor='center',
         lineWidth=1.0,
         colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
-        opacity=None, depth=-2.0, interpolate=True)
+        opacity=None, depth=-1.0, interpolate=True)
     floor2 = visual.Rect(
         win=win, name='floor2',
         width=(.5,0.3)[0], height=(.5,0.3)[1],
         ori=0.0, pos=(0,-.5), draggable=False, anchor='center',
         lineWidth=1.0,
         colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
-        opacity=None, depth=-3.0, interpolate=True)
+        opacity=None, depth=-2.0, interpolate=True)
     meatbone_image = visual.ImageStim(
         win=win,
         name='meatbone_image', 
@@ -384,7 +376,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
-        texRes=128.0, interpolate=True, depth=-4.0)
+        texRes=128.0, interpolate=True, depth=-3.0)
     # Run 'Begin Experiment' code from DinoMovement
     from psychopy.hardware import keyboard
     
@@ -453,7 +445,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
       
     
     # Run 'Begin Experiment' code from worldController
-    from psychopy.visual import Rect, ImageStim
+    from psychopy.visual import Rect, ImageStim, ShapeStim
+    import math
+    
+    
     
     # Function to calculate vertices of a Rect stimulus
     def calculate_rect_vertices(rect):
@@ -517,6 +512,34 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     floor2_top = max(v[1] for v in floor2_vertices)
     
     
+    #arc stuff
+    
+    # Arc properties
+    arc_center_static = [0, 0.0]  # Fixed position of the arc on the map
+    arc_radius = 0.2                # Smaller radius for the arc
+    arc_start_angle = 0             # Start angle in degrees
+    arc_end_angle = 180             # End angle in degrees
+    
+    # Generate the vertices for the arc
+    num_segments = 50  # More segments = smoother arc
+    arc_vertices = []
+    
+    for i in range(num_segments + 1):
+        angle = math.radians(arc_start_angle + i * (arc_end_angle - arc_start_angle) / num_segments)
+        x = arc_center_static[0] + arc_radius * math.cos(angle)
+        y = arc_center_static[1] + arc_radius * math.sin(angle)
+        arc_vertices.append((x, y))
+    
+    # Create the arc ShapeStim
+    arc_line = ShapeStim(
+        win=win,
+        vertices=arc_vertices,  # Use calculated vertices
+        closeShape=False,       # Do not close the shape
+        lineWidth=2,            # Line thickness
+        lineColor='white',      # Line color
+        fillColor=None          # No fill
+    ) 
+    
     # Run 'Begin Experiment' code from GoalController
     # Meatbone goal size
     meatbone_size = [0.15, 0.1]  # Example size (width, height)
@@ -557,7 +580,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # create an object to store info about Routine MainGame
     MainGame = data.Routine(
         name='MainGame',
-        components=[background1, dino_image, floor1, floor2, meatbone_image],
+        components=[dino_image, floor1, floor2, meatbone_image],
     )
     MainGame.status = NOT_STARTED
     continueRoutine = True
@@ -591,26 +614,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
-        
-        # *background1* updates
-        
-        # if background1 is starting this frame...
-        if background1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            background1.frameNStart = frameN  # exact frame index
-            background1.tStart = t  # local t and not account for scr refresh
-            background1.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(background1, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'background1.started')
-            # update status
-            background1.status = STARTED
-            background1.setAutoDraw(True)
-        
-        # if background1 is active this frame...
-        if background1.status == STARTED:
-            # update params
-            pass
         
         # *dino_image* updates
         
@@ -777,20 +780,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         floor1.pos = [floor1_pos[0] - camera_offset_x, floor1.pos[1]]  # Floor1 moves with Dino
         floor2.pos = [floor2_x_static - camera_offset_x, floor2.pos[1]]  # Floor2 moves with Dino
         
+        
+        
+        # Update the arc position relative to the camera offset
+        arc_line.pos = [arc_center_static[0] - camera_offset_x, arc_center_static[1]]
+        
+        
         # Draw the backgrounds and floors
         background1.draw()
         background2.draw()
         floor1.draw()
         floor2.draw()
+        arc_line.draw()
         
-        """
-        # Debugging: Check positions if needed
-        if 'p' in kb.getKeys(['p'], waitRelease=False):
-            print(f"Background1 Position: {background1.pos}, Background2 Position: {background2.pos}")
-            print(f"Floor1 Position: {floor1.pos}, Floor2 Position: {floor2.pos}")
-            print(f"Dino Position: {dino_pos}")
         
-        """
         # Run 'Each Frame' code from GoalController
         # Update meatbone position to match floor2's top
         meatbone_x = floor2.pos[0]  # Update X position based on floor2
