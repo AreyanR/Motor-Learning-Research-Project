@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on December 28, 2024, at 17:31
+    on December 29, 2024, at 13:55
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -512,6 +512,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     floor2_top = max(v[1] for v in floor2_vertices)
     
     
+    
+    #meat bone
+    
+    meatbone_size = [0.15, 0.1]  # Example size (width, height)
+    meatbone_image.size = meatbone_size
+    offset = 0.01  # Adjust to align the meatbone properly with floor2
+    
+    
     #arc stuff
     
     # Arc properties
@@ -541,10 +549,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     ) 
     
     # Run 'Begin Experiment' code from GoalController
-    # Meatbone goal size
-    meatbone_size = [0.15, 0.1]  # Example size (width, height)
-    meatbone_image.size = meatbone_size
-    offset = 0.01  # Adjust to align the meatbone properly with floor2
     
     meatbone_collided = False  # Track whether the meatbone has been stomped
     
@@ -781,6 +785,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         floor2.pos = [floor2_x_static - camera_offset_x, floor2.pos[1]]  # Floor2 moves with Dino
         
         
+        # Update meatbone position to match floor2's top
+        meatbone_x = floor2.pos[0]  # Update X position based on floor2
+        meatbone_y = floor2_top + (meatbone_size[1] / 2) - offset  # Keep the meatbone on top of floor2
+        
+        meatbone_pos = [meatbone_x, meatbone_y]
+        meatbone_image.pos = meatbone_pos
+        
         
         # Update the arc position relative to the camera offset
         arc_line.pos = [arc_center_static[0] - camera_offset_x, arc_center_static[1]]
@@ -795,12 +806,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         
         # Run 'Each Frame' code from GoalController
-        # Update meatbone position to match floor2's top
-        meatbone_x = floor2.pos[0]  # Update X position based on floor2
-        meatbone_y = floor2_top + (meatbone_size[1] / 2) - offset  # Keep the meatbone on top of floor2
-        
-        meatbone_pos = [meatbone_x, meatbone_y]
-        meatbone_image.pos = meatbone_pos
         
         # Check for collision
         if not meatbone_collided and -0.05 <= meatbone_x <= 0.05 and -0.280 <= dino_pos[1] <= -0.200:
@@ -808,10 +813,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             meatbone_image.opacity = 0  # Make the meatbone disappear
             meatbone_collided = True  # Set collision flag to prevent further updates
         
-        # Check if the 'p' key is pressed to print meatbone position
-        keys_pressed = kb.getKeys(['p'], waitRelease=False)
-        if 'p' in [key.name for key in keys_pressed]:
-            print(f"Meatbone Position: X = {meatbone_pos[0]:.3f}, Y = {meatbone_pos[1]:.3f}")
+        
         
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
