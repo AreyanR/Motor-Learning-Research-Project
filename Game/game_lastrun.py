@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 06, 2025, at 16:45
+    on January 07, 2025, at 00:45
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -530,39 +530,60 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     #arc stuff
     
     # Arc properties
-    arc_center_static = [0, 0.0]  # Fixed position of the arc on the map
-    arc_radius = 0.2                # Smaller radius for the arc
-    arc_start_angle = 0             # Start angle in degrees
-    arc_end_angle = 180             # End angle in degrees
+    arc1_center = [0, 0.0]
+    arc1_radius = 0.2
+    arc1_start_angle = 0
+    arc1_end_angle = 180
     
-    # Generate the vertices for the arc
-    num_segments = 50  # More segments = smoother arc
-    arc_vertices = []
+    # Arc 2 Properties
+    arc2_center = [2.0, 0]  # Different position
+    arc2_radius = 0.3         # Different radius
+    arc2_start_angle = 0
+    arc2_end_angle = 180
     
-    for i in range(num_segments + 1):
-        angle = math.radians(arc_start_angle + i * (arc_end_angle - arc_start_angle) / num_segments)
-        x = arc_center_static[0] + arc_radius * math.cos(angle)
-        y = arc_center_static[1] + arc_radius * math.sin(angle)
-        arc_vertices.append((x, y))
+    # Generate vertices for Arc 1
+    arc1_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc1_start_angle + i * (arc1_end_angle - arc1_start_angle) / 50)
+        x = arc1_center[0] + arc1_radius * math.cos(angle)
+        y = arc1_center[1] + arc1_radius * math.sin(angle)
+        arc1_vertices.append((x, y))
     
+    # Generate vertices for Arc 2
+    arc2_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc2_start_angle + i * (arc2_end_angle - arc2_start_angle) / 50)
+        x = arc2_center[0] + arc2_radius * math.cos(angle)
+        y = arc2_center[1] + arc2_radius * math.sin(angle)
+        arc2_vertices.append((x, y))
     # Create the arc ShapeStim
-    arc_line = ShapeStim(
+    arc1 = ShapeStim(
         win=win,
-        vertices=arc_vertices,  # Use calculated vertices
-        closeShape=False,       # Do not close the shape
-        lineWidth=2,            # Line thickness
-        lineColor='white',      # Line color
-        fillColor=None          # No fill
-    ) 
+        vertices=arc1_vertices,
+        closeShape=False,
+        lineWidth=2,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    # Create Arc 2 ShapeStim
+    arc2 = ShapeStim(
+        win=win,
+        vertices=arc2_vertices,
+        closeShape=False,
+        lineWidth=2,
+        lineColor='blue',  # Different color for clarity
+        fillColor=None
+    )
     
     # Run 'Begin Experiment' code from GoalController
     
     meatbone_collided = False  # Track whether the meatbone has been stomped
     
-    score = 0  # Player's score
-    arc_touched_vertices = []  # Track which arc vertices were touched
-    touch_threshold = 0.02  # Distance threshold to consider a "touch"
-    
+    score = 0
+    arc1_touched_vertices = []
+    arc2_touched_vertices = []
+    touch_threshold = 0.02
     
     # create some handy timers
     
@@ -826,7 +847,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         
         # Update the arc position relative to the camera offset
-        arc_line.pos = [arc_center_static[0] - camera_offset_x, arc_center_static[1]]
+        # Update Arc 1 Position
+        arc1.pos = [arc1_center[0] - camera_offset_x, arc1_center[1]]
+        
+        # Update Arc 2 Position
+        arc2.pos = [arc2_center[0] - camera_offset_x, arc2_center[1]]
         
         
         # Draw the backgrounds and floors
@@ -834,7 +859,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         background2.draw()
         floor1.draw()
         floor2.draw()
-        arc_line.draw()
+        arc1.draw()
+        arc2.draw()
         
         
         # Run 'Each Frame' code from GoalController
@@ -846,17 +872,27 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             meatbone_collided = True  # Set collision flag to prevent further updates
         
         
-        # Loop through arc vertices to check for a touch
-        for vertex in arc_vertices:
+        for vertex in arc1_vertices:
             # Calculate distance between Dino and the current vertex
             distance = ((dino_pos[0] - vertex[0]) ** 2 + (dino_pos[1] - vertex[1]) ** 2) ** 0.5
-        
+            
             # Check if Dino is close enough to "touch" the vertex
-            if distance <= touch_threshold and vertex not in arc_touched_vertices:
-                #print(f"Dino touched arc at {vertex}!")
-                arc_touched_vertices.append(vertex)  # Mark the vertex as touched
-                score += 1  # Increment the score
-                
+            if distance <= touch_threshold and vertex not in arc1_touched_vertices:
+                arc1_touched_vertices.append(vertex)
+                score += 1  # Increment the score for Arc 1
+        
+        for vertex in arc2_vertices:
+            # Adjust Arc 2 vertex for its X-offset (+2)
+            adjusted_vertex_x = vertex[0] + 2  # Move Arc 2 vertices by 2 units to the right
+            adjusted_vertex_y = vertex[1]  # Y remains unchanged
+            
+            # Calculate distance between Dino and the adjusted vertex of Arc 2
+            distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+            
+            # Check if Dino is close enough to "touch" the adjusted vertex
+            if distance <= touch_threshold and vertex not in arc2_touched_vertices:
+                arc2_touched_vertices.append(vertex)
+                score += 1  # Increment the score for Arc 2
                 
         score_text.text = str(score)
         
