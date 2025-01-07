@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 01, 2025, at 19:56
+    on January 06, 2025, at 16:45
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -126,7 +126,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Max Hoac\\Desktop\\Areyan\\motor-learning-research-project\\Game\\game_lastrun.py',
+        originPath='D:\\Users\\areya\\Desktop\\work\\motor-learning-research-project\\Game\\game_lastrun.py',
         savePickle=True, saveWideText=False,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -377,6 +377,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-3.0)
+    score_text = visual.TextStim(win=win, name='score_text',
+        text='Score: 0',
+        font='Arial',
+        pos=(0.45, 0.45), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-4.0);
     # Run 'Begin Experiment' code from DinoMovement
     from psychopy.hardware import keyboard
     
@@ -552,6 +559,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     meatbone_collided = False  # Track whether the meatbone has been stomped
     
+    score = 0  # Player's score
+    arc_touched_vertices = []  # Track which arc vertices were touched
+    touch_threshold = 0.02  # Distance threshold to consider a "touch"
+    
+    
     # create some handy timers
     
     # global clock to track the time since experiment started
@@ -584,7 +596,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # create an object to store info about Routine MainGame
     MainGame = data.Routine(
         name='MainGame',
-        components=[dino_image, floor1, floor2, meatbone_image],
+        components=[dino_image, floor1, floor2, meatbone_image, score_text],
     )
     MainGame.status = NOT_STARTED
     continueRoutine = True
@@ -696,6 +708,26 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         # if meatbone_image is active this frame...
         if meatbone_image.status == STARTED:
+            # update params
+            pass
+        
+        # *score_text* updates
+        
+        # if score_text is starting this frame...
+        if score_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            score_text.frameNStart = frameN  # exact frame index
+            score_text.tStart = t  # local t and not account for scr refresh
+            score_text.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(score_text, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'score_text.started')
+            # update status
+            score_text.status = STARTED
+            score_text.setAutoDraw(True)
+        
+        # if score_text is active this frame...
+        if score_text.status == STARTED:
             # update params
             pass
         # Run 'Each Frame' code from DinoMovement
@@ -812,6 +844,22 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             print("Dino stomped the meatbone!")
             meatbone_image.opacity = 0  # Make the meatbone disappear
             meatbone_collided = True  # Set collision flag to prevent further updates
+        
+        
+        # Loop through arc vertices to check for a touch
+        for vertex in arc_vertices:
+            # Calculate distance between Dino and the current vertex
+            distance = ((dino_pos[0] - vertex[0]) ** 2 + (dino_pos[1] - vertex[1]) ** 2) ** 0.5
+        
+            # Check if Dino is close enough to "touch" the vertex
+            if distance <= touch_threshold and vertex not in arc_touched_vertices:
+                #print(f"Dino touched arc at {vertex}!")
+                arc_touched_vertices.append(vertex)  # Mark the vertex as touched
+                score += 1  # Increment the score
+                
+                
+        score_text.text = str(score)
+        
         
         
         
