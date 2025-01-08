@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 07, 2025, at 00:45
+    on January 07, 2025, at 23:00
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -530,13 +530,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     #arc stuff
     
     # Arc properties
-    arc1_center = [0, 0.0]
+    arc1_center = [0.5, 0.0]
     arc1_radius = 0.2
     arc1_start_angle = 0
     arc1_end_angle = 180
     
     # Arc 2 Properties
-    arc2_center = [2.0, 0]  # Different position
+    arc2_center = [2.0, -0.1]  # Different position
     arc2_radius = 0.3         # Different radius
     arc2_start_angle = 0
     arc2_end_angle = 180
@@ -572,7 +572,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         vertices=arc2_vertices,
         closeShape=False,
         lineWidth=2,
-        lineColor='blue',  # Different color for clarity
+        lineColor='white',  # Different color for clarity
         fillColor=None
     )
     
@@ -873,10 +873,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         
         for vertex in arc1_vertices:
-            # Calculate distance between Dino and the current vertex
-            distance = ((dino_pos[0] - vertex[0]) ** 2 + (dino_pos[1] - vertex[1]) ** 2) ** 0.5
+            # Adjust Arc 1 vertex for its X-offset (+1)
+            adjusted_vertex_x = vertex[0] + 0.5  # Move Arc 1 vertices by 1 unit to the right
+            adjusted_vertex_y = vertex[1] # Y remains unchanged, apply the same adjustment as Arc 2 if needed
+        
+            # Calculate distance between Dino and the adjusted vertex of Arc 1
+            distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
             
-            # Check if Dino is close enough to "touch" the vertex
+            # Check if Dino is close enough to "touch" the adjusted vertex
             if distance <= touch_threshold and vertex not in arc1_touched_vertices:
                 arc1_touched_vertices.append(vertex)
                 score += 1  # Increment the score for Arc 1
@@ -884,7 +888,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         for vertex in arc2_vertices:
             # Adjust Arc 2 vertex for its X-offset (+2)
             adjusted_vertex_x = vertex[0] + 2  # Move Arc 2 vertices by 2 units to the right
-            adjusted_vertex_y = vertex[1]  # Y remains unchanged
+            adjusted_vertex_y = vertex[1] - 0.1 # Y remains unchanged
             
             # Calculate distance between Dino and the adjusted vertex of Arc 2
             distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
