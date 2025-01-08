@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 08, 2025, at 01:22
+    on January 08, 2025, at 02:00
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -346,6 +346,49 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Start Code - component code to be run after the window creation
     
+    # --- Initialize components for Routine "MainMenu" ---
+    TitleText = visual.TextStim(win=win, name='TitleText',
+        text='Main Menu',
+        font='Arial',
+        pos=(0, 0.3), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    StartGame = visual.ButtonStim(win, 
+        text='StartGame', font='Arvo',
+        pos=(0, 0.1),
+        letterHeight=0.05,
+        size=(0.5, 0.1), 
+        ori=0.0
+        ,borderWidth=0.0,
+        fillColor='darkgrey', borderColor=None,
+        color='white', colorSpace='rgb',
+        opacity=None,
+        bold=True, italic=False,
+        padding=None,
+        anchor='center',
+        name='StartGame',
+        depth=-1
+    )
+    StartGame.buttonClock = core.Clock()
+    ExitButton = visual.ButtonStim(win, 
+        text='Exit', font='Arvo',
+        pos=(0,-0.3),
+        letterHeight=0.05,
+        size=(0.5, 0.1), 
+        ori=0.0
+        ,borderWidth=0.0,
+        fillColor='darkgrey', borderColor=None,
+        color='white', colorSpace='rgb',
+        opacity=None,
+        bold=True, italic=False,
+        padding=None,
+        anchor='center',
+        name='ExitButton',
+        depth=-2
+    )
+    ExitButton.buttonClock = core.Clock()
+    
     # --- Initialize components for Routine "MainGame" ---
     dino_image = visual.ImageStim(
         win=win,
@@ -646,6 +689,200 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     expInfo['expStart'] = data.getDateStr(
         format='%Y-%m-%d %Hh%M.%S.%f %z', fractionalSecondDigits=6
     )
+    
+    # --- Prepare to start Routine "MainMenu" ---
+    # create an object to store info about Routine MainMenu
+    MainMenu = data.Routine(
+        name='MainMenu',
+        components=[TitleText, StartGame, ExitButton],
+    )
+    MainMenu.status = NOT_STARTED
+    continueRoutine = True
+    # update component parameters for each repeat
+    # reset StartGame to account for continued clicks & clear times on/off
+    StartGame.reset()
+    # reset ExitButton to account for continued clicks & clear times on/off
+    ExitButton.reset()
+    # store start times for MainMenu
+    MainMenu.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+    MainMenu.tStart = globalClock.getTime(format='float')
+    MainMenu.status = STARTED
+    thisExp.addData('MainMenu.started', MainMenu.tStart)
+    MainMenu.maxDuration = None
+    # keep track of which components have finished
+    MainMenuComponents = MainMenu.components
+    for thisComponent in MainMenu.components:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
+    
+    # --- Run Routine "MainMenu" ---
+    MainMenu.forceEnded = routineForceEnded = not continueRoutine
+    while continueRoutine:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *TitleText* updates
+        
+        # if TitleText is starting this frame...
+        if TitleText.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            TitleText.frameNStart = frameN  # exact frame index
+            TitleText.tStart = t  # local t and not account for scr refresh
+            TitleText.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(TitleText, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'TitleText.started')
+            # update status
+            TitleText.status = STARTED
+            TitleText.setAutoDraw(True)
+        
+        # if TitleText is active this frame...
+        if TitleText.status == STARTED:
+            # update params
+            pass
+        # *StartGame* updates
+        
+        # if StartGame is starting this frame...
+        if StartGame.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # keep track of start time/frame for later
+            StartGame.frameNStart = frameN  # exact frame index
+            StartGame.tStart = t  # local t and not account for scr refresh
+            StartGame.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(StartGame, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'StartGame.started')
+            # update status
+            StartGame.status = STARTED
+            win.callOnFlip(StartGame.buttonClock.reset)
+            StartGame.setAutoDraw(True)
+        
+        # if StartGame is active this frame...
+        if StartGame.status == STARTED:
+            # update params
+            pass
+            # check whether StartGame has been pressed
+            if StartGame.isClicked:
+                if not StartGame.wasClicked:
+                    # if this is a new click, store time of first click and clicked until
+                    StartGame.timesOn.append(StartGame.buttonClock.getTime())
+                    StartGame.timesOff.append(StartGame.buttonClock.getTime())
+                elif len(StartGame.timesOff):
+                    # if click is continuing from last frame, update time of clicked until
+                    StartGame.timesOff[-1] = StartGame.buttonClock.getTime()
+                if not StartGame.wasClicked:
+                    # end routine when StartGame is clicked
+                    continueRoutine = False
+                if not StartGame.wasClicked:
+                    # run callback code when StartGame is clicked
+                    pass
+        # take note of whether StartGame was clicked, so that next frame we know if clicks are new
+        StartGame.wasClicked = StartGame.isClicked and StartGame.status == STARTED
+        # *ExitButton* updates
+        
+        # if ExitButton is starting this frame...
+        if ExitButton.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+            # keep track of start time/frame for later
+            ExitButton.frameNStart = frameN  # exact frame index
+            ExitButton.tStart = t  # local t and not account for scr refresh
+            ExitButton.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(ExitButton, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'ExitButton.started')
+            # update status
+            ExitButton.status = STARTED
+            win.callOnFlip(ExitButton.buttonClock.reset)
+            ExitButton.setAutoDraw(True)
+        
+        # if ExitButton is active this frame...
+        if ExitButton.status == STARTED:
+            # update params
+            pass
+            # check whether ExitButton has been pressed
+            if ExitButton.isClicked:
+                if not ExitButton.wasClicked:
+                    # if this is a new click, store time of first click and clicked until
+                    ExitButton.timesOn.append(ExitButton.buttonClock.getTime())
+                    ExitButton.timesOff.append(ExitButton.buttonClock.getTime())
+                elif len(ExitButton.timesOff):
+                    # if click is continuing from last frame, update time of clicked until
+                    ExitButton.timesOff[-1] = ExitButton.buttonClock.getTime()
+                if not ExitButton.wasClicked:
+                    # end routine when ExitButton is clicked
+                    continueRoutine = False
+                if not ExitButton.wasClicked:
+                    # run callback code when ExitButton is clicked
+                    core.quit()
+        # take note of whether ExitButton was clicked, so that next frame we know if clicks are new
+        ExitButton.wasClicked = ExitButton.isClicked and ExitButton.status == STARTED
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, win=win)
+            return
+        # pause experiment here if requested
+        if thisExp.status == PAUSED:
+            pauseExperiment(
+                thisExp=thisExp, 
+                win=win, 
+                timers=[routineTimer], 
+                playbackComponents=[]
+            )
+            # skip the frame we paused on
+            continue
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            MainMenu.forceEnded = routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in MainMenu.components:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "MainMenu" ---
+    for thisComponent in MainMenu.components:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    # store stop times for MainMenu
+    MainMenu.tStop = globalClock.getTime(format='float')
+    MainMenu.tStopRefresh = tThisFlipGlobal
+    thisExp.addData('MainMenu.stopped', MainMenu.tStop)
+    thisExp.addData('StartGame.numClicks', StartGame.numClicks)
+    if StartGame.numClicks:
+       thisExp.addData('StartGame.timesOn', StartGame.timesOn)
+       thisExp.addData('StartGame.timesOff', StartGame.timesOff)
+    else:
+       thisExp.addData('StartGame.timesOn', "")
+       thisExp.addData('StartGame.timesOff', "")
+    thisExp.addData('ExitButton.numClicks', ExitButton.numClicks)
+    if ExitButton.numClicks:
+       thisExp.addData('ExitButton.timesOn', ExitButton.timesOn)
+       thisExp.addData('ExitButton.timesOff', ExitButton.timesOff)
+    else:
+       thisExp.addData('ExitButton.timesOn', "")
+       thisExp.addData('ExitButton.timesOff', "")
+    thisExp.nextEntry()
+    # the Routine "MainMenu" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
     
     # --- Prepare to start Routine "MainGame" ---
     # create an object to store info about Routine MainGame
