@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 07, 2025, at 23:00
+    on January 08, 2025, at 01:22
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -530,16 +530,24 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     #arc stuff
     
     # Arc properties
-    arc1_center = [0.5, 0.0]
+    arc1_center = [0.3, 0.0]
     arc1_radius = 0.2
     arc1_start_angle = 0
     arc1_end_angle = 180
     
     # Arc 2 Properties
-    arc2_center = [2.0, -0.1]  # Different position
+    arc2_center = [1, -0.1]  # Different position
     arc2_radius = 0.3         # Different radius
     arc2_start_angle = 0
     arc2_end_angle = 180
+    
+    
+    # Arc 3 Properties
+    arc3_center = [1.8, 0]  # Position Arc 3 further into the map
+    arc3_radius = 0.25         # Choose a radius for Arc 3
+    arc3_start_angle = 0
+    arc3_end_angle = 180
+    
     
     # Generate vertices for Arc 1
     arc1_vertices = []
@@ -556,6 +564,19 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         x = arc2_center[0] + arc2_radius * math.cos(angle)
         y = arc2_center[1] + arc2_radius * math.sin(angle)
         arc2_vertices.append((x, y))
+        
+        
+    
+    # Generate vertices for Arc 3
+    arc3_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc3_start_angle + i * (arc3_end_angle - arc3_start_angle) / 50)
+        x = arc3_center[0] + arc3_radius * math.cos(angle)
+        y = arc3_center[1] + arc3_radius * math.sin(angle)
+        arc3_vertices.append((x, y))
+    
+        
+        
     # Create the arc ShapeStim
     arc1 = ShapeStim(
         win=win,
@@ -576,6 +597,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         fillColor=None
     )
     
+    
+    # Create Arc 3 ShapeStim
+    arc3 = ShapeStim(
+        win=win,
+        vertices=arc3_vertices,
+        closeShape=False,
+        lineWidth=2,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
     # Run 'Begin Experiment' code from GoalController
     
     meatbone_collided = False  # Track whether the meatbone has been stomped
@@ -583,6 +615,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     score = 0
     arc1_touched_vertices = []
     arc2_touched_vertices = []
+    arc3_touched_vertices = []
+    
     touch_threshold = 0.02
     
     # create some handy timers
@@ -853,6 +887,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Update Arc 2 Position
         arc2.pos = [arc2_center[0] - camera_offset_x, arc2_center[1]]
         
+        arc3.pos = [arc3_center[0] - camera_offset_x, arc3_center[1]]
         
         # Draw the backgrounds and floors
         background1.draw()
@@ -861,7 +896,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         floor2.draw()
         arc1.draw()
         arc2.draw()
-        
+        arc3.draw()
         
         # Run 'Each Frame' code from GoalController
         
@@ -874,7 +909,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         for vertex in arc1_vertices:
             # Adjust Arc 1 vertex for its X-offset (+1)
-            adjusted_vertex_x = vertex[0] + 0.5  # Move Arc 1 vertices by 1 unit to the right
+            adjusted_vertex_x = vertex[0] + 0.3  # Move Arc 1 vertices by 1 unit to the right
             adjusted_vertex_y = vertex[1] # Y remains unchanged, apply the same adjustment as Arc 2 if needed
         
             # Calculate distance between Dino and the adjusted vertex of Arc 1
@@ -887,7 +922,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         for vertex in arc2_vertices:
             # Adjust Arc 2 vertex for its X-offset (+2)
-            adjusted_vertex_x = vertex[0] + 2  # Move Arc 2 vertices by 2 units to the right
+            adjusted_vertex_x = vertex[0] + 1  # Move Arc 2 vertices by 2 units to the right
             adjusted_vertex_y = vertex[1] - 0.1 # Y remains unchanged
             
             # Calculate distance between Dino and the adjusted vertex of Arc 2
@@ -897,6 +932,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if distance <= touch_threshold and vertex not in arc2_touched_vertices:
                 arc2_touched_vertices.append(vertex)
                 score += 1  # Increment the score for Arc 2
+                
+                
+        for vertex in arc3_vertices:
+            # Adjust Arc 3 vertex for its static X-offset
+            adjusted_vertex_x = vertex[0] + 1.8  # Offset Arc 3 vertices by 3.5 units to the right
+            adjusted_vertex_y = vertex[1]  # Offset Arc 3 vertices by -0.2 units vertically
+        
+            # Calculate distance between Dino and the adjusted vertex of Arc 3
+            distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+        
+            # Check if Dino is close enough to "touch" the adjusted vertex
+            if distance <= touch_threshold and vertex not in arc3_touched_vertices:
+                arc3_touched_vertices.append(vertex)
+                score += 1  # Increment the score for Arc 3
                 
         score_text.text = str(score)
         
