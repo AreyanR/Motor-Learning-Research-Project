@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 08, 2025, at 15:13
+    on January 08, 2025, at 15:52
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -427,6 +427,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-4.0);
+    timer_text = visual.TextStim(win=win, name='timer_text',
+        text='00 : 00',
+        font='Arial',
+        pos=(-0.45,0.45), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     # Run 'Begin Experiment' code from DinoMovement
     from psychopy.hardware import keyboard
     
@@ -491,6 +498,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Initialize the Dino's first frame
     dino_image.image = frame_paths[frame_index]
+    
+    
+    
+    
+    
+    
+    
+    
     
       
     
@@ -660,6 +675,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc3_touched_vertices = []
     
     touch_threshold = 0.02
+    # Run 'Begin Experiment' code from Timer
+    level_timer = core.Clock()  # Initialize the timer
+    time_limit = 120  # Set the time limit in seconds (e.g., 2 minutes)
+    
     
     # create some handy timers
     
@@ -920,19 +939,25 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine MainGame
         MainGame = data.Routine(
             name='MainGame',
-            components=[dino_image, floor1, floor2, meatbone_image, score_text],
+            components=[dino_image, floor1, floor2, meatbone_image, score_text, timer_text],
         )
         MainGame.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
-        # Run 'Begin Routine' code from GameStartManager
+        # Run 'Begin Routine' code from DinoMovement
         dino_pos = [-0.5, -0.3]  # Reset Dino's position
         dino_speed = 0  # Reset vertical speed
+        
+        # Run 'Begin Routine' code from GoalController
         score = 0  # Reset the score
         arc1_touched_vertices = []
         arc2_touched_vertices = []
         arc3_touched_vertices = []
         meatbone_collided = False
+        # Run 'Begin Routine' code from Timer
+        
+        level_timer.reset()  # Reset the timer at the start of the MainGame routine
+        
         
         # store start times for MainGame
         MainGame.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
@@ -1064,6 +1089,26 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             # if score_text is active this frame...
             if score_text.status == STARTED:
+                # update params
+                pass
+            
+            # *timer_text* updates
+            
+            # if timer_text is starting this frame...
+            if timer_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                timer_text.frameNStart = frameN  # exact frame index
+                timer_text.tStart = t  # local t and not account for scr refresh
+                timer_text.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(timer_text, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'timer_text.started')
+                # update status
+                timer_text.status = STARTED
+                timer_text.setAutoDraw(True)
+            
+            # if timer_text is active this frame...
+            if timer_text.status == STARTED:
                 # update params
                 pass
             # Run 'Each Frame' code from DinoMovement
@@ -1225,10 +1270,27 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if distance <= touch_threshold and vertex not in arc3_touched_vertices:
                     arc3_touched_vertices.append(vertex)
                     score += 1  # Increment the score for Arc 3
-                 
+                        
             score_text.text = str(score)
             
             
+            
+            # Run 'Each Frame' code from Timer
+            # Calculate remaining time
+            time_remaining = time_limit - level_timer.getTime()
+            
+            # Check if time is up
+            if time_remaining <= 0:
+                print("Time's up! Returning to MainMenu.")
+                continueRoutine = False  # End the MainGame routine
+                time_remaining = 0  # Prevent negative time display
+            
+            # Format the timer as MM:SS
+            minutes = int(time_remaining) // 60
+            seconds = int(time_remaining) % 60
+            
+            # Update the timer display (assumes a Text Component named 'timer_text')
+            timer_text.text = str(f"{minutes}:{seconds:02d}")
             
             
             # check for quit (typically the Esc key)
