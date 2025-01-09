@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 08, 2025, at 15:52
+    on January 08, 2025, at 16:02
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -499,15 +499,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Initialize the Dino's first frame
     dino_image.image = frame_paths[frame_index]
     
-    
-    
-    
-    
-    
-    
-    
-    
-      
     
     # Run 'Begin Experiment' code from worldController
     from psychopy.visual import Rect, ImageStim, ShapeStim
@@ -1158,7 +1149,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             # Update Dino's position
             dino_image.pos = [0, dino_pos[1]]  # Center Dino horizontally, only update vertical
-            
             
             keys_pressed = kb.getKeys(['o'], waitRelease=False, clear=False)
             if 'o' in [key.name for key in keys_pressed]:
