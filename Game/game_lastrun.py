@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 08, 2025, at 16:02
+    on January 09, 2025, at 16:03
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -423,19 +423,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     score_text = visual.TextStim(win=win, name='score_text',
         text='Score: 0',
         font='Arial',
-        pos=(0.45, 0.45), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0.6, 0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-4.0);
     timer_text = visual.TextStim(win=win, name='timer_text',
         text='00 : 00',
         font='Arial',
-        pos=(-0.45,0.45), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(-0.55,0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-5.0);
     # Run 'Begin Experiment' code from DinoMovement
     from psychopy.hardware import keyboard
+    from psychopy.visual import Rect
     
     # Initialize the Keyboard
     kb = keyboard.Keyboard()
@@ -498,6 +499,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Initialize the Dino's first frame
     dino_image.image = frame_paths[frame_index]
+    
+    
     
     
     # Run 'Begin Experiment' code from worldController
@@ -571,7 +574,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     #meat bone
     
-    meatbone_size = [0.15, 0.1]  # Example size (width, height)
+    meatbone_size = [0.15, 0.09]  # Example size (width, height)
     meatbone_image.size = meatbone_size
     offset = 0.01  # Adjust to align the meatbone properly with floor2
     
@@ -631,7 +634,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win=win,
         vertices=arc1_vertices,
         closeShape=False,
-        lineWidth=2,
+        lineWidth=4,
         lineColor='white',
         fillColor=None
     )
@@ -641,7 +644,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win=win,
         vertices=arc2_vertices,
         closeShape=False,
-        lineWidth=2,
+        lineWidth=4,
         lineColor='white',  # Different color for clarity
         fillColor=None
     )
@@ -652,7 +655,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win=win,
         vertices=arc3_vertices,
         closeShape=False,
-        lineWidth=2,
+        lineWidth=4,
         lineColor='white',  # Set color as desired
         fillColor=None
     )
@@ -665,7 +668,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc2_touched_vertices = []
     arc3_touched_vertices = []
     
-    touch_threshold = 0.02
+    touch_threshold = 0.05
     # Run 'Begin Experiment' code from Timer
     level_timer = core.Clock()  # Initialize the timer
     time_limit = 120  # Set the time limit in seconds (e.g., 2 minutes)
@@ -1150,6 +1153,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Update Dino's position
             dino_image.pos = [0, dino_pos[1]]  # Center Dino horizontally, only update vertical
             
+            
             keys_pressed = kb.getKeys(['o'], waitRelease=False, clear=False)
             if 'o' in [key.name for key in keys_pressed]:
                 print(f"Dino Position: X = {dino_pos[0]:.3f}, Y = {dino_pos[1]:.3f}")
@@ -1165,6 +1169,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 frame_index += 1
                 if frame_index >= total_frames:
                     frame_index = 0  # Loop back to the first frame
+            
+            
             
             # Increment the animation frame counter
             frame_index_update_counter += 1
@@ -1216,7 +1222,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             # Check for collision
             if not meatbone_collided and -0.05 <= meatbone_x <= 0.05 and -0.280 <= dino_pos[1] <= -0.200:
-                print("Dino stomped the meatbone!")
+                print("Dino ate the meatbone!")
                 meatbone_image.opacity = 0  # Make the meatbone disappear
                 meatbone_collided = True  # Set collision flag to prevent further updates
             
