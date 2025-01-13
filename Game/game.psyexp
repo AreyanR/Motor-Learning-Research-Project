@@ -26,7 +26,7 @@
     <Param val="False" valType="bool" updates="None" name="Show mouse"/>
     <Param val="height" valType="str" updates="None" name="Units"/>
     <Param val="" valType="str" updates="None" name="Use version"/>
-    <Param val="[800,800]" valType="list" updates="None" name="Window size (pixels)"/>
+    <Param val="[1000,800]" valType="list" updates="None" name="Window size (pixels)"/>
     <Param val="none" valType="str" updates="None" name="backgroundFit"/>
     <Param val="" valType="str" updates="None" name="backgroundImg"/>
     <Param val="avg" valType="str" updates="None" name="blendMode"/>
@@ -70,7 +70,7 @@
     <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
     <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
     <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
-    <Param val="0" valType="code" updates="None" name="runMode"/>
+    <Param val="1" valType="code" updates="None" name="runMode"/>
     <Param val="False" valType="bool" updates="None" name="rush"/>
     <Param val="time" valType="str" updates="None" name="sortColumns"/>
     <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
@@ -337,7 +337,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="dino_pos = [-0.5, -0.3]  # Reset Dino's position&amp;#10;dino_speed = 0  # Reset vertical speed&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)&amp;#10;&amp;#10;# Initialize key state flags&amp;#10;left_pressed = False&amp;#10;right_pressed = False&amp;#10;up_pressed = False&amp;#10;&amp;#10;# Update key state flags based on keys currently pressed&amp;#10;for key in keys_pressed:&amp;#10;    if key.name == 'left':&amp;#10;        left_pressed = True&amp;#10;    if key.name == 'right':&amp;#10;        right_pressed = True&amp;#10;    if key.name == 'up':&amp;#10;        up_pressed = True&amp;#10;&amp;#10;# Apply gravity to Dino's vertical speed&amp;#10;dino_speed += gravity&amp;#10;&amp;#10;# Check if Dino is on the floor&amp;#10;if is_on_floor(dino_pos) and dino_speed &lt;= 0:  # Falling or stationary&amp;#10;    dino_pos[1] = floor1_top + (dino_image.size[1] / 2) - ground_offset  # Align Dino with the floor&amp;#10;    dino_speed = 0  # Reset vertical speed&amp;#10;&amp;#10;# Respawn if Dino falls below the floor threshold&amp;#10;if dino_pos[1] &lt; fall_threshold:&amp;#10;    continueRoutine = False  # Stop the MainGame routine&amp;#10;    &amp;#10;# Jumping logic: Allow jump whenever the 'up' key is pressed&amp;#10;if up_pressed:  # Check if the up key is pressed&amp;#10;    dino_speed = jump_speed  # Apply upward movement&amp;#10;&amp;#10;# Update Dino's vertical position&amp;#10;dino_pos[1] += dino_speed&amp;#10;&amp;#10;# Continuous horizontal movement&amp;#10;if left_pressed and dino_pos[0] &gt; min_x:&amp;#10;    dino_pos[0] -= move_speed  # Move Dino to the left&amp;#10;    dino_image.size = [-1 * abs(dino_image.size[0]), dino_image.size[1]]&amp;#10;&amp;#10;if right_pressed and dino_pos[0] &lt; max_x:&amp;#10;    dino_pos[0] += move_speed  # Move Dino to the right&amp;#10;    dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]  # Reset Dino to face right&amp;#10;&amp;#10;# Update Dino's position&amp;#10;dino_image.pos = [0, dino_pos[1]]  # Center Dino horizontally, only update vertical&amp;#10;&amp;#10;&amp;#10;keys_pressed = kb.getKeys(['o'], waitRelease=False, clear=False)&amp;#10;if 'o' in [key.name for key in keys_pressed]:&amp;#10;    print(f&quot;Dino Position: X = {dino_pos[0]:.3f}, Y = {dino_pos[1]:.3f}&quot;)&amp;#10;    &amp;#10;    &amp;#10;    &amp;#10;&amp;#10;# Update the Dino's animation&amp;#10;if (frame_index_update_counter % 4) == 0:  # Adjust 4 to control animation speed&amp;#10;    dino_image.image = frame_paths[frame_index]  # Update the current frame&amp;#10;&amp;#10;    # Advance to the next frame&amp;#10;    frame_index += 1&amp;#10;    if frame_index &gt;= total_frames:&amp;#10;        frame_index = 0  # Loop back to the first frame&amp;#10;&amp;#10;&amp;#10;&amp;#10;# Increment the animation frame counter&amp;#10;frame_index_update_counter += 1&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="# Initialize key state flags&amp;#10;left_pressed = False&amp;#10;right_pressed = False&amp;#10;up_pressed = False&amp;#10;&amp;#10;# Check the selected control method and update inputs&amp;#10;if selected_control == &quot;Keyboard&quot;:&amp;#10;    # Get keyboard inputs&amp;#10;    keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)&amp;#10;&amp;#10;    # Update key state flags based on keys currently pressed&amp;#10;    for key in keys_pressed:&amp;#10;        if key.name == 'left':&amp;#10;            left_pressed = True&amp;#10;        if key.name == 'right':&amp;#10;            right_pressed = True&amp;#10;        if key.name == 'up':&amp;#10;            up_pressed = True&amp;#10;&amp;#10;elif selected_control == &quot;PSURP&quot;:&amp;#10;    left_pressed = B0ForceInNewtons &gt; 0.5  # Example threshold for left movement&amp;#10;    right_pressed = B1ForceInNewtons &gt; 0.5  # Example threshold for right movement&amp;#10;    up_pressed = B2ForceInNewtons &gt; 0.5  # Example threshold for jump&amp;#10;    &amp;#10;dino_speed += gravity&amp;#10;&amp;#10;# Check if Dino is on the floor&amp;#10;if is_on_floor(dino_pos) and dino_speed &lt;= 0:  # Falling or stationary&amp;#10;    dino_pos[1] = floor1_top + (dino_image.size[1] / 2) - ground_offset  # Align Dino with the floor&amp;#10;    dino_speed = 0  # Reset vertical speed&amp;#10;&amp;#10;# Respawn if Dino falls below the floor threshold&amp;#10;if dino_pos[1] &lt; fall_threshold:&amp;#10;    continueRoutine = False  # Stop the MainGame routine&amp;#10;    &amp;#10;# Jumping logic: Allow jump whenever the 'up' key is pressed&amp;#10;if up_pressed:  # Check if the up key is pressed&amp;#10;    dino_speed = jump_speed  # Apply upward movement&amp;#10;&amp;#10;# Update Dino's vertical position&amp;#10;dino_pos[1] += dino_speed&amp;#10;&amp;#10;# Continuous horizontal movement&amp;#10;if left_pressed and dino_pos[0] &gt; min_x:&amp;#10;    dino_pos[0] -= move_speed  # Move Dino to the left&amp;#10;    dino_image.size = [-1 * abs(dino_image.size[0]), dino_image.size[1]]&amp;#10;&amp;#10;if right_pressed and dino_pos[0] &lt; max_x:&amp;#10;    dino_pos[0] += move_speed  # Move Dino to the right&amp;#10;    dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]  # Reset Dino to face right&amp;#10;&amp;#10;# Update Dino's position&amp;#10;dino_image.pos = [0, dino_pos[1]]  # Center Dino horizontally, only update vertical&amp;#10;&amp;#10;&amp;#10;keys_pressed = kb.getKeys(['o'], waitRelease=False, clear=False)&amp;#10;if 'o' in [key.name for key in keys_pressed]:&amp;#10;    print(f&quot;Dino Position: X = {dino_pos[0]:.3f}, Y = {dino_pos[1]:.3f}&quot;)&amp;#10;    &amp;#10;    &amp;#10;    &amp;#10;&amp;#10;# Update the Dino's animation&amp;#10;if (frame_index_update_counter % 4) == 0:  # Adjust 4 to control animation speed&amp;#10;    dino_image.image = frame_paths[frame_index]  # Update the current frame&amp;#10;&amp;#10;    # Advance to the next frame&amp;#10;    frame_index += 1&amp;#10;    if frame_index &gt;= total_frames:&amp;#10;        frame_index = 0  # Loop back to the first frame&amp;#10;&amp;#10;&amp;#10;&amp;#10;# Increment the animation frame counter&amp;#10;frame_index_update_counter += 1&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;keys = psychoJS.eventManager.getKeys();&amp;#10;if (_pj.in_es6(&quot;right&quot;, keys)) {&amp;#10;    trex.pos += [5, 0];&amp;#10;}&amp;#10;if (_pj.in_es6(&quot;left&quot;, keys)) {&amp;#10;    trex.pos -= [5, 0];&amp;#10;}&amp;#10;if ((_pj.in_es6(&quot;up&quot;, keys) &amp;&amp; (trex.pos[1] === (- 150)))) {&amp;#10;    trex.pos += [0, 200];&amp;#10;}&amp;#10;if ((trex.pos[1] &gt; (- 150))) {&amp;#10;    trex.pos -= [0, 10];&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
@@ -558,7 +558,7 @@
         <Param val="exit_button" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, -.3)" valType="list" updates="constant" name="pos"/>
+        <Param val="(0, -.2)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="rectangle" valType="str" updates="None" name="shape"/>
         <Param val="(0.4, 0.1)" valType="list" updates="constant" name="size"/>
@@ -586,7 +586,7 @@
         <Param val="Exit" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, -.3)" valType="list" updates="constant" name="pos"/>
+        <Param val="(0, -.2)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -599,15 +599,71 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
+      <PolygonComponent name="controller_selection" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="" valType="color" updates="constant" name="fillColor"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="white" valType="color" updates="constant" name="lineColor"/>
+        <Param val="1" valType="num" updates="constant" name="lineWidth"/>
+        <Param val="4" valType="int" updates="constant" name="nVertices"/>
+        <Param val="controller_selection" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, -.1)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="rectangle" valType="str" updates="None" name="shape"/>
+        <Param val="(0.4, 0.1)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="list" updates="constant" name="vertices"/>
+      </PolygonComponent>
+      <TextComponent name="control_feedback" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="control_feedback" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, -.1)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Controller" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
       <CodeComponent name="code" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="# Default control method&amp;#10;selected_control = &quot;Keyboard&quot;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="# Update the feedback text to display the currently selected control method&amp;#10;control_feedback.text = f&quot;Selected Control: {selected_control}&quot;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="# Check if the mouse is clicked and which button is clicked&amp;#10;if mouse.isPressedIn(start_button):  # Start button&amp;#10;    continueRoutine = False  # End the Main Menu routine&amp;#10;&amp;#10;if mouse.isPressedIn(exit_button):  # Exit button&amp;#10;    core.quit()  # Quit the experiment&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="# Check if the mouse is clicked and which button is clicked&amp;#10;if mouse.isPressedIn(start_button):  # Start button&amp;#10;    continueRoutine = False  # End the Main Menu routine&amp;#10;&amp;#10;if mouse.isPressedIn(exit_button):  # Exit button&amp;#10;    core.quit()  # Quit the experiment&amp;#10;    &amp;#10;if mouse.isPressedIn(controller_selection):&amp;#10;    # Add a delay to prevent rapid toggling (debounce)&amp;#10;    core.wait(0.2)&amp;#10;    &amp;#10;    # Toggle between &quot;Keyboard&quot; and &quot;PSURP&quot;&amp;#10;    if selected_control == &quot;Keyboard&quot;:&amp;#10;        selected_control = &quot;PSURP&quot;&amp;#10;    else:&amp;#10;        selected_control = &quot;Keyboard&quot;&amp;#10;    &amp;#10;    # Update the feedback text&amp;#10;    control_feedback.text = f&quot;Selected Control: {selected_control}&quot;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
@@ -621,7 +677,7 @@
         <Param val="" valType="list" updates="constant" name="correctAns"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="any click" valType="str" updates="constant" name="forceEndRoutineOnPress"/>
+        <Param val="correct click" valType="str" updates="constant" name="forceEndRoutineOnPress"/>
         <Param val="mouse" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="constant" name="newClicksOnly"/>
         <Param val="on click" valType="str" updates="None" name="saveMouseState"/>
@@ -681,7 +737,7 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <CodeComponent name="code" plugin="None">
+      <CodeComponent name="code_2" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
@@ -696,7 +752,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="ser.flush()&amp;#10;ser.write(&quot;X&quot;.encode())&amp;#10;&amp;#10;# clear out the data from the IO buffers (Fresh commands)&amp;#10;# the &quot;X&quot; command puts tje PSURP into command mode&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="code" valType="code" updates="None" name="name"/>
+        <Param val="code_2" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
     <Routine name="TARE">

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 13, 2025, at 12:46
+    on January 13, 2025, at 15:36
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -60,7 +60,7 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = False
-_winSize = [800,800]
+_winSize = [1000,800]
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -371,17 +371,35 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     exit_button = visual.Rect(
         win=win, name='exit_button',
         width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
-        ori=0.0, pos=(0, -.3), draggable=False, anchor='center',
+        ori=0.0, pos=(0, -.2), draggable=False, anchor='center',
         lineWidth=1.0,
         colorSpace='rgb', lineColor='white', fillColor=None,
         opacity=None, depth=-3.0, interpolate=True)
     Exit = visual.TextStim(win=win, name='Exit',
         text='Exit',
         font='Arial',
-        pos=(0, -.3), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, -.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-4.0);
+    controller_selection = visual.Rect(
+        win=win, name='controller_selection',
+        width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
+        ori=0.0, pos=(0, -.1), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor='white', fillColor=None,
+        opacity=None, depth=-5.0, interpolate=True)
+    control_feedback = visual.TextStim(win=win, name='control_feedback',
+        text='Controller',
+        font='Arial',
+        pos=(0, -.1), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-6.0);
+    # Run 'Begin Experiment' code from code
+    # Default control method
+    selected_control = "Keyboard"
+    
     mouse = event.Mouse(win=win)
     x, y = [None, None]
     mouse.mouseClock = core.Clock()
@@ -734,11 +752,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine MainMenu
         MainMenu = data.Routine(
             name='MainMenu',
-            components=[TitleText, start_button, StartGame, exit_button, Exit, mouse],
+            components=[TitleText, start_button, StartGame, exit_button, Exit, controller_selection, control_feedback, mouse],
         )
         MainMenu.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
+        # Run 'Begin Routine' code from code
+        # Update the feedback text to display the currently selected control method
+        control_feedback.text = f"Selected Control: {selected_control}"
+        
         # setup some python lists for storing info about the mouse
         mouse.x = []
         mouse.y = []
@@ -879,6 +901,46 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if Exit.status == STARTED:
                 # update params
                 pass
+            
+            # *controller_selection* updates
+            
+            # if controller_selection is starting this frame...
+            if controller_selection.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                controller_selection.frameNStart = frameN  # exact frame index
+                controller_selection.tStart = t  # local t and not account for scr refresh
+                controller_selection.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(controller_selection, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'controller_selection.started')
+                # update status
+                controller_selection.status = STARTED
+                controller_selection.setAutoDraw(True)
+            
+            # if controller_selection is active this frame...
+            if controller_selection.status == STARTED:
+                # update params
+                pass
+            
+            # *control_feedback* updates
+            
+            # if control_feedback is starting this frame...
+            if control_feedback.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                control_feedback.frameNStart = frameN  # exact frame index
+                control_feedback.tStart = t  # local t and not account for scr refresh
+                control_feedback.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(control_feedback, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'control_feedback.started')
+                # update status
+                control_feedback.status = STARTED
+                control_feedback.setAutoDraw(True)
+            
+            # if control_feedback is active this frame...
+            if control_feedback.status == STARTED:
+                # update params
+                pass
             # Run 'Each Frame' code from code
             # Check if the mouse is clicked and which button is clicked
             if mouse.isPressedIn(start_button):  # Start button
@@ -886,6 +948,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             if mouse.isPressedIn(exit_button):  # Exit button
                 core.quit()  # Quit the experiment
+                
+            if mouse.isPressedIn(controller_selection):
+                # Add a delay to prevent rapid toggling (debounce)
+                core.wait(0.2)
+                
+                # Toggle between "Keyboard" and "PSURP"
+                if selected_control == "Keyboard":
+                    selected_control = "PSURP"
+                else:
+                    selected_control = "Keyboard"
+                
+                # Update the feedback text
+                control_feedback.text = f"Selected Control: {selected_control}"
+            
             
             # *mouse* updates
             
@@ -916,8 +992,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         mouse.midButton.append(buttons[1])
                         mouse.rightButton.append(buttons[2])
                         mouse.time.append(mouse.mouseClock.getTime())
-                        
-                        continueRoutine = False  # end routine on response
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1145,23 +1219,30 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # update params
                 pass
             # Run 'Each Frame' code from DinoMovement
-            keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
-            
             # Initialize key state flags
             left_pressed = False
             right_pressed = False
             up_pressed = False
             
-            # Update key state flags based on keys currently pressed
-            for key in keys_pressed:
-                if key.name == 'left':
-                    left_pressed = True
-                if key.name == 'right':
-                    right_pressed = True
-                if key.name == 'up':
-                    up_pressed = True
+            # Check the selected control method and update inputs
+            if selected_control == "Keyboard":
+                # Get keyboard inputs
+                keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
             
-            # Apply gravity to Dino's vertical speed
+                # Update key state flags based on keys currently pressed
+                for key in keys_pressed:
+                    if key.name == 'left':
+                        left_pressed = True
+                    if key.name == 'right':
+                        right_pressed = True
+                    if key.name == 'up':
+                        up_pressed = True
+            
+            elif selected_control == "PSURP":
+                left_pressed = B0ForceInNewtons > 0.5  # Example threshold for left movement
+                right_pressed = B1ForceInNewtons > 0.5  # Example threshold for right movement
+                up_pressed = B2ForceInNewtons > 0.5  # Example threshold for jump
+                
             dino_speed += gravity
             
             # Check if Dino is on the floor
