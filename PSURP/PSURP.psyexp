@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2023.2.3">
+<PsychoPy2experiment encoding="utf-8" version="2024.2.4">
   <Settings>
     <Param val="3" valType="str" updates="None" name="Audio latency priority"/>
     <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
@@ -30,9 +30,12 @@
     <Param val="none" valType="str" updates="None" name="backgroundFit"/>
     <Param val="" valType="str" updates="None" name="backgroundImg"/>
     <Param val="avg" valType="str" updates="None" name="blendMode"/>
+    <Param val="float" valType="str" updates="None" name="clockFormat"/>
     <Param val="{'thisRow.t': 'priority.CRITICAL', 'expName': 'priority.LOW'}" valType="dict" updates="None" name="colPriority"/>
     <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
     <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+    <Param val="warning" valType="code" updates="None" name="consoleLoggingLevel"/>
+    <Param val="default" valType="str" updates="None" name="ecSampleRate"/>
     <Param val="100.1.1.1" valType="str" updates="None" name="elAddress"/>
     <Param val="FILTER_LEVEL_2" valType="str" updates="None" name="elDataFiltering"/>
     <Param val="FILTER_LEVEL_OFF" valType="str" updates="None" name="elLiveFiltering"/>
@@ -46,10 +49,13 @@
     <Param val="PSURP" valType="str" updates="None" name="expName"/>
     <Param val="on Sync" valType="str" updates="None" name="exportHTML"/>
     <Param val="None" valType="str" updates="None" name="eyetracker"/>
+    <Param val="" valType="code" updates="None" name="frameRate"/>
+    <Param val="Attempting to measure frame rate of screen, please wait..." valType="str" updates="None" name="frameRateMsg"/>
     <Param val="127.0.0.1" valType="str" updates="None" name="gpAddress"/>
     <Param val="4242" valType="num" updates="None" name="gpPort"/>
     <Param val="ioHub" valType="str" updates="None" name="keyboardBackend"/>
     <Param val="exp" valType="code" updates="None" name="logging level"/>
+    <Param val="True" valType="bool" updates="None" name="measureFrameRate"/>
     <Param val="('MIDDLE_BUTTON',)" valType="list" updates="None" name="mgBlink"/>
     <Param val="CONTINUOUS" valType="str" updates="None" name="mgMove"/>
     <Param val="0.5" valType="num" updates="None" name="mgSaccade"/>
@@ -65,6 +71,8 @@
     <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
     <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
     <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
+    <Param val="1" valType="code" updates="None" name="runMode"/>
+    <Param val="False" valType="bool" updates="None" name="rush"/>
     <Param val="time" valType="str" updates="None" name="sortColumns"/>
     <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
     <Param val="" valType="str" updates="None" name="tbModel"/>
@@ -82,6 +90,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="reset_PSURP" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -94,6 +103,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Open Sans" valType="str" updates="constant" name="font"/>
@@ -112,6 +122,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="reseting PSURP" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="code" plugin="None">
@@ -141,6 +152,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="TARE" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -153,6 +165,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Open Sans" valType="str" updates="constant" name="font"/>
@@ -171,6 +184,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="loading each cell with 1 sec delay (5 seconds)" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="tare_code" plugin="None">
@@ -200,6 +214,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="RUNE" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -212,6 +227,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Open Sans" valType="str" updates="constant" name="font"/>
@@ -230,6 +246,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Entering streaming mode ..." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="Code_RUNE" plugin="None">
@@ -259,6 +276,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="trail" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -271,6 +289,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Open Sans" valType="str" updates="constant" name="font"/>
@@ -289,6 +308,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Loading forces..." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="code_trial" plugin="None">
@@ -299,7 +319,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="ser.flush()&amp;#10;&amp;#10;strMsg = &quot;&quot;&amp;#10;intCounter = 0&amp;#10;strSerialData = &quot;&quot;&amp;#10;&amp;#10;output = &quot;&quot;&amp;#10;outputlength = 0&amp;#10;&amp;#10;B0HighByte = 0&amp;#10;B0LowByte = 0&amp;#10;B0ForceInGrams = 0&amp;#10;B0ForceInNewtons = 0&amp;#10;&amp;#10;B1HighByte = 0&amp;#10;B1LowByte = 0&amp;#10;B1ForceInGrams = 0&amp;#10;B1ForceInNewtons = 0&amp;#10;&amp;#10;B2HighByte = 0&amp;#10;B2LowByte = 0&amp;#10;B2ForceInGrams = 0&amp;#10;B2ForceInNewtons = 0&amp;#10;&amp;#10;B3HighByte = 0&amp;#10;B3LowByte = 0&amp;#10;B3ForceInGrams = 0&amp;#10;B3ForceInNewtons = 0&amp;#10;&amp;#10;B4HighByte = 0&amp;#10;B4LowByte = 0&amp;#10;B4ForceInGrams = 0&amp;#10;B4ForceInNewtons = 0" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="if intCounter == 0:&amp;#10;    strMsg = &quot;&quot;&amp;#10;    strMsg += &quot;BUT0 BUT1 BUT2 BUT3 BUT4 TTL\n&quot;&amp;#10;    strMsg += &quot;Base 71: 00 00 00 00 00 00\n&quot;&amp;#10;    strMsg += &quot;G: 0000 0000 0000 0000 0000 g\n&quot;&amp;#10;    strMsg += &quot;N: 0.0000 0.0000 0.0000 0.0000 0.0000 N\n&quot;&amp;#10;    strMsg += &quot;Sample: 0000\n&quot;&amp;#10;    strMsg += &quot;Press 'q' to quit.\n&quot;&amp;#10;&amp;#10;    feedback_text.text = strMsg&amp;#10;    win.flip()&amp;#10;&amp;#10;while intCounter &lt; 1000:&amp;#10;    keys = event.getKeys()&amp;#10;    if keys:&amp;#10;        if keys[0] == 'q':  # Quit key (only works during samples)&amp;#10;            ser.flush()&amp;#10;            ser.write(&quot;X&quot;.encode())  &amp;#10;            ser.flush()&amp;#10;            ser.close()&amp;#10;            core.quit()&amp;#10;&amp;#10;    intCounter = intCounter + 1&amp;#10;    strSerialData = ser.readline()  &amp;#10;&amp;#10;    strMsg = &quot;&quot;&amp;#10;    strMsg += &quot;BUT0 BUT1 BUT2 BUT3 BUT4 TTL\n&quot;&amp;#10;&amp;#10;    output = strSerialData.decode()  &amp;#10;    outputlength = len(output)&amp;#10;&amp;#10;    if outputlength == 12:&amp;#10;        strMsg += &quot;Base 71: &quot; + output[0]&amp;#10;        strMsg += &quot;&quot; + output[1]&amp;#10;        strMsg += &quot;&quot; + output[2]&amp;#10;        strMsg += &quot;&quot; + output[3]&amp;#10;        strMsg += &quot;&quot; + output[4]&amp;#10;        strMsg += &quot;&quot; + output[5]&amp;#10;        strMsg += &quot;&quot; + output[6]&amp;#10;        strMsg += &quot;&quot; + output[7]&amp;#10;        strMsg += &quot;&quot; + output[8]&amp;#10;        strMsg += &quot;&quot; + output[9]&amp;#10;        strMsg += &quot;&quot; + output[10] + &quot;\n\n&quot;&amp;#10;&amp;#10;        for i in range(71):&amp;#10;            if Base71Lookup[i] == output[0]:&amp;#10;                B0HighByte = i&amp;#10;            if Base71Lookup[i] == output[2]:&amp;#10;                B1HighByte = i&amp;#10;            if Base71Lookup[i] == output[4]:&amp;#10;                B2HighByte = i&amp;#10;            if Base71Lookup[i] == output[6]:&amp;#10;                B3HighByte = i&amp;#10;            if Base71Lookup[i] == output[8]:&amp;#10;                B4HighByte = i&amp;#10;&amp;#10;        for i in range(71):&amp;#10;            if Base71Lookup[i] == output[1]:&amp;#10;                B0LowByte = i&amp;#10;            if Base71Lookup[i] == output[3]:&amp;#10;                B1LowByte = i&amp;#10;            if Base71Lookup[i] == output[5]:&amp;#10;                B2LowByte = i&amp;#10;            if Base71Lookup[i] == output[7]:&amp;#10;                B3LowByte = i&amp;#10;            if Base71Lookup[i] == output[9]:&amp;#10;                B4LowByte = i&amp;#10;&amp;#10;        B4ForceInGrams = 0&amp;#10;        B4ForceInNewtons = 0&amp;#10;        B0ForceInGrams = ((B0HighByte * 71) + B0LowByte)&amp;#10;        B0ForceInNewtons = B0ForceInGrams * 0.0098&amp;#10;        B1ForceInGrams = ((B1HighByte * 71) + B1LowByte)&amp;#10;        B1ForceInNewtons = B1ForceInGrams * 0.0098&amp;#10;        B2ForceInGrams = ((B2HighByte * 71) + B2LowByte)&amp;#10;        B2ForceInNewtons = B2ForceInGrams * 0.0098&amp;#10;        B3ForceInGrams = ((B3HighByte * 71) + B3LowByte)&amp;#10;        B3ForceInNewtons = B3ForceInGrams * 0.0098&amp;#10;        B4ForceInGrams = ((B4HighByte * 71) + B4LowByte)&amp;#10;        B4ForceInNewtons = B4ForceInGrams * 0.0098&amp;#10;&amp;#10;        TTL = output[10]&amp;#10;&amp;#10;        strMsg += &quot;G: {:04d} &quot;.format(B0ForceInGrams)&amp;#10;        strMsg += &quot;{:04d} &quot;.format(B1ForceInGrams)&amp;#10;        strMsg += &quot;{:04d} &quot;.format(B2ForceInGrams)&amp;#10;        strMsg += &quot;{:04d} &quot;.format(B3ForceInGrams)&amp;#10;        strMsg += &quot;{:04d} &quot;.format(B4ForceInGrams)&amp;#10;        strMsg += TTL + &quot;\n\n&quot;&amp;#10;&amp;#10;        strMsg += &quot;N: {:0.4f} &quot;.format(B0ForceInNewtons)&amp;#10;        strMsg += &quot;{:0.4f} &quot;.format(B1ForceInNewtons)&amp;#10;        strMsg += &quot;{:0.4f} &quot;.format(B2ForceInNewtons)&amp;#10;        strMsg += &quot;{:0.4f} &quot;.format(B3ForceInNewtons)&amp;#10;        strMsg += &quot;{:0.4f} &quot;.format(B4ForceInNewtons)&amp;#10;        strMsg += TTL + &quot;\n\n&quot;&amp;#10;&amp;#10;        strMsg += &quot;Sample: {:04d}\n\n&quot;.format(intCounter)&amp;#10;        strMsg += &quot;Press 'q' to quit.&quot;&amp;#10;&amp;#10;        feedback_text.text = strMsg&amp;#10;&amp;#10;        ser.reset_input_buffer()  # This clears the serial buffer so it doesn't overfill. This means you will miss samples!&amp;#10;        win.flip()&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="if intCounter == 0:&amp;#10;    strMsg = &quot;&quot;&amp;#10;    strMsg += &quot;BUT0 BUT1 BUT2 BUT3 BUT4 TTL\n&quot;&amp;#10;    strMsg += &quot;Base 71: 00 00 00 00 00 00\n&quot;&amp;#10;    strMsg += &quot;G: 0000 0000 0000 0000 0000 g\n&quot;&amp;#10;    strMsg += &quot;N: 0.0000 0.0000 0.0000 0.0000 0.0000 N\n&quot;&amp;#10;    strMsg += &quot;Sample: 0000\n&quot;&amp;#10;    strMsg += &quot;Press 'q' to quit.\n&quot;&amp;#10;&amp;#10;    feedback_text.text = strMsg&amp;#10;    win.flip()&amp;#10;&amp;#10;while intCounter &lt; 5000:&amp;#10;    keys = event.getKeys()&amp;#10;    if keys:&amp;#10;        if keys[0] == 'q':  # Quit key (only works during samples)&amp;#10;            ser.flush()&amp;#10;            ser.write(&quot;X&quot;.encode())  &amp;#10;            ser.flush()&amp;#10;            ser.close()&amp;#10;            core.quit()&amp;#10;&amp;#10;    intCounter = intCounter + 1&amp;#10;    strSerialData = ser.readline()  &amp;#10;&amp;#10;    strMsg = &quot;&quot;&amp;#10;    strMsg += &quot;BUT0 BUT1 BUT2 BUT3 BUT4 TTL\n&quot;&amp;#10;&amp;#10;    output = strSerialData.decode()  &amp;#10;    outputlength = len(output)&amp;#10;&amp;#10;    if outputlength == 12:&amp;#10;        strMsg += &quot;Base 71: &quot; + output[0]&amp;#10;        strMsg += &quot;&quot; + output[1]&amp;#10;        strMsg += &quot;&quot; + output[2]&amp;#10;        strMsg += &quot;&quot; + output[3]&amp;#10;        strMsg += &quot;&quot; + output[4]&amp;#10;        strMsg += &quot;&quot; + output[5]&amp;#10;        strMsg += &quot;&quot; + output[6]&amp;#10;        strMsg += &quot;&quot; + output[7]&amp;#10;        strMsg += &quot;&quot; + output[8]&amp;#10;        strMsg += &quot;&quot; + output[9]&amp;#10;        strMsg += &quot;&quot; + output[10] + &quot;\n\n&quot;&amp;#10;&amp;#10;        for i in range(71):&amp;#10;            if Base71Lookup[i] == output[0]:&amp;#10;                B0HighByte = i&amp;#10;            if Base71Lookup[i] == output[2]:&amp;#10;                B1HighByte = i&amp;#10;            if Base71Lookup[i] == output[4]:&amp;#10;                B2HighByte = i&amp;#10;            if Base71Lookup[i] == output[6]:&amp;#10;                B3HighByte = i&amp;#10;            if Base71Lookup[i] == output[8]:&amp;#10;                B4HighByte = i&amp;#10;&amp;#10;        for i in range(71):&amp;#10;            if Base71Lookup[i] == output[1]:&amp;#10;                B0LowByte = i&amp;#10;            if Base71Lookup[i] == output[3]:&amp;#10;                B1LowByte = i&amp;#10;            if Base71Lookup[i] == output[5]:&amp;#10;                B2LowByte = i&amp;#10;            if Base71Lookup[i] == output[7]:&amp;#10;                B3LowByte = i&amp;#10;            if Base71Lookup[i] == output[9]:&amp;#10;                B4LowByte = i&amp;#10;&amp;#10;        B4ForceInGrams = 0&amp;#10;        B4ForceInNewtons = 0&amp;#10;        B0ForceInGrams = ((B0HighByte * 71) + B0LowByte)&amp;#10;        B0ForceInNewtons = B0ForceInGrams * 0.0098&amp;#10;        B1ForceInGrams = ((B1HighByte * 71) + B1LowByte)&amp;#10;        B1ForceInNewtons = B1ForceInGrams * 0.0098&amp;#10;        B2ForceInGrams = ((B2HighByte * 71) + B2LowByte)&amp;#10;        B2ForceInNewtons = B2ForceInGrams * 0.0098&amp;#10;        B3ForceInGrams = ((B3HighByte * 71) + B3LowByte)&amp;#10;        B3ForceInNewtons = B3ForceInGrams * 0.0098&amp;#10;        B4ForceInGrams = ((B4HighByte * 71) + B4LowByte)&amp;#10;        B4ForceInNewtons = B4ForceInGrams * 0.0098&amp;#10;&amp;#10;        TTL = output[10]&amp;#10;&amp;#10;        strMsg += &quot;G: {:04d} &quot;.format(B0ForceInGrams)&amp;#10;        strMsg += &quot;{:04d} &quot;.format(B1ForceInGrams)&amp;#10;        strMsg += &quot;{:04d} &quot;.format(B2ForceInGrams)&amp;#10;        strMsg += &quot;{:04d} &quot;.format(B3ForceInGrams)&amp;#10;        strMsg += &quot;{:04d} &quot;.format(B4ForceInGrams)&amp;#10;        strMsg += TTL + &quot;\n\n&quot;&amp;#10;&amp;#10;        strMsg += &quot;N: {:0.4f} &quot;.format(B0ForceInNewtons)&amp;#10;        strMsg += &quot;{:0.4f} &quot;.format(B1ForceInNewtons)&amp;#10;        strMsg += &quot;{:0.4f} &quot;.format(B2ForceInNewtons)&amp;#10;        strMsg += &quot;{:0.4f} &quot;.format(B3ForceInNewtons)&amp;#10;        strMsg += &quot;{:0.4f} &quot;.format(B4ForceInNewtons)&amp;#10;        strMsg += TTL + &quot;\n\n&quot;&amp;#10;&amp;#10;        strMsg += &quot;Sample: {:04d}\n\n&quot;.format(intCounter)&amp;#10;        strMsg += &quot;Press 'q' to quit.&quot;&amp;#10;&amp;#10;        feedback_text.text = strMsg&amp;#10;&amp;#10;        ser.reset_input_buffer()  # This clears the serial buffer so it doesn't overfill. This means you will miss samples!&amp;#10;        win.flip()&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="ser.flush()&amp;#10;ser.write(&quot;X&quot;.encode())&amp;#10;ser.flush()&amp;#10;ser.close()" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
