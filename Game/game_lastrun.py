@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 13, 2025, at 19:31
+    on January 13, 2025, at 20:10
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -486,7 +486,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     import serial
     
     # Initialize the serial connection for PSURP
-    ser = serial.Serial("COM4", 230400, timeout=1)  # Replace "COM4" with your port
+    ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
     ser.flush()
     ser.write("X".encode())  # Initialize PSURP
     ser.write("RUNE\n".encode())  # Enter streaming mode
@@ -504,6 +504,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Initialize the Keyboard
     kb = keyboard.Keyboard()
+    
+    
+    MIN_FORCE = 0.5  # Minimum force to start movement
+    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [-0.5, -0.3]  # Starting position [x, y]
@@ -1661,31 +1665,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # update params
                 pass
             # Run 'Each Frame' code from DinoMovement
-            if selected_control == "PSURP":  # Ensure PSURP control is active
-                strSerialData = ser.readline()
-                if len(strSerialData.decode()) == 12:  # Ensure valid data length
-                    output = strSerialData.decode()
-                    for i in range(71):
-                        if Base71Lookup[i] == output[0]:
-                            B0HighByte = i
-                        if Base71Lookup[i] == output[2]:
-                            B1HighByte = i
-                        if Base71Lookup[i] == output[4]:
-                            B2HighByte = i
-                    for i in range(71):
-                        if Base71Lookup[i] == output[1]:
-                            B0LowByte = i
-                        if Base71Lookup[i] == output[3]:
-                            B1LowByte = i
-                        if Base71Lookup[i] == output[5]:
-                            B2LowByte = i
-            
-                    # Update force values in Newtons
-                    B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
-                    B1ForceInNewtons = ((B1HighByte * 71) + B1LowByte) * 0.0098
-                    B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
-            
-            
             
             # Initialize key state flags
             left_pressed = False
@@ -1705,20 +1684,38 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         up_pressed = True
                         
                         
-            if selected_control == "PSURP":  # Use PSURP for movement
-                # Jump logic
-                if B0ForceInNewtons > jump_threshold:
-                    dino_speed = jump_speed  # Apply upward movement
-            
-                # Move left
-                if B1ForceInNewtons > move_threshold and dino_pos[0] > min_x:
-                    dino_pos[0] -= move_speed  # Move left
-                    dino_image.size = [-1 * abs(dino_image.size[0]), dino_image.size[1]]  # Face left
-            
-                # Move right
-                if B2ForceInNewtons > move_threshold and dino_pos[0] < max_x:
-                    dino_pos[0] += move_speed  # Move right
-                    dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]  # Face right
+            if selected_control == "PSURP":
+                # Read serial data
+                strSerialData = ser.readline()
+                if len(strSerialData.decode()) == 12:
+                    output = strSerialData.decode()
+                    
+                    # Calculate forces
+                    B0HighByte = Base71Lookup.index(output[0])
+                    B0LowByte = Base71Lookup.index(output[1])
+                    B1HighByte = Base71Lookup.index(output[2])
+                    B1LowByte = Base71Lookup.index(output[3])
+                    B2HighByte = Base71Lookup.index(output[4])
+                    B2LowByte = Base71Lookup.index(output[5])
+                    
+                    # Calculate forces in Newtons
+                    B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
+                    B1ForceInNewtons = ((B1HighByte * 71) + B1LowByte) * 0.0098
+                    B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+                    
+                    # Apply forces directly to movement
+                    if B0ForceInNewtons > MIN_FORCE:
+                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                        
+                    if B1ForceInNewtons > MIN_FORCE and dino_pos[0] > min_x:
+                        move_amount = B1ForceInNewtons * FORCE_MULTIPLIER
+                        dino_pos[0] -= move_amount  # Left movement based on force
+                        dino_image.size = [-1 * abs(dino_image.size[0]), dino_image.size[1]]
+                        
+                    if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                        move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
+                        dino_pos[0] += move_amount  # Right movement based on force
+                        dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]
             
             
                         
