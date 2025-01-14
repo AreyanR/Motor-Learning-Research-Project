@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 13, 2025, at 19:21
+    on January 13, 2025, at 19:31
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -1706,18 +1706,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         
                         
             if selected_control == "PSURP":  # Use PSURP for movement
-                # Left and right movement based on thresholds
-                if B0ForceInNewtons > move_threshold and dino_pos[0] > min_x:
+                # Jump logic
+                if B0ForceInNewtons > jump_threshold:
+                    dino_speed = jump_speed  # Apply upward movement
+            
+                # Move left
+                if B1ForceInNewtons > move_threshold and dino_pos[0] > min_x:
                     dino_pos[0] -= move_speed  # Move left
                     dino_image.size = [-1 * abs(dino_image.size[0]), dino_image.size[1]]  # Face left
             
-                if B1ForceInNewtons > move_threshold and dino_pos[0] < max_x:
+                # Move right
+                if B2ForceInNewtons > move_threshold and dino_pos[0] < max_x:
                     dino_pos[0] += move_speed  # Move right
                     dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]  # Face right
             
-                # Jumping
-                if B2ForceInNewtons > jump_threshold and is_on_floor(dino_pos):
-                    dino_speed = jump_speed  # Apply upward movement
             
                         
              
