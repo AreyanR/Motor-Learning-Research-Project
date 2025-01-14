@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 13, 2025, at 15:21
+    on January 13, 2025, at 19:07
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -32,9 +32,6 @@ import sys  # to get file system encoding
 
 import psychopy.iohub as io
 from psychopy.hardware import keyboard
-
-# Run 'Before Experiment' code from PSURP
-Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 
 # --- Setup global variables (available in all functions) ---
 # create a device manager to handle hardware (keyboards, mice, mirophones, speakers, etc.)
@@ -479,13 +476,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-5.0);
-    # Run 'Begin Experiment' code from PSURP
-    import time
-    import serial
-    
-    ser = serial.Serial("COM4",230400, timeout= 1)
-    
-    
     # Run 'Begin Experiment' code from DinoMovement
     from psychopy.hardware import keyboard
     from psychopy.visual import Rect
@@ -1480,37 +1470,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         MainGame.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
-        # Run 'Begin Routine' code from PSURP
-        ser.flush()
-        
-        strMsg = ""
-        intCounter = 0
-        strSerialData = ""
-        
-        B0HighByte = 0
-        B0LowByte = 0
-        B0ForceInGrams = 0
-        B0ForceInNewtons = 0
-        
-        B1HighByte = 0
-        B1LowByte = 0
-        B1ForceInGrams = 0
-        B1ForceInNewtons = 0
-        
-        B2HighByte = 0
-        B2LowByte = 0
-        B2ForceInGrams = 0
-        B2ForceInNewtons = 0
-        
-        B3HighByte = 0
-        B3LowByte = 0
-        B3ForceInGrams = 0
-        B3ForceInNewtons = 0
-        
-        B4HighByte = 0
-        B4LowByte = 0
-        B4ForceInGrams = 0
-        B4ForceInNewtons = 0
         # Run 'Begin Routine' code from DinoMovement
         dino_pos = [-0.5, -0.3]  # Reset Dino's position
         dino_speed = 0  # Reset vertical speed
@@ -1678,74 +1637,16 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if timer_text.status == STARTED:
                 # update params
                 pass
-            # Run 'Each Frame' code from PSURP
-            if selected_control == "PSURP":
-                # Read serial data
-                strSerialData = ser.readline()
-            
-                # Decode and process the data
-                if strSerialData:
-                    output = strSerialData.decode().strip()  # Decode the serial data
-                    outputlength = len(output)
-            
-                    if outputlength == 12:  # Ensure correct data length
-                        # Decode high and low bytes using Base71Lookup
-                        for i in range(71):
-                            if Base71Lookup[i] == output[0]:
-                                B0HighByte = i
-                            if Base71Lookup[i] == output[2]:
-                                B1HighByte = i
-                            if Base71Lookup[i] == output[4]:
-                                B2HighByte = i
-                            if Base71Lookup[i] == output[6]:
-                                B3HighByte = i
-                            if Base71Lookup[i] == output[8]:
-                                B4HighByte = i
-            
-                        for i in range(71):
-                            if Base71Lookup[i] == output[1]:
-                                B0LowByte = i
-                            if Base71Lookup[i] == output[3]:
-                                B1LowByte = i
-                            if Base71Lookup[i] == output[5]:
-                                B2LowByte = i
-                            if Base71Lookup[i] == output[7]:
-                                B3LowByte = i
-                            if Base71Lookup[i] == output[9]:
-                                B4LowByte = i
-            
-                        # Calculate forces in grams and newtons
-                        B0ForceInGrams = (B0HighByte * 71) + B0LowByte
-                        B0ForceInNewtons = B0ForceInGrams * 0.0098
-                        B1ForceInGrams = (B1HighByte * 71) + B1LowByte
-                        B1ForceInNewtons = B1ForceInGrams * 0.0098
-                        B2ForceInGrams = (B2HighByte * 71) + B2LowByte
-                        B2ForceInNewtons = B2ForceInGrams * 0.0098
-                        B3ForceInGrams = (B3HighByte * 71) + B3LowByte
-                        B3ForceInNewtons = B3ForceInGrams * 0.0098
-                        B4ForceInGrams = (B4HighByte * 71) + B4LowByte
-                        B4ForceInNewtons = B4ForceInGrams * 0.0098
-            
-            
-                        print(f"Output: {output}")
-                        print(f"B0: High={B0HighByte}, Low={B0LowByte}, Grams={B0ForceInGrams}, Newtons={B0ForceInNewtons:.4f}")
-                        print(f"B1: High={B1HighByte}, Low={B1LowByte}, Grams={B1ForceInGrams}, Newtons={B1ForceInNewtons:.4f}")
-                        print(f"B2: High={B2HighByte}, Low={B2LowByte}, Grams={B2ForceInGrams}, Newtons={B2ForceInNewtons:.4f}")
-                        print(f"B3: High={B3HighByte}, Low={B3LowByte}, Grams={B3ForceInGrams}, Newtons={B3ForceInNewtons:.4f}")
-                        print(f"B4: High={B4HighByte}, Low={B4LowByte}, Grams={B4ForceInGrams}, Newtons={B4ForceInNewtons:.4f}")
-            
             # Run 'Each Frame' code from DinoMovement
             # Initialize key state flags
             left_pressed = False
             right_pressed = False
             up_pressed = False
             
-            # Check the selected control method and update inputs
+            # Handle input based on the selected control method
             if selected_control == "Keyboard":
-                # Get keyboard inputs
+                # Process keyboard input
                 keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
-            
-                # Update key state flags based on keys currently pressed
                 for key in keys_pressed:
                     if key.name == 'left':
                         left_pressed = True
@@ -1754,12 +1655,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     if key.name == 'up':
                         up_pressed = True
             
-            elif selected_control == "PSURP":
-                # Use PSURP inputs for movement
-                left_pressed = B0ForceInNewtons > 0.2  # Example threshold for left movement
-                right_pressed = B1ForceInNewtons > 0.2  # Example threshold for right movement
-                up_pressed = B2ForceInNewtons > 0.5  # Example threshold for jump
-                
+            # Apply gravity to Dino's vertical speed
             dino_speed += gravity
             
             # Check if Dino is on the floor
@@ -1974,11 +1870,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     if thisSession is not None:
         # if running in a Session with a Liaison client, send data up to now
         thisSession.sendExperimentData()
-    # Run 'End Experiment' code from PSURP
-    ser.flush()
-    ser.write("X".encode())
-    ser.flush()
-    ser.close()
     
     # mark experiment as finished
     endExperiment(thisExp, win=win)
