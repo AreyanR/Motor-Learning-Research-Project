@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 13, 2025, at 19:07
+    on January 14, 2025, at 14:15
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -33,6 +33,8 @@ import sys  # to get file system encoding
 import psychopy.iohub as io
 from psychopy.hardware import keyboard
 
+# Run 'Before Experiment' code from DinoMovement
+Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 # --- Setup global variables (available in all functions) ---
 # create a device manager to handle hardware (keyboards, mice, mirophones, speakers, etc.)
 deviceManager = hardware.DeviceManager()
@@ -479,9 +481,33 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from DinoMovement
     from psychopy.hardware import keyboard
     from psychopy.visual import Rect
+    import time
+    
+    import serial
+    
+    # Initialize the serial connection for PSURP
+    ser = serial.Serial("COM4", 230400, timeout=1)  # Replace "COM4" with your port
+    ser.flush()
+    ser.write("X".encode())  # Initialize PSURP
+    ser.write("RUNE\n".encode())  # Enter streaming mode
+    
+    
+    B0ForceInNewtons = 0
+    B1ForceInNewtons = 0
+    B2ForceInNewtons = 0
+    B3ForceInNewtons = 0
+    B4ForceInNewtons = 0
+    
+    # Thresholds for movement
+    move_threshold = 2  # Adjust based on PSURP sensitivity
+    jump_threshold = 3.0  # Adjust based on PSURP sensitivity
     
     # Initialize the Keyboard
     kb = keyboard.Keyboard()
+    
+    
+    MIN_FORCE = 0.5  # Minimum force to start movement
+    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [-0.5, -0.3]  # Starting position [x, y]
@@ -579,7 +605,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Floor1 properties
     floor1_height = 0.3
-    floor1_width = 0.5
+    floor1_width = 10
     floor1_pos = [-0.5, -0.5]
     
     floor1 = Rect(
@@ -1375,6 +1401,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # Toggle between "Keyboard" and "PSURP"
                 if selected_control == "Keyboard":
                     selected_control = "PSURP"
+                    ser.flush()
                 else:
                     selected_control = "Keyboard"
                 
@@ -1638,6 +1665,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # update params
                 pass
             # Run 'Each Frame' code from DinoMovement
+            
             # Initialize key state flags
             left_pressed = False
             right_pressed = False
@@ -1654,7 +1682,44 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         right_pressed = True
                     if key.name == 'up':
                         up_pressed = True
+                        
+                        
+            if selected_control == "PSURP":
+                # Read serial data
+                strSerialData = ser.readline()
+                if len(strSerialData.decode()) == 12:
+                    output = strSerialData.decode()
+                    
+                    # Calculate forces
+                    B0HighByte = Base71Lookup.index(output[0])
+                    B0LowByte = Base71Lookup.index(output[1])
+                    B1HighByte = Base71Lookup.index(output[2])
+                    B1LowByte = Base71Lookup.index(output[3])
+                    B2HighByte = Base71Lookup.index(output[4])
+                    B2LowByte = Base71Lookup.index(output[5])
+                    
+                    # Calculate forces in Newtons
+                    B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
+                    B1ForceInNewtons = ((B1HighByte * 71) + B1LowByte) * 0.0098
+                    B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+                    
+                    # Apply forces directly to movement
+                    if B0ForceInNewtons > MIN_FORCE:
+                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                        
+                    if B1ForceInNewtons > MIN_FORCE and dino_pos[0] > min_x:
+                        move_amount = B1ForceInNewtons * FORCE_MULTIPLIER
+                        dino_pos[0] -= move_amount  # Left movement based on force
+                        dino_image.size = [-1 * abs(dino_image.size[0]), dino_image.size[1]]
+                        
+                    if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                        move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
+                        dino_pos[0] += move_amount  # Right movement based on force
+                        dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]
             
+            
+                        
+             
             # Apply gravity to Dino's vertical speed
             dino_speed += gravity
             
@@ -1870,6 +1935,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     if thisSession is not None:
         # if running in a Session with a Liaison client, send data up to now
         thisSession.sendExperimentData()
+    # Run 'End Experiment' code from DinoMovement
+    ser.flush()
+    ser.write("X".encode())  # Exit command mode
+    ser.close()
+    
     
     # mark experiment as finished
     endExperiment(thisExp, win=win)

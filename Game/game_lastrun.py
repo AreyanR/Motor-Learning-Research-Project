@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 13, 2025, at 20:10
+    on January 14, 2025, at 14:22
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -506,7 +506,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     kb = keyboard.Keyboard()
     
     
-    MIN_FORCE = 0.5  # Minimum force to start movement
+    MIN_FORCE = 0.2  # Minimum force to start movement
     FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
     
     # Dino movement variables
@@ -1686,6 +1686,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         
             if selected_control == "PSURP":
                 # Read serial data
+                ser.flushInput()
                 strSerialData = ser.readline()
                 if len(strSerialData.decode()) == 12:
                     output = strSerialData.decode()
