@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 14, 2025, at 14:48
+    on January 14, 2025, at 14:51
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -605,7 +605,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Floor1 properties
     floor1_height = 0.3
-    floor1_width = 10
+    floor1_width = 0.5
     floor1_pos = [-0.5, -0.5]
     
     floor1 = Rect(
