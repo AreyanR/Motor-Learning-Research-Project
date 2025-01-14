@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 14, 2025, at 14:22
+    on January 14, 2025, at 14:48
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -467,7 +467,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     score_text = visual.TextStim(win=win, name='score_text',
         text='Score: 0',
         font='Arial',
-        pos=(0.6, 0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        pos=(0.55, 0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-4.0);
@@ -512,7 +512,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Dino movement variables
     dino_pos = [-0.5, -0.3]  # Starting position [x, y]
     dino_speed = 0  # Initial vertical speed
-    gravity = -0.00006  # Downward acceleration
+    gravity = -0.00006  # Downward acceleration 0.00006
     jump_speed = 0.005  # Jumping speed
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
