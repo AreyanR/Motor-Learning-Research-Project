@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 13, 2025, at 15:36
+    on January 13, 2025, at 16:18
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -32,6 +32,9 @@ import sys  # to get file system encoding
 
 import psychopy.iohub as io
 from psychopy.hardware import keyboard
+
+# Run 'Before Experiment' code from PSURP
+Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 
 # --- Setup global variables (available in all functions) ---
 # create a device manager to handle hardware (keyboards, mice, mirophones, speakers, etc.)
@@ -346,6 +349,33 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Start Code - component code to be run after the window creation
     
+    # --- Initialize components for Routine "resetPSURP" ---
+    t_reset_PSURP = visual.TextStim(win=win, name='t_reset_PSURP',
+        text='reseting PSURP',
+        font='Open Sans',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    
+    # --- Initialize components for Routine "TARE" ---
+    t_tare = visual.TextStim(win=win, name='t_tare',
+        text='loading each cell with 1 sec delay (5 seconds)',
+        font='Open Sans',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    
+    # --- Initialize components for Routine "RUNE" ---
+    T_RUNE = visual.TextStim(win=win, name='T_RUNE',
+        text='Entering streaming mode ...',
+        font='Open Sans',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    
     # --- Initialize components for Routine "MainMenu" ---
     TitleText = visual.TextStim(win=win, name='TitleText',
         text='Main Menu',
@@ -449,6 +479,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-5.0);
+    # Run 'Begin Experiment' code from PSURP
+    import serial
+    import time
+    
+    # Initialize the serial connection for the PSURP
+    ser = serial.Serial("COM4", 230400, timeout=0.01)
+    ser.flush()
+    
+    # Variables to store force data
+    B0ForceInNewtons = 0
+    B1ForceInNewtons = 0
+    jump_threshold = .2  # Force threshold for jumping
+    move_threshold = 0.2  # Force threshold for horizontal movement
+    
     # Run 'Begin Experiment' code from DinoMovement
     from psychopy.hardware import keyboard
     from psychopy.visual import Rect
@@ -716,6 +760,398 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     expInfo['expStart'] = data.getDateStr(
         format='%Y-%m-%d %Hh%M.%S.%f %z', fractionalSecondDigits=6
     )
+    
+    # --- Prepare to start Routine "resetPSURP" ---
+    # create an object to store info about Routine resetPSURP
+    resetPSURP = data.Routine(
+        name='resetPSURP',
+        components=[t_reset_PSURP],
+    )
+    resetPSURP.status = NOT_STARTED
+    continueRoutine = True
+    # update component parameters for each repeat
+    # store start times for resetPSURP
+    resetPSURP.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+    resetPSURP.tStart = globalClock.getTime(format='float')
+    resetPSURP.status = STARTED
+    thisExp.addData('resetPSURP.started', resetPSURP.tStart)
+    resetPSURP.maxDuration = None
+    # keep track of which components have finished
+    resetPSURPComponents = resetPSURP.components
+    for thisComponent in resetPSURP.components:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
+    
+    # --- Run Routine "resetPSURP" ---
+    resetPSURP.forceEnded = routineForceEnded = not continueRoutine
+    while continueRoutine and routineTimer.getTime() < 1.0:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *t_reset_PSURP* updates
+        
+        # if t_reset_PSURP is starting this frame...
+        if t_reset_PSURP.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            t_reset_PSURP.frameNStart = frameN  # exact frame index
+            t_reset_PSURP.tStart = t  # local t and not account for scr refresh
+            t_reset_PSURP.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(t_reset_PSURP, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 't_reset_PSURP.started')
+            # update status
+            t_reset_PSURP.status = STARTED
+            t_reset_PSURP.setAutoDraw(True)
+        
+        # if t_reset_PSURP is active this frame...
+        if t_reset_PSURP.status == STARTED:
+            # update params
+            pass
+        
+        # if t_reset_PSURP is stopping this frame...
+        if t_reset_PSURP.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > t_reset_PSURP.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                t_reset_PSURP.tStop = t  # not accounting for scr refresh
+                t_reset_PSURP.tStopRefresh = tThisFlipGlobal  # on global time
+                t_reset_PSURP.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 't_reset_PSURP.stopped')
+                # update status
+                t_reset_PSURP.status = FINISHED
+                t_reset_PSURP.setAutoDraw(False)
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, win=win)
+            return
+        # pause experiment here if requested
+        if thisExp.status == PAUSED:
+            pauseExperiment(
+                thisExp=thisExp, 
+                win=win, 
+                timers=[routineTimer], 
+                playbackComponents=[]
+            )
+            # skip the frame we paused on
+            continue
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            resetPSURP.forceEnded = routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in resetPSURP.components:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "resetPSURP" ---
+    for thisComponent in resetPSURP.components:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    # store stop times for resetPSURP
+    resetPSURP.tStop = globalClock.getTime(format='float')
+    resetPSURP.tStopRefresh = tThisFlipGlobal
+    thisExp.addData('resetPSURP.stopped', resetPSURP.tStop)
+    # Run 'End Routine' code from code_2
+    ser.flush()
+    ser.write("X".encode())
+    
+    # clear out the data from the IO buffers (Fresh commands)
+    # the "X" command puts tje PSURP into command mode
+    
+    
+    
+    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+    if resetPSURP.maxDurationReached:
+        routineTimer.addTime(-resetPSURP.maxDuration)
+    elif resetPSURP.forceEnded:
+        routineTimer.reset()
+    else:
+        routineTimer.addTime(-1.000000)
+    thisExp.nextEntry()
+    
+    # --- Prepare to start Routine "TARE" ---
+    # create an object to store info about Routine TARE
+    TARE = data.Routine(
+        name='TARE',
+        components=[t_tare],
+    )
+    TARE.status = NOT_STARTED
+    continueRoutine = True
+    # update component parameters for each repeat
+    # store start times for TARE
+    TARE.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+    TARE.tStart = globalClock.getTime(format='float')
+    TARE.status = STARTED
+    thisExp.addData('TARE.started', TARE.tStart)
+    TARE.maxDuration = None
+    # keep track of which components have finished
+    TAREComponents = TARE.components
+    for thisComponent in TARE.components:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
+    
+    # --- Run Routine "TARE" ---
+    TARE.forceEnded = routineForceEnded = not continueRoutine
+    while continueRoutine and routineTimer.getTime() < 5.0:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *t_tare* updates
+        
+        # if t_tare is starting this frame...
+        if t_tare.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            t_tare.frameNStart = frameN  # exact frame index
+            t_tare.tStart = t  # local t and not account for scr refresh
+            t_tare.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(t_tare, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 't_tare.started')
+            # update status
+            t_tare.status = STARTED
+            t_tare.setAutoDraw(True)
+        
+        # if t_tare is active this frame...
+        if t_tare.status == STARTED:
+            # update params
+            pass
+        
+        # if t_tare is stopping this frame...
+        if t_tare.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > t_tare.tStartRefresh + 5-frameTolerance:
+                # keep track of stop time/frame for later
+                t_tare.tStop = t  # not accounting for scr refresh
+                t_tare.tStopRefresh = tThisFlipGlobal  # on global time
+                t_tare.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 't_tare.stopped')
+                # update status
+                t_tare.status = FINISHED
+                t_tare.setAutoDraw(False)
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, win=win)
+            return
+        # pause experiment here if requested
+        if thisExp.status == PAUSED:
+            pauseExperiment(
+                thisExp=thisExp, 
+                win=win, 
+                timers=[routineTimer], 
+                playbackComponents=[]
+            )
+            # skip the frame we paused on
+            continue
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            TARE.forceEnded = routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in TARE.components:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "TARE" ---
+    for thisComponent in TARE.components:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    # store stop times for TARE
+    TARE.tStop = globalClock.getTime(format='float')
+    TARE.tStopRefresh = tThisFlipGlobal
+    thisExp.addData('TARE.stopped', TARE.tStop)
+    # Run 'End Routine' code from tare_code
+    ser.write("TAR0\n".encode())
+    time.sleep(1)
+    ser.write("TAR1\n".encode())
+    time.sleep(1)
+    ser.write("TAR2\n".encode())
+    time.sleep(1)
+    ser.write("TAR3\n".encode())
+    time.sleep(1)
+    ser.write("TAR4\n".encode())
+    time.sleep(1)
+    
+    
+    # the tar command zeros out all of the force messurements
+    # halt for one second to make sure command was processed 
+    
+    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+    if TARE.maxDurationReached:
+        routineTimer.addTime(-TARE.maxDuration)
+    elif TARE.forceEnded:
+        routineTimer.reset()
+    else:
+        routineTimer.addTime(-5.000000)
+    thisExp.nextEntry()
+    
+    # --- Prepare to start Routine "RUNE" ---
+    # create an object to store info about Routine RUNE
+    RUNE = data.Routine(
+        name='RUNE',
+        components=[T_RUNE],
+    )
+    RUNE.status = NOT_STARTED
+    continueRoutine = True
+    # update component parameters for each repeat
+    # store start times for RUNE
+    RUNE.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+    RUNE.tStart = globalClock.getTime(format='float')
+    RUNE.status = STARTED
+    thisExp.addData('RUNE.started', RUNE.tStart)
+    RUNE.maxDuration = None
+    # keep track of which components have finished
+    RUNEComponents = RUNE.components
+    for thisComponent in RUNE.components:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
+    
+    # --- Run Routine "RUNE" ---
+    RUNE.forceEnded = routineForceEnded = not continueRoutine
+    while continueRoutine and routineTimer.getTime() < 1.0:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *T_RUNE* updates
+        
+        # if T_RUNE is starting this frame...
+        if T_RUNE.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            T_RUNE.frameNStart = frameN  # exact frame index
+            T_RUNE.tStart = t  # local t and not account for scr refresh
+            T_RUNE.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(T_RUNE, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'T_RUNE.started')
+            # update status
+            T_RUNE.status = STARTED
+            T_RUNE.setAutoDraw(True)
+        
+        # if T_RUNE is active this frame...
+        if T_RUNE.status == STARTED:
+            # update params
+            pass
+        
+        # if T_RUNE is stopping this frame...
+        if T_RUNE.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > T_RUNE.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                T_RUNE.tStop = t  # not accounting for scr refresh
+                T_RUNE.tStopRefresh = tThisFlipGlobal  # on global time
+                T_RUNE.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'T_RUNE.stopped')
+                # update status
+                T_RUNE.status = FINISHED
+                T_RUNE.setAutoDraw(False)
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, win=win)
+            return
+        # pause experiment here if requested
+        if thisExp.status == PAUSED:
+            pauseExperiment(
+                thisExp=thisExp, 
+                win=win, 
+                timers=[routineTimer], 
+                playbackComponents=[]
+            )
+            # skip the frame we paused on
+            continue
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            RUNE.forceEnded = routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in RUNE.components:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "RUNE" ---
+    for thisComponent in RUNE.components:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    # store stop times for RUNE
+    RUNE.tStop = globalClock.getTime(format='float')
+    RUNE.tStopRefresh = tThisFlipGlobal
+    thisExp.addData('RUNE.stopped', RUNE.tStop)
+    # Run 'End Routine' code from Code_RUNE
+    ser.write("RUNE\n".encode())
+    
+    # the rune command sets the PSURP to streaming mode. (for getting vals)
+    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+    if RUNE.maxDurationReached:
+        routineTimer.addTime(-RUNE.maxDuration)
+    elif RUNE.forceEnded:
+        routineTimer.reset()
+    else:
+        routineTimer.addTime(-1.000000)
+    thisExp.nextEntry()
     
     # set up handler to look after randomisation of conditions etc
     GameLoop = data.TrialHandler2(
@@ -1051,6 +1487,40 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         MainGame.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
+        # Run 'Begin Routine' code from PSURP
+        ser.flush()
+        
+        strMsg = ""
+        intCounter = 0
+        strSerialData = ""
+        
+        output = ""
+        outputlength = 0
+        
+        B0HighByte = 0
+        B0LowByte = 0
+        B0ForceInGrams = 0
+        B0ForceInNewtons = 0
+        
+        B1HighByte = 0
+        B1LowByte = 0
+        B1ForceInGrams = 0
+        B1ForceInNewtons = 0
+        
+        B2HighByte = 0
+        B2LowByte = 0
+        B2ForceInGrams = 0
+        B2ForceInNewtons = 0
+        
+        B3HighByte = 0
+        B3LowByte = 0
+        B3ForceInGrams = 0
+        B3ForceInNewtons = 0
+        
+        B4HighByte = 0
+        B4LowByte = 0
+        B4ForceInGrams = 0
+        B4ForceInNewtons = 0
         # Run 'Begin Routine' code from DinoMovement
         dino_pos = [-0.5, -0.3]  # Reset Dino's position
         dino_speed = 0  # Reset vertical speed
@@ -1218,18 +1688,39 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if timer_text.status == STARTED:
                 # update params
                 pass
+            # Run 'Each Frame' code from PSURP
+            if selected_control == "PSURP":
+                try:
+                    # Check for new data in the serial buffer
+                    if ser.in_waiting > 0:
+                        strSerialData = ser.readline().decode().strip()
+            
+                        if len(strSerialData) >= 12:  # Ensure message is complete
+                            # Decode B0 force
+                            B0HighByte = Base71Lookup.index(strSerialData[0])
+                            B0LowByte = Base71Lookup.index(strSerialData[1])
+                            B0ForceInGrams = (B0HighByte * 71) + B0LowByte
+                            B0ForceInNewtons = B0ForceInGrams * 0.0098
+            
+                            # Decode B1 force
+                            B1HighByte = Base71Lookup.index(strSerialData[2])
+                            B1LowByte = Base71Lookup.index(strSerialData[3])
+                            B1ForceInGrams = (B1HighByte * 71) + B1LowByte
+                            B1ForceInNewtons = B1ForceInGrams * 0.0098
+            
+                except Exception as e:
+                    print(f"Error reading PSURP data: {e}")
+            
             # Run 'Each Frame' code from DinoMovement
             # Initialize key state flags
             left_pressed = False
             right_pressed = False
             up_pressed = False
             
-            # Check the selected control method and update inputs
+            # Handle input based on the selected control method
             if selected_control == "Keyboard":
-                # Get keyboard inputs
+                # Process keyboard input
                 keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
-            
-                # Update key state flags based on keys currently pressed
                 for key in keys_pressed:
                     if key.name == 'left':
                         left_pressed = True
@@ -1239,10 +1730,19 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         up_pressed = True
             
             elif selected_control == "PSURP":
-                left_pressed = B0ForceInNewtons > 0.5  # Example threshold for left movement
-                right_pressed = B1ForceInNewtons > 0.5  # Example threshold for right movement
-                up_pressed = B2ForceInNewtons > 0.5  # Example threshold for jump
-                
+                # Define thresholds for movement and jumping
+                move_threshold = 0.01  # Adjust for horizontal movement sensitivity
+                jump_threshold = 0.01  # Adjust for jumping sensitivity
+            
+                # Check if the force exceeds the thresholds
+                if B0ForceInNewtons > move_threshold and B1ForceInNewtons < move_threshold:
+                    left_pressed = True  # Move left
+                if B1ForceInNewtons > move_threshold and B0ForceInNewtons < move_threshold:
+                    right_pressed = True  # Move right
+                if B0ForceInNewtons > jump_threshold:
+                    up_pressed = True  # Jump
+            
+            # Apply gravity to Dino's vertical speed
             dino_speed += gravity
             
             # Check if Dino is on the floor
@@ -1457,6 +1957,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     if thisSession is not None:
         # if running in a Session with a Liaison client, send data up to now
         thisSession.sendExperimentData()
+    # Run 'End Experiment' code from PSURP
+    ser.flush()
+    ser.write("X".encode())
+    ser.flush()
+    ser.close()
     
     # mark experiment as finished
     endExperiment(thisExp, win=win)
