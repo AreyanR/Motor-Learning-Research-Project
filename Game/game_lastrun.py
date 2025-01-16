@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 14, 2025, at 16:24
+    on January 15, 2025, at 19:23
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -486,10 +486,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     import serial
     
     # Initialize the serial connection for PSURP
-    ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
-    ser.flush()
-    ser.write("X".encode())  # Initialize PSURP
-    ser.write("RUNE\n".encode())  # Enter streaming mode
+    #ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
+    #ser.flush()
+    #ser.write("X".encode())  # Initialize PSURP
+    #ser.write("RUNE\n".encode())  # Enter streaming mode
     
     
     B0ForceInNewtons = 0
@@ -742,6 +742,50 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     time_limit = 120  # Set the time limit in seconds (e.g., 2 minutes)
     
     
+    # --- Initialize components for Routine "EndGameScreen" ---
+    end_score_text = visual.TextStim(win=win, name='end_score_text',
+        text='Score: ',
+        font='Arial',
+        pos=(0, .2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    start_button_2 = visual.Rect(
+        win=win, name='start_button_2',
+        width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
+        ori=0.0, pos=(0, 0), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor='white', fillColor=None,
+        opacity=None, depth=-1.0, interpolate=True)
+    exit_button_2 = visual.Rect(
+        win=win, name='exit_button_2',
+        width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
+        ori=0.0, pos=(0, -.2), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor='white', fillColor=None,
+        opacity=None, depth=-2.0, interpolate=True)
+    StartGame_2 = visual.TextStim(win=win, name='StartGame_2',
+        text='Play Again?',
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-3.0);
+    Exit_2 = visual.TextStim(win=win, name='Exit_2',
+        text='Exit',
+        font='Arial',
+        pos=(0, -.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-4.0);
+    # Run 'Begin Experiment' code from code_3
+    # Default control method
+    selected_control = "Keyboard"
+    
+    mouse_2 = event.Mouse(win=win)
+    x, y = [None, None]
+    mouse_2.mouseClock = core.Clock()
+    
     # create some handy timers
     
     # global clock to track the time since experiment started
@@ -883,8 +927,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     resetPSURP.tStopRefresh = tThisFlipGlobal
     thisExp.addData('resetPSURP.stopped', resetPSURP.tStop)
     # Run 'End Routine' code from code_2
-    ser.flush()
-    ser.write("X".encode())
+    #ser.flush()
+    #ser.write("X".encode())
     
     # clear out the data from the IO buffers (Fresh commands)
     # the "X" command puts tje PSURP into command mode
@@ -1013,6 +1057,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     TARE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('TARE.stopped', TARE.tStop)
     # Run 'End Routine' code from tare_code
+    """
     ser.write("TAR0\n".encode())
     time.sleep(1)
     ser.write("TAR1\n".encode())
@@ -1024,7 +1069,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     ser.write("TAR4\n".encode())
     time.sleep(1)
     
-    
+    """
     # the tar command zeros out all of the force messurements
     # halt for one second to make sure command was processed 
     
@@ -1150,7 +1195,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     RUNE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('RUNE.stopped', RUNE.tStop)
     # Run 'End Routine' code from Code_RUNE
-    ser.write("RUNE\n".encode())
+    #ser.write("RUNE\n".encode())
     
     # the rune command sets the PSURP to streaming mode. (for getting vals)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
@@ -1824,6 +1869,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 print("Dino ate the meatbone!")
                 meatbone_image.opacity = 0  # Make the meatbone disappear
                 meatbone_collided = True  # Set collision flag to prevent further updates
+                continueRoutine = False
             
             
             for vertex in arc1_vertices:
@@ -1927,7 +1973,264 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         MainGame.tStop = globalClock.getTime(format='float')
         MainGame.tStopRefresh = tThisFlipGlobal
         thisExp.addData('MainGame.stopped', MainGame.tStop)
+        # Run 'End Routine' code from GoalController
+        global total_touched_vertices, total_possible_vertices
+        total_touched_vertices = len(arc1_touched_vertices) + len(arc2_touched_vertices) + len(arc3_touched_vertices)
+        total_possible_vertices = len(arc1_vertices) + len(arc2_vertices) + len(arc3_vertices)
+        
         # the Routine "MainGame" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
+        
+        # --- Prepare to start Routine "EndGameScreen" ---
+        # create an object to store info about Routine EndGameScreen
+        EndGameScreen = data.Routine(
+            name='EndGameScreen',
+            components=[end_score_text, start_button_2, exit_button_2, StartGame_2, Exit_2, mouse_2],
+        )
+        EndGameScreen.status = NOT_STARTED
+        continueRoutine = True
+        # update component parameters for each repeat
+        # Run 'Begin Routine' code from code_3
+        
+        # Calculate the percentage
+        if total_possible_vertices > 0:
+            percentage = (total_touched_vertices / total_possible_vertices) * 100
+        else:
+            percentage = 0  # Avoid division by zero
+        
+        # Update the text for the end screen
+        end_score_text.text = (
+            f"You hit {total_touched_vertices} out of {total_possible_vertices} vertices!\n"
+            f"That's {percentage:.2f}%!"
+        )
+        
+        # setup some python lists for storing info about the mouse_2
+        mouse_2.x = []
+        mouse_2.y = []
+        mouse_2.leftButton = []
+        mouse_2.midButton = []
+        mouse_2.rightButton = []
+        mouse_2.time = []
+        gotValidClick = False  # until a click is received
+        # store start times for EndGameScreen
+        EndGameScreen.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+        EndGameScreen.tStart = globalClock.getTime(format='float')
+        EndGameScreen.status = STARTED
+        thisExp.addData('EndGameScreen.started', EndGameScreen.tStart)
+        EndGameScreen.maxDuration = None
+        # keep track of which components have finished
+        EndGameScreenComponents = EndGameScreen.components
+        for thisComponent in EndGameScreen.components:
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        # reset timers
+        t = 0
+        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+        frameN = -1
+        
+        # --- Run Routine "EndGameScreen" ---
+        # if trial has changed, end Routine now
+        if isinstance(GameLoop, data.TrialHandler2) and thisGameLoop.thisN != GameLoop.thisTrial.thisN:
+            continueRoutine = False
+        EndGameScreen.forceEnded = routineForceEnded = not continueRoutine
+        while continueRoutine:
+            # get current time
+            t = routineTimer.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            
+            # *end_score_text* updates
+            
+            # if end_score_text is starting this frame...
+            if end_score_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                end_score_text.frameNStart = frameN  # exact frame index
+                end_score_text.tStart = t  # local t and not account for scr refresh
+                end_score_text.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(end_score_text, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'end_score_text.started')
+                # update status
+                end_score_text.status = STARTED
+                end_score_text.setAutoDraw(True)
+            
+            # if end_score_text is active this frame...
+            if end_score_text.status == STARTED:
+                # update params
+                pass
+            
+            # *start_button_2* updates
+            
+            # if start_button_2 is starting this frame...
+            if start_button_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                start_button_2.frameNStart = frameN  # exact frame index
+                start_button_2.tStart = t  # local t and not account for scr refresh
+                start_button_2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(start_button_2, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'start_button_2.started')
+                # update status
+                start_button_2.status = STARTED
+                start_button_2.setAutoDraw(True)
+            
+            # if start_button_2 is active this frame...
+            if start_button_2.status == STARTED:
+                # update params
+                pass
+            
+            # *exit_button_2* updates
+            
+            # if exit_button_2 is starting this frame...
+            if exit_button_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                exit_button_2.frameNStart = frameN  # exact frame index
+                exit_button_2.tStart = t  # local t and not account for scr refresh
+                exit_button_2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(exit_button_2, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'exit_button_2.started')
+                # update status
+                exit_button_2.status = STARTED
+                exit_button_2.setAutoDraw(True)
+            
+            # if exit_button_2 is active this frame...
+            if exit_button_2.status == STARTED:
+                # update params
+                pass
+            
+            # *StartGame_2* updates
+            
+            # if StartGame_2 is starting this frame...
+            if StartGame_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                StartGame_2.frameNStart = frameN  # exact frame index
+                StartGame_2.tStart = t  # local t and not account for scr refresh
+                StartGame_2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(StartGame_2, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'StartGame_2.started')
+                # update status
+                StartGame_2.status = STARTED
+                StartGame_2.setAutoDraw(True)
+            
+            # if StartGame_2 is active this frame...
+            if StartGame_2.status == STARTED:
+                # update params
+                pass
+            
+            # *Exit_2* updates
+            
+            # if Exit_2 is starting this frame...
+            if Exit_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                Exit_2.frameNStart = frameN  # exact frame index
+                Exit_2.tStart = t  # local t and not account for scr refresh
+                Exit_2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(Exit_2, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'Exit_2.started')
+                # update status
+                Exit_2.status = STARTED
+                Exit_2.setAutoDraw(True)
+            
+            # if Exit_2 is active this frame...
+            if Exit_2.status == STARTED:
+                # update params
+                pass
+            # Run 'Each Frame' code from code_3
+            # Check if the mouse is clicked and which button is clicked
+            if mouse.isPressedIn(start_button_2):  # Start button
+                continueRoutine = False  # End the Main Menu routine
+            
+            if mouse.isPressedIn(exit_button_2):  # Exit button
+                core.quit()  # Quit the experiment
+                
+            
+            
+            # *mouse_2* updates
+            
+            # if mouse_2 is starting this frame...
+            if mouse_2.status == NOT_STARTED and t >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                mouse_2.frameNStart = frameN  # exact frame index
+                mouse_2.tStart = t  # local t and not account for scr refresh
+                mouse_2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(mouse_2, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.addData('mouse_2.started', t)
+                # update status
+                mouse_2.status = STARTED
+                mouse_2.mouseClock.reset()
+                prevButtonState = mouse_2.getPressed()  # if button is down already this ISN'T a new click
+            if mouse_2.status == STARTED:  # only update if started and not finished!
+                buttons = mouse_2.getPressed()
+                if buttons != prevButtonState:  # button state changed?
+                    prevButtonState = buttons
+                    if sum(buttons) > 0:  # state changed to a new click
+                        pass
+                        x, y = mouse_2.getPos()
+                        mouse_2.x.append(x)
+                        mouse_2.y.append(y)
+                        buttons = mouse_2.getPressed()
+                        mouse_2.leftButton.append(buttons[0])
+                        mouse_2.midButton.append(buttons[1])
+                        mouse_2.rightButton.append(buttons[2])
+                        mouse_2.time.append(mouse_2.mouseClock.getTime())
+            
+            # check for quit (typically the Esc key)
+            if defaultKeyboard.getKeys(keyList=["escape"]):
+                thisExp.status = FINISHED
+            if thisExp.status == FINISHED or endExpNow:
+                endExperiment(thisExp, win=win)
+                return
+            # pause experiment here if requested
+            if thisExp.status == PAUSED:
+                pauseExperiment(
+                    thisExp=thisExp, 
+                    win=win, 
+                    timers=[routineTimer], 
+                    playbackComponents=[]
+                )
+                # skip the frame we paused on
+                continue
+            
+            # check if all components have finished
+            if not continueRoutine:  # a component has requested a forced-end of Routine
+                EndGameScreen.forceEnded = routineForceEnded = True
+                break
+            continueRoutine = False  # will revert to True if at least one component still running
+            for thisComponent in EndGameScreen.components:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # --- Ending Routine "EndGameScreen" ---
+        for thisComponent in EndGameScreen.components:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        # store stop times for EndGameScreen
+        EndGameScreen.tStop = globalClock.getTime(format='float')
+        EndGameScreen.tStopRefresh = tThisFlipGlobal
+        thisExp.addData('EndGameScreen.stopped', EndGameScreen.tStop)
+        # store data for GameLoop (TrialHandler)
+        GameLoop.addData('mouse_2.x', mouse_2.x)
+        GameLoop.addData('mouse_2.y', mouse_2.y)
+        GameLoop.addData('mouse_2.leftButton', mouse_2.leftButton)
+        GameLoop.addData('mouse_2.midButton', mouse_2.midButton)
+        GameLoop.addData('mouse_2.rightButton', mouse_2.rightButton)
+        GameLoop.addData('mouse_2.time', mouse_2.time)
+        # the Routine "EndGameScreen" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
         
@@ -1937,9 +2240,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # if running in a Session with a Liaison client, send data up to now
         thisSession.sendExperimentData()
     # Run 'End Experiment' code from DinoMovement
-    ser.flush()
-    ser.write("X".encode())  # Exit command mode
-    ser.close()
+    #ser.flush()
+    #ser.write("X".encode())  # Exit command mode
+    #ser.close()
     
     
     # mark experiment as finished
