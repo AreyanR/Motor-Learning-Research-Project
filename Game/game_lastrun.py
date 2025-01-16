@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 16, 2025, at 00:25
+    on January 16, 2025, at 00:28
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -510,7 +510,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
     
     # Dino movement variables
-    dino_pos = [-0.5, -0.3]  # Starting position [x, y]
+    dino_pos = [0, -0.3]  # Starting position [x, y]
     dino_speed = 0  # Initial vertical speed
     gravity = -0.00006  # Downward acceleration 0.00006
     jump_speed = 0.005  # Jumping speed
@@ -518,7 +518,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
     min_x = -0.6  # Left boundary
     max_x = 5.3
-    respawn_position = [-0.5, -0.3]  # Starting position for Dino
+    respawn_position = [0, -0.3]  # Starting position for Dino
     
     # Get the floor vertices from the Floor Controller
     floor1_vertices = floor1.vertices  # Assuming 'floor' is a Polygon or Rect stimulus
@@ -593,7 +593,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Camera variables
     camera_offset_x = 0  # Tracks the camera offset to follow Dino
-    camera_speed = 0.004  # Adjust this speed as needed
+    camera_speed = 0.003  # Adjust this speed as needed
     # Background properties
     background_width = 2.0  # Width of a single background image
     background_height = 1.0
@@ -606,7 +606,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Floor1 properties
     floor1_height = 0.3
     floor1_width = 0.5
-    floor1_pos = [-0.5, -0.5]
+    floor1_pos = [0, -0.5]
     
     floor1 = Rect(
         win=win,
@@ -1510,7 +1510,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         continueRoutine = True
         # update component parameters for each repeat
         # Run 'Begin Routine' code from DinoMovement
-        dino_pos = [-0.5, -0.3]  # Reset Dino's position
+        dino_pos = [0, -0.3]  # Reset Dino's position
         dino_speed = 0  # Reset vertical speed
         
         # Run 'Begin Routine' code from worldController
@@ -1845,7 +1845,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 print("Dino ate the meatbone!")
                 meatbone_image.opacity = 0  # Make the meatbone disappear
                 meatbone_collided = True  # Prevent further collision checks
-                #continueRoutine = False
+                continueRoutine = False
             
             for vertex in arc1_vertices:
                 # Adjust Arc 1 vertex for its X-offset (+1)
