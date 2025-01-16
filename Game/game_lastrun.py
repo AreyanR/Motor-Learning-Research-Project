@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 15, 2025, at 19:23
+    on January 15, 2025, at 20:06
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -128,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='D:\\Users\\areya\\Desktop\\work\\motor-learning-research-project\\Game\\game_lastrun.py',
+        originPath='D:\\Users\\areya\\Desktop\\motor-learning-research-project\\Game\\game_lastrun.py',
         savePickle=True, saveWideText=False,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -593,7 +593,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Camera variables
     camera_offset_x = 0  # Tracks the camera offset to follow Dino
-    
+    camera_speed = 0.004  # Adjust this speed as needed
     # Background properties
     background_width = 2.0  # Width of a single background image
     background_height = 1.0
@@ -737,6 +737,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc3_touched_vertices = []
     
     touch_threshold = 0.05
+    
+    
     # Run 'Begin Experiment' code from Timer
     level_timer = core.Clock()  # Initialize the timer
     time_limit = 120  # Set the time limit in seconds (e.g., 2 minutes)
@@ -1795,7 +1797,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]  # Reset Dino to face right
             
             # Update Dino's position
-            dino_image.pos = [0, dino_pos[1]]  # Center Dino horizontally, only update vertical
+            # dino_image.pos = dino_pos  # Use both X and Y values of dino_pos
+            dino_image.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
+            
             
             
             keys_pressed = kb.getKeys(['o'], waitRelease=False, clear=False)
@@ -1825,23 +1829,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Assume dino_pos[0] tracks Dino's X position (horizontal movement)
             
             # Update the camera offset based on Dino's X position
-            camera_offset_x = dino_pos[0]  # The camera offset follows Dino's position
+            camera_offset_x += camera_speed  # The camera offset follows Dino's position
             
             # Move backgrounds relative to Dino's position (seamless wrap-around)
             background1.pos = [-(camera_offset_x % background_width), 0]
             background2.pos = [background1.pos[0] + background_width, 0]
             
             # Update floor positions relative to Dino's position
-            floor1.pos = [floor1_pos[0] - camera_offset_x, floor1.pos[1]]  # Floor1 moves with Dino
+            floor1.pos = [floor1_pos[0] - camera_offset_x, floor1.pos[1]]
             floor2.pos = [floor2_x_static - camera_offset_x, floor2.pos[1]]  # Floor2 moves with Dino
             
             
             # Update meatbone position to match floor2's top
             meatbone_x = floor2.pos[0]  # Update X position based on floor2
             meatbone_y = floor2_top + (meatbone_size[1] / 2) - offset  # Keep the meatbone on top of floor2
-            
-            meatbone_pos = [meatbone_x, meatbone_y]
-            meatbone_image.pos = meatbone_pos
+            meatbone_image.pos = [meatbone_x, meatbone_y]
             
             
             # Update the arc position relative to the camera offset
@@ -1864,7 +1866,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             # Run 'Each Frame' code from GoalController
             
-            # Check for collision
             if not meatbone_collided and -0.05 <= meatbone_x <= 0.05 and -0.280 <= dino_pos[1] <= -0.200:
                 print("Dino ate the meatbone!")
                 meatbone_image.opacity = 0  # Make the meatbone disappear
@@ -1884,6 +1885,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if distance <= touch_threshold and vertex not in arc1_touched_vertices:
                     arc1_touched_vertices.append(vertex)
                     score += 1  # Increment the score for Arc 1
+            
             
             for vertex in arc2_vertices:
                 # Adjust Arc 2 vertex for its X-offset (+2)
@@ -1973,6 +1975,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         MainGame.tStop = globalClock.getTime(format='float')
         MainGame.tStopRefresh = tThisFlipGlobal
         thisExp.addData('MainGame.stopped', MainGame.tStop)
+        # Run 'End Routine' code from DinoMovement
+        dino_pos = [-0.5, -0.3]  # Reset Dino's position
         # Run 'End Routine' code from GoalController
         global total_touched_vertices, total_possible_vertices
         total_touched_vertices = len(arc1_touched_vertices) + len(arc2_touched_vertices) + len(arc3_touched_vertices)
