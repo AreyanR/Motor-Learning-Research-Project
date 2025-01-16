@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 15, 2025, at 20:21
+    on January 16, 2025, at 00:25
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -738,7 +738,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     touch_threshold = 0.05
     
-    
+    collision_threshold = 0.1  # You can adjust this to fit your game scale
     # Run 'Begin Experiment' code from Timer
     level_timer = core.Clock()  # Initialize the timer
     time_limit = 120  # Set the time limit in seconds (e.g., 2 minutes)
@@ -1772,6 +1772,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             keys_pressed = kb.getKeys(['o'], waitRelease=False, clear=False)
             if 'o' in [key.name for key in keys_pressed]:
                 print(f"Dino Position: X = {dino_pos[0]:.3f}, Y = {dino_pos[1]:.3f}")
+                print(f"Meatbone Position: {meatbone_x, meatbone_y}")
                 
                 
                 
@@ -1832,13 +1833,19 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             arc3.draw()
             
             # Run 'Each Frame' code from GoalController
+            dino_relative_x = dino_pos[0] - camera_offset_x
+            dino_relative_y = dino_pos[1]
+            # Check for collision based on proximity to the updated position
+            dx = dino_relative_x - meatbone_x
+            dy = dino_relative_y - meatbone_y
             
-            if not meatbone_collided and -0.05 <= meatbone_x <= 0.05 and -0.280 <= dino_pos[1] <= -0.200:
+            # Define a collision threshold (adjust based on the visual scale of your game)
+            # Check for collision
+            if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= collision_threshold:
                 print("Dino ate the meatbone!")
                 meatbone_image.opacity = 0  # Make the meatbone disappear
-                meatbone_collided = True  # Set collision flag to prevent further updates
-                continueRoutine = False
-            
+                meatbone_collided = True  # Prevent further collision checks
+                #continueRoutine = False
             
             for vertex in arc1_vertices:
                 # Adjust Arc 1 vertex for its X-offset (+1)
