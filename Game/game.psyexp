@@ -352,7 +352,7 @@
         <Param val="from psychopy.visual import Rect, ImageStim, ShapeStim&amp;#10;import math&amp;#10;&amp;#10;&amp;#10;&amp;#10;# Function to calculate vertices of a Rect stimulus&amp;#10;def calculate_rect_vertices(rect):&amp;#10;    &quot;&quot;&quot;Calculate the vertices of a Rect stimulus.&quot;&quot;&quot;&amp;#10;    half_width = rect.width / 2&amp;#10;    half_height = rect.height / 2&amp;#10;    center_x, center_y = rect.pos&amp;#10;    vertices = [&amp;#10;        [center_x - half_width, center_y - half_height],  # Bottom-left&amp;#10;        [center_x + half_width, center_y - half_height],  # Bottom-right&amp;#10;        [center_x + half_width, center_y + half_height],  # Top-right&amp;#10;        [center_x - half_width, center_y + half_height],  # Top-left&amp;#10;    ]&amp;#10;    return vertices&amp;#10;&amp;#10;# Camera variables&amp;#10;camera_offset_x = 0  # Tracks the camera offset to follow Dino&amp;#10;camera_speed = 0.004  # Adjust this speed as needed&amp;#10;# Background properties&amp;#10;background_width = 2.0  # Width of a single background image&amp;#10;background_height = 1.0&amp;#10;background_image = 'Assets/7.png'  # Path to your custom background image&amp;#10;&amp;#10;# Create two background images for seamless scrolling&amp;#10;background1 = ImageStim(win, image=background_image, size=[background_width, background_height], pos=[0, 0])&amp;#10;background2 = ImageStim(win, image=background_image, size=[background_width, background_height], pos=[background_width, 0])&amp;#10;&amp;#10;# Floor1 properties&amp;#10;floor1_height = 0.3&amp;#10;floor1_width = 0.5&amp;#10;floor1_pos = [-0.5, -0.5]&amp;#10;&amp;#10;floor1 = Rect(&amp;#10;    win=win,&amp;#10;    width=floor1_width,&amp;#10;    height=floor1_height,&amp;#10;    pos=floor1_pos,&amp;#10;    fillColor=&quot;black&quot;,&amp;#10;    lineColor=None&amp;#10;)&amp;#10;floor1_vertices = calculate_rect_vertices(floor1)&amp;#10;&amp;#10;# Floor2 properties - Place it further into the map&amp;#10;floor2_x_static = 5.0  # Fixed X position where floor2 appears&amp;#10;floor2_height = 0.3&amp;#10;floor2_width = 0.5&amp;#10;&amp;#10;floor2 = Rect(&amp;#10;    win=win,&amp;#10;    width=floor2_width,&amp;#10;    height=floor2_height,&amp;#10;    pos=[floor2_x_static, -0.5],&amp;#10;    fillColor=&quot;black&quot;,&amp;#10;    lineColor=None&amp;#10;)&amp;#10;floor2_vertices = calculate_rect_vertices(floor2)&amp;#10;&amp;#10;&amp;#10;# Floor thresholds&amp;#10;floor1_top = max(v[1] for v in floor1_vertices)&amp;#10;floor2_top = max(v[1] for v in floor2_vertices)&amp;#10;&amp;#10;&amp;#10;&amp;#10;#meat bone&amp;#10;&amp;#10;meatbone_size = [0.15, 0.09]  # Example size (width, height)&amp;#10;meatbone_image.size = meatbone_size&amp;#10;offset = 0.01  # Adjust to align the meatbone properly with floor2&amp;#10;&amp;#10;&amp;#10;#arc stuff&amp;#10;&amp;#10;# Arc properties&amp;#10;arc1_center = [0.3, 0.0]&amp;#10;arc1_radius = 0.2&amp;#10;arc1_start_angle = 0&amp;#10;arc1_end_angle = 180&amp;#10;&amp;#10;# Arc 2 Properties&amp;#10;arc2_center = [1, -0.1]  # Different position&amp;#10;arc2_radius = 0.3         # Different radius&amp;#10;arc2_start_angle = 0&amp;#10;arc2_end_angle = 180&amp;#10;&amp;#10;&amp;#10;# Arc 3 Properties&amp;#10;arc3_center = [1.8, 0]  # Position Arc 3 further into the map&amp;#10;arc3_radius = 0.25         # Choose a radius for Arc 3&amp;#10;arc3_start_angle = 0&amp;#10;arc3_end_angle = 180&amp;#10;&amp;#10;&amp;#10;# Generate vertices for Arc 1&amp;#10;arc1_vertices = []&amp;#10;for i in range(51):  # 50 segments for smoothness&amp;#10;    angle = math.radians(arc1_start_angle + i * (arc1_end_angle - arc1_start_angle) / 50)&amp;#10;    x = arc1_center[0] + arc1_radius * math.cos(angle)&amp;#10;    y = arc1_center[1] + arc1_radius * math.sin(angle)&amp;#10;    arc1_vertices.append((x, y))&amp;#10;&amp;#10;# Generate vertices for Arc 2&amp;#10;arc2_vertices = []&amp;#10;for i in range(51):  # 50 segments for smoothness&amp;#10;    angle = math.radians(arc2_start_angle + i * (arc2_end_angle - arc2_start_angle) / 50)&amp;#10;    x = arc2_center[0] + arc2_radius * math.cos(angle)&amp;#10;    y = arc2_center[1] + arc2_radius * math.sin(angle)&amp;#10;    arc2_vertices.append((x, y))&amp;#10;    &amp;#10;    &amp;#10;&amp;#10;# Generate vertices for Arc 3&amp;#10;arc3_vertices = []&amp;#10;for i in range(51):  # 50 segments for smoothness&amp;#10;    angle = math.radians(arc3_start_angle + i * (arc3_end_angle - arc3_start_angle) / 50)&amp;#10;    x = arc3_center[0] + arc3_radius * math.cos(angle)&amp;#10;    y = arc3_center[1] + arc3_radius * math.sin(angle)&amp;#10;    arc3_vertices.append((x, y))&amp;#10;&amp;#10;    &amp;#10;    &amp;#10;# Create the arc ShapeStim&amp;#10;arc1 = ShapeStim(&amp;#10;    win=win,&amp;#10;    vertices=arc1_vertices,&amp;#10;    closeShape=False,&amp;#10;    lineWidth=4,&amp;#10;    lineColor='white',&amp;#10;    fillColor=None&amp;#10;)&amp;#10;&amp;#10;# Create Arc 2 ShapeStim&amp;#10;arc2 = ShapeStim(&amp;#10;    win=win,&amp;#10;    vertices=arc2_vertices,&amp;#10;    closeShape=False,&amp;#10;    lineWidth=4,&amp;#10;    lineColor='white',  # Different color for clarity&amp;#10;    fillColor=None&amp;#10;)&amp;#10;&amp;#10;&amp;#10;# Create Arc 3 ShapeStim&amp;#10;arc3 = ShapeStim(&amp;#10;    win=win,&amp;#10;    vertices=arc3_vertices,&amp;#10;    closeShape=False,&amp;#10;    lineWidth=4,&amp;#10;    lineColor='white',  # Set color as desired&amp;#10;    fillColor=None&amp;#10;)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="camera_offset_x = 0" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="# Get Dino's position from your Dino movement code&amp;#10;# Assume dino_pos[0] tracks Dino's X position (horizontal movement)&amp;#10;&amp;#10;# Update the camera offset based on Dino's X position&amp;#10;camera_offset_x += camera_speed  # The camera offset follows Dino's position&amp;#10;&amp;#10;# Move backgrounds relative to Dino's position (seamless wrap-around)&amp;#10;background1.pos = [-(camera_offset_x % background_width), 0]&amp;#10;background2.pos = [background1.pos[0] + background_width, 0]&amp;#10;&amp;#10;# Update floor positions relative to Dino's position&amp;#10;floor1.pos = [floor1_pos[0] - camera_offset_x, floor1.pos[1]]&amp;#10;floor2.pos = [floor2_x_static - camera_offset_x, floor2.pos[1]]  # Floor2 moves with Dino&amp;#10;&amp;#10;&amp;#10;# Update meatbone position to match floor2's top&amp;#10;meatbone_x = floor2.pos[0]  # Update X position based on floor2&amp;#10;meatbone_y = floor2_top + (meatbone_size[1] / 2) - offset  # Keep the meatbone on top of floor2&amp;#10;meatbone_image.pos = [meatbone_x, meatbone_y]&amp;#10;&amp;#10;&amp;#10;# Update the arc position relative to the camera offset&amp;#10;# Update Arc 1 Position&amp;#10;arc1.pos = [arc1_center[0] - camera_offset_x, arc1_center[1]]&amp;#10;&amp;#10;# Update Arc 2 Position&amp;#10;arc2.pos = [arc2_center[0] - camera_offset_x, arc2_center[1]]&amp;#10;&amp;#10;arc3.pos = [arc3_center[0] - camera_offset_x, arc3_center[1]]&amp;#10;&amp;#10;# Draw the backgrounds and floors&amp;#10;background1.draw()&amp;#10;background2.draw()&amp;#10;floor1.draw()&amp;#10;floor2.draw()&amp;#10;arc1.draw()&amp;#10;arc2.draw()&amp;#10;arc3.draw()&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -916,121 +916,9 @@
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="3" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Score: " valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
-      <PolygonComponent name="start_button_2" plugin="None">
-        <Param val="center" valType="str" updates="constant" name="anchor"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="" valType="color" updates="constant" name="fillColor"/>
-        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="white" valType="color" updates="constant" name="lineColor"/>
-        <Param val="1" valType="num" updates="constant" name="lineWidth"/>
-        <Param val="4" valType="int" updates="constant" name="nVertices"/>
-        <Param val="start_button_2" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="rectangle" valType="str" updates="None" name="shape"/>
-        <Param val="(0.4, 0.1)" valType="list" updates="constant" name="size"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
-        <Param val="" valType="list" updates="constant" name="vertices"/>
-      </PolygonComponent>
-      <PolygonComponent name="exit_button_2" plugin="None">
-        <Param val="center" valType="str" updates="constant" name="anchor"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="" valType="color" updates="constant" name="fillColor"/>
-        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="white" valType="color" updates="constant" name="lineColor"/>
-        <Param val="1" valType="num" updates="constant" name="lineWidth"/>
-        <Param val="4" valType="int" updates="constant" name="nVertices"/>
-        <Param val="exit_button_2" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, -.2)" valType="list" updates="constant" name="pos"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="rectangle" valType="str" updates="None" name="shape"/>
-        <Param val="(0.4, 0.1)" valType="list" updates="constant" name="size"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
-        <Param val="" valType="list" updates="constant" name="vertices"/>
-      </PolygonComponent>
-      <TextComponent name="StartGame_2" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Arial" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="StartGame_2" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Play Again?" valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
-      <TextComponent name="Exit_2" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Arial" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="Exit_2" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, -.2)" valType="list" updates="constant" name="pos"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Exit" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
@@ -1038,12 +926,12 @@
       <CodeComponent name="code_3" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="# Default control method&amp;#10;selected_control = &quot;Keyboard&quot;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="&amp;#10;# Calculate the percentage&amp;#10;if total_possible_vertices &gt; 0:&amp;#10;    percentage = (total_touched_vertices / total_possible_vertices) * 100&amp;#10;else:&amp;#10;    percentage = 0  # Avoid division by zero&amp;#10;&amp;#10;# Update the text for the end screen&amp;#10;end_score_text.text = (&amp;#10;    f&quot;You hit {total_touched_vertices} out of {total_possible_vertices} vertices!\n&quot;&amp;#10;    f&quot;That's {percentage:.2f}%!&quot;&amp;#10;)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="# Check if the mouse is clicked and which button is clicked&amp;#10;if mouse.isPressedIn(start_button_2):  # Start button&amp;#10;    continueRoutine = False  # End the Main Menu routine&amp;#10;&amp;#10;if mouse.isPressedIn(exit_button_2):  # Exit button&amp;#10;    core.quit()  # Quit the experiment&amp;#10;    &amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
@@ -1052,26 +940,6 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="code_3" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <MouseComponent name="mouse_2" plugin="None">
-        <Param val="" valType="list" updates="constant" name="clickable"/>
-        <Param val="" valType="list" updates="constant" name="correctAns"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="correct click" valType="str" updates="constant" name="forceEndRoutineOnPress"/>
-        <Param val="mouse_2" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="constant" name="newClicksOnly"/>
-        <Param val="on click" valType="str" updates="None" name="saveMouseState"/>
-        <Param val="name," valType="list" updates="constant" name="saveParamsClickable"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
-        <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="mouse onset" valType="str" updates="constant" name="timeRelativeTo"/>
-      </MouseComponent>
     </Routine>
   </Routines>
   <Flow>
