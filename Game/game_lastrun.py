@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 16, 2025, at 16:43
+    on January 17, 2025, at 14:21
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -128,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='D:\\Users\\areya\\Desktop\\work\\motor-learning-research-project\\Game\\game_lastrun.py',
+        originPath='C:\\Users\\actioncontrollab\\Desktop\\motor-learning-research-project\\Game\\game_lastrun.py',
         savePickle=True, saveWideText=False,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -488,10 +488,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     # Initialize the serial connection for PSURP
-    #ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
-    #ser.flush()
-    #ser.write("X".encode())  # Initialize PSURP
-    #ser.write("RUNE\n".encode())  # Enter streaming mode
+    ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
+    ser.flush()
+    ser.write("X".encode())  # Initialize PSURP
+    ser.write("RUNE\n".encode())  # Enter streaming mode
     
     
     # Trail settings
@@ -506,10 +506,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     B0ForceInNewtons = 0
-    B1ForceInNewtons = 0
     B2ForceInNewtons = 0
-    B3ForceInNewtons = 0
-    B4ForceInNewtons = 0
+    
     
     # Thresholds for movement
     move_threshold = 2  # Adjust based on PSURP sensitivity
@@ -530,7 +528,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
     min_x = -0.6  # Left boundary
-    max_x = 5.3
+    max_x = 5.5
     respawn_position = [0, -0.3]  # Starting position for Dino
     
     # Get the floor vertices from the Floor Controller
@@ -907,8 +905,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     resetPSURP.tStopRefresh = tThisFlipGlobal
     thisExp.addData('resetPSURP.stopped', resetPSURP.tStop)
     # Run 'End Routine' code from code_2
-    #ser.flush()
-    #ser.write("X".encode())
+    ser.flush()
+    ser.write("X".encode())
     
     # clear out the data from the IO buffers (Fresh commands)
     # the "X" command puts tje PSURP into command mode
@@ -1037,7 +1035,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     TARE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('TARE.stopped', TARE.tStop)
     # Run 'End Routine' code from tare_code
-    """
+    
     ser.write("TAR0\n".encode())
     time.sleep(1)
     ser.write("TAR1\n".encode())
@@ -1049,7 +1047,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     ser.write("TAR4\n".encode())
     time.sleep(1)
     
-    """
+    
     # the tar command zeros out all of the force messurements
     # halt for one second to make sure command was processed 
     
@@ -1175,7 +1173,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     RUNE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('RUNE.stopped', RUNE.tStop)
     # Run 'End Routine' code from Code_RUNE
-    #ser.write("RUNE\n".encode())
+    ser.write("RUNE\n".encode())
     
     # the rune command sets the PSURP to streaming mode. (for getting vals)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
@@ -1726,24 +1724,16 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # Calculate forces
                     B0HighByte = Base71Lookup.index(output[0])
                     B0LowByte = Base71Lookup.index(output[1])
-                    B1HighByte = Base71Lookup.index(output[2])
-                    B1LowByte = Base71Lookup.index(output[3])
                     B2HighByte = Base71Lookup.index(output[4])
                     B2LowByte = Base71Lookup.index(output[5])
                     
                     # Calculate forces in Newtons
                     B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
-                    B1ForceInNewtons = ((B1HighByte * 71) + B1LowByte) * 0.0098
                     B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
                     
                     # Apply forces directly to movement
                     if B0ForceInNewtons > MIN_FORCE:
                         dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
-                        
-                    if B1ForceInNewtons > MIN_FORCE and dino_pos[0] > min_x:
-                        move_amount = B1ForceInNewtons * FORCE_MULTIPLIER
-                        dino_pos[0] -= move_amount  # Left movement based on force
-                        dino_image.size = [-1 * abs(dino_image.size[0]), dino_image.size[1]]
                         
                     if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
                         move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
@@ -2149,9 +2139,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # if running in a Session with a Liaison client, send data up to now
         thisSession.sendExperimentData()
     # Run 'End Experiment' code from DinoMovement
-    #ser.flush()
-    #ser.write("X".encode())  # Exit command mode
-    #ser.close()
+    ser.flush()
+    ser.write("X".encode())  # Exit command mode
+    ser.close()
     
     
     # mark experiment as finished
