@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 17, 2025, at 14:21
+    on January 17, 2025, at 14:37
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -400,14 +400,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     exit_button = visual.Rect(
         win=win, name='exit_button',
         width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
-        ori=0.0, pos=(0, -.2), draggable=False, anchor='center',
+        ori=0.0, pos=(0, -.3), draggable=False, anchor='center',
         lineWidth=1.0,
         colorSpace='rgb', lineColor='white', fillColor=None,
         opacity=None, depth=-3.0, interpolate=True)
     Exit = visual.TextStim(win=win, name='Exit',
         text='Exit',
         font='Arial',
-        pos=(0, -.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, -.3), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-4.0);
@@ -425,10 +425,24 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-6.0);
+    mode_feedback = visual.TextStim(win=win, name='mode_feedback',
+        text='Mode: ',
+        font='Arial',
+        pos=(0, -.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-7.0);
+    mode_button = visual.Rect(
+        win=win, name='mode_button',
+        width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
+        ori=0.0, pos=(0, -.2), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor='white', fillColor=None,
+        opacity=None, depth=-8.0, interpolate=True)
     # Run 'Begin Experiment' code from code
     # Default control method
     selected_control = "Keyboard"
-    
+    selected_diff = "Easy"
     mouse = event.Mouse(win=win)
     x, y = [None, None]
     mouse.mouseClock = core.Clock()
@@ -1220,7 +1234,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine MainMenu
         MainMenu = data.Routine(
             name='MainMenu',
-            components=[TitleText, start_button, StartGame, exit_button, Exit, controller_selection, control_feedback, mouse],
+            components=[TitleText, start_button, StartGame, exit_button, Exit, controller_selection, control_feedback, mode_feedback, mode_button, mouse],
         )
         MainMenu.status = NOT_STARTED
         continueRoutine = True
@@ -1228,7 +1242,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Run 'Begin Routine' code from code
         # Update the feedback text to display the currently selected control method
         control_feedback.text = f"Selected Control: {selected_control}"
-        
+        mode_feedback.text = f"Mode: {selected_diff}"
         # setup some python lists for storing info about the mouse
         mouse.x = []
         mouse.y = []
@@ -1409,6 +1423,46 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if control_feedback.status == STARTED:
                 # update params
                 pass
+            
+            # *mode_feedback* updates
+            
+            # if mode_feedback is starting this frame...
+            if mode_feedback.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                mode_feedback.frameNStart = frameN  # exact frame index
+                mode_feedback.tStart = t  # local t and not account for scr refresh
+                mode_feedback.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(mode_feedback, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'mode_feedback.started')
+                # update status
+                mode_feedback.status = STARTED
+                mode_feedback.setAutoDraw(True)
+            
+            # if mode_feedback is active this frame...
+            if mode_feedback.status == STARTED:
+                # update params
+                pass
+            
+            # *mode_button* updates
+            
+            # if mode_button is starting this frame...
+            if mode_button.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                mode_button.frameNStart = frameN  # exact frame index
+                mode_button.tStart = t  # local t and not account for scr refresh
+                mode_button.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(mode_button, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'mode_button.started')
+                # update status
+                mode_button.status = STARTED
+                mode_button.setAutoDraw(True)
+            
+            # if mode_button is active this frame...
+            if mode_button.status == STARTED:
+                # update params
+                pass
             # Run 'Each Frame' code from code
             # Check if the mouse is clicked and which button is clicked
             if mouse.isPressedIn(start_button):  # Start button
@@ -1430,6 +1484,23 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Update the feedback text
                 control_feedback.text = f"Selected Control: {selected_control}"
+                
+                
+            
+            if mouse.isPressedIn(mode_button):
+                # Add a delay to prevent rapid toggling (debounce)
+                core.wait(0.2)
+                
+                # Toggle between "Easy" and "Hard" modes
+                if selected_diff == "Easy":
+                    selected_diff = "Hard"
+                else:
+                    selected_diff = "Easy"
+                
+                # Update the feedback text
+                mode_feedback.text = f"Mode: {selected_diff}"
+                
+                
             
             
             # *mouse* updates

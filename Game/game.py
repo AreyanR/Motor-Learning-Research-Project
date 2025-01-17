@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 15, 2025, at 19:49
+    on January 17, 2025, at 14:24
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -128,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='D:\\Users\\areya\\Desktop\\work\\motor-learning-research-project\\Game\\game.py',
+        originPath='C:\\Users\\actioncontrollab\\Desktop\\motor-learning-research-project\\Game\\game.py',
         savePickle=True, saveWideText=False,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -484,19 +484,30 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     import time
     
     import serial
+    from psychopy.visual import Circle
+    
     
     # Initialize the serial connection for PSURP
-    #ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
-    #ser.flush()
-    #ser.write("X".encode())  # Initialize PSURP
-    #ser.write("RUNE\n".encode())  # Enter streaming mode
+    ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
+    ser.flush()
+    ser.write("X".encode())  # Initialize PSURP
+    ser.write("RUNE\n".encode())  # Enter streaming mode
+    
+    
+    # Trail settings
+    trail_positions = []  # Stores Dino's previous positions
+    trail_length = 25  # Maximum number of trail dots
+    trail_dot_size = 0.005  # Size of each dot
+    trail_dots = []  # List of Circle stimuli for the trail
+    trail_color = 'yellow'  # Color of the trail dots
+    trail_frame_counter = 0  # Counter to control trail dot spawning
+    trail_interval = 3  # Spawn a dot every 3 frames
+    
     
     
     B0ForceInNewtons = 0
-    B1ForceInNewtons = 0
     B2ForceInNewtons = 0
-    B3ForceInNewtons = 0
-    B4ForceInNewtons = 0
+    
     
     # Thresholds for movement
     move_threshold = 2  # Adjust based on PSURP sensitivity
@@ -510,22 +521,22 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
     
     # Dino movement variables
-    dino_pos = [-0.5, -0.3]  # Starting position [x, y]
+    dino_pos = [0, -0.3]  # Starting position [x, y]
     dino_speed = 0  # Initial vertical speed
     gravity = -0.00006  # Downward acceleration 0.00006
     jump_speed = 0.005  # Jumping speed
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
     min_x = -0.6  # Left boundary
-    max_x = 5.3
-    respawn_position = [-0.5, -0.3]  # Starting position for Dino
+    max_x = 5.5
+    respawn_position = [0, -0.3]  # Starting position for Dino
     
     # Get the floor vertices from the Floor Controller
     floor1_vertices = floor1.vertices  # Assuming 'floor' is a Polygon or Rect stimulus
     
     # Calculate the floor's top and fall threshold
     floor_top = max(v[1] for v in floor1_vertices)  # Highest point of the floor
-    fall_threshold = min(v[1] for v in floor1_vertices) - 1  # Slightly below the lowest floor point
+    fall_threshold = min(v[1] for v in floor1_vertices) - 0.2  # Slightly below the lowest floor point
     
     
     # Function to check if Dino is on the floor
@@ -593,7 +604,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Camera variables
     camera_offset_x = 0  # Tracks the camera offset to follow Dino
-    camera_speed = 0.002  # Adjust this speed as needed
+    camera_speed = 0.003  # Adjust this speed as needed
     # Background properties
     background_width = 2.0  # Width of a single background image
     background_height = 1.0
@@ -606,7 +617,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Floor1 properties
     floor1_height = 0.3
     floor1_width = 0.5
-    floor1_pos = [-0.5, -0.5]
+    floor1_pos = [0, -0.5]
     
     floor1 = Rect(
         win=win,
@@ -737,6 +748,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc3_touched_vertices = []
     
     touch_threshold = 0.05
+    
+    collision_threshold = 0.1  # You can adjust this to fit your game scale
     # Run 'Begin Experiment' code from Timer
     level_timer = core.Clock()  # Initialize the timer
     time_limit = 120  # Set the time limit in seconds (e.g., 2 minutes)
@@ -750,41 +763,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
-    start_button_2 = visual.Rect(
-        win=win, name='start_button_2',
-        width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
-        ori=0.0, pos=(0, 0), draggable=False, anchor='center',
-        lineWidth=1.0,
-        colorSpace='rgb', lineColor='white', fillColor=None,
-        opacity=None, depth=-1.0, interpolate=True)
-    exit_button_2 = visual.Rect(
-        win=win, name='exit_button_2',
-        width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
-        ori=0.0, pos=(0, -.2), draggable=False, anchor='center',
-        lineWidth=1.0,
-        colorSpace='rgb', lineColor='white', fillColor=None,
-        opacity=None, depth=-2.0, interpolate=True)
-    StartGame_2 = visual.TextStim(win=win, name='StartGame_2',
-        text='Play Again?',
-        font='Arial',
-        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=-3.0);
-    Exit_2 = visual.TextStim(win=win, name='Exit_2',
-        text='Exit',
-        font='Arial',
-        pos=(0, -.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=-4.0);
-    # Run 'Begin Experiment' code from code_3
-    # Default control method
-    selected_control = "Keyboard"
-    
-    mouse_2 = event.Mouse(win=win)
-    x, y = [None, None]
-    mouse_2.mouseClock = core.Clock()
     
     # create some handy timers
     
@@ -927,8 +905,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     resetPSURP.tStopRefresh = tThisFlipGlobal
     thisExp.addData('resetPSURP.stopped', resetPSURP.tStop)
     # Run 'End Routine' code from code_2
-    #ser.flush()
-    #ser.write("X".encode())
+    ser.flush()
+    ser.write("X".encode())
     
     # clear out the data from the IO buffers (Fresh commands)
     # the "X" command puts tje PSURP into command mode
@@ -1057,7 +1035,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     TARE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('TARE.stopped', TARE.tStop)
     # Run 'End Routine' code from tare_code
-    """
+    
     ser.write("TAR0\n".encode())
     time.sleep(1)
     ser.write("TAR1\n".encode())
@@ -1069,7 +1047,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     ser.write("TAR4\n".encode())
     time.sleep(1)
     
-    """
+    
     # the tar command zeros out all of the force messurements
     # halt for one second to make sure command was processed 
     
@@ -1195,7 +1173,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     RUNE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('RUNE.stopped', RUNE.tStop)
     # Run 'End Routine' code from Code_RUNE
-    #ser.write("RUNE\n".encode())
+    ser.write("RUNE\n".encode())
     
     # the rune command sets the PSURP to streaming mode. (for getting vals)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
@@ -1543,9 +1521,16 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         continueRoutine = True
         # update component parameters for each repeat
         # Run 'Begin Routine' code from DinoMovement
-        dino_pos = [-0.5, -0.3]  # Reset Dino's position
+        dino_pos = [0, -0.3]  # Reset Dino's position
         dino_speed = 0  # Reset vertical speed
+        # Initialize the trail dots
+        trail_dots = [
+            Circle(win, radius=trail_dot_size, fillColor=trail_color, lineColor=None, pos=[-1, -1])
+            for _ in range(trail_length)
+        ]
         
+        # Run 'Begin Routine' code from worldController
+        camera_offset_x = 0
         # Run 'Begin Routine' code from GoalController
         score = 0  # Reset the score
         arc1_touched_vertices = []
@@ -1739,24 +1724,16 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # Calculate forces
                     B0HighByte = Base71Lookup.index(output[0])
                     B0LowByte = Base71Lookup.index(output[1])
-                    B1HighByte = Base71Lookup.index(output[2])
-                    B1LowByte = Base71Lookup.index(output[3])
                     B2HighByte = Base71Lookup.index(output[4])
                     B2LowByte = Base71Lookup.index(output[5])
                     
                     # Calculate forces in Newtons
                     B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
-                    B1ForceInNewtons = ((B1HighByte * 71) + B1LowByte) * 0.0098
                     B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
                     
                     # Apply forces directly to movement
                     if B0ForceInNewtons > MIN_FORCE:
                         dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
-                        
-                    if B1ForceInNewtons > MIN_FORCE and dino_pos[0] > min_x:
-                        move_amount = B1ForceInNewtons * FORCE_MULTIPLIER
-                        dino_pos[0] -= move_amount  # Left movement based on force
-                        dino_image.size = [-1 * abs(dino_image.size[0]), dino_image.size[1]]
                         
                     if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
                         move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
@@ -1798,11 +1775,28 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # dino_image.pos = dino_pos  # Use both X and Y values of dino_pos
             dino_image.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
             
+            # Increment the frame counter for trail updates
+            trail_frame_counter += 1
+            
+            # Check if it's time to spawn a new dot
+            if trail_frame_counter >= trail_interval:
+                if len(trail_positions) >= trail_length:
+                    trail_positions.pop(0)  # Remove the oldest position if trail is full
+            
+                # Add Dino's current position to the trail
+                trail_positions.append(dino_pos[:])  # Add a copy of Dino's current position
+            
+                trail_frame_counter = 0  # Reset the counter
+            
+            # Update the trail dots' positions
+            for i, pos in enumerate(trail_positions):
+                trail_dots[i].pos = [pos[0] - camera_offset_x, pos[1]]  # Adjust for camera offset
             
             
             keys_pressed = kb.getKeys(['o'], waitRelease=False, clear=False)
             if 'o' in [key.name for key in keys_pressed]:
                 print(f"Dino Position: X = {dino_pos[0]:.3f}, Y = {dino_pos[1]:.3f}")
+                print(f"Meatbone Position: {meatbone_x, meatbone_y}")
                 
                 
                 
@@ -1841,9 +1835,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Update meatbone position to match floor2's top
             meatbone_x = floor2.pos[0]  # Update X position based on floor2
             meatbone_y = floor2_top + (meatbone_size[1] / 2) - offset  # Keep the meatbone on top of floor2
-            
-            meatbone_pos = [meatbone_x, meatbone_y]
-            meatbone_image.pos = meatbone_pos
+            meatbone_image.pos = [meatbone_x, meatbone_y]
             
             
             # Update the arc position relative to the camera offset
@@ -1863,16 +1855,30 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             arc1.draw()
             arc2.draw()
             arc3.draw()
+            # Draw the trail dots
+            for dot in trail_dots:
+                dot.draw()
             
             # Run 'Each Frame' code from GoalController
+            dino_relative_x = dino_pos[0] - camera_offset_x
+            dino_relative_y = dino_pos[1]
+            # Check for collision based on proximity to the updated position
+            dx = dino_relative_x - meatbone_x
+            dy = dino_relative_y - meatbone_y
             
+            if camera_offset_x >= max_x:
+                continueRoutine = False  # Ends the current routine
+                
+            if dino_relative_x < -0.8 or dino_relative_x > 0.8:  # Adjust bounds based on screen width
+                continueRoutine = False  # Ends the current routine
+            
+            # Define a collision threshold (adjust based on the visual scale of your game)
             # Check for collision
-            if not meatbone_collided and -0.05 <= meatbone_x <= 0.05 and -0.280 <= dino_pos[1] <= -0.200:
+            if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= collision_threshold:
                 print("Dino ate the meatbone!")
                 meatbone_image.opacity = 0  # Make the meatbone disappear
-                meatbone_collided = True  # Set collision flag to prevent further updates
+                meatbone_collided = True  # Prevent further collision checks
                 continueRoutine = False
-            
             
             for vertex in arc1_vertices:
                 # Adjust Arc 1 vertex for its X-offset (+1)
@@ -1976,6 +1982,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         MainGame.tStop = globalClock.getTime(format='float')
         MainGame.tStopRefresh = tThisFlipGlobal
         thisExp.addData('MainGame.stopped', MainGame.tStop)
+        # Run 'End Routine' code from DinoMovement
+        dino_pos = [-0.5, -0.3]  # Reset Dino's position
         # Run 'End Routine' code from GoalController
         global total_touched_vertices, total_possible_vertices
         total_touched_vertices = len(arc1_touched_vertices) + len(arc2_touched_vertices) + len(arc3_touched_vertices)
@@ -1988,7 +1996,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine EndGameScreen
         EndGameScreen = data.Routine(
             name='EndGameScreen',
-            components=[end_score_text, start_button_2, exit_button_2, StartGame_2, Exit_2, mouse_2],
+            components=[end_score_text],
         )
         EndGameScreen.status = NOT_STARTED
         continueRoutine = True
@@ -2003,18 +2011,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         # Update the text for the end screen
         end_score_text.text = (
-            f"You hit {total_touched_vertices} out of {total_possible_vertices} vertices!\n"
-            f"That's {percentage:.2f}%!"
+            f"You hit {total_touched_vertices} out of {total_possible_vertices} vertices\n"
+            f"{percentage:.2f}%"
         )
         
-        # setup some python lists for storing info about the mouse_2
-        mouse_2.x = []
-        mouse_2.y = []
-        mouse_2.leftButton = []
-        mouse_2.midButton = []
-        mouse_2.rightButton = []
-        mouse_2.time = []
-        gotValidClick = False  # until a click is received
         # store start times for EndGameScreen
         EndGameScreen.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         EndGameScreen.tStart = globalClock.getTime(format='float')
@@ -2040,7 +2040,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if isinstance(GameLoop, data.TrialHandler2) and thisGameLoop.thisN != GameLoop.thisTrial.thisN:
             continueRoutine = False
         EndGameScreen.forceEnded = routineForceEnded = not continueRoutine
-        while continueRoutine:
+        while continueRoutine and routineTimer.getTime() < 3.0:
             # get current time
             t = routineTimer.getTime()
             tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -2068,124 +2068,22 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # update params
                 pass
             
-            # *start_button_2* updates
-            
-            # if start_button_2 is starting this frame...
-            if start_button_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                start_button_2.frameNStart = frameN  # exact frame index
-                start_button_2.tStart = t  # local t and not account for scr refresh
-                start_button_2.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(start_button_2, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'start_button_2.started')
-                # update status
-                start_button_2.status = STARTED
-                start_button_2.setAutoDraw(True)
-            
-            # if start_button_2 is active this frame...
-            if start_button_2.status == STARTED:
-                # update params
-                pass
-            
-            # *exit_button_2* updates
-            
-            # if exit_button_2 is starting this frame...
-            if exit_button_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                exit_button_2.frameNStart = frameN  # exact frame index
-                exit_button_2.tStart = t  # local t and not account for scr refresh
-                exit_button_2.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(exit_button_2, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'exit_button_2.started')
-                # update status
-                exit_button_2.status = STARTED
-                exit_button_2.setAutoDraw(True)
-            
-            # if exit_button_2 is active this frame...
-            if exit_button_2.status == STARTED:
-                # update params
-                pass
-            
-            # *StartGame_2* updates
-            
-            # if StartGame_2 is starting this frame...
-            if StartGame_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                StartGame_2.frameNStart = frameN  # exact frame index
-                StartGame_2.tStart = t  # local t and not account for scr refresh
-                StartGame_2.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(StartGame_2, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'StartGame_2.started')
-                # update status
-                StartGame_2.status = STARTED
-                StartGame_2.setAutoDraw(True)
-            
-            # if StartGame_2 is active this frame...
-            if StartGame_2.status == STARTED:
-                # update params
-                pass
-            
-            # *Exit_2* updates
-            
-            # if Exit_2 is starting this frame...
-            if Exit_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                Exit_2.frameNStart = frameN  # exact frame index
-                Exit_2.tStart = t  # local t and not account for scr refresh
-                Exit_2.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(Exit_2, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'Exit_2.started')
-                # update status
-                Exit_2.status = STARTED
-                Exit_2.setAutoDraw(True)
-            
-            # if Exit_2 is active this frame...
-            if Exit_2.status == STARTED:
-                # update params
-                pass
+            # if end_score_text is stopping this frame...
+            if end_score_text.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > end_score_text.tStartRefresh + 3-frameTolerance:
+                    # keep track of stop time/frame for later
+                    end_score_text.tStop = t  # not accounting for scr refresh
+                    end_score_text.tStopRefresh = tThisFlipGlobal  # on global time
+                    end_score_text.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'end_score_text.stopped')
+                    # update status
+                    end_score_text.status = FINISHED
+                    end_score_text.setAutoDraw(False)
             # Run 'Each Frame' code from code_3
-            # Check if the mouse is clicked and which button is clicked
-            if mouse.isPressedIn(start_button_2):  # Start button
-                continueRoutine = False  # End the Main Menu routine
-            
-            if mouse.isPressedIn(exit_button_2):  # Exit button
-                core.quit()  # Quit the experiment
-                
             
             
-            # *mouse_2* updates
-            
-            # if mouse_2 is starting this frame...
-            if mouse_2.status == NOT_STARTED and t >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                mouse_2.frameNStart = frameN  # exact frame index
-                mouse_2.tStart = t  # local t and not account for scr refresh
-                mouse_2.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(mouse_2, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.addData('mouse_2.started', t)
-                # update status
-                mouse_2.status = STARTED
-                mouse_2.mouseClock.reset()
-                prevButtonState = mouse_2.getPressed()  # if button is down already this ISN'T a new click
-            if mouse_2.status == STARTED:  # only update if started and not finished!
-                buttons = mouse_2.getPressed()
-                if buttons != prevButtonState:  # button state changed?
-                    prevButtonState = buttons
-                    if sum(buttons) > 0:  # state changed to a new click
-                        pass
-                        x, y = mouse_2.getPos()
-                        mouse_2.x.append(x)
-                        mouse_2.y.append(y)
-                        buttons = mouse_2.getPressed()
-                        mouse_2.leftButton.append(buttons[0])
-                        mouse_2.midButton.append(buttons[1])
-                        mouse_2.rightButton.append(buttons[2])
-                        mouse_2.time.append(mouse_2.mouseClock.getTime())
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2226,15 +2124,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         EndGameScreen.tStop = globalClock.getTime(format='float')
         EndGameScreen.tStopRefresh = tThisFlipGlobal
         thisExp.addData('EndGameScreen.stopped', EndGameScreen.tStop)
-        # store data for GameLoop (TrialHandler)
-        GameLoop.addData('mouse_2.x', mouse_2.x)
-        GameLoop.addData('mouse_2.y', mouse_2.y)
-        GameLoop.addData('mouse_2.leftButton', mouse_2.leftButton)
-        GameLoop.addData('mouse_2.midButton', mouse_2.midButton)
-        GameLoop.addData('mouse_2.rightButton', mouse_2.rightButton)
-        GameLoop.addData('mouse_2.time', mouse_2.time)
-        # the Routine "EndGameScreen" was not non-slip safe, so reset the non-slip timer
-        routineTimer.reset()
+        # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+        if EndGameScreen.maxDurationReached:
+            routineTimer.addTime(-EndGameScreen.maxDuration)
+        elif EndGameScreen.forceEnded:
+            routineTimer.reset()
+        else:
+            routineTimer.addTime(-3.000000)
         thisExp.nextEntry()
         
     # completed 999.0 repeats of 'GameLoop'
@@ -2243,9 +2139,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # if running in a Session with a Liaison client, send data up to now
         thisSession.sendExperimentData()
     # Run 'End Experiment' code from DinoMovement
-    #ser.flush()
-    #ser.write("X".encode())  # Exit command mode
-    #ser.close()
+    ser.flush()
+    ser.write("X".encode())  # Exit command mode
+    ser.close()
     
     
     # mark experiment as finished
