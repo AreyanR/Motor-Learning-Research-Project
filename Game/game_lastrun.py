@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 16, 2025, at 00:28
+    on January 16, 2025, at 16:43
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -484,12 +484,25 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     import time
     
     import serial
+    from psychopy.visual import Circle
+    
     
     # Initialize the serial connection for PSURP
     #ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
     #ser.flush()
     #ser.write("X".encode())  # Initialize PSURP
     #ser.write("RUNE\n".encode())  # Enter streaming mode
+    
+    
+    # Trail settings
+    trail_positions = []  # Stores Dino's previous positions
+    trail_length = 25  # Maximum number of trail dots
+    trail_dot_size = 0.005  # Size of each dot
+    trail_dots = []  # List of Circle stimuli for the trail
+    trail_color = 'yellow'  # Color of the trail dots
+    trail_frame_counter = 0  # Counter to control trail dot spawning
+    trail_interval = 3  # Spawn a dot every 3 frames
+    
     
     
     B0ForceInNewtons = 0
@@ -525,7 +538,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Calculate the floor's top and fall threshold
     floor_top = max(v[1] for v in floor1_vertices)  # Highest point of the floor
-    fall_threshold = min(v[1] for v in floor1_vertices) - 1  # Slightly below the lowest floor point
+    fall_threshold = min(v[1] for v in floor1_vertices) - 0.2  # Slightly below the lowest floor point
     
     
     # Function to check if Dino is on the floor
@@ -1512,6 +1525,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Run 'Begin Routine' code from DinoMovement
         dino_pos = [0, -0.3]  # Reset Dino's position
         dino_speed = 0  # Reset vertical speed
+        # Initialize the trail dots
+        trail_dots = [
+            Circle(win, radius=trail_dot_size, fillColor=trail_color, lineColor=None, pos=[-1, -1])
+            for _ in range(trail_length)
+        ]
         
         # Run 'Begin Routine' code from worldController
         camera_offset_x = 0
@@ -1767,6 +1785,22 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # dino_image.pos = dino_pos  # Use both X and Y values of dino_pos
             dino_image.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
             
+            # Increment the frame counter for trail updates
+            trail_frame_counter += 1
+            
+            # Check if it's time to spawn a new dot
+            if trail_frame_counter >= trail_interval:
+                if len(trail_positions) >= trail_length:
+                    trail_positions.pop(0)  # Remove the oldest position if trail is full
+            
+                # Add Dino's current position to the trail
+                trail_positions.append(dino_pos[:])  # Add a copy of Dino's current position
+            
+                trail_frame_counter = 0  # Reset the counter
+            
+            # Update the trail dots' positions
+            for i, pos in enumerate(trail_positions):
+                trail_dots[i].pos = [pos[0] - camera_offset_x, pos[1]]  # Adjust for camera offset
             
             
             keys_pressed = kb.getKeys(['o'], waitRelease=False, clear=False)
@@ -1831,6 +1865,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             arc1.draw()
             arc2.draw()
             arc3.draw()
+            # Draw the trail dots
+            for dot in trail_dots:
+                dot.draw()
             
             # Run 'Each Frame' code from GoalController
             dino_relative_x = dino_pos[0] - camera_offset_x
@@ -1838,6 +1875,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Check for collision based on proximity to the updated position
             dx = dino_relative_x - meatbone_x
             dy = dino_relative_y - meatbone_y
+            
+            if camera_offset_x >= max_x:
+                continueRoutine = False  # Ends the current routine
+                
+            if dino_relative_x < -0.8 or dino_relative_x > 0.8:  # Adjust bounds based on screen width
+                continueRoutine = False  # Ends the current routine
             
             # Define a collision threshold (adjust based on the visual scale of your game)
             # Check for collision
@@ -1978,8 +2021,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         # Update the text for the end screen
         end_score_text.text = (
-            f"You hit {total_touched_vertices} out of {total_possible_vertices} vertices!\n"
-            f"That's {percentage:.2f}%!"
+            f"You hit {total_touched_vertices} out of {total_possible_vertices} vertices\n"
+            f"{percentage:.2f}%"
         )
         
         # store start times for EndGameScreen
