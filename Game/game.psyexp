@@ -342,7 +342,7 @@
         <Param val="ser.flush()&amp;#10;ser.write(&quot;X&quot;.encode())  # Exit command mode&amp;#10;ser.close()&amp;#10;" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="dino_pos = [-0.5, -0.3]  # Reset Dino's position" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="dino_pos = [-0.5, -0.3]  # Reset Dino's position&amp;#10;trail_positions.clear()  # Remove all stored positions" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="DinoMovement" valType="code" updates="None" name="name"/>
       </CodeComponent>

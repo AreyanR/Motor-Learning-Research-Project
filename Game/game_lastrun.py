@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 17, 2025, at 15:16
+    on January 17, 2025, at 15:20
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -510,12 +510,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Trail settings
     trail_positions = []  # Stores Dino's previous positions
-    trail_length = 40  # Maximum number of trail dots
+    trail_length = 35  # Maximum number of trail dots
     trail_dot_size = 0.005  # Size of each dot
     trail_dots = []  # List of Circle stimuli for the trail
     trail_color = 'yellow'  # Color of the trail dots
     trail_frame_counter = 0  # Counter to control trail dot spawning
-    trail_interval = 7  # Spawn a dot every 3 frames
+    trail_interval = 5  # Spawn a dot every 3 frames
     
     
     
@@ -2072,6 +2072,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         thisExp.addData('MainGame.stopped', MainGame.tStop)
         # Run 'End Routine' code from DinoMovement
         dino_pos = [-0.5, -0.3]  # Reset Dino's position
+        trail_positions.clear()  # Remove all stored positions
         # Run 'End Routine' code from GoalController
         global total_touched_vertices, total_possible_vertices
         total_touched_vertices = len(arc1_touched_vertices) + len(arc2_touched_vertices) + len(arc3_touched_vertices)
