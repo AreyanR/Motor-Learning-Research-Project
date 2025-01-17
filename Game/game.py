@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 17, 2025, at 14:24
+    on January 17, 2025, at 15:15
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -400,14 +400,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     exit_button = visual.Rect(
         win=win, name='exit_button',
         width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
-        ori=0.0, pos=(0, -.2), draggable=False, anchor='center',
+        ori=0.0, pos=(0, -.3), draggable=False, anchor='center',
         lineWidth=1.0,
         colorSpace='rgb', lineColor='white', fillColor=None,
         opacity=None, depth=-3.0, interpolate=True)
     Exit = visual.TextStim(win=win, name='Exit',
         text='Exit',
         font='Arial',
-        pos=(0, -.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, -.3), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-4.0);
@@ -425,10 +425,24 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-6.0);
+    mode_feedback = visual.TextStim(win=win, name='mode_feedback',
+        text='Mode: ',
+        font='Arial',
+        pos=(0, -.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-7.0);
+    mode_button = visual.Rect(
+        win=win, name='mode_button',
+        width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
+        ori=0.0, pos=(0, -.2), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor='white', fillColor=None,
+        opacity=None, depth=-8.0, interpolate=True)
     # Run 'Begin Experiment' code from code
     # Default control method
     selected_control = "Keyboard"
-    
+    selected_diff = "Easy"
     mouse = event.Mouse(win=win)
     x, y = [None, None]
     mouse.mouseClock = core.Clock()
@@ -496,12 +510,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Trail settings
     trail_positions = []  # Stores Dino's previous positions
-    trail_length = 25  # Maximum number of trail dots
+    trail_length = 40  # Maximum number of trail dots
     trail_dot_size = 0.005  # Size of each dot
     trail_dots = []  # List of Circle stimuli for the trail
     trail_color = 'yellow'  # Color of the trail dots
     trail_frame_counter = 0  # Counter to control trail dot spawning
-    trail_interval = 3  # Spawn a dot every 3 frames
+    trail_interval = 7  # Spawn a dot every 3 frames
     
     
     
@@ -517,13 +531,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     kb = keyboard.Keyboard()
     
     
-    MIN_FORCE = 0.2  # Minimum force to start movement
+    MIN_FORCE = 0.4  # Minimum force to start movement
     FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
     dino_speed = 0  # Initial vertical speed
-    gravity = -0.00006  # Downward acceleration 0.00006
+    gravity = -0.0003  # Downward acceleration 0.00006
     jump_speed = 0.005  # Jumping speed
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
@@ -558,7 +572,25 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
         return on_floor1 or on_floor2
         
+    
+    def calculate_psurp_forces(serial_data):
+        """Extract and calculate forces from PSURP serial data."""
+        if len(serial_data.decode()) == 12:
+            output = serial_data.decode()
+            
+            # Calculate forces
+            B0HighByte = Base71Lookup.index(output[0])
+            B0LowByte = Base71Lookup.index(output[1])
+            B2HighByte = Base71Lookup.index(output[4])
+            B2LowByte = Base71Lookup.index(output[5])
+            
+            # Forces in Newtons
+            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            
+            return B0ForceInNewtons, B2ForceInNewtons
         
+        return 0, 0  # Default forces if data is invalid
         
     # Animation-related variables
     frame_paths = [
@@ -1220,7 +1252,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine MainMenu
         MainMenu = data.Routine(
             name='MainMenu',
-            components=[TitleText, start_button, StartGame, exit_button, Exit, controller_selection, control_feedback, mouse],
+            components=[TitleText, start_button, StartGame, exit_button, Exit, controller_selection, control_feedback, mode_feedback, mode_button, mouse],
         )
         MainMenu.status = NOT_STARTED
         continueRoutine = True
@@ -1228,7 +1260,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Run 'Begin Routine' code from code
         # Update the feedback text to display the currently selected control method
         control_feedback.text = f"Selected Control: {selected_control}"
-        
+        mode_feedback.text = f"Mode: {selected_diff}"
         # setup some python lists for storing info about the mouse
         mouse.x = []
         mouse.y = []
@@ -1409,6 +1441,46 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if control_feedback.status == STARTED:
                 # update params
                 pass
+            
+            # *mode_feedback* updates
+            
+            # if mode_feedback is starting this frame...
+            if mode_feedback.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                mode_feedback.frameNStart = frameN  # exact frame index
+                mode_feedback.tStart = t  # local t and not account for scr refresh
+                mode_feedback.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(mode_feedback, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'mode_feedback.started')
+                # update status
+                mode_feedback.status = STARTED
+                mode_feedback.setAutoDraw(True)
+            
+            # if mode_feedback is active this frame...
+            if mode_feedback.status == STARTED:
+                # update params
+                pass
+            
+            # *mode_button* updates
+            
+            # if mode_button is starting this frame...
+            if mode_button.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                mode_button.frameNStart = frameN  # exact frame index
+                mode_button.tStart = t  # local t and not account for scr refresh
+                mode_button.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(mode_button, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'mode_button.started')
+                # update status
+                mode_button.status = STARTED
+                mode_button.setAutoDraw(True)
+            
+            # if mode_button is active this frame...
+            if mode_button.status == STARTED:
+                # update params
+                pass
             # Run 'Each Frame' code from code
             # Check if the mouse is clicked and which button is clicked
             if mouse.isPressedIn(start_button):  # Start button
@@ -1430,6 +1502,23 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Update the feedback text
                 control_feedback.text = f"Selected Control: {selected_control}"
+                
+                
+            
+            if mouse.isPressedIn(mode_button):
+                # Add a delay to prevent rapid toggling (debounce)
+                core.wait(0.2)
+                
+                # Toggle between "Easy" and "Hard" modes
+                if selected_diff == "Easy":
+                    selected_diff = "Hard"
+                else:
+                    selected_diff = "Easy"
+                
+                # Update the feedback text
+                mode_feedback.text = f"Mode: {selected_diff}"
+                
+                
             
             
             # *mouse* updates
@@ -1537,6 +1626,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         arc2_touched_vertices = []
         arc3_touched_vertices = []
         meatbone_collided = False
+        meatbone_image.opacity = 1
         # Run 'Begin Routine' code from Timer
         
         level_timer.reset()  # Reset the timer at the start of the MainGame routine
@@ -1718,27 +1808,25 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # Read serial data
                 ser.flushInput()
                 strSerialData = ser.readline()
-                if len(strSerialData.decode()) == 12:
-                    output = strSerialData.decode()
-                    
-                    # Calculate forces
-                    B0HighByte = Base71Lookup.index(output[0])
-                    B0LowByte = Base71Lookup.index(output[1])
-                    B2HighByte = Base71Lookup.index(output[4])
-                    B2LowByte = Base71Lookup.index(output[5])
-                    
-                    # Calculate forces in Newtons
-                    B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
-                    B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
-                    
-                    # Apply forces directly to movement
-                    if B0ForceInNewtons > MIN_FORCE:
-                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
-                        
+                B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+            
+                # Apply difficulty-specific movement
+                if selected_diff == "Easy":
+                    # Constant movement for Easy mode
+                    if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                        dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
+                        dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]  # Face right
+            
+                elif selected_diff == "Hard":
+                    # Proportional movement for Hard mode (current implementation)
                     if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
                         move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
-                        dino_pos[0] += move_amount  # Right movement based on force
-                        dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]
+                        dino_pos[0] += move_amount  # Movement based on force
+                        dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]  # Face right
+            
+                # Jump logic remains the same for both difficulties
+                if B0ForceInNewtons > MIN_FORCE:
+                    dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
             
             
                         
