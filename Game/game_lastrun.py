@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 17, 2025, at 15:08
+    on January 17, 2025, at 15:14
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -510,12 +510,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Trail settings
     trail_positions = []  # Stores Dino's previous positions
-    trail_length = 25  # Maximum number of trail dots
+    trail_length = 40  # Maximum number of trail dots
     trail_dot_size = 0.005  # Size of each dot
     trail_dots = []  # List of Circle stimuli for the trail
     trail_color = 'yellow'  # Color of the trail dots
     trail_frame_counter = 0  # Counter to control trail dot spawning
-    trail_interval = 3  # Spawn a dot every 3 frames
+    trail_interval = 7  # Spawn a dot every 3 frames
     
     
     
