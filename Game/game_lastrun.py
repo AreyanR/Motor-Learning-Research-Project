@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 17, 2025, at 14:37
+    on January 17, 2025, at 15:08
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -531,13 +531,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     kb = keyboard.Keyboard()
     
     
-    MIN_FORCE = 0.2  # Minimum force to start movement
+    MIN_FORCE = 0.4  # Minimum force to start movement
     FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
     dino_speed = 0  # Initial vertical speed
-    gravity = -0.00006  # Downward acceleration 0.00006
+    gravity = -0.0003  # Downward acceleration 0.00006
     jump_speed = 0.005  # Jumping speed
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
@@ -572,7 +572,25 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
         return on_floor1 or on_floor2
         
+    
+    def calculate_psurp_forces(serial_data):
+        """Extract and calculate forces from PSURP serial data."""
+        if len(serial_data.decode()) == 12:
+            output = serial_data.decode()
+            
+            # Calculate forces
+            B0HighByte = Base71Lookup.index(output[0])
+            B0LowByte = Base71Lookup.index(output[1])
+            B2HighByte = Base71Lookup.index(output[4])
+            B2LowByte = Base71Lookup.index(output[5])
+            
+            # Forces in Newtons
+            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            
+            return B0ForceInNewtons, B2ForceInNewtons
         
+        return 0, 0  # Default forces if data is invalid
         
     # Animation-related variables
     frame_paths = [
@@ -1608,6 +1626,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         arc2_touched_vertices = []
         arc3_touched_vertices = []
         meatbone_collided = False
+        meatbone_image.opacity = 1
         # Run 'Begin Routine' code from Timer
         
         level_timer.reset()  # Reset the timer at the start of the MainGame routine
@@ -1789,27 +1808,25 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # Read serial data
                 ser.flushInput()
                 strSerialData = ser.readline()
-                if len(strSerialData.decode()) == 12:
-                    output = strSerialData.decode()
-                    
-                    # Calculate forces
-                    B0HighByte = Base71Lookup.index(output[0])
-                    B0LowByte = Base71Lookup.index(output[1])
-                    B2HighByte = Base71Lookup.index(output[4])
-                    B2LowByte = Base71Lookup.index(output[5])
-                    
-                    # Calculate forces in Newtons
-                    B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
-                    B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
-                    
-                    # Apply forces directly to movement
-                    if B0ForceInNewtons > MIN_FORCE:
-                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
-                        
+                B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+            
+                # Apply difficulty-specific movement
+                if selected_diff == "Easy":
+                    # Constant movement for Easy mode
+                    if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                        dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
+                        dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]  # Face right
+            
+                elif selected_diff == "Hard":
+                    # Proportional movement for Hard mode (current implementation)
                     if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
                         move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
-                        dino_pos[0] += move_amount  # Right movement based on force
-                        dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]
+                        dino_pos[0] += move_amount  # Movement based on force
+                        dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]  # Face right
+            
+                # Jump logic remains the same for both difficulties
+                if B0ForceInNewtons > MIN_FORCE:
+                    dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
             
             
                         
