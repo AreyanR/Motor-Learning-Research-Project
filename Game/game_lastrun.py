@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 17, 2025, at 15:20
+    on January 19, 2025, at 17:24
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -128,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\actioncontrollab\\Desktop\\motor-learning-research-project\\Game\\game_lastrun.py',
+        originPath='D:\\Users\\areya\\Desktop\\work\\motor-learning-research-project\\Game\\game_lastrun.py',
         savePickle=True, saveWideText=False,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -500,13 +500,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     import serial
     from psychopy.visual import Circle
     
-    
+    """
     # Initialize the serial connection for PSURP
     ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
     ser.flush()
     ser.write("X".encode())  # Initialize PSURP
     ser.write("RUNE\n".encode())  # Enter streaming mode
-    
+    """
     
     # Trail settings
     trail_positions = []  # Stores Dino's previous positions
@@ -618,7 +618,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     from psychopy.visual import Rect, ImageStim, ShapeStim
     import math
     
-    
+    dirt_texture = 'Assets/ground1.png'
     
     # Function to calculate vertices of a Rect stimulus
     def calculate_rect_vertices(rect):
@@ -651,13 +651,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     floor1_width = 0.5
     floor1_pos = [0, -0.5]
     
-    floor1 = Rect(
+    floor1 = visual.ImageStim(
         win=win,
-        width=floor1_width,
-        height=floor1_height,
+        image=dirt_texture,
+        size=(floor1_width, floor1_height),  # Set the size to match the floor dimensions
         pos=floor1_pos,
-        fillColor="black",
-        lineColor=None
+        interpolate=True
     )
     floor1_vertices = calculate_rect_vertices(floor1)
     
@@ -666,13 +665,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     floor2_height = 0.3
     floor2_width = 0.5
     
-    floor2 = Rect(
+    floor2 = visual.ImageStim(
         win=win,
-        width=floor2_width,
-        height=floor2_height,
-        pos=[floor2_x_static, -0.5],
-        fillColor="black",
-        lineColor=None
+        image=dirt_texture,
+        size=(floor2_width, floor2_height),  # Set the size to match the floor dimensions
+        pos=[floor2_x_static, -0.5],  # Position of floor2
+        interpolate=True
     )
     floor2_vertices = calculate_rect_vertices(floor2)
     
@@ -937,9 +935,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     resetPSURP.tStopRefresh = tThisFlipGlobal
     thisExp.addData('resetPSURP.stopped', resetPSURP.tStop)
     # Run 'End Routine' code from code_2
+    """
     ser.flush()
     ser.write("X".encode())
-    
+    """
     # clear out the data from the IO buffers (Fresh commands)
     # the "X" command puts tje PSURP into command mode
     
@@ -1067,7 +1066,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     TARE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('TARE.stopped', TARE.tStop)
     # Run 'End Routine' code from tare_code
-    
+    """
     ser.write("TAR0\n".encode())
     time.sleep(1)
     ser.write("TAR1\n".encode())
@@ -1079,7 +1078,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     ser.write("TAR4\n".encode())
     time.sleep(1)
     
-    
+    """
     # the tar command zeros out all of the force messurements
     # halt for one second to make sure command was processed 
     
@@ -1205,8 +1204,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     RUNE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('RUNE.stopped', RUNE.tStop)
     # Run 'End Routine' code from Code_RUNE
+    """
     ser.write("RUNE\n".encode())
-    
+    """
     # the rune command sets the PSURP to streaming mode. (for getting vals)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if RUNE.maxDurationReached:
@@ -2228,10 +2228,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # if running in a Session with a Liaison client, send data up to now
         thisSession.sendExperimentData()
     # Run 'End Experiment' code from DinoMovement
+    """
     ser.flush()
     ser.write("X".encode())  # Exit command mode
     ser.close()
-    
+    """
     
     # mark experiment as finished
     endExperiment(thisExp, win=win)
