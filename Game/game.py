@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 17, 2025, at 15:15
+    on January 20, 2025, at 03:33
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -128,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\actioncontrollab\\Desktop\\motor-learning-research-project\\Game\\game.py',
+        originPath='D:\\Users\\areya\\Desktop\\work\\motor-learning-research-project\\Game\\game.py',
         savePickle=True, saveWideText=False,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -443,6 +443,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Default control method
     selected_control = "Keyboard"
     selected_diff = "Easy"
+    thisExp.savePickle = False
+    thisExp.saveWideText = False  # Prevents saving the .csv or .tsv file
+    
+    
     mouse = event.Mouse(win=win)
     x, y = [None, None]
     mouse.mouseClock = core.Clock()
@@ -500,22 +504,22 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     import serial
     from psychopy.visual import Circle
     
-    
+    """
     # Initialize the serial connection for PSURP
     ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
     ser.flush()
     ser.write("X".encode())  # Initialize PSURP
     ser.write("RUNE\n".encode())  # Enter streaming mode
-    
+    """
     
     # Trail settings
     trail_positions = []  # Stores Dino's previous positions
-    trail_length = 40  # Maximum number of trail dots
+    trail_length = 35  # Maximum number of trail dots
     trail_dot_size = 0.005  # Size of each dot
     trail_dots = []  # List of Circle stimuli for the trail
     trail_color = 'yellow'  # Color of the trail dots
     trail_frame_counter = 0  # Counter to control trail dot spawning
-    trail_interval = 7  # Spawn a dot every 3 frames
+    trail_interval = 5  # Spawn a dot every 3 frames
     
     
     
@@ -618,7 +622,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     from psychopy.visual import Rect, ImageStim, ShapeStim
     import math
     
-    
+    dirt_texture = 'Assets/ground1.png'
     
     # Function to calculate vertices of a Rect stimulus
     def calculate_rect_vertices(rect):
@@ -651,13 +655,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     floor1_width = 0.5
     floor1_pos = [0, -0.5]
     
-    floor1 = Rect(
+    floor1 = visual.ImageStim(
         win=win,
-        width=floor1_width,
-        height=floor1_height,
+        image=dirt_texture,
+        size=(floor1_width, floor1_height),  # Set the size to match the floor dimensions
         pos=floor1_pos,
-        fillColor="black",
-        lineColor=None
+        interpolate=True
     )
     floor1_vertices = calculate_rect_vertices(floor1)
     
@@ -666,13 +669,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     floor2_height = 0.3
     floor2_width = 0.5
     
-    floor2 = Rect(
+    floor2 = visual.ImageStim(
         win=win,
-        width=floor2_width,
-        height=floor2_height,
-        pos=[floor2_x_static, -0.5],
-        fillColor="black",
-        lineColor=None
+        image=dirt_texture,
+        size=(floor2_width, floor2_height),  # Set the size to match the floor dimensions
+        pos=[floor2_x_static, -0.5],  # Position of floor2
+        interpolate=True
     )
     floor2_vertices = calculate_rect_vertices(floor2)
     
@@ -872,8 +874,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             t_reset_PSURP.tStart = t  # local t and not account for scr refresh
             t_reset_PSURP.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(t_reset_PSURP, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 't_reset_PSURP.started')
             # update status
             t_reset_PSURP.status = STARTED
             t_reset_PSURP.setAutoDraw(True)
@@ -891,8 +891,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 t_reset_PSURP.tStop = t  # not accounting for scr refresh
                 t_reset_PSURP.tStopRefresh = tThisFlipGlobal  # on global time
                 t_reset_PSURP.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 't_reset_PSURP.stopped')
                 # update status
                 t_reset_PSURP.status = FINISHED
                 t_reset_PSURP.setAutoDraw(False)
@@ -937,9 +935,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     resetPSURP.tStopRefresh = tThisFlipGlobal
     thisExp.addData('resetPSURP.stopped', resetPSURP.tStop)
     # Run 'End Routine' code from code_2
+    """
     ser.flush()
     ser.write("X".encode())
-    
+    """
     # clear out the data from the IO buffers (Fresh commands)
     # the "X" command puts tje PSURP into command mode
     
@@ -1002,8 +1001,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             t_tare.tStart = t  # local t and not account for scr refresh
             t_tare.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(t_tare, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 't_tare.started')
             # update status
             t_tare.status = STARTED
             t_tare.setAutoDraw(True)
@@ -1021,8 +1018,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 t_tare.tStop = t  # not accounting for scr refresh
                 t_tare.tStopRefresh = tThisFlipGlobal  # on global time
                 t_tare.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 't_tare.stopped')
                 # update status
                 t_tare.status = FINISHED
                 t_tare.setAutoDraw(False)
@@ -1067,7 +1062,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     TARE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('TARE.stopped', TARE.tStop)
     # Run 'End Routine' code from tare_code
-    
+    """
     ser.write("TAR0\n".encode())
     time.sleep(1)
     ser.write("TAR1\n".encode())
@@ -1079,7 +1074,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     ser.write("TAR4\n".encode())
     time.sleep(1)
     
-    
+    """
     # the tar command zeros out all of the force messurements
     # halt for one second to make sure command was processed 
     
@@ -1140,8 +1135,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             T_RUNE.tStart = t  # local t and not account for scr refresh
             T_RUNE.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(T_RUNE, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'T_RUNE.started')
             # update status
             T_RUNE.status = STARTED
             T_RUNE.setAutoDraw(True)
@@ -1159,8 +1152,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 T_RUNE.tStop = t  # not accounting for scr refresh
                 T_RUNE.tStopRefresh = tThisFlipGlobal  # on global time
                 T_RUNE.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'T_RUNE.stopped')
                 # update status
                 T_RUNE.status = FINISHED
                 T_RUNE.setAutoDraw(False)
@@ -1205,8 +1196,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     RUNE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('RUNE.stopped', RUNE.tStop)
     # Run 'End Routine' code from Code_RUNE
+    """
     ser.write("RUNE\n".encode())
-    
+    """
     # the rune command sets the PSURP to streaming mode. (for getting vals)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if RUNE.maxDurationReached:
@@ -1311,8 +1303,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 TitleText.tStart = t  # local t and not account for scr refresh
                 TitleText.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(TitleText, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'TitleText.started')
                 # update status
                 TitleText.status = STARTED
                 TitleText.setAutoDraw(True)
@@ -1331,8 +1321,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 start_button.tStart = t  # local t and not account for scr refresh
                 start_button.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(start_button, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'start_button.started')
                 # update status
                 start_button.status = STARTED
                 start_button.setAutoDraw(True)
@@ -1351,8 +1339,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 StartGame.tStart = t  # local t and not account for scr refresh
                 StartGame.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(StartGame, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'StartGame.started')
                 # update status
                 StartGame.status = STARTED
                 StartGame.setAutoDraw(True)
@@ -1371,8 +1357,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 exit_button.tStart = t  # local t and not account for scr refresh
                 exit_button.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(exit_button, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'exit_button.started')
                 # update status
                 exit_button.status = STARTED
                 exit_button.setAutoDraw(True)
@@ -1391,8 +1375,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 Exit.tStart = t  # local t and not account for scr refresh
                 Exit.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(Exit, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'Exit.started')
                 # update status
                 Exit.status = STARTED
                 Exit.setAutoDraw(True)
@@ -1411,8 +1393,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 controller_selection.tStart = t  # local t and not account for scr refresh
                 controller_selection.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(controller_selection, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'controller_selection.started')
                 # update status
                 controller_selection.status = STARTED
                 controller_selection.setAutoDraw(True)
@@ -1431,8 +1411,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 control_feedback.tStart = t  # local t and not account for scr refresh
                 control_feedback.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(control_feedback, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'control_feedback.started')
                 # update status
                 control_feedback.status = STARTED
                 control_feedback.setAutoDraw(True)
@@ -1451,8 +1429,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 mode_feedback.tStart = t  # local t and not account for scr refresh
                 mode_feedback.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(mode_feedback, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'mode_feedback.started')
                 # update status
                 mode_feedback.status = STARTED
                 mode_feedback.setAutoDraw(True)
@@ -1471,8 +1447,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 mode_button.tStart = t  # local t and not account for scr refresh
                 mode_button.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(mode_button, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'mode_button.started')
                 # update status
                 mode_button.status = STARTED
                 mode_button.setAutoDraw(True)
@@ -1530,8 +1504,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 mouse.tStart = t  # local t and not account for scr refresh
                 mouse.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(mouse, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.addData('mouse.started', t)
                 # update status
                 mouse.status = STARTED
                 mouse.mouseClock.reset()
@@ -1674,8 +1646,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 dino_image.tStart = t  # local t and not account for scr refresh
                 dino_image.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(dino_image, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'dino_image.started')
                 # update status
                 dino_image.status = STARTED
                 dino_image.setAutoDraw(True)
@@ -1694,8 +1664,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 floor1.tStart = t  # local t and not account for scr refresh
                 floor1.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(floor1, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'floor1.started')
                 # update status
                 floor1.status = STARTED
                 floor1.setAutoDraw(True)
@@ -1714,8 +1682,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 floor2.tStart = t  # local t and not account for scr refresh
                 floor2.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(floor2, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'floor2.started')
                 # update status
                 floor2.status = STARTED
                 floor2.setAutoDraw(True)
@@ -1734,8 +1700,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 meatbone_image.tStart = t  # local t and not account for scr refresh
                 meatbone_image.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(meatbone_image, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'meatbone_image.started')
                 # update status
                 meatbone_image.status = STARTED
                 meatbone_image.setAutoDraw(True)
@@ -1754,8 +1718,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 score_text.tStart = t  # local t and not account for scr refresh
                 score_text.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(score_text, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'score_text.started')
                 # update status
                 score_text.status = STARTED
                 score_text.setAutoDraw(True)
@@ -1774,8 +1736,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 timer_text.tStart = t  # local t and not account for scr refresh
                 timer_text.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(timer_text, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'timer_text.started')
                 # update status
                 timer_text.status = STARTED
                 timer_text.setAutoDraw(True)
@@ -2072,6 +2032,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         thisExp.addData('MainGame.stopped', MainGame.tStop)
         # Run 'End Routine' code from DinoMovement
         dino_pos = [-0.5, -0.3]  # Reset Dino's position
+        trail_positions.clear()  # Remove all stored positions
         # Run 'End Routine' code from GoalController
         global total_touched_vertices, total_possible_vertices
         total_touched_vertices = len(arc1_touched_vertices) + len(arc2_touched_vertices) + len(arc3_touched_vertices)
@@ -2145,8 +2106,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 end_score_text.tStart = t  # local t and not account for scr refresh
                 end_score_text.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(end_score_text, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'end_score_text.started')
                 # update status
                 end_score_text.status = STARTED
                 end_score_text.setAutoDraw(True)
@@ -2164,8 +2123,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     end_score_text.tStop = t  # not accounting for scr refresh
                     end_score_text.tStopRefresh = tThisFlipGlobal  # on global time
                     end_score_text.frameNStop = frameN  # exact frame index
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'end_score_text.stopped')
                     # update status
                     end_score_text.status = FINISHED
                     end_score_text.setAutoDraw(False)
@@ -2212,6 +2169,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         EndGameScreen.tStop = globalClock.getTime(format='float')
         EndGameScreen.tStopRefresh = tThisFlipGlobal
         thisExp.addData('EndGameScreen.stopped', EndGameScreen.tStop)
+        # Run 'End Routine' code from code_3
+        
+        thisExp.addData('Score', total_touched_vertices)
+        thisExp.addData('Percentage', percentage)
+        thisExp.addData('Participant ID', expInfo['participant'])
+        
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if EndGameScreen.maxDurationReached:
             routineTimer.addTime(-EndGameScreen.maxDuration)
@@ -2226,11 +2189,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     if thisSession is not None:
         # if running in a Session with a Liaison client, send data up to now
         thisSession.sendExperimentData()
+    # get names of stimulus parameters
+    if GameLoop.trialList in ([], [None], None):
+        params = []
+    else:
+        params = GameLoop.trialList[0].keys()
+    # save data for this loop
+    GameLoop.saveAsText(filename + 'GameLoop.csv', delim=',',
+        stimOut=params,
+        dataOut=['n','all_mean','all_std', 'all_raw'])
     # Run 'End Experiment' code from DinoMovement
+    """
     ser.flush()
     ser.write("X".encode())  # Exit command mode
     ser.close()
-    
+    """
     
     # mark experiment as finished
     endExperiment(thisExp, win=win)
