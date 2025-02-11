@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on February 11, 2025, at 03:03
+    on February 11, 2025, at 14:01
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -830,10 +830,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     # Track if Dino is in the wiggle room (default: safe)
-    wiggle_room_safe = True  
+    wiggle_room = False  
     
     # Track previous state to detect changes
-    prev_wiggle_room_state = True  
+    prev_wiggle_room_state = False  
     
     
     # Run 'Begin Experiment' code from Timer
@@ -2034,7 +2034,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             score_text.text = str(score)
             
             # Reset to safe at the start of each frame
-            wiggle_room_safe = True  
+            wiggle_room = False  
             
             for vertex in wiggle_arc1.vertices:
                 adjusted_vertex_x = vertex[0] + 0.3
@@ -2045,15 +2045,42 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
                 # If Dino is inside the wiggle room, set to False
                 if distance <= touch_threshold:
-                    wiggle_room_safe = False  
+                    wiggle_room = True  
+                    break  # No need to check further, Dino is inside
+                    
+                    
+            for vertex in wiggle_arc2.vertices:
+                adjusted_vertex_x = vertex[0] + 1
+                adjusted_vertex_y = vertex[1]  - 0.1
+            
+                # Calculate distance between Dino and wiggle room vertex
+                distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+            
+                # If Dino is inside the wiggle room, set to False
+                if distance <= touch_threshold:
+                    wiggle_room = True  
+                    break  # No need to check further, Dino is inside
+                    
+                    
+                    
+            for vertex in wiggle_arc3.vertices:
+                adjusted_vertex_x = vertex[0] + 1.8
+                adjusted_vertex_y = vertex[1] 
+            
+                # Calculate distance between Dino and wiggle room vertex
+                distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+            
+                # If Dino is inside the wiggle room, set to False
+                if distance <= touch_threshold:
+                    wiggle_room = True  
                     break  # No need to check further, Dino is inside
             
             # Print only when state switches (avoids spam)
-            if wiggle_room_safe != prev_wiggle_room_state:
-                print("Wiggle Room Safe:", wiggle_room_safe)
+            if wiggle_room != prev_wiggle_room_state:
+                print("IsTouching:", wiggle_room)
             
             # Update previous state
-            prev_wiggle_room_state = wiggle_room_safe
+            prev_wiggle_room_state = wiggle_room
             
             
             
