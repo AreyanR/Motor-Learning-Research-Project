@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 20, 2025, at 03:52
+    on February 11, 2025, at 03:03
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -773,6 +773,49 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         fillColor=None
     )
     
+    def create_wiggle_arc(center, radius, thickness, color='blue', opacity=0.5):
+        """Generate a thick wiggle room arc for a given arc."""
+        outer_arc_vertices = []
+        inner_arc_vertices = []
+    
+        for i in range(51):  # 50 segments for smoothness
+            angle = math.radians(i * (180 / 50))  # Same angles as original arc
+    
+            # Outer arc (slightly larger)
+            outer_x = center[0] + (radius + thickness) * math.cos(angle)
+            outer_y = center[1] + (radius + thickness) * math.sin(angle)
+            outer_arc_vertices.append((outer_x, outer_y))
+    
+            # Inner arc (slightly smaller)
+            inner_x = center[0] + (radius - thickness) * math.cos(angle)
+            inner_y = center[1] + (radius - thickness) * math.sin(angle)
+            inner_arc_vertices.append((inner_x, inner_y))
+    
+        # Reverse inner arc vertices to create a closed shape
+        inner_arc_vertices.reverse()
+        thick_wiggle_arc_vertices = outer_arc_vertices + inner_arc_vertices
+    
+        # Create and return the wiggle room arc
+        return ShapeStim(
+            win=win,
+            vertices=thick_wiggle_arc_vertices,
+            closeShape=True,  # Fill between outer and inner arcs
+            lineWidth=0,  # No outline needed
+            lineColor=None,
+            fillColor=color,
+            opacity=opacity
+        )
+    
+    
+    
+    wiggle_thickness = 0.03  # Adjust thickness for all wiggle arcs
+    
+    # Generate wiggle arcs for all arcs
+    wiggle_arc1 = create_wiggle_arc(arc1_center, arc1_radius, wiggle_thickness)
+    wiggle_arc2 = create_wiggle_arc(arc2_center, arc2_radius, wiggle_thickness)
+    wiggle_arc3 = create_wiggle_arc(arc3_center, arc3_radius, wiggle_thickness)
+    
+    
     # Run 'Begin Experiment' code from GoalController
     
     meatbone_collided = False  # Track whether the meatbone has been stomped
@@ -784,6 +827,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     touch_threshold = 0.05
     
     collision_threshold = 0.1  # You can adjust this to fit your game scale
+    
+    
+    # Track if Dino is in the wiggle room (default: safe)
+    wiggle_room_safe = True  
+    
+    # Track previous state to detect changes
+    prev_wiggle_room_state = True  
+    
+    
     # Run 'Begin Experiment' code from Timer
     level_timer = core.Clock()  # Initialize the timer
     time_limit = 120  # Set the time limit in seconds (e.g., 2 minutes)
@@ -1889,20 +1941,30 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Update the arc position relative to the camera offset
             # Update Arc 1 Position
             arc1.pos = [arc1_center[0] - camera_offset_x, arc1_center[1]]
+            wiggle_arc1.pos = arc1.pos  # Keep wiggle room on top
             
             # Update Arc 2 Position
             arc2.pos = [arc2_center[0] - camera_offset_x, arc2_center[1]]
-            
+            wiggle_arc2.pos = arc2.pos  # Keep wiggle room on top
             arc3.pos = [arc3_center[0] - camera_offset_x, arc3_center[1]]
+            wiggle_arc3.pos = arc3.pos  # Keep wiggle room on top
             
             # Draw the backgrounds and floors
             background1.draw()
             background2.draw()
             floor1.draw()
             floor2.draw()
+            wiggle_arc1.draw()
+            wiggle_arc2.draw()
+            wiggle_arc3.draw()
+            
             arc1.draw()
             arc2.draw()
             arc3.draw()
+            
+            
+            
+            
             # Draw the trail dots
             for dot in trail_dots:
                 dot.draw()
@@ -1970,6 +2032,29 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     score += 1  # Increment the score for Arc 3
                         
             score_text.text = str(score)
+            
+            # Reset to safe at the start of each frame
+            wiggle_room_safe = True  
+            
+            for vertex in wiggle_arc1.vertices:
+                adjusted_vertex_x = vertex[0] + 0.3
+                adjusted_vertex_y = vertex[1]  
+            
+                # Calculate distance between Dino and wiggle room vertex
+                distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+            
+                # If Dino is inside the wiggle room, set to False
+                if distance <= touch_threshold:
+                    wiggle_room_safe = False  
+                    break  # No need to check further, Dino is inside
+            
+            # Print only when state switches (avoids spam)
+            if wiggle_room_safe != prev_wiggle_room_state:
+                print("Wiggle Room Safe:", wiggle_room_safe)
+            
+            # Update previous state
+            prev_wiggle_room_state = wiggle_room_safe
+            
             
             
             

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on January 20, 2025, at 03:33
+    on February 11, 2025, at 01:56
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -687,7 +687,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     #meat bone
     
-    meatbone_size = [0.15, 0.09]  # Example size (width, height)
+    meatbone_size = [0.12, 0.06]  # Example size (width, height)
     meatbone_image.size = meatbone_size
     offset = 0.01  # Adjust to align the meatbone properly with floor2
     
@@ -2170,11 +2170,19 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         EndGameScreen.tStopRefresh = tThisFlipGlobal
         thisExp.addData('EndGameScreen.stopped', EndGameScreen.tStop)
         # Run 'End Routine' code from code_3
+        import csv
         
+        thisExp.addData('Participant ID', expInfo['participant'])
+        thisExp.addData('Session', expInfo['session'])
+        thisExp.addData('Date', expInfo['date'])
         thisExp.addData('Score', total_touched_vertices)
         thisExp.addData('Percentage', percentage)
-        thisExp.addData('Participant ID', expInfo['participant'])
         
+        filename = f"data/{expInfo['participant']}_summary.csv"
+        with open(filename, mode='w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(['Participant ID', 'Session', 'Date', 'Score', 'Percentage'])
+            writer.writerow([expInfo['participant'], expInfo['session'], expInfo['date'], total_touched_vertices, percentage])
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if EndGameScreen.maxDurationReached:
             routineTimer.addTime(-EndGameScreen.maxDuration)
