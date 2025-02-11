@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on February 11, 2025, at 14:01
+    on February 11, 2025, at 15:34
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -482,20 +482,34 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-3.0)
+    Border = visual.Rect(
+        win=win, name='Border',
+        width=(1.245,0.995)[0], height=(1.245,0.995)[1],
+        ori=0.0, pos=(0, 0), draggable=False, anchor='center',
+        lineWidth=10.0,
+        colorSpace='rgb', lineColor=[1.0000, -1.0000, -1.0000], fillColor=None,
+        opacity=0.2, depth=-4.0, interpolate=True)
+    Border2 = visual.Rect(
+        win=win, name='Border2',
+        width=(1.22,0.97)[0], height=(1.22,0.97)[1],
+        ori=0.0, pos=(0, 0), draggable=False, anchor='center',
+        lineWidth=10.0,
+        colorSpace='rgb', lineColor=[1.0000, -1.0000, -1.0000], fillColor=None,
+        opacity=0.2, depth=-5.0, interpolate=True)
     score_text = visual.TextStim(win=win, name='score_text',
         text='Score: 0',
         font='Arial',
         pos=(0.55, 0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-4.0);
+        depth=-6.0);
     timer_text = visual.TextStim(win=win, name='timer_text',
         text='00 : 00',
         font='Arial',
         pos=(-0.55,0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-5.0);
+        depth=-7.0);
     # Run 'Begin Experiment' code from DinoMovement
     from psychopy.hardware import keyboard
     from psychopy.visual import Rect
@@ -808,12 +822,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     
-    wiggle_thickness = 0.03  # Adjust thickness for all wiggle arcs
+    wiggle_thickness = 0.05  # Adjust thickness for all wiggle arcs
     
     # Generate wiggle arcs for all arcs
     wiggle_arc1 = create_wiggle_arc(arc1_center, arc1_radius, wiggle_thickness)
     wiggle_arc2 = create_wiggle_arc(arc2_center, arc2_radius, wiggle_thickness)
     wiggle_arc3 = create_wiggle_arc(arc3_center, arc3_radius, wiggle_thickness)
+    
+    
     
     
     # Run 'Begin Experiment' code from GoalController
@@ -832,9 +848,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Track if Dino is in the wiggle room (default: safe)
     wiggle_room = False  
     
-    # Track previous state to detect changes
-    prev_wiggle_room_state = False  
-    
+    border_visible = False  # Start with the border hidden
     
     # Run 'Begin Experiment' code from Timer
     level_timer = core.Clock()  # Initialize the timer
@@ -1628,7 +1642,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine MainGame
         MainGame = data.Routine(
             name='MainGame',
-            components=[dino_image, floor1, floor2, meatbone_image, score_text, timer_text],
+            components=[dino_image, floor1, floor2, meatbone_image, Border, Border2, score_text, timer_text],
         )
         MainGame.status = NOT_STARTED
         continueRoutine = True
@@ -1651,6 +1665,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         arc3_touched_vertices = []
         meatbone_collided = False
         meatbone_image.opacity = 1
+        
+        wiggle_room = False  
+        border_visible = False  # Start with the border hidden
         # Run 'Begin Routine' code from Timer
         
         level_timer.reset()  # Reset the timer at the start of the MainGame routine
@@ -1758,6 +1775,42 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             # if meatbone_image is active this frame...
             if meatbone_image.status == STARTED:
+                # update params
+                pass
+            
+            # *Border* updates
+            
+            # if Border is starting this frame...
+            if Border.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                Border.frameNStart = frameN  # exact frame index
+                Border.tStart = t  # local t and not account for scr refresh
+                Border.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(Border, 'tStartRefresh')  # time at next scr refresh
+                # update status
+                Border.status = STARTED
+                Border.setAutoDraw(True)
+            
+            # if Border is active this frame...
+            if Border.status == STARTED:
+                # update params
+                pass
+            
+            # *Border2* updates
+            
+            # if Border2 is starting this frame...
+            if Border2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                Border2.frameNStart = frameN  # exact frame index
+                Border2.tStart = t  # local t and not account for scr refresh
+                Border2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(Border2, 'tStartRefresh')  # time at next scr refresh
+                # update status
+                Border2.status = STARTED
+                Border2.setAutoDraw(True)
+            
+            # if Border2 is active this frame...
+            if Border2.status == STARTED:
                 # update params
                 pass
             
@@ -1963,8 +2016,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             arc3.draw()
             
             
-            
-            
             # Draw the trail dots
             for dot in trail_dots:
                 dot.draw()
@@ -2075,12 +2126,19 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     wiggle_room = True  
                     break  # No need to check further, Dino is inside
             
-            # Print only when state switches (avoids spam)
-            if wiggle_room != prev_wiggle_room_state:
-                print("IsTouching:", wiggle_room)
+            if wiggle_room:  
+                border_visible = False
+            else:  # If wiggleRoom is False, show the border
+                border_visible = True
             
-            # Update previous state
-            prev_wiggle_room_state = wiggle_room
+            # Apply visibility to the Polygon component
+            if border_visible:
+                Border.opacity = 0.3  # Make the border visible
+                Border2.opacity = 0.3  # Make the border visible
+            else:
+                Border.opacity = 0  # Hide the border
+                Border2.opacity = 0  # Hide the border
+            
             
             
             
