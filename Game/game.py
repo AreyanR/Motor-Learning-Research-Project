@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on February 11, 2025, at 14:03
+    on February 18, 2025, at 01:46
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -442,7 +442,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from code
     # Default control method
     selected_control = "Keyboard"
-    selected_diff = "Easy"
+    selected_diff = "1"
     thisExp.savePickle = False
     thisExp.saveWideText = False  # Prevents saving the .csv or .tsv file
     
@@ -808,12 +808,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     
-    wiggle_thickness = 0.03  # Adjust thickness for all wiggle arcs
+    wiggle_thickness = 0.05  # Adjust thickness for all wiggle arcs
     
     # Generate wiggle arcs for all arcs
     wiggle_arc1 = create_wiggle_arc(arc1_center, arc1_radius, wiggle_thickness)
     wiggle_arc2 = create_wiggle_arc(arc2_center, arc2_radius, wiggle_thickness)
     wiggle_arc3 = create_wiggle_arc(arc3_center, arc3_radius, wiggle_thickness)
+    
+    
     
     
     # Run 'Begin Experiment' code from GoalController
@@ -831,9 +833,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Track if Dino is in the wiggle room (default: safe)
     wiggle_room = False  
-    
-    # Track previous state to detect changes
-    prev_wiggle_room_state = False  
     
     
     # Run 'Begin Experiment' code from Timer
@@ -1125,8 +1124,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     time.sleep(1)
     ser.write("TAR4\n".encode())
     time.sleep(1)
-    
     """
+    
     # the tar command zeros out all of the force messurements
     # halt for one second to make sure command was processed 
     
@@ -1536,10 +1535,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 core.wait(0.2)
                 
                 # Toggle between "Easy" and "Hard" modes
-                if selected_diff == "Easy":
-                    selected_diff = "Hard"
+                if selected_diff == "1":
+                    selected_diff = "2"
                 else:
-                    selected_diff = "Easy"
+                    selected_diff = "1"
                 
                 # Update the feedback text
                 mode_feedback.text = f"Mode: {selected_diff}"
@@ -1651,6 +1650,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         arc3_touched_vertices = []
         meatbone_collided = False
         meatbone_image.opacity = 1
+        
+        wiggle_room = False  
+        
         # Run 'Begin Routine' code from Timer
         
         level_timer.reset()  # Reset the timer at the start of the MainGame routine
@@ -1823,13 +1825,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
             
                 # Apply difficulty-specific movement
-                if selected_diff == "Easy":
+                if selected_diff == "1":
                     # Constant movement for Easy mode
                     if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
                         dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
                         dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]  # Face right
             
-                elif selected_diff == "Hard":
+                elif selected_diff == "2":
                     # Proportional movement for Hard mode (current implementation)
                     if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
                         move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
@@ -1963,8 +1965,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             arc3.draw()
             
             
-            
-            
             # Draw the trail dots
             for dot in trail_dots:
                 dot.draw()
@@ -2075,12 +2075,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     wiggle_room = True  
                     break  # No need to check further, Dino is inside
             
-            # Print only when state switches (avoids spam)
-            if wiggle_room != prev_wiggle_room_state:
-                print("IsTouching:", wiggle_room)
             
-            # Update previous state
-            prev_wiggle_room_state = wiggle_room
+            
             
             
             

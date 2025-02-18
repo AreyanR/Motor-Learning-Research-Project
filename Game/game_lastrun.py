@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on February 11, 2025, at 15:34
+    on February 18, 2025, at 01:43
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -442,7 +442,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from code
     # Default control method
     selected_control = "Keyboard"
-    selected_diff = "Easy"
+    selected_diff = "1"
     thisExp.savePickle = False
     thisExp.saveWideText = False  # Prevents saving the .csv or .tsv file
     
@@ -482,34 +482,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-3.0)
-    Border = visual.Rect(
-        win=win, name='Border',
-        width=(1.245,0.995)[0], height=(1.245,0.995)[1],
-        ori=0.0, pos=(0, 0), draggable=False, anchor='center',
-        lineWidth=10.0,
-        colorSpace='rgb', lineColor=[1.0000, -1.0000, -1.0000], fillColor=None,
-        opacity=0.2, depth=-4.0, interpolate=True)
-    Border2 = visual.Rect(
-        win=win, name='Border2',
-        width=(1.22,0.97)[0], height=(1.22,0.97)[1],
-        ori=0.0, pos=(0, 0), draggable=False, anchor='center',
-        lineWidth=10.0,
-        colorSpace='rgb', lineColor=[1.0000, -1.0000, -1.0000], fillColor=None,
-        opacity=0.2, depth=-5.0, interpolate=True)
     score_text = visual.TextStim(win=win, name='score_text',
         text='Score: 0',
         font='Arial',
         pos=(0.55, 0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-6.0);
+        depth=-4.0);
     timer_text = visual.TextStim(win=win, name='timer_text',
         text='00 : 00',
         font='Arial',
         pos=(-0.55,0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-7.0);
+        depth=-5.0);
     # Run 'Begin Experiment' code from DinoMovement
     from psychopy.hardware import keyboard
     from psychopy.visual import Rect
@@ -848,7 +834,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Track if Dino is in the wiggle room (default: safe)
     wiggle_room = False  
     
-    border_visible = False  # Start with the border hidden
     
     # Run 'Begin Experiment' code from Timer
     level_timer = core.Clock()  # Initialize the timer
@@ -1139,8 +1124,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     time.sleep(1)
     ser.write("TAR4\n".encode())
     time.sleep(1)
-    
     """
+    
     # the tar command zeros out all of the force messurements
     # halt for one second to make sure command was processed 
     
@@ -1550,10 +1535,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 core.wait(0.2)
                 
                 # Toggle between "Easy" and "Hard" modes
-                if selected_diff == "Easy":
-                    selected_diff = "Hard"
+                if selected_diff == "1":
+                    selected_diff = "2"
                 else:
-                    selected_diff = "Easy"
+                    selected_diff = "1"
                 
                 # Update the feedback text
                 mode_feedback.text = f"Mode: {selected_diff}"
@@ -1642,7 +1627,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine MainGame
         MainGame = data.Routine(
             name='MainGame',
-            components=[dino_image, floor1, floor2, meatbone_image, Border, Border2, score_text, timer_text],
+            components=[dino_image, floor1, floor2, meatbone_image, score_text, timer_text],
         )
         MainGame.status = NOT_STARTED
         continueRoutine = True
@@ -1667,7 +1652,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         meatbone_image.opacity = 1
         
         wiggle_room = False  
-        border_visible = False  # Start with the border hidden
+        
         # Run 'Begin Routine' code from Timer
         
         level_timer.reset()  # Reset the timer at the start of the MainGame routine
@@ -1778,42 +1763,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # update params
                 pass
             
-            # *Border* updates
-            
-            # if Border is starting this frame...
-            if Border.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                Border.frameNStart = frameN  # exact frame index
-                Border.tStart = t  # local t and not account for scr refresh
-                Border.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(Border, 'tStartRefresh')  # time at next scr refresh
-                # update status
-                Border.status = STARTED
-                Border.setAutoDraw(True)
-            
-            # if Border is active this frame...
-            if Border.status == STARTED:
-                # update params
-                pass
-            
-            # *Border2* updates
-            
-            # if Border2 is starting this frame...
-            if Border2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                Border2.frameNStart = frameN  # exact frame index
-                Border2.tStart = t  # local t and not account for scr refresh
-                Border2.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(Border2, 'tStartRefresh')  # time at next scr refresh
-                # update status
-                Border2.status = STARTED
-                Border2.setAutoDraw(True)
-            
-            # if Border2 is active this frame...
-            if Border2.status == STARTED:
-                # update params
-                pass
-            
             # *score_text* updates
             
             # if score_text is starting this frame...
@@ -1876,13 +1825,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
             
                 # Apply difficulty-specific movement
-                if selected_diff == "Easy":
+                if selected_diff == "1":
                     # Constant movement for Easy mode
                     if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
                         dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
                         dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]  # Face right
             
-                elif selected_diff == "Hard":
+                elif selected_diff == "2":
                     # Proportional movement for Hard mode (current implementation)
                     if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
                         move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
@@ -2126,18 +2075,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     wiggle_room = True  
                     break  # No need to check further, Dino is inside
             
-            if wiggle_room:  
-                border_visible = False
-            else:  # If wiggleRoom is False, show the border
-                border_visible = True
             
-            # Apply visibility to the Polygon component
-            if border_visible:
-                Border.opacity = 0.3  # Make the border visible
-                Border2.opacity = 0.3  # Make the border visible
-            else:
-                Border.opacity = 0  # Hide the border
-                Border2.opacity = 0  # Hide the border
             
             
             
