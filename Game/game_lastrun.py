@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on February 18, 2025, at 22:09
+    on February 19, 2025, at 00:35
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -629,6 +629,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     reg_arc = 0
     high_arc = 0.05
     
+    small_arc_size = 0.2  # Smallest arc radius
+    med_arc_size = 0.27  # Medium arc radius
+    large_arc_size = 0.35  # Largest arc radius
     
     
     # Function to calculate vertices of a Rect stimulus
@@ -703,34 +706,34 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc properties
     arc1_center = [0.3, reg_arc]
-    arc1_radius = 0.2
+    arc1_radius = small_arc_size
     arc1_start_angle = 0
     arc1_end_angle = 180
     
     # Arc 2 Properties
     arc2_center = [1, low_arc]  # Different position
-    arc2_radius = 0.3         # Different radius
+    arc2_radius = med_arc_size # Different radius
     arc2_start_angle = 0
     arc2_end_angle = 180
     
     
     # Arc 3 Properties
     arc3_center = [1.8, high_arc]  # Position Arc 3 further into the map
-    arc3_radius = 0.25         # Choose a radius for Arc 3
+    arc3_radius = large_arc_size # Choose a radius for Arc 3
     arc3_start_angle = 0
     arc3_end_angle = 180
     
     
     # Arc 4 Properties
     arc4_center = [2.5, low_arc]  # Position Arc 4 even further into the map
-    arc4_radius = 0.25  # Choose a radius for Arc 4
+    arc4_radius = small_arc_size  # Choose a radius for Arc 4
     arc4_start_angle = 0
     arc4_end_angle = 180
     
     
     # Arc 5 Properties
     arc5_center = [3.2, reg_arc]  # Position Arc 5 further into the map
-    arc5_radius = 0.25  # Choose a radius for Arc 5
+    arc5_radius = large_arc_size  # Choose a radius for Arc 5
     arc5_start_angle = 0
     arc5_end_angle = 180
     
