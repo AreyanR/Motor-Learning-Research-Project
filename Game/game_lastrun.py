@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on February 19, 2025, at 00:35
+    on February 19, 2025, at 00:41
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -873,7 +873,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     
-    wiggle_thickness = 0.05  # Adjust thickness for all wiggle arcs
+    wiggle_thickness = 0.09  # Adjust thickness for all wiggle arcs
     
     # Generate wiggle arcs for all arcs
     wiggle_arc1 = create_wiggle_arc(arc1_center, arc1_radius, wiggle_thickness)
