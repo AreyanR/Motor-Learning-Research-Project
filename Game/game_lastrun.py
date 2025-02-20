@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on February 19, 2025, at 00:41
+    on February 19, 2025, at 16:46
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -441,10 +441,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         opacity=None, depth=-8.0, interpolate=True)
     # Run 'Begin Experiment' code from code
     # Default control method
+    # starts game in keyboard mode
     selected_control = "Keyboard"
     selected_diff = "1"
     thisExp.savePickle = False
-    thisExp.saveWideText = False  # Prevents saving the .csv or .tsv file
+    thisExp.saveWideText = False  # stops saving the .csv or .tsv file
     
     
     mouse = event.Mouse(win=win)
@@ -504,6 +505,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     import serial
     from psychopy.visual import Circle
     
+    # Initialize the Keyboard
+    kb = keyboard.Keyboard()
+    
+    #PSURP Inits
     """
     # Initialize the serial connection for PSURP
     ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
@@ -515,28 +520,24 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Trail settings
     trail_positions = []  # Stores Dino's previous positions
     trail_length = 35  # Maximum number of trail dots
-    trail_dot_size = 0.005  # Size of each dot
+    trail_dot_size = 0.005  # Size of each dot for trail 
     trail_dots = []  # List of Circle stimuli for the trail
     trail_color = 'yellow'  # Color of the trail dots
     trail_frame_counter = 0  # Counter to control trail dot spawning
-    trail_interval = 5  # Spawn a dot every 3 frames
+    trail_interval = 5  # Spawn a dot every 5 frames
     
     
-    
+    #Button 0 and button 2 force properties
     B0ForceInNewtons = 0
     B2ForceInNewtons = 0
+    MIN_FORCE = 0.4  # Minimum force to start movement
+    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
     
-    
-    # Thresholds for movement
+    # Thresholds for movement (force needed to do these actions)
     move_threshold = 2  # Adjust based on PSURP sensitivity
     jump_threshold = 3.0  # Adjust based on PSURP sensitivity
     
-    # Initialize the Keyboard
-    kb = keyboard.Keyboard()
     
-    
-    MIN_FORCE = 0.4  # Minimum force to start movement
-    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -546,14 +547,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
     min_x = -0.6  # Left boundary
-    max_x = 8
+    max_x = 8 # right boundary
     respawn_position = [0, -0.3]  # Starting position for Dino
     
-    # Get the floor vertices from the Floor Controller
-    floor1_vertices = floor1.vertices  # Assuming 'floor' is a Polygon or Rect stimulus
     
-    # Calculate the floor's top and fall threshold
-    floor_top = max(v[1] for v in floor1_vertices)  # Highest point of the floor
+    
+    # Floor properties
+    
+    floor1_vertices = floor1.vertices  # Get floor1 vertices
+    floor_top = max(v[1] for v in floor1_vertices)  # Highest point of floor1
     fall_threshold = min(v[1] for v in floor1_vertices) - 0.2  # Slightly below the lowest floor point
     
     
@@ -576,7 +578,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
         return on_floor1 or on_floor2
         
-    
+    #calculates the psurp forces
     def calculate_psurp_forces(serial_data):
         """Extract and calculate forces from PSURP serial data."""
         if len(serial_data.decode()) == 12:
@@ -595,8 +597,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             return B0ForceInNewtons, B2ForceInNewtons
         
         return 0, 0  # Default forces if data is invalid
-        
-    # Animation-related variables
+    
+    
+    
+    # image path for dino animation
     frame_paths = [
         "Assets/dino_frames/f1.png", "Assets/dino_frames/f2.png", 
         "Assets/dino_frames/f3.png", "Assets/dino_frames/f4.png", 
@@ -624,7 +628,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     dirt_texture = 'Assets/ground1.png'
     
-    # Define height factors for arcs
+    #height factors for arcs (Y position)
     low_arc = -0.2  
     reg_arc = 0
     high_arc = 0.05
@@ -632,6 +636,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     small_arc_size = 0.2  # Smallest arc radius
     med_arc_size = 0.27  # Medium arc radius
     large_arc_size = 0.35  # Largest arc radius
+    
+    wiggle_thickness = 0.05  # Adjust thickness for all wiggle arcs
     
     
     # Function to calculate vertices of a Rect stimulus
@@ -872,9 +878,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         )
     
     
-    
-    wiggle_thickness = 0.09  # Adjust thickness for all wiggle arcs
-    
     # Generate wiggle arcs for all arcs
     wiggle_arc1 = create_wiggle_arc(arc1_center, arc1_radius, wiggle_thickness)
     wiggle_arc2 = create_wiggle_arc(arc2_center, arc2_radius, wiggle_thickness)
@@ -897,18 +900,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc5_touched_vertices = []
     
     
-    touch_threshold = 0.05
+    touch_threshold = 0.05 # touch threshold for the arcs
     
-    collision_threshold = 0.1  # You can adjust this to fit your game scale
+    meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
     
     
-    # Track if Dino is in the wiggle room (default: safe)
+    # Track if Dino is in the wiggle room defualt is not touching so false
     wiggle_room = False  
     
     
     # Run 'Begin Experiment' code from Timer
     level_timer = core.Clock()  # Initialize the timer
-    time_limit = 120  # Set the time limit in seconds (e.g., 2 minutes)
+    time_limit = 120  # Set the time limit in seconds (2 minutes)
     
     
     # --- Initialize components for Routine "EndGameScreen" ---
@@ -1372,7 +1375,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         continueRoutine = True
         # update component parameters for each repeat
         # Run 'Begin Routine' code from code
-        # Update the feedback text to display the currently selected control method
+        # Update the feedback button text to display the currently selected control method
         control_feedback.text = f"Selected Control: {selected_control}"
         mode_feedback.text = f"Mode: {selected_diff}"
         # setup some python lists for storing info about the mouse
@@ -1586,7 +1589,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 core.quit()  # Quit the experiment
                 
             if mouse.isPressedIn(controller_selection):
-                # Add a delay to prevent rapid toggling (debounce)
+                # Add a delay to prevent rapid toggling (doesnt switch too fast)
                 core.wait(0.2)
                 
                 # Toggle between "Keyboard" and "PSURP"
@@ -1605,7 +1608,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # Add a delay to prevent rapid toggling (debounce)
                 core.wait(0.2)
                 
-                # Toggle between "Easy" and "Hard" modes
+                # Toggle between "Easy (1)" and "Hard (2)" modes
                 if selected_diff == "1":
                     selected_diff = "2"
                 else:
@@ -1879,8 +1882,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             up_pressed = False
             
             # Handle input based on the selected control method
+            
+            # Process keyboard input
             if selected_control == "Keyboard":
-                # Process keyboard input
                 keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
                 for key in keys_pressed:
                     if key.name == 'left':
@@ -1890,7 +1894,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     if key.name == 'up':
                         up_pressed = True
                         
-                        
+            # Process PSURP input            
             if selected_control == "PSURP":
                 # Read serial data
                 ser.flushInput()
@@ -1921,7 +1925,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Apply gravity to Dino's vertical speed
             dino_speed += gravity
             
-            # Check if Dino is on the floor
+            # Check if Dino is on the floor (keeps dino on top of floor)
             if is_on_floor(dino_pos) and dino_speed <= 0:  # Falling or stationary
                 dino_pos[1] = floor1_top + (dino_image.size[1] / 2) - ground_offset  # Align Dino with the floor
                 dino_speed = 0  # Reset vertical speed
@@ -1968,14 +1972,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 trail_dots[i].pos = [pos[0] - camera_offset_x, pos[1]]  # Adjust for camera offset
             
             
-            keys_pressed = kb.getKeys(['o'], waitRelease=False, clear=False)
-            if 'o' in [key.name for key in keys_pressed]:
-                print(f"Dino Position: X = {dino_pos[0]:.3f}, Y = {dino_pos[1]:.3f}")
-                print(f"Meatbone Position: {meatbone_x, meatbone_y}")
-                
-                
-                
-            
             # Update the Dino's animation
             if (frame_index_update_counter % 4) == 0:  # Adjust 4 to control animation speed
                 dino_image.image = frame_paths[frame_index]  # Update the current frame
@@ -1992,8 +1988,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             
             # Run 'Each Frame' code from worldController
-            # Get Dino's position from your Dino movement code
-            # Assume dino_pos[0] tracks Dino's X position (horizontal movement)
             
             # Update the camera offset based on Dino's X position
             camera_offset_x += camera_speed  # The camera offset follows Dino's position
@@ -2067,14 +2061,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if dino_relative_x < -0.8 or dino_relative_x > 0.8:  # Adjust bounds based on screen width
                 continueRoutine = False  # Ends the current routine
             
-            # Define a collision threshold (adjust based on the visual scale of your game)
-            # Check for collision
-            if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= collision_threshold:
+            # Check for collision for meatbone
+            if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
                 print("Dino ate the meatbone!")
                 meatbone_image.opacity = 0  # Make the meatbone disappear
                 meatbone_collided = True  # Prevent further collision checks
                 continueRoutine = False
             
+            
+            # Check for collision for ARCS
             for vertex in arc1_vertices:
                 # Adjust Arc 1 vertex for its X-offset (+1)
                 adjusted_vertex_x = vertex[0] + 0.3  # Move Arc 1 vertices by 1 unit to the right
@@ -2140,15 +2135,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     arc5_touched_vertices.append(vertex)
                     score += 1  # Increment score
             
-                        
-            score_text.text = str(score)
             
-            # Reset to safe at the start of each frame
+            # WIGGLE ROOM STUFF
+            
+            
+            # Reset to false at the start of each frame
             wiggle_room = False  
-            
             for vertex in wiggle_arc1.vertices:
                 adjusted_vertex_x = vertex[0] + 0.3
-                adjusted_vertex_y = vertex[1]  
+                adjusted_vertex_y = vertex[1] + reg_arc 
             
                 # Calculate distance between Dino and wiggle room vertex
                 distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
@@ -2161,7 +2156,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     
             for vertex in wiggle_arc2.vertices:
                 adjusted_vertex_x = vertex[0] + 1
-                adjusted_vertex_y = vertex[1]  - 0.1
+                adjusted_vertex_y = vertex[1] + low_arc
             
                 # Calculate distance between Dino and wiggle room vertex
                 distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
@@ -2175,7 +2170,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     
             for vertex in wiggle_arc3.vertices:
                 adjusted_vertex_x = vertex[0] + 1.8
-                adjusted_vertex_y = vertex[1] 
+                adjusted_vertex_y = vertex[1] + high_arc
             
                 # Calculate distance between Dino and wiggle room vertex
                 distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
@@ -2188,7 +2183,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             for vertex in wiggle_arc4.vertices:
                 adjusted_vertex_x = vertex[0] + 2.5  # Offset Arc 4 vertices
-                adjusted_vertex_y = vertex[1]  
+                adjusted_vertex_y = vertex[1] + low_arc
             
                 # Calculate distance between Dino and wiggle room vertex
                 distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
@@ -2200,8 +2195,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             
             for vertex in wiggle_arc5.vertices:
-                adjusted_vertex_x = vertex[0] + 3  # Offset Arc 5 vertices
-                adjusted_vertex_y = vertex[1]  
+                adjusted_vertex_x = vertex[0] + 3.2  # Offset Arc 5 vertices
+                adjusted_vertex_y = vertex[1] + reg_arc
             
                 # Calculate distance between Dino and wiggle room vertex
                 distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
@@ -2210,6 +2205,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if distance <= touch_threshold:
                     wiggle_room = True  
                     break  # Stop checking once inside
+                    
+                    
+                    
+                    
+            score_text.text = str(score) # update Score
             
             
             
@@ -2227,7 +2227,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             minutes = int(time_remaining) // 60
             seconds = int(time_remaining) % 60
             
-            # Update the timer display (assumes a Text Component named 'timer_text')
+            # Update the timer display
             timer_text.text = str(f"{minutes}:{seconds:02d}")
             
             
