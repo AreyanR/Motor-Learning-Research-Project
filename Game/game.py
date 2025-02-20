@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on February 19, 2025, at 16:27
+    on February 19, 2025, at 17:02
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -524,16 +524,16 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     trail_dots = []  # List of Circle stimuli for the trail
     trail_color = 'yellow'  # Color of the trail dots
     trail_frame_counter = 0  # Counter to control trail dot spawning
-    trail_interval = 5  # Spawn a dot every 3 frames
+    trail_interval = 5  # Spawn a dot every 5 frames
     
     
-    #Button 0 and button 2 force
+    #Button 0 and button 2 force properties
     B0ForceInNewtons = 0
     B2ForceInNewtons = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
     FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
     
-    # Thresholds for movement
+    # Thresholds for movement (force needed to do these actions)
     move_threshold = 2  # Adjust based on PSURP sensitivity
     jump_threshold = 3.0  # Adjust based on PSURP sensitivity
     
@@ -550,11 +550,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     max_x = 8 # right boundary
     respawn_position = [0, -0.3]  # Starting position for Dino
     
-    # Get the floor vertices from the Floor Controller
-    floor1_vertices = floor1.vertices  # Assuming 'floor' is a Polygon or Rect stimulus
     
-    # Calculate the floor's top and fall threshold
-    floor_top = max(v[1] for v in floor1_vertices)  # Highest point of the floor
+    
+    # Floor properties
+    
+    floor1_vertices = floor1.vertices  # Get floor1 vertices
+    floor_top = max(v[1] for v in floor1_vertices)  # Highest point of floor1
     fall_threshold = min(v[1] for v in floor1_vertices) - 0.2  # Slightly below the lowest floor point
     
     
@@ -596,7 +597,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             return B0ForceInNewtons, B2ForceInNewtons
         
         return 0, 0  # Default forces if data is invalid
-        
+    
+    
+    
     # image path for dino animation
     frame_paths = [
         "Assets/dino_frames/f1.png", "Assets/dino_frames/f2.png", 
@@ -908,7 +911,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Run 'Begin Experiment' code from Timer
     level_timer = core.Clock()  # Initialize the timer
-    time_limit = 120  # Set the time limit in seconds (e.g., 2 minutes)
+    time_limit = 120  # Set the time limit in seconds (2 minutes)
     
     
     # --- Initialize components for Routine "EndGameScreen" ---
@@ -1057,10 +1060,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     resetPSURP.tStopRefresh = tThisFlipGlobal
     thisExp.addData('resetPSURP.stopped', resetPSURP.tStop)
     # Run 'End Routine' code from code_2
-    """
+    
     ser.flush()
     ser.write("X".encode())
-    """
+    
     # clear out the data from the IO buffers (Fresh commands)
     # the "X" command puts tje PSURP into command mode
     
@@ -1184,7 +1187,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     TARE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('TARE.stopped', TARE.tStop)
     # Run 'End Routine' code from tare_code
-    """
+    
     ser.write("TAR0\n".encode())
     time.sleep(1)
     ser.write("TAR1\n".encode())
@@ -1195,7 +1198,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     time.sleep(1)
     ser.write("TAR4\n".encode())
     time.sleep(1)
-    """
+    
     
     # the tar command zeros out all of the force messurements
     # halt for one second to make sure command was processed 
@@ -1318,9 +1321,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     RUNE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('RUNE.stopped', RUNE.tStop)
     # Run 'End Routine' code from Code_RUNE
-    """
+    
     ser.write("RUNE\n".encode())
-    """
+    
     # the rune command sets the PSURP to streaming mode. (for getting vals)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if RUNE.maxDurationReached:
@@ -1879,8 +1882,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             up_pressed = False
             
             # Handle input based on the selected control method
+            
+            # Process keyboard input
             if selected_control == "Keyboard":
-                # Process keyboard input
                 keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
                 for key in keys_pressed:
                     if key.name == 'left':
@@ -1890,7 +1894,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     if key.name == 'up':
                         up_pressed = True
                         
-                        
+            # Process PSURP input            
             if selected_control == "PSURP":
                 # Read serial data
                 ser.flushInput()
@@ -1921,7 +1925,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Apply gravity to Dino's vertical speed
             dino_speed += gravity
             
-            # Check if Dino is on the floor
+            # Check if Dino is on the floor (keeps dino on top of floor)
             if is_on_floor(dino_pos) and dino_speed <= 0:  # Falling or stationary
                 dino_pos[1] = floor1_top + (dino_image.size[1] / 2) - ground_offset  # Align Dino with the floor
                 dino_speed = 0  # Reset vertical speed
@@ -2057,14 +2061,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if dino_relative_x < -0.8 or dino_relative_x > 0.8:  # Adjust bounds based on screen width
                 continueRoutine = False  # Ends the current routine
             
-            # Define a collision threshold (adjust based on the visual scale of your game)
-            # Check for collision
+            # Check for collision for meatbone
             if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
                 print("Dino ate the meatbone!")
                 meatbone_image.opacity = 0  # Make the meatbone disappear
                 meatbone_collided = True  # Prevent further collision checks
                 continueRoutine = False
             
+            
+            # Check for collision for ARCS
             for vertex in arc1_vertices:
                 # Adjust Arc 1 vertex for its X-offset (+1)
                 adjusted_vertex_x = vertex[0] + 0.3  # Move Arc 1 vertices by 1 unit to the right
@@ -2130,12 +2135,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     arc5_touched_vertices.append(vertex)
                     score += 1  # Increment score
             
-                        
-            score_text.text = str(score)
             
-            # Reset to safe at the start of each frame
+            # WIGGLE ROOM STUFF
+            
+            
+            # Reset to false at the start of each frame
             wiggle_room = False  
-            
             for vertex in wiggle_arc1.vertices:
                 adjusted_vertex_x = vertex[0] + 0.3
                 adjusted_vertex_y = vertex[1] + reg_arc 
@@ -2200,6 +2205,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if distance <= touch_threshold:
                     wiggle_room = True  
                     break  # Stop checking once inside
+                    
+                    
+                    
+                    
+            score_text.text = str(score) # update Score
             
             
             
@@ -2217,7 +2227,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             minutes = int(time_remaining) // 60
             seconds = int(time_remaining) % 60
             
-            # Update the timer display (assumes a Text Component named 'timer_text')
+            # Update the timer display
             timer_text.text = str(f"{minutes}:{seconds:02d}")
             
             
