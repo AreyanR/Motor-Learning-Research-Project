@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on February 19, 2025, at 17:03
+    on February 19, 2025, at 17:45
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -533,12 +533,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     MIN_FORCE = 0.4  # Minimum force to start movement
     FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
     
-    # Thresholds for movement (force needed to do these actions)
-    move_threshold = 2  # Adjust based on PSURP sensitivity
-    jump_threshold = 3.0  # Adjust based on PSURP sensitivity
-    
-    
-    
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
     dino_speed = 0  # Initial vertical speed
@@ -900,7 +894,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc5_touched_vertices = []
     
     
-    touch_threshold = 0.05 # touch threshold for the arcs
+    touch_threshold = 0.04 # touch threshold for the arcs
     
     meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
     
