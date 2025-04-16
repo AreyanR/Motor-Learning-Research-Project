@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on February 19, 2025, at 17:45
+    on April 16, 2025, at 14:57
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -541,7 +541,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
     min_x = -0.6  # Left boundary
-    max_x = 8 # right boundary
+    max_x = 19 # right boundary
     respawn_position = [0, -0.3]  # Starting position for Dino
     
     
@@ -633,6 +633,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     wiggle_thickness = 0.05  # Adjust thickness for all wiggle arcs
     
+    meatbone_size = [0.15, 0.09]  # Example size (width, height)
+    
     
     # Function to calculate vertices of a Rect stimulus
     def calculate_rect_vertices(rect):
@@ -650,7 +652,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Camera variables
     camera_offset_x = 0  # Tracks the camera offset to follow Dino
-    camera_speed = 0.003  # Adjust this speed as needed
+    camera_speed = 0.003  # Adjust this speed as needed 0.003
     # Background properties
     background_width = 2.0  # Width of a single background image
     background_height = 1.0
@@ -675,7 +677,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     floor1_vertices = calculate_rect_vertices(floor1)
     
     # Floor2 properties - Place it further into the map
-    floor2_x_static = 7.5  # Fixed X position where floor2 appears
+    floor2_x_static = 18.5  # Fixed X position where floor2 appears
     floor2_height = 0.3
     floor2_width = 0.5
     
@@ -704,38 +706,61 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     #arc stuff
     
-    # Arc properties
-    arc1_center = [0.3, reg_arc]
+    # Arc 1 Properties
+    arc1_x = 0.3
+    arc1_center = [arc1_x, reg_arc]
     arc1_radius = small_arc_size
     arc1_start_angle = 0
     arc1_end_angle = 180
     
     # Arc 2 Properties
-    arc2_center = [1, low_arc]  # Different position
-    arc2_radius = med_arc_size # Different radius
+    arc2_x = 1.0
+    arc2_center = [arc2_x, low_arc]
+    arc2_radius = med_arc_size
     arc2_start_angle = 0
     arc2_end_angle = 180
     
-    
     # Arc 3 Properties
-    arc3_center = [1.8, high_arc]  # Position Arc 3 further into the map
-    arc3_radius = large_arc_size # Choose a radius for Arc 3
+    arc3_x = 2.2
+    arc3_center = [arc3_x, high_arc]
+    arc3_radius = large_arc_size
     arc3_start_angle = 0
     arc3_end_angle = 180
     
-    
     # Arc 4 Properties
-    arc4_center = [2.5, low_arc]  # Position Arc 4 even further into the map
-    arc4_radius = small_arc_size  # Choose a radius for Arc 4
+    arc4_x = 3.4
+    arc4_center = [arc4_x, low_arc]
+    arc4_radius = small_arc_size
     arc4_start_angle = 0
     arc4_end_angle = 180
     
-    
     # Arc 5 Properties
-    arc5_center = [3.2, reg_arc]  # Position Arc 5 further into the map
-    arc5_radius = large_arc_size  # Choose a radius for Arc 5
+    arc5_x = 4.6
+    arc5_center = [arc5_x, reg_arc]
+    arc5_radius = large_arc_size
     arc5_start_angle = 0
     arc5_end_angle = 180
+    
+    # Arc 6 Properties
+    arc6_x = 5.8
+    arc6_center = [arc6_x, high_arc]
+    arc6_radius = med_arc_size
+    arc6_start_angle = 0
+    arc6_end_angle = 180
+    
+    # Arc 7 Properties
+    arc7_x = 7.0
+    arc7_center = [arc7_x, low_arc]
+    arc7_radius = large_arc_size
+    arc7_start_angle = 0
+    arc7_end_angle = 180
+    
+    # Arc 8 Properties
+    arc8_x = 8.5
+    arc8_center = [arc8_x, high_arc]
+    arc8_radius = med_arc_size
+    arc8_start_angle = 0
+    arc8_end_angle = 180
     
     
     
@@ -782,7 +807,30 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         x = arc5_center[0] + arc5_radius * math.cos(angle)
         y = arc5_center[1] + arc5_radius * math.sin(angle)
         arc5_vertices.append((x, y))
+        
     
+    arc6_vertices = []
+    for i in range(51):
+        angle = math.radians(arc6_start_angle + i * (arc6_end_angle - arc6_start_angle) / 50)
+        x = arc6_center[0] + arc6_radius * math.cos(angle)
+        y = arc6_center[1] + arc6_radius * math.sin(angle)
+        arc6_vertices.append((x, y))
+    
+    # Arc 7 vertices
+    arc7_vertices = []
+    for i in range(51):
+        angle = math.radians(arc7_start_angle + i * (arc7_end_angle - arc7_start_angle) / 50)
+        x = arc7_center[0] + arc7_radius * math.cos(angle)
+        y = arc7_center[1] + arc7_radius * math.sin(angle)
+        arc7_vertices.append((x, y))
+    
+    # Arc 8 vertices
+    arc8_vertices = []
+    for i in range(51):
+        angle = math.radians(arc8_start_angle + i * (arc8_end_angle - arc8_start_angle) / 50)
+        x = arc8_center[0] + arc8_radius * math.cos(angle)
+        y = arc8_center[1] + arc8_radius * math.sin(angle)
+        arc8_vertices.append((x, y))
         
     # Create the arc ShapeStim
     arc1 = ShapeStim(
@@ -838,6 +886,33 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     )
     
     
+    arc6 = ShapeStim(
+        win=win,
+        vertices=arc6_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc7 = ShapeStim(
+        win=win,
+        vertices=arc7_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc8 = ShapeStim(
+        win=win,
+        vertices=arc8_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
     def create_wiggle_arc(center, radius, thickness, color='blue', opacity=0.5):
         """Generate a thick wiggle room arc for a given arc."""
         outer_arc_vertices = []
@@ -878,6 +953,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     wiggle_arc3 = create_wiggle_arc(arc3_center, arc3_radius, wiggle_thickness)
     wiggle_arc4 = create_wiggle_arc(arc4_center, arc4_radius, wiggle_thickness)
     wiggle_arc5 = create_wiggle_arc(arc5_center, arc5_radius, wiggle_thickness)
+    wiggle_arc6 = create_wiggle_arc(arc6_center, arc6_radius, wiggle_thickness)
+    wiggle_arc7 = create_wiggle_arc(arc7_center, arc7_radius, wiggle_thickness)
+    wiggle_arc8 = create_wiggle_arc(arc8_center, arc8_radius, wiggle_thickness)
+    
     
     
     
@@ -892,6 +971,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc3_touched_vertices = []
     arc4_touched_vertices = []
     arc5_touched_vertices = []
+    arc6_touched_vertices = []
+    arc7_touched_vertices = []
+    arc8_touched_vertices = []
     
     
     touch_threshold = 0.04 # touch threshold for the arcs
@@ -2018,6 +2100,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             arc5.pos = [arc5_center[0] - camera_offset_x, arc5_center[1]]
             wiggle_arc5.pos = arc5.pos  # Keep wiggle room on top
             
+            arc6.pos = [arc6_center[0] - camera_offset_x, arc6_center[1]]
+            wiggle_arc6.pos = arc6.pos
+            
+            # Update Arc 7 Position
+            arc7.pos = [arc7_center[0] - camera_offset_x, arc7_center[1]]
+            wiggle_arc7.pos = arc7.pos
+            
+            # Update Arc 8 Position
+            arc8.pos = [arc8_center[0] - camera_offset_x, arc8_center[1]]
+            wiggle_arc8.pos = arc8.pos
+            
             
             
             # Draw the backgrounds and floors
@@ -2030,13 +2123,19 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             wiggle_arc3.draw()
             wiggle_arc4.draw()
             wiggle_arc5.draw()
+            wiggle_arc6.draw()
+            wiggle_arc7.draw()
+            wiggle_arc8.draw()
+            
             
             arc1.draw()
             arc2.draw()
             arc3.draw()
             arc4.draw()
             arc5.draw()
-            
+            arc6.draw()
+            arc7.draw()
+            arc8.draw()
             
             # Draw the trail dots
             for dot in trail_dots:
@@ -2066,7 +2165,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Check for collision for ARCS
             for vertex in arc1_vertices:
                 # Adjust Arc 1 vertex for its X-offset (+1)
-                adjusted_vertex_x = vertex[0] + 0.3  # Move Arc 1 vertices by 1 unit to the right
+                adjusted_vertex_x = vertex[0] + arc1_x   # Move Arc 1 vertices by 1 unit to the right
                 adjusted_vertex_y = vertex[1] + reg_arc # Y remains unchanged, apply the same adjustment as Arc 2 if needed
             
                 # Calculate distance between Dino and the adjusted vertex of Arc 1
@@ -2080,7 +2179,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             for vertex in arc2_vertices:
                 # Adjust Arc 2 vertex for its X-offset (+2)
-                adjusted_vertex_x = vertex[0] + 1  # Move Arc 2 vertices by 2 units to the right
+                adjusted_vertex_x = vertex[0] + arc2_x   # Move Arc 2 vertices by 2 units to the right
                 adjusted_vertex_y = vertex[1] + low_arc # Y remains unchanged
                 
                 # Calculate distance between Dino and the adjusted vertex of Arc 2
@@ -2094,7 +2193,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     
             for vertex in arc3_vertices:
                 # Adjust Arc 3 vertex for its static X-offset
-                adjusted_vertex_x = vertex[0] + 1.8  # Offset Arc 3 vertices by 3.5 units to the right
+                adjusted_vertex_x = vertex[0] + arc3_x   # Offset Arc 3 vertices by 3.5 units to the right
                 adjusted_vertex_y = vertex[1] + high_arc  # Offset Arc 3 vertices by -0.2 units vertically
             
                 # Calculate distance between Dino and the adjusted vertex of Arc 3
@@ -2106,7 +2205,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     score += 1  # Increment the score for Arc 3
                     
             for vertex in arc4_vertices:
-                adjusted_vertex_x = vertex[0] + 2.5  # Offset Arc 4 vertices
+                adjusted_vertex_x = vertex[0] + arc4_x   # Offset Arc 4 vertices
                 adjusted_vertex_y = vertex[1] + low_arc  # Y position remains the same
             
                 # Calculate distance between Dino and Arc 4
@@ -2118,7 +2217,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     score += 1  # Increment score
             
             for vertex in arc5_vertices:
-                adjusted_vertex_x = vertex[0] + 3.2  # Offset Arc 5 vertices
+                adjusted_vertex_x = vertex[0] + arc5_x   # Offset Arc 5 vertices
                 adjusted_vertex_y = vertex[1] + reg_arc  # Y position remains the same
             
                 # Calculate distance between Dino and Arc 5
@@ -2129,6 +2228,31 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     arc5_touched_vertices.append(vertex)
                     score += 1  # Increment score
             
+            for vertex in arc6_vertices:
+                adjusted_vertex_x = vertex[0] + arc6_x 
+                adjusted_vertex_y = vertex[1] + high_arc
+                distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                if distance <= touch_threshold and vertex not in arc6_touched_vertices:
+                    arc6_touched_vertices.append(vertex)
+                    score += 1
+            
+            # Arc 7 touch detection
+            for vertex in arc7_vertices:
+                adjusted_vertex_x = vertex[0] + arc7_x 
+                adjusted_vertex_y = vertex[1] + arc7_center[1]
+                distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                if distance <= touch_threshold and vertex not in arc7_touched_vertices:
+                    arc7_touched_vertices.append(vertex)
+                    score += 1
+            
+            # Arc 8 touch detection
+            for vertex in arc8_vertices:
+                adjusted_vertex_x = vertex[0] + arc8_x 
+                adjusted_vertex_y = vertex[1] + arc8_center[1]
+                distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                if distance <= touch_threshold and vertex not in arc8_touched_vertices:
+                    arc8_touched_vertices.append(vertex)
+                    score += 1
             
             # WIGGLE ROOM STUFF
             
@@ -2136,7 +2260,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Reset to false at the start of each frame
             wiggle_room = False  
             for vertex in wiggle_arc1.vertices:
-                adjusted_vertex_x = vertex[0] + 0.3
+                adjusted_vertex_x = vertex[0] + arc1_x 
                 adjusted_vertex_y = vertex[1] + reg_arc 
             
                 # Calculate distance between Dino and wiggle room vertex
@@ -2149,7 +2273,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     
                     
             for vertex in wiggle_arc2.vertices:
-                adjusted_vertex_x = vertex[0] + 1
+                adjusted_vertex_x = vertex[0] + arc2_x 
                 adjusted_vertex_y = vertex[1] + low_arc
             
                 # Calculate distance between Dino and wiggle room vertex
@@ -2163,7 +2287,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     
                     
             for vertex in wiggle_arc3.vertices:
-                adjusted_vertex_x = vertex[0] + 1.8
+                adjusted_vertex_x = vertex[0] + arc3_x 
                 adjusted_vertex_y = vertex[1] + high_arc
             
                 # Calculate distance between Dino and wiggle room vertex
@@ -2176,7 +2300,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             
             for vertex in wiggle_arc4.vertices:
-                adjusted_vertex_x = vertex[0] + 2.5  # Offset Arc 4 vertices
+                adjusted_vertex_x = vertex[0] + arc4_x   # Offset Arc 4 vertices
                 adjusted_vertex_y = vertex[1] + low_arc
             
                 # Calculate distance between Dino and wiggle room vertex
@@ -2189,7 +2313,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             
             for vertex in wiggle_arc5.vertices:
-                adjusted_vertex_x = vertex[0] + 3.2  # Offset Arc 5 vertices
+                adjusted_vertex_x = vertex[0] + arc5_x   # Offset Arc 5 vertices
                 adjusted_vertex_y = vertex[1] + reg_arc
             
                 # Calculate distance between Dino and wiggle room vertex
@@ -2200,7 +2324,31 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     wiggle_room = True  
                     break  # Stop checking once inside
                     
-                    
+            for vertex in wiggle_arc6.vertices:
+                adjusted_vertex_x = vertex[0] + arc6_x 
+                adjusted_vertex_y = vertex[1] + high_arc
+                distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                if distance <= touch_threshold:
+                    wiggle_room = True
+                    break
+            # Arc 7 wiggle room
+            for vertex in wiggle_arc7.vertices:
+                adjusted_vertex_x = vertex[0] + arc7_x 
+                adjusted_vertex_y = vertex[1] + arc7_center[1]
+                distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                if distance <= touch_threshold:
+                    wiggle_room = True
+                    break
+            
+            # Arc 8 wiggle room
+            for vertex in wiggle_arc8.vertices:
+                adjusted_vertex_x = vertex[0] + arc8_x 
+                adjusted_vertex_y = vertex[1] + arc8_center[1]
+                distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                if distance <= touch_threshold:
+                    wiggle_room = True
+                    break
+            
                     
                     
             score_text.text = str(score) # update Score
@@ -2269,9 +2417,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         trail_positions.clear()  # Remove all stored positions
         # Run 'End Routine' code from GoalController
         global total_touched_vertices, total_possible_vertices
-        total_touched_vertices = len(arc1_touched_vertices) + len(arc2_touched_vertices) + len(arc3_touched_vertices) + len(arc4_touched_vertices) + len(arc5_touched_vertices)
-        total_possible_vertices = len(arc1_vertices) + len(arc2_vertices) + len(arc3_vertices) + len(arc4_vertices) + len(arc5_vertices)
+        total_touched_vertices = (
+            len(arc1_touched_vertices) + len(arc2_touched_vertices) + len(arc3_touched_vertices) +
+            len(arc4_touched_vertices) + len(arc5_touched_vertices) + len(arc6_touched_vertices) +
+            len(arc7_touched_vertices) + len(arc8_touched_vertices)
+        )
         
+        total_possible_vertices = (
+            len(arc1_vertices) + len(arc2_vertices) + len(arc3_vertices) +
+            len(arc4_vertices) + len(arc5_vertices) + len(arc6_vertices) +
+            len(arc7_vertices) + len(arc8_vertices)
+        )
         
         
         # the Routine "MainGame" was not non-slip safe, so reset the non-slip timer
