@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 16, 2025, at 14:57
+    on April 17, 2025, at 16:50
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -247,6 +247,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceManager.addDevice(
             deviceClass='keyboard', deviceName='defaultKeyboard', backend='iohub'
         )
+    # create speaker 'eat_sound'
+    deviceManager.addDevice(
+        deviceName='eat_sound',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
     # return True if completed successfully
     return True
 
@@ -652,7 +658,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Camera variables
     camera_offset_x = 0  # Tracks the camera offset to follow Dino
-    camera_speed = 0.003  # Adjust this speed as needed 0.003
+    camera_speed = 0.007  # Adjust this speed as needed 0.003
     # Background properties
     background_width = 2.0  # Width of a single background image
     background_height = 1.0
@@ -989,6 +995,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     level_timer = core.Clock()  # Initialize the timer
     time_limit = 120  # Set the time limit in seconds (2 minutes)
     
+    eat_sound = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='eat_sound',    name='eat_sound'
+    )
+    eat_sound.setVolume(1.0)
     
     # --- Initialize components for Routine "EndGameScreen" ---
     end_score_text = visual.TextStim(win=win, name='end_score_text',
@@ -1777,7 +1791,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine MainGame
         MainGame = data.Routine(
             name='MainGame',
-            components=[dino_image, floor1, floor2, meatbone_image, score_text, timer_text],
+            components=[dino_image, floor1, floor2, meatbone_image, score_text, timer_text, eat_sound],
         )
         MainGame.status = NOT_STARTED
         continueRoutine = True
@@ -1810,6 +1824,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         level_timer.reset()  # Reset the timer at the start of the MainGame routine
         
         
+        eat_sound.setSound('Assets/sounds/eat.mp3', hamming=True)
+        eat_sound.setVolume(1.0, log=False)
+        eat_sound.seek(0)
         # store start times for MainGame
         MainGame.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         MainGame.tStart = globalClock.getTime(format='float')
@@ -2159,6 +2176,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 print("Dino ate the meatbone!")
                 meatbone_image.opacity = 0  # Make the meatbone disappear
                 meatbone_collided = True  # Prevent further collision checks
+                eat_sound.play()
                 continueRoutine = False
             
             
@@ -2373,6 +2391,19 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             timer_text.text = str(f"{minutes}:{seconds:02d}")
             
             
+            # *eat_sound* updates
+            
+            # if eat_sound is stopping this frame...
+            if eat_sound.status == STARTED:
+                if bool(False) or eat_sound.isFinished:
+                    # keep track of stop time/frame for later
+                    eat_sound.tStop = t  # not accounting for scr refresh
+                    eat_sound.tStopRefresh = tThisFlipGlobal  # on global time
+                    eat_sound.frameNStop = frameN  # exact frame index
+                    # update status
+                    eat_sound.status = FINISHED
+                    eat_sound.stop()
+            
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
                 thisExp.status = FINISHED
@@ -2385,7 +2416,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     thisExp=thisExp, 
                     win=win, 
                     timers=[routineTimer], 
-                    playbackComponents=[]
+                    playbackComponents=[eat_sound]
                 )
                 # skip the frame we paused on
                 continue
