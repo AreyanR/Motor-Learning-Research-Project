@@ -142,280 +142,6 @@
         <Param val="code_trial" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
-    <Routine name="MainGame">
-      <RoutineSettingsComponent name="MainGame" plugin="None">
-        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
-        <Param val="" valType="str" updates="None" name="backgroundImg"/>
-        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
-        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
-        <Param val="" valType="str" updates="constant" name="desc"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
-        <Param val="MainGame" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="constant" name="skipIf"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
-      </RoutineSettingsComponent>
-      <ImageComponent name="dino_image" plugin="None">
-        <Param val="center" valType="str" updates="constant" name="anchor"/>
-        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
-        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
-        <Param val="Assets/dino.png" valType="file" updates="constant" name="image"/>
-        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="" valType="str" updates="constant" name="mask"/>
-        <Param val="dino_image" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0,0)" valType="list" updates="constant" name="pos"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.2, 0.2)" valType="list" updates="constant" name="size"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
-      </ImageComponent>
-      <PolygonComponent name="floor1" plugin="None">
-        <Param val="center" valType="str" updates="constant" name="anchor"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="-1.0000, -1.0000, -1.0000" valType="color" updates="constant" name="fillColor"/>
-        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="-1.0000, -1.0000, -1.0000" valType="color" updates="constant" name="lineColor"/>
-        <Param val="1" valType="num" updates="constant" name="lineWidth"/>
-        <Param val="4" valType="int" updates="constant" name="nVertices"/>
-        <Param val="floor1" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-.5,-.5)" valType="list" updates="constant" name="pos"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="rectangle" valType="str" updates="None" name="shape"/>
-        <Param val="(.5,0.3)" valType="list" updates="constant" name="size"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
-        <Param val="" valType="list" updates="constant" name="vertices"/>
-      </PolygonComponent>
-      <PolygonComponent name="floor2" plugin="None">
-        <Param val="center" valType="str" updates="constant" name="anchor"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="-1.0000, -1.0000, -1.0000" valType="color" updates="constant" name="fillColor"/>
-        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="-1.0000, -1.0000, -1.0000" valType="color" updates="constant" name="lineColor"/>
-        <Param val="1" valType="num" updates="constant" name="lineWidth"/>
-        <Param val="4" valType="int" updates="constant" name="nVertices"/>
-        <Param val="floor2" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0,-.5)" valType="list" updates="constant" name="pos"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="rectangle" valType="str" updates="None" name="shape"/>
-        <Param val="(.5,0.3)" valType="list" updates="constant" name="size"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
-        <Param val="" valType="list" updates="constant" name="vertices"/>
-      </PolygonComponent>
-      <ImageComponent name="meatbone_image" plugin="None">
-        <Param val="center" valType="str" updates="constant" name="anchor"/>
-        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
-        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
-        <Param val="Assets/meat_bone.png" valType="file" updates="constant" name="image"/>
-        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="" valType="str" updates="constant" name="mask"/>
-        <Param val="meatbone_image" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.5, 0.5)" valType="list" updates="constant" name="size"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
-      </ImageComponent>
-      <TextComponent name="score_text" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Arial" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.08" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="score_text" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0.55, 0.45)" valType="list" updates="constant" name="pos"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Score: 0" valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
-      <TextComponent name="timer_text" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Arial" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.08" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="timer_text" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.55,0.45)" valType="list" updates="constant" name="pos"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="00 : 00" valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
-      <CodeComponent name="DinoMovement" plugin="None">
-        <Param val="Base71Lookup = &quot;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~&quot;" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="from psychopy.hardware import keyboard&amp;#10;from psychopy.visual import Rect&amp;#10;import time&amp;#10;&amp;#10;import serial&amp;#10;from psychopy.visual import Circle&amp;#10;&amp;#10;# Initialize the Keyboard&amp;#10;kb = keyboard.Keyboard()&amp;#10;&amp;#10;#PSURP Inits&amp;#10;&quot;&quot;&quot;&amp;#10;# Initialize the serial connection for PSURP&amp;#10;ser = serial.Serial(&quot;COM4&quot;, 230400, timeout=0.1)  # Replace &quot;COM4&quot; with your port&amp;#10;ser.flush()&amp;#10;ser.write(&quot;X&quot;.encode())  # Initialize PSURP&amp;#10;ser.write(&quot;RUNE\n&quot;.encode())  # Enter streaming mode&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;# Trail settings&amp;#10;trail_positions = []  # Stores Dino's previous positions&amp;#10;trail_length = 35  # Maximum number of trail dots&amp;#10;trail_dot_size = 0.005  # Size of each dot for trail &amp;#10;trail_dots = []  # List of Circle stimuli for the trail&amp;#10;trail_color = 'yellow'  # Color of the trail dots&amp;#10;trail_frame_counter = 0  # Counter to control trail dot spawning&amp;#10;trail_interval = 5  # Spawn a dot every 5 frames&amp;#10;&amp;#10;&amp;#10;#Button 0 and button 2 force properties&amp;#10;B0ForceInNewtons = 0&amp;#10;B2ForceInNewtons = 0&amp;#10;MIN_FORCE = 0.4  # Minimum force to start movement&amp;#10;FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement&amp;#10;&amp;#10;# Dino movement variables&amp;#10;dino_pos = [0, -0.3]  # Starting position [x, y]&amp;#10;dino_speed = 0  # Initial vertical speed&amp;#10;gravity = -0.0003  # Downward acceleration 0.00006&amp;#10;jump_speed = 0.005  # Jumping speed&amp;#10;move_speed = 0.01  # Horizontal movement speed&amp;#10;ground_offset = 0.03  # Offset to avoid sinking into the ground visually&amp;#10;min_x = -0.6  # Left boundary&amp;#10;max_x = 19 # right boundary&amp;#10;respawn_position = [0, -0.3]  # Starting position for Dino&amp;#10;&amp;#10;&amp;#10;&amp;#10;# Floor properties&amp;#10;&amp;#10;floor1_vertices = floor1.vertices  # Get floor1 vertices&amp;#10;floor_top = max(v[1] for v in floor1_vertices)  # Highest point of floor1&amp;#10;fall_threshold = min(v[1] for v in floor1_vertices) - 0.2  # Slightly below the lowest floor point&amp;#10;&amp;#10;&amp;#10;# Function to check if Dino is on the floor&amp;#10;def is_on_floor(dino_pos):&amp;#10;    &quot;&quot;&quot;Check if Dino's bottom is within the bounds of floor1 or floor2.&quot;&quot;&quot;&amp;#10;    dino_bottom = dino_pos[1] - (dino_image.size[1] / 2)  # Dino's bottom Y-position&amp;#10;&amp;#10;    # Floor1 bounds&amp;#10;    x_min1 = min(v[0] for v in floor1_vertices)&amp;#10;    x_max1 = max(v[0] for v in floor1_vertices)&amp;#10;    &amp;#10;    # Floor2 bounds&amp;#10;    x_min2 = min(v[0] for v in floor2_vertices)&amp;#10;    x_max2 = max(v[0] for v in floor2_vertices)&amp;#10;&amp;#10;    # Check floor1 or floor2&amp;#10;    on_floor1 = x_min1 &lt;= dino_pos[0] &lt;= x_max1 and dino_bottom &lt;= floor1_top&amp;#10;    on_floor2 = x_min2 &lt;= dino_pos[0] &lt;= x_max2 and dino_bottom &lt;= floor2_top&amp;#10;&amp;#10;    return on_floor1 or on_floor2&amp;#10;    &amp;#10;#calculates the psurp forces&amp;#10;def calculate_psurp_forces(serial_data):&amp;#10;    &quot;&quot;&quot;Extract and calculate forces from PSURP serial data.&quot;&quot;&quot;&amp;#10;    if len(serial_data.decode()) == 12:&amp;#10;        output = serial_data.decode()&amp;#10;        &amp;#10;        # Calculate forces&amp;#10;        B0HighByte = Base71Lookup.index(output[0])&amp;#10;        B0LowByte = Base71Lookup.index(output[1])&amp;#10;        B2HighByte = Base71Lookup.index(output[4])&amp;#10;        B2LowByte = Base71Lookup.index(output[5])&amp;#10;        &amp;#10;        # Forces in Newtons&amp;#10;        B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098&amp;#10;        B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098&amp;#10;        &amp;#10;        return B0ForceInNewtons, B2ForceInNewtons&amp;#10;    &amp;#10;    return 0, 0  # Default forces if data is invalid&amp;#10;&amp;#10;&amp;#10;&amp;#10;# image path for dino animation&amp;#10;frame_paths = [&amp;#10;    &quot;Assets/dino_frames/f1.png&quot;, &quot;Assets/dino_frames/f2.png&quot;, &amp;#10;    &quot;Assets/dino_frames/f3.png&quot;, &quot;Assets/dino_frames/f4.png&quot;, &amp;#10;    &quot;Assets/dino_frames/f5.png&quot;, &quot;Assets/dino_frames/f6.png&quot;, &amp;#10;    &quot;Assets/dino_frames/f7.png&quot;, &quot;Assets/dino_frames/f8.png&quot;, &amp;#10;    &quot;Assets/dino_frames/f9.png&quot;, &quot;Assets/dino_frames/f10.png&quot;, &amp;#10;    &quot;Assets/dino_frames/f11.png&quot;, &quot;Assets/dino_frames/f12.png&quot;&amp;#10;]&amp;#10;&amp;#10;&amp;#10;&amp;#10;frame_index = 0  # Start with the first frame&amp;#10;frame_index_update_counter = 0  # Counter to manage animation speed&amp;#10;total_frames = len(frame_paths)  # Total number of frames in the animation&amp;#10;&amp;#10;# Initialize the Dino's first frame&amp;#10;dino_image.image = frame_paths[frame_index]&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="dino_pos = [0, -0.3]  # Reset Dino's position&amp;#10;dino_speed = 0  # Reset vertical speed&amp;#10;# Initialize the trail dots&amp;#10;trail_dots = [&amp;#10;    Circle(win, radius=trail_dot_size, fillColor=trail_color, lineColor=None, pos=[-1, -1])&amp;#10;    for _ in range(trail_length)&amp;#10;]&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="&amp;#10;# Initialize key state flags&amp;#10;left_pressed = False&amp;#10;right_pressed = False&amp;#10;up_pressed = False&amp;#10;&amp;#10;# Handle input based on the selected control method&amp;#10;&amp;#10;# Process keyboard input&amp;#10;if selected_control == &quot;Keyboard&quot;:&amp;#10;    keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)&amp;#10;    for key in keys_pressed:&amp;#10;        if key.name == 'left':&amp;#10;            left_pressed = True&amp;#10;        if key.name == 'right':&amp;#10;            right_pressed = True&amp;#10;        if key.name == 'up':&amp;#10;            up_pressed = True&amp;#10;            &amp;#10;# Process PSURP input            &amp;#10;if selected_control == &quot;PSURP&quot;:&amp;#10;    # Read serial data&amp;#10;    ser.flushInput()&amp;#10;    strSerialData = ser.readline()&amp;#10;    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)&amp;#10;&amp;#10;    # Apply difficulty-specific movement&amp;#10;    if selected_diff == &quot;1&quot;:&amp;#10;        # Constant movement for Easy mode&amp;#10;        if B2ForceInNewtons &gt; MIN_FORCE and dino_pos[0] &lt; max_x:&amp;#10;            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)&amp;#10;            dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]  # Face right&amp;#10;&amp;#10;    elif selected_diff == &quot;2&quot;:&amp;#10;        # Proportional movement for Hard mode (current implementation)&amp;#10;        if B2ForceInNewtons &gt; MIN_FORCE and dino_pos[0] &lt; max_x:&amp;#10;            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER&amp;#10;            dino_pos[0] += move_amount  # Movement based on force&amp;#10;            dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]  # Face right&amp;#10;&amp;#10;    # Jump logic remains the same for both difficulties&amp;#10;    if B0ForceInNewtons &gt; MIN_FORCE:&amp;#10;        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force&amp;#10;&amp;#10;&amp;#10;            &amp;#10; &amp;#10;# Apply gravity to Dino's vertical speed&amp;#10;dino_speed += gravity&amp;#10;&amp;#10;# Check if Dino is on the floor (keeps dino on top of floor)&amp;#10;if is_on_floor(dino_pos) and dino_speed &lt;= 0:  # Falling or stationary&amp;#10;    dino_pos[1] = floor1_top + (dino_image.size[1] / 2) - ground_offset  # Align Dino with the floor&amp;#10;    dino_speed = 0  # Reset vertical speed&amp;#10;&amp;#10;# Respawn if Dino falls below the floor threshold&amp;#10;if dino_pos[1] &lt; fall_threshold:&amp;#10;    continueRoutine = False  # Stop the MainGame routine&amp;#10;    &amp;#10;# Jumping logic: Allow jump whenever the 'up' key is pressed&amp;#10;if up_pressed:  # Check if the up key is pressed&amp;#10;    dino_speed = jump_speed  # Apply upward movement&amp;#10;&amp;#10;# Update Dino's vertical position&amp;#10;dino_pos[1] += dino_speed&amp;#10;&amp;#10;# Continuous horizontal movement&amp;#10;if left_pressed and dino_pos[0] &gt; min_x:&amp;#10;    dino_pos[0] -= move_speed  # Move Dino to the left&amp;#10;    dino_image.size = [-1 * abs(dino_image.size[0]), dino_image.size[1]]&amp;#10;&amp;#10;if right_pressed and dino_pos[0] &lt; max_x:&amp;#10;    dino_pos[0] += move_speed  # Move Dino to the right&amp;#10;    dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]  # Reset Dino to face right&amp;#10;&amp;#10;# Update Dino's position&amp;#10;# dino_image.pos = dino_pos  # Use both X and Y values of dino_pos&amp;#10;dino_image.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]&amp;#10;&amp;#10;# Increment the frame counter for trail updates&amp;#10;trail_frame_counter += 1&amp;#10;&amp;#10;# Check if it's time to spawn a new dot&amp;#10;if trail_frame_counter &gt;= trail_interval:&amp;#10;    if len(trail_positions) &gt;= trail_length:&amp;#10;        trail_positions.pop(0)  # Remove the oldest position if trail is full&amp;#10;&amp;#10;    # Add Dino's current position to the trail&amp;#10;    trail_positions.append(dino_pos[:])  # Add a copy of Dino's current position&amp;#10;&amp;#10;    trail_frame_counter = 0  # Reset the counter&amp;#10;&amp;#10;# Update the trail dots' positions&amp;#10;for i, pos in enumerate(trail_positions):&amp;#10;    trail_dots[i].pos = [pos[0] - camera_offset_x, pos[1]]  # Adjust for camera offset&amp;#10;&amp;#10;&amp;#10;# Update the Dino's animation&amp;#10;if (frame_index_update_counter % 4) == 0:  # Adjust 4 to control animation speed&amp;#10;    dino_image.image = frame_paths[frame_index]  # Update the current frame&amp;#10;&amp;#10;    # Advance to the next frame&amp;#10;    frame_index += 1&amp;#10;    if frame_index &gt;= total_frames:&amp;#10;        frame_index = 0  # Loop back to the first frame&amp;#10;&amp;#10;&amp;#10;&amp;#10;# Increment the animation frame counter&amp;#10;frame_index_update_counter += 1&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;keys = psychoJS.eventManager.getKeys();&amp;#10;if (_pj.in_es6(&quot;right&quot;, keys)) {&amp;#10;    trex.pos += [5, 0];&amp;#10;}&amp;#10;if (_pj.in_es6(&quot;left&quot;, keys)) {&amp;#10;    trex.pos -= [5, 0];&amp;#10;}&amp;#10;if ((_pj.in_es6(&quot;up&quot;, keys) &amp;&amp; (trex.pos[1] === (- 150)))) {&amp;#10;    trex.pos += [0, 200];&amp;#10;}&amp;#10;if ((trex.pos[1] &gt; (- 150))) {&amp;#10;    trex.pos -= [0, 10];&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="&quot;&quot;&quot;&amp;#10;ser.flush()&amp;#10;ser.write(&quot;X&quot;.encode())  # Exit command mode&amp;#10;ser.close()&amp;#10;&quot;&quot;&quot;" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="dino_pos = [-0.5, -0.3]  # Reset Dino's position&amp;#10;trail_positions.clear()  # Remove all stored positions" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="DinoMovement" valType="code" updates="None" name="name"/>
-      </CodeComponent>
-      <CodeComponent name="worldController" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="from psychopy.visual import Rect, ImageStim, ShapeStim&amp;#10;import math&amp;#10;&amp;#10;dirt_texture = 'Assets/ground1.png'&amp;#10;&amp;#10;#height factors for arcs (Y position)&amp;#10;low_arc = -0.2  &amp;#10;reg_arc = 0&amp;#10;high_arc = 0.05&amp;#10;&amp;#10;small_arc_size = 0.2  # Smallest arc radius&amp;#10;med_arc_size = 0.27  # Medium arc radius&amp;#10;large_arc_size = 0.35  # Largest arc radius&amp;#10;&amp;#10;wiggle_thickness = 0.05  # Adjust thickness for all wiggle arcs&amp;#10;&amp;#10;meatbone_size = [0.15, 0.09]  # Example size (width, height)&amp;#10;&amp;#10;&amp;#10;# Function to calculate vertices of a Rect stimulus&amp;#10;def calculate_rect_vertices(rect):&amp;#10;    &quot;&quot;&quot;Calculate the vertices of a Rect stimulus.&quot;&quot;&quot;&amp;#10;    half_width = rect.width / 2&amp;#10;    half_height = rect.height / 2&amp;#10;    center_x, center_y = rect.pos&amp;#10;    vertices = [&amp;#10;        [center_x - half_width, center_y - half_height],  # Bottom-left&amp;#10;        [center_x + half_width, center_y - half_height],  # Bottom-right&amp;#10;        [center_x + half_width, center_y + half_height],  # Top-right&amp;#10;        [center_x - half_width, center_y + half_height],  # Top-left&amp;#10;    ]&amp;#10;    return vertices&amp;#10;&amp;#10;# Camera variables&amp;#10;camera_offset_x = 0  # Tracks the camera offset to follow Dino&amp;#10;camera_speed = 0.007  # Adjust this speed as needed 0.003&amp;#10;# Background properties&amp;#10;background_width = 2.0  # Width of a single background image&amp;#10;background_height = 1.0&amp;#10;background_image = 'Assets/7.png'  # Path to your custom background image&amp;#10;&amp;#10;# Create two background images for seamless scrolling&amp;#10;background1 = ImageStim(win, image=background_image, size=[background_width, background_height], pos=[0, 0])&amp;#10;background2 = ImageStim(win, image=background_image, size=[background_width, background_height], pos=[background_width, 0])&amp;#10;&amp;#10;# Floor1 properties&amp;#10;floor1_height = 0.3&amp;#10;floor1_width = 0.5&amp;#10;floor1_pos = [0, -0.5]&amp;#10;&amp;#10;floor1 = visual.ImageStim(&amp;#10;    win=win,&amp;#10;    image=dirt_texture,&amp;#10;    size=(floor1_width, floor1_height),  # Set the size to match the floor dimensions&amp;#10;    pos=floor1_pos,&amp;#10;    interpolate=True&amp;#10;)&amp;#10;floor1_vertices = calculate_rect_vertices(floor1)&amp;#10;&amp;#10;# Floor2 properties - Place it further into the map&amp;#10;floor2_x_static = 18.5  # Fixed X position where floor2 appears&amp;#10;floor2_height = 0.3&amp;#10;floor2_width = 0.5&amp;#10;&amp;#10;floor2 = visual.ImageStim(&amp;#10;    win=win,&amp;#10;    image=dirt_texture,&amp;#10;    size=(floor2_width, floor2_height),  # Set the size to match the floor dimensions&amp;#10;    pos=[floor2_x_static, -0.5],  # Position of floor2&amp;#10;    interpolate=True&amp;#10;)&amp;#10;floor2_vertices = calculate_rect_vertices(floor2)&amp;#10;&amp;#10;&amp;#10;# Floor thresholds&amp;#10;floor1_top = max(v[1] for v in floor1_vertices)&amp;#10;floor2_top = max(v[1] for v in floor2_vertices)&amp;#10;&amp;#10;&amp;#10;&amp;#10;#meat bone&amp;#10;&amp;#10;meatbone_size = [0.12, 0.06]  # Example size (width, height)&amp;#10;meatbone_image.size = meatbone_size&amp;#10;offset = 0.01  # Adjust to align the meatbone properly with floor2&amp;#10;&amp;#10;&amp;#10;#arc stuff&amp;#10;&amp;#10;# Arc 1 Properties&amp;#10;arc1_x = 0.3&amp;#10;arc1_center = [arc1_x, reg_arc]&amp;#10;arc1_radius = small_arc_size&amp;#10;arc1_start_angle = 0&amp;#10;arc1_end_angle = 180&amp;#10;&amp;#10;# Arc 2 Properties&amp;#10;arc2_x = 1.0&amp;#10;arc2_center = [arc2_x, low_arc]&amp;#10;arc2_radius = med_arc_size&amp;#10;arc2_start_angle = 0&amp;#10;arc2_end_angle = 180&amp;#10;&amp;#10;# Arc 3 Properties&amp;#10;arc3_x = 2.2&amp;#10;arc3_center = [arc3_x, high_arc]&amp;#10;arc3_radius = large_arc_size&amp;#10;arc3_start_angle = 0&amp;#10;arc3_end_angle = 180&amp;#10;&amp;#10;# Arc 4 Properties&amp;#10;arc4_x = 3.4&amp;#10;arc4_center = [arc4_x, low_arc]&amp;#10;arc4_radius = small_arc_size&amp;#10;arc4_start_angle = 0&amp;#10;arc4_end_angle = 180&amp;#10;&amp;#10;# Arc 5 Properties&amp;#10;arc5_x = 4.6&amp;#10;arc5_center = [arc5_x, reg_arc]&amp;#10;arc5_radius = large_arc_size&amp;#10;arc5_start_angle = 0&amp;#10;arc5_end_angle = 180&amp;#10;&amp;#10;# Arc 6 Properties&amp;#10;arc6_x = 5.8&amp;#10;arc6_center = [arc6_x, high_arc]&amp;#10;arc6_radius = med_arc_size&amp;#10;arc6_start_angle = 0&amp;#10;arc6_end_angle = 180&amp;#10;&amp;#10;# Arc 7 Properties&amp;#10;arc7_x = 7.0&amp;#10;arc7_center = [arc7_x, low_arc]&amp;#10;arc7_radius = large_arc_size&amp;#10;arc7_start_angle = 0&amp;#10;arc7_end_angle = 180&amp;#10;&amp;#10;# Arc 8 Properties&amp;#10;arc8_x = 8.5&amp;#10;arc8_center = [arc8_x, high_arc]&amp;#10;arc8_radius = med_arc_size&amp;#10;arc8_start_angle = 0&amp;#10;arc8_end_angle = 180&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;# Generate vertices for Arc 1&amp;#10;arc1_vertices = []&amp;#10;for i in range(51):  # 50 segments for smoothness&amp;#10;    angle = math.radians(arc1_start_angle + i * (arc1_end_angle - arc1_start_angle) / 50)&amp;#10;    x = arc1_center[0] + arc1_radius * math.cos(angle)&amp;#10;    y = arc1_center[1] + arc1_radius * math.sin(angle)&amp;#10;    arc1_vertices.append((x, y))&amp;#10;&amp;#10;# Generate vertices for Arc 2&amp;#10;arc2_vertices = []&amp;#10;for i in range(51):  # 50 segments for smoothness&amp;#10;    angle = math.radians(arc2_start_angle + i * (arc2_end_angle - arc2_start_angle) / 50)&amp;#10;    x = arc2_center[0] + arc2_radius * math.cos(angle)&amp;#10;    y = arc2_center[1] + arc2_radius * math.sin(angle)&amp;#10;    arc2_vertices.append((x, y))&amp;#10;    &amp;#10;    &amp;#10;&amp;#10;# Generate vertices for Arc 3&amp;#10;arc3_vertices = []&amp;#10;for i in range(51):  # 50 segments for smoothness&amp;#10;    angle = math.radians(arc3_start_angle + i * (arc3_end_angle - arc3_start_angle) / 50)&amp;#10;    x = arc3_center[0] + arc3_radius * math.cos(angle)&amp;#10;    y = arc3_center[1] + arc3_radius * math.sin(angle)&amp;#10;    arc3_vertices.append((x, y))&amp;#10;&amp;#10;# Generate vertices for Arc 4&amp;#10;arc4_vertices = []&amp;#10;for i in range(51):  # 50 segments for smoothness&amp;#10;    angle = math.radians(arc4_start_angle + i * (arc4_end_angle - arc4_start_angle) / 50)&amp;#10;    x = arc4_center[0] + arc4_radius * math.cos(angle)&amp;#10;    y = arc4_center[1] + arc4_radius * math.sin(angle)&amp;#10;    arc4_vertices.append((x, y))&amp;#10;&amp;#10;&amp;#10;# Generate vertices for Arc 5&amp;#10;arc5_vertices = []&amp;#10;for i in range(51):  # 50 segments for smoothness&amp;#10;    angle = math.radians(arc5_start_angle + i * (arc5_end_angle - arc5_start_angle) / 50)&amp;#10;    x = arc5_center[0] + arc5_radius * math.cos(angle)&amp;#10;    y = arc5_center[1] + arc5_radius * math.sin(angle)&amp;#10;    arc5_vertices.append((x, y))&amp;#10;    &amp;#10;&amp;#10;arc6_vertices = []&amp;#10;for i in range(51):&amp;#10;    angle = math.radians(arc6_start_angle + i * (arc6_end_angle - arc6_start_angle) / 50)&amp;#10;    x = arc6_center[0] + arc6_radius * math.cos(angle)&amp;#10;    y = arc6_center[1] + arc6_radius * math.sin(angle)&amp;#10;    arc6_vertices.append((x, y))&amp;#10;&amp;#10;# Arc 7 vertices&amp;#10;arc7_vertices = []&amp;#10;for i in range(51):&amp;#10;    angle = math.radians(arc7_start_angle + i * (arc7_end_angle - arc7_start_angle) / 50)&amp;#10;    x = arc7_center[0] + arc7_radius * math.cos(angle)&amp;#10;    y = arc7_center[1] + arc7_radius * math.sin(angle)&amp;#10;    arc7_vertices.append((x, y))&amp;#10;&amp;#10;# Arc 8 vertices&amp;#10;arc8_vertices = []&amp;#10;for i in range(51):&amp;#10;    angle = math.radians(arc8_start_angle + i * (arc8_end_angle - arc8_start_angle) / 50)&amp;#10;    x = arc8_center[0] + arc8_radius * math.cos(angle)&amp;#10;    y = arc8_center[1] + arc8_radius * math.sin(angle)&amp;#10;    arc8_vertices.append((x, y))&amp;#10;    &amp;#10;# Create the arc ShapeStim&amp;#10;arc1 = ShapeStim(&amp;#10;    win=win,&amp;#10;    vertices=arc1_vertices,&amp;#10;    closeShape=False,&amp;#10;    lineWidth=4,&amp;#10;    lineColor='white',&amp;#10;    fillColor=None&amp;#10;)&amp;#10;&amp;#10;# Create Arc 2 ShapeStim&amp;#10;arc2 = ShapeStim(&amp;#10;    win=win,&amp;#10;    vertices=arc2_vertices,&amp;#10;    closeShape=False,&amp;#10;    lineWidth=4,&amp;#10;    lineColor='white',  # Different color for clarity&amp;#10;    fillColor=None&amp;#10;)&amp;#10;&amp;#10;&amp;#10;# Create Arc 3 ShapeStim&amp;#10;arc3 = ShapeStim(&amp;#10;    win=win,&amp;#10;    vertices=arc3_vertices,&amp;#10;    closeShape=False,&amp;#10;    lineWidth=4,&amp;#10;    lineColor='white',  # Set color as desired&amp;#10;    fillColor=None&amp;#10;)&amp;#10;&amp;#10;&amp;#10;# Create Arc 4 ShapeStim&amp;#10;arc4 = ShapeStim(&amp;#10;    win=win,&amp;#10;    vertices=arc4_vertices,&amp;#10;    closeShape=False,&amp;#10;    lineWidth=4,&amp;#10;    lineColor='white',  # Set color as desired&amp;#10;    fillColor=None&amp;#10;)&amp;#10;&amp;#10;&amp;#10;# Create Arc 5 ShapeStim&amp;#10;arc5 = ShapeStim(&amp;#10;    win=win,&amp;#10;    vertices=arc5_vertices,&amp;#10;    closeShape=False,&amp;#10;    lineWidth=4,&amp;#10;    lineColor='white',  # Set color as desired&amp;#10;    fillColor=None&amp;#10;)&amp;#10;&amp;#10;&amp;#10;arc6 = ShapeStim(&amp;#10;    win=win,&amp;#10;    vertices=arc6_vertices,&amp;#10;    closeShape=False,&amp;#10;    lineWidth=4,&amp;#10;    lineColor='white',&amp;#10;    fillColor=None&amp;#10;)&amp;#10;&amp;#10;arc7 = ShapeStim(&amp;#10;    win=win,&amp;#10;    vertices=arc7_vertices,&amp;#10;    closeShape=False,&amp;#10;    lineWidth=4,&amp;#10;    lineColor='white',&amp;#10;    fillColor=None&amp;#10;)&amp;#10;&amp;#10;arc8 = ShapeStim(&amp;#10;    win=win,&amp;#10;    vertices=arc8_vertices,&amp;#10;    closeShape=False,&amp;#10;    lineWidth=4,&amp;#10;    lineColor='white',&amp;#10;    fillColor=None&amp;#10;)&amp;#10;&amp;#10;def create_wiggle_arc(center, radius, thickness, color='blue', opacity=0.5):&amp;#10;    &quot;&quot;&quot;Generate a thick wiggle room arc for a given arc.&quot;&quot;&quot;&amp;#10;    outer_arc_vertices = []&amp;#10;    inner_arc_vertices = []&amp;#10;&amp;#10;    for i in range(51):  # 50 segments for smoothness&amp;#10;        angle = math.radians(i * (180 / 50))  # Same angles as original arc&amp;#10;&amp;#10;        # Outer arc (slightly larger)&amp;#10;        outer_x = center[0] + (radius + thickness) * math.cos(angle)&amp;#10;        outer_y = center[1] + (radius + thickness) * math.sin(angle)&amp;#10;        outer_arc_vertices.append((outer_x, outer_y))&amp;#10;&amp;#10;        # Inner arc (slightly smaller)&amp;#10;        inner_x = center[0] + (radius - thickness) * math.cos(angle)&amp;#10;        inner_y = center[1] + (radius - thickness) * math.sin(angle)&amp;#10;        inner_arc_vertices.append((inner_x, inner_y))&amp;#10;&amp;#10;    # Reverse inner arc vertices to create a closed shape&amp;#10;    inner_arc_vertices.reverse()&amp;#10;    thick_wiggle_arc_vertices = outer_arc_vertices + inner_arc_vertices&amp;#10;&amp;#10;    # Create and return the wiggle room arc&amp;#10;    return ShapeStim(&amp;#10;        win=win,&amp;#10;        vertices=thick_wiggle_arc_vertices,&amp;#10;        closeShape=True,  # Fill between outer and inner arcs&amp;#10;        lineWidth=0,  # No outline needed&amp;#10;        lineColor=None,&amp;#10;        fillColor=color,&amp;#10;        opacity=opacity&amp;#10;    )&amp;#10;&amp;#10;&amp;#10;# Generate wiggle arcs for all arcs&amp;#10;wiggle_arc1 = create_wiggle_arc(arc1_center, arc1_radius, wiggle_thickness)&amp;#10;wiggle_arc2 = create_wiggle_arc(arc2_center, arc2_radius, wiggle_thickness)&amp;#10;wiggle_arc3 = create_wiggle_arc(arc3_center, arc3_radius, wiggle_thickness)&amp;#10;wiggle_arc4 = create_wiggle_arc(arc4_center, arc4_radius, wiggle_thickness)&amp;#10;wiggle_arc5 = create_wiggle_arc(arc5_center, arc5_radius, wiggle_thickness)&amp;#10;wiggle_arc6 = create_wiggle_arc(arc6_center, arc6_radius, wiggle_thickness)&amp;#10;wiggle_arc7 = create_wiggle_arc(arc7_center, arc7_radius, wiggle_thickness)&amp;#10;wiggle_arc8 = create_wiggle_arc(arc8_center, arc8_radius, wiggle_thickness)&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="camera_offset_x = 0" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="&amp;#10;# Update the camera offset based on Dino's X position&amp;#10;camera_offset_x += camera_speed  # The camera offset follows Dino's position&amp;#10;&amp;#10;# Move backgrounds relative to Dino's position (seamless wrap-around)&amp;#10;background1.pos = [-(camera_offset_x % background_width), 0]&amp;#10;background2.pos = [background1.pos[0] + background_width, 0]&amp;#10;&amp;#10;# Update floor positions relative to Dino's position&amp;#10;floor1.pos = [floor1_pos[0] - camera_offset_x, floor1.pos[1]]&amp;#10;floor2.pos = [floor2_x_static - camera_offset_x, floor2.pos[1]]  # Floor2 moves with Dino&amp;#10;&amp;#10;&amp;#10;# Update meatbone position to match floor2's top&amp;#10;meatbone_x = floor2.pos[0]  # Update X position based on floor2&amp;#10;meatbone_y = floor2_top + (meatbone_size[1] / 2) - offset  # Keep the meatbone on top of floor2&amp;#10;meatbone_image.pos = [meatbone_x, meatbone_y]&amp;#10;&amp;#10;&amp;#10;# Update the arc position relative to the camera offset&amp;#10;# Update Arc 1 Position&amp;#10;arc1.pos = [arc1_center[0] - camera_offset_x, arc1_center[1]]&amp;#10;wiggle_arc1.pos = arc1.pos  # Keep wiggle room on top&amp;#10;&amp;#10;# Update Arc 2 Position&amp;#10;arc2.pos = [arc2_center[0] - camera_offset_x, arc2_center[1]]&amp;#10;wiggle_arc2.pos = arc2.pos  # Keep wiggle room on top&amp;#10;arc3.pos = [arc3_center[0] - camera_offset_x, arc3_center[1]]&amp;#10;wiggle_arc3.pos = arc3.pos  # Keep wiggle room on top&amp;#10;# Update Arc 4 Position&amp;#10;arc4.pos = [arc4_center[0] - camera_offset_x, arc4_center[1]]&amp;#10;wiggle_arc4.pos = arc4.pos  # Keep wiggle room on top&amp;#10;# Update Arc 5 Position&amp;#10;arc5.pos = [arc5_center[0] - camera_offset_x, arc5_center[1]]&amp;#10;wiggle_arc5.pos = arc5.pos  # Keep wiggle room on top&amp;#10;&amp;#10;arc6.pos = [arc6_center[0] - camera_offset_x, arc6_center[1]]&amp;#10;wiggle_arc6.pos = arc6.pos&amp;#10;&amp;#10;# Update Arc 7 Position&amp;#10;arc7.pos = [arc7_center[0] - camera_offset_x, arc7_center[1]]&amp;#10;wiggle_arc7.pos = arc7.pos&amp;#10;&amp;#10;# Update Arc 8 Position&amp;#10;arc8.pos = [arc8_center[0] - camera_offset_x, arc8_center[1]]&amp;#10;wiggle_arc8.pos = arc8.pos&amp;#10;&amp;#10;&amp;#10;&amp;#10;# Draw the backgrounds and floors&amp;#10;background1.draw()&amp;#10;background2.draw()&amp;#10;floor1.draw()&amp;#10;floor2.draw()&amp;#10;wiggle_arc1.draw()&amp;#10;wiggle_arc2.draw()&amp;#10;wiggle_arc3.draw()&amp;#10;wiggle_arc4.draw()&amp;#10;wiggle_arc5.draw()&amp;#10;wiggle_arc6.draw()&amp;#10;wiggle_arc7.draw()&amp;#10;wiggle_arc8.draw()&amp;#10;&amp;#10;&amp;#10;arc1.draw()&amp;#10;arc2.draw()&amp;#10;arc3.draw()&amp;#10;arc4.draw()&amp;#10;arc5.draw()&amp;#10;arc6.draw()&amp;#10;arc7.draw()&amp;#10;arc8.draw()&amp;#10;&amp;#10;# Draw the trail dots&amp;#10;for dot in trail_dots:&amp;#10;    dot.draw()&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="worldController" valType="code" updates="None" name="name"/>
-      </CodeComponent>
-      <CodeComponent name="GoalController" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="&amp;#10;meatbone_collided = False  # Track whether the meatbone has been stomped&amp;#10;score = 0&amp;#10;arc1_touched_vertices = []&amp;#10;arc2_touched_vertices = []&amp;#10;arc3_touched_vertices = []&amp;#10;arc4_touched_vertices = []&amp;#10;arc5_touched_vertices = []&amp;#10;arc6_touched_vertices = []&amp;#10;arc7_touched_vertices = []&amp;#10;arc8_touched_vertices = []&amp;#10;&amp;#10;&amp;#10;touch_threshold = 0.04 # touch threshold for the arcs&amp;#10;&amp;#10;meat_collision_threshold = 0.1  # You can adjust this to fit your game scale&amp;#10;&amp;#10;&amp;#10;# Track if Dino is in the wiggle room defualt is not touching so false&amp;#10;wiggle_room = False  &amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="score = 0  # Reset the score&amp;#10;arc1_touched_vertices = []&amp;#10;arc2_touched_vertices = []&amp;#10;arc3_touched_vertices = []&amp;#10;arc4_touched_vertices = []&amp;#10;arc5_touched_vertices = []&amp;#10;meatbone_collided = False&amp;#10;meatbone_image.opacity = 1&amp;#10;&amp;#10;wiggle_room = False  &amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="dino_relative_x = dino_pos[0] - camera_offset_x&amp;#10;dino_relative_y = dino_pos[1]&amp;#10;# Check for collision based on proximity to the updated position&amp;#10;dx = dino_relative_x - meatbone_x&amp;#10;dy = dino_relative_y - meatbone_y&amp;#10;&amp;#10;if camera_offset_x &gt;= max_x:&amp;#10;    continueRoutine = False  # Ends the current routine&amp;#10;    &amp;#10;if dino_relative_x &lt; -0.8 or dino_relative_x &gt; 0.8:  # Adjust bounds based on screen width&amp;#10;    continueRoutine = False  # Ends the current routine&amp;#10;&amp;#10;# Check for collision for meatbone&amp;#10;if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 &lt;= meat_collision_threshold:&amp;#10;    print(&quot;Dino ate the meatbone!&quot;)&amp;#10;    meatbone_image.opacity = 0  # Make the meatbone disappear&amp;#10;    meatbone_collided = True  # Prevent further collision checks&amp;#10;    eat_sound.play()&amp;#10;    continueRoutine = False&amp;#10;&amp;#10;&amp;#10;# Check for collision for ARCS&amp;#10;for vertex in arc1_vertices:&amp;#10;    # Adjust Arc 1 vertex for its X-offset (+1)&amp;#10;    adjusted_vertex_x = vertex[0] + arc1_x   # Move Arc 1 vertices by 1 unit to the right&amp;#10;    adjusted_vertex_y = vertex[1] + reg_arc # Y remains unchanged, apply the same adjustment as Arc 2 if needed&amp;#10;&amp;#10;    # Calculate distance between Dino and the adjusted vertex of Arc 1&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;    &amp;#10;    # Check if Dino is close enough to &quot;touch&quot; the adjusted vertex&amp;#10;    if distance &lt;= touch_threshold and vertex not in arc1_touched_vertices:&amp;#10;        arc1_touched_vertices.append(vertex)&amp;#10;        score += 1  # Increment the score for Arc 1&amp;#10;&amp;#10;&amp;#10;for vertex in arc2_vertices:&amp;#10;    # Adjust Arc 2 vertex for its X-offset (+2)&amp;#10;    adjusted_vertex_x = vertex[0] + arc2_x   # Move Arc 2 vertices by 2 units to the right&amp;#10;    adjusted_vertex_y = vertex[1] + low_arc # Y remains unchanged&amp;#10;    &amp;#10;    # Calculate distance between Dino and the adjusted vertex of Arc 2&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;    &amp;#10;    # Check if Dino is close enough to &quot;touch&quot; the adjusted vertex&amp;#10;    if distance &lt;= touch_threshold and vertex not in arc2_touched_vertices:&amp;#10;        arc2_touched_vertices.append(vertex)&amp;#10;        score += 1  # Increment the score for Arc 2&amp;#10;        &amp;#10;        &amp;#10;for vertex in arc3_vertices:&amp;#10;    # Adjust Arc 3 vertex for its static X-offset&amp;#10;    adjusted_vertex_x = vertex[0] + arc3_x   # Offset Arc 3 vertices by 3.5 units to the right&amp;#10;    adjusted_vertex_y = vertex[1] + high_arc  # Offset Arc 3 vertices by -0.2 units vertically&amp;#10;&amp;#10;    # Calculate distance between Dino and the adjusted vertex of Arc 3&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;&amp;#10;    # Check if Dino is close enough to &quot;touch&quot; the adjusted vertex&amp;#10;    if distance &lt;= touch_threshold and vertex not in arc3_touched_vertices:&amp;#10;        arc3_touched_vertices.append(vertex)&amp;#10;        score += 1  # Increment the score for Arc 3&amp;#10;        &amp;#10;for vertex in arc4_vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc4_x   # Offset Arc 4 vertices&amp;#10;    adjusted_vertex_y = vertex[1] + low_arc  # Y position remains the same&amp;#10;&amp;#10;    # Calculate distance between Dino and Arc 4&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;&amp;#10;    # If Dino is close enough, count as a touch&amp;#10;    if distance &lt;= touch_threshold and vertex not in arc4_touched_vertices:&amp;#10;        arc4_touched_vertices.append(vertex)&amp;#10;        score += 1  # Increment score&amp;#10;&amp;#10;for vertex in arc5_vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc5_x   # Offset Arc 5 vertices&amp;#10;    adjusted_vertex_y = vertex[1] + reg_arc  # Y position remains the same&amp;#10;&amp;#10;    # Calculate distance between Dino and Arc 5&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;&amp;#10;    # If Dino is close enough, count as a touch&amp;#10;    if distance &lt;= touch_threshold and vertex not in arc5_touched_vertices:&amp;#10;        arc5_touched_vertices.append(vertex)&amp;#10;        score += 1  # Increment score&amp;#10;&amp;#10;for vertex in arc6_vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc6_x &amp;#10;    adjusted_vertex_y = vertex[1] + high_arc&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;    if distance &lt;= touch_threshold and vertex not in arc6_touched_vertices:&amp;#10;        arc6_touched_vertices.append(vertex)&amp;#10;        score += 1&amp;#10;&amp;#10;# Arc 7 touch detection&amp;#10;for vertex in arc7_vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc7_x &amp;#10;    adjusted_vertex_y = vertex[1] + arc7_center[1]&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;    if distance &lt;= touch_threshold and vertex not in arc7_touched_vertices:&amp;#10;        arc7_touched_vertices.append(vertex)&amp;#10;        score += 1&amp;#10;&amp;#10;# Arc 8 touch detection&amp;#10;for vertex in arc8_vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc8_x &amp;#10;    adjusted_vertex_y = vertex[1] + arc8_center[1]&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;    if distance &lt;= touch_threshold and vertex not in arc8_touched_vertices:&amp;#10;        arc8_touched_vertices.append(vertex)&amp;#10;        score += 1&amp;#10;&amp;#10;# WIGGLE ROOM STUFF&amp;#10;&amp;#10;&amp;#10;# Reset to false at the start of each frame&amp;#10;wiggle_room = False  &amp;#10;for vertex in wiggle_arc1.vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc1_x &amp;#10;    adjusted_vertex_y = vertex[1] + reg_arc &amp;#10;&amp;#10;    # Calculate distance between Dino and wiggle room vertex&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;&amp;#10;    # If Dino is inside the wiggle room, set to False&amp;#10;    if distance &lt;= touch_threshold:&amp;#10;        wiggle_room = True  &amp;#10;        break  # No need to check further, Dino is inside&amp;#10;        &amp;#10;        &amp;#10;for vertex in wiggle_arc2.vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc2_x &amp;#10;    adjusted_vertex_y = vertex[1] + low_arc&amp;#10;&amp;#10;    # Calculate distance between Dino and wiggle room vertex&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;&amp;#10;    # If Dino is inside the wiggle room, set to False&amp;#10;    if distance &lt;= touch_threshold:&amp;#10;        wiggle_room = True  &amp;#10;        break  # No need to check further, Dino is inside&amp;#10;        &amp;#10;        &amp;#10;        &amp;#10;for vertex in wiggle_arc3.vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc3_x &amp;#10;    adjusted_vertex_y = vertex[1] + high_arc&amp;#10;&amp;#10;    # Calculate distance between Dino and wiggle room vertex&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;&amp;#10;    # If Dino is inside the wiggle room, set to False&amp;#10;    if distance &lt;= touch_threshold:&amp;#10;        wiggle_room = True  &amp;#10;        break  # No need to check further, Dino is inside&amp;#10;&amp;#10;&amp;#10;for vertex in wiggle_arc4.vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc4_x   # Offset Arc 4 vertices&amp;#10;    adjusted_vertex_y = vertex[1] + low_arc&amp;#10;&amp;#10;    # Calculate distance between Dino and wiggle room vertex&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;&amp;#10;    # If Dino is inside the wiggle room, mark as safe&amp;#10;    if distance &lt;= touch_threshold:&amp;#10;        wiggle_room = True  &amp;#10;        break  # Stop checking once inside&amp;#10;&amp;#10;&amp;#10;for vertex in wiggle_arc5.vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc5_x   # Offset Arc 5 vertices&amp;#10;    adjusted_vertex_y = vertex[1] + reg_arc&amp;#10;&amp;#10;    # Calculate distance between Dino and wiggle room vertex&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;&amp;#10;    # If Dino is inside the wiggle room, mark as safe&amp;#10;    if distance &lt;= touch_threshold:&amp;#10;        wiggle_room = True  &amp;#10;        break  # Stop checking once inside&amp;#10;        &amp;#10;for vertex in wiggle_arc6.vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc6_x &amp;#10;    adjusted_vertex_y = vertex[1] + high_arc&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;    if distance &lt;= touch_threshold:&amp;#10;        wiggle_room = True&amp;#10;        break&amp;#10;# Arc 7 wiggle room&amp;#10;for vertex in wiggle_arc7.vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc7_x &amp;#10;    adjusted_vertex_y = vertex[1] + arc7_center[1]&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;    if distance &lt;= touch_threshold:&amp;#10;        wiggle_room = True&amp;#10;        break&amp;#10;&amp;#10;# Arc 8 wiggle room&amp;#10;for vertex in wiggle_arc8.vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc8_x &amp;#10;    adjusted_vertex_y = vertex[1] + arc8_center[1]&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;    if distance &lt;= touch_threshold:&amp;#10;        wiggle_room = True&amp;#10;        break&amp;#10;&amp;#10;        &amp;#10;        &amp;#10;score_text.text = str(score) # update Score&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="global total_touched_vertices, total_possible_vertices&amp;#10;total_touched_vertices = (&amp;#10;    len(arc1_touched_vertices) + len(arc2_touched_vertices) + len(arc3_touched_vertices) +&amp;#10;    len(arc4_touched_vertices) + len(arc5_touched_vertices) + len(arc6_touched_vertices) +&amp;#10;    len(arc7_touched_vertices) + len(arc8_touched_vertices)&amp;#10;)&amp;#10;&amp;#10;total_possible_vertices = (&amp;#10;    len(arc1_vertices) + len(arc2_vertices) + len(arc3_vertices) +&amp;#10;    len(arc4_vertices) + len(arc5_vertices) + len(arc6_vertices) +&amp;#10;    len(arc7_vertices) + len(arc8_vertices)&amp;#10;)&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="GoalController" valType="code" updates="None" name="name"/>
-      </CodeComponent>
-      <CodeComponent name="Timer" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="level_timer = core.Clock()  # Initialize the timer&amp;#10;time_limit = 120  # Set the time limit in seconds (2 minutes)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="&amp;#10;level_timer.reset()  # Reset the timer at the start of the MainGame routine&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="# Calculate remaining time&amp;#10;time_remaining = time_limit - level_timer.getTime()&amp;#10;&amp;#10;# Check if time is up&amp;#10;if time_remaining &lt;= 0:&amp;#10;    print(&quot;Time's up! Returning to MainMenu.&quot;)&amp;#10;    continueRoutine = False  # End the MainGame routine&amp;#10;    time_remaining = 0  # Prevent negative time display&amp;#10;&amp;#10;# Format the timer as MM:SS&amp;#10;minutes = int(time_remaining) // 60&amp;#10;seconds = int(time_remaining) % 60&amp;#10;&amp;#10;# Update the timer display&amp;#10;timer_text.text = str(f&quot;{minutes}:{seconds:02d}&quot;)&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="Timer" valType="code" updates="None" name="name"/>
-      </CodeComponent>
-      <SoundComponent name="eat_sound" plugin="None">
-        <Param val="" valType="str" updates="None" name="deviceLabel"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="True" valType="bool" updates="constant" name="hamming"/>
-        <Param val="eat_sound" valType="code" updates="None" name="name"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="Assets/sounds/eat.mp3" valType="str" updates="set every repeat" name="sound"/>
-        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="False" valType="bool" updates="constant" name="stopWithRoutine"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
-        <Param val="1" valType="num" updates="constant" name="volume"/>
-      </SoundComponent>
-    </Routine>
     <Routine name="Load">
       <RoutineSettingsComponent name="Load" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
@@ -732,12 +458,12 @@
       <CodeComponent name="code" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="# Default control method&amp;#10;# starts game in keyboard mode&amp;#10;selected_control = &quot;Keyboard&quot;&amp;#10;selected_diff = &quot;1&quot;&amp;#10;thisExp.savePickle = False&amp;#10;thisExp.saveWideText = False  # stops saving the .csv or .tsv file&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="# Default control method&amp;#10;# starts game in keyboard mode&amp;#10;selected_control = &quot;Keyboard&quot;&amp;#10;selected_diff = &quot;1&quot;&amp;#10;thisExp.savePickle = False&amp;#10;thisExp.saveWideText = False  # stops saving the .csv or .tsv file&amp;#10;&amp;#10;win_threshold = 10  # Percentage needed to win&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="# Update the feedback button text to display the currently selected control method&amp;#10;control_feedback.text = f&quot;Selected Control: {selected_control}&quot;&amp;#10;mode_feedback.text = f&quot;Mode: {selected_diff}&quot;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="# Check if the mouse is clicked and which button is clicked&amp;#10;if mouse.isPressedIn(start_button):  # Start button&amp;#10;    continueRoutine = False  # End the Main Menu routine&amp;#10;&amp;#10;if mouse.isPressedIn(exit_button):  # Exit button&amp;#10;    core.quit()  # Quit the experiment&amp;#10;    &amp;#10;if mouse.isPressedIn(controller_selection):&amp;#10;    # Add a delay to prevent rapid toggling (doesnt switch too fast)&amp;#10;    core.wait(0.2)&amp;#10;    &amp;#10;    # Toggle between &quot;Keyboard&quot; and &quot;PSURP&quot;&amp;#10;    if selected_control == &quot;Keyboard&quot;:&amp;#10;        selected_control = &quot;PSURP&quot;&amp;#10;        ser.flush()&amp;#10;    else:&amp;#10;        selected_control = &quot;Keyboard&quot;&amp;#10;    &amp;#10;    # Update the feedback text&amp;#10;    control_feedback.text = f&quot;Selected Control: {selected_control}&quot;&amp;#10;    &amp;#10;    &amp;#10;&amp;#10;if mouse.isPressedIn(mode_button):&amp;#10;    # Add a delay to prevent rapid toggling (debounce)&amp;#10;    core.wait(0.2)&amp;#10;    &amp;#10;    # Toggle between &quot;Easy (1)&quot; and &quot;Hard (2)&quot; modes&amp;#10;    if selected_diff == &quot;1&quot;:&amp;#10;        selected_diff = &quot;2&quot;&amp;#10;    else:&amp;#10;        selected_diff = &quot;1&quot;&amp;#10;    &amp;#10;    # Update the feedback text&amp;#10;    mode_feedback.text = f&quot;Mode: {selected_diff}&quot;&amp;#10;    &amp;#10;    &amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="# Check if the mouse is clicked and which button is clicked&amp;#10;if mouse.isPressedIn(start_button):&amp;#10;    continueRoutine = False  # End MainMenu&amp;#10;&amp;#10;if mouse.isPressedIn(exit_button):  # Exit button&amp;#10;    core.quit()  # Quit the experiment&amp;#10;    &amp;#10;if mouse.isPressedIn(controller_selection):&amp;#10;    # Add a delay to prevent rapid toggling (doesnt switch too fast)&amp;#10;    core.wait(0.2)&amp;#10;    &amp;#10;    # Toggle between &quot;Keyboard&quot; and &quot;PSURP&quot;&amp;#10;    if selected_control == &quot;Keyboard&quot;:&amp;#10;        selected_control = &quot;PSURP&quot;&amp;#10;        ser.flush()&amp;#10;    else:&amp;#10;        selected_control = &quot;Keyboard&quot;&amp;#10;    &amp;#10;    # Update the feedback text&amp;#10;    control_feedback.text = f&quot;Selected Control: {selected_control}&quot;&amp;#10;    &amp;#10;    &amp;#10;&amp;#10;if mouse.isPressedIn(mode_button):&amp;#10;    # Add a delay to prevent rapid toggling (debounce)&amp;#10;    core.wait(0.2)&amp;#10;    &amp;#10;    # Toggle between &quot;Easy (1)&quot; and &quot;Hard (2)&quot; modes&amp;#10;    if selected_diff == &quot;1&quot;:&amp;#10;        selected_diff = &quot;2&quot;&amp;#10;    else:&amp;#10;        selected_diff = &quot;1&quot;&amp;#10;    &amp;#10;    # Update the feedback text&amp;#10;    mode_feedback.text = f&quot;Mode: {selected_diff}&quot;&amp;#10;    &amp;#10;    &amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
@@ -953,8 +679,8 @@
         <Param val="Code_RUNE" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
-    <Routine name="EndGameScreen">
-      <RoutineSettingsComponent name="EndGameScreen" plugin="None">
+    <Routine name="GameManager">
+      <RoutineSettingsComponent name="GameManager" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
         <Param val="" valType="str" updates="None" name="backgroundImg"/>
         <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
@@ -963,7 +689,42 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
-        <Param val="EndGameScreen" valType="code" updates="None" name="name"/>
+        <Param val="GameManager" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="GameManger" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="# Initialize game variables&amp;#10;current_level = 2&amp;#10;score = 0&amp;#10;trail_positions = []&amp;#10;win_threshold = 1  # % needed to win&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="current_level = 1;&amp;#10;score = 0;&amp;#10;trail_positions = [];&amp;#10;win_threshold = 80;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="GameManger" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="Level_1_checker">
+      <RoutineSettingsComponent name="Level_1_checker" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="Level_1_checker" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
@@ -1003,17 +764,372 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="&amp;#10;# Calculate the percentage&amp;#10;if total_possible_vertices &gt; 0:&amp;#10;    percentage = (total_touched_vertices / total_possible_vertices) * 100&amp;#10;else:&amp;#10;    percentage = 0  # Avoid division by zero&amp;#10;&amp;#10;# Update the text for the end screen&amp;#10;end_score_text.text = (&amp;#10;    f&quot;You hit {total_touched_vertices} out of {total_possible_vertices} vertices\n&quot;&amp;#10;    f&quot;{percentage:.2f}%&quot;&amp;#10;)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="&amp;#10;# Calculate the percentage&amp;#10;if total_possible_vertices &gt; 0:&amp;#10;    percentage = (total_touched_vertices / total_possible_vertices) * 100&amp;#10;else:&amp;#10;    percentage = 0  # Avoid division by zero&amp;#10;&amp;#10;# Update the text for the end screen&amp;#10;end_score_text.text = (&amp;#10;    f&quot;You hit {total_touched_vertices} out of {total_possible_vertices} vertices\n&quot;&amp;#10;    f&quot;{percentage:.2f}%&quot;&amp;#10;)&amp;#10;&amp;#10;&amp;#10;if percentage &gt;= win_threshold and meatbone_collided:&amp;#10;    Level_1_Loop.finished = True  # Player passed both requirements → go to next level&amp;#10;else:&amp;#10;    Level_1_Loop.finished = False  # Retry level" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="import csv&amp;#10;&amp;#10;thisExp.addData('Participant ID', expInfo['participant'])&amp;#10;thisExp.addData('Session', expInfo['session'])&amp;#10;thisExp.addData('Date', expInfo['date'])&amp;#10;thisExp.addData('Score', total_touched_vertices)&amp;#10;thisExp.addData('Percentage', percentage)&amp;#10;&amp;#10;filename = f&quot;data/{expInfo['participant']}_summary.csv&quot;&amp;#10;with open(filename, mode='w', newline='') as file:&amp;#10;    writer = csv.writer(file)&amp;#10;    writer.writerow(['Participant ID', 'Session', 'Date', 'Score', 'Percentage'])&amp;#10;    writer.writerow([expInfo['participant'], expInfo['session'], expInfo['date'], total_touched_vertices, percentage])" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="import csv&amp;#10;total_touched_vertices = 0&amp;#10;score = 0&amp;#10;meatbone_collided = True&amp;#10;&amp;#10;thisExp.addData('Participant ID', expInfo['participant'])&amp;#10;thisExp.addData('Session', expInfo['session'])&amp;#10;thisExp.addData('Date', expInfo['date'])&amp;#10;thisExp.addData('Score', total_touched_vertices)&amp;#10;thisExp.addData('Percentage', percentage)&amp;#10;&amp;#10;filename = f&quot;data/{expInfo['participant']}_summary.csv&quot;&amp;#10;with open(filename, mode='w', newline='') as file:&amp;#10;    writer = csv.writer(file)&amp;#10;    writer.writerow(['Participant ID', 'Session', 'Date', 'Score', 'Percentage'])&amp;#10;    writer.writerow([expInfo['participant'], expInfo['session'], expInfo['date'], total_touched_vertices, percentage])" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="code_3" valType="code" updates="None" name="name"/>
       </CodeComponent>
+    </Routine>
+    <Routine name="Level_1">
+      <RoutineSettingsComponent name="Level_1" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="Level_1" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <ImageComponent name="dino_image" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="Assets/dino.png" valType="file" updates="constant" name="image"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="" valType="str" updates="constant" name="mask"/>
+        <Param val="dino_image" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0,0)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="(0.2, 0.2)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+      </ImageComponent>
+      <PolygonComponent name="floor1" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="-1.0000, -1.0000, -1.0000" valType="color" updates="constant" name="fillColor"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="-1.0000, -1.0000, -1.0000" valType="color" updates="constant" name="lineColor"/>
+        <Param val="1" valType="num" updates="constant" name="lineWidth"/>
+        <Param val="4" valType="int" updates="constant" name="nVertices"/>
+        <Param val="floor1" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(-.5,-.5)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="rectangle" valType="str" updates="None" name="shape"/>
+        <Param val="(.5,0.3)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="list" updates="constant" name="vertices"/>
+      </PolygonComponent>
+      <PolygonComponent name="floor2" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="-1.0000, -1.0000, -1.0000" valType="color" updates="constant" name="fillColor"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="-1.0000, -1.0000, -1.0000" valType="color" updates="constant" name="lineColor"/>
+        <Param val="1" valType="num" updates="constant" name="lineWidth"/>
+        <Param val="4" valType="int" updates="constant" name="nVertices"/>
+        <Param val="floor2" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0,-.5)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="rectangle" valType="str" updates="None" name="shape"/>
+        <Param val="(.5,0.3)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="list" updates="constant" name="vertices"/>
+      </PolygonComponent>
+      <ImageComponent name="meatbone_image" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="Assets/meat_bone.png" valType="file" updates="constant" name="image"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="" valType="str" updates="constant" name="mask"/>
+        <Param val="meatbone_image" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="(0.5, 0.5)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+      </ImageComponent>
+      <TextComponent name="score_text" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.08" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="score_text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0.55, 0.45)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Score: 0" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <TextComponent name="timer_text" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.08" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="timer_text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(-0.55,0.45)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="00 : 00" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <CodeComponent name="DinoMovement" plugin="None">
+        <Param val="Base71Lookup = &quot;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~&quot;" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="from psychopy.hardware import keyboard&amp;#10;from psychopy.visual import Rect&amp;#10;import time&amp;#10;&amp;#10;import serial&amp;#10;from psychopy.visual import Circle&amp;#10;&amp;#10;# Initialize the Keyboard&amp;#10;kb = keyboard.Keyboard()&amp;#10;&amp;#10;#PSURP Inits&amp;#10;&quot;&quot;&quot;&amp;#10;# Initialize the serial connection for PSURP&amp;#10;ser = serial.Serial(&quot;COM4&quot;, 230400, timeout=0.1)  # Replace &quot;COM4&quot; with your port&amp;#10;ser.flush()&amp;#10;ser.write(&quot;X&quot;.encode())  # Initialize PSURP&amp;#10;ser.write(&quot;RUNE\n&quot;.encode())  # Enter streaming mode&amp;#10;&quot;&quot;&quot;&amp;#10;&amp;#10;# Trail settings&amp;#10;trail_positions = []  # Stores Dino's previous positions&amp;#10;trail_length = 35  # Maximum number of trail dots&amp;#10;trail_dot_size = 0.005  # Size of each dot for trail &amp;#10;trail_dots = []  # List of Circle stimuli for the trail&amp;#10;trail_color = 'yellow'  # Color of the trail dots&amp;#10;trail_frame_counter = 0  # Counter to control trail dot spawning&amp;#10;trail_interval = 5  # Spawn a dot every 5 frames&amp;#10;&amp;#10;&amp;#10;#Button 0 and button 2 force properties&amp;#10;B0ForceInNewtons = 0&amp;#10;B2ForceInNewtons = 0&amp;#10;MIN_FORCE = 0.4  # Minimum force to start movement&amp;#10;FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement&amp;#10;&amp;#10;# Dino movement variables&amp;#10;dino_pos = [0, -0.3]  # Starting position [x, y]&amp;#10;dino_speed = 0  # Initial vertical speed&amp;#10;gravity = -0.0003  # Downward acceleration 0.00006&amp;#10;jump_speed = 0.005  # Jumping speed&amp;#10;move_speed = 0.01  # Horizontal movement speed&amp;#10;ground_offset = 0.03  # Offset to avoid sinking into the ground visually&amp;#10;min_x = -0.6  # Left boundary&amp;#10;max_x = 19 # right boundary&amp;#10;respawn_position = [0, -0.3]  # Starting position for Dino&amp;#10;&amp;#10;&amp;#10;&amp;#10;# Floor properties&amp;#10;&amp;#10;floor1_vertices = floor1.vertices  # Get floor1 vertices&amp;#10;floor_top = max(v[1] for v in floor1_vertices)  # Highest point of floor1&amp;#10;fall_threshold = min(v[1] for v in floor1_vertices) - 0.2  # Slightly below the lowest floor point&amp;#10;&amp;#10;&amp;#10;# Function to check if Dino is on the floor&amp;#10;def is_on_floor(dino_pos):&amp;#10;    &quot;&quot;&quot;Check if Dino's bottom is within the bounds of floor1 or floor2.&quot;&quot;&quot;&amp;#10;    dino_bottom = dino_pos[1] - (dino_image.size[1] / 2)  # Dino's bottom Y-position&amp;#10;&amp;#10;    # Floor1 bounds&amp;#10;    x_min1 = min(v[0] for v in floor1_vertices)&amp;#10;    x_max1 = max(v[0] for v in floor1_vertices)&amp;#10;    &amp;#10;    # Floor2 bounds&amp;#10;    x_min2 = min(v[0] for v in floor2_vertices)&amp;#10;    x_max2 = max(v[0] for v in floor2_vertices)&amp;#10;&amp;#10;    # Check floor1 or floor2&amp;#10;    on_floor1 = x_min1 &lt;= dino_pos[0] &lt;= x_max1 and dino_bottom &lt;= floor1_top&amp;#10;    on_floor2 = x_min2 &lt;= dino_pos[0] &lt;= x_max2 and dino_bottom &lt;= floor2_top&amp;#10;&amp;#10;    return on_floor1 or on_floor2&amp;#10;    &amp;#10;#calculates the psurp forces&amp;#10;def calculate_psurp_forces(serial_data):&amp;#10;    &quot;&quot;&quot;Extract and calculate forces from PSURP serial data.&quot;&quot;&quot;&amp;#10;    if len(serial_data.decode()) == 12:&amp;#10;        output = serial_data.decode()&amp;#10;        &amp;#10;        # Calculate forces&amp;#10;        B0HighByte = Base71Lookup.index(output[0])&amp;#10;        B0LowByte = Base71Lookup.index(output[1])&amp;#10;        B2HighByte = Base71Lookup.index(output[4])&amp;#10;        B2LowByte = Base71Lookup.index(output[5])&amp;#10;        &amp;#10;        # Forces in Newtons&amp;#10;        B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098&amp;#10;        B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098&amp;#10;        &amp;#10;        return B0ForceInNewtons, B2ForceInNewtons&amp;#10;    &amp;#10;    return 0, 0  # Default forces if data is invalid&amp;#10;&amp;#10;&amp;#10;&amp;#10;# image path for dino animation&amp;#10;frame_paths = [&amp;#10;    &quot;Assets/dino_frames/f1.png&quot;, &quot;Assets/dino_frames/f2.png&quot;, &amp;#10;    &quot;Assets/dino_frames/f3.png&quot;, &quot;Assets/dino_frames/f4.png&quot;, &amp;#10;    &quot;Assets/dino_frames/f5.png&quot;, &quot;Assets/dino_frames/f6.png&quot;, &amp;#10;    &quot;Assets/dino_frames/f7.png&quot;, &quot;Assets/dino_frames/f8.png&quot;, &amp;#10;    &quot;Assets/dino_frames/f9.png&quot;, &quot;Assets/dino_frames/f10.png&quot;, &amp;#10;    &quot;Assets/dino_frames/f11.png&quot;, &quot;Assets/dino_frames/f12.png&quot;&amp;#10;]&amp;#10;&amp;#10;&amp;#10;&amp;#10;frame_index = 0  # Start with the first frame&amp;#10;frame_index_update_counter = 0  # Counter to manage animation speed&amp;#10;total_frames = len(frame_paths)  # Total number of frames in the animation&amp;#10;&amp;#10;# Initialize the Dino's first frame&amp;#10;dino_image.image = frame_paths[frame_index]&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="dino_pos = [0, -0.3]  # Reset Dino's position&amp;#10;dino_speed = 0  # Reset vertical speed&amp;#10;# Initialize the trail dots&amp;#10;trail_dots = [&amp;#10;    Circle(win, radius=trail_dot_size, fillColor=trail_color, lineColor=None, pos=[-1, -1])&amp;#10;    for _ in range(trail_length)&amp;#10;]&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="&amp;#10;# Initialize key state flags&amp;#10;left_pressed = False&amp;#10;right_pressed = False&amp;#10;up_pressed = False&amp;#10;&amp;#10;# Handle input based on the selected control method&amp;#10;&amp;#10;# Process keyboard input&amp;#10;if selected_control == &quot;Keyboard&quot;:&amp;#10;    keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)&amp;#10;    for key in keys_pressed:&amp;#10;        if key.name == 'left':&amp;#10;            left_pressed = True&amp;#10;        if key.name == 'right':&amp;#10;            right_pressed = True&amp;#10;        if key.name == 'up':&amp;#10;            up_pressed = True&amp;#10;            &amp;#10;# Process PSURP input            &amp;#10;if selected_control == &quot;PSURP&quot;:&amp;#10;    # Read serial data&amp;#10;    ser.flushInput()&amp;#10;    strSerialData = ser.readline()&amp;#10;    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)&amp;#10;&amp;#10;    # Apply difficulty-specific movement&amp;#10;    if selected_diff == &quot;1&quot;:&amp;#10;        # Constant movement for Easy mode&amp;#10;        if B2ForceInNewtons &gt; MIN_FORCE and dino_pos[0] &lt; max_x:&amp;#10;            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)&amp;#10;            dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]  # Face right&amp;#10;&amp;#10;    elif selected_diff == &quot;2&quot;:&amp;#10;        # Proportional movement for Hard mode (current implementation)&amp;#10;        if B2ForceInNewtons &gt; MIN_FORCE and dino_pos[0] &lt; max_x:&amp;#10;            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER&amp;#10;            dino_pos[0] += move_amount  # Movement based on force&amp;#10;            dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]  # Face right&amp;#10;&amp;#10;    # Jump logic remains the same for both difficulties&amp;#10;    if B0ForceInNewtons &gt; MIN_FORCE:&amp;#10;        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force&amp;#10;&amp;#10;&amp;#10;            &amp;#10; &amp;#10;# Apply gravity to Dino's vertical speed&amp;#10;dino_speed += gravity&amp;#10;&amp;#10;# Check if Dino is on the floor (keeps dino on top of floor)&amp;#10;if is_on_floor(dino_pos) and dino_speed &lt;= 0:  # Falling or stationary&amp;#10;    dino_pos[1] = floor1_top + (dino_image.size[1] / 2) - ground_offset  # Align Dino with the floor&amp;#10;    dino_speed = 0  # Reset vertical speed&amp;#10;&amp;#10;# Respawn if Dino falls below the floor threshold&amp;#10;if dino_pos[1] &lt; fall_threshold:&amp;#10;    lose_sound.play()&amp;#10;    continueRoutine = False  # Stop the MainGame routine&amp;#10;    &amp;#10;# Jumping logic: Allow jump whenever the 'up' key is pressed&amp;#10;if up_pressed:  # Check if the up key is pressed&amp;#10;    dino_speed = jump_speed  # Apply upward movement&amp;#10;&amp;#10;# Update Dino's vertical position&amp;#10;dino_pos[1] += dino_speed&amp;#10;&amp;#10;# Continuous horizontal movement&amp;#10;if left_pressed and dino_pos[0] &gt; min_x:&amp;#10;    dino_pos[0] -= move_speed  # Move Dino to the left&amp;#10;    dino_image.size = [-1 * abs(dino_image.size[0]), dino_image.size[1]]&amp;#10;&amp;#10;if right_pressed and dino_pos[0] &lt; max_x:&amp;#10;    dino_pos[0] += move_speed  # Move Dino to the right&amp;#10;    dino_image.size = [abs(dino_image.size[0]), dino_image.size[1]]  # Reset Dino to face right&amp;#10;&amp;#10;# Update Dino's position&amp;#10;# dino_image.pos = dino_pos  # Use both X and Y values of dino_pos&amp;#10;dino_image.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]&amp;#10;&amp;#10;# Increment the frame counter for trail updates&amp;#10;trail_frame_counter += 1&amp;#10;&amp;#10;# Check if it's time to spawn a new dot&amp;#10;if trail_frame_counter &gt;= trail_interval:&amp;#10;    if len(trail_positions) &gt;= trail_length:&amp;#10;        trail_positions.pop(0)  # Remove the oldest position if trail is full&amp;#10;&amp;#10;    # Add Dino's current position to the trail&amp;#10;    trail_positions.append(dino_pos[:])  # Add a copy of Dino's current position&amp;#10;&amp;#10;    trail_frame_counter = 0  # Reset the counter&amp;#10;&amp;#10;# Update the trail dots' positions&amp;#10;for i, pos in enumerate(trail_positions):&amp;#10;    trail_dots[i].pos = [pos[0] - camera_offset_x, pos[1]]  # Adjust for camera offset&amp;#10;&amp;#10;&amp;#10;# Update the Dino's animation&amp;#10;if (frame_index_update_counter % 4) == 0:  # Adjust 4 to control animation speed&amp;#10;    dino_image.image = frame_paths[frame_index]  # Update the current frame&amp;#10;&amp;#10;    # Advance to the next frame&amp;#10;    frame_index += 1&amp;#10;    if frame_index &gt;= total_frames:&amp;#10;        frame_index = 0  # Loop back to the first frame&amp;#10;&amp;#10;&amp;#10;&amp;#10;# Increment the animation frame counter&amp;#10;frame_index_update_counter += 1&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;keys = psychoJS.eventManager.getKeys();&amp;#10;if (_pj.in_es6(&quot;right&quot;, keys)) {&amp;#10;    trex.pos += [5, 0];&amp;#10;}&amp;#10;if (_pj.in_es6(&quot;left&quot;, keys)) {&amp;#10;    trex.pos -= [5, 0];&amp;#10;}&amp;#10;if ((_pj.in_es6(&quot;up&quot;, keys) &amp;&amp; (trex.pos[1] === (- 150)))) {&amp;#10;    trex.pos += [0, 200];&amp;#10;}&amp;#10;if ((trex.pos[1] &gt; (- 150))) {&amp;#10;    trex.pos -= [0, 10];&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="&quot;&quot;&quot;&amp;#10;ser.flush()&amp;#10;ser.write(&quot;X&quot;.encode())  # Exit command mode&amp;#10;ser.close()&amp;#10;&quot;&quot;&quot;" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="dino_pos = [-0.5, -0.3]  # Reset Dino's position&amp;#10;trail_positions.clear()  # Remove all stored positions" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="DinoMovement" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <CodeComponent name="worldController" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="from psychopy.visual import Rect, ImageStim, ShapeStim&amp;#10;import math&amp;#10;&amp;#10;dirt_texture = 'Assets/ground1.png'&amp;#10;&amp;#10;#height factors for arcs (Y position)&amp;#10;low_arc = -0.2  &amp;#10;reg_arc = 0&amp;#10;high_arc = 0.05&amp;#10;&amp;#10;small_arc_size = 0.2  # Smallest arc radius&amp;#10;med_arc_size = 0.27  # Medium arc radius&amp;#10;large_arc_size = 0.35  # Largest arc radius&amp;#10;&amp;#10;wiggle_thickness = 0.05  # Adjust thickness for all wiggle arcs&amp;#10;&amp;#10;meatbone_size = [0.15, 0.09]  # Example size (width, height)&amp;#10;&amp;#10;&amp;#10;# Function to calculate vertices of a Rect stimulus&amp;#10;def calculate_rect_vertices(rect):&amp;#10;    &quot;&quot;&quot;Calculate the vertices of a Rect stimulus.&quot;&quot;&quot;&amp;#10;    half_width = rect.width / 2&amp;#10;    half_height = rect.height / 2&amp;#10;    center_x, center_y = rect.pos&amp;#10;    vertices = [&amp;#10;        [center_x - half_width, center_y - half_height],  # Bottom-left&amp;#10;        [center_x + half_width, center_y - half_height],  # Bottom-right&amp;#10;        [center_x + half_width, center_y + half_height],  # Top-right&amp;#10;        [center_x - half_width, center_y + half_height],  # Top-left&amp;#10;    ]&amp;#10;    return vertices&amp;#10;&amp;#10;# Camera variables&amp;#10;camera_offset_x = 0  # Tracks the camera offset to follow Dino&amp;#10;camera_speed = 0.003  # Adjust this speed as needed 0.003&amp;#10;# Background properties&amp;#10;background_width = 2.0  # Width of a single background image&amp;#10;background_height = 1.0&amp;#10;background_image = 'Assets/7.png'  # Path to your custom background image&amp;#10;&amp;#10;# Create two background images for seamless scrolling&amp;#10;background1 = ImageStim(win, image=background_image, size=[background_width, background_height], pos=[0, 0])&amp;#10;background2 = ImageStim(win, image=background_image, size=[background_width, background_height], pos=[background_width, 0])&amp;#10;&amp;#10;# Floor1 properties&amp;#10;floor1_height = 0.3&amp;#10;floor1_width = 0.5&amp;#10;floor1_pos = [0, -0.5]&amp;#10;&amp;#10;floor1 = visual.ImageStim(&amp;#10;    win=win,&amp;#10;    image=dirt_texture,&amp;#10;    size=(floor1_width, floor1_height),  # Set the size to match the floor dimensions&amp;#10;    pos=floor1_pos,&amp;#10;    interpolate=True&amp;#10;)&amp;#10;floor1_vertices = calculate_rect_vertices(floor1)&amp;#10;&amp;#10;# Floor2 properties - Place it further into the map&amp;#10;floor2_x_static = 18.5  # Fixed X position where floor2 appears&amp;#10;floor2_height = 0.3&amp;#10;floor2_width = 0.5&amp;#10;&amp;#10;floor2 = visual.ImageStim(&amp;#10;    win=win,&amp;#10;    image=dirt_texture,&amp;#10;    size=(floor2_width, floor2_height),  # Set the size to match the floor dimensions&amp;#10;    pos=[floor2_x_static, -0.5],  # Position of floor2&amp;#10;    interpolate=True&amp;#10;)&amp;#10;floor2_vertices = calculate_rect_vertices(floor2)&amp;#10;&amp;#10;&amp;#10;# Floor thresholds&amp;#10;floor1_top = max(v[1] for v in floor1_vertices)&amp;#10;floor2_top = max(v[1] for v in floor2_vertices)&amp;#10;&amp;#10;&amp;#10;&amp;#10;#meat bone&amp;#10;&amp;#10;meatbone_size = [0.12, 0.06]  # Example size (width, height)&amp;#10;meatbone_image.size = meatbone_size&amp;#10;offset = 0.01  # Adjust to align the meatbone properly with floor2&amp;#10;&amp;#10;&amp;#10;#arc stuff&amp;#10;&amp;#10;# Arc 1 Properties&amp;#10;arc1_x = 0.3&amp;#10;arc1_center = [arc1_x, reg_arc]&amp;#10;arc1_radius = small_arc_size&amp;#10;arc1_start_angle = 0&amp;#10;arc1_end_angle = 180&amp;#10;&amp;#10;# Arc 2 Properties&amp;#10;arc2_x = 1.0&amp;#10;arc2_center = [arc2_x, low_arc]&amp;#10;arc2_radius = med_arc_size&amp;#10;arc2_start_angle = 0&amp;#10;arc2_end_angle = 180&amp;#10;&amp;#10;# Arc 3 Properties&amp;#10;arc3_x = 2.2&amp;#10;arc3_center = [arc3_x, high_arc]&amp;#10;arc3_radius = large_arc_size&amp;#10;arc3_start_angle = 0&amp;#10;arc3_end_angle = 180&amp;#10;&amp;#10;# Arc 4 Properties&amp;#10;arc4_x = 3.4&amp;#10;arc4_center = [arc4_x, low_arc]&amp;#10;arc4_radius = small_arc_size&amp;#10;arc4_start_angle = 0&amp;#10;arc4_end_angle = 180&amp;#10;&amp;#10;# Arc 5 Properties&amp;#10;arc5_x = 4.6&amp;#10;arc5_center = [arc5_x, reg_arc]&amp;#10;arc5_radius = large_arc_size&amp;#10;arc5_start_angle = 0&amp;#10;arc5_end_angle = 180&amp;#10;&amp;#10;# Arc 6 Properties&amp;#10;arc6_x = 5.8&amp;#10;arc6_center = [arc6_x, high_arc]&amp;#10;arc6_radius = med_arc_size&amp;#10;arc6_start_angle = 0&amp;#10;arc6_end_angle = 180&amp;#10;&amp;#10;# Arc 7 Properties&amp;#10;arc7_x = 7.0&amp;#10;arc7_center = [arc7_x, low_arc]&amp;#10;arc7_radius = large_arc_size&amp;#10;arc7_start_angle = 0&amp;#10;arc7_end_angle = 180&amp;#10;&amp;#10;# Arc 8 Properties&amp;#10;arc8_x = 8.5&amp;#10;arc8_center = [arc8_x, high_arc]&amp;#10;arc8_radius = med_arc_size&amp;#10;arc8_start_angle = 0&amp;#10;arc8_end_angle = 180&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;# Generate vertices for Arc 1&amp;#10;arc1_vertices = []&amp;#10;for i in range(51):  # 50 segments for smoothness&amp;#10;    angle = math.radians(arc1_start_angle + i * (arc1_end_angle - arc1_start_angle) / 50)&amp;#10;    x = arc1_center[0] + arc1_radius * math.cos(angle)&amp;#10;    y = arc1_center[1] + arc1_radius * math.sin(angle)&amp;#10;    arc1_vertices.append((x, y))&amp;#10;&amp;#10;# Generate vertices for Arc 2&amp;#10;arc2_vertices = []&amp;#10;for i in range(51):  # 50 segments for smoothness&amp;#10;    angle = math.radians(arc2_start_angle + i * (arc2_end_angle - arc2_start_angle) / 50)&amp;#10;    x = arc2_center[0] + arc2_radius * math.cos(angle)&amp;#10;    y = arc2_center[1] + arc2_radius * math.sin(angle)&amp;#10;    arc2_vertices.append((x, y))&amp;#10;    &amp;#10;    &amp;#10;&amp;#10;# Generate vertices for Arc 3&amp;#10;arc3_vertices = []&amp;#10;for i in range(51):  # 50 segments for smoothness&amp;#10;    angle = math.radians(arc3_start_angle + i * (arc3_end_angle - arc3_start_angle) / 50)&amp;#10;    x = arc3_center[0] + arc3_radius * math.cos(angle)&amp;#10;    y = arc3_center[1] + arc3_radius * math.sin(angle)&amp;#10;    arc3_vertices.append((x, y))&amp;#10;&amp;#10;# Generate vertices for Arc 4&amp;#10;arc4_vertices = []&amp;#10;for i in range(51):  # 50 segments for smoothness&amp;#10;    angle = math.radians(arc4_start_angle + i * (arc4_end_angle - arc4_start_angle) / 50)&amp;#10;    x = arc4_center[0] + arc4_radius * math.cos(angle)&amp;#10;    y = arc4_center[1] + arc4_radius * math.sin(angle)&amp;#10;    arc4_vertices.append((x, y))&amp;#10;&amp;#10;&amp;#10;# Generate vertices for Arc 5&amp;#10;arc5_vertices = []&amp;#10;for i in range(51):  # 50 segments for smoothness&amp;#10;    angle = math.radians(arc5_start_angle + i * (arc5_end_angle - arc5_start_angle) / 50)&amp;#10;    x = arc5_center[0] + arc5_radius * math.cos(angle)&amp;#10;    y = arc5_center[1] + arc5_radius * math.sin(angle)&amp;#10;    arc5_vertices.append((x, y))&amp;#10;    &amp;#10;&amp;#10;arc6_vertices = []&amp;#10;for i in range(51):&amp;#10;    angle = math.radians(arc6_start_angle + i * (arc6_end_angle - arc6_start_angle) / 50)&amp;#10;    x = arc6_center[0] + arc6_radius * math.cos(angle)&amp;#10;    y = arc6_center[1] + arc6_radius * math.sin(angle)&amp;#10;    arc6_vertices.append((x, y))&amp;#10;&amp;#10;# Arc 7 vertices&amp;#10;arc7_vertices = []&amp;#10;for i in range(51):&amp;#10;    angle = math.radians(arc7_start_angle + i * (arc7_end_angle - arc7_start_angle) / 50)&amp;#10;    x = arc7_center[0] + arc7_radius * math.cos(angle)&amp;#10;    y = arc7_center[1] + arc7_radius * math.sin(angle)&amp;#10;    arc7_vertices.append((x, y))&amp;#10;&amp;#10;# Arc 8 vertices&amp;#10;arc8_vertices = []&amp;#10;for i in range(51):&amp;#10;    angle = math.radians(arc8_start_angle + i * (arc8_end_angle - arc8_start_angle) / 50)&amp;#10;    x = arc8_center[0] + arc8_radius * math.cos(angle)&amp;#10;    y = arc8_center[1] + arc8_radius * math.sin(angle)&amp;#10;    arc8_vertices.append((x, y))&amp;#10;    &amp;#10;# Create the arc ShapeStim&amp;#10;arc1 = ShapeStim(&amp;#10;    win=win,&amp;#10;    vertices=arc1_vertices,&amp;#10;    closeShape=False,&amp;#10;    lineWidth=4,&amp;#10;    lineColor='white',&amp;#10;    fillColor=None&amp;#10;)&amp;#10;&amp;#10;# Create Arc 2 ShapeStim&amp;#10;arc2 = ShapeStim(&amp;#10;    win=win,&amp;#10;    vertices=arc2_vertices,&amp;#10;    closeShape=False,&amp;#10;    lineWidth=4,&amp;#10;    lineColor='white',  # Different color for clarity&amp;#10;    fillColor=None&amp;#10;)&amp;#10;&amp;#10;&amp;#10;# Create Arc 3 ShapeStim&amp;#10;arc3 = ShapeStim(&amp;#10;    win=win,&amp;#10;    vertices=arc3_vertices,&amp;#10;    closeShape=False,&amp;#10;    lineWidth=4,&amp;#10;    lineColor='white',  # Set color as desired&amp;#10;    fillColor=None&amp;#10;)&amp;#10;&amp;#10;&amp;#10;# Create Arc 4 ShapeStim&amp;#10;arc4 = ShapeStim(&amp;#10;    win=win,&amp;#10;    vertices=arc4_vertices,&amp;#10;    closeShape=False,&amp;#10;    lineWidth=4,&amp;#10;    lineColor='white',  # Set color as desired&amp;#10;    fillColor=None&amp;#10;)&amp;#10;&amp;#10;&amp;#10;# Create Arc 5 ShapeStim&amp;#10;arc5 = ShapeStim(&amp;#10;    win=win,&amp;#10;    vertices=arc5_vertices,&amp;#10;    closeShape=False,&amp;#10;    lineWidth=4,&amp;#10;    lineColor='white',  # Set color as desired&amp;#10;    fillColor=None&amp;#10;)&amp;#10;&amp;#10;&amp;#10;arc6 = ShapeStim(&amp;#10;    win=win,&amp;#10;    vertices=arc6_vertices,&amp;#10;    closeShape=False,&amp;#10;    lineWidth=4,&amp;#10;    lineColor='white',&amp;#10;    fillColor=None&amp;#10;)&amp;#10;&amp;#10;arc7 = ShapeStim(&amp;#10;    win=win,&amp;#10;    vertices=arc7_vertices,&amp;#10;    closeShape=False,&amp;#10;    lineWidth=4,&amp;#10;    lineColor='white',&amp;#10;    fillColor=None&amp;#10;)&amp;#10;&amp;#10;arc8 = ShapeStim(&amp;#10;    win=win,&amp;#10;    vertices=arc8_vertices,&amp;#10;    closeShape=False,&amp;#10;    lineWidth=4,&amp;#10;    lineColor='white',&amp;#10;    fillColor=None&amp;#10;)&amp;#10;&amp;#10;def create_wiggle_arc(center, radius, thickness, color='blue', opacity=0.5):&amp;#10;    &quot;&quot;&quot;Generate a thick wiggle room arc for a given arc.&quot;&quot;&quot;&amp;#10;    outer_arc_vertices = []&amp;#10;    inner_arc_vertices = []&amp;#10;&amp;#10;    for i in range(51):  # 50 segments for smoothness&amp;#10;        angle = math.radians(i * (180 / 50))  # Same angles as original arc&amp;#10;&amp;#10;        # Outer arc (slightly larger)&amp;#10;        outer_x = center[0] + (radius + thickness) * math.cos(angle)&amp;#10;        outer_y = center[1] + (radius + thickness) * math.sin(angle)&amp;#10;        outer_arc_vertices.append((outer_x, outer_y))&amp;#10;&amp;#10;        # Inner arc (slightly smaller)&amp;#10;        inner_x = center[0] + (radius - thickness) * math.cos(angle)&amp;#10;        inner_y = center[1] + (radius - thickness) * math.sin(angle)&amp;#10;        inner_arc_vertices.append((inner_x, inner_y))&amp;#10;&amp;#10;    # Reverse inner arc vertices to create a closed shape&amp;#10;    inner_arc_vertices.reverse()&amp;#10;    thick_wiggle_arc_vertices = outer_arc_vertices + inner_arc_vertices&amp;#10;&amp;#10;    # Create and return the wiggle room arc&amp;#10;    return ShapeStim(&amp;#10;        win=win,&amp;#10;        vertices=thick_wiggle_arc_vertices,&amp;#10;        closeShape=True,  # Fill between outer and inner arcs&amp;#10;        lineWidth=0,  # No outline needed&amp;#10;        lineColor=None,&amp;#10;        fillColor=color,&amp;#10;        opacity=opacity&amp;#10;    )&amp;#10;&amp;#10;&amp;#10;# Generate wiggle arcs for all arcs&amp;#10;wiggle_arc1 = create_wiggle_arc(arc1_center, arc1_radius, wiggle_thickness)&amp;#10;wiggle_arc2 = create_wiggle_arc(arc2_center, arc2_radius, wiggle_thickness)&amp;#10;wiggle_arc3 = create_wiggle_arc(arc3_center, arc3_radius, wiggle_thickness)&amp;#10;wiggle_arc4 = create_wiggle_arc(arc4_center, arc4_radius, wiggle_thickness)&amp;#10;wiggle_arc5 = create_wiggle_arc(arc5_center, arc5_radius, wiggle_thickness)&amp;#10;wiggle_arc6 = create_wiggle_arc(arc6_center, arc6_radius, wiggle_thickness)&amp;#10;wiggle_arc7 = create_wiggle_arc(arc7_center, arc7_radius, wiggle_thickness)&amp;#10;wiggle_arc8 = create_wiggle_arc(arc8_center, arc8_radius, wiggle_thickness)&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="camera_offset_x = 0" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="&amp;#10;# Update the camera offset based on Dino's X position&amp;#10;camera_offset_x += camera_speed  # The camera offset follows Dino's position&amp;#10;&amp;#10;# Move backgrounds relative to Dino's position (seamless wrap-around)&amp;#10;background1.pos = [-(camera_offset_x % background_width), 0]&amp;#10;background2.pos = [background1.pos[0] + background_width, 0]&amp;#10;&amp;#10;# Update floor positions relative to Dino's position&amp;#10;floor1.pos = [floor1_pos[0] - camera_offset_x, floor1.pos[1]]&amp;#10;floor2.pos = [floor2_x_static - camera_offset_x, floor2.pos[1]]  # Floor2 moves with Dino&amp;#10;&amp;#10;&amp;#10;# Update meatbone position to match floor2's top&amp;#10;meatbone_x = floor2.pos[0]  # Update X position based on floor2&amp;#10;meatbone_y = floor2_top + (meatbone_size[1] / 2) - offset  # Keep the meatbone on top of floor2&amp;#10;meatbone_image.pos = [meatbone_x, meatbone_y]&amp;#10;&amp;#10;&amp;#10;# Update the arc position relative to the camera offset&amp;#10;# Update Arc 1 Position&amp;#10;arc1.pos = [arc1_center[0] - camera_offset_x, arc1_center[1]]&amp;#10;wiggle_arc1.pos = arc1.pos  # Keep wiggle room on top&amp;#10;&amp;#10;# Update Arc 2 Position&amp;#10;arc2.pos = [arc2_center[0] - camera_offset_x, arc2_center[1]]&amp;#10;wiggle_arc2.pos = arc2.pos  # Keep wiggle room on top&amp;#10;arc3.pos = [arc3_center[0] - camera_offset_x, arc3_center[1]]&amp;#10;wiggle_arc3.pos = arc3.pos  # Keep wiggle room on top&amp;#10;# Update Arc 4 Position&amp;#10;arc4.pos = [arc4_center[0] - camera_offset_x, arc4_center[1]]&amp;#10;wiggle_arc4.pos = arc4.pos  # Keep wiggle room on top&amp;#10;# Update Arc 5 Position&amp;#10;arc5.pos = [arc5_center[0] - camera_offset_x, arc5_center[1]]&amp;#10;wiggle_arc5.pos = arc5.pos  # Keep wiggle room on top&amp;#10;&amp;#10;arc6.pos = [arc6_center[0] - camera_offset_x, arc6_center[1]]&amp;#10;wiggle_arc6.pos = arc6.pos&amp;#10;&amp;#10;# Update Arc 7 Position&amp;#10;arc7.pos = [arc7_center[0] - camera_offset_x, arc7_center[1]]&amp;#10;wiggle_arc7.pos = arc7.pos&amp;#10;&amp;#10;# Update Arc 8 Position&amp;#10;arc8.pos = [arc8_center[0] - camera_offset_x, arc8_center[1]]&amp;#10;wiggle_arc8.pos = arc8.pos&amp;#10;&amp;#10;&amp;#10;&amp;#10;# Draw the backgrounds and floors&amp;#10;background1.draw()&amp;#10;background2.draw()&amp;#10;floor1.draw()&amp;#10;floor2.draw()&amp;#10;wiggle_arc1.draw()&amp;#10;wiggle_arc2.draw()&amp;#10;wiggle_arc3.draw()&amp;#10;wiggle_arc4.draw()&amp;#10;wiggle_arc5.draw()&amp;#10;wiggle_arc6.draw()&amp;#10;wiggle_arc7.draw()&amp;#10;wiggle_arc8.draw()&amp;#10;&amp;#10;&amp;#10;arc1.draw()&amp;#10;arc2.draw()&amp;#10;arc3.draw()&amp;#10;arc4.draw()&amp;#10;arc5.draw()&amp;#10;arc6.draw()&amp;#10;arc7.draw()&amp;#10;arc8.draw()&amp;#10;&amp;#10;# Draw the trail dots&amp;#10;for dot in trail_dots:&amp;#10;    dot.draw()&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="worldController" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <CodeComponent name="GoalController" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="&amp;#10;meatbone_collided = False  # Track whether the meatbone has been stomped&amp;#10;arc1_touched_vertices = []&amp;#10;arc2_touched_vertices = []&amp;#10;arc3_touched_vertices = []&amp;#10;arc4_touched_vertices = []&amp;#10;arc5_touched_vertices = []&amp;#10;arc6_touched_vertices = []&amp;#10;arc7_touched_vertices = []&amp;#10;arc8_touched_vertices = []&amp;#10;&amp;#10;touch_threshold = 0.04 # touch threshold for the arcs&amp;#10;&amp;#10;meat_collision_threshold = 0.1  # You can adjust this to fit your game scale&amp;#10;&amp;#10;&amp;#10;# Track if Dino is in the wiggle room defualt is not touching so false&amp;#10;wiggle_room = False  &amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="score = 0  # Reset the score&amp;#10;arc1_touched_vertices = []&amp;#10;arc2_touched_vertices = []&amp;#10;arc3_touched_vertices = []&amp;#10;arc4_touched_vertices = []&amp;#10;arc5_touched_vertices = []&amp;#10;meatbone_collided = False&amp;#10;meatbone_image.opacity = 1&amp;#10;&amp;#10;wiggle_room = False  &amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="dino_relative_x = dino_pos[0] - camera_offset_x&amp;#10;dino_relative_y = dino_pos[1]&amp;#10;# Check for collision based on proximity to the updated position&amp;#10;dx = dino_relative_x - meatbone_x&amp;#10;dy = dino_relative_y - meatbone_y&amp;#10;&amp;#10;if camera_offset_x &gt;= max_x:&amp;#10;    lose_sound.play()&amp;#10;    continueRoutine = False  # Ends the current routine&amp;#10;    &amp;#10;if dino_relative_x &lt; -0.8 or dino_relative_x &gt; 0.8:  # Adjust bounds based on screen width&amp;#10;    lose_sound.play()&amp;#10;    continueRoutine = False  # Ends the current routine&amp;#10;&amp;#10;# Check for collision for meatbone&amp;#10;if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 &lt;= meat_collision_threshold:&amp;#10;    print(&quot;Dino ate the meatbone!&quot;)&amp;#10;    meatbone_image.opacity = 0  # Make the meatbone disappear&amp;#10;    meatbone_collided = True  # Prevent further collision checks&amp;#10;    eat_sound.play()&amp;#10;    continueRoutine = False&amp;#10;&amp;#10;&amp;#10;# Check for collision for ARCS&amp;#10;for vertex in arc1_vertices:&amp;#10;    # Adjust Arc 1 vertex for its X-offset (+1)&amp;#10;    adjusted_vertex_x = vertex[0] + arc1_x   # Move Arc 1 vertices by 1 unit to the right&amp;#10;    adjusted_vertex_y = vertex[1] + reg_arc # Y remains unchanged, apply the same adjustment as Arc 2 if needed&amp;#10;&amp;#10;    # Calculate distance between Dino and the adjusted vertex of Arc 1&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;    &amp;#10;    # Check if Dino is close enough to &quot;touch&quot; the adjusted vertex&amp;#10;    if distance &lt;= touch_threshold and vertex not in arc1_touched_vertices:&amp;#10;        arc1_touched_vertices.append(vertex)&amp;#10;        score += 1  # Increment the score for Arc 1&amp;#10;&amp;#10;&amp;#10;for vertex in arc2_vertices:&amp;#10;    # Adjust Arc 2 vertex for its X-offset (+2)&amp;#10;    adjusted_vertex_x = vertex[0] + arc2_x   # Move Arc 2 vertices by 2 units to the right&amp;#10;    adjusted_vertex_y = vertex[1] + low_arc # Y remains unchanged&amp;#10;    &amp;#10;    # Calculate distance between Dino and the adjusted vertex of Arc 2&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;    &amp;#10;    # Check if Dino is close enough to &quot;touch&quot; the adjusted vertex&amp;#10;    if distance &lt;= touch_threshold and vertex not in arc2_touched_vertices:&amp;#10;        arc2_touched_vertices.append(vertex)&amp;#10;        score += 1  # Increment the score for Arc 2&amp;#10;        &amp;#10;        &amp;#10;for vertex in arc3_vertices:&amp;#10;    # Adjust Arc 3 vertex for its static X-offset&amp;#10;    adjusted_vertex_x = vertex[0] + arc3_x   # Offset Arc 3 vertices by 3.5 units to the right&amp;#10;    adjusted_vertex_y = vertex[1] + high_arc  # Offset Arc 3 vertices by -0.2 units vertically&amp;#10;&amp;#10;    # Calculate distance between Dino and the adjusted vertex of Arc 3&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;&amp;#10;    # Check if Dino is close enough to &quot;touch&quot; the adjusted vertex&amp;#10;    if distance &lt;= touch_threshold and vertex not in arc3_touched_vertices:&amp;#10;        arc3_touched_vertices.append(vertex)&amp;#10;        score += 1  # Increment the score for Arc 3&amp;#10;        &amp;#10;for vertex in arc4_vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc4_x   # Offset Arc 4 vertices&amp;#10;    adjusted_vertex_y = vertex[1] + low_arc  # Y position remains the same&amp;#10;&amp;#10;    # Calculate distance between Dino and Arc 4&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;&amp;#10;    # If Dino is close enough, count as a touch&amp;#10;    if distance &lt;= touch_threshold and vertex not in arc4_touched_vertices:&amp;#10;        arc4_touched_vertices.append(vertex)&amp;#10;        score += 1  # Increment score&amp;#10;&amp;#10;for vertex in arc5_vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc5_x   # Offset Arc 5 vertices&amp;#10;    adjusted_vertex_y = vertex[1] + reg_arc  # Y position remains the same&amp;#10;&amp;#10;    # Calculate distance between Dino and Arc 5&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;&amp;#10;    # If Dino is close enough, count as a touch&amp;#10;    if distance &lt;= touch_threshold and vertex not in arc5_touched_vertices:&amp;#10;        arc5_touched_vertices.append(vertex)&amp;#10;        score += 1  # Increment score&amp;#10;&amp;#10;for vertex in arc6_vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc6_x &amp;#10;    adjusted_vertex_y = vertex[1] + high_arc&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;    if distance &lt;= touch_threshold and vertex not in arc6_touched_vertices:&amp;#10;        arc6_touched_vertices.append(vertex)&amp;#10;        score += 1&amp;#10;&amp;#10;# Arc 7 touch detection&amp;#10;for vertex in arc7_vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc7_x &amp;#10;    adjusted_vertex_y = vertex[1] + arc7_center[1]&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;    if distance &lt;= touch_threshold and vertex not in arc7_touched_vertices:&amp;#10;        arc7_touched_vertices.append(vertex)&amp;#10;        score += 1&amp;#10;&amp;#10;# Arc 8 touch detection&amp;#10;for vertex in arc8_vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc8_x &amp;#10;    adjusted_vertex_y = vertex[1] + arc8_center[1]&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;    if distance &lt;= touch_threshold and vertex not in arc8_touched_vertices:&amp;#10;        arc8_touched_vertices.append(vertex)&amp;#10;        score += 1&amp;#10;&amp;#10;# WIGGLE ROOM STUFF&amp;#10;&amp;#10;&amp;#10;# Reset to false at the start of each frame&amp;#10;wiggle_room = False  &amp;#10;for vertex in wiggle_arc1.vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc1_x &amp;#10;    adjusted_vertex_y = vertex[1] + reg_arc &amp;#10;&amp;#10;    # Calculate distance between Dino and wiggle room vertex&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;&amp;#10;    # If Dino is inside the wiggle room, set to False&amp;#10;    if distance &lt;= touch_threshold:&amp;#10;        wiggle_room = True  &amp;#10;        break  # No need to check further, Dino is inside&amp;#10;        &amp;#10;        &amp;#10;for vertex in wiggle_arc2.vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc2_x &amp;#10;    adjusted_vertex_y = vertex[1] + low_arc&amp;#10;&amp;#10;    # Calculate distance between Dino and wiggle room vertex&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;&amp;#10;    # If Dino is inside the wiggle room, set to False&amp;#10;    if distance &lt;= touch_threshold:&amp;#10;        wiggle_room = True  &amp;#10;        break  # No need to check further, Dino is inside&amp;#10;        &amp;#10;        &amp;#10;        &amp;#10;for vertex in wiggle_arc3.vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc3_x &amp;#10;    adjusted_vertex_y = vertex[1] + high_arc&amp;#10;&amp;#10;    # Calculate distance between Dino and wiggle room vertex&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;&amp;#10;    # If Dino is inside the wiggle room, set to False&amp;#10;    if distance &lt;= touch_threshold:&amp;#10;        wiggle_room = True  &amp;#10;        break  # No need to check further, Dino is inside&amp;#10;&amp;#10;&amp;#10;for vertex in wiggle_arc4.vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc4_x   # Offset Arc 4 vertices&amp;#10;    adjusted_vertex_y = vertex[1] + low_arc&amp;#10;&amp;#10;    # Calculate distance between Dino and wiggle room vertex&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;&amp;#10;    # If Dino is inside the wiggle room, mark as safe&amp;#10;    if distance &lt;= touch_threshold:&amp;#10;        wiggle_room = True  &amp;#10;        break  # Stop checking once inside&amp;#10;&amp;#10;&amp;#10;for vertex in wiggle_arc5.vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc5_x   # Offset Arc 5 vertices&amp;#10;    adjusted_vertex_y = vertex[1] + reg_arc&amp;#10;&amp;#10;    # Calculate distance between Dino and wiggle room vertex&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;&amp;#10;    # If Dino is inside the wiggle room, mark as safe&amp;#10;    if distance &lt;= touch_threshold:&amp;#10;        wiggle_room = True  &amp;#10;        break  # Stop checking once inside&amp;#10;        &amp;#10;for vertex in wiggle_arc6.vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc6_x &amp;#10;    adjusted_vertex_y = vertex[1] + high_arc&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;    if distance &lt;= touch_threshold:&amp;#10;        wiggle_room = True&amp;#10;        break&amp;#10;# Arc 7 wiggle room&amp;#10;for vertex in wiggle_arc7.vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc7_x &amp;#10;    adjusted_vertex_y = vertex[1] + arc7_center[1]&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;    if distance &lt;= touch_threshold:&amp;#10;        wiggle_room = True&amp;#10;        break&amp;#10;&amp;#10;# Arc 8 wiggle room&amp;#10;for vertex in wiggle_arc8.vertices:&amp;#10;    adjusted_vertex_x = vertex[0] + arc8_x &amp;#10;    adjusted_vertex_y = vertex[1] + arc8_center[1]&amp;#10;    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5&amp;#10;    if distance &lt;= touch_threshold:&amp;#10;        wiggle_room = True&amp;#10;        break&amp;#10;&amp;#10;        &amp;#10;        &amp;#10;score_text.text = str(score) # update Score&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="global total_touched_vertices, total_possible_vertices&amp;#10;total_touched_vertices = (&amp;#10;    len(arc1_touched_vertices) + len(arc2_touched_vertices) + len(arc3_touched_vertices) +&amp;#10;    len(arc4_touched_vertices) + len(arc5_touched_vertices) + len(arc6_touched_vertices) +&amp;#10;    len(arc7_touched_vertices) + len(arc8_touched_vertices)&amp;#10;)&amp;#10;&amp;#10;total_possible_vertices = (&amp;#10;    len(arc1_vertices) + len(arc2_vertices) + len(arc3_vertices) +&amp;#10;    len(arc4_vertices) + len(arc5_vertices) + len(arc6_vertices) +&amp;#10;    len(arc7_vertices) + len(arc8_vertices)&amp;#10;)&amp;#10;&amp;#10;score = 0" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="GoalController" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <CodeComponent name="Timer" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="level_timer = core.Clock()  # Initialize the timer&amp;#10;time_limit = 120  # Set the time limit in seconds (2 minutes)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="&amp;#10;level_timer.reset()  # Reset the timer at the start of the MainGame routine&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="# Calculate remaining time&amp;#10;time_remaining = time_limit - level_timer.getTime()&amp;#10;&amp;#10;# Check if time is up&amp;#10;if time_remaining &lt;= 0:&amp;#10;    print(&quot;Time's up! Returning to MainMenu.&quot;)&amp;#10;    continueRoutine = False  # End the MainGame routine&amp;#10;    time_remaining = 0  # Prevent negative time display&amp;#10;&amp;#10;# Format the timer as MM:SS&amp;#10;minutes = int(time_remaining) // 60&amp;#10;seconds = int(time_remaining) % 60&amp;#10;&amp;#10;# Update the timer display&amp;#10;timer_text.text = str(f&quot;{minutes}:{seconds:02d}&quot;)&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="Timer" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <SoundComponent name="lose_sound" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="hamming"/>
+        <Param val="lose_sound" valType="code" updates="None" name="name"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="Assets/sounds/lose.mp3" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="constant" name="stopWithRoutine"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+        <Param val="1" valType="num" updates="constant" name="volume"/>
+      </SoundComponent>
+      <SoundComponent name="win_sound" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="hamming"/>
+        <Param val="win_sound" valType="code" updates="None" name="name"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="Assets/sounds/win.mp3" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="constant" name="stopWithRoutine"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+        <Param val="1" valType="num" updates="constant" name="volume"/>
+      </SoundComponent>
+      <SoundComponent name="eat_sound" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="hamming"/>
+        <Param val="eat_sound" valType="code" updates="None" name="name"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="Assets/sounds/eat.mp3" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="constant" name="stopWithRoutine"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+        <Param val="1" valType="num" updates="constant" name="volume"/>
+      </SoundComponent>
+    </Routine>
+    <Routine name="Level_2">
+      <RoutineSettingsComponent name="Level_2" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="Level_2" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="text" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1.0" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="level2 2" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
     </Routine>
   </Routines>
   <Flow>
@@ -1032,8 +1148,21 @@
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
     <Routine name="MainMenu"/>
-    <Routine name="MainGame"/>
-    <Routine name="EndGameScreen"/>
+    <LoopInitiator loopType="TrialHandler" name="Level_1_Loop">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="False" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="1000" valType="num"/>
+      <Param name="name" updates="None" val="Level_1_Loop" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="Level_1"/>
+    <Routine name="Level_1_checker"/>
+    <LoopTerminator name="Level_1_Loop"/>
+    <Routine name="Level_2"/>
     <LoopTerminator name="GameLoop"/>
   </Flow>
 </PsychoPy2experiment>
