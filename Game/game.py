@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 17, 2025, at 18:40
+    on April 21, 2025, at 21:37
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -128,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='D:\\Users\\areya\\Desktop\\work\\motor-learning-research-project\\Game\\game.py',
+        originPath='D:\\Users\\areya\\Desktop\\work\\Motor-Learning-Research-Project\\Game\\game.py',
         savePickle=True, saveWideText=False,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -671,7 +671,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Camera variables
     camera_offset_x = 0  # Tracks the camera offset to follow Dino
-    camera_speed = 0.009  # Adjust this speed as needed 0.003
+    camera_speed = 0.003  # Adjust this speed as needed 0.003
     # Background properties
     background_width = 2.0  # Width of a single background image
     background_height = 1.0
@@ -696,7 +696,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     floor1_vertices = calculate_rect_vertices(floor1)
     
     # Floor2 properties - Place it further into the map
-    floor2_x_static = 18.5  # Fixed X position where floor2 appears
+    floor2_x_static = 1  # Fixed X position where floor2 appears18.5
     floor2_height = 0.3
     floor2_width = 0.5
     
@@ -984,7 +984,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from GoalController
     
     meatbone_collided = False  # Track whether the meatbone has been stomped
-    score = 0
     arc1_touched_vertices = []
     arc2_touched_vertices = []
     arc3_touched_vertices = []
@@ -2557,7 +2556,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 len(arc7_vertices) + len(arc8_vertices)
             )
             
-            
+            score = 0
             # the Routine "Level_1" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             

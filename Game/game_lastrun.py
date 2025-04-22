@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 17, 2025, at 18:43
+    on April 22, 2025, at 01:58
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -128,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='D:\\Users\\areya\\Desktop\\work\\motor-learning-research-project\\Game\\game_lastrun.py',
+        originPath='D:\\Users\\areya\\Desktop\\work\\Motor-Learning-Research-Project\\Game\\game_lastrun.py',
         savePickle=True, saveWideText=False,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -253,15 +253,21 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    # create speaker 'eat_sound'
+    deviceManager.addDevice(
+        deviceName='eat_sound',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
     # create speaker 'win_sound'
     deviceManager.addDevice(
         deviceName='win_sound',
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
-    # create speaker 'eat_sound'
+    # create speaker 'fail_sound'
     deviceManager.addDevice(
-        deviceName='eat_sound',
+        deviceName='fail_sound',
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
@@ -671,7 +677,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Camera variables
     camera_offset_x = 0  # Tracks the camera offset to follow Dino
-    camera_speed = 0.009  # Adjust this speed as needed 0.003
+    camera_speed = 0.003  # Adjust this speed as needed 0.003
     # Background properties
     background_width = 2.0  # Width of a single background image
     background_height = 1.0
@@ -696,7 +702,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     floor1_vertices = calculate_rect_vertices(floor1)
     
     # Floor2 properties - Place it further into the map
-    floor2_x_static = 18.5  # Fixed X position where floor2 appears
+    floor2_x_static = 1  # Fixed X position where floor2 appears18.5
     floor2_height = 0.3
     floor2_width = 0.5
     
@@ -1014,14 +1020,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='lose_sound',    name='lose_sound'
     )
     lose_sound.setVolume(1.0)
-    win_sound = sound.Sound(
-        'A', 
-        secs=-1, 
-        stereo=True, 
-        hamming=True, 
-        speaker='win_sound',    name='win_sound'
-    )
-    win_sound.setVolume(1.0)
     eat_sound = sound.Sound(
         'A', 
         secs=-1, 
@@ -1039,6 +1037,22 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
+    win_sound = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='win_sound',    name='win_sound'
+    )
+    win_sound.setVolume(1.0)
+    fail_sound = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='fail_sound',    name='fail_sound'
+    )
+    fail_sound.setVolume(1.0)
     
     # --- Initialize components for Routine "Level_2" ---
     text = visual.TextStim(win=win, name='text',
@@ -1852,7 +1866,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_1
             Level_1 = data.Routine(
                 name='Level_1',
-                components=[dino_image, floor1, floor2, meatbone_image, score_text, timer_text, lose_sound, win_sound, eat_sound],
+                components=[dino_image, floor1, floor2, meatbone_image, score_text, timer_text, lose_sound, eat_sound],
             )
             Level_1.status = NOT_STARTED
             continueRoutine = True
@@ -1888,9 +1902,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             lose_sound.setSound('Assets/sounds/lose.mp3', hamming=True)
             lose_sound.setVolume(1.0, log=False)
             lose_sound.seek(0)
-            win_sound.setSound('Assets/sounds/win.mp3', hamming=True)
-            win_sound.setVolume(1.0, log=False)
-            win_sound.seek(0)
             eat_sound.setSound('Assets/sounds/eat.mp3', hamming=True)
             eat_sound.setVolume(1.0, log=False)
             eat_sound.seek(0)
@@ -2249,7 +2260,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     eat_sound.play()
                     continueRoutine = False
                 
-                
                 # Check for collision for ARCS
                 for vertex in arc1_vertices:
                     # Adjust Arc 1 vertex for its X-offset (+1)
@@ -2474,19 +2484,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         lose_sound.status = FINISHED
                         lose_sound.stop()
                 
-                # *win_sound* updates
-                
-                # if win_sound is stopping this frame...
-                if win_sound.status == STARTED:
-                    if bool(False) or win_sound.isFinished:
-                        # keep track of stop time/frame for later
-                        win_sound.tStop = t  # not accounting for scr refresh
-                        win_sound.tStopRefresh = tThisFlipGlobal  # on global time
-                        win_sound.frameNStop = frameN  # exact frame index
-                        # update status
-                        win_sound.status = FINISHED
-                        win_sound.stop()
-                
                 # *eat_sound* updates
                 
                 # if eat_sound is stopping this frame...
@@ -2512,7 +2509,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         thisExp=thisExp, 
                         win=win, 
                         timers=[routineTimer], 
-                        playbackComponents=[lose_sound, win_sound, eat_sound]
+                        playbackComponents=[lose_sound, eat_sound]
                     )
                     # skip the frame we paused on
                     continue
@@ -2564,13 +2561,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_1_checker
             Level_1_checker = data.Routine(
                 name='Level_1_checker',
-                components=[end_score_text],
+                components=[end_score_text, win_sound, fail_sound],
             )
             Level_1_checker.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
             # Run 'Begin Routine' code from code_3
-            
+            import csv
             # Calculate the percentage
             if total_possible_vertices > 0:
                 percentage = (total_touched_vertices / total_possible_vertices) * 100
@@ -2583,11 +2580,16 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 f"{percentage:.2f}%"
             )
             
+            # Start 3 second timer
+            end_screen_timer = core.CountdownTimer(3)
             
-            if percentage >= win_threshold and meatbone_collided:
-                Level_1_Loop.finished = True  # Player passed both requirements → go to next level
-            else:
-                Level_1_Loop.finished = False  # Retry level
+            
+            win_sound.setSound('Assets/sounds/win.mp3', hamming=True)
+            win_sound.setVolume(1.0, log=False)
+            win_sound.seek(0)
+            fail_sound.setSound('Assets/sounds/lose.mp3', hamming=True)
+            fail_sound.setVolume(1.0, log=False)
+            fail_sound.seek(0)
             # store start times for Level_1_checker
             Level_1_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_1_checker.tStart = globalClock.getTime(format='float')
@@ -2613,7 +2615,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if isinstance(Level_1_Loop, data.TrialHandler2) and thisLevel_1_Loop.thisN != Level_1_Loop.thisTrial.thisN:
                 continueRoutine = False
             Level_1_checker.forceEnded = routineForceEnded = not continueRoutine
-            while continueRoutine and routineTimer.getTime() < 3.0:
+            while continueRoutine:
                 # get current time
                 t = routineTimer.getTime()
                 tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -2638,21 +2640,37 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text.status == STARTED:
                     # update params
                     pass
-                
-                # if end_score_text is stopping this frame...
-                if end_score_text.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > end_score_text.tStartRefresh + 3-frameTolerance:
-                        # keep track of stop time/frame for later
-                        end_score_text.tStop = t  # not accounting for scr refresh
-                        end_score_text.tStopRefresh = tThisFlipGlobal  # on global time
-                        end_score_text.frameNStop = frameN  # exact frame index
-                        # update status
-                        end_score_text.status = FINISHED
-                        end_score_text.setAutoDraw(False)
                 # Run 'Each Frame' code from code_3
+                # Keep showing the end screen until 3 seconds pass
+                if end_screen_timer.getTime() <= 0:
+                    continueRoutine = False
                 
                 
+                # *win_sound* updates
+                
+                # if win_sound is stopping this frame...
+                if win_sound.status == STARTED:
+                    if bool(False) or win_sound.isFinished:
+                        # keep track of stop time/frame for later
+                        win_sound.tStop = t  # not accounting for scr refresh
+                        win_sound.tStopRefresh = tThisFlipGlobal  # on global time
+                        win_sound.frameNStop = frameN  # exact frame index
+                        # update status
+                        win_sound.status = FINISHED
+                        win_sound.stop()
+                
+                # *fail_sound* updates
+                
+                # if fail_sound is stopping this frame...
+                if fail_sound.status == STARTED:
+                    if bool(False) or fail_sound.isFinished:
+                        # keep track of stop time/frame for later
+                        fail_sound.tStop = t  # not accounting for scr refresh
+                        fail_sound.tStopRefresh = tThisFlipGlobal  # on global time
+                        fail_sound.frameNStop = frameN  # exact frame index
+                        # update status
+                        fail_sound.status = FINISHED
+                        fail_sound.stop()
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2666,7 +2684,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         thisExp=thisExp, 
                         win=win, 
                         timers=[routineTimer], 
-                        playbackComponents=[]
+                        playbackComponents=[win_sound, fail_sound]
                     )
                     # skip the frame we paused on
                     continue
@@ -2694,9 +2712,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             Level_1_checker.tStopRefresh = tThisFlipGlobal
             thisExp.addData('Level_1_checker.stopped', Level_1_checker.tStop)
             # Run 'End Routine' code from code_3
-            import csv
             total_touched_vertices = 0
-            score = 0
             meatbone_collided = True
             
             thisExp.addData('Participant ID', expInfo['participant'])
@@ -2710,13 +2726,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 writer = csv.writer(file)
                 writer.writerow(['Participant ID', 'Session', 'Date', 'Score', 'Percentage'])
                 writer.writerow([expInfo['participant'], expInfo['session'], expInfo['date'], total_touched_vertices, percentage])
-            # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-            if Level_1_checker.maxDurationReached:
-                routineTimer.addTime(-Level_1_checker.maxDuration)
-            elif Level_1_checker.forceEnded:
-                routineTimer.reset()
+                
+            
+            # Decide pass/fail and play correct sound
+            if percentage >= win_threshold and meatbone_collided:
+                Level_1_Loop.finished = True
+                win_sound.play()
             else:
-                routineTimer.addTime(-3.000000)
+                Level_1_Loop.finished = False
+                fail_sound.play()
+            
+            # the Routine "Level_1_checker" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
         # completed 1000.0 repeats of 'Level_1_Loop'
         
         
