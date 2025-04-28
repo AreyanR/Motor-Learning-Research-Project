@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 27, 2025, at 20:53
+    on April 28, 2025, at 16:38
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -728,7 +728,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     floor1_vertices = calculate_rect_vertices(floor1_L1)
     
     # floor2_L1 properties - Place it further into the map
-    floor2_x_static = 1  # Fixed X position where floor2_L1 appears18.5
+    floor2_x_static = 18.5  # Fixed X position where floor2_L1 appears18.5
     floor2_height = 0.3
     floor2_width = 0.5
     
@@ -736,7 +736,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win=win,
         image=dirt_texture,
         size=(floor2_width, floor2_height),  # Set the size to match the floor dimensions
-        pos=[floor2_x_static, -0.5],  # Position of floor2_L1
+        pos=[floor2_x_static, -0.5],  # Position of floor2_L1 
         interpolate=True
     )
     floor2_vertices = calculate_rect_vertices(floor2_L1)
@@ -1305,7 +1305,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     floor1_vertices = calculate_rect_vertices(floor1_L2)
     
     # floor2_L2 properties - Place it further into the map
-    floor2_x_static = 1  # Fixed X position where floor2_L2 appears18.5
+    floor2_x_static = 18.5  # Fixed X position where floor2_L2 appears18.5
     floor2_height = 0.3
     floor2_width = 0.5
     
@@ -1343,15 +1343,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 2 Properties
     arc2_L2_x = 1.0
-    arc2_L2_center = [arc2_L2_x, low_arc]
-    arc2_L2_radius = med_arc_size
+    arc2_L2_center = [arc2_L2_x, reg_arc]
+    arc2_L2_radius = large_arc_size
     arc2_L2_start_angle = 0
     arc2_L2_end_angle = 180
     
     # Arc 3 Properties
     arc3_L2_x = 2.2
     arc3_L2_center = [arc3_L2_x, high_arc]
-    arc3_L2_radius = large_arc_size
+    arc3_L2_radius = med_arc_size
     arc3_L2_start_angle = 0
     arc3_L2_end_angle = 180
     
@@ -1385,7 +1385,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 8 Properties
     arc8_L2_x = 8.5
-    arc8_L2_center = [arc8_L2_x, high_arc]
+    arc8_L2_center = [arc8_L2_x, reg_arc]
     arc8_L2_radius = med_arc_size
     arc8_L2_start_angle = 0
     arc8_L2_end_angle = 180
@@ -1541,7 +1541,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         fillColor=None
     )
     
-    def create_wiggle_arc(center, radius, thickness, color='blue', opacity=0.5):
+    def create_wiggle_arc(center, radius, thickness, color='red', opacity=0.5):
         """Generate a thick wiggle room arc for a given arc."""
         outer_arc_vertices = []
         inner_arc_vertices = []
@@ -3789,7 +3789,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 for vertex in arc2_L2_vertices:
                     # Adjust Arc 2 vertex for its X-offset (+2)
                     adjusted_vertex_x = vertex[0] + arc2_L2_x   # Move Arc 2 vertices by 2 units to the right
-                    adjusted_vertex_y = vertex[1] + low_arc # Y remains unchanged
+                    adjusted_vertex_y = vertex[1] + reg_arc # Y remains unchanged
                     
                     # Calculate distance between Dino and the adjusted vertex of Arc 2
                     distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
@@ -3848,7 +3848,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # Arc 7 touch detection
                 for vertex in arc7_L2_vertices:
                     adjusted_vertex_x = vertex[0] + arc7_L2_x 
-                    adjusted_vertex_y = vertex[1] + arc7_L2_center[1]
+                    adjusted_vertex_y = vertex[1] + low_arc
                     distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
                     if distance <= touch_threshold_L2 and vertex not in arc7_touched_vertices_L2:
                         arc7_touched_vertices_L2.append(vertex)
@@ -3857,7 +3857,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # Arc 8 touch detection
                 for vertex in arc8_L2_vertices:
                     adjusted_vertex_x = vertex[0] + arc8_L2_x 
-                    adjusted_vertex_y = vertex[1] + arc8_L2_center[1]
+                    adjusted_vertex_y = vertex[1] + reg_arc
                     distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
                     if distance <= touch_threshold_L2 and vertex not in arc8_touched_vertices_L2:
                         arc8_touched_vertices_L2.append(vertex)
@@ -3870,7 +3870,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 wiggle_room = False  
                 for vertex in wiggle_arc1_L2.vertices:
                     adjusted_vertex_x = vertex[0] + arc1_L2_x 
-                    adjusted_vertex_y = vertex[1] + reg_arc 
+                    adjusted_vertex_y = vertex[1] + low_arc 
                 
                     # Calculate distance between Dino and wiggle room vertex
                     distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
@@ -3883,7 +3883,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         
                 for vertex in wiggle_arc2_L2.vertices:
                     adjusted_vertex_x = vertex[0] + arc2_L2_x 
-                    adjusted_vertex_y = vertex[1] + low_arc
+                    adjusted_vertex_y = vertex[1] + reg_arc
                 
                     # Calculate distance between Dino and wiggle room vertex
                     distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
@@ -3943,7 +3943,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # Arc 7 wiggle room
                 for vertex in wiggle_arc7_L2.vertices:
                     adjusted_vertex_x = vertex[0] + arc7_L2_x 
-                    adjusted_vertex_y = vertex[1] + arc7_L2_center[1]
+                    adjusted_vertex_y = vertex[1] + low_arc
                     distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
                     if distance <= touch_threshold_L2:
                         wiggle_room = True
@@ -3952,7 +3952,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # Arc 8 wiggle room
                 for vertex in wiggle_arc8_L2.vertices:
                     adjusted_vertex_x = vertex[0] + arc8_L2_x 
-                    adjusted_vertex_y = vertex[1] + arc8_L2_center[1]
+                    adjusted_vertex_y = vertex[1] + reg_arc
                     distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
                     if distance <= touch_threshold_L2:
                         wiggle_room = True
