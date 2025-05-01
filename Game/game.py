@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 27, 2025, at 20:54
+    on April 30, 2025, at 16:31
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -32,6 +32,9 @@ import sys  # to get file system encoding
 
 import psychopy.iohub as io
 from psychopy.hardware import keyboard
+
+# Run 'Before Experiment' code from AboutCode
+
 
 # Run 'Before Experiment' code from DinoMovement_L1
 Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
@@ -436,59 +439,73 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     start_button = visual.Rect(
         win=win, name='start_button',
         width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
-        ori=0.0, pos=(0, 0), draggable=False, anchor='center',
+        ori=0.0, pos=(0, 0.1), draggable=False, anchor='center',
         lineWidth=1.0,
         colorSpace='rgb', lineColor='white', fillColor=None,
         opacity=None, depth=-1.0, interpolate=True)
     StartGame = visual.TextStim(win=win, name='StartGame',
         text='Start Game',
         font='Arial',
-        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, 0.1), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
+    about_button = visual.Rect(
+        win=win, name='about_button',
+        width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
+        ori=0.0, pos=(0, 0), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor='white', fillColor=None,
+        opacity=None, depth=-3.0, interpolate=True)
+    about = visual.TextStim(win=win, name='about',
+        text='About',
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-4.0);
     exit_button = visual.Rect(
         win=win, name='exit_button',
         width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
         ori=0.0, pos=(0, -.3), draggable=False, anchor='center',
         lineWidth=1.0,
         colorSpace='rgb', lineColor='white', fillColor=None,
-        opacity=None, depth=-3.0, interpolate=True)
+        opacity=None, depth=-5.0, interpolate=True)
     Exit = visual.TextStim(win=win, name='Exit',
         text='Exit',
         font='Arial',
         pos=(0, -.3), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-4.0);
+        depth=-6.0);
     controller_selection = visual.Rect(
         win=win, name='controller_selection',
         width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
         ori=0.0, pos=(0, -.1), draggable=False, anchor='center',
         lineWidth=1.0,
         colorSpace='rgb', lineColor='white', fillColor=None,
-        opacity=None, depth=-5.0, interpolate=True)
+        opacity=None, depth=-7.0, interpolate=True)
     control_feedback = visual.TextStim(win=win, name='control_feedback',
         text='Controller',
         font='Arial',
         pos=(0, -.1), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-6.0);
+        depth=-8.0);
     mode_feedback = visual.TextStim(win=win, name='mode_feedback',
         text='Mode: ',
         font='Arial',
         pos=(0, -.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-7.0);
+        depth=-9.0);
     mode_button = visual.Rect(
         win=win, name='mode_button',
         width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
         ori=0.0, pos=(0, -.2), draggable=False, anchor='center',
         lineWidth=1.0,
         colorSpace='rgb', lineColor='white', fillColor=None,
-        opacity=None, depth=-8.0, interpolate=True)
+        opacity=None, depth=-10.0, interpolate=True)
     # Run 'Begin Experiment' code from code
     # Default control method
     # starts game in keyboard mode
@@ -497,11 +514,37 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     thisExp.savePickle = False
     thisExp.saveWideText = False  # stops saving the .csv or .tsv file
     
-    win_threshold = 10  # Percentage needed to win
+    win_threshold = 5  # Percentage needed to win
     
     mouse = event.Mouse(win=win)
     x, y = [None, None]
     mouse.mouseClock = core.Clock()
+    
+    # --- Initialize components for Routine "AboutScreen" ---
+    about_text = visual.TextStim(win=win, name='about_text',
+        text='about proj',
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    back_button = visual.Rect(
+        win=win, name='back_button',
+        width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
+        ori=0.0, pos=(0, 0), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor='white', fillColor=None,
+        opacity=None, depth=-1.0, interpolate=True)
+    back_text = visual.TextStim(win=win, name='back_text',
+        text='Back',
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-2.0);
+    mouse_2 = event.Mouse(win=win)
+    x, y = [None, None]
+    mouse_2.mouseClock = core.Clock()
     
     # --- Initialize components for Routine "Level_1" ---
     dino_image_L1 = visual.ImageStim(
@@ -671,7 +714,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     from psychopy.visual import Rect, ImageStim, ShapeStim
     import math
     
-    dirt_texture = 'Assets/ground1.png'
+    dirt_texture_L1 = 'Assets/ground1.png'
     
     #height factors for arcs (Y position)
     low_arc = -0.2  
@@ -720,7 +763,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     floor1_L1 = visual.ImageStim(
         win=win,
-        image=dirt_texture,
+        image=dirt_texture_L1,
         size=(floor1_width, floor1_height),  # Set the size to match the floor dimensions
         pos=floor1_pos,
         interpolate=True
@@ -734,9 +777,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     floor2_L1 = visual.ImageStim(
         win=win,
-        image=dirt_texture,
+        image=dirt_texture_L1,
         size=(floor2_width, floor2_height),  # Set the size to match the floor dimensions
-        pos=[floor2_x_static, -0.5],  # Position of floor2_L1
+        pos=[floor2_x_static, -0.5],  # Position of floor2_L1 
         interpolate=True
     )
     floor2_vertices = calculate_rect_vertices(floor2_L1)
@@ -1248,7 +1291,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     from psychopy.visual import Rect, ImageStim, ShapeStim
     import math
     
-    dirt_texture = 'Assets/ground1.png'
+    dirt_texture_L2 = 'Assets/ground1.png'
     
     #height factors for arcs (Y position)
     low_arc = -0.2  
@@ -1297,7 +1340,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     floor1_L2 = visual.ImageStim(
         win=win,
-        image=dirt_texture,
+        image=dirt_texture_L2,
         size=(floor1_width, floor1_height),  # Set the size to match the floor dimensions
         pos=floor1_pos,
         interpolate=True
@@ -1311,7 +1354,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     floor2_L2 = visual.ImageStim(
         win=win,
-        image=dirt_texture,
+        image=dirt_texture_L2,
         size=(floor2_width, floor2_height),  # Set the size to match the floor dimensions
         pos=[floor2_x_static, -0.5],  # Position of floor2_L2
         interpolate=True
@@ -1343,15 +1386,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 2 Properties
     arc2_L2_x = 1.0
-    arc2_L2_center = [arc2_L2_x, low_arc]
-    arc2_L2_radius = med_arc_size
+    arc2_L2_center = [arc2_L2_x, reg_arc]
+    arc2_L2_radius = large_arc_size
     arc2_L2_start_angle = 0
     arc2_L2_end_angle = 180
     
     # Arc 3 Properties
     arc3_L2_x = 2.2
     arc3_L2_center = [arc3_L2_x, high_arc]
-    arc3_L2_radius = large_arc_size
+    arc3_L2_radius = med_arc_size
     arc3_L2_start_angle = 0
     arc3_L2_end_angle = 180
     
@@ -1385,7 +1428,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 8 Properties
     arc8_L2_x = 8.5
-    arc8_L2_center = [arc8_L2_x, high_arc]
+    arc8_L2_center = [arc8_L2_x, reg_arc]
     arc8_L2_radius = med_arc_size
     arc8_L2_start_angle = 0
     arc8_L2_end_angle = 180
@@ -1541,7 +1584,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         fillColor=None
     )
     
-    def create_wiggle_arc(center, radius, thickness, color='blue', opacity=0.5):
+    def create_wiggle_arc(center, radius, thickness, color='red', opacity=0.5):
         """Generate a thick wiggle room arc for a given arc."""
         outer_arc_vertices = []
         inner_arc_vertices = []
@@ -2099,337 +2142,592 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             for paramName in thisGameLoop:
                 globals()[paramName] = thisGameLoop[paramName]
         
-        # --- Prepare to start Routine "MainMenu" ---
-        # create an object to store info about Routine MainMenu
-        MainMenu = data.Routine(
-            name='MainMenu',
-            components=[TitleText, start_button, StartGame, exit_button, Exit, controller_selection, control_feedback, mode_feedback, mode_button, mouse],
+        # set up handler to look after randomisation of conditions etc
+        menu_loop = data.TrialHandler2(
+            name='menu_loop',
+            nReps=999.0, 
+            method='sequential', 
+            extraInfo=expInfo, 
+            originPath=-1, 
+            trialList=[None], 
+            seed=None, 
         )
-        MainMenu.status = NOT_STARTED
-        continueRoutine = True
-        # update component parameters for each repeat
-        # Run 'Begin Routine' code from code
-        # Update the feedback button text to display the currently selected control method
-        control_feedback.text = f"Selected Control: {selected_control}"
-        mode_feedback.text = f"Mode: {selected_diff}"
-        # setup some python lists for storing info about the mouse
-        mouse.x = []
-        mouse.y = []
-        mouse.leftButton = []
-        mouse.midButton = []
-        mouse.rightButton = []
-        mouse.time = []
-        gotValidClick = False  # until a click is received
-        # store start times for MainMenu
-        MainMenu.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
-        MainMenu.tStart = globalClock.getTime(format='float')
-        MainMenu.status = STARTED
-        thisExp.addData('MainMenu.started', MainMenu.tStart)
-        MainMenu.maxDuration = None
-        # keep track of which components have finished
-        MainMenuComponents = MainMenu.components
-        for thisComponent in MainMenu.components:
-            thisComponent.tStart = None
-            thisComponent.tStop = None
-            thisComponent.tStartRefresh = None
-            thisComponent.tStopRefresh = None
-            if hasattr(thisComponent, 'status'):
-                thisComponent.status = NOT_STARTED
-        # reset timers
-        t = 0
-        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-        frameN = -1
+        thisExp.addLoop(menu_loop)  # add the loop to the experiment
+        thisMenu_loop = menu_loop.trialList[0]  # so we can initialise stimuli with some values
+        # abbreviate parameter names if possible (e.g. rgb = thisMenu_loop.rgb)
+        if thisMenu_loop != None:
+            for paramName in thisMenu_loop:
+                globals()[paramName] = thisMenu_loop[paramName]
         
-        # --- Run Routine "MainMenu" ---
-        # if trial has changed, end Routine now
-        if isinstance(GameLoop, data.TrialHandler2) and thisGameLoop.thisN != GameLoop.thisTrial.thisN:
-            continueRoutine = False
-        MainMenu.forceEnded = routineForceEnded = not continueRoutine
-        while continueRoutine:
-            # get current time
-            t = routineTimer.getTime()
-            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-            # update/draw components on each frame
+        for thisMenu_loop in menu_loop:
+            currentLoop = menu_loop
+            thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+            # abbreviate parameter names if possible (e.g. rgb = thisMenu_loop.rgb)
+            if thisMenu_loop != None:
+                for paramName in thisMenu_loop:
+                    globals()[paramName] = thisMenu_loop[paramName]
             
-            # *TitleText* updates
+            # --- Prepare to start Routine "MainMenu" ---
+            # create an object to store info about Routine MainMenu
+            MainMenu = data.Routine(
+                name='MainMenu',
+                components=[TitleText, start_button, StartGame, about_button, about, exit_button, Exit, controller_selection, control_feedback, mode_feedback, mode_button, mouse],
+            )
+            MainMenu.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from code
+            # Update the feedback button text to display the currently selected control method
+            control_feedback.text = f"Selected Control: {selected_control}"
+            mode_feedback.text = f"Mode: {selected_diff}"
             
-            # if TitleText is starting this frame...
-            if TitleText.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                TitleText.frameNStart = frameN  # exact frame index
-                TitleText.tStart = t  # local t and not account for scr refresh
-                TitleText.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(TitleText, 'tStartRefresh')  # time at next scr refresh
-                # update status
-                TitleText.status = STARTED
-                TitleText.setAutoDraw(True)
+            goto = 'MainMenu'
+            if goto != 'MainMenu':
+                continueRoutine = False
             
-            # if TitleText is active this frame...
-            if TitleText.status == STARTED:
-                # update params
-                pass
-            
-            # *start_button* updates
-            
-            # if start_button is starting this frame...
-            if start_button.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                start_button.frameNStart = frameN  # exact frame index
-                start_button.tStart = t  # local t and not account for scr refresh
-                start_button.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(start_button, 'tStartRefresh')  # time at next scr refresh
-                # update status
-                start_button.status = STARTED
-                start_button.setAutoDraw(True)
-            
-            # if start_button is active this frame...
-            if start_button.status == STARTED:
-                # update params
-                pass
-            
-            # *StartGame* updates
-            
-            # if StartGame is starting this frame...
-            if StartGame.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                StartGame.frameNStart = frameN  # exact frame index
-                StartGame.tStart = t  # local t and not account for scr refresh
-                StartGame.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(StartGame, 'tStartRefresh')  # time at next scr refresh
-                # update status
-                StartGame.status = STARTED
-                StartGame.setAutoDraw(True)
-            
-            # if StartGame is active this frame...
-            if StartGame.status == STARTED:
-                # update params
-                pass
-            
-            # *exit_button* updates
-            
-            # if exit_button is starting this frame...
-            if exit_button.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                exit_button.frameNStart = frameN  # exact frame index
-                exit_button.tStart = t  # local t and not account for scr refresh
-                exit_button.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(exit_button, 'tStartRefresh')  # time at next scr refresh
-                # update status
-                exit_button.status = STARTED
-                exit_button.setAutoDraw(True)
-            
-            # if exit_button is active this frame...
-            if exit_button.status == STARTED:
-                # update params
-                pass
-            
-            # *Exit* updates
-            
-            # if Exit is starting this frame...
-            if Exit.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                Exit.frameNStart = frameN  # exact frame index
-                Exit.tStart = t  # local t and not account for scr refresh
-                Exit.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(Exit, 'tStartRefresh')  # time at next scr refresh
-                # update status
-                Exit.status = STARTED
-                Exit.setAutoDraw(True)
-            
-            # if Exit is active this frame...
-            if Exit.status == STARTED:
-                # update params
-                pass
-            
-            # *controller_selection* updates
-            
-            # if controller_selection is starting this frame...
-            if controller_selection.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                controller_selection.frameNStart = frameN  # exact frame index
-                controller_selection.tStart = t  # local t and not account for scr refresh
-                controller_selection.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(controller_selection, 'tStartRefresh')  # time at next scr refresh
-                # update status
-                controller_selection.status = STARTED
-                controller_selection.setAutoDraw(True)
-            
-            # if controller_selection is active this frame...
-            if controller_selection.status == STARTED:
-                # update params
-                pass
-            
-            # *control_feedback* updates
-            
-            # if control_feedback is starting this frame...
-            if control_feedback.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                control_feedback.frameNStart = frameN  # exact frame index
-                control_feedback.tStart = t  # local t and not account for scr refresh
-                control_feedback.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(control_feedback, 'tStartRefresh')  # time at next scr refresh
-                # update status
-                control_feedback.status = STARTED
-                control_feedback.setAutoDraw(True)
-            
-            # if control_feedback is active this frame...
-            if control_feedback.status == STARTED:
-                # update params
-                pass
-            
-            # *mode_feedback* updates
-            
-            # if mode_feedback is starting this frame...
-            if mode_feedback.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                mode_feedback.frameNStart = frameN  # exact frame index
-                mode_feedback.tStart = t  # local t and not account for scr refresh
-                mode_feedback.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(mode_feedback, 'tStartRefresh')  # time at next scr refresh
-                # update status
-                mode_feedback.status = STARTED
-                mode_feedback.setAutoDraw(True)
-            
-            # if mode_feedback is active this frame...
-            if mode_feedback.status == STARTED:
-                # update params
-                pass
-            
-            # *mode_button* updates
-            
-            # if mode_button is starting this frame...
-            if mode_button.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                mode_button.frameNStart = frameN  # exact frame index
-                mode_button.tStart = t  # local t and not account for scr refresh
-                mode_button.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(mode_button, 'tStartRefresh')  # time at next scr refresh
-                # update status
-                mode_button.status = STARTED
-                mode_button.setAutoDraw(True)
-            
-            # if mode_button is active this frame...
-            if mode_button.status == STARTED:
-                # update params
-                pass
-            # Run 'Each Frame' code from code
-            # Check if the mouse is clicked and which button is clicked
-            if mouse.isPressedIn(start_button):
-                continueRoutine = False  # End MainMenu
-            
-            if mouse.isPressedIn(exit_button):  # Exit button
-                core.quit()  # Quit the experiment
-                
-            if mouse.isPressedIn(controller_selection):
-                # Add a delay to prevent rapid toggling (doesnt switch too fast)
-                core.wait(0.2)
-                
-                # Toggle between "Keyboard" and "PSURP"
-                if selected_control == "Keyboard":
-                    selected_control = "PSURP"
-                    ser.flush()
-                else:
-                    selected_control = "Keyboard"
-                
-                # Update the feedback text
-                control_feedback.text = f"Selected Control: {selected_control}"
-                
-                
-            
-            if mouse.isPressedIn(mode_button):
-                # Add a delay to prevent rapid toggling (debounce)
-                core.wait(0.2)
-                
-                # Toggle between "Easy (1)" and "Hard (2)" modes
-                if selected_diff == "1":
-                    selected_diff = "2"
-                else:
-                    selected_diff = "1"
-                
-                # Update the feedback text
-                mode_feedback.text = f"Mode: {selected_diff}"
-                
-                
-            
-            
-            # *mouse* updates
-            
-            # if mouse is starting this frame...
-            if mouse.status == NOT_STARTED and t >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                mouse.frameNStart = frameN  # exact frame index
-                mouse.tStart = t  # local t and not account for scr refresh
-                mouse.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(mouse, 'tStartRefresh')  # time at next scr refresh
-                # update status
-                mouse.status = STARTED
-                mouse.mouseClock.reset()
-                prevButtonState = mouse.getPressed()  # if button is down already this ISN'T a new click
-            if mouse.status == STARTED:  # only update if started and not finished!
-                buttons = mouse.getPressed()
-                if buttons != prevButtonState:  # button state changed?
-                    prevButtonState = buttons
-                    if sum(buttons) > 0:  # state changed to a new click
-                        pass
-                        x, y = mouse.getPos()
-                        mouse.x.append(x)
-                        mouse.y.append(y)
-                        buttons = mouse.getPressed()
-                        mouse.leftButton.append(buttons[0])
-                        mouse.midButton.append(buttons[1])
-                        mouse.rightButton.append(buttons[2])
-                        mouse.time.append(mouse.mouseClock.getTime())
-            
-            # check for quit (typically the Esc key)
-            if defaultKeyboard.getKeys(keyList=["escape"]):
-                thisExp.status = FINISHED
-            if thisExp.status == FINISHED or endExpNow:
-                endExperiment(thisExp, win=win)
-                return
-            # pause experiment here if requested
-            if thisExp.status == PAUSED:
-                pauseExperiment(
-                    thisExp=thisExp, 
-                    win=win, 
-                    timers=[routineTimer], 
-                    playbackComponents=[]
-                )
-                # skip the frame we paused on
-                continue
-            
-            # check if all components have finished
-            if not continueRoutine:  # a component has requested a forced-end of Routine
-                MainMenu.forceEnded = routineForceEnded = True
-                break
-            continueRoutine = False  # will revert to True if at least one component still running
+            # setup some python lists for storing info about the mouse
+            mouse.x = []
+            mouse.y = []
+            mouse.leftButton = []
+            mouse.midButton = []
+            mouse.rightButton = []
+            mouse.time = []
+            gotValidClick = False  # until a click is received
+            # store start times for MainMenu
+            MainMenu.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            MainMenu.tStart = globalClock.getTime(format='float')
+            MainMenu.status = STARTED
+            thisExp.addData('MainMenu.started', MainMenu.tStart)
+            MainMenu.maxDuration = None
+            # keep track of which components have finished
+            MainMenuComponents = MainMenu.components
             for thisComponent in MainMenu.components:
-                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                    continueRoutine = True
-                    break  # at least one component has not yet finished
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
             
-            # refresh the screen
-            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-                win.flip()
+            # --- Run Routine "MainMenu" ---
+            # if trial has changed, end Routine now
+            if isinstance(menu_loop, data.TrialHandler2) and thisMenu_loop.thisN != menu_loop.thisTrial.thisN:
+                continueRoutine = False
+            MainMenu.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *TitleText* updates
+                
+                # if TitleText is starting this frame...
+                if TitleText.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    TitleText.frameNStart = frameN  # exact frame index
+                    TitleText.tStart = t  # local t and not account for scr refresh
+                    TitleText.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(TitleText, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    TitleText.status = STARTED
+                    TitleText.setAutoDraw(True)
+                
+                # if TitleText is active this frame...
+                if TitleText.status == STARTED:
+                    # update params
+                    pass
+                
+                # *start_button* updates
+                
+                # if start_button is starting this frame...
+                if start_button.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    start_button.frameNStart = frameN  # exact frame index
+                    start_button.tStart = t  # local t and not account for scr refresh
+                    start_button.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(start_button, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    start_button.status = STARTED
+                    start_button.setAutoDraw(True)
+                
+                # if start_button is active this frame...
+                if start_button.status == STARTED:
+                    # update params
+                    pass
+                
+                # *StartGame* updates
+                
+                # if StartGame is starting this frame...
+                if StartGame.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    StartGame.frameNStart = frameN  # exact frame index
+                    StartGame.tStart = t  # local t and not account for scr refresh
+                    StartGame.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(StartGame, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    StartGame.status = STARTED
+                    StartGame.setAutoDraw(True)
+                
+                # if StartGame is active this frame...
+                if StartGame.status == STARTED:
+                    # update params
+                    pass
+                
+                # *about_button* updates
+                
+                # if about_button is starting this frame...
+                if about_button.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    about_button.frameNStart = frameN  # exact frame index
+                    about_button.tStart = t  # local t and not account for scr refresh
+                    about_button.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(about_button, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    about_button.status = STARTED
+                    about_button.setAutoDraw(True)
+                
+                # if about_button is active this frame...
+                if about_button.status == STARTED:
+                    # update params
+                    pass
+                
+                # *about* updates
+                
+                # if about is starting this frame...
+                if about.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    about.frameNStart = frameN  # exact frame index
+                    about.tStart = t  # local t and not account for scr refresh
+                    about.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(about, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    about.status = STARTED
+                    about.setAutoDraw(True)
+                
+                # if about is active this frame...
+                if about.status == STARTED:
+                    # update params
+                    pass
+                
+                # *exit_button* updates
+                
+                # if exit_button is starting this frame...
+                if exit_button.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    exit_button.frameNStart = frameN  # exact frame index
+                    exit_button.tStart = t  # local t and not account for scr refresh
+                    exit_button.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(exit_button, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    exit_button.status = STARTED
+                    exit_button.setAutoDraw(True)
+                
+                # if exit_button is active this frame...
+                if exit_button.status == STARTED:
+                    # update params
+                    pass
+                
+                # *Exit* updates
+                
+                # if Exit is starting this frame...
+                if Exit.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    Exit.frameNStart = frameN  # exact frame index
+                    Exit.tStart = t  # local t and not account for scr refresh
+                    Exit.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(Exit, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    Exit.status = STARTED
+                    Exit.setAutoDraw(True)
+                
+                # if Exit is active this frame...
+                if Exit.status == STARTED:
+                    # update params
+                    pass
+                
+                # *controller_selection* updates
+                
+                # if controller_selection is starting this frame...
+                if controller_selection.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    controller_selection.frameNStart = frameN  # exact frame index
+                    controller_selection.tStart = t  # local t and not account for scr refresh
+                    controller_selection.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(controller_selection, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    controller_selection.status = STARTED
+                    controller_selection.setAutoDraw(True)
+                
+                # if controller_selection is active this frame...
+                if controller_selection.status == STARTED:
+                    # update params
+                    pass
+                
+                # *control_feedback* updates
+                
+                # if control_feedback is starting this frame...
+                if control_feedback.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    control_feedback.frameNStart = frameN  # exact frame index
+                    control_feedback.tStart = t  # local t and not account for scr refresh
+                    control_feedback.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(control_feedback, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    control_feedback.status = STARTED
+                    control_feedback.setAutoDraw(True)
+                
+                # if control_feedback is active this frame...
+                if control_feedback.status == STARTED:
+                    # update params
+                    pass
+                
+                # *mode_feedback* updates
+                
+                # if mode_feedback is starting this frame...
+                if mode_feedback.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    mode_feedback.frameNStart = frameN  # exact frame index
+                    mode_feedback.tStart = t  # local t and not account for scr refresh
+                    mode_feedback.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(mode_feedback, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    mode_feedback.status = STARTED
+                    mode_feedback.setAutoDraw(True)
+                
+                # if mode_feedback is active this frame...
+                if mode_feedback.status == STARTED:
+                    # update params
+                    pass
+                
+                # *mode_button* updates
+                
+                # if mode_button is starting this frame...
+                if mode_button.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    mode_button.frameNStart = frameN  # exact frame index
+                    mode_button.tStart = t  # local t and not account for scr refresh
+                    mode_button.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(mode_button, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    mode_button.status = STARTED
+                    mode_button.setAutoDraw(True)
+                
+                # if mode_button is active this frame...
+                if mode_button.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from code
+                # Check if the mouse is clicked and which button is clicked
+                if mouse.isPressedIn(start_button):
+                    goto = 'Level_1'  # Tell the experiment to go to Level_1
+                    menu_loop.finished = True  # This breaks out of the menu loop
+                    continueRoutine = False
+                
+                if mouse.isPressedIn(exit_button):  # Exit button
+                    core.quit()  # Quit the experiment
+                    
+                if mouse.isPressedIn(controller_selection):
+                    # Add a delay to prevent rapid toggling (doesnt switch too fast)
+                    core.wait(0.2)
+                    
+                    # Toggle between "Keyboard" and "PSURP"
+                    if selected_control == "Keyboard":
+                        selected_control = "PSURP"
+                        ser.flush()
+                    else:
+                        selected_control = "Keyboard"
+                    
+                    # Update the feedback text
+                    control_feedback.text = f"Selected Control: {selected_control}"
+                    
+                    
+                
+                if mouse.isPressedIn(mode_button):
+                    # Add a delay to prevent rapid toggling (debounce)
+                    core.wait(0.2)
+                    
+                    # Toggle between "Easy (1)" and "Hard (2)" modes
+                    if selected_diff == "1":
+                        selected_diff = "2"
+                    else:
+                        selected_diff = "1"
+                    
+                    # Update the feedback text
+                    mode_feedback.text = f"Mode: {selected_diff}"
+                    
+                if mouse.isPressedIn(about_button):
+                    goto = 'AboutScreen'
+                    core.wait(0.2)
+                    continueRoutine = False
+                
+                    
+                    
+                
+                
+                # *mouse* updates
+                
+                # if mouse is starting this frame...
+                if mouse.status == NOT_STARTED and t >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    mouse.frameNStart = frameN  # exact frame index
+                    mouse.tStart = t  # local t and not account for scr refresh
+                    mouse.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(mouse, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    mouse.status = STARTED
+                    mouse.mouseClock.reset()
+                    prevButtonState = mouse.getPressed()  # if button is down already this ISN'T a new click
+                if mouse.status == STARTED:  # only update if started and not finished!
+                    buttons = mouse.getPressed()
+                    if buttons != prevButtonState:  # button state changed?
+                        prevButtonState = buttons
+                        if sum(buttons) > 0:  # state changed to a new click
+                            pass
+                            x, y = mouse.getPos()
+                            mouse.x.append(x)
+                            mouse.y.append(y)
+                            buttons = mouse.getPressed()
+                            mouse.leftButton.append(buttons[0])
+                            mouse.midButton.append(buttons[1])
+                            mouse.rightButton.append(buttons[2])
+                            mouse.time.append(mouse.mouseClock.getTime())
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    MainMenu.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in MainMenu.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "MainMenu" ---
+            for thisComponent in MainMenu.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for MainMenu
+            MainMenu.tStop = globalClock.getTime(format='float')
+            MainMenu.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('MainMenu.stopped', MainMenu.tStop)
+            # store data for menu_loop (TrialHandler)
+            menu_loop.addData('mouse.x', mouse.x)
+            menu_loop.addData('mouse.y', mouse.y)
+            menu_loop.addData('mouse.leftButton', mouse.leftButton)
+            menu_loop.addData('mouse.midButton', mouse.midButton)
+            menu_loop.addData('mouse.rightButton', mouse.rightButton)
+            menu_loop.addData('mouse.time', mouse.time)
+            # the Routine "MainMenu" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
+            # --- Prepare to start Routine "AboutScreen" ---
+            # create an object to store info about Routine AboutScreen
+            AboutScreen = data.Routine(
+                name='AboutScreen',
+                components=[about_text, back_button, back_text, mouse_2],
+            )
+            AboutScreen.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from AboutCode
+            if goto != 'AboutScreen':
+                continueRoutine = False
+            
+            # setup some python lists for storing info about the mouse_2
+            mouse_2.x = []
+            mouse_2.y = []
+            mouse_2.leftButton = []
+            mouse_2.midButton = []
+            mouse_2.rightButton = []
+            mouse_2.time = []
+            gotValidClick = False  # until a click is received
+            # store start times for AboutScreen
+            AboutScreen.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            AboutScreen.tStart = globalClock.getTime(format='float')
+            AboutScreen.status = STARTED
+            thisExp.addData('AboutScreen.started', AboutScreen.tStart)
+            AboutScreen.maxDuration = None
+            # keep track of which components have finished
+            AboutScreenComponents = AboutScreen.components
+            for thisComponent in AboutScreen.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "AboutScreen" ---
+            # if trial has changed, end Routine now
+            if isinstance(menu_loop, data.TrialHandler2) and thisMenu_loop.thisN != menu_loop.thisTrial.thisN:
+                continueRoutine = False
+            AboutScreen.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *about_text* updates
+                
+                # if about_text is active this frame...
+                if about_text.status == STARTED:
+                    # update params
+                    pass
+                
+                # *back_button* updates
+                
+                # if back_button is starting this frame...
+                if back_button.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    back_button.frameNStart = frameN  # exact frame index
+                    back_button.tStart = t  # local t and not account for scr refresh
+                    back_button.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(back_button, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    back_button.status = STARTED
+                    back_button.setAutoDraw(True)
+                
+                # if back_button is active this frame...
+                if back_button.status == STARTED:
+                    # update params
+                    pass
+                
+                # *back_text* updates
+                
+                # if back_text is starting this frame...
+                if back_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    back_text.frameNStart = frameN  # exact frame index
+                    back_text.tStart = t  # local t and not account for scr refresh
+                    back_text.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(back_text, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    back_text.status = STARTED
+                    back_text.setAutoDraw(True)
+                
+                # if back_text is active this frame...
+                if back_text.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from AboutCode
+                if mouse.isPressedIn(back_button):
+                    goto = 'MainMenu'
+                    core.wait(0.2)
+                    continueRoutine = False
+                
+                # *mouse_2* updates
+                
+                # if mouse_2 is starting this frame...
+                if mouse_2.status == NOT_STARTED and t >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    mouse_2.frameNStart = frameN  # exact frame index
+                    mouse_2.tStart = t  # local t and not account for scr refresh
+                    mouse_2.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(mouse_2, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    mouse_2.status = STARTED
+                    mouse_2.mouseClock.reset()
+                    prevButtonState = mouse_2.getPressed()  # if button is down already this ISN'T a new click
+                if mouse_2.status == STARTED:  # only update if started and not finished!
+                    buttons = mouse_2.getPressed()
+                    if buttons != prevButtonState:  # button state changed?
+                        prevButtonState = buttons
+                        if sum(buttons) > 0:  # state changed to a new click
+                            pass
+                            x, y = mouse_2.getPos()
+                            mouse_2.x.append(x)
+                            mouse_2.y.append(y)
+                            buttons = mouse_2.getPressed()
+                            mouse_2.leftButton.append(buttons[0])
+                            mouse_2.midButton.append(buttons[1])
+                            mouse_2.rightButton.append(buttons[2])
+                            mouse_2.time.append(mouse_2.mouseClock.getTime())
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    AboutScreen.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in AboutScreen.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "AboutScreen" ---
+            for thisComponent in AboutScreen.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for AboutScreen
+            AboutScreen.tStop = globalClock.getTime(format='float')
+            AboutScreen.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('AboutScreen.stopped', AboutScreen.tStop)
+            # store data for menu_loop (TrialHandler)
+            menu_loop.addData('mouse_2.x', mouse_2.x)
+            menu_loop.addData('mouse_2.y', mouse_2.y)
+            menu_loop.addData('mouse_2.leftButton', mouse_2.leftButton)
+            menu_loop.addData('mouse_2.midButton', mouse_2.midButton)
+            menu_loop.addData('mouse_2.rightButton', mouse_2.rightButton)
+            menu_loop.addData('mouse_2.time', mouse_2.time)
+            # the Routine "AboutScreen" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+        # completed 999.0 repeats of 'menu_loop'
         
-        # --- Ending Routine "MainMenu" ---
-        for thisComponent in MainMenu.components:
-            if hasattr(thisComponent, "setAutoDraw"):
-                thisComponent.setAutoDraw(False)
-        # store stop times for MainMenu
-        MainMenu.tStop = globalClock.getTime(format='float')
-        MainMenu.tStopRefresh = tThisFlipGlobal
-        thisExp.addData('MainMenu.stopped', MainMenu.tStop)
-        # store data for GameLoop (TrialHandler)
-        GameLoop.addData('mouse.x', mouse.x)
-        GameLoop.addData('mouse.y', mouse.y)
-        GameLoop.addData('mouse.leftButton', mouse.leftButton)
-        GameLoop.addData('mouse.midButton', mouse.midButton)
-        GameLoop.addData('mouse.rightButton', mouse.rightButton)
-        GameLoop.addData('mouse.time', mouse.time)
-        # the Routine "MainMenu" was not non-slip safe, so reset the non-slip timer
-        routineTimer.reset()
         
         # set up handler to look after randomisation of conditions etc
         Level_1_Loop = data.TrialHandler2(
@@ -3789,7 +4087,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 for vertex in arc2_L2_vertices:
                     # Adjust Arc 2 vertex for its X-offset (+2)
                     adjusted_vertex_x = vertex[0] + arc2_L2_x   # Move Arc 2 vertices by 2 units to the right
-                    adjusted_vertex_y = vertex[1] + low_arc # Y remains unchanged
+                    adjusted_vertex_y = vertex[1] + reg_arc # Y remains unchanged
                     
                     # Calculate distance between Dino and the adjusted vertex of Arc 2
                     distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
@@ -3848,7 +4146,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # Arc 7 touch detection
                 for vertex in arc7_L2_vertices:
                     adjusted_vertex_x = vertex[0] + arc7_L2_x 
-                    adjusted_vertex_y = vertex[1] + arc7_L2_center[1]
+                    adjusted_vertex_y = vertex[1] + low_arc
                     distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
                     if distance <= touch_threshold_L2 and vertex not in arc7_touched_vertices_L2:
                         arc7_touched_vertices_L2.append(vertex)
@@ -3857,7 +4155,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # Arc 8 touch detection
                 for vertex in arc8_L2_vertices:
                     adjusted_vertex_x = vertex[0] + arc8_L2_x 
-                    adjusted_vertex_y = vertex[1] + arc8_L2_center[1]
+                    adjusted_vertex_y = vertex[1] + reg_arc
                     distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
                     if distance <= touch_threshold_L2 and vertex not in arc8_touched_vertices_L2:
                         arc8_touched_vertices_L2.append(vertex)
@@ -3870,7 +4168,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 wiggle_room = False  
                 for vertex in wiggle_arc1_L2.vertices:
                     adjusted_vertex_x = vertex[0] + arc1_L2_x 
-                    adjusted_vertex_y = vertex[1] + reg_arc 
+                    adjusted_vertex_y = vertex[1] + low_arc 
                 
                     # Calculate distance between Dino and wiggle room vertex
                     distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
@@ -3883,7 +4181,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         
                 for vertex in wiggle_arc2_L2.vertices:
                     adjusted_vertex_x = vertex[0] + arc2_L2_x 
-                    adjusted_vertex_y = vertex[1] + low_arc
+                    adjusted_vertex_y = vertex[1] + reg_arc
                 
                     # Calculate distance between Dino and wiggle room vertex
                     distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
@@ -3943,7 +4241,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # Arc 7 wiggle room
                 for vertex in wiggle_arc7_L2.vertices:
                     adjusted_vertex_x = vertex[0] + arc7_L2_x 
-                    adjusted_vertex_y = vertex[1] + arc7_L2_center[1]
+                    adjusted_vertex_y = vertex[1] + low_arc
                     distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
                     if distance <= touch_threshold_L2:
                         wiggle_room = True
@@ -3952,7 +4250,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # Arc 8 wiggle room
                 for vertex in wiggle_arc8_L2.vertices:
                     adjusted_vertex_x = vertex[0] + arc8_L2_x 
-                    adjusted_vertex_y = vertex[1] + arc8_L2_center[1]
+                    adjusted_vertex_y = vertex[1] + reg_arc
                     distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
                     if distance <= touch_threshold_L2:
                         wiggle_room = True
