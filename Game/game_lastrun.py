@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on May 04, 2025, at 22:20
+    on May 05, 2025, at 15:42
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -66,8 +66,8 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 # work out from system args whether we are running in pilot mode
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
-_fullScr = False
-_winSize = [1000,800]
+_fullScr = True
+_winSize = [1920, 1080]
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -133,7 +133,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='D:\\Users\\areya\\Desktop\\work\\Motor-Learning-Research-Project\\Game\\game_lastrun.py',
+        originPath='C:\\Users\\actioncontrollab\\Desktop\\Motor-Learning-Research-Project\\Game\\game_lastrun.py',
         savePickle=True, saveWideText=False,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -182,6 +182,9 @@ def setupWindow(expInfo=None, win=None):
     psychopy.visual.Window
         Window in which to run this experiment.
     """
+    if PILOTING:
+        logging.debug('Fullscreen settings ignored as running in pilot mode.')
+    
     if win is None:
         # if not given a window to setup, make one
         win = visual.Window(
@@ -516,6 +519,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     win_threshold = 5  # Percentage needed to win
     
+    
+    # developed screen size [1000,800]
     mouse = event.Mouse(win=win)
     x, y = [None, None]
     mouse.mouseClock = core.Clock()
@@ -587,7 +592,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     timer_text_L1 = visual.TextStim(win=win, name='timer_text_L1',
         text='00 : 00',
         font='Arial',
-        pos=(-0.55,0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        pos=(-0.55, 0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-5.0);
@@ -603,13 +608,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     kb = keyboard.Keyboard()
     
     #PSURP Inits
-    """
+    
     # Initialize the serial connection for PSURP
     ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
     ser.flush()
     ser.write("X".encode())  # Initialize PSURP
     ser.write("RUNE\n".encode())  # Enter streaming mode
-    """
+    
     
     # Trail settings
     trail_positions = []  # Stores Dino's previous positions
@@ -746,7 +751,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Camera variables
     camera_offset_x = 0  # Tracks the camera offset to follow Dino
-    camera_speed = 0.009  # Adjust this speed as needed 0.003
+    camera_speed = 0.003  # Adjust this speed as needed 0.003
     # Background properties
     background_width = 2.0  # Width of a single background image
     background_height = 1.0
@@ -1154,10 +1159,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Track if Dino is in the wiggle room defualt is not touching so false
     wiggle_room = False  
     
+    """
+    dev score pos: (0.55, 0.45)
+    Fullscreen score pos: (0.80, 0.45)
     
+    
+    dev timer pos: (-0.55,0.45)
+    dev score pos: (0.-80, 0.45)
+    
+    """
     # Run 'Begin Experiment' code from Timer_L1
     level_timer = core.Clock()  # Initialize the timer
-    time_limit = 120  # Set the time limit in seconds (2 minutes)
+    time_limit = 125  # Set the time limit in seconds (2 minutes)
     
     lose_sound_L1 = sound.Sound(
         'A', 
@@ -1813,7 +1826,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Run 'Begin Experiment' code from Timer_L2
     level_timer = core.Clock()  # Initialize the timer
-    time_limit = 120  # Set the time limit in seconds (2 minutes)
+    time_limit = 125  # Set the time limit in seconds (2 minutes)
     
     lose_sound_L2 = sound.Sound(
         'A', 
@@ -1994,10 +2007,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     resetPSURP.tStopRefresh = tThisFlipGlobal
     thisExp.addData('resetPSURP.stopped', resetPSURP.tStop)
     # Run 'End Routine' code from code_2
-    """
+    
     ser.flush()
     ser.write("X".encode())
-    """
+    
     # clear out the data from the IO buffers (Fresh commands)
     # the "X" command puts tje PSURP into command mode
     
@@ -2121,7 +2134,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     TARE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('TARE.stopped', TARE.tStop)
     # Run 'End Routine' code from tare_code
-    """
+    
     ser.write("TAR0\n".encode())
     time.sleep(1)
     ser.write("TAR1\n".encode())
@@ -2132,7 +2145,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     time.sleep(1)
     ser.write("TAR4\n".encode())
     time.sleep(1)
-    """
+    
     
     # the tar command zeros out all of the force messurements
     # halt for one second to make sure command was processed 
@@ -2255,9 +2268,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     RUNE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('RUNE.stopped', RUNE.tStop)
     # Run 'End Routine' code from Code_RUNE
-    """
+    
     ser.write("RUNE\n".encode())
-    """
+    
     # the rune command sets the PSURP to streaming mode. (for getting vals)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if RUNE.maxDurationReached:
@@ -3337,7 +3350,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     lose_sound_L1.play()
                     continueRoutine = False  # Ends the current routine
                     
-                if dino_relative_x < -0.8 or dino_relative_x > 0.8:  # Adjust bounds based on screen width
+                if dino_relative_x < -1 or dino_relative_x > 1:  # Adjust bounds based on screen width
+                    lose_sound_L1.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_y > 0.6:  # Adjust bounds based on screen width
                     lose_sound_L1.play()
                     continueRoutine = False  # Ends the current routine
                 
@@ -4325,7 +4342,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     lose_sound_L2.play()
                     continueRoutine = False  # Ends the current routine
                     
-                if dino_relative_x < -0.8 or dino_relative_x > 0.8:  # Adjust bounds based on screen width
+                if dino_relative_x < -1 or dino_relative_x > 1:  # Adjust bounds based on screen width
+                    lose_sound_L2.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_y > 0.6:  # Adjust bounds based on screen width
                     lose_sound_L2.play()
                     continueRoutine = False  # Ends the current routine
                 
@@ -4897,11 +4918,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         stimOut=params,
         dataOut=['n','all_mean','all_std', 'all_raw'])
     # Run 'End Experiment' code from DinoMovement_L1
-    """
+    
     ser.flush()
     ser.write("X".encode())  # Exit command mode
     ser.close()
-    """
+    
     # Run 'End Experiment' code from DinoMovement_L2
     """
     ser.flush()
