@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on May 08, 2025, at 15:56
+    on May 12, 2025, at 15:37
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -43,6 +43,28 @@ Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$
 # Run 'Before Experiment' code from DinoMovement_L3
 Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 # Run 'Before Experiment' code from DinoMovement_L4
+Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+# Run 'Before Experiment' code from DinoMovement_L5
+Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+# Run 'Before Experiment' code from DinoMovement_L6
+Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+# Run 'Before Experiment' code from DinoMovement_L7
+Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+# Run 'Before Experiment' code from DinoMovement_L8
+Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+# Run 'Before Experiment' code from DinoMovement_L9
+Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+# Run 'Before Experiment' code from DinoMovement_L10
+Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+# Run 'Before Experiment' code from DinoMovement_L11
+Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+# Run 'Before Experiment' code from DinoMovement_L12
+Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+# Run 'Before Experiment' code from DinoMovement_L13
+Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+# Run 'Before Experiment' code from DinoMovement_L14
+Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+# Run 'Before Experiment' code from DinoMovement_L15
 Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 # --- Setup global variables (available in all functions) ---
 # create a device manager to handle hardware (keyboards, mice, mirophones, speakers, etc.)
@@ -352,6 +374,270 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    # create speaker 'lose_sound_L5'
+    deviceManager.addDevice(
+        deviceName='lose_sound_L5',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'eat_sound_L5'
+    deviceManager.addDevice(
+        deviceName='eat_sound_L5',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'win_sound_L5'
+    deviceManager.addDevice(
+        deviceName='win_sound_L5',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'fail_sound_L5'
+    deviceManager.addDevice(
+        deviceName='fail_sound_L5',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'lose_sound_L6'
+    deviceManager.addDevice(
+        deviceName='lose_sound_L6',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'eat_sound_L6'
+    deviceManager.addDevice(
+        deviceName='eat_sound_L6',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'win_sound_L6'
+    deviceManager.addDevice(
+        deviceName='win_sound_L6',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'fail_sound_L6'
+    deviceManager.addDevice(
+        deviceName='fail_sound_L6',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'lose_sound_L7'
+    deviceManager.addDevice(
+        deviceName='lose_sound_L7',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'eat_sound_L7'
+    deviceManager.addDevice(
+        deviceName='eat_sound_L7',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'win_sound_L7'
+    deviceManager.addDevice(
+        deviceName='win_sound_L7',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'fail_sound_L7'
+    deviceManager.addDevice(
+        deviceName='fail_sound_L7',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'lose_sound_L8'
+    deviceManager.addDevice(
+        deviceName='lose_sound_L8',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'eat_sound_L8'
+    deviceManager.addDevice(
+        deviceName='eat_sound_L8',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'win_sound_L8'
+    deviceManager.addDevice(
+        deviceName='win_sound_L8',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'fail_sound_L8'
+    deviceManager.addDevice(
+        deviceName='fail_sound_L8',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'lose_sound_L9'
+    deviceManager.addDevice(
+        deviceName='lose_sound_L9',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'eat_sound_L9'
+    deviceManager.addDevice(
+        deviceName='eat_sound_L9',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'win_sound_L9'
+    deviceManager.addDevice(
+        deviceName='win_sound_L9',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'fail_sound_L9'
+    deviceManager.addDevice(
+        deviceName='fail_sound_L9',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'lose_sound_L10'
+    deviceManager.addDevice(
+        deviceName='lose_sound_L10',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'eat_sound_L10'
+    deviceManager.addDevice(
+        deviceName='eat_sound_L10',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'win_sound_L10'
+    deviceManager.addDevice(
+        deviceName='win_sound_L10',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'fail_sound_L10'
+    deviceManager.addDevice(
+        deviceName='fail_sound_L10',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'lose_sound_L11'
+    deviceManager.addDevice(
+        deviceName='lose_sound_L11',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'eat_sound_L11'
+    deviceManager.addDevice(
+        deviceName='eat_sound_L11',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'win_sound_L11'
+    deviceManager.addDevice(
+        deviceName='win_sound_L11',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'fail_sound_L11'
+    deviceManager.addDevice(
+        deviceName='fail_sound_L11',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'lose_sound_L12'
+    deviceManager.addDevice(
+        deviceName='lose_sound_L12',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'eat_sound_L12'
+    deviceManager.addDevice(
+        deviceName='eat_sound_L12',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'win_sound_L12'
+    deviceManager.addDevice(
+        deviceName='win_sound_L12',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'fail_sound_L12'
+    deviceManager.addDevice(
+        deviceName='fail_sound_L12',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'lose_sound_L13'
+    deviceManager.addDevice(
+        deviceName='lose_sound_L13',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'eat_sound_L13'
+    deviceManager.addDevice(
+        deviceName='eat_sound_L13',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'win_sound_L13'
+    deviceManager.addDevice(
+        deviceName='win_sound_L13',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'fail_sound_L13'
+    deviceManager.addDevice(
+        deviceName='fail_sound_L13',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'lose_sound_L14'
+    deviceManager.addDevice(
+        deviceName='lose_sound_L14',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'eat_sound_L14'
+    deviceManager.addDevice(
+        deviceName='eat_sound_L14',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'win_sound_L14'
+    deviceManager.addDevice(
+        deviceName='win_sound_L14',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'fail_sound_L14'
+    deviceManager.addDevice(
+        deviceName='fail_sound_L14',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'lose_sound_L15'
+    deviceManager.addDevice(
+        deviceName='lose_sound_L15',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'eat_sound_L15'
+    deviceManager.addDevice(
+        deviceName='eat_sound_L15',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'win_sound_L15'
+    deviceManager.addDevice(
+        deviceName='win_sound_L15',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'fail_sound_L15'
+    deviceManager.addDevice(
+        deviceName='fail_sound_L15',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
     # return True if completed successfully
     return True
 
@@ -566,7 +852,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     thisExp.savePickle = False
     thisExp.saveWideText = False  # stops saving the .csv or .tsv file
     
-    win_threshold = 5  # Percentage needed to win
+    win_threshold = 0  # Percentage needed to win
     
     
     # developed screen size [1000,800]
@@ -3231,6 +3517,7222 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     )
     fail_sound_L4.setVolume(0.6)
     
+    # --- Initialize components for Routine "Level_5" ---
+    dino_image_L5 = visual.ImageStim(
+        win=win,
+        name='dino_image_L5', 
+        image='Assets/dino.png', mask=None, anchor='center',
+        ori=0.0, pos=(0,0), draggable=False, size=(0.2, 0.2),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=0.0)
+    floor1_L5 = visual.Rect(
+        win=win, name='floor1_L5',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(-.5,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-1.0, interpolate=True)
+    floor2_L5 = visual.Rect(
+        win=win, name='floor2_L5',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(0,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-2.0, interpolate=True)
+    meatbone_image_L5 = visual.ImageStim(
+        win=win,
+        name='meatbone_image_L5', 
+        image='Assets/meat_bone.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-3.0)
+    score_text_L5 = visual.TextStim(win=win, name='score_text_L5',
+        text='Score: 0',
+        font='Arial',
+        pos=(0.55, 0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-4.0);
+    timer_text_L5 = visual.TextStim(win=win, name='timer_text_L5',
+        text='00 : 00',
+        font='Arial',
+        pos=(-0.55,0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
+    # Run 'Begin Experiment' code from DinoMovement_L5
+    from psychopy.hardware import keyboard
+    from psychopy.visual import Rect
+    import time
+    
+    import serial
+    from psychopy.visual import Circle
+    
+    # Initialize the Keyboard
+    kb = keyboard.Keyboard()
+    
+    #PSURP Inits
+    """
+    # Initialize the serial connection for PSURP
+    ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
+    ser.flush()
+    ser.write("X".encode())  # Initialize PSURP
+    ser.write("RUNE\n".encode())  # Enter streaming mode
+    """
+    
+    # Trail settings
+    trail_positions = []  # Stores Dino's previous positions
+    trail_length = 35  # Maximum number of trail dots
+    trail_dot_size = 0.005  # Size of each dot for trail 
+    trail_dots = []  # List of Circle stimuli for the trail
+    trail_color = 'yellow'  # Color of the trail dots
+    trail_frame_counter = 0  # Counter to control trail dot spawning
+    trail_interval = 5  # Spawn a dot every 5 frames
+    
+    
+    #Button 0 and button 2 force properties
+    B0ForceInNewtons = 0
+    B2ForceInNewtons = 0
+    MIN_FORCE = 0.4  # Minimum force to start movement
+    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
+    
+    
+    # Dino movement variables
+    dino_pos = [0, -0.3]  # Starting position [x, y]
+    dino_speed = 0  # Initial vertical speed
+    gravity = -0.0003  # Downward acceleration 0.00006
+    jump_speed = 0.005  # Jumping speed
+    move_speed = 0.01  # Horizontal movement speed
+    ground_offset = 0.03  # Offset to avoid sinking into the ground visually
+    #min_x = -0.6  # Left boundary
+    #max_x = 19 # right boundary
+    respawn_position = [0, -0.3]  # Starting position for Dino
+    
+    
+    
+    # Floor properties
+    
+    floor1_vertices = floor1_L5.vertices  # Get floor1_L5 vertices
+    floor_top = max(v[1] for v in floor1_vertices)  # Highest point of floor1_L5
+    fall_threshold = min(v[1] for v in floor1_vertices) - 0.2  # Slightly below the lowest floor point
+    
+    
+    # Function to check if Dino is on the floor
+    def is_on_floor(dino_pos):
+        """Check if Dino's bottom is within the bounds of floor1_L5 or floor2_L5."""
+        dino_bottom = dino_pos[1] - (dino_image_L5.size[1] / 2)  # Dino's bottom Y-position
+    
+        # floor1_L5 bounds
+        x_min1 = min(v[0] for v in floor1_vertices)
+        x_max1 = max(v[0] for v in floor1_vertices)
+        
+        # floor2_L5 bounds
+        x_min2 = min(v[0] for v in floor2_vertices)
+        x_max2 = max(v[0] for v in floor2_vertices)
+    
+        # Check floor1_L5 or floor2_L5
+        on_floor1 = x_min1 <= dino_pos[0] <= x_max1 and dino_bottom <= floor1_top
+        on_floor2 = x_min2 <= dino_pos[0] <= x_max2 and dino_bottom <= floor2_top
+    
+        return on_floor1 or on_floor2
+        
+    #calculates the psurp forces
+    def calculate_psurp_forces(serial_data):
+        """Extract and calculate forces from PSURP serial data."""
+        if len(serial_data.decode()) == 12:
+            output = serial_data.decode()
+            
+            # Calculate forces
+            B0HighByte = Base71Lookup.index(output[0])
+            B0LowByte = Base71Lookup.index(output[1])
+            B2HighByte = Base71Lookup.index(output[4])
+            B2LowByte = Base71Lookup.index(output[5])
+            
+            # Forces in Newtons
+            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            
+            return B0ForceInNewtons, B2ForceInNewtons
+        
+        return 0, 0  # Default forces if data is invalid
+    
+    
+    
+    # image path for dino animation
+    frame_paths = [
+        "Assets/dino_frames/f1.png", "Assets/dino_frames/f2.png", 
+        "Assets/dino_frames/f3.png", "Assets/dino_frames/f4.png", 
+        "Assets/dino_frames/f5.png", "Assets/dino_frames/f6.png", 
+        "Assets/dino_frames/f7.png", "Assets/dino_frames/f8.png", 
+        "Assets/dino_frames/f9.png", "Assets/dino_frames/f10.png", 
+        "Assets/dino_frames/f11.png", "Assets/dino_frames/f12.png"
+    ]
+    
+    
+    
+    frame_index = 0  # Start with the first frame
+    frame_index_update_counter = 0  # Counter to manage animation speed
+    total_frames = len(frame_paths)  # Total number of frames in the animation
+    
+    # Initialize the Dino's first frame
+    dino_image_L5.image = frame_paths[frame_index]
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from worldController_L5
+    from psychopy.visual import Rect, ImageStim, ShapeStim
+    import math
+    
+    dirt_texture_L5 = 'Assets/grounds/ground5.png'
+    
+    #height factors for arcs (Y position)
+    low_arc = -0.2  
+    reg_arc = 0
+    high_arc = 0.04
+    
+    small_arc_size = 0.2  # Smallest arc radius
+    med_arc_size = 0.27  # Medium arc radius
+    large_arc_size = 0.35  # Largest arc radius
+    
+    wiggle_thickness = 0.05  # Adjust thickness for all wiggle arcs
+    
+    meatbone_size = [0.15, 0.09]  # Example size (width, height)
+    
+    
+    # Function to calculate vertices of a Rect stimulus
+    def calculate_rect_vertices(rect):
+        """Calculate the vertices of a Rect stimulus."""
+        half_width = rect.width / 2
+        half_height = rect.height / 2
+        center_x, center_y = rect.pos
+        vertices = [
+            [center_x - half_width, center_y - half_height],  # Bottom-left
+            [center_x + half_width, center_y - half_height],  # Bottom-right
+            [center_x + half_width, center_y + half_height],  # Top-right
+            [center_x - half_width, center_y + half_height],  # Top-left
+        ]
+        return vertices
+    
+    # Camera variables
+    camera_offset_x = 0  # Tracks the camera offset to follow Dino
+    #camera_speed = 0.003  # Adjust this speed as needed 0.003
+    # Background properties
+    background_width = 2.0  # Width of a single background image
+    background_height = 1.0
+    
+    background_image_L5 = 'Assets/bgs/L5.png'  # Path to your custom background image
+    
+    # Create two background images for seamless scrolling
+    background1_L5 = ImageStim(win, image=background_image_L5, size=[background_width, background_height], pos=[0, 0])
+    background2_L5 = ImageStim(win, image=background_image_L5, size=[background_width, background_height], pos=[background_width, 0])
+    
+    # floor1_L5 properties
+    floor1_height = 0.3
+    floor1_width = 0.5
+    floor1_pos = [0, -0.5]
+    
+    floor1_L5 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L5,
+        size=(floor1_width, floor1_height),  # Set the size to match the floor dimensions
+        pos=floor1_pos,
+        interpolate=True
+    )
+    floor1_vertices = calculate_rect_vertices(floor1_L5)
+    
+    # floor2_L5 properties - Place it further into the map
+    #floor2_x_static = 15.5  # Fixed X position where floor2_L5 appears18.5
+    floor2_height = 0.3
+    floor2_width = 0.5
+    
+    floor2_L5 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L5,
+        size=(floor2_width, floor2_height),  # Set the size to match the floor dimensions
+        pos=[floor2_x_static, -0.5],  # Position of floor2_L5
+        interpolate=True
+    )
+    floor2_vertices = calculate_rect_vertices(floor2_L5)
+    
+    
+    # Floor thresholds
+    floor1_top = max(v[1] for v in floor1_vertices)
+    floor2_top = max(v[1] for v in floor2_vertices)
+    
+    
+    
+    #meat bone
+    
+    meatbone_size = [0.12, 0.06]  # Example size (width, height)
+    meatbone_image_L5.size = meatbone_size
+    offset = 0.01  # Adjust to align the meatbone properly with floor2_L5
+    
+    
+    #arc stuff
+    
+    # Arc 1 Properties
+    arc1_L5_x = 0.3
+    arc1_L5_center = [arc1_L5_x, reg_arc]
+    arc1_L5_radius = small_arc_size
+    arc1_L5_start_angle = 0
+    arc1_L5_end_angle = 180
+    
+    # Arc 2 Properties
+    arc2_L5_x = 1.1
+    arc2_L5_center = [arc2_L5_x, reg_arc]
+    arc2_L5_radius = large_arc_size
+    arc2_L5_start_angle = 0
+    arc2_L5_end_angle = 180
+    
+    # Arc 3 Properties
+    arc3_L5_x = 1.9
+    arc3_L5_center = [arc3_L5_x, reg_arc]
+    arc3_L5_radius = med_arc_size
+    arc3_L5_start_angle = 0
+    arc3_L5_end_angle = 180
+    
+    # Arc 4 Properties
+    arc4_L5_x = 2.7
+    arc4_L5_center = [arc4_L5_x, reg_arc]
+    arc4_L5_radius = small_arc_size
+    arc4_L5_start_angle = 0
+    arc4_L5_end_angle = 180
+    
+    # Arc 5 Properties
+    arc5_L5_x = 3.5
+    arc5_L5_center = [arc5_L5_x, reg_arc]
+    arc5_L5_radius = large_arc_size
+    arc5_L5_start_angle = 0
+    arc5_L5_end_angle = 180
+    
+    # Arc 6 Properties
+    arc6_L5_x = 4.3
+    arc6_L5_center = [arc6_L5_x, reg_arc]
+    arc6_L5_radius = med_arc_size
+    arc6_L5_start_angle = 0
+    arc6_L5_end_angle = 180
+    
+    # Arc 7 Properties
+    arc7_L5_x = 5.1
+    arc7_L5_center = [arc7_L5_x, reg_arc]
+    arc7_L5_radius = large_arc_size
+    arc7_L5_start_angle = 0
+    arc7_L5_end_angle = 180
+    
+    # Arc 8 Properties
+    arc8_L5_x = 5.9
+    arc8_L5_center = [arc8_L5_x, reg_arc]
+    arc8_L5_radius = med_arc_size
+    arc8_L5_start_angle = 0
+    arc8_L5_end_angle = 180
+    
+    # Arc 9 Properties
+    arc9_L5_x = 6.7
+    arc9_L5_center = [arc9_L5_x, reg_arc]
+    arc9_L5_radius = med_arc_size
+    arc9_L5_start_angle = 0
+    arc9_L5_end_angle = 180
+    
+    # Arc 10 Properties
+    arc10_L5_x = 7.5
+    arc10_L5_center = [arc10_L5_x, reg_arc]
+    arc10_L5_radius = med_arc_size
+    arc10_L5_start_angle = 0
+    arc10_L5_end_angle = 180
+    
+    # Arc 11 Properties
+    arc11_L5_x = 8.3
+    arc11_L5_center = [arc11_L5_x, reg_arc]
+    arc11_L5_radius = med_arc_size
+    arc11_L5_start_angle = 0
+    arc11_L5_end_angle = 180
+    
+    
+    # Generate vertices for Arc 1
+    arc1_L5_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc1_L5_start_angle + i * (arc1_L5_end_angle - arc1_L5_start_angle) / 50)
+        x = arc1_L5_center[0] + arc1_L5_radius * math.cos(angle)
+        y = arc1_L5_center[1] + arc1_L5_radius * math.sin(angle)
+        arc1_L5_vertices.append((x, y))
+    
+    # Generate vertices for Arc 2
+    arc2_L5_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc2_L5_start_angle + i * (arc2_L5_end_angle - arc2_L5_start_angle) / 50)
+        x = arc2_L5_center[0] + arc2_L5_radius * math.cos(angle)
+        y = arc2_L5_center[1] + arc2_L5_radius * math.sin(angle)
+        arc2_L5_vertices.append((x, y))
+        
+        
+    
+    # Generate vertices for Arc 3
+    arc3_L5_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc3_L5_start_angle + i * (arc3_L5_end_angle - arc3_L5_start_angle) / 50)
+        x = arc3_L5_center[0] + arc3_L5_radius * math.cos(angle)
+        y = arc3_L5_center[1] + arc3_L5_radius * math.sin(angle)
+        arc3_L5_vertices.append((x, y))
+    
+    # Generate vertices for Arc 4
+    arc4_L5_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc4_L5_start_angle + i * (arc4_L5_end_angle - arc4_L5_start_angle) / 50)
+        x = arc4_L5_center[0] + arc4_L5_radius * math.cos(angle)
+        y = arc4_L5_center[1] + arc4_L5_radius * math.sin(angle)
+        arc4_L5_vertices.append((x, y))
+    
+    
+    # Generate vertices for Arc 5
+    arc5_L5_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc5_L5_start_angle + i * (arc5_L5_end_angle - arc5_L5_start_angle) / 50)
+        x = arc5_L5_center[0] + arc5_L5_radius * math.cos(angle)
+        y = arc5_L5_center[1] + arc5_L5_radius * math.sin(angle)
+        arc5_L5_vertices.append((x, y))
+        
+    
+    arc6_L5_vertices = []
+    for i in range(51):
+        angle = math.radians(arc6_L5_start_angle + i * (arc6_L5_end_angle - arc6_L5_start_angle) / 50)
+        x = arc6_L5_center[0] + arc6_L5_radius * math.cos(angle)
+        y = arc6_L5_center[1] + arc6_L5_radius * math.sin(angle)
+        arc6_L5_vertices.append((x, y))
+    
+    # Arc 7 vertices
+    arc7_L5_vertices = []
+    for i in range(51):
+        angle = math.radians(arc7_L5_start_angle + i * (arc7_L5_end_angle - arc7_L5_start_angle) / 50)
+        x = arc7_L5_center[0] + arc7_L5_radius * math.cos(angle)
+        y = arc7_L5_center[1] + arc7_L5_radius * math.sin(angle)
+        arc7_L5_vertices.append((x, y))
+    
+    # Arc 8 vertices
+    arc8_L5_vertices = []
+    for i in range(51):
+        angle = math.radians(arc8_L5_start_angle + i * (arc8_L5_end_angle - arc8_L5_start_angle) / 50)
+        x = arc8_L5_center[0] + arc8_L5_radius * math.cos(angle)
+        y = arc8_L5_center[1] + arc8_L5_radius * math.sin(angle)
+        arc8_L5_vertices.append((x, y))
+        
+    # Arc 9 vertices
+    arc9_L5_vertices = []
+    for i in range(51):
+        angle = math.radians(arc9_L5_start_angle + i * (arc9_L5_end_angle - arc9_L5_start_angle) / 50)
+        x = arc9_L5_center[0] + arc9_L5_radius * math.cos(angle)
+        y = arc9_L5_center[1] + arc9_L5_radius * math.sin(angle)
+        arc9_L5_vertices.append((x, y))
+        
+    # Arc 10 vertices
+    arc10_L5_vertices = []
+    for i in range(51):
+        angle = math.radians(arc10_L5_start_angle + i * (arc10_L5_end_angle - arc10_L5_start_angle) / 50)
+        x = arc10_L5_center[0] + arc10_L5_radius * math.cos(angle)
+        y = arc10_L5_center[1] + arc10_L5_radius * math.sin(angle)
+        arc10_L5_vertices.append((x, y))
+        
+    # Arc 11 vertices
+    arc11_L5_vertices = []
+    for i in range(51):
+        angle = math.radians(arc11_L5_start_angle + i * (arc11_L5_end_angle - arc11_L5_start_angle) / 50)
+        x = arc11_L5_center[0] + arc11_L5_radius * math.cos(angle)
+        y = arc11_L5_center[1] + arc11_L5_radius * math.sin(angle)
+        arc11_L5_vertices.append((x, y))
+        
+    # Create the arc ShapeStim
+    arc1_L5 = ShapeStim(
+        win=win,
+        vertices=arc1_L5_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    # Create Arc 2 ShapeStim
+    arc2_L5 = ShapeStim(
+        win=win,
+        vertices=arc2_L5_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Different color for clarity
+        fillColor=None
+    )
+    
+    
+    # Create Arc 3 ShapeStim
+    arc3_L5 = ShapeStim(
+        win=win,
+        vertices=arc3_L5_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 4 ShapeStim
+    arc4_L5 = ShapeStim(
+        win=win,
+        vertices=arc4_L5_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 5 ShapeStim
+    arc5_L5 = ShapeStim(
+        win=win,
+        vertices=arc5_L5_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    arc6_L5 = ShapeStim(
+        win=win,
+        vertices=arc6_L5_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc7_L5 = ShapeStim(
+        win=win,
+        vertices=arc7_L5_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc8_L5 = ShapeStim(
+        win=win,
+        vertices=arc8_L5_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    
+    arc9_L5 = ShapeStim(
+        win=win,
+        vertices=arc9_L5_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc10_L5 = ShapeStim(
+        win=win,
+        vertices=arc10_L5_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc11_L5 = ShapeStim(
+        win=win,
+        vertices=arc11_L5_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    def create_wiggle_arc(center, radius, thickness, color='blue', opacity=0.5):
+        """Generate a thick wiggle room arc for a given arc."""
+        outer_arc_vertices = []
+        inner_arc_vertices = []
+    
+        for i in range(51):  # 50 segments for smoothness
+            angle = math.radians(i * (180 / 50))  # Same angles as original arc
+    
+            # Outer arc (slightly larger)
+            outer_x = center[0] + (radius + thickness) * math.cos(angle)
+            outer_y = center[1] + (radius + thickness) * math.sin(angle)
+            outer_arc_vertices.append((outer_x, outer_y))
+    
+            # Inner arc (slightly smaller)
+            inner_x = center[0] + (radius - thickness) * math.cos(angle)
+            inner_y = center[1] + (radius - thickness) * math.sin(angle)
+            inner_arc_vertices.append((inner_x, inner_y))
+    
+        # Reverse inner arc vertices to create a closed shape
+        inner_arc_vertices.reverse()
+        thick_wiggle_arc_vertices = outer_arc_vertices + inner_arc_vertices
+    
+        # Create and return the wiggle room arc
+        return ShapeStim(
+            win=win,
+            vertices=thick_wiggle_arc_vertices,
+            closeShape=True,  # Fill between outer and inner arcs
+            lineWidth=0,  # No outline needed
+            lineColor=None,
+            fillColor=color,
+            opacity=opacity
+        )
+    
+    
+    # Generate wiggle arcs for all arcs
+    wiggle_arc1_L5 = create_wiggle_arc(arc1_L5_center, arc1_L5_radius, wiggle_thickness)
+    wiggle_arc2_L5 = create_wiggle_arc(arc2_L5_center, arc2_L5_radius, wiggle_thickness)
+    wiggle_arc3_L5 = create_wiggle_arc(arc3_L5_center, arc3_L5_radius, wiggle_thickness)
+    wiggle_arc4_L5 = create_wiggle_arc(arc4_L5_center, arc4_L5_radius, wiggle_thickness)
+    wiggle_arc5_L5 = create_wiggle_arc(arc5_L5_center, arc5_L5_radius, wiggle_thickness)
+    wiggle_arc6_L5 = create_wiggle_arc(arc6_L5_center, arc6_L5_radius, wiggle_thickness)
+    wiggle_arc7_L5 = create_wiggle_arc(arc7_L5_center, arc7_L5_radius, wiggle_thickness)
+    wiggle_arc8_L5 = create_wiggle_arc(arc8_L5_center, arc8_L5_radius, wiggle_thickness)
+    wiggle_arc9_L5 = create_wiggle_arc(arc9_L5_center, arc9_L5_radius, wiggle_thickness)
+    wiggle_arc10_L5 = create_wiggle_arc(arc10_L5_center, arc10_L5_radius, wiggle_thickness)
+    wiggle_arc11_L5 = create_wiggle_arc(arc11_L5_center, arc11_L5_radius, wiggle_thickness)
+    
+    
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from GoalController_L5
+    
+    meatbone_collided = False  # Track whether the meatbone has been stomped
+    arc1_touched_vertices_L5 = []
+    arc2_touched_vertices_L5 = []
+    arc3_touched_vertices_L5 = []
+    arc4_touched_vertices_L5 = []
+    arc5_touched_vertices_L5 = []
+    arc6_touched_vertices_L5 = []
+    arc7_touched_vertices_L5 = []
+    arc8_touched_vertices_L5 = []
+    arc9_touched_vertices_L5 = []
+    arc10_touched_vertices_L5 = []
+    arc11_touched_vertices_L5 = []
+    
+    touch_threshold_L5 = 0.04 # touch threshold for the arcs
+    
+    meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
+    
+    
+    # Track if Dino is in the wiggle room defualt is not touching so false
+    wiggle_room = False  
+    
+    
+    # Run 'Begin Experiment' code from Timer_L5
+    level_timer = core.Clock()  # Initialize the timer
+    time_limit = 125  # Set the time limit in seconds (2 minutes)
+    
+    lose_sound_L5 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='lose_sound_L5',    name='lose_sound_L5'
+    )
+    lose_sound_L5.setVolume(1.0)
+    eat_sound_L5 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='eat_sound_L5',    name='eat_sound_L5'
+    )
+    eat_sound_L5.setVolume(1.0)
+    
+    # --- Initialize components for Routine "Level_5_checker" ---
+    end_score_text_L5 = visual.TextStim(win=win, name='end_score_text_L5',
+        text='Score: ',
+        font='Arial',
+        pos=(0, .2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    win_sound_L5 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='win_sound_L5',    name='win_sound_L5'
+    )
+    win_sound_L5.setVolume(1.0)
+    fail_sound_L5 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='fail_sound_L5',    name='fail_sound_L5'
+    )
+    fail_sound_L5.setVolume(0.6)
+    
+    # --- Initialize components for Routine "Level_6" ---
+    dino_image_L6 = visual.ImageStim(
+        win=win,
+        name='dino_image_L6', 
+        image='Assets/dino.png', mask=None, anchor='center',
+        ori=0.0, pos=(0,0), draggable=False, size=(0.2, 0.2),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=0.0)
+    floor1_L6 = visual.Rect(
+        win=win, name='floor1_L6',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(-.5,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-1.0, interpolate=True)
+    floor2_L6 = visual.Rect(
+        win=win, name='floor2_L6',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(0,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-2.0, interpolate=True)
+    meatbone_image_L6 = visual.ImageStim(
+        win=win,
+        name='meatbone_image_L6', 
+        image='Assets/meat_bone.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-3.0)
+    score_text_L6 = visual.TextStim(win=win, name='score_text_L6',
+        text='Score: 0',
+        font='Arial',
+        pos=(0.55, 0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-4.0);
+    timer_text_L6 = visual.TextStim(win=win, name='timer_text_L6',
+        text='00 : 00',
+        font='Arial',
+        pos=(-0.55,0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
+    # Run 'Begin Experiment' code from DinoMovement_L6
+    from psychopy.hardware import keyboard
+    from psychopy.visual import Rect
+    import time
+    
+    import serial
+    from psychopy.visual import Circle
+    
+    # Initialize the Keyboard
+    kb = keyboard.Keyboard()
+    
+    #PSURP Inits
+    """
+    # Initialize the serial connection for PSURP
+    ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
+    ser.flush()
+    ser.write("X".encode())  # Initialize PSURP
+    ser.write("RUNE\n".encode())  # Enter streaming mode
+    """
+    
+    # Trail settings
+    trail_positions = []  # Stores Dino's previous positions
+    trail_length = 35  # Maximum number of trail dots
+    trail_dot_size = 0.005  # Size of each dot for trail 
+    trail_dots = []  # List of Circle stimuli for the trail
+    trail_color = 'yellow'  # Color of the trail dots
+    trail_frame_counter = 0  # Counter to control trail dot spawning
+    trail_interval = 5  # Spawn a dot every 5 frames
+    
+    
+    #Button 0 and button 2 force properties
+    B0ForceInNewtons = 0
+    B2ForceInNewtons = 0
+    MIN_FORCE = 0.4  # Minimum force to start movement
+    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
+    
+    
+    # Dino movement variables
+    dino_pos = [0, -0.3]  # Starting position [x, y]
+    dino_speed = 0  # Initial vertical speed
+    gravity = -0.0003  # Downward acceleration 0.00006
+    jump_speed = 0.005  # Jumping speed
+    move_speed = 0.01  # Horizontal movement speed
+    ground_offset = 0.03  # Offset to avoid sinking into the ground visually
+    #min_x = -0.6  # Left boundary
+    #max_x = 19 # right boundary
+    respawn_position = [0, -0.3]  # Starting position for Dino
+    
+    
+    
+    # Floor properties
+    
+    floor1_vertices = floor1_L6.vertices  # Get floor1_L6 vertices
+    floor_top = max(v[1] for v in floor1_vertices)  # Highest point of floor1_L6
+    fall_threshold = min(v[1] for v in floor1_vertices) - 0.2  # Slightly below the lowest floor point
+    
+    
+    # Function to check if Dino is on the floor
+    def is_on_floor(dino_pos):
+        """Check if Dino's bottom is within the bounds of floor1_L6 or floor2_L6."""
+        dino_bottom = dino_pos[1] - (dino_image_L6.size[1] / 2)  # Dino's bottom Y-position
+    
+        # floor1_L6 bounds
+        x_min1 = min(v[0] for v in floor1_vertices)
+        x_max1 = max(v[0] for v in floor1_vertices)
+        
+        # floor2_L6 bounds
+        x_min2 = min(v[0] for v in floor2_vertices)
+        x_max2 = max(v[0] for v in floor2_vertices)
+    
+        # Check floor1_L6 or floor2_L6
+        on_floor1 = x_min1 <= dino_pos[0] <= x_max1 and dino_bottom <= floor1_top
+        on_floor2 = x_min2 <= dino_pos[0] <= x_max2 and dino_bottom <= floor2_top
+    
+        return on_floor1 or on_floor2
+        
+    #calculates the psurp forces
+    def calculate_psurp_forces(serial_data):
+        """Extract and calculate forces from PSURP serial data."""
+        if len(serial_data.decode()) == 12:
+            output = serial_data.decode()
+            
+            # Calculate forces
+            B0HighByte = Base71Lookup.index(output[0])
+            B0LowByte = Base71Lookup.index(output[1])
+            B2HighByte = Base71Lookup.index(output[4])
+            B2LowByte = Base71Lookup.index(output[5])
+            
+            # Forces in Newtons
+            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            
+            return B0ForceInNewtons, B2ForceInNewtons
+        
+        return 0, 0  # Default forces if data is invalid
+    
+    
+    
+    # image path for dino animation
+    frame_paths = [
+        "Assets/dino_frames/f1.png", "Assets/dino_frames/f2.png", 
+        "Assets/dino_frames/f3.png", "Assets/dino_frames/f4.png", 
+        "Assets/dino_frames/f5.png", "Assets/dino_frames/f6.png", 
+        "Assets/dino_frames/f7.png", "Assets/dino_frames/f8.png", 
+        "Assets/dino_frames/f9.png", "Assets/dino_frames/f10.png", 
+        "Assets/dino_frames/f11.png", "Assets/dino_frames/f12.png"
+    ]
+    
+    
+    
+    frame_index = 0  # Start with the first frame
+    frame_index_update_counter = 0  # Counter to manage animation speed
+    total_frames = len(frame_paths)  # Total number of frames in the animation
+    
+    # Initialize the Dino's first frame
+    dino_image_L6.image = frame_paths[frame_index]
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from worldController_L6
+    from psychopy.visual import Rect, ImageStim, ShapeStim
+    import math
+    
+    dirt_texture_L6 = 'Assets/grounds/ground6.png'
+    
+    #height factors for arcs (Y position)
+    low_arc = -0.2  
+    reg_arc = 0
+    high_arc = 0.04
+    
+    small_arc_size = 0.2  # Smallest arc radius
+    med_arc_size = 0.27  # Medium arc radius
+    large_arc_size = 0.35  # Largest arc radius
+    
+    wiggle_thickness = 0.05  # Adjust thickness for all wiggle arcs
+    
+    meatbone_size = [0.15, 0.09]  # Example size (width, height)
+    
+    
+    # Function to calculate vertices of a Rect stimulus
+    def calculate_rect_vertices(rect):
+        """Calculate the vertices of a Rect stimulus."""
+        half_width = rect.width / 2
+        half_height = rect.height / 2
+        center_x, center_y = rect.pos
+        vertices = [
+            [center_x - half_width, center_y - half_height],  # Bottom-left
+            [center_x + half_width, center_y - half_height],  # Bottom-right
+            [center_x + half_width, center_y + half_height],  # Top-right
+            [center_x - half_width, center_y + half_height],  # Top-left
+        ]
+        return vertices
+    
+    # Camera variables
+    camera_offset_x = 0  # Tracks the camera offset to follow Dino
+    #camera_speed = 0.003  # Adjust this speed as needed 0.003
+    # Background properties
+    background_width = 2.0  # Width of a single background image
+    background_height = 1.0
+    
+    background_image_L6 = 'Assets/bgs/L6.png'  # Path to your custom background image
+    
+    # Create two background images for seamless scrolling
+    background1_L6 = ImageStim(win, image=background_image_L6, size=[background_width, background_height], pos=[0, 0])
+    background2_L6 = ImageStim(win, image=background_image_L6, size=[background_width, background_height], pos=[background_width, 0])
+    
+    # floor1_L6 properties
+    floor1_height = 0.3
+    floor1_width = 0.5
+    floor1_pos = [0, -0.5]
+    
+    floor1_L6 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L6,
+        size=(floor1_width, floor1_height),  # Set the size to match the floor dimensions
+        pos=floor1_pos,
+        interpolate=True
+    )
+    floor1_vertices = calculate_rect_vertices(floor1_L6)
+    
+    # floor2_L6 properties - Place it further into the map
+    #floor2_x_static = 15.5  # Fixed X position where floor2_L6 appears18.5
+    floor2_height = 0.3
+    floor2_width = 0.5
+    
+    floor2_L6 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L6,
+        size=(floor2_width, floor2_height),  # Set the size to match the floor dimensions
+        pos=[floor2_x_static, -0.5],  # Position of floor2_L6
+        interpolate=True
+    )
+    floor2_vertices = calculate_rect_vertices(floor2_L6)
+    
+    
+    # Floor thresholds
+    floor1_top = max(v[1] for v in floor1_vertices)
+    floor2_top = max(v[1] for v in floor2_vertices)
+    
+    
+    
+    #meat bone
+    
+    meatbone_size = [0.12, 0.06]  # Example size (width, height)
+    meatbone_image_L6.size = meatbone_size
+    offset = 0.01  # Adjust to align the meatbone properly with floor2_L6
+    
+    
+    #arc stuff
+    
+    # Arc 1 Properties
+    arc1_L6_x = 0.3
+    arc1_L6_center = [arc1_L6_x, reg_arc]
+    arc1_L6_radius = small_arc_size
+    arc1_L6_start_angle = 0
+    arc1_L6_end_angle = 180
+    
+    # Arc 2 Properties
+    arc2_L6_x = 1.1
+    arc2_L6_center = [arc2_L6_x, reg_arc]
+    arc2_L6_radius = large_arc_size
+    arc2_L6_start_angle = 0
+    arc2_L6_end_angle = 180
+    
+    # Arc 3 Properties
+    arc3_L6_x = 1.9
+    arc3_L6_center = [arc3_L6_x, reg_arc]
+    arc3_L6_radius = med_arc_size
+    arc3_L6_start_angle = 0
+    arc3_L6_end_angle = 180
+    
+    # Arc 4 Properties
+    arc4_L6_x = 2.7
+    arc4_L6_center = [arc4_L6_x, reg_arc]
+    arc4_L6_radius = small_arc_size
+    arc4_L6_start_angle = 0
+    arc4_L6_end_angle = 180
+    
+    # Arc 5 Properties
+    arc5_L6_x = 3.5
+    arc5_L6_center = [arc5_L6_x, reg_arc]
+    arc5_L6_radius = large_arc_size
+    arc5_L6_start_angle = 0
+    arc5_L6_end_angle = 180
+    
+    # Arc 6 Properties
+    arc6_L6_x = 4.3
+    arc6_L6_center = [arc6_L6_x, reg_arc]
+    arc6_L6_radius = med_arc_size
+    arc6_L6_start_angle = 0
+    arc6_L6_end_angle = 180
+    
+    # Arc 7 Properties
+    arc7_L6_x = 5.1
+    arc7_L6_center = [arc7_L6_x, reg_arc]
+    arc7_L6_radius = large_arc_size
+    arc7_L6_start_angle = 0
+    arc7_L6_end_angle = 180
+    
+    # Arc 8 Properties
+    arc8_L6_x = 5.9
+    arc8_L6_center = [arc8_L6_x, reg_arc]
+    arc8_L6_radius = med_arc_size
+    arc8_L6_start_angle = 0
+    arc8_L6_end_angle = 180
+    
+    # Arc 9 Properties
+    arc9_L6_x = 6.7
+    arc9_L6_center = [arc9_L6_x, reg_arc]
+    arc9_L6_radius = med_arc_size
+    arc9_L6_start_angle = 0
+    arc9_L6_end_angle = 180
+    
+    # Arc 10 Properties
+    arc10_L6_x = 7.5
+    arc10_L6_center = [arc10_L6_x, reg_arc]
+    arc10_L6_radius = med_arc_size
+    arc10_L6_start_angle = 0
+    arc10_L6_end_angle = 180
+    
+    # Arc 11 Properties
+    arc11_L6_x = 8.3
+    arc11_L6_center = [arc11_L6_x, reg_arc]
+    arc11_L6_radius = med_arc_size
+    arc11_L6_start_angle = 0
+    arc11_L6_end_angle = 180
+    
+    
+    # Generate vertices for Arc 1
+    arc1_L6_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc1_L6_start_angle + i * (arc1_L6_end_angle - arc1_L6_start_angle) / 50)
+        x = arc1_L6_center[0] + arc1_L6_radius * math.cos(angle)
+        y = arc1_L6_center[1] + arc1_L6_radius * math.sin(angle)
+        arc1_L6_vertices.append((x, y))
+    
+    # Generate vertices for Arc 2
+    arc2_L6_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc2_L6_start_angle + i * (arc2_L6_end_angle - arc2_L6_start_angle) / 50)
+        x = arc2_L6_center[0] + arc2_L6_radius * math.cos(angle)
+        y = arc2_L6_center[1] + arc2_L6_radius * math.sin(angle)
+        arc2_L6_vertices.append((x, y))
+        
+        
+    
+    # Generate vertices for Arc 3
+    arc3_L6_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc3_L6_start_angle + i * (arc3_L6_end_angle - arc3_L6_start_angle) / 50)
+        x = arc3_L6_center[0] + arc3_L6_radius * math.cos(angle)
+        y = arc3_L6_center[1] + arc3_L6_radius * math.sin(angle)
+        arc3_L6_vertices.append((x, y))
+    
+    # Generate vertices for Arc 4
+    arc4_L6_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc4_L6_start_angle + i * (arc4_L6_end_angle - arc4_L6_start_angle) / 50)
+        x = arc4_L6_center[0] + arc4_L6_radius * math.cos(angle)
+        y = arc4_L6_center[1] + arc4_L6_radius * math.sin(angle)
+        arc4_L6_vertices.append((x, y))
+    
+    
+    # Generate vertices for Arc 5
+    arc5_L6_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc5_L6_start_angle + i * (arc5_L6_end_angle - arc5_L6_start_angle) / 50)
+        x = arc5_L6_center[0] + arc5_L6_radius * math.cos(angle)
+        y = arc5_L6_center[1] + arc5_L6_radius * math.sin(angle)
+        arc5_L6_vertices.append((x, y))
+        
+    
+    arc6_L6_vertices = []
+    for i in range(51):
+        angle = math.radians(arc6_L6_start_angle + i * (arc6_L6_end_angle - arc6_L6_start_angle) / 50)
+        x = arc6_L6_center[0] + arc6_L6_radius * math.cos(angle)
+        y = arc6_L6_center[1] + arc6_L6_radius * math.sin(angle)
+        arc6_L6_vertices.append((x, y))
+    
+    # Arc 7 vertices
+    arc7_L6_vertices = []
+    for i in range(51):
+        angle = math.radians(arc7_L6_start_angle + i * (arc7_L6_end_angle - arc7_L6_start_angle) / 50)
+        x = arc7_L6_center[0] + arc7_L6_radius * math.cos(angle)
+        y = arc7_L6_center[1] + arc7_L6_radius * math.sin(angle)
+        arc7_L6_vertices.append((x, y))
+    
+    # Arc 8 vertices
+    arc8_L6_vertices = []
+    for i in range(51):
+        angle = math.radians(arc8_L6_start_angle + i * (arc8_L6_end_angle - arc8_L6_start_angle) / 50)
+        x = arc8_L6_center[0] + arc8_L6_radius * math.cos(angle)
+        y = arc8_L6_center[1] + arc8_L6_radius * math.sin(angle)
+        arc8_L6_vertices.append((x, y))
+        
+    # Arc 9 vertices
+    arc9_L6_vertices = []
+    for i in range(51):
+        angle = math.radians(arc9_L6_start_angle + i * (arc9_L6_end_angle - arc9_L6_start_angle) / 50)
+        x = arc9_L6_center[0] + arc9_L6_radius * math.cos(angle)
+        y = arc9_L6_center[1] + arc9_L6_radius * math.sin(angle)
+        arc9_L6_vertices.append((x, y))
+        
+    # Arc 10 vertices
+    arc10_L6_vertices = []
+    for i in range(51):
+        angle = math.radians(arc10_L6_start_angle + i * (arc10_L6_end_angle - arc10_L6_start_angle) / 50)
+        x = arc10_L6_center[0] + arc10_L6_radius * math.cos(angle)
+        y = arc10_L6_center[1] + arc10_L6_radius * math.sin(angle)
+        arc10_L6_vertices.append((x, y))
+        
+    # Arc 11 vertices
+    arc11_L6_vertices = []
+    for i in range(51):
+        angle = math.radians(arc11_L6_start_angle + i * (arc11_L6_end_angle - arc11_L6_start_angle) / 50)
+        x = arc11_L6_center[0] + arc11_L6_radius * math.cos(angle)
+        y = arc11_L6_center[1] + arc11_L6_radius * math.sin(angle)
+        arc11_L6_vertices.append((x, y))
+        
+    # Create the arc ShapeStim
+    arc1_L6 = ShapeStim(
+        win=win,
+        vertices=arc1_L6_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    # Create Arc 2 ShapeStim
+    arc2_L6 = ShapeStim(
+        win=win,
+        vertices=arc2_L6_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Different color for clarity
+        fillColor=None
+    )
+    
+    
+    # Create Arc 3 ShapeStim
+    arc3_L6 = ShapeStim(
+        win=win,
+        vertices=arc3_L6_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 4 ShapeStim
+    arc4_L6 = ShapeStim(
+        win=win,
+        vertices=arc4_L6_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 5 ShapeStim
+    arc5_L6 = ShapeStim(
+        win=win,
+        vertices=arc5_L6_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    arc6_L6 = ShapeStim(
+        win=win,
+        vertices=arc6_L6_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc7_L6 = ShapeStim(
+        win=win,
+        vertices=arc7_L6_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc8_L6 = ShapeStim(
+        win=win,
+        vertices=arc8_L6_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    
+    arc9_L6 = ShapeStim(
+        win=win,
+        vertices=arc9_L6_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc10_L6 = ShapeStim(
+        win=win,
+        vertices=arc10_L6_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc11_L6 = ShapeStim(
+        win=win,
+        vertices=arc11_L6_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    def create_wiggle_arc(center, radius, thickness, color='grey', opacity=0.5):
+        """Generate a thick wiggle room arc for a given arc."""
+        outer_arc_vertices = []
+        inner_arc_vertices = []
+    
+        for i in range(51):  # 50 segments for smoothness
+            angle = math.radians(i * (180 / 50))  # Same angles as original arc
+    
+            # Outer arc (slightly larger)
+            outer_x = center[0] + (radius + thickness) * math.cos(angle)
+            outer_y = center[1] + (radius + thickness) * math.sin(angle)
+            outer_arc_vertices.append((outer_x, outer_y))
+    
+            # Inner arc (slightly smaller)
+            inner_x = center[0] + (radius - thickness) * math.cos(angle)
+            inner_y = center[1] + (radius - thickness) * math.sin(angle)
+            inner_arc_vertices.append((inner_x, inner_y))
+    
+        # Reverse inner arc vertices to create a closed shape
+        inner_arc_vertices.reverse()
+        thick_wiggle_arc_vertices = outer_arc_vertices + inner_arc_vertices
+    
+        # Create and return the wiggle room arc
+        return ShapeStim(
+            win=win,
+            vertices=thick_wiggle_arc_vertices,
+            closeShape=True,  # Fill between outer and inner arcs
+            lineWidth=0,  # No outline needed
+            lineColor=None,
+            fillColor=color,
+            opacity=opacity
+        )
+    
+    
+    # Generate wiggle arcs for all arcs
+    wiggle_arc1_L6 = create_wiggle_arc(arc1_L6_center, arc1_L6_radius, wiggle_thickness)
+    wiggle_arc2_L6 = create_wiggle_arc(arc2_L6_center, arc2_L6_radius, wiggle_thickness)
+    wiggle_arc3_L6 = create_wiggle_arc(arc3_L6_center, arc3_L6_radius, wiggle_thickness)
+    wiggle_arc4_L6 = create_wiggle_arc(arc4_L6_center, arc4_L6_radius, wiggle_thickness)
+    wiggle_arc5_L6 = create_wiggle_arc(arc5_L6_center, arc5_L6_radius, wiggle_thickness)
+    wiggle_arc6_L6 = create_wiggle_arc(arc6_L6_center, arc6_L6_radius, wiggle_thickness)
+    wiggle_arc7_L6 = create_wiggle_arc(arc7_L6_center, arc7_L6_radius, wiggle_thickness)
+    wiggle_arc8_L6 = create_wiggle_arc(arc8_L6_center, arc8_L6_radius, wiggle_thickness)
+    wiggle_arc9_L6 = create_wiggle_arc(arc9_L6_center, arc9_L6_radius, wiggle_thickness)
+    wiggle_arc10_L6 = create_wiggle_arc(arc10_L6_center, arc10_L6_radius, wiggle_thickness)
+    wiggle_arc11_L6 = create_wiggle_arc(arc11_L6_center, arc11_L6_radius, wiggle_thickness)
+    
+    
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from GoalController_L6
+    
+    meatbone_collided = False  # Track whether the meatbone has been stomped
+    arc1_touched_vertices_L6 = []
+    arc2_touched_vertices_L6 = []
+    arc3_touched_vertices_L6 = []
+    arc4_touched_vertices_L6 = []
+    arc5_touched_vertices_L6 = []
+    arc6_touched_vertices_L6 = []
+    arc7_touched_vertices_L6 = []
+    arc8_touched_vertices_L6 = []
+    arc9_touched_vertices_L6 = []
+    arc10_touched_vertices_L6 = []
+    arc11_touched_vertices_L6 = []
+    
+    touch_threshold_L6 = 0.04 # touch threshold for the arcs
+    
+    meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
+    
+    
+    # Track if Dino is in the wiggle room defualt is not touching so false
+    wiggle_room = False  
+    
+    
+    # Run 'Begin Experiment' code from Timer_L6
+    level_timer = core.Clock()  # Initialize the timer
+    time_limit = 125  # Set the time limit in seconds (2 minutes)
+    
+    lose_sound_L6 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='lose_sound_L6',    name='lose_sound_L6'
+    )
+    lose_sound_L6.setVolume(1.0)
+    eat_sound_L6 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='eat_sound_L6',    name='eat_sound_L6'
+    )
+    eat_sound_L6.setVolume(1.0)
+    
+    # --- Initialize components for Routine "Level_6_checker" ---
+    end_score_text_L6 = visual.TextStim(win=win, name='end_score_text_L6',
+        text='Score: ',
+        font='Arial',
+        pos=(0, .2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    win_sound_L6 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='win_sound_L6',    name='win_sound_L6'
+    )
+    win_sound_L6.setVolume(1.0)
+    fail_sound_L6 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='fail_sound_L6',    name='fail_sound_L6'
+    )
+    fail_sound_L6.setVolume(0.6)
+    
+    # --- Initialize components for Routine "Level_7" ---
+    dino_image_L7 = visual.ImageStim(
+        win=win,
+        name='dino_image_L7', 
+        image='Assets/dino.png', mask=None, anchor='center',
+        ori=0.0, pos=(0,0), draggable=False, size=(0.2, 0.2),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=0.0)
+    floor1_L7 = visual.Rect(
+        win=win, name='floor1_L7',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(-.5,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-1.0, interpolate=True)
+    floor2_L7 = visual.Rect(
+        win=win, name='floor2_L7',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(0,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-2.0, interpolate=True)
+    meatbone_image_L7 = visual.ImageStim(
+        win=win,
+        name='meatbone_image_L7', 
+        image='Assets/meat_bone.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-3.0)
+    score_text_L7 = visual.TextStim(win=win, name='score_text_L7',
+        text='Score: 0',
+        font='Arial',
+        pos=(0.55, 0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-4.0);
+    timer_text_L7 = visual.TextStim(win=win, name='timer_text_L7',
+        text='00 : 00',
+        font='Arial',
+        pos=(-0.55,0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
+    # Run 'Begin Experiment' code from DinoMovement_L7
+    from psychopy.hardware import keyboard
+    from psychopy.visual import Rect
+    import time
+    
+    import serial
+    from psychopy.visual import Circle
+    
+    # Initialize the Keyboard
+    kb = keyboard.Keyboard()
+    
+    #PSURP Inits
+    """
+    # Initialize the serial connection for PSURP
+    ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
+    ser.flush()
+    ser.write("X".encode())  # Initialize PSURP
+    ser.write("RUNE\n".encode())  # Enter streaming mode
+    """
+    
+    # Trail settings
+    trail_positions = []  # Stores Dino's previous positions
+    trail_length = 35  # Maximum number of trail dots
+    trail_dot_size = 0.005  # Size of each dot for trail 
+    trail_dots = []  # List of Circle stimuli for the trail
+    trail_color = 'yellow'  # Color of the trail dots
+    trail_frame_counter = 0  # Counter to control trail dot spawning
+    trail_interval = 5  # Spawn a dot every 5 frames
+    
+    
+    #Button 0 and button 2 force properties
+    B0ForceInNewtons = 0
+    B2ForceInNewtons = 0
+    MIN_FORCE = 0.4  # Minimum force to start movement
+    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
+    
+    
+    # Dino movement variables
+    dino_pos = [0, -0.3]  # Starting position [x, y]
+    dino_speed = 0  # Initial vertical speed
+    gravity = -0.0003  # Downward acceleration 0.00006
+    jump_speed = 0.005  # Jumping speed
+    move_speed = 0.01  # Horizontal movement speed
+    ground_offset = 0.03  # Offset to avoid sinking into the ground visually
+    #min_x = -0.6  # Left boundary
+    #max_x = 19 # right boundary
+    respawn_position = [0, -0.3]  # Starting position for Dino
+    
+    
+    
+    # Floor properties
+    
+    floor1_vertices = floor1_L7.vertices  # Get floor1_L7 vertices
+    floor_top = max(v[1] for v in floor1_vertices)  # Highest point of floor1_L7
+    fall_threshold = min(v[1] for v in floor1_vertices) - 0.2  # Slightly below the lowest floor point
+    
+    
+    # Function to check if Dino is on the floor
+    def is_on_floor(dino_pos):
+        """Check if Dino's bottom is within the bounds of floor1_L7 or floor2_L7."""
+        dino_bottom = dino_pos[1] - (dino_image_L7.size[1] / 2)  # Dino's bottom Y-position
+    
+        # floor1_L7 bounds
+        x_min1 = min(v[0] for v in floor1_vertices)
+        x_max1 = max(v[0] for v in floor1_vertices)
+        
+        # floor2_L7 bounds
+        x_min2 = min(v[0] for v in floor2_vertices)
+        x_max2 = max(v[0] for v in floor2_vertices)
+    
+        # Check floor1_L7 or floor2_L7
+        on_floor1 = x_min1 <= dino_pos[0] <= x_max1 and dino_bottom <= floor1_top
+        on_floor2 = x_min2 <= dino_pos[0] <= x_max2 and dino_bottom <= floor2_top
+    
+        return on_floor1 or on_floor2
+        
+    #calculates the psurp forces
+    def calculate_psurp_forces(serial_data):
+        """Extract and calculate forces from PSURP serial data."""
+        if len(serial_data.decode()) == 12:
+            output = serial_data.decode()
+            
+            # Calculate forces
+            B0HighByte = Base71Lookup.index(output[0])
+            B0LowByte = Base71Lookup.index(output[1])
+            B2HighByte = Base71Lookup.index(output[4])
+            B2LowByte = Base71Lookup.index(output[5])
+            
+            # Forces in Newtons
+            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            
+            return B0ForceInNewtons, B2ForceInNewtons
+        
+        return 0, 0  # Default forces if data is invalid
+    
+    
+    
+    # image path for dino animation
+    frame_paths = [
+        "Assets/dino_frames/f1.png", "Assets/dino_frames/f2.png", 
+        "Assets/dino_frames/f3.png", "Assets/dino_frames/f4.png", 
+        "Assets/dino_frames/f5.png", "Assets/dino_frames/f6.png", 
+        "Assets/dino_frames/f7.png", "Assets/dino_frames/f8.png", 
+        "Assets/dino_frames/f9.png", "Assets/dino_frames/f10.png", 
+        "Assets/dino_frames/f11.png", "Assets/dino_frames/f12.png"
+    ]
+    
+    
+    
+    frame_index = 0  # Start with the first frame
+    frame_index_update_counter = 0  # Counter to manage animation speed
+    total_frames = len(frame_paths)  # Total number of frames in the animation
+    
+    # Initialize the Dino's first frame
+    dino_image_L7.image = frame_paths[frame_index]
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from worldController_L7
+    from psychopy.visual import Rect, ImageStim, ShapeStim
+    import math
+    
+    dirt_texture_L7 = 'Assets/grounds/ground7.png'
+    
+    #height factors for arcs (Y position)
+    low_arc = -0.2  
+    reg_arc = 0
+    high_arc = 0.04
+    
+    small_arc_size = 0.2  # Smallest arc radius
+    med_arc_size = 0.27  # Medium arc radius
+    large_arc_size = 0.35  # Largest arc radius
+    
+    wiggle_thickness = 0.05  # Adjust thickness for all wiggle arcs
+    
+    meatbone_size = [0.15, 0.09]  # Example size (width, height)
+    
+    
+    # Function to calculate vertices of a Rect stimulus
+    def calculate_rect_vertices(rect):
+        """Calculate the vertices of a Rect stimulus."""
+        half_width = rect.width / 2
+        half_height = rect.height / 2
+        center_x, center_y = rect.pos
+        vertices = [
+            [center_x - half_width, center_y - half_height],  # Bottom-left
+            [center_x + half_width, center_y - half_height],  # Bottom-right
+            [center_x + half_width, center_y + half_height],  # Top-right
+            [center_x - half_width, center_y + half_height],  # Top-left
+        ]
+        return vertices
+    
+    # Camera variables
+    camera_offset_x = 0  # Tracks the camera offset to follow Dino
+    #camera_speed = 0.003  # Adjust this speed as needed 0.003
+    # Background properties
+    background_width = 2.0  # Width of a single background image
+    background_height = 1.0
+    
+    background_image_L7 = 'Assets/bgs/L7.png'  # Path to your custom background image
+    
+    # Create two background images for seamless scrolling
+    background1_L7 = ImageStim(win, image=background_image_L7, size=[background_width, background_height], pos=[0, 0])
+    background2_L7 = ImageStim(win, image=background_image_L7, size=[background_width, background_height], pos=[background_width, 0])
+    
+    # floor1_L7 properties
+    floor1_height = 0.3
+    floor1_width = 0.5
+    floor1_pos = [0, -0.5]
+    
+    floor1_L7 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L7,
+        size=(floor1_width, floor1_height),  # Set the size to match the floor dimensions
+        pos=floor1_pos,
+        interpolate=True
+    )
+    floor1_vertices = calculate_rect_vertices(floor1_L7)
+    
+    # floor2_L7 properties - Place it further into the map
+    #floor2_x_static = 15.5  # Fixed X position where floor2_L7 appears18.5
+    floor2_height = 0.3
+    floor2_width = 0.5
+    
+    floor2_L7 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L7,
+        size=(floor2_width, floor2_height),  # Set the size to match the floor dimensions
+        pos=[floor2_x_static, -0.5],  # Position of floor2_L7
+        interpolate=True
+    )
+    floor2_vertices = calculate_rect_vertices(floor2_L7)
+    
+    
+    # Floor thresholds
+    floor1_top = max(v[1] for v in floor1_vertices)
+    floor2_top = max(v[1] for v in floor2_vertices)
+    
+    
+    
+    #meat bone
+    
+    meatbone_size = [0.12, 0.06]  # Example size (width, height)
+    meatbone_image_L7.size = meatbone_size
+    offset = 0.01  # Adjust to align the meatbone properly with floor2_L7
+    
+    
+    #arc stuff
+    
+    # Arc 1 Properties
+    arc1_L7_x = 0.3
+    arc1_L7_center = [arc1_L7_x, reg_arc]
+    arc1_L7_radius = small_arc_size
+    arc1_L7_start_angle = 0
+    arc1_L7_end_angle = 180
+    
+    # Arc 2 Properties
+    arc2_L7_x = 1.1
+    arc2_L7_center = [arc2_L7_x, reg_arc]
+    arc2_L7_radius = large_arc_size
+    arc2_L7_start_angle = 0
+    arc2_L7_end_angle = 180
+    
+    # Arc 3 Properties
+    arc3_L7_x = 1.9
+    arc3_L7_center = [arc3_L7_x, reg_arc]
+    arc3_L7_radius = med_arc_size
+    arc3_L7_start_angle = 0
+    arc3_L7_end_angle = 180
+    
+    # Arc 4 Properties
+    arc4_L7_x = 2.7
+    arc4_L7_center = [arc4_L7_x, reg_arc]
+    arc4_L7_radius = small_arc_size
+    arc4_L7_start_angle = 0
+    arc4_L7_end_angle = 180
+    
+    # Arc 5 Properties
+    arc5_L7_x = 3.5
+    arc5_L7_center = [arc5_L7_x, reg_arc]
+    arc5_L7_radius = large_arc_size
+    arc5_L7_start_angle = 0
+    arc5_L7_end_angle = 180
+    
+    # Arc 6 Properties
+    arc6_L7_x = 4.3
+    arc6_L7_center = [arc6_L7_x, reg_arc]
+    arc6_L7_radius = med_arc_size
+    arc6_L7_start_angle = 0
+    arc6_L7_end_angle = 180
+    
+    # Arc 7 Properties
+    arc7_L7_x = 5.1
+    arc7_L7_center = [arc7_L7_x, reg_arc]
+    arc7_L7_radius = large_arc_size
+    arc7_L7_start_angle = 0
+    arc7_L7_end_angle = 180
+    
+    # Arc 8 Properties
+    arc8_L7_x = 5.9
+    arc8_L7_center = [arc8_L7_x, reg_arc]
+    arc8_L7_radius = med_arc_size
+    arc8_L7_start_angle = 0
+    arc8_L7_end_angle = 180
+    
+    # Arc 9 Properties
+    arc9_L7_x = 6.7
+    arc9_L7_center = [arc9_L7_x, reg_arc]
+    arc9_L7_radius = med_arc_size
+    arc9_L7_start_angle = 0
+    arc9_L7_end_angle = 180
+    
+    # Arc 10 Properties
+    arc10_L7_x = 7.5
+    arc10_L7_center = [arc10_L7_x, reg_arc]
+    arc10_L7_radius = med_arc_size
+    arc10_L7_start_angle = 0
+    arc10_L7_end_angle = 180
+    
+    # Arc 11 Properties
+    arc11_L7_x = 8.3
+    arc11_L7_center = [arc11_L7_x, reg_arc]
+    arc11_L7_radius = med_arc_size
+    arc11_L7_start_angle = 0
+    arc11_L7_end_angle = 180
+    
+    
+    # Generate vertices for Arc 1
+    arc1_L7_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc1_L7_start_angle + i * (arc1_L7_end_angle - arc1_L7_start_angle) / 50)
+        x = arc1_L7_center[0] + arc1_L7_radius * math.cos(angle)
+        y = arc1_L7_center[1] + arc1_L7_radius * math.sin(angle)
+        arc1_L7_vertices.append((x, y))
+    
+    # Generate vertices for Arc 2
+    arc2_L7_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc2_L7_start_angle + i * (arc2_L7_end_angle - arc2_L7_start_angle) / 50)
+        x = arc2_L7_center[0] + arc2_L7_radius * math.cos(angle)
+        y = arc2_L7_center[1] + arc2_L7_radius * math.sin(angle)
+        arc2_L7_vertices.append((x, y))
+        
+        
+    
+    # Generate vertices for Arc 3
+    arc3_L7_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc3_L7_start_angle + i * (arc3_L7_end_angle - arc3_L7_start_angle) / 50)
+        x = arc3_L7_center[0] + arc3_L7_radius * math.cos(angle)
+        y = arc3_L7_center[1] + arc3_L7_radius * math.sin(angle)
+        arc3_L7_vertices.append((x, y))
+    
+    # Generate vertices for Arc 4
+    arc4_L7_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc4_L7_start_angle + i * (arc4_L7_end_angle - arc4_L7_start_angle) / 50)
+        x = arc4_L7_center[0] + arc4_L7_radius * math.cos(angle)
+        y = arc4_L7_center[1] + arc4_L7_radius * math.sin(angle)
+        arc4_L7_vertices.append((x, y))
+    
+    
+    # Generate vertices for Arc 5
+    arc5_L7_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc5_L7_start_angle + i * (arc5_L7_end_angle - arc5_L7_start_angle) / 50)
+        x = arc5_L7_center[0] + arc5_L7_radius * math.cos(angle)
+        y = arc5_L7_center[1] + arc5_L7_radius * math.sin(angle)
+        arc5_L7_vertices.append((x, y))
+        
+    
+    arc6_L7_vertices = []
+    for i in range(51):
+        angle = math.radians(arc6_L7_start_angle + i * (arc6_L7_end_angle - arc6_L7_start_angle) / 50)
+        x = arc6_L7_center[0] + arc6_L7_radius * math.cos(angle)
+        y = arc6_L7_center[1] + arc6_L7_radius * math.sin(angle)
+        arc6_L7_vertices.append((x, y))
+    
+    # Arc 7 vertices
+    arc7_L7_vertices = []
+    for i in range(51):
+        angle = math.radians(arc7_L7_start_angle + i * (arc7_L7_end_angle - arc7_L7_start_angle) / 50)
+        x = arc7_L7_center[0] + arc7_L7_radius * math.cos(angle)
+        y = arc7_L7_center[1] + arc7_L7_radius * math.sin(angle)
+        arc7_L7_vertices.append((x, y))
+    
+    # Arc 8 vertices
+    arc8_L7_vertices = []
+    for i in range(51):
+        angle = math.radians(arc8_L7_start_angle + i * (arc8_L7_end_angle - arc8_L7_start_angle) / 50)
+        x = arc8_L7_center[0] + arc8_L7_radius * math.cos(angle)
+        y = arc8_L7_center[1] + arc8_L7_radius * math.sin(angle)
+        arc8_L7_vertices.append((x, y))
+        
+    # Arc 9 vertices
+    arc9_L7_vertices = []
+    for i in range(51):
+        angle = math.radians(arc9_L7_start_angle + i * (arc9_L7_end_angle - arc9_L7_start_angle) / 50)
+        x = arc9_L7_center[0] + arc9_L7_radius * math.cos(angle)
+        y = arc9_L7_center[1] + arc9_L7_radius * math.sin(angle)
+        arc9_L7_vertices.append((x, y))
+        
+    # Arc 10 vertices
+    arc10_L7_vertices = []
+    for i in range(51):
+        angle = math.radians(arc10_L7_start_angle + i * (arc10_L7_end_angle - arc10_L7_start_angle) / 50)
+        x = arc10_L7_center[0] + arc10_L7_radius * math.cos(angle)
+        y = arc10_L7_center[1] + arc10_L7_radius * math.sin(angle)
+        arc10_L7_vertices.append((x, y))
+        
+    # Arc 11 vertices
+    arc11_L7_vertices = []
+    for i in range(51):
+        angle = math.radians(arc11_L7_start_angle + i * (arc11_L7_end_angle - arc11_L7_start_angle) / 50)
+        x = arc11_L7_center[0] + arc11_L7_radius * math.cos(angle)
+        y = arc11_L7_center[1] + arc11_L7_radius * math.sin(angle)
+        arc11_L7_vertices.append((x, y))
+        
+    # Create the arc ShapeStim
+    arc1_L7 = ShapeStim(
+        win=win,
+        vertices=arc1_L7_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    # Create Arc 2 ShapeStim
+    arc2_L7 = ShapeStim(
+        win=win,
+        vertices=arc2_L7_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Different color for clarity
+        fillColor=None
+    )
+    
+    
+    # Create Arc 3 ShapeStim
+    arc3_L7 = ShapeStim(
+        win=win,
+        vertices=arc3_L7_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 4 ShapeStim
+    arc4_L7 = ShapeStim(
+        win=win,
+        vertices=arc4_L7_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 5 ShapeStim
+    arc5_L7 = ShapeStim(
+        win=win,
+        vertices=arc5_L7_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    arc6_L7 = ShapeStim(
+        win=win,
+        vertices=arc6_L7_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc7_L7 = ShapeStim(
+        win=win,
+        vertices=arc7_L7_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc8_L7 = ShapeStim(
+        win=win,
+        vertices=arc8_L7_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    
+    arc9_L7 = ShapeStim(
+        win=win,
+        vertices=arc9_L7_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc10_L7 = ShapeStim(
+        win=win,
+        vertices=arc10_L7_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc11_L7 = ShapeStim(
+        win=win,
+        vertices=arc11_L7_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    def create_wiggle_arc(center, radius, thickness, color='blue', opacity=0.5):
+        """Generate a thick wiggle room arc for a given arc."""
+        outer_arc_vertices = []
+        inner_arc_vertices = []
+    
+        for i in range(51):  # 50 segments for smoothness
+            angle = math.radians(i * (180 / 50))  # Same angles as original arc
+    
+            # Outer arc (slightly larger)
+            outer_x = center[0] + (radius + thickness) * math.cos(angle)
+            outer_y = center[1] + (radius + thickness) * math.sin(angle)
+            outer_arc_vertices.append((outer_x, outer_y))
+    
+            # Inner arc (slightly smaller)
+            inner_x = center[0] + (radius - thickness) * math.cos(angle)
+            inner_y = center[1] + (radius - thickness) * math.sin(angle)
+            inner_arc_vertices.append((inner_x, inner_y))
+    
+        # Reverse inner arc vertices to create a closed shape
+        inner_arc_vertices.reverse()
+        thick_wiggle_arc_vertices = outer_arc_vertices + inner_arc_vertices
+    
+        # Create and return the wiggle room arc
+        return ShapeStim(
+            win=win,
+            vertices=thick_wiggle_arc_vertices,
+            closeShape=True,  # Fill between outer and inner arcs
+            lineWidth=0,  # No outline needed
+            lineColor=None,
+            fillColor=color,
+            opacity=opacity
+        )
+    
+    
+    # Generate wiggle arcs for all arcs
+    wiggle_arc1_L7 = create_wiggle_arc(arc1_L7_center, arc1_L7_radius, wiggle_thickness)
+    wiggle_arc2_L7 = create_wiggle_arc(arc2_L7_center, arc2_L7_radius, wiggle_thickness)
+    wiggle_arc3_L7 = create_wiggle_arc(arc3_L7_center, arc3_L7_radius, wiggle_thickness)
+    wiggle_arc4_L7 = create_wiggle_arc(arc4_L7_center, arc4_L7_radius, wiggle_thickness)
+    wiggle_arc5_L7 = create_wiggle_arc(arc5_L7_center, arc5_L7_radius, wiggle_thickness)
+    wiggle_arc6_L7 = create_wiggle_arc(arc6_L7_center, arc6_L7_radius, wiggle_thickness)
+    wiggle_arc7_L7 = create_wiggle_arc(arc7_L7_center, arc7_L7_radius, wiggle_thickness)
+    wiggle_arc8_L7 = create_wiggle_arc(arc8_L7_center, arc8_L7_radius, wiggle_thickness)
+    wiggle_arc9_L7 = create_wiggle_arc(arc9_L7_center, arc9_L7_radius, wiggle_thickness)
+    wiggle_arc10_L7 = create_wiggle_arc(arc10_L7_center, arc10_L7_radius, wiggle_thickness)
+    wiggle_arc11_L7 = create_wiggle_arc(arc11_L7_center, arc11_L7_radius, wiggle_thickness)
+    
+    
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from GoalController_L7
+    
+    meatbone_collided = False  # Track whether the meatbone has been stomped
+    arc1_touched_vertices_L7 = []
+    arc2_touched_vertices_L7 = []
+    arc3_touched_vertices_L7 = []
+    arc4_touched_vertices_L7 = []
+    arc5_touched_vertices_L7 = []
+    arc6_touched_vertices_L7 = []
+    arc7_touched_vertices_L7 = []
+    arc8_touched_vertices_L7 = []
+    arc9_touched_vertices_L7 = []
+    arc10_touched_vertices_L7 = []
+    arc11_touched_vertices_L7 = []
+    
+    touch_threshold_L7 = 0.04 # touch threshold for the arcs
+    
+    meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
+    
+    
+    # Track if Dino is in the wiggle room defualt is not touching so false
+    wiggle_room = False  
+    
+    
+    # Run 'Begin Experiment' code from Timer_L7
+    level_timer = core.Clock()  # Initialize the timer
+    time_limit = 125  # Set the time limit in seconds (2 minutes)
+    
+    lose_sound_L7 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='lose_sound_L7',    name='lose_sound_L7'
+    )
+    lose_sound_L7.setVolume(1.0)
+    eat_sound_L7 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='eat_sound_L7',    name='eat_sound_L7'
+    )
+    eat_sound_L7.setVolume(1.0)
+    
+    # --- Initialize components for Routine "Level_7_checker" ---
+    end_score_text_L7 = visual.TextStim(win=win, name='end_score_text_L7',
+        text='Score: ',
+        font='Arial',
+        pos=(0, .2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    win_sound_L7 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='win_sound_L7',    name='win_sound_L7'
+    )
+    win_sound_L7.setVolume(1.0)
+    fail_sound_L7 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='fail_sound_L7',    name='fail_sound_L7'
+    )
+    fail_sound_L7.setVolume(0.6)
+    
+    # --- Initialize components for Routine "Level_8" ---
+    dino_image_L8 = visual.ImageStim(
+        win=win,
+        name='dino_image_L8', 
+        image='Assets/dino.png', mask=None, anchor='center',
+        ori=0.0, pos=(0,0), draggable=False, size=(0.2, 0.2),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=0.0)
+    floor1_L8 = visual.Rect(
+        win=win, name='floor1_L8',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(-.5,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-1.0, interpolate=True)
+    floor2_L8 = visual.Rect(
+        win=win, name='floor2_L8',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(0,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-2.0, interpolate=True)
+    meatbone_image_L8 = visual.ImageStim(
+        win=win,
+        name='meatbone_image_L8', 
+        image='Assets/meat_bone.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-3.0)
+    score_text_L8 = visual.TextStim(win=win, name='score_text_L8',
+        text='Score: 0',
+        font='Arial',
+        pos=(0.55, 0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-4.0);
+    timer_text_L8 = visual.TextStim(win=win, name='timer_text_L8',
+        text='00 : 00',
+        font='Arial',
+        pos=(-0.55,0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
+    # Run 'Begin Experiment' code from DinoMovement_L8
+    from psychopy.hardware import keyboard
+    from psychopy.visual import Rect
+    import time
+    
+    import serial
+    from psychopy.visual import Circle
+    
+    # Initialize the Keyboard
+    kb = keyboard.Keyboard()
+    
+    #PSURP Inits
+    """
+    # Initialize the serial connection for PSURP
+    ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
+    ser.flush()
+    ser.write("X".encode())  # Initialize PSURP
+    ser.write("RUNE\n".encode())  # Enter streaming mode
+    """
+    
+    # Trail settings
+    trail_positions = []  # Stores Dino's previous positions
+    trail_length = 35  # Maximum number of trail dots
+    trail_dot_size = 0.005  # Size of each dot for trail 
+    trail_dots = []  # List of Circle stimuli for the trail
+    trail_color = 'yellow'  # Color of the trail dots
+    trail_frame_counter = 0  # Counter to control trail dot spawning
+    trail_interval = 5  # Spawn a dot every 5 frames
+    
+    
+    #Button 0 and button 2 force properties
+    B0ForceInNewtons = 0
+    B2ForceInNewtons = 0
+    MIN_FORCE = 0.4  # Minimum force to start movement
+    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
+    
+    
+    # Dino movement variables
+    dino_pos = [0, -0.3]  # Starting position [x, y]
+    dino_speed = 0  # Initial vertical speed
+    gravity = -0.0003  # Downward acceleration 0.00006
+    jump_speed = 0.005  # Jumping speed
+    move_speed = 0.01  # Horizontal movement speed
+    ground_offset = 0.03  # Offset to avoid sinking into the ground visually
+    #min_x = -0.6  # Left boundary
+    #max_x = 19 # right boundary
+    respawn_position = [0, -0.3]  # Starting position for Dino
+    
+    
+    
+    # Floor properties
+    
+    floor1_vertices = floor1_L8.vertices  # Get floor1_L8 vertices
+    floor_top = max(v[1] for v in floor1_vertices)  # Highest point of floor1_L8
+    fall_threshold = min(v[1] for v in floor1_vertices) - 0.2  # Slightly below the lowest floor point
+    
+    
+    # Function to check if Dino is on the floor
+    def is_on_floor(dino_pos):
+        """Check if Dino's bottom is within the bounds of floor1_L8 or floor2_L8."""
+        dino_bottom = dino_pos[1] - (dino_image_L8.size[1] / 2)  # Dino's bottom Y-position
+    
+        # floor1_L8 bounds
+        x_min1 = min(v[0] for v in floor1_vertices)
+        x_max1 = max(v[0] for v in floor1_vertices)
+        
+        # floor2_L8 bounds
+        x_min2 = min(v[0] for v in floor2_vertices)
+        x_max2 = max(v[0] for v in floor2_vertices)
+    
+        # Check floor1_L8 or floor2_L8
+        on_floor1 = x_min1 <= dino_pos[0] <= x_max1 and dino_bottom <= floor1_top
+        on_floor2 = x_min2 <= dino_pos[0] <= x_max2 and dino_bottom <= floor2_top
+    
+        return on_floor1 or on_floor2
+        
+    #calculates the psurp forces
+    def calculate_psurp_forces(serial_data):
+        """Extract and calculate forces from PSURP serial data."""
+        if len(serial_data.decode()) == 12:
+            output = serial_data.decode()
+            
+            # Calculate forces
+            B0HighByte = Base71Lookup.index(output[0])
+            B0LowByte = Base71Lookup.index(output[1])
+            B2HighByte = Base71Lookup.index(output[4])
+            B2LowByte = Base71Lookup.index(output[5])
+            
+            # Forces in Newtons
+            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            
+            return B0ForceInNewtons, B2ForceInNewtons
+        
+        return 0, 0  # Default forces if data is invalid
+    
+    
+    
+    # image path for dino animation
+    frame_paths = [
+        "Assets/dino_frames/f1.png", "Assets/dino_frames/f2.png", 
+        "Assets/dino_frames/f3.png", "Assets/dino_frames/f4.png", 
+        "Assets/dino_frames/f5.png", "Assets/dino_frames/f6.png", 
+        "Assets/dino_frames/f7.png", "Assets/dino_frames/f8.png", 
+        "Assets/dino_frames/f9.png", "Assets/dino_frames/f10.png", 
+        "Assets/dino_frames/f11.png", "Assets/dino_frames/f12.png"
+    ]
+    
+    
+    
+    frame_index = 0  # Start with the first frame
+    frame_index_update_counter = 0  # Counter to manage animation speed
+    total_frames = len(frame_paths)  # Total number of frames in the animation
+    
+    # Initialize the Dino's first frame
+    dino_image_L8.image = frame_paths[frame_index]
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from worldController_L8
+    from psychopy.visual import Rect, ImageStim, ShapeStim
+    import math
+    
+    dirt_texture_L8 = 'Assets/grounds/ground8.png'
+    
+    #height factors for arcs (Y position)
+    low_arc = -0.2  
+    reg_arc = 0
+    high_arc = 0.04
+    
+    small_arc_size = 0.2  # Smallest arc radius
+    med_arc_size = 0.27  # Medium arc radius
+    large_arc_size = 0.35  # Largest arc radius
+    
+    wiggle_thickness = 0.05  # Adjust thickness for all wiggle arcs
+    
+    meatbone_size = [0.15, 0.09]  # Example size (width, height)
+    
+    
+    # Function to calculate vertices of a Rect stimulus
+    def calculate_rect_vertices(rect):
+        """Calculate the vertices of a Rect stimulus."""
+        half_width = rect.width / 2
+        half_height = rect.height / 2
+        center_x, center_y = rect.pos
+        vertices = [
+            [center_x - half_width, center_y - half_height],  # Bottom-left
+            [center_x + half_width, center_y - half_height],  # Bottom-right
+            [center_x + half_width, center_y + half_height],  # Top-right
+            [center_x - half_width, center_y + half_height],  # Top-left
+        ]
+        return vertices
+    
+    # Camera variables
+    camera_offset_x = 0  # Tracks the camera offset to follow Dino
+    #camera_speed = 0.003  # Adjust this speed as needed 0.003
+    # Background properties
+    background_width = 2.0  # Width of a single background image
+    background_height = 1.0
+    
+    background_image_L8 = 'Assets/bgs/L8.png'  # Path to your custom background image
+    
+    # Create two background images for seamless scrolling
+    background1_L8 = ImageStim(win, image=background_image_L8, size=[background_width, background_height], pos=[0, 0])
+    background2_L8 = ImageStim(win, image=background_image_L8, size=[background_width, background_height], pos=[background_width, 0])
+    
+    # floor1_L8 properties
+    floor1_height = 0.3
+    floor1_width = 0.5
+    floor1_pos = [0, -0.5]
+    
+    floor1_L8 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L8,
+        size=(floor1_width, floor1_height),  # Set the size to match the floor dimensions
+        pos=floor1_pos,
+        interpolate=True
+    )
+    floor1_vertices = calculate_rect_vertices(floor1_L8)
+    
+    # floor2_L8 properties - Place it further into the map
+    #floor2_x_static = 15.5  # Fixed X position where floor2_L8 appears18.5
+    floor2_height = 0.3
+    floor2_width = 0.5
+    
+    floor2_L8 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L8,
+        size=(floor2_width, floor2_height),  # Set the size to match the floor dimensions
+        pos=[floor2_x_static, -0.5],  # Position of floor2_L8
+        interpolate=True
+    )
+    floor2_vertices = calculate_rect_vertices(floor2_L8)
+    
+    
+    # Floor thresholds
+    floor1_top = max(v[1] for v in floor1_vertices)
+    floor2_top = max(v[1] for v in floor2_vertices)
+    
+    
+    
+    #meat bone
+    
+    meatbone_size = [0.12, 0.06]  # Example size (width, height)
+    meatbone_image_L8.size = meatbone_size
+    offset = 0.01  # Adjust to align the meatbone properly with floor2_L8
+    
+    
+    #arc stuff
+    
+    # Arc 1 Properties
+    arc1_L8_x = 0.3
+    arc1_L8_center = [arc1_L8_x, reg_arc]
+    arc1_L8_radius = small_arc_size
+    arc1_L8_start_angle = 0
+    arc1_L8_end_angle = 180
+    
+    # Arc 2 Properties
+    arc2_L8_x = 1.1
+    arc2_L8_center = [arc2_L8_x, reg_arc]
+    arc2_L8_radius = large_arc_size
+    arc2_L8_start_angle = 0
+    arc2_L8_end_angle = 180
+    
+    # Arc 3 Properties
+    arc3_L8_x = 1.9
+    arc3_L8_center = [arc3_L8_x, reg_arc]
+    arc3_L8_radius = med_arc_size
+    arc3_L8_start_angle = 0
+    arc3_L8_end_angle = 180
+    
+    # Arc 4 Properties
+    arc4_L8_x = 2.7
+    arc4_L8_center = [arc4_L8_x, reg_arc]
+    arc4_L8_radius = small_arc_size
+    arc4_L8_start_angle = 0
+    arc4_L8_end_angle = 180
+    
+    # Arc 5 Properties
+    arc5_L8_x = 3.5
+    arc5_L8_center = [arc5_L8_x, reg_arc]
+    arc5_L8_radius = large_arc_size
+    arc5_L8_start_angle = 0
+    arc5_L8_end_angle = 180
+    
+    # Arc 6 Properties
+    arc6_L8_x = 4.3
+    arc6_L8_center = [arc6_L8_x, reg_arc]
+    arc6_L8_radius = med_arc_size
+    arc6_L8_start_angle = 0
+    arc6_L8_end_angle = 180
+    
+    # Arc 7 Properties
+    arc7_L8_x = 5.1
+    arc7_L8_center = [arc7_L8_x, reg_arc]
+    arc7_L8_radius = large_arc_size
+    arc7_L8_start_angle = 0
+    arc7_L8_end_angle = 180
+    
+    # Arc 8 Properties
+    arc8_L8_x = 5.9
+    arc8_L8_center = [arc8_L8_x, reg_arc]
+    arc8_L8_radius = med_arc_size
+    arc8_L8_start_angle = 0
+    arc8_L8_end_angle = 180
+    
+    # Arc 9 Properties
+    arc9_L8_x = 6.7
+    arc9_L8_center = [arc9_L8_x, reg_arc]
+    arc9_L8_radius = med_arc_size
+    arc9_L8_start_angle = 0
+    arc9_L8_end_angle = 180
+    
+    # Arc 10 Properties
+    arc10_L8_x = 7.5
+    arc10_L8_center = [arc10_L8_x, reg_arc]
+    arc10_L8_radius = med_arc_size
+    arc10_L8_start_angle = 0
+    arc10_L8_end_angle = 180
+    
+    # Arc 11 Properties
+    arc11_L8_x = 8.3
+    arc11_L8_center = [arc11_L8_x, reg_arc]
+    arc11_L8_radius = med_arc_size
+    arc11_L8_start_angle = 0
+    arc11_L8_end_angle = 180
+    
+    
+    # Generate vertices for Arc 1
+    arc1_L8_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc1_L8_start_angle + i * (arc1_L8_end_angle - arc1_L8_start_angle) / 50)
+        x = arc1_L8_center[0] + arc1_L8_radius * math.cos(angle)
+        y = arc1_L8_center[1] + arc1_L8_radius * math.sin(angle)
+        arc1_L8_vertices.append((x, y))
+    
+    # Generate vertices for Arc 2
+    arc2_L8_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc2_L8_start_angle + i * (arc2_L8_end_angle - arc2_L8_start_angle) / 50)
+        x = arc2_L8_center[0] + arc2_L8_radius * math.cos(angle)
+        y = arc2_L8_center[1] + arc2_L8_radius * math.sin(angle)
+        arc2_L8_vertices.append((x, y))
+        
+        
+    
+    # Generate vertices for Arc 3
+    arc3_L8_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc3_L8_start_angle + i * (arc3_L8_end_angle - arc3_L8_start_angle) / 50)
+        x = arc3_L8_center[0] + arc3_L8_radius * math.cos(angle)
+        y = arc3_L8_center[1] + arc3_L8_radius * math.sin(angle)
+        arc3_L8_vertices.append((x, y))
+    
+    # Generate vertices for Arc 4
+    arc4_L8_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc4_L8_start_angle + i * (arc4_L8_end_angle - arc4_L8_start_angle) / 50)
+        x = arc4_L8_center[0] + arc4_L8_radius * math.cos(angle)
+        y = arc4_L8_center[1] + arc4_L8_radius * math.sin(angle)
+        arc4_L8_vertices.append((x, y))
+    
+    
+    # Generate vertices for Arc 5
+    arc5_L8_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc5_L8_start_angle + i * (arc5_L8_end_angle - arc5_L8_start_angle) / 50)
+        x = arc5_L8_center[0] + arc5_L8_radius * math.cos(angle)
+        y = arc5_L8_center[1] + arc5_L8_radius * math.sin(angle)
+        arc5_L8_vertices.append((x, y))
+        
+    
+    arc6_L8_vertices = []
+    for i in range(51):
+        angle = math.radians(arc6_L8_start_angle + i * (arc6_L8_end_angle - arc6_L8_start_angle) / 50)
+        x = arc6_L8_center[0] + arc6_L8_radius * math.cos(angle)
+        y = arc6_L8_center[1] + arc6_L8_radius * math.sin(angle)
+        arc6_L8_vertices.append((x, y))
+    
+    # Arc 7 vertices
+    arc7_L8_vertices = []
+    for i in range(51):
+        angle = math.radians(arc7_L8_start_angle + i * (arc7_L8_end_angle - arc7_L8_start_angle) / 50)
+        x = arc7_L8_center[0] + arc7_L8_radius * math.cos(angle)
+        y = arc7_L8_center[1] + arc7_L8_radius * math.sin(angle)
+        arc7_L8_vertices.append((x, y))
+    
+    # Arc 8 vertices
+    arc8_L8_vertices = []
+    for i in range(51):
+        angle = math.radians(arc8_L8_start_angle + i * (arc8_L8_end_angle - arc8_L8_start_angle) / 50)
+        x = arc8_L8_center[0] + arc8_L8_radius * math.cos(angle)
+        y = arc8_L8_center[1] + arc8_L8_radius * math.sin(angle)
+        arc8_L8_vertices.append((x, y))
+        
+    # Arc 9 vertices
+    arc9_L8_vertices = []
+    for i in range(51):
+        angle = math.radians(arc9_L8_start_angle + i * (arc9_L8_end_angle - arc9_L8_start_angle) / 50)
+        x = arc9_L8_center[0] + arc9_L8_radius * math.cos(angle)
+        y = arc9_L8_center[1] + arc9_L8_radius * math.sin(angle)
+        arc9_L8_vertices.append((x, y))
+        
+    # Arc 10 vertices
+    arc10_L8_vertices = []
+    for i in range(51):
+        angle = math.radians(arc10_L8_start_angle + i * (arc10_L8_end_angle - arc10_L8_start_angle) / 50)
+        x = arc10_L8_center[0] + arc10_L8_radius * math.cos(angle)
+        y = arc10_L8_center[1] + arc10_L8_radius * math.sin(angle)
+        arc10_L8_vertices.append((x, y))
+        
+    # Arc 11 vertices
+    arc11_L8_vertices = []
+    for i in range(51):
+        angle = math.radians(arc11_L8_start_angle + i * (arc11_L8_end_angle - arc11_L8_start_angle) / 50)
+        x = arc11_L8_center[0] + arc11_L8_radius * math.cos(angle)
+        y = arc11_L8_center[1] + arc11_L8_radius * math.sin(angle)
+        arc11_L8_vertices.append((x, y))
+        
+    # Create the arc ShapeStim
+    arc1_L8 = ShapeStim(
+        win=win,
+        vertices=arc1_L8_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    # Create Arc 2 ShapeStim
+    arc2_L8 = ShapeStim(
+        win=win,
+        vertices=arc2_L8_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Different color for clarity
+        fillColor=None
+    )
+    
+    
+    # Create Arc 3 ShapeStim
+    arc3_L8 = ShapeStim(
+        win=win,
+        vertices=arc3_L8_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 4 ShapeStim
+    arc4_L8 = ShapeStim(
+        win=win,
+        vertices=arc4_L8_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 5 ShapeStim
+    arc5_L8 = ShapeStim(
+        win=win,
+        vertices=arc5_L8_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    arc6_L8 = ShapeStim(
+        win=win,
+        vertices=arc6_L8_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc7_L8 = ShapeStim(
+        win=win,
+        vertices=arc7_L8_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc8_L8 = ShapeStim(
+        win=win,
+        vertices=arc8_L8_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    
+    arc9_L8 = ShapeStim(
+        win=win,
+        vertices=arc9_L8_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc10_L8 = ShapeStim(
+        win=win,
+        vertices=arc10_L8_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc11_L8 = ShapeStim(
+        win=win,
+        vertices=arc11_L8_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    def create_wiggle_arc(center, radius, thickness, color='red', opacity=0.5):
+        """Generate a thick wiggle room arc for a given arc."""
+        outer_arc_vertices = []
+        inner_arc_vertices = []
+    
+        for i in range(51):  # 50 segments for smoothness
+            angle = math.radians(i * (180 / 50))  # Same angles as original arc
+    
+            # Outer arc (slightly larger)
+            outer_x = center[0] + (radius + thickness) * math.cos(angle)
+            outer_y = center[1] + (radius + thickness) * math.sin(angle)
+            outer_arc_vertices.append((outer_x, outer_y))
+    
+            # Inner arc (slightly smaller)
+            inner_x = center[0] + (radius - thickness) * math.cos(angle)
+            inner_y = center[1] + (radius - thickness) * math.sin(angle)
+            inner_arc_vertices.append((inner_x, inner_y))
+    
+        # Reverse inner arc vertices to create a closed shape
+        inner_arc_vertices.reverse()
+        thick_wiggle_arc_vertices = outer_arc_vertices + inner_arc_vertices
+    
+        # Create and return the wiggle room arc
+        return ShapeStim(
+            win=win,
+            vertices=thick_wiggle_arc_vertices,
+            closeShape=True,  # Fill between outer and inner arcs
+            lineWidth=0,  # No outline needed
+            lineColor=None,
+            fillColor=color,
+            opacity=opacity
+        )
+    
+    
+    # Generate wiggle arcs for all arcs
+    wiggle_arc1_L8 = create_wiggle_arc(arc1_L8_center, arc1_L8_radius, wiggle_thickness)
+    wiggle_arc2_L8 = create_wiggle_arc(arc2_L8_center, arc2_L8_radius, wiggle_thickness)
+    wiggle_arc3_L8 = create_wiggle_arc(arc3_L8_center, arc3_L8_radius, wiggle_thickness)
+    wiggle_arc4_L8 = create_wiggle_arc(arc4_L8_center, arc4_L8_radius, wiggle_thickness)
+    wiggle_arc5_L8 = create_wiggle_arc(arc5_L8_center, arc5_L8_radius, wiggle_thickness)
+    wiggle_arc6_L8 = create_wiggle_arc(arc6_L8_center, arc6_L8_radius, wiggle_thickness)
+    wiggle_arc7_L8 = create_wiggle_arc(arc7_L8_center, arc7_L8_radius, wiggle_thickness)
+    wiggle_arc8_L8 = create_wiggle_arc(arc8_L8_center, arc8_L8_radius, wiggle_thickness)
+    wiggle_arc9_L8 = create_wiggle_arc(arc9_L8_center, arc9_L8_radius, wiggle_thickness)
+    wiggle_arc10_L8 = create_wiggle_arc(arc10_L8_center, arc10_L8_radius, wiggle_thickness)
+    wiggle_arc11_L8 = create_wiggle_arc(arc11_L8_center, arc11_L8_radius, wiggle_thickness)
+    
+    
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from GoalController_L8
+    
+    meatbone_collided = False  # Track whether the meatbone has been stomped
+    arc1_touched_vertices_L8 = []
+    arc2_touched_vertices_L8 = []
+    arc3_touched_vertices_L8 = []
+    arc4_touched_vertices_L8 = []
+    arc5_touched_vertices_L8 = []
+    arc6_touched_vertices_L8 = []
+    arc7_touched_vertices_L8 = []
+    arc8_touched_vertices_L8 = []
+    arc9_touched_vertices_L8 = []
+    arc10_touched_vertices_L8 = []
+    arc11_touched_vertices_L8 = []
+    
+    touch_threshold_L8 = 0.04 # touch threshold for the arcs
+    
+    meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
+    
+    
+    # Track if Dino is in the wiggle room defualt is not touching so false
+    wiggle_room = False  
+    
+    
+    # Run 'Begin Experiment' code from Timer_L8
+    level_timer = core.Clock()  # Initialize the timer
+    time_limit = 125  # Set the time limit in seconds (2 minutes)
+    
+    lose_sound_L8 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='lose_sound_L8',    name='lose_sound_L8'
+    )
+    lose_sound_L8.setVolume(1.0)
+    eat_sound_L8 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='eat_sound_L8',    name='eat_sound_L8'
+    )
+    eat_sound_L8.setVolume(1.0)
+    
+    # --- Initialize components for Routine "Level_8_checker" ---
+    end_score_text_L8 = visual.TextStim(win=win, name='end_score_text_L8',
+        text='Score: ',
+        font='Arial',
+        pos=(0, .2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    win_sound_L8 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='win_sound_L8',    name='win_sound_L8'
+    )
+    win_sound_L8.setVolume(1.0)
+    fail_sound_L8 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='fail_sound_L8',    name='fail_sound_L8'
+    )
+    fail_sound_L8.setVolume(0.6)
+    
+    # --- Initialize components for Routine "Level_9" ---
+    dino_image_L9 = visual.ImageStim(
+        win=win,
+        name='dino_image_L9', 
+        image='Assets/dino.png', mask=None, anchor='center',
+        ori=0.0, pos=(0,0), draggable=False, size=(0.2, 0.2),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=0.0)
+    floor1_L9 = visual.Rect(
+        win=win, name='floor1_L9',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(-.5,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-1.0, interpolate=True)
+    floor2_L9 = visual.Rect(
+        win=win, name='floor2_L9',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(0,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-2.0, interpolate=True)
+    meatbone_image_L9 = visual.ImageStim(
+        win=win,
+        name='meatbone_image_L9', 
+        image='Assets/meat_bone.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-3.0)
+    score_text_L9 = visual.TextStim(win=win, name='score_text_L9',
+        text='Score: 0',
+        font='Arial',
+        pos=(0.55, 0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-4.0);
+    timer_text_L9 = visual.TextStim(win=win, name='timer_text_L9',
+        text='00 : 00',
+        font='Arial',
+        pos=(-0.55,0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
+    # Run 'Begin Experiment' code from DinoMovement_L9
+    from psychopy.hardware import keyboard
+    from psychopy.visual import Rect
+    import time
+    
+    import serial
+    from psychopy.visual import Circle
+    
+    # Initialize the Keyboard
+    kb = keyboard.Keyboard()
+    
+    #PSURP Inits
+    """
+    # Initialize the serial connection for PSURP
+    ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
+    ser.flush()
+    ser.write("X".encode())  # Initialize PSURP
+    ser.write("RUNE\n".encode())  # Enter streaming mode
+    """
+    
+    # Trail settings
+    trail_positions = []  # Stores Dino's previous positions
+    trail_length = 35  # Maximum number of trail dots
+    trail_dot_size = 0.005  # Size of each dot for trail 
+    trail_dots = []  # List of Circle stimuli for the trail
+    trail_color = 'yellow'  # Color of the trail dots
+    trail_frame_counter = 0  # Counter to control trail dot spawning
+    trail_interval = 5  # Spawn a dot every 5 frames
+    
+    
+    #Button 0 and button 2 force properties
+    B0ForceInNewtons = 0
+    B2ForceInNewtons = 0
+    MIN_FORCE = 0.4  # Minimum force to start movement
+    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
+    
+    
+    # Dino movement variables
+    dino_pos = [0, -0.3]  # Starting position [x, y]
+    dino_speed = 0  # Initial vertical speed
+    gravity = -0.0003  # Downward acceleration 0.00006
+    jump_speed = 0.005  # Jumping speed
+    move_speed = 0.01  # Horizontal movement speed
+    ground_offset = 0.03  # Offset to avoid sinking into the ground visually
+    #min_x = -0.6  # Left boundary
+    #max_x = 19 # right boundary
+    respawn_position = [0, -0.3]  # Starting position for Dino
+    
+    
+    
+    # Floor properties
+    
+    floor1_vertices = floor1_L9.vertices  # Get floor1_L9 vertices
+    floor_top = max(v[1] for v in floor1_vertices)  # Highest point of floor1_L9
+    fall_threshold = min(v[1] for v in floor1_vertices) - 0.2  # Slightly below the lowest floor point
+    
+    
+    # Function to check if Dino is on the floor
+    def is_on_floor(dino_pos):
+        """Check if Dino's bottom is within the bounds of floor1_L9 or floor2_L9."""
+        dino_bottom = dino_pos[1] - (dino_image_L9.size[1] / 2)  # Dino's bottom Y-position
+    
+        # floor1_L9 bounds
+        x_min1 = min(v[0] for v in floor1_vertices)
+        x_max1 = max(v[0] for v in floor1_vertices)
+        
+        # floor2_L9 bounds
+        x_min2 = min(v[0] for v in floor2_vertices)
+        x_max2 = max(v[0] for v in floor2_vertices)
+    
+        # Check floor1_L9 or floor2_L9
+        on_floor1 = x_min1 <= dino_pos[0] <= x_max1 and dino_bottom <= floor1_top
+        on_floor2 = x_min2 <= dino_pos[0] <= x_max2 and dino_bottom <= floor2_top
+    
+        return on_floor1 or on_floor2
+        
+    #calculates the psurp forces
+    def calculate_psurp_forces(serial_data):
+        """Extract and calculate forces from PSURP serial data."""
+        if len(serial_data.decode()) == 12:
+            output = serial_data.decode()
+            
+            # Calculate forces
+            B0HighByte = Base71Lookup.index(output[0])
+            B0LowByte = Base71Lookup.index(output[1])
+            B2HighByte = Base71Lookup.index(output[4])
+            B2LowByte = Base71Lookup.index(output[5])
+            
+            # Forces in Newtons
+            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            
+            return B0ForceInNewtons, B2ForceInNewtons
+        
+        return 0, 0  # Default forces if data is invalid
+    
+    
+    
+    # image path for dino animation
+    frame_paths = [
+        "Assets/dino_frames/f1.png", "Assets/dino_frames/f2.png", 
+        "Assets/dino_frames/f3.png", "Assets/dino_frames/f4.png", 
+        "Assets/dino_frames/f5.png", "Assets/dino_frames/f6.png", 
+        "Assets/dino_frames/f7.png", "Assets/dino_frames/f8.png", 
+        "Assets/dino_frames/f9.png", "Assets/dino_frames/f10.png", 
+        "Assets/dino_frames/f11.png", "Assets/dino_frames/f12.png"
+    ]
+    
+    
+    
+    frame_index = 0  # Start with the first frame
+    frame_index_update_counter = 0  # Counter to manage animation speed
+    total_frames = len(frame_paths)  # Total number of frames in the animation
+    
+    # Initialize the Dino's first frame
+    dino_image_L9.image = frame_paths[frame_index]
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from worldController_L9
+    from psychopy.visual import Rect, ImageStim, ShapeStim
+    import math
+    
+    dirt_texture_L9 = 'Assets/grounds/ground9.png'
+    
+    #height factors for arcs (Y position)
+    low_arc = -0.2  
+    reg_arc = 0
+    high_arc = 0.04
+    
+    small_arc_size = 0.2  # Smallest arc radius
+    med_arc_size = 0.27  # Medium arc radius
+    large_arc_size = 0.35  # Largest arc radius
+    
+    wiggle_thickness = 0.05  # Adjust thickness for all wiggle arcs
+    
+    meatbone_size = [0.15, 0.09]  # Example size (width, height)
+    
+    
+    # Function to calculate vertices of a Rect stimulus
+    def calculate_rect_vertices(rect):
+        """Calculate the vertices of a Rect stimulus."""
+        half_width = rect.width / 2
+        half_height = rect.height / 2
+        center_x, center_y = rect.pos
+        vertices = [
+            [center_x - half_width, center_y - half_height],  # Bottom-left
+            [center_x + half_width, center_y - half_height],  # Bottom-right
+            [center_x + half_width, center_y + half_height],  # Top-right
+            [center_x - half_width, center_y + half_height],  # Top-left
+        ]
+        return vertices
+    
+    # Camera variables
+    camera_offset_x = 0  # Tracks the camera offset to follow Dino
+    #camera_speed = 0.003  # Adjust this speed as needed 0.003
+    # Background properties
+    background_width = 2.0  # Width of a single background image
+    background_height = 1.0
+    
+    background_image_L9 = 'Assets/bgs/L9.png'  # Path to your custom background image
+    
+    # Create two background images for seamless scrolling
+    background1_L9 = ImageStim(win, image=background_image_L9, size=[background_width, background_height], pos=[0, 0])
+    background2_L9 = ImageStim(win, image=background_image_L9, size=[background_width, background_height], pos=[background_width, 0])
+    
+    # floor1_L9 properties
+    floor1_height = 0.3
+    floor1_width = 0.5
+    floor1_pos = [0, -0.5]
+    
+    floor1_L9 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L9,
+        size=(floor1_width, floor1_height),  # Set the size to match the floor dimensions
+        pos=floor1_pos,
+        interpolate=True
+    )
+    floor1_vertices = calculate_rect_vertices(floor1_L9)
+    
+    # floor2_L9 properties - Place it further into the map
+    #floor2_x_static = 15.5  # Fixed X position where floor2_L9 appears18.5
+    floor2_height = 0.3
+    floor2_width = 0.5
+    
+    floor2_L9 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L9,
+        size=(floor2_width, floor2_height),  # Set the size to match the floor dimensions
+        pos=[floor2_x_static, -0.5],  # Position of floor2_L9
+        interpolate=True
+    )
+    floor2_vertices = calculate_rect_vertices(floor2_L9)
+    
+    
+    # Floor thresholds
+    floor1_top = max(v[1] for v in floor1_vertices)
+    floor2_top = max(v[1] for v in floor2_vertices)
+    
+    
+    
+    #meat bone
+    
+    meatbone_size = [0.12, 0.06]  # Example size (width, height)
+    meatbone_image_L9.size = meatbone_size
+    offset = 0.01  # Adjust to align the meatbone properly with floor2_L9
+    
+    
+    #arc stuff
+    
+    # Arc 1 Properties
+    arc1_L9_x = 0.3
+    arc1_L9_center = [arc1_L9_x, reg_arc]
+    arc1_L9_radius = small_arc_size
+    arc1_L9_start_angle = 0
+    arc1_L9_end_angle = 180
+    
+    # Arc 2 Properties
+    arc2_L9_x = 1.1
+    arc2_L9_center = [arc2_L9_x, reg_arc]
+    arc2_L9_radius = large_arc_size
+    arc2_L9_start_angle = 0
+    arc2_L9_end_angle = 180
+    
+    # Arc 3 Properties
+    arc3_L9_x = 1.9
+    arc3_L9_center = [arc3_L9_x, reg_arc]
+    arc3_L9_radius = med_arc_size
+    arc3_L9_start_angle = 0
+    arc3_L9_end_angle = 180
+    
+    # Arc 4 Properties
+    arc4_L9_x = 2.7
+    arc4_L9_center = [arc4_L9_x, reg_arc]
+    arc4_L9_radius = small_arc_size
+    arc4_L9_start_angle = 0
+    arc4_L9_end_angle = 180
+    
+    # Arc 5 Properties
+    arc5_L9_x = 3.5
+    arc5_L9_center = [arc5_L9_x, reg_arc]
+    arc5_L9_radius = large_arc_size
+    arc5_L9_start_angle = 0
+    arc5_L9_end_angle = 180
+    
+    # Arc 6 Properties
+    arc6_L9_x = 4.3
+    arc6_L9_center = [arc6_L9_x, reg_arc]
+    arc6_L9_radius = med_arc_size
+    arc6_L9_start_angle = 0
+    arc6_L9_end_angle = 180
+    
+    # Arc 7 Properties
+    arc7_L9_x = 5.1
+    arc7_L9_center = [arc7_L9_x, reg_arc]
+    arc7_L9_radius = large_arc_size
+    arc7_L9_start_angle = 0
+    arc7_L9_end_angle = 180
+    
+    # Arc 8 Properties
+    arc8_L9_x = 5.9
+    arc8_L9_center = [arc8_L9_x, reg_arc]
+    arc8_L9_radius = med_arc_size
+    arc8_L9_start_angle = 0
+    arc8_L9_end_angle = 180
+    
+    # Arc 9 Properties
+    arc9_L9_x = 6.7
+    arc9_L9_center = [arc9_L9_x, reg_arc]
+    arc9_L9_radius = med_arc_size
+    arc9_L9_start_angle = 0
+    arc9_L9_end_angle = 180
+    
+    # Arc 10 Properties
+    arc10_L9_x = 7.5
+    arc10_L9_center = [arc10_L9_x, reg_arc]
+    arc10_L9_radius = med_arc_size
+    arc10_L9_start_angle = 0
+    arc10_L9_end_angle = 180
+    
+    # Arc 11 Properties
+    arc11_L9_x = 8.3
+    arc11_L9_center = [arc11_L9_x, reg_arc]
+    arc11_L9_radius = med_arc_size
+    arc11_L9_start_angle = 0
+    arc11_L9_end_angle = 180
+    
+    
+    # Generate vertices for Arc 1
+    arc1_L9_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc1_L9_start_angle + i * (arc1_L9_end_angle - arc1_L9_start_angle) / 50)
+        x = arc1_L9_center[0] + arc1_L9_radius * math.cos(angle)
+        y = arc1_L9_center[1] + arc1_L9_radius * math.sin(angle)
+        arc1_L9_vertices.append((x, y))
+    
+    # Generate vertices for Arc 2
+    arc2_L9_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc2_L9_start_angle + i * (arc2_L9_end_angle - arc2_L9_start_angle) / 50)
+        x = arc2_L9_center[0] + arc2_L9_radius * math.cos(angle)
+        y = arc2_L9_center[1] + arc2_L9_radius * math.sin(angle)
+        arc2_L9_vertices.append((x, y))
+        
+        
+    
+    # Generate vertices for Arc 3
+    arc3_L9_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc3_L9_start_angle + i * (arc3_L9_end_angle - arc3_L9_start_angle) / 50)
+        x = arc3_L9_center[0] + arc3_L9_radius * math.cos(angle)
+        y = arc3_L9_center[1] + arc3_L9_radius * math.sin(angle)
+        arc3_L9_vertices.append((x, y))
+    
+    # Generate vertices for Arc 4
+    arc4_L9_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc4_L9_start_angle + i * (arc4_L9_end_angle - arc4_L9_start_angle) / 50)
+        x = arc4_L9_center[0] + arc4_L9_radius * math.cos(angle)
+        y = arc4_L9_center[1] + arc4_L9_radius * math.sin(angle)
+        arc4_L9_vertices.append((x, y))
+    
+    
+    # Generate vertices for Arc 5
+    arc5_L9_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc5_L9_start_angle + i * (arc5_L9_end_angle - arc5_L9_start_angle) / 50)
+        x = arc5_L9_center[0] + arc5_L9_radius * math.cos(angle)
+        y = arc5_L9_center[1] + arc5_L9_radius * math.sin(angle)
+        arc5_L9_vertices.append((x, y))
+        
+    
+    arc6_L9_vertices = []
+    for i in range(51):
+        angle = math.radians(arc6_L9_start_angle + i * (arc6_L9_end_angle - arc6_L9_start_angle) / 50)
+        x = arc6_L9_center[0] + arc6_L9_radius * math.cos(angle)
+        y = arc6_L9_center[1] + arc6_L9_radius * math.sin(angle)
+        arc6_L9_vertices.append((x, y))
+    
+    # Arc 7 vertices
+    arc7_L9_vertices = []
+    for i in range(51):
+        angle = math.radians(arc7_L9_start_angle + i * (arc7_L9_end_angle - arc7_L9_start_angle) / 50)
+        x = arc7_L9_center[0] + arc7_L9_radius * math.cos(angle)
+        y = arc7_L9_center[1] + arc7_L9_radius * math.sin(angle)
+        arc7_L9_vertices.append((x, y))
+    
+    # Arc 8 vertices
+    arc8_L9_vertices = []
+    for i in range(51):
+        angle = math.radians(arc8_L9_start_angle + i * (arc8_L9_end_angle - arc8_L9_start_angle) / 50)
+        x = arc8_L9_center[0] + arc8_L9_radius * math.cos(angle)
+        y = arc8_L9_center[1] + arc8_L9_radius * math.sin(angle)
+        arc8_L9_vertices.append((x, y))
+        
+    # Arc 9 vertices
+    arc9_L9_vertices = []
+    for i in range(51):
+        angle = math.radians(arc9_L9_start_angle + i * (arc9_L9_end_angle - arc9_L9_start_angle) / 50)
+        x = arc9_L9_center[0] + arc9_L9_radius * math.cos(angle)
+        y = arc9_L9_center[1] + arc9_L9_radius * math.sin(angle)
+        arc9_L9_vertices.append((x, y))
+        
+    # Arc 10 vertices
+    arc10_L9_vertices = []
+    for i in range(51):
+        angle = math.radians(arc10_L9_start_angle + i * (arc10_L9_end_angle - arc10_L9_start_angle) / 50)
+        x = arc10_L9_center[0] + arc10_L9_radius * math.cos(angle)
+        y = arc10_L9_center[1] + arc10_L9_radius * math.sin(angle)
+        arc10_L9_vertices.append((x, y))
+        
+    # Arc 11 vertices
+    arc11_L9_vertices = []
+    for i in range(51):
+        angle = math.radians(arc11_L9_start_angle + i * (arc11_L9_end_angle - arc11_L9_start_angle) / 50)
+        x = arc11_L9_center[0] + arc11_L9_radius * math.cos(angle)
+        y = arc11_L9_center[1] + arc11_L9_radius * math.sin(angle)
+        arc11_L9_vertices.append((x, y))
+        
+    # Create the arc ShapeStim
+    arc1_L9 = ShapeStim(
+        win=win,
+        vertices=arc1_L9_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    # Create Arc 2 ShapeStim
+    arc2_L9 = ShapeStim(
+        win=win,
+        vertices=arc2_L9_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Different color for clarity
+        fillColor=None
+    )
+    
+    
+    # Create Arc 3 ShapeStim
+    arc3_L9 = ShapeStim(
+        win=win,
+        vertices=arc3_L9_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 4 ShapeStim
+    arc4_L9 = ShapeStim(
+        win=win,
+        vertices=arc4_L9_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 5 ShapeStim
+    arc5_L9 = ShapeStim(
+        win=win,
+        vertices=arc5_L9_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    arc6_L9 = ShapeStim(
+        win=win,
+        vertices=arc6_L9_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc7_L9 = ShapeStim(
+        win=win,
+        vertices=arc7_L9_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc8_L9 = ShapeStim(
+        win=win,
+        vertices=arc8_L9_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    
+    arc9_L9 = ShapeStim(
+        win=win,
+        vertices=arc9_L9_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc10_L9 = ShapeStim(
+        win=win,
+        vertices=arc10_L9_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc11_L9 = ShapeStim(
+        win=win,
+        vertices=arc11_L9_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    def create_wiggle_arc(center, radius, thickness, color='blue', opacity=0.5):
+        """Generate a thick wiggle room arc for a given arc."""
+        outer_arc_vertices = []
+        inner_arc_vertices = []
+    
+        for i in range(51):  # 50 segments for smoothness
+            angle = math.radians(i * (180 / 50))  # Same angles as original arc
+    
+            # Outer arc (slightly larger)
+            outer_x = center[0] + (radius + thickness) * math.cos(angle)
+            outer_y = center[1] + (radius + thickness) * math.sin(angle)
+            outer_arc_vertices.append((outer_x, outer_y))
+    
+            # Inner arc (slightly smaller)
+            inner_x = center[0] + (radius - thickness) * math.cos(angle)
+            inner_y = center[1] + (radius - thickness) * math.sin(angle)
+            inner_arc_vertices.append((inner_x, inner_y))
+    
+        # Reverse inner arc vertices to create a closed shape
+        inner_arc_vertices.reverse()
+        thick_wiggle_arc_vertices = outer_arc_vertices + inner_arc_vertices
+    
+        # Create and return the wiggle room arc
+        return ShapeStim(
+            win=win,
+            vertices=thick_wiggle_arc_vertices,
+            closeShape=True,  # Fill between outer and inner arcs
+            lineWidth=0,  # No outline needed
+            lineColor=None,
+            fillColor=color,
+            opacity=opacity
+        )
+    
+    
+    # Generate wiggle arcs for all arcs
+    wiggle_arc1_L9 = create_wiggle_arc(arc1_L9_center, arc1_L9_radius, wiggle_thickness)
+    wiggle_arc2_L9 = create_wiggle_arc(arc2_L9_center, arc2_L9_radius, wiggle_thickness)
+    wiggle_arc3_L9 = create_wiggle_arc(arc3_L9_center, arc3_L9_radius, wiggle_thickness)
+    wiggle_arc4_L9 = create_wiggle_arc(arc4_L9_center, arc4_L9_radius, wiggle_thickness)
+    wiggle_arc5_L9 = create_wiggle_arc(arc5_L9_center, arc5_L9_radius, wiggle_thickness)
+    wiggle_arc6_L9 = create_wiggle_arc(arc6_L9_center, arc6_L9_radius, wiggle_thickness)
+    wiggle_arc7_L9 = create_wiggle_arc(arc7_L9_center, arc7_L9_radius, wiggle_thickness)
+    wiggle_arc8_L9 = create_wiggle_arc(arc8_L9_center, arc8_L9_radius, wiggle_thickness)
+    wiggle_arc9_L9 = create_wiggle_arc(arc9_L9_center, arc9_L9_radius, wiggle_thickness)
+    wiggle_arc10_L9 = create_wiggle_arc(arc10_L9_center, arc10_L9_radius, wiggle_thickness)
+    wiggle_arc11_L9 = create_wiggle_arc(arc11_L9_center, arc11_L9_radius, wiggle_thickness)
+    
+    
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from GoalController_L9
+    
+    meatbone_collided = False  # Track whether the meatbone has been stomped
+    arc1_touched_vertices_L9 = []
+    arc2_touched_vertices_L9 = []
+    arc3_touched_vertices_L9 = []
+    arc4_touched_vertices_L9 = []
+    arc5_touched_vertices_L9 = []
+    arc6_touched_vertices_L9 = []
+    arc7_touched_vertices_L9 = []
+    arc8_touched_vertices_L9 = []
+    arc9_touched_vertices_L9 = []
+    arc10_touched_vertices_L9 = []
+    arc11_touched_vertices_L9 = []
+    
+    touch_threshold_L9 = 0.04 # touch threshold for the arcs
+    
+    meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
+    
+    
+    # Track if Dino is in the wiggle room defualt is not touching so false
+    wiggle_room = False  
+    
+    
+    # Run 'Begin Experiment' code from Timer_L9
+    level_timer = core.Clock()  # Initialize the timer
+    time_limit = 125  # Set the time limit in seconds (2 minutes)
+    
+    lose_sound_L9 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='lose_sound_L9',    name='lose_sound_L9'
+    )
+    lose_sound_L9.setVolume(1.0)
+    eat_sound_L9 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='eat_sound_L9',    name='eat_sound_L9'
+    )
+    eat_sound_L9.setVolume(1.0)
+    
+    # --- Initialize components for Routine "Level_9_checker" ---
+    end_score_text_L9 = visual.TextStim(win=win, name='end_score_text_L9',
+        text='Score: ',
+        font='Arial',
+        pos=(0, .2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    win_sound_L9 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='win_sound_L9',    name='win_sound_L9'
+    )
+    win_sound_L9.setVolume(1.0)
+    fail_sound_L9 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='fail_sound_L9',    name='fail_sound_L9'
+    )
+    fail_sound_L9.setVolume(0.6)
+    
+    # --- Initialize components for Routine "Level_10" ---
+    dino_image_L10 = visual.ImageStim(
+        win=win,
+        name='dino_image_L10', 
+        image='Assets/dino.png', mask=None, anchor='center',
+        ori=0.0, pos=(0,0), draggable=False, size=(0.2, 0.2),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=0.0)
+    floor1_L10 = visual.Rect(
+        win=win, name='floor1_L10',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(-.5,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-1.0, interpolate=True)
+    floor2_L10 = visual.Rect(
+        win=win, name='floor2_L10',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(0,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-2.0, interpolate=True)
+    meatbone_image_L10 = visual.ImageStim(
+        win=win,
+        name='meatbone_image_L10', 
+        image='Assets/meat_bone.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-3.0)
+    score_text_L10 = visual.TextStim(win=win, name='score_text_L10',
+        text='Score: 0',
+        font='Arial',
+        pos=(0.55, 0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-4.0);
+    timer_text_L10 = visual.TextStim(win=win, name='timer_text_L10',
+        text='00 : 00',
+        font='Arial',
+        pos=(-0.55,0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
+    # Run 'Begin Experiment' code from DinoMovement_L10
+    from psychopy.hardware import keyboard
+    from psychopy.visual import Rect
+    import time
+    
+    import serial
+    from psychopy.visual import Circle
+    
+    # Initialize the Keyboard
+    kb = keyboard.Keyboard()
+    
+    #PSURP Inits
+    """
+    # Initialize the serial connection for PSURP
+    ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
+    ser.flush()
+    ser.write("X".encode())  # Initialize PSURP
+    ser.write("RUNE\n".encode())  # Enter streaming mode
+    """
+    
+    # Trail settings
+    trail_positions = []  # Stores Dino's previous positions
+    trail_length = 35  # Maximum number of trail dots
+    trail_dot_size = 0.005  # Size of each dot for trail 
+    trail_dots = []  # List of Circle stimuli for the trail
+    trail_color = 'yellow'  # Color of the trail dots
+    trail_frame_counter = 0  # Counter to control trail dot spawning
+    trail_interval = 5  # Spawn a dot every 5 frames
+    
+    
+    #Button 0 and button 2 force properties
+    B0ForceInNewtons = 0
+    B2ForceInNewtons = 0
+    MIN_FORCE = 0.4  # Minimum force to start movement
+    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
+    
+    
+    # Dino movement variables
+    dino_pos = [0, -0.3]  # Starting position [x, y]
+    dino_speed = 0  # Initial vertical speed
+    gravity = -0.0003  # Downward acceleration 0.00006
+    jump_speed = 0.005  # Jumping speed
+    move_speed = 0.01  # Horizontal movement speed
+    ground_offset = 0.03  # Offset to avoid sinking into the ground visually
+    #min_x = -0.6  # Left boundary
+    #max_x = 19 # right boundary
+    respawn_position = [0, -0.3]  # Starting position for Dino
+    
+    
+    
+    # Floor properties
+    
+    floor1_vertices = floor1_L10.vertices  # Get floor1_L10 vertices
+    floor_top = max(v[1] for v in floor1_vertices)  # Highest point of floor1_L10
+    fall_threshold = min(v[1] for v in floor1_vertices) - 0.2  # Slightly below the lowest floor point
+    
+    
+    # Function to check if Dino is on the floor
+    def is_on_floor(dino_pos):
+        """Check if Dino's bottom is within the bounds of floor1_L10 or floor2_L10."""
+        dino_bottom = dino_pos[1] - (dino_image_L10.size[1] / 2)  # Dino's bottom Y-position
+    
+        # floor1_L10 bounds
+        x_min1 = min(v[0] for v in floor1_vertices)
+        x_max1 = max(v[0] for v in floor1_vertices)
+        
+        # floor2_L10 bounds
+        x_min2 = min(v[0] for v in floor2_vertices)
+        x_max2 = max(v[0] for v in floor2_vertices)
+    
+        # Check floor1_L10 or floor2_L10
+        on_floor1 = x_min1 <= dino_pos[0] <= x_max1 and dino_bottom <= floor1_top
+        on_floor2 = x_min2 <= dino_pos[0] <= x_max2 and dino_bottom <= floor2_top
+    
+        return on_floor1 or on_floor2
+        
+    #calculates the psurp forces
+    def calculate_psurp_forces(serial_data):
+        """Extract and calculate forces from PSURP serial data."""
+        if len(serial_data.decode()) == 12:
+            output = serial_data.decode()
+            
+            # Calculate forces
+            B0HighByte = Base71Lookup.index(output[0])
+            B0LowByte = Base71Lookup.index(output[1])
+            B2HighByte = Base71Lookup.index(output[4])
+            B2LowByte = Base71Lookup.index(output[5])
+            
+            # Forces in Newtons
+            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            
+            return B0ForceInNewtons, B2ForceInNewtons
+        
+        return 0, 0  # Default forces if data is invalid
+    
+    
+    
+    # image path for dino animation
+    frame_paths = [
+        "Assets/dino_frames/f1.png", "Assets/dino_frames/f2.png", 
+        "Assets/dino_frames/f3.png", "Assets/dino_frames/f4.png", 
+        "Assets/dino_frames/f5.png", "Assets/dino_frames/f6.png", 
+        "Assets/dino_frames/f7.png", "Assets/dino_frames/f8.png", 
+        "Assets/dino_frames/f9.png", "Assets/dino_frames/f10.png", 
+        "Assets/dino_frames/f11.png", "Assets/dino_frames/f12.png"
+    ]
+    
+    
+    
+    frame_index = 0  # Start with the first frame
+    frame_index_update_counter = 0  # Counter to manage animation speed
+    total_frames = len(frame_paths)  # Total number of frames in the animation
+    
+    # Initialize the Dino's first frame
+    dino_image_L10.image = frame_paths[frame_index]
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from worldController_L10
+    from psychopy.visual import Rect, ImageStim, ShapeStim
+    import math
+    
+    dirt_texture_L10 = 'Assets/grounds/ground10.png'
+    
+    #height factors for arcs (Y position)
+    low_arc = -0.2  
+    reg_arc = 0
+    high_arc = 0.04
+    
+    small_arc_size = 0.2  # Smallest arc radius
+    med_arc_size = 0.27  # Medium arc radius
+    large_arc_size = 0.35  # Largest arc radius
+    
+    wiggle_thickness = 0.05  # Adjust thickness for all wiggle arcs
+    
+    meatbone_size = [0.15, 0.09]  # Example size (width, height)
+    
+    
+    # Function to calculate vertices of a Rect stimulus
+    def calculate_rect_vertices(rect):
+        """Calculate the vertices of a Rect stimulus."""
+        half_width = rect.width / 2
+        half_height = rect.height / 2
+        center_x, center_y = rect.pos
+        vertices = [
+            [center_x - half_width, center_y - half_height],  # Bottom-left
+            [center_x + half_width, center_y - half_height],  # Bottom-right
+            [center_x + half_width, center_y + half_height],  # Top-right
+            [center_x - half_width, center_y + half_height],  # Top-left
+        ]
+        return vertices
+    
+    # Camera variables
+    camera_offset_x = 0  # Tracks the camera offset to follow Dino
+    #camera_speed = 0.003  # Adjust this speed as needed 0.003
+    # Background properties
+    background_width = 2.0  # Width of a single background image
+    background_height = 1.0
+    
+    background_image_L10 = 'Assets/bgs/L10.png'  # Path to your custom background image
+    
+    # Create two background images for seamless scrolling
+    background1_L10 = ImageStim(win, image=background_image_L10, size=[background_width, background_height], pos=[0, 0])
+    background2_L10 = ImageStim(win, image=background_image_L10, size=[background_width, background_height], pos=[background_width, 0])
+    
+    # floor1_L10 properties
+    floor1_height = 0.3
+    floor1_width = 0.5
+    floor1_pos = [0, -0.5]
+    
+    floor1_L10 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L10,
+        size=(floor1_width, floor1_height),  # Set the size to match the floor dimensions
+        pos=floor1_pos,
+        interpolate=True
+    )
+    floor1_vertices = calculate_rect_vertices(floor1_L10)
+    
+    # floor2_L10 properties - Place it further into the map
+    #floor2_x_static = 15.5  # Fixed X position where floor2_L10 appears18.5
+    floor2_height = 0.3
+    floor2_width = 0.5
+    
+    floor2_L10 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L10,
+        size=(floor2_width, floor2_height),  # Set the size to match the floor dimensions
+        pos=[floor2_x_static, -0.5],  # Position of floor2_L10
+        interpolate=True
+    )
+    floor2_vertices = calculate_rect_vertices(floor2_L10)
+    
+    
+    # Floor thresholds
+    floor1_top = max(v[1] for v in floor1_vertices)
+    floor2_top = max(v[1] for v in floor2_vertices)
+    
+    
+    
+    #meat bone
+    
+    meatbone_size = [0.12, 0.06]  # Example size (width, height)
+    meatbone_image_L10.size = meatbone_size
+    offset = 0.01  # Adjust to align the meatbone properly with floor2_L10
+    
+    
+    #arc stuff
+    
+    # Arc 1 Properties
+    arc1_L10_x = 0.3
+    arc1_L10_center = [arc1_L10_x, reg_arc]
+    arc1_L10_radius = small_arc_size
+    arc1_L10_start_angle = 0
+    arc1_L10_end_angle = 180
+    
+    # Arc 2 Properties
+    arc2_L10_x = 1.1
+    arc2_L10_center = [arc2_L10_x, reg_arc]
+    arc2_L10_radius = large_arc_size
+    arc2_L10_start_angle = 0
+    arc2_L10_end_angle = 180
+    
+    # Arc 3 Properties
+    arc3_L10_x = 1.9
+    arc3_L10_center = [arc3_L10_x, reg_arc]
+    arc3_L10_radius = med_arc_size
+    arc3_L10_start_angle = 0
+    arc3_L10_end_angle = 180
+    
+    # Arc 4 Properties
+    arc4_L10_x = 2.7
+    arc4_L10_center = [arc4_L10_x, reg_arc]
+    arc4_L10_radius = small_arc_size
+    arc4_L10_start_angle = 0
+    arc4_L10_end_angle = 180
+    
+    # Arc 5 Properties
+    arc5_L10_x = 3.5
+    arc5_L10_center = [arc5_L10_x, reg_arc]
+    arc5_L10_radius = large_arc_size
+    arc5_L10_start_angle = 0
+    arc5_L10_end_angle = 180
+    
+    # Arc 6 Properties
+    arc6_L10_x = 4.3
+    arc6_L10_center = [arc6_L10_x, reg_arc]
+    arc6_L10_radius = med_arc_size
+    arc6_L10_start_angle = 0
+    arc6_L10_end_angle = 180
+    
+    # Arc 7 Properties
+    arc7_L10_x = 5.1
+    arc7_L10_center = [arc7_L10_x, reg_arc]
+    arc7_L10_radius = large_arc_size
+    arc7_L10_start_angle = 0
+    arc7_L10_end_angle = 180
+    
+    # Arc 8 Properties
+    arc8_L10_x = 5.9
+    arc8_L10_center = [arc8_L10_x, reg_arc]
+    arc8_L10_radius = med_arc_size
+    arc8_L10_start_angle = 0
+    arc8_L10_end_angle = 180
+    
+    # Arc 9 Properties
+    arc9_L10_x = 6.7
+    arc9_L10_center = [arc9_L10_x, reg_arc]
+    arc9_L10_radius = med_arc_size
+    arc9_L10_start_angle = 0
+    arc9_L10_end_angle = 180
+    
+    # Arc 10 Properties
+    arc10_L10_x = 7.5
+    arc10_L10_center = [arc10_L10_x, reg_arc]
+    arc10_L10_radius = med_arc_size
+    arc10_L10_start_angle = 0
+    arc10_L10_end_angle = 180
+    
+    # Arc 11 Properties
+    arc11_L10_x = 8.3
+    arc11_L10_center = [arc11_L10_x, reg_arc]
+    arc11_L10_radius = med_arc_size
+    arc11_L10_start_angle = 0
+    arc11_L10_end_angle = 180
+    
+    
+    # Generate vertices for Arc 1
+    arc1_L10_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc1_L10_start_angle + i * (arc1_L10_end_angle - arc1_L10_start_angle) / 50)
+        x = arc1_L10_center[0] + arc1_L10_radius * math.cos(angle)
+        y = arc1_L10_center[1] + arc1_L10_radius * math.sin(angle)
+        arc1_L10_vertices.append((x, y))
+    
+    # Generate vertices for Arc 2
+    arc2_L10_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc2_L10_start_angle + i * (arc2_L10_end_angle - arc2_L10_start_angle) / 50)
+        x = arc2_L10_center[0] + arc2_L10_radius * math.cos(angle)
+        y = arc2_L10_center[1] + arc2_L10_radius * math.sin(angle)
+        arc2_L10_vertices.append((x, y))
+        
+        
+    
+    # Generate vertices for Arc 3
+    arc3_L10_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc3_L10_start_angle + i * (arc3_L10_end_angle - arc3_L10_start_angle) / 50)
+        x = arc3_L10_center[0] + arc3_L10_radius * math.cos(angle)
+        y = arc3_L10_center[1] + arc3_L10_radius * math.sin(angle)
+        arc3_L10_vertices.append((x, y))
+    
+    # Generate vertices for Arc 4
+    arc4_L10_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc4_L10_start_angle + i * (arc4_L10_end_angle - arc4_L10_start_angle) / 50)
+        x = arc4_L10_center[0] + arc4_L10_radius * math.cos(angle)
+        y = arc4_L10_center[1] + arc4_L10_radius * math.sin(angle)
+        arc4_L10_vertices.append((x, y))
+    
+    
+    # Generate vertices for Arc 5
+    arc5_L10_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc5_L10_start_angle + i * (arc5_L10_end_angle - arc5_L10_start_angle) / 50)
+        x = arc5_L10_center[0] + arc5_L10_radius * math.cos(angle)
+        y = arc5_L10_center[1] + arc5_L10_radius * math.sin(angle)
+        arc5_L10_vertices.append((x, y))
+        
+    
+    arc6_L10_vertices = []
+    for i in range(51):
+        angle = math.radians(arc6_L10_start_angle + i * (arc6_L10_end_angle - arc6_L10_start_angle) / 50)
+        x = arc6_L10_center[0] + arc6_L10_radius * math.cos(angle)
+        y = arc6_L10_center[1] + arc6_L10_radius * math.sin(angle)
+        arc6_L10_vertices.append((x, y))
+    
+    # Arc 7 vertices
+    arc7_L10_vertices = []
+    for i in range(51):
+        angle = math.radians(arc7_L10_start_angle + i * (arc7_L10_end_angle - arc7_L10_start_angle) / 50)
+        x = arc7_L10_center[0] + arc7_L10_radius * math.cos(angle)
+        y = arc7_L10_center[1] + arc7_L10_radius * math.sin(angle)
+        arc7_L10_vertices.append((x, y))
+    
+    # Arc 8 vertices
+    arc8_L10_vertices = []
+    for i in range(51):
+        angle = math.radians(arc8_L10_start_angle + i * (arc8_L10_end_angle - arc8_L10_start_angle) / 50)
+        x = arc8_L10_center[0] + arc8_L10_radius * math.cos(angle)
+        y = arc8_L10_center[1] + arc8_L10_radius * math.sin(angle)
+        arc8_L10_vertices.append((x, y))
+        
+    # Arc 9 vertices
+    arc9_L10_vertices = []
+    for i in range(51):
+        angle = math.radians(arc9_L10_start_angle + i * (arc9_L10_end_angle - arc9_L10_start_angle) / 50)
+        x = arc9_L10_center[0] + arc9_L10_radius * math.cos(angle)
+        y = arc9_L10_center[1] + arc9_L10_radius * math.sin(angle)
+        arc9_L10_vertices.append((x, y))
+        
+    # Arc 10 vertices
+    arc10_L10_vertices = []
+    for i in range(51):
+        angle = math.radians(arc10_L10_start_angle + i * (arc10_L10_end_angle - arc10_L10_start_angle) / 50)
+        x = arc10_L10_center[0] + arc10_L10_radius * math.cos(angle)
+        y = arc10_L10_center[1] + arc10_L10_radius * math.sin(angle)
+        arc10_L10_vertices.append((x, y))
+        
+    # Arc 11 vertices
+    arc11_L10_vertices = []
+    for i in range(51):
+        angle = math.radians(arc11_L10_start_angle + i * (arc11_L10_end_angle - arc11_L10_start_angle) / 50)
+        x = arc11_L10_center[0] + arc11_L10_radius * math.cos(angle)
+        y = arc11_L10_center[1] + arc11_L10_radius * math.sin(angle)
+        arc11_L10_vertices.append((x, y))
+        
+    # Create the arc ShapeStim
+    arc1_L10 = ShapeStim(
+        win=win,
+        vertices=arc1_L10_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    # Create Arc 2 ShapeStim
+    arc2_L10 = ShapeStim(
+        win=win,
+        vertices=arc2_L10_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Different color for clarity
+        fillColor=None
+    )
+    
+    
+    # Create Arc 3 ShapeStim
+    arc3_L10 = ShapeStim(
+        win=win,
+        vertices=arc3_L10_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 4 ShapeStim
+    arc4_L10 = ShapeStim(
+        win=win,
+        vertices=arc4_L10_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 5 ShapeStim
+    arc5_L10 = ShapeStim(
+        win=win,
+        vertices=arc5_L10_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    arc6_L10 = ShapeStim(
+        win=win,
+        vertices=arc6_L10_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc7_L10 = ShapeStim(
+        win=win,
+        vertices=arc7_L10_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc8_L10 = ShapeStim(
+        win=win,
+        vertices=arc8_L10_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    
+    arc9_L10 = ShapeStim(
+        win=win,
+        vertices=arc9_L10_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc10_L10 = ShapeStim(
+        win=win,
+        vertices=arc10_L10_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc11_L10 = ShapeStim(
+        win=win,
+        vertices=arc11_L10_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    def create_wiggle_arc(center, radius, thickness, color='grey', opacity=0.5):
+        """Generate a thick wiggle room arc for a given arc."""
+        outer_arc_vertices = []
+        inner_arc_vertices = []
+    
+        for i in range(51):  # 50 segments for smoothness
+            angle = math.radians(i * (180 / 50))  # Same angles as original arc
+    
+            # Outer arc (slightly larger)
+            outer_x = center[0] + (radius + thickness) * math.cos(angle)
+            outer_y = center[1] + (radius + thickness) * math.sin(angle)
+            outer_arc_vertices.append((outer_x, outer_y))
+    
+            # Inner arc (slightly smaller)
+            inner_x = center[0] + (radius - thickness) * math.cos(angle)
+            inner_y = center[1] + (radius - thickness) * math.sin(angle)
+            inner_arc_vertices.append((inner_x, inner_y))
+    
+        # Reverse inner arc vertices to create a closed shape
+        inner_arc_vertices.reverse()
+        thick_wiggle_arc_vertices = outer_arc_vertices + inner_arc_vertices
+    
+        # Create and return the wiggle room arc
+        return ShapeStim(
+            win=win,
+            vertices=thick_wiggle_arc_vertices,
+            closeShape=True,  # Fill between outer and inner arcs
+            lineWidth=0,  # No outline needed
+            lineColor=None,
+            fillColor=color,
+            opacity=opacity
+        )
+    
+    
+    # Generate wiggle arcs for all arcs
+    wiggle_arc1_L10 = create_wiggle_arc(arc1_L10_center, arc1_L10_radius, wiggle_thickness)
+    wiggle_arc2_L10 = create_wiggle_arc(arc2_L10_center, arc2_L10_radius, wiggle_thickness)
+    wiggle_arc3_L10 = create_wiggle_arc(arc3_L10_center, arc3_L10_radius, wiggle_thickness)
+    wiggle_arc4_L10 = create_wiggle_arc(arc4_L10_center, arc4_L10_radius, wiggle_thickness)
+    wiggle_arc5_L10 = create_wiggle_arc(arc5_L10_center, arc5_L10_radius, wiggle_thickness)
+    wiggle_arc6_L10 = create_wiggle_arc(arc6_L10_center, arc6_L10_radius, wiggle_thickness)
+    wiggle_arc7_L10 = create_wiggle_arc(arc7_L10_center, arc7_L10_radius, wiggle_thickness)
+    wiggle_arc8_L10 = create_wiggle_arc(arc8_L10_center, arc8_L10_radius, wiggle_thickness)
+    wiggle_arc9_L10 = create_wiggle_arc(arc9_L10_center, arc9_L10_radius, wiggle_thickness)
+    wiggle_arc10_L10 = create_wiggle_arc(arc10_L10_center, arc10_L10_radius, wiggle_thickness)
+    wiggle_arc11_L10 = create_wiggle_arc(arc11_L10_center, arc11_L10_radius, wiggle_thickness)
+    
+    
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from GoalController_L10
+    
+    meatbone_collided = False  # Track whether the meatbone has been stomped
+    arc1_touched_vertices_L10 = []
+    arc2_touched_vertices_L10 = []
+    arc3_touched_vertices_L10 = []
+    arc4_touched_vertices_L10 = []
+    arc5_touched_vertices_L10 = []
+    arc6_touched_vertices_L10 = []
+    arc7_touched_vertices_L10 = []
+    arc8_touched_vertices_L10 = []
+    arc9_touched_vertices_L10 = []
+    arc10_touched_vertices_L10 = []
+    arc11_touched_vertices_L10 = []
+    
+    touch_threshold_L10 = 0.04 # touch threshold for the arcs
+    
+    meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
+    
+    
+    # Track if Dino is in the wiggle room defualt is not touching so false
+    wiggle_room = False  
+    
+    
+    # Run 'Begin Experiment' code from Timer_L10
+    level_timer = core.Clock()  # Initialize the timer
+    time_limit = 125  # Set the time limit in seconds (2 minutes)
+    
+    lose_sound_L10 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='lose_sound_L10',    name='lose_sound_L10'
+    )
+    lose_sound_L10.setVolume(1.0)
+    eat_sound_L10 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='eat_sound_L10',    name='eat_sound_L10'
+    )
+    eat_sound_L10.setVolume(1.0)
+    
+    # --- Initialize components for Routine "Level_10_checker" ---
+    end_score_text_L10 = visual.TextStim(win=win, name='end_score_text_L10',
+        text='Score: ',
+        font='Arial',
+        pos=(0, .2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    win_sound_L10 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='win_sound_L10',    name='win_sound_L10'
+    )
+    win_sound_L10.setVolume(1.0)
+    fail_sound_L10 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='fail_sound_L10',    name='fail_sound_L10'
+    )
+    fail_sound_L10.setVolume(0.6)
+    
+    # --- Initialize components for Routine "Level_11" ---
+    dino_image_L11 = visual.ImageStim(
+        win=win,
+        name='dino_image_L11', 
+        image='Assets/dino.png', mask=None, anchor='center',
+        ori=0.0, pos=(0,0), draggable=False, size=(0.2, 0.2),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=0.0)
+    floor1_L11 = visual.Rect(
+        win=win, name='floor1_L11',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(-.5,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-1.0, interpolate=True)
+    floor2_L11 = visual.Rect(
+        win=win, name='floor2_L11',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(0,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-2.0, interpolate=True)
+    meatbone_image_L11 = visual.ImageStim(
+        win=win,
+        name='meatbone_image_L11', 
+        image='Assets/meat_bone.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-3.0)
+    score_text_L11 = visual.TextStim(win=win, name='score_text_L11',
+        text='Score: 0',
+        font='Arial',
+        pos=(0.55, 0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-4.0);
+    timer_text_L11 = visual.TextStim(win=win, name='timer_text_L11',
+        text='00 : 00',
+        font='Arial',
+        pos=(-0.55,0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
+    # Run 'Begin Experiment' code from DinoMovement_L11
+    from psychopy.hardware import keyboard
+    from psychopy.visual import Rect
+    import time
+    
+    import serial
+    from psychopy.visual import Circle
+    
+    # Initialize the Keyboard
+    kb = keyboard.Keyboard()
+    
+    #PSURP Inits
+    """
+    # Initialize the serial connection for PSURP
+    ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
+    ser.flush()
+    ser.write("X".encode())  # Initialize PSURP
+    ser.write("RUNE\n".encode())  # Enter streaming mode
+    """
+    
+    # Trail settings
+    trail_positions = []  # Stores Dino's previous positions
+    trail_length = 35  # Maximum number of trail dots
+    trail_dot_size = 0.005  # Size of each dot for trail 
+    trail_dots = []  # List of Circle stimuli for the trail
+    trail_color = 'yellow'  # Color of the trail dots
+    trail_frame_counter = 0  # Counter to control trail dot spawning
+    trail_interval = 5  # Spawn a dot every 5 frames
+    
+    
+    #Button 0 and button 2 force properties
+    B0ForceInNewtons = 0
+    B2ForceInNewtons = 0
+    MIN_FORCE = 0.4  # Minimum force to start movement
+    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
+    
+    
+    # Dino movement variables
+    dino_pos = [0, -0.3]  # Starting position [x, y]
+    dino_speed = 0  # Initial vertical speed
+    gravity = -0.0003  # Downward acceleration 0.00006
+    jump_speed = 0.005  # Jumping speed
+    move_speed = 0.01  # Horizontal movement speed
+    ground_offset = 0.03  # Offset to avoid sinking into the ground visually
+    #min_x = -0.6  # Left boundary
+    #max_x = 19 # right boundary
+    respawn_position = [0, -0.3]  # Starting position for Dino
+    
+    
+    
+    # Floor properties
+    
+    floor1_vertices = floor1_L11.vertices  # Get floor1_L11 vertices
+    floor_top = max(v[1] for v in floor1_vertices)  # Highest point of floor1_L11
+    fall_threshold = min(v[1] for v in floor1_vertices) - 0.2  # Slightly below the lowest floor point
+    
+    
+    # Function to check if Dino is on the floor
+    def is_on_floor(dino_pos):
+        """Check if Dino's bottom is within the bounds of floor1_L11 or floor2_L11."""
+        dino_bottom = dino_pos[1] - (dino_image_L11.size[1] / 2)  # Dino's bottom Y-position
+    
+        # floor1_L11 bounds
+        x_min1 = min(v[0] for v in floor1_vertices)
+        x_max1 = max(v[0] for v in floor1_vertices)
+        
+        # floor2_L11 bounds
+        x_min2 = min(v[0] for v in floor2_vertices)
+        x_max2 = max(v[0] for v in floor2_vertices)
+    
+        # Check floor1_L11 or floor2_L11
+        on_floor1 = x_min1 <= dino_pos[0] <= x_max1 and dino_bottom <= floor1_top
+        on_floor2 = x_min2 <= dino_pos[0] <= x_max2 and dino_bottom <= floor2_top
+    
+        return on_floor1 or on_floor2
+        
+    #calculates the psurp forces
+    def calculate_psurp_forces(serial_data):
+        """Extract and calculate forces from PSURP serial data."""
+        if len(serial_data.decode()) == 12:
+            output = serial_data.decode()
+            
+            # Calculate forces
+            B0HighByte = Base71Lookup.index(output[0])
+            B0LowByte = Base71Lookup.index(output[1])
+            B2HighByte = Base71Lookup.index(output[4])
+            B2LowByte = Base71Lookup.index(output[5])
+            
+            # Forces in Newtons
+            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            
+            return B0ForceInNewtons, B2ForceInNewtons
+        
+        return 0, 0  # Default forces if data is invalid
+    
+    
+    
+    # image path for dino animation
+    frame_paths = [
+        "Assets/dino_frames/f1.png", "Assets/dino_frames/f2.png", 
+        "Assets/dino_frames/f3.png", "Assets/dino_frames/f4.png", 
+        "Assets/dino_frames/f5.png", "Assets/dino_frames/f6.png", 
+        "Assets/dino_frames/f7.png", "Assets/dino_frames/f8.png", 
+        "Assets/dino_frames/f9.png", "Assets/dino_frames/f10.png", 
+        "Assets/dino_frames/f11.png", "Assets/dino_frames/f12.png"
+    ]
+    
+    
+    
+    frame_index = 0  # Start with the first frame
+    frame_index_update_counter = 0  # Counter to manage animation speed
+    total_frames = len(frame_paths)  # Total number of frames in the animation
+    
+    # Initialize the Dino's first frame
+    dino_image_L11.image = frame_paths[frame_index]
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from worldController_L11
+    from psychopy.visual import Rect, ImageStim, ShapeStim
+    import math
+    
+    dirt_texture_L11 = 'Assets/grounds/ground11.png'
+    
+    #height factors for arcs (Y position)
+    low_arc = -0.2  
+    reg_arc = 0
+    high_arc = 0.04
+    
+    small_arc_size = 0.2  # Smallest arc radius
+    med_arc_size = 0.27  # Medium arc radius
+    large_arc_size = 0.35  # Largest arc radius
+    
+    wiggle_thickness = 0.05  # Adjust thickness for all wiggle arcs
+    
+    meatbone_size = [0.15, 0.09]  # Example size (width, height)
+    
+    
+    # Function to calculate vertices of a Rect stimulus
+    def calculate_rect_vertices(rect):
+        """Calculate the vertices of a Rect stimulus."""
+        half_width = rect.width / 2
+        half_height = rect.height / 2
+        center_x, center_y = rect.pos
+        vertices = [
+            [center_x - half_width, center_y - half_height],  # Bottom-left
+            [center_x + half_width, center_y - half_height],  # Bottom-right
+            [center_x + half_width, center_y + half_height],  # Top-right
+            [center_x - half_width, center_y + half_height],  # Top-left
+        ]
+        return vertices
+    
+    # Camera variables
+    camera_offset_x = 0  # Tracks the camera offset to follow Dino
+    #camera_speed = 0.003  # Adjust this speed as needed 0.003
+    # Background properties
+    background_width = 2.0  # Width of a single background image
+    background_height = 1.0
+    
+    background_image_L11 = 'Assets/bgs/L11.png'  # Path to your custom background image
+    
+    # Create two background images for seamless scrolling
+    background1_L11 = ImageStim(win, image=background_image_L11, size=[background_width, background_height], pos=[0, 0])
+    background2_L11 = ImageStim(win, image=background_image_L11, size=[background_width, background_height], pos=[background_width, 0])
+    
+    # floor1_L11 properties
+    floor1_height = 0.3
+    floor1_width = 0.5
+    floor1_pos = [0, -0.5]
+    
+    floor1_L11 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L11,
+        size=(floor1_width, floor1_height),  # Set the size to match the floor dimensions
+        pos=floor1_pos,
+        interpolate=True
+    )
+    floor1_vertices = calculate_rect_vertices(floor1_L11)
+    
+    # floor2_L11 properties - Place it further into the map
+    #floor2_x_static = 15.5  # Fixed X position where floor2_L11 appears18.5
+    floor2_height = 0.3
+    floor2_width = 0.5
+    
+    floor2_L11 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L11,
+        size=(floor2_width, floor2_height),  # Set the size to match the floor dimensions
+        pos=[floor2_x_static, -0.5],  # Position of floor2_L11
+        interpolate=True
+    )
+    floor2_vertices = calculate_rect_vertices(floor2_L11)
+    
+    
+    # Floor thresholds
+    floor1_top = max(v[1] for v in floor1_vertices)
+    floor2_top = max(v[1] for v in floor2_vertices)
+    
+    
+    
+    #meat bone
+    
+    meatbone_size = [0.12, 0.06]  # Example size (width, height)
+    meatbone_image_L11.size = meatbone_size
+    offset = 0.01  # Adjust to align the meatbone properly with floor2_L11
+    
+    
+    #arc stuff
+    
+    # Arc 1 Properties
+    arc1_L11_x = 0.3
+    arc1_L11_center = [arc1_L11_x, reg_arc]
+    arc1_L11_radius = small_arc_size
+    arc1_L11_start_angle = 0
+    arc1_L11_end_angle = 180
+    
+    # Arc 2 Properties
+    arc2_L11_x = 1.1
+    arc2_L11_center = [arc2_L11_x, reg_arc]
+    arc2_L11_radius = large_arc_size
+    arc2_L11_start_angle = 0
+    arc2_L11_end_angle = 180
+    
+    # Arc 3 Properties
+    arc3_L11_x = 1.9
+    arc3_L11_center = [arc3_L11_x, reg_arc]
+    arc3_L11_radius = med_arc_size
+    arc3_L11_start_angle = 0
+    arc3_L11_end_angle = 180
+    
+    # Arc 4 Properties
+    arc4_L11_x = 2.7
+    arc4_L11_center = [arc4_L11_x, reg_arc]
+    arc4_L11_radius = small_arc_size
+    arc4_L11_start_angle = 0
+    arc4_L11_end_angle = 180
+    
+    # Arc 5 Properties
+    arc5_L11_x = 3.5
+    arc5_L11_center = [arc5_L11_x, reg_arc]
+    arc5_L11_radius = large_arc_size
+    arc5_L11_start_angle = 0
+    arc5_L11_end_angle = 180
+    
+    # Arc 6 Properties
+    arc6_L11_x = 4.3
+    arc6_L11_center = [arc6_L11_x, reg_arc]
+    arc6_L11_radius = med_arc_size
+    arc6_L11_start_angle = 0
+    arc6_L11_end_angle = 180
+    
+    # Arc 7 Properties
+    arc7_L11_x = 5.1
+    arc7_L11_center = [arc7_L11_x, reg_arc]
+    arc7_L11_radius = large_arc_size
+    arc7_L11_start_angle = 0
+    arc7_L11_end_angle = 180
+    
+    # Arc 8 Properties
+    arc8_L11_x = 5.9
+    arc8_L11_center = [arc8_L11_x, reg_arc]
+    arc8_L11_radius = med_arc_size
+    arc8_L11_start_angle = 0
+    arc8_L11_end_angle = 180
+    
+    # Arc 9 Properties
+    arc9_L11_x = 6.7
+    arc9_L11_center = [arc9_L11_x, reg_arc]
+    arc9_L11_radius = med_arc_size
+    arc9_L11_start_angle = 0
+    arc9_L11_end_angle = 180
+    
+    # Arc 10 Properties
+    arc10_L11_x = 7.5
+    arc10_L11_center = [arc10_L11_x, reg_arc]
+    arc10_L11_radius = med_arc_size
+    arc10_L11_start_angle = 0
+    arc10_L11_end_angle = 180
+    
+    # Arc 11 Properties
+    arc11_L11_x = 8.3
+    arc11_L11_center = [arc11_L11_x, reg_arc]
+    arc11_L11_radius = med_arc_size
+    arc11_L11_start_angle = 0
+    arc11_L11_end_angle = 180
+    
+    
+    # Generate vertices for Arc 1
+    arc1_L11_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc1_L11_start_angle + i * (arc1_L11_end_angle - arc1_L11_start_angle) / 50)
+        x = arc1_L11_center[0] + arc1_L11_radius * math.cos(angle)
+        y = arc1_L11_center[1] + arc1_L11_radius * math.sin(angle)
+        arc1_L11_vertices.append((x, y))
+    
+    # Generate vertices for Arc 2
+    arc2_L11_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc2_L11_start_angle + i * (arc2_L11_end_angle - arc2_L11_start_angle) / 50)
+        x = arc2_L11_center[0] + arc2_L11_radius * math.cos(angle)
+        y = arc2_L11_center[1] + arc2_L11_radius * math.sin(angle)
+        arc2_L11_vertices.append((x, y))
+        
+        
+    
+    # Generate vertices for Arc 3
+    arc3_L11_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc3_L11_start_angle + i * (arc3_L11_end_angle - arc3_L11_start_angle) / 50)
+        x = arc3_L11_center[0] + arc3_L11_radius * math.cos(angle)
+        y = arc3_L11_center[1] + arc3_L11_radius * math.sin(angle)
+        arc3_L11_vertices.append((x, y))
+    
+    # Generate vertices for Arc 4
+    arc4_L11_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc4_L11_start_angle + i * (arc4_L11_end_angle - arc4_L11_start_angle) / 50)
+        x = arc4_L11_center[0] + arc4_L11_radius * math.cos(angle)
+        y = arc4_L11_center[1] + arc4_L11_radius * math.sin(angle)
+        arc4_L11_vertices.append((x, y))
+    
+    
+    # Generate vertices for Arc 5
+    arc5_L11_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc5_L11_start_angle + i * (arc5_L11_end_angle - arc5_L11_start_angle) / 50)
+        x = arc5_L11_center[0] + arc5_L11_radius * math.cos(angle)
+        y = arc5_L11_center[1] + arc5_L11_radius * math.sin(angle)
+        arc5_L11_vertices.append((x, y))
+        
+    
+    arc6_L11_vertices = []
+    for i in range(51):
+        angle = math.radians(arc6_L11_start_angle + i * (arc6_L11_end_angle - arc6_L11_start_angle) / 50)
+        x = arc6_L11_center[0] + arc6_L11_radius * math.cos(angle)
+        y = arc6_L11_center[1] + arc6_L11_radius * math.sin(angle)
+        arc6_L11_vertices.append((x, y))
+    
+    # Arc 7 vertices
+    arc7_L11_vertices = []
+    for i in range(51):
+        angle = math.radians(arc7_L11_start_angle + i * (arc7_L11_end_angle - arc7_L11_start_angle) / 50)
+        x = arc7_L11_center[0] + arc7_L11_radius * math.cos(angle)
+        y = arc7_L11_center[1] + arc7_L11_radius * math.sin(angle)
+        arc7_L11_vertices.append((x, y))
+    
+    # Arc 8 vertices
+    arc8_L11_vertices = []
+    for i in range(51):
+        angle = math.radians(arc8_L11_start_angle + i * (arc8_L11_end_angle - arc8_L11_start_angle) / 50)
+        x = arc8_L11_center[0] + arc8_L11_radius * math.cos(angle)
+        y = arc8_L11_center[1] + arc8_L11_radius * math.sin(angle)
+        arc8_L11_vertices.append((x, y))
+        
+    # Arc 9 vertices
+    arc9_L11_vertices = []
+    for i in range(51):
+        angle = math.radians(arc9_L11_start_angle + i * (arc9_L11_end_angle - arc9_L11_start_angle) / 50)
+        x = arc9_L11_center[0] + arc9_L11_radius * math.cos(angle)
+        y = arc9_L11_center[1] + arc9_L11_radius * math.sin(angle)
+        arc9_L11_vertices.append((x, y))
+        
+    # Arc 10 vertices
+    arc10_L11_vertices = []
+    for i in range(51):
+        angle = math.radians(arc10_L11_start_angle + i * (arc10_L11_end_angle - arc10_L11_start_angle) / 50)
+        x = arc10_L11_center[0] + arc10_L11_radius * math.cos(angle)
+        y = arc10_L11_center[1] + arc10_L11_radius * math.sin(angle)
+        arc10_L11_vertices.append((x, y))
+        
+    # Arc 11 vertices
+    arc11_L11_vertices = []
+    for i in range(51):
+        angle = math.radians(arc11_L11_start_angle + i * (arc11_L11_end_angle - arc11_L11_start_angle) / 50)
+        x = arc11_L11_center[0] + arc11_L11_radius * math.cos(angle)
+        y = arc11_L11_center[1] + arc11_L11_radius * math.sin(angle)
+        arc11_L11_vertices.append((x, y))
+        
+    # Create the arc ShapeStim
+    arc1_L11 = ShapeStim(
+        win=win,
+        vertices=arc1_L11_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    # Create Arc 2 ShapeStim
+    arc2_L11 = ShapeStim(
+        win=win,
+        vertices=arc2_L11_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Different color for clarity
+        fillColor=None
+    )
+    
+    
+    # Create Arc 3 ShapeStim
+    arc3_L11 = ShapeStim(
+        win=win,
+        vertices=arc3_L11_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 4 ShapeStim
+    arc4_L11 = ShapeStim(
+        win=win,
+        vertices=arc4_L11_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 5 ShapeStim
+    arc5_L11 = ShapeStim(
+        win=win,
+        vertices=arc5_L11_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    arc6_L11 = ShapeStim(
+        win=win,
+        vertices=arc6_L11_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc7_L11 = ShapeStim(
+        win=win,
+        vertices=arc7_L11_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc8_L11 = ShapeStim(
+        win=win,
+        vertices=arc8_L11_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    
+    arc9_L11 = ShapeStim(
+        win=win,
+        vertices=arc9_L11_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc10_L11 = ShapeStim(
+        win=win,
+        vertices=arc10_L11_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc11_L11 = ShapeStim(
+        win=win,
+        vertices=arc11_L11_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    def create_wiggle_arc(center, radius, thickness, color='red', opacity=0.5):
+        """Generate a thick wiggle room arc for a given arc."""
+        outer_arc_vertices = []
+        inner_arc_vertices = []
+    
+        for i in range(51):  # 50 segments for smoothness
+            angle = math.radians(i * (180 / 50))  # Same angles as original arc
+    
+            # Outer arc (slightly larger)
+            outer_x = center[0] + (radius + thickness) * math.cos(angle)
+            outer_y = center[1] + (radius + thickness) * math.sin(angle)
+            outer_arc_vertices.append((outer_x, outer_y))
+    
+            # Inner arc (slightly smaller)
+            inner_x = center[0] + (radius - thickness) * math.cos(angle)
+            inner_y = center[1] + (radius - thickness) * math.sin(angle)
+            inner_arc_vertices.append((inner_x, inner_y))
+    
+        # Reverse inner arc vertices to create a closed shape
+        inner_arc_vertices.reverse()
+        thick_wiggle_arc_vertices = outer_arc_vertices + inner_arc_vertices
+    
+        # Create and return the wiggle room arc
+        return ShapeStim(
+            win=win,
+            vertices=thick_wiggle_arc_vertices,
+            closeShape=True,  # Fill between outer and inner arcs
+            lineWidth=0,  # No outline needed
+            lineColor=None,
+            fillColor=color,
+            opacity=opacity
+        )
+    
+    
+    # Generate wiggle arcs for all arcs
+    wiggle_arc1_L11 = create_wiggle_arc(arc1_L11_center, arc1_L11_radius, wiggle_thickness)
+    wiggle_arc2_L11 = create_wiggle_arc(arc2_L11_center, arc2_L11_radius, wiggle_thickness)
+    wiggle_arc3_L11 = create_wiggle_arc(arc3_L11_center, arc3_L11_radius, wiggle_thickness)
+    wiggle_arc4_L11 = create_wiggle_arc(arc4_L11_center, arc4_L11_radius, wiggle_thickness)
+    wiggle_arc5_L11 = create_wiggle_arc(arc5_L11_center, arc5_L11_radius, wiggle_thickness)
+    wiggle_arc6_L11 = create_wiggle_arc(arc6_L11_center, arc6_L11_radius, wiggle_thickness)
+    wiggle_arc7_L11 = create_wiggle_arc(arc7_L11_center, arc7_L11_radius, wiggle_thickness)
+    wiggle_arc8_L11 = create_wiggle_arc(arc8_L11_center, arc8_L11_radius, wiggle_thickness)
+    wiggle_arc9_L11 = create_wiggle_arc(arc9_L11_center, arc9_L11_radius, wiggle_thickness)
+    wiggle_arc10_L11 = create_wiggle_arc(arc10_L11_center, arc10_L11_radius, wiggle_thickness)
+    wiggle_arc11_L11 = create_wiggle_arc(arc11_L11_center, arc11_L11_radius, wiggle_thickness)
+    
+    
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from GoalController_L11
+    
+    meatbone_collided = False  # Track whether the meatbone has been stomped
+    arc1_touched_vertices_L11 = []
+    arc2_touched_vertices_L11 = []
+    arc3_touched_vertices_L11 = []
+    arc4_touched_vertices_L11 = []
+    arc5_touched_vertices_L11 = []
+    arc6_touched_vertices_L11 = []
+    arc7_touched_vertices_L11 = []
+    arc8_touched_vertices_L11 = []
+    arc9_touched_vertices_L11 = []
+    arc10_touched_vertices_L11 = []
+    arc11_touched_vertices_L11 = []
+    
+    touch_threshold_L11 = 0.04 # touch threshold for the arcs
+    
+    meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
+    
+    
+    # Track if Dino is in the wiggle room defualt is not touching so false
+    wiggle_room = False  
+    
+    
+    # Run 'Begin Experiment' code from Timer_L11
+    level_timer = core.Clock()  # Initialize the timer
+    time_limit = 125  # Set the time limit in seconds (2 minutes)
+    
+    lose_sound_L11 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='lose_sound_L11',    name='lose_sound_L11'
+    )
+    lose_sound_L11.setVolume(1.0)
+    eat_sound_L11 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='eat_sound_L11',    name='eat_sound_L11'
+    )
+    eat_sound_L11.setVolume(1.0)
+    
+    # --- Initialize components for Routine "Level_11_checker" ---
+    end_score_text_L11 = visual.TextStim(win=win, name='end_score_text_L11',
+        text='Score: ',
+        font='Arial',
+        pos=(0, .2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    win_sound_L11 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='win_sound_L11',    name='win_sound_L11'
+    )
+    win_sound_L11.setVolume(1.0)
+    fail_sound_L11 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='fail_sound_L11',    name='fail_sound_L11'
+    )
+    fail_sound_L11.setVolume(0.6)
+    
+    # --- Initialize components for Routine "Level_12" ---
+    dino_image_L12 = visual.ImageStim(
+        win=win,
+        name='dino_image_L12', 
+        image='Assets/dino.png', mask=None, anchor='center',
+        ori=0.0, pos=(0,0), draggable=False, size=(0.2, 0.2),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=0.0)
+    floor1_L12 = visual.Rect(
+        win=win, name='floor1_L12',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(-.5,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-1.0, interpolate=True)
+    floor2_L12 = visual.Rect(
+        win=win, name='floor2_L12',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(0,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-2.0, interpolate=True)
+    meatbone_image_L12 = visual.ImageStim(
+        win=win,
+        name='meatbone_image_L12', 
+        image='Assets/meat_bone.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-3.0)
+    score_text_L12 = visual.TextStim(win=win, name='score_text_L12',
+        text='Score: 0',
+        font='Arial',
+        pos=(0.55, 0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-4.0);
+    timer_text_L12 = visual.TextStim(win=win, name='timer_text_L12',
+        text='00 : 00',
+        font='Arial',
+        pos=(-0.55,0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
+    # Run 'Begin Experiment' code from DinoMovement_L12
+    from psychopy.hardware import keyboard
+    from psychopy.visual import Rect
+    import time
+    
+    import serial
+    from psychopy.visual import Circle
+    
+    # Initialize the Keyboard
+    kb = keyboard.Keyboard()
+    
+    #PSURP Inits
+    """
+    # Initialize the serial connection for PSURP
+    ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
+    ser.flush()
+    ser.write("X".encode())  # Initialize PSURP
+    ser.write("RUNE\n".encode())  # Enter streaming mode
+    """
+    
+    # Trail settings
+    trail_positions = []  # Stores Dino's previous positions
+    trail_length = 35  # Maximum number of trail dots
+    trail_dot_size = 0.005  # Size of each dot for trail 
+    trail_dots = []  # List of Circle stimuli for the trail
+    trail_color = 'yellow'  # Color of the trail dots
+    trail_frame_counter = 0  # Counter to control trail dot spawning
+    trail_interval = 5  # Spawn a dot every 5 frames
+    
+    
+    #Button 0 and button 2 force properties
+    B0ForceInNewtons = 0
+    B2ForceInNewtons = 0
+    MIN_FORCE = 0.4  # Minimum force to start movement
+    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
+    
+    
+    # Dino movement variables
+    dino_pos = [0, -0.3]  # Starting position [x, y]
+    dino_speed = 0  # Initial vertical speed
+    gravity = -0.0003  # Downward acceleration 0.00006
+    jump_speed = 0.005  # Jumping speed
+    move_speed = 0.01  # Horizontal movement speed
+    ground_offset = 0.03  # Offset to avoid sinking into the ground visually
+    #min_x = -0.6  # Left boundary
+    #max_x = 19 # right boundary
+    respawn_position = [0, -0.3]  # Starting position for Dino
+    
+    
+    
+    # Floor properties
+    
+    floor1_vertices = floor1_L12.vertices  # Get floor1_L12 vertices
+    floor_top = max(v[1] for v in floor1_vertices)  # Highest point of floor1_L12
+    fall_threshold = min(v[1] for v in floor1_vertices) - 0.2  # Slightly below the lowest floor point
+    
+    
+    # Function to check if Dino is on the floor
+    def is_on_floor(dino_pos):
+        """Check if Dino's bottom is within the bounds of floor1_L12 or floor2_L12."""
+        dino_bottom = dino_pos[1] - (dino_image_L12.size[1] / 2)  # Dino's bottom Y-position
+    
+        # floor1_L12 bounds
+        x_min1 = min(v[0] for v in floor1_vertices)
+        x_max1 = max(v[0] for v in floor1_vertices)
+        
+        # floor2_L12 bounds
+        x_min2 = min(v[0] for v in floor2_vertices)
+        x_max2 = max(v[0] for v in floor2_vertices)
+    
+        # Check floor1_L12 or floor2_L12
+        on_floor1 = x_min1 <= dino_pos[0] <= x_max1 and dino_bottom <= floor1_top
+        on_floor2 = x_min2 <= dino_pos[0] <= x_max2 and dino_bottom <= floor2_top
+    
+        return on_floor1 or on_floor2
+        
+    #calculates the psurp forces
+    def calculate_psurp_forces(serial_data):
+        """Extract and calculate forces from PSURP serial data."""
+        if len(serial_data.decode()) == 12:
+            output = serial_data.decode()
+            
+            # Calculate forces
+            B0HighByte = Base71Lookup.index(output[0])
+            B0LowByte = Base71Lookup.index(output[1])
+            B2HighByte = Base71Lookup.index(output[4])
+            B2LowByte = Base71Lookup.index(output[5])
+            
+            # Forces in Newtons
+            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            
+            return B0ForceInNewtons, B2ForceInNewtons
+        
+        return 0, 0  # Default forces if data is invalid
+    
+    
+    
+    # image path for dino animation
+    frame_paths = [
+        "Assets/dino_frames/f1.png", "Assets/dino_frames/f2.png", 
+        "Assets/dino_frames/f3.png", "Assets/dino_frames/f4.png", 
+        "Assets/dino_frames/f5.png", "Assets/dino_frames/f6.png", 
+        "Assets/dino_frames/f7.png", "Assets/dino_frames/f8.png", 
+        "Assets/dino_frames/f9.png", "Assets/dino_frames/f10.png", 
+        "Assets/dino_frames/f11.png", "Assets/dino_frames/f12.png"
+    ]
+    
+    
+    
+    frame_index = 0  # Start with the first frame
+    frame_index_update_counter = 0  # Counter to manage animation speed
+    total_frames = len(frame_paths)  # Total number of frames in the animation
+    
+    # Initialize the Dino's first frame
+    dino_image_L12.image = frame_paths[frame_index]
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from worldController_L12
+    from psychopy.visual import Rect, ImageStim, ShapeStim
+    import math
+    
+    dirt_texture_L12 = 'Assets/grounds/ground12.png'
+    
+    #height factors for arcs (Y position)
+    low_arc = -0.2  
+    reg_arc = 0
+    high_arc = 0.04
+    
+    small_arc_size = 0.2  # Smallest arc radius
+    med_arc_size = 0.27  # Medium arc radius
+    large_arc_size = 0.35  # Largest arc radius
+    
+    wiggle_thickness = 0.05  # Adjust thickness for all wiggle arcs
+    
+    meatbone_size = [0.15, 0.09]  # Example size (width, height)
+    
+    
+    # Function to calculate vertices of a Rect stimulus
+    def calculate_rect_vertices(rect):
+        """Calculate the vertices of a Rect stimulus."""
+        half_width = rect.width / 2
+        half_height = rect.height / 2
+        center_x, center_y = rect.pos
+        vertices = [
+            [center_x - half_width, center_y - half_height],  # Bottom-left
+            [center_x + half_width, center_y - half_height],  # Bottom-right
+            [center_x + half_width, center_y + half_height],  # Top-right
+            [center_x - half_width, center_y + half_height],  # Top-left
+        ]
+        return vertices
+    
+    # Camera variables
+    camera_offset_x = 0  # Tracks the camera offset to follow Dino
+    #camera_speed = 0.003  # Adjust this speed as needed 0.003
+    # Background properties
+    background_width = 2.0  # Width of a single background image
+    background_height = 1.0
+    
+    background_image_L12 = 'Assets/bgs/L12.png'  # Path to your custom background image
+    
+    # Create two background images for seamless scrolling
+    background1_L12 = ImageStim(win, image=background_image_L12, size=[background_width, background_height], pos=[0, 0])
+    background2_L12 = ImageStim(win, image=background_image_L12, size=[background_width, background_height], pos=[background_width, 0])
+    
+    # floor1_L12 properties
+    floor1_height = 0.3
+    floor1_width = 0.5
+    floor1_pos = [0, -0.5]
+    
+    floor1_L12 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L12,
+        size=(floor1_width, floor1_height),  # Set the size to match the floor dimensions
+        pos=floor1_pos,
+        interpolate=True
+    )
+    floor1_vertices = calculate_rect_vertices(floor1_L12)
+    
+    # floor2_L12 properties - Place it further into the map
+    #floor2_x_static = 15.5  # Fixed X position where floor2_L12 appears18.5
+    floor2_height = 0.3
+    floor2_width = 0.5
+    
+    floor2_L12 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L12,
+        size=(floor2_width, floor2_height),  # Set the size to match the floor dimensions
+        pos=[floor2_x_static, -0.5],  # Position of floor2_L12
+        interpolate=True
+    )
+    floor2_vertices = calculate_rect_vertices(floor2_L12)
+    
+    
+    # Floor thresholds
+    floor1_top = max(v[1] for v in floor1_vertices)
+    floor2_top = max(v[1] for v in floor2_vertices)
+    
+    
+    
+    #meat bone
+    
+    meatbone_size = [0.12, 0.06]  # Example size (width, height)
+    meatbone_image_L12.size = meatbone_size
+    offset = 0.01  # Adjust to align the meatbone properly with floor2_L12
+    
+    
+    #arc stuff
+    
+    # Arc 1 Properties
+    arc1_L12_x = 0.3
+    arc1_L12_center = [arc1_L12_x, reg_arc]
+    arc1_L12_radius = small_arc_size
+    arc1_L12_start_angle = 0
+    arc1_L12_end_angle = 180
+    
+    # Arc 2 Properties
+    arc2_L12_x = 1.1
+    arc2_L12_center = [arc2_L12_x, reg_arc]
+    arc2_L12_radius = large_arc_size
+    arc2_L12_start_angle = 0
+    arc2_L12_end_angle = 180
+    
+    # Arc 3 Properties
+    arc3_L12_x = 1.9
+    arc3_L12_center = [arc3_L12_x, reg_arc]
+    arc3_L12_radius = med_arc_size
+    arc3_L12_start_angle = 0
+    arc3_L12_end_angle = 180
+    
+    # Arc 4 Properties
+    arc4_L12_x = 2.7
+    arc4_L12_center = [arc4_L12_x, reg_arc]
+    arc4_L12_radius = small_arc_size
+    arc4_L12_start_angle = 0
+    arc4_L12_end_angle = 180
+    
+    # Arc 5 Properties
+    arc5_L12_x = 3.5
+    arc5_L12_center = [arc5_L12_x, reg_arc]
+    arc5_L12_radius = large_arc_size
+    arc5_L12_start_angle = 0
+    arc5_L12_end_angle = 180
+    
+    # Arc 6 Properties
+    arc6_L12_x = 4.3
+    arc6_L12_center = [arc6_L12_x, reg_arc]
+    arc6_L12_radius = med_arc_size
+    arc6_L12_start_angle = 0
+    arc6_L12_end_angle = 180
+    
+    # Arc 7 Properties
+    arc7_L12_x = 5.1
+    arc7_L12_center = [arc7_L12_x, reg_arc]
+    arc7_L12_radius = large_arc_size
+    arc7_L12_start_angle = 0
+    arc7_L12_end_angle = 180
+    
+    # Arc 8 Properties
+    arc8_L12_x = 5.9
+    arc8_L12_center = [arc8_L12_x, reg_arc]
+    arc8_L12_radius = med_arc_size
+    arc8_L12_start_angle = 0
+    arc8_L12_end_angle = 180
+    
+    # Arc 9 Properties
+    arc9_L12_x = 6.7
+    arc9_L12_center = [arc9_L12_x, reg_arc]
+    arc9_L12_radius = med_arc_size
+    arc9_L12_start_angle = 0
+    arc9_L12_end_angle = 180
+    
+    # Arc 10 Properties
+    arc10_L12_x = 7.5
+    arc10_L12_center = [arc10_L12_x, reg_arc]
+    arc10_L12_radius = med_arc_size
+    arc10_L12_start_angle = 0
+    arc10_L12_end_angle = 180
+    
+    # Arc 11 Properties
+    arc11_L12_x = 8.3
+    arc11_L12_center = [arc11_L12_x, reg_arc]
+    arc11_L12_radius = med_arc_size
+    arc11_L12_start_angle = 0
+    arc11_L12_end_angle = 180
+    
+    
+    # Generate vertices for Arc 1
+    arc1_L12_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc1_L12_start_angle + i * (arc1_L12_end_angle - arc1_L12_start_angle) / 50)
+        x = arc1_L12_center[0] + arc1_L12_radius * math.cos(angle)
+        y = arc1_L12_center[1] + arc1_L12_radius * math.sin(angle)
+        arc1_L12_vertices.append((x, y))
+    
+    # Generate vertices for Arc 2
+    arc2_L12_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc2_L12_start_angle + i * (arc2_L12_end_angle - arc2_L12_start_angle) / 50)
+        x = arc2_L12_center[0] + arc2_L12_radius * math.cos(angle)
+        y = arc2_L12_center[1] + arc2_L12_radius * math.sin(angle)
+        arc2_L12_vertices.append((x, y))
+        
+        
+    
+    # Generate vertices for Arc 3
+    arc3_L12_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc3_L12_start_angle + i * (arc3_L12_end_angle - arc3_L12_start_angle) / 50)
+        x = arc3_L12_center[0] + arc3_L12_radius * math.cos(angle)
+        y = arc3_L12_center[1] + arc3_L12_radius * math.sin(angle)
+        arc3_L12_vertices.append((x, y))
+    
+    # Generate vertices for Arc 4
+    arc4_L12_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc4_L12_start_angle + i * (arc4_L12_end_angle - arc4_L12_start_angle) / 50)
+        x = arc4_L12_center[0] + arc4_L12_radius * math.cos(angle)
+        y = arc4_L12_center[1] + arc4_L12_radius * math.sin(angle)
+        arc4_L12_vertices.append((x, y))
+    
+    
+    # Generate vertices for Arc 5
+    arc5_L12_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc5_L12_start_angle + i * (arc5_L12_end_angle - arc5_L12_start_angle) / 50)
+        x = arc5_L12_center[0] + arc5_L12_radius * math.cos(angle)
+        y = arc5_L12_center[1] + arc5_L12_radius * math.sin(angle)
+        arc5_L12_vertices.append((x, y))
+        
+    
+    arc6_L12_vertices = []
+    for i in range(51):
+        angle = math.radians(arc6_L12_start_angle + i * (arc6_L12_end_angle - arc6_L12_start_angle) / 50)
+        x = arc6_L12_center[0] + arc6_L12_radius * math.cos(angle)
+        y = arc6_L12_center[1] + arc6_L12_radius * math.sin(angle)
+        arc6_L12_vertices.append((x, y))
+    
+    # Arc 7 vertices
+    arc7_L12_vertices = []
+    for i in range(51):
+        angle = math.radians(arc7_L12_start_angle + i * (arc7_L12_end_angle - arc7_L12_start_angle) / 50)
+        x = arc7_L12_center[0] + arc7_L12_radius * math.cos(angle)
+        y = arc7_L12_center[1] + arc7_L12_radius * math.sin(angle)
+        arc7_L12_vertices.append((x, y))
+    
+    # Arc 8 vertices
+    arc8_L12_vertices = []
+    for i in range(51):
+        angle = math.radians(arc8_L12_start_angle + i * (arc8_L12_end_angle - arc8_L12_start_angle) / 50)
+        x = arc8_L12_center[0] + arc8_L12_radius * math.cos(angle)
+        y = arc8_L12_center[1] + arc8_L12_radius * math.sin(angle)
+        arc8_L12_vertices.append((x, y))
+        
+    # Arc 9 vertices
+    arc9_L12_vertices = []
+    for i in range(51):
+        angle = math.radians(arc9_L12_start_angle + i * (arc9_L12_end_angle - arc9_L12_start_angle) / 50)
+        x = arc9_L12_center[0] + arc9_L12_radius * math.cos(angle)
+        y = arc9_L12_center[1] + arc9_L12_radius * math.sin(angle)
+        arc9_L12_vertices.append((x, y))
+        
+    # Arc 10 vertices
+    arc10_L12_vertices = []
+    for i in range(51):
+        angle = math.radians(arc10_L12_start_angle + i * (arc10_L12_end_angle - arc10_L12_start_angle) / 50)
+        x = arc10_L12_center[0] + arc10_L12_radius * math.cos(angle)
+        y = arc10_L12_center[1] + arc10_L12_radius * math.sin(angle)
+        arc10_L12_vertices.append((x, y))
+        
+    # Arc 11 vertices
+    arc11_L12_vertices = []
+    for i in range(51):
+        angle = math.radians(arc11_L12_start_angle + i * (arc11_L12_end_angle - arc11_L12_start_angle) / 50)
+        x = arc11_L12_center[0] + arc11_L12_radius * math.cos(angle)
+        y = arc11_L12_center[1] + arc11_L12_radius * math.sin(angle)
+        arc11_L12_vertices.append((x, y))
+        
+    # Create the arc ShapeStim
+    arc1_L12 = ShapeStim(
+        win=win,
+        vertices=arc1_L12_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    # Create Arc 2 ShapeStim
+    arc2_L12 = ShapeStim(
+        win=win,
+        vertices=arc2_L12_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Different color for clarity
+        fillColor=None
+    )
+    
+    
+    # Create Arc 3 ShapeStim
+    arc3_L12 = ShapeStim(
+        win=win,
+        vertices=arc3_L12_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 4 ShapeStim
+    arc4_L12 = ShapeStim(
+        win=win,
+        vertices=arc4_L12_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 5 ShapeStim
+    arc5_L12 = ShapeStim(
+        win=win,
+        vertices=arc5_L12_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    arc6_L12 = ShapeStim(
+        win=win,
+        vertices=arc6_L12_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc7_L12 = ShapeStim(
+        win=win,
+        vertices=arc7_L12_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc8_L12 = ShapeStim(
+        win=win,
+        vertices=arc8_L12_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    
+    arc9_L12 = ShapeStim(
+        win=win,
+        vertices=arc9_L12_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc10_L12 = ShapeStim(
+        win=win,
+        vertices=arc10_L12_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc11_L12 = ShapeStim(
+        win=win,
+        vertices=arc11_L12_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    def create_wiggle_arc(center, radius, thickness, color='red', opacity=0.5):
+        """Generate a thick wiggle room arc for a given arc."""
+        outer_arc_vertices = []
+        inner_arc_vertices = []
+    
+        for i in range(51):  # 50 segments for smoothness
+            angle = math.radians(i * (180 / 50))  # Same angles as original arc
+    
+            # Outer arc (slightly larger)
+            outer_x = center[0] + (radius + thickness) * math.cos(angle)
+            outer_y = center[1] + (radius + thickness) * math.sin(angle)
+            outer_arc_vertices.append((outer_x, outer_y))
+    
+            # Inner arc (slightly smaller)
+            inner_x = center[0] + (radius - thickness) * math.cos(angle)
+            inner_y = center[1] + (radius - thickness) * math.sin(angle)
+            inner_arc_vertices.append((inner_x, inner_y))
+    
+        # Reverse inner arc vertices to create a closed shape
+        inner_arc_vertices.reverse()
+        thick_wiggle_arc_vertices = outer_arc_vertices + inner_arc_vertices
+    
+        # Create and return the wiggle room arc
+        return ShapeStim(
+            win=win,
+            vertices=thick_wiggle_arc_vertices,
+            closeShape=True,  # Fill between outer and inner arcs
+            lineWidth=0,  # No outline needed
+            lineColor=None,
+            fillColor=color,
+            opacity=opacity
+        )
+    
+    
+    # Generate wiggle arcs for all arcs
+    wiggle_arc1_L12 = create_wiggle_arc(arc1_L12_center, arc1_L12_radius, wiggle_thickness)
+    wiggle_arc2_L12 = create_wiggle_arc(arc2_L12_center, arc2_L12_radius, wiggle_thickness)
+    wiggle_arc3_L12 = create_wiggle_arc(arc3_L12_center, arc3_L12_radius, wiggle_thickness)
+    wiggle_arc4_L12 = create_wiggle_arc(arc4_L12_center, arc4_L12_radius, wiggle_thickness)
+    wiggle_arc5_L12 = create_wiggle_arc(arc5_L12_center, arc5_L12_radius, wiggle_thickness)
+    wiggle_arc6_L12 = create_wiggle_arc(arc6_L12_center, arc6_L12_radius, wiggle_thickness)
+    wiggle_arc7_L12 = create_wiggle_arc(arc7_L12_center, arc7_L12_radius, wiggle_thickness)
+    wiggle_arc8_L12 = create_wiggle_arc(arc8_L12_center, arc8_L12_radius, wiggle_thickness)
+    wiggle_arc9_L12 = create_wiggle_arc(arc9_L12_center, arc9_L12_radius, wiggle_thickness)
+    wiggle_arc10_L12 = create_wiggle_arc(arc10_L12_center, arc10_L12_radius, wiggle_thickness)
+    wiggle_arc11_L12 = create_wiggle_arc(arc11_L12_center, arc11_L12_radius, wiggle_thickness)
+    
+    
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from GoalController_L12
+    
+    meatbone_collided = False  # Track whether the meatbone has been stomped
+    arc1_touched_vertices_L12 = []
+    arc2_touched_vertices_L12 = []
+    arc3_touched_vertices_L12 = []
+    arc4_touched_vertices_L12 = []
+    arc5_touched_vertices_L12 = []
+    arc6_touched_vertices_L12 = []
+    arc7_touched_vertices_L12 = []
+    arc8_touched_vertices_L12 = []
+    arc9_touched_vertices_L12 = []
+    arc10_touched_vertices_L12 = []
+    arc11_touched_vertices_L12 = []
+    
+    touch_threshold_L12 = 0.04 # touch threshold for the arcs
+    
+    meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
+    
+    
+    # Track if Dino is in the wiggle room defualt is not touching so false
+    wiggle_room = False  
+    
+    
+    # Run 'Begin Experiment' code from Timer_L12
+    level_timer = core.Clock()  # Initialize the timer
+    time_limit = 125  # Set the time limit in seconds (2 minutes)
+    
+    lose_sound_L12 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='lose_sound_L12',    name='lose_sound_L12'
+    )
+    lose_sound_L12.setVolume(1.0)
+    eat_sound_L12 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='eat_sound_L12',    name='eat_sound_L12'
+    )
+    eat_sound_L12.setVolume(1.0)
+    
+    # --- Initialize components for Routine "Level_12_checker" ---
+    end_score_text_L12 = visual.TextStim(win=win, name='end_score_text_L12',
+        text='Score: ',
+        font='Arial',
+        pos=(0, .2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    win_sound_L12 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='win_sound_L12',    name='win_sound_L12'
+    )
+    win_sound_L12.setVolume(1.0)
+    fail_sound_L12 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='fail_sound_L12',    name='fail_sound_L12'
+    )
+    fail_sound_L12.setVolume(0.6)
+    
+    # --- Initialize components for Routine "Level_13" ---
+    dino_image_L13 = visual.ImageStim(
+        win=win,
+        name='dino_image_L13', 
+        image='Assets/dino.png', mask=None, anchor='center',
+        ori=0.0, pos=(0,0), draggable=False, size=(0.2, 0.2),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=0.0)
+    floor1_L13 = visual.Rect(
+        win=win, name='floor1_L13',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(-.5,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-1.0, interpolate=True)
+    floor2_L13 = visual.Rect(
+        win=win, name='floor2_L13',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(0,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-2.0, interpolate=True)
+    meatbone_image_L13 = visual.ImageStim(
+        win=win,
+        name='meatbone_image_L13', 
+        image='Assets/meat_bone.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-3.0)
+    score_text_L13 = visual.TextStim(win=win, name='score_text_L13',
+        text='Score: 0',
+        font='Arial',
+        pos=(0.55, 0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-4.0);
+    timer_text_L13 = visual.TextStim(win=win, name='timer_text_L13',
+        text='00 : 00',
+        font='Arial',
+        pos=(-0.55,0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
+    # Run 'Begin Experiment' code from DinoMovement_L13
+    from psychopy.hardware import keyboard
+    from psychopy.visual import Rect
+    import time
+    
+    import serial
+    from psychopy.visual import Circle
+    
+    # Initialize the Keyboard
+    kb = keyboard.Keyboard()
+    
+    #PSURP Inits
+    """
+    # Initialize the serial connection for PSURP
+    ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
+    ser.flush()
+    ser.write("X".encode())  # Initialize PSURP
+    ser.write("RUNE\n".encode())  # Enter streaming mode
+    """
+    
+    # Trail settings
+    trail_positions = []  # Stores Dino's previous positions
+    trail_length = 35  # Maximum number of trail dots
+    trail_dot_size = 0.005  # Size of each dot for trail 
+    trail_dots = []  # List of Circle stimuli for the trail
+    trail_color = 'yellow'  # Color of the trail dots
+    trail_frame_counter = 0  # Counter to control trail dot spawning
+    trail_interval = 5  # Spawn a dot every 5 frames
+    
+    
+    #Button 0 and button 2 force properties
+    B0ForceInNewtons = 0
+    B2ForceInNewtons = 0
+    MIN_FORCE = 0.4  # Minimum force to start movement
+    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
+    
+    
+    # Dino movement variables
+    dino_pos = [0, -0.3]  # Starting position [x, y]
+    dino_speed = 0  # Initial vertical speed
+    gravity = -0.0003  # Downward acceleration 0.00006
+    jump_speed = 0.005  # Jumping speed
+    move_speed = 0.01  # Horizontal movement speed
+    ground_offset = 0.03  # Offset to avoid sinking into the ground visually
+    #min_x = -0.6  # Left boundary
+    #max_x = 19 # right boundary
+    respawn_position = [0, -0.3]  # Starting position for Dino
+    
+    
+    
+    # Floor properties
+    
+    floor1_vertices = floor1_L13.vertices  # Get floor1_L13 vertices
+    floor_top = max(v[1] for v in floor1_vertices)  # Highest point of floor1_L13
+    fall_threshold = min(v[1] for v in floor1_vertices) - 0.2  # Slightly below the lowest floor point
+    
+    
+    # Function to check if Dino is on the floor
+    def is_on_floor(dino_pos):
+        """Check if Dino's bottom is within the bounds of floor1_L13 or floor2_L13."""
+        dino_bottom = dino_pos[1] - (dino_image_L13.size[1] / 2)  # Dino's bottom Y-position
+    
+        # floor1_L13 bounds
+        x_min1 = min(v[0] for v in floor1_vertices)
+        x_max1 = max(v[0] for v in floor1_vertices)
+        
+        # floor2_L13 bounds
+        x_min2 = min(v[0] for v in floor2_vertices)
+        x_max2 = max(v[0] for v in floor2_vertices)
+    
+        # Check floor1_L13 or floor2_L13
+        on_floor1 = x_min1 <= dino_pos[0] <= x_max1 and dino_bottom <= floor1_top
+        on_floor2 = x_min2 <= dino_pos[0] <= x_max2 and dino_bottom <= floor2_top
+    
+        return on_floor1 or on_floor2
+        
+    #calculates the psurp forces
+    def calculate_psurp_forces(serial_data):
+        """Extract and calculate forces from PSURP serial data."""
+        if len(serial_data.decode()) == 12:
+            output = serial_data.decode()
+            
+            # Calculate forces
+            B0HighByte = Base71Lookup.index(output[0])
+            B0LowByte = Base71Lookup.index(output[1])
+            B2HighByte = Base71Lookup.index(output[4])
+            B2LowByte = Base71Lookup.index(output[5])
+            
+            # Forces in Newtons
+            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            
+            return B0ForceInNewtons, B2ForceInNewtons
+        
+        return 0, 0  # Default forces if data is invalid
+    
+    
+    
+    # image path for dino animation
+    frame_paths = [
+        "Assets/dino_frames/f1.png", "Assets/dino_frames/f2.png", 
+        "Assets/dino_frames/f3.png", "Assets/dino_frames/f4.png", 
+        "Assets/dino_frames/f5.png", "Assets/dino_frames/f6.png", 
+        "Assets/dino_frames/f7.png", "Assets/dino_frames/f8.png", 
+        "Assets/dino_frames/f9.png", "Assets/dino_frames/f10.png", 
+        "Assets/dino_frames/f11.png", "Assets/dino_frames/f12.png"
+    ]
+    
+    
+    
+    frame_index = 0  # Start with the first frame
+    frame_index_update_counter = 0  # Counter to manage animation speed
+    total_frames = len(frame_paths)  # Total number of frames in the animation
+    
+    # Initialize the Dino's first frame
+    dino_image_L13.image = frame_paths[frame_index]
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from worldController_L13
+    from psychopy.visual import Rect, ImageStim, ShapeStim
+    import math
+    
+    dirt_texture_L13 = 'Assets/grounds/ground13.png'
+    
+    #height factors for arcs (Y position)
+    low_arc = -0.2  
+    reg_arc = 0
+    high_arc = 0.04
+    
+    small_arc_size = 0.2  # Smallest arc radius
+    med_arc_size = 0.27  # Medium arc radius
+    large_arc_size = 0.35  # Largest arc radius
+    
+    wiggle_thickness = 0.05  # Adjust thickness for all wiggle arcs
+    
+    meatbone_size = [0.15, 0.09]  # Example size (width, height)
+    
+    
+    # Function to calculate vertices of a Rect stimulus
+    def calculate_rect_vertices(rect):
+        """Calculate the vertices of a Rect stimulus."""
+        half_width = rect.width / 2
+        half_height = rect.height / 2
+        center_x, center_y = rect.pos
+        vertices = [
+            [center_x - half_width, center_y - half_height],  # Bottom-left
+            [center_x + half_width, center_y - half_height],  # Bottom-right
+            [center_x + half_width, center_y + half_height],  # Top-right
+            [center_x - half_width, center_y + half_height],  # Top-left
+        ]
+        return vertices
+    
+    # Camera variables
+    camera_offset_x = 0  # Tracks the camera offset to follow Dino
+    #camera_speed = 0.003  # Adjust this speed as needed 0.003
+    # Background properties
+    background_width = 2.0  # Width of a single background image
+    background_height = 1.0
+    
+    background_image_L13 = 'Assets/bgs/L13.png'  # Path to your custom background image
+    
+    # Create two background images for seamless scrolling
+    background1_L13 = ImageStim(win, image=background_image_L13, size=[background_width, background_height], pos=[0, 0])
+    background2_L13 = ImageStim(win, image=background_image_L13, size=[background_width, background_height], pos=[background_width, 0])
+    
+    # floor1_L13 properties
+    floor1_height = 0.3
+    floor1_width = 0.5
+    floor1_pos = [0, -0.5]
+    
+    floor1_L13 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L13,
+        size=(floor1_width, floor1_height),  # Set the size to match the floor dimensions
+        pos=floor1_pos,
+        interpolate=True
+    )
+    floor1_vertices = calculate_rect_vertices(floor1_L13)
+    
+    # floor2_L13 properties - Place it further into the map
+    #floor2_x_static = 15.5  # Fixed X position where floor2_L13 appears18.5
+    floor2_height = 0.3
+    floor2_width = 0.5
+    
+    floor2_L13 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L13,
+        size=(floor2_width, floor2_height),  # Set the size to match the floor dimensions
+        pos=[floor2_x_static, -0.5],  # Position of floor2_L13
+        interpolate=True
+    )
+    floor2_vertices = calculate_rect_vertices(floor2_L13)
+    
+    
+    # Floor thresholds
+    floor1_top = max(v[1] for v in floor1_vertices)
+    floor2_top = max(v[1] for v in floor2_vertices)
+    
+    
+    
+    #meat bone
+    
+    meatbone_size = [0.12, 0.06]  # Example size (width, height)
+    meatbone_image_L13.size = meatbone_size
+    offset = 0.01  # Adjust to align the meatbone properly with floor2_L13
+    
+    
+    #arc stuff
+    
+    # Arc 1 Properties
+    arc1_L13_x = 0.3
+    arc1_L13_center = [arc1_L13_x, reg_arc]
+    arc1_L13_radius = small_arc_size
+    arc1_L13_start_angle = 0
+    arc1_L13_end_angle = 180
+    
+    # Arc 2 Properties
+    arc2_L13_x = 1.1
+    arc2_L13_center = [arc2_L13_x, reg_arc]
+    arc2_L13_radius = large_arc_size
+    arc2_L13_start_angle = 0
+    arc2_L13_end_angle = 180
+    
+    # Arc 3 Properties
+    arc3_L13_x = 1.9
+    arc3_L13_center = [arc3_L13_x, reg_arc]
+    arc3_L13_radius = med_arc_size
+    arc3_L13_start_angle = 0
+    arc3_L13_end_angle = 180
+    
+    # Arc 4 Properties
+    arc4_L13_x = 2.7
+    arc4_L13_center = [arc4_L13_x, reg_arc]
+    arc4_L13_radius = small_arc_size
+    arc4_L13_start_angle = 0
+    arc4_L13_end_angle = 180
+    
+    # Arc 5 Properties
+    arc5_L13_x = 3.5
+    arc5_L13_center = [arc5_L13_x, reg_arc]
+    arc5_L13_radius = large_arc_size
+    arc5_L13_start_angle = 0
+    arc5_L13_end_angle = 180
+    
+    # Arc 6 Properties
+    arc6_L13_x = 4.3
+    arc6_L13_center = [arc6_L13_x, reg_arc]
+    arc6_L13_radius = med_arc_size
+    arc6_L13_start_angle = 0
+    arc6_L13_end_angle = 180
+    
+    # Arc 7 Properties
+    arc7_L13_x = 5.1
+    arc7_L13_center = [arc7_L13_x, reg_arc]
+    arc7_L13_radius = large_arc_size
+    arc7_L13_start_angle = 0
+    arc7_L13_end_angle = 180
+    
+    # Arc 8 Properties
+    arc8_L13_x = 5.9
+    arc8_L13_center = [arc8_L13_x, reg_arc]
+    arc8_L13_radius = med_arc_size
+    arc8_L13_start_angle = 0
+    arc8_L13_end_angle = 180
+    
+    # Arc 9 Properties
+    arc9_L13_x = 6.7
+    arc9_L13_center = [arc9_L13_x, reg_arc]
+    arc9_L13_radius = med_arc_size
+    arc9_L13_start_angle = 0
+    arc9_L13_end_angle = 180
+    
+    # Arc 10 Properties
+    arc10_L13_x = 7.5
+    arc10_L13_center = [arc10_L13_x, reg_arc]
+    arc10_L13_radius = med_arc_size
+    arc10_L13_start_angle = 0
+    arc10_L13_end_angle = 180
+    
+    # Arc 11 Properties
+    arc11_L13_x = 8.3
+    arc11_L13_center = [arc11_L13_x, reg_arc]
+    arc11_L13_radius = med_arc_size
+    arc11_L13_start_angle = 0
+    arc11_L13_end_angle = 180
+    
+    
+    # Generate vertices for Arc 1
+    arc1_L13_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc1_L13_start_angle + i * (arc1_L13_end_angle - arc1_L13_start_angle) / 50)
+        x = arc1_L13_center[0] + arc1_L13_radius * math.cos(angle)
+        y = arc1_L13_center[1] + arc1_L13_radius * math.sin(angle)
+        arc1_L13_vertices.append((x, y))
+    
+    # Generate vertices for Arc 2
+    arc2_L13_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc2_L13_start_angle + i * (arc2_L13_end_angle - arc2_L13_start_angle) / 50)
+        x = arc2_L13_center[0] + arc2_L13_radius * math.cos(angle)
+        y = arc2_L13_center[1] + arc2_L13_radius * math.sin(angle)
+        arc2_L13_vertices.append((x, y))
+        
+        
+    
+    # Generate vertices for Arc 3
+    arc3_L13_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc3_L13_start_angle + i * (arc3_L13_end_angle - arc3_L13_start_angle) / 50)
+        x = arc3_L13_center[0] + arc3_L13_radius * math.cos(angle)
+        y = arc3_L13_center[1] + arc3_L13_radius * math.sin(angle)
+        arc3_L13_vertices.append((x, y))
+    
+    # Generate vertices for Arc 4
+    arc4_L13_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc4_L13_start_angle + i * (arc4_L13_end_angle - arc4_L13_start_angle) / 50)
+        x = arc4_L13_center[0] + arc4_L13_radius * math.cos(angle)
+        y = arc4_L13_center[1] + arc4_L13_radius * math.sin(angle)
+        arc4_L13_vertices.append((x, y))
+    
+    
+    # Generate vertices for Arc 5
+    arc5_L13_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc5_L13_start_angle + i * (arc5_L13_end_angle - arc5_L13_start_angle) / 50)
+        x = arc5_L13_center[0] + arc5_L13_radius * math.cos(angle)
+        y = arc5_L13_center[1] + arc5_L13_radius * math.sin(angle)
+        arc5_L13_vertices.append((x, y))
+        
+    
+    arc6_L13_vertices = []
+    for i in range(51):
+        angle = math.radians(arc6_L13_start_angle + i * (arc6_L13_end_angle - arc6_L13_start_angle) / 50)
+        x = arc6_L13_center[0] + arc6_L13_radius * math.cos(angle)
+        y = arc6_L13_center[1] + arc6_L13_radius * math.sin(angle)
+        arc6_L13_vertices.append((x, y))
+    
+    # Arc 7 vertices
+    arc7_L13_vertices = []
+    for i in range(51):
+        angle = math.radians(arc7_L13_start_angle + i * (arc7_L13_end_angle - arc7_L13_start_angle) / 50)
+        x = arc7_L13_center[0] + arc7_L13_radius * math.cos(angle)
+        y = arc7_L13_center[1] + arc7_L13_radius * math.sin(angle)
+        arc7_L13_vertices.append((x, y))
+    
+    # Arc 8 vertices
+    arc8_L13_vertices = []
+    for i in range(51):
+        angle = math.radians(arc8_L13_start_angle + i * (arc8_L13_end_angle - arc8_L13_start_angle) / 50)
+        x = arc8_L13_center[0] + arc8_L13_radius * math.cos(angle)
+        y = arc8_L13_center[1] + arc8_L13_radius * math.sin(angle)
+        arc8_L13_vertices.append((x, y))
+        
+    # Arc 9 vertices
+    arc9_L13_vertices = []
+    for i in range(51):
+        angle = math.radians(arc9_L13_start_angle + i * (arc9_L13_end_angle - arc9_L13_start_angle) / 50)
+        x = arc9_L13_center[0] + arc9_L13_radius * math.cos(angle)
+        y = arc9_L13_center[1] + arc9_L13_radius * math.sin(angle)
+        arc9_L13_vertices.append((x, y))
+        
+    # Arc 10 vertices
+    arc10_L13_vertices = []
+    for i in range(51):
+        angle = math.radians(arc10_L13_start_angle + i * (arc10_L13_end_angle - arc10_L13_start_angle) / 50)
+        x = arc10_L13_center[0] + arc10_L13_radius * math.cos(angle)
+        y = arc10_L13_center[1] + arc10_L13_radius * math.sin(angle)
+        arc10_L13_vertices.append((x, y))
+        
+    # Arc 11 vertices
+    arc11_L13_vertices = []
+    for i in range(51):
+        angle = math.radians(arc11_L13_start_angle + i * (arc11_L13_end_angle - arc11_L13_start_angle) / 50)
+        x = arc11_L13_center[0] + arc11_L13_radius * math.cos(angle)
+        y = arc11_L13_center[1] + arc11_L13_radius * math.sin(angle)
+        arc11_L13_vertices.append((x, y))
+        
+    # Create the arc ShapeStim
+    arc1_L13 = ShapeStim(
+        win=win,
+        vertices=arc1_L13_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    # Create Arc 2 ShapeStim
+    arc2_L13 = ShapeStim(
+        win=win,
+        vertices=arc2_L13_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Different color for clarity
+        fillColor=None
+    )
+    
+    
+    # Create Arc 3 ShapeStim
+    arc3_L13 = ShapeStim(
+        win=win,
+        vertices=arc3_L13_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 4 ShapeStim
+    arc4_L13 = ShapeStim(
+        win=win,
+        vertices=arc4_L13_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 5 ShapeStim
+    arc5_L13 = ShapeStim(
+        win=win,
+        vertices=arc5_L13_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    arc6_L13 = ShapeStim(
+        win=win,
+        vertices=arc6_L13_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc7_L13 = ShapeStim(
+        win=win,
+        vertices=arc7_L13_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc8_L13 = ShapeStim(
+        win=win,
+        vertices=arc8_L13_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    
+    arc9_L13 = ShapeStim(
+        win=win,
+        vertices=arc9_L13_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc10_L13 = ShapeStim(
+        win=win,
+        vertices=arc10_L13_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc11_L13 = ShapeStim(
+        win=win,
+        vertices=arc11_L13_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    def create_wiggle_arc(center, radius, thickness, color='red', opacity=0.5):
+        """Generate a thick wiggle room arc for a given arc."""
+        outer_arc_vertices = []
+        inner_arc_vertices = []
+    
+        for i in range(51):  # 50 segments for smoothness
+            angle = math.radians(i * (180 / 50))  # Same angles as original arc
+    
+            # Outer arc (slightly larger)
+            outer_x = center[0] + (radius + thickness) * math.cos(angle)
+            outer_y = center[1] + (radius + thickness) * math.sin(angle)
+            outer_arc_vertices.append((outer_x, outer_y))
+    
+            # Inner arc (slightly smaller)
+            inner_x = center[0] + (radius - thickness) * math.cos(angle)
+            inner_y = center[1] + (radius - thickness) * math.sin(angle)
+            inner_arc_vertices.append((inner_x, inner_y))
+    
+        # Reverse inner arc vertices to create a closed shape
+        inner_arc_vertices.reverse()
+        thick_wiggle_arc_vertices = outer_arc_vertices + inner_arc_vertices
+    
+        # Create and return the wiggle room arc
+        return ShapeStim(
+            win=win,
+            vertices=thick_wiggle_arc_vertices,
+            closeShape=True,  # Fill between outer and inner arcs
+            lineWidth=0,  # No outline needed
+            lineColor=None,
+            fillColor=color,
+            opacity=opacity
+        )
+    
+    
+    # Generate wiggle arcs for all arcs
+    wiggle_arc1_L13 = create_wiggle_arc(arc1_L13_center, arc1_L13_radius, wiggle_thickness)
+    wiggle_arc2_L13 = create_wiggle_arc(arc2_L13_center, arc2_L13_radius, wiggle_thickness)
+    wiggle_arc3_L13 = create_wiggle_arc(arc3_L13_center, arc3_L13_radius, wiggle_thickness)
+    wiggle_arc4_L13 = create_wiggle_arc(arc4_L13_center, arc4_L13_radius, wiggle_thickness)
+    wiggle_arc5_L13 = create_wiggle_arc(arc5_L13_center, arc5_L13_radius, wiggle_thickness)
+    wiggle_arc6_L13 = create_wiggle_arc(arc6_L13_center, arc6_L13_radius, wiggle_thickness)
+    wiggle_arc7_L13 = create_wiggle_arc(arc7_L13_center, arc7_L13_radius, wiggle_thickness)
+    wiggle_arc8_L13 = create_wiggle_arc(arc8_L13_center, arc8_L13_radius, wiggle_thickness)
+    wiggle_arc9_L13 = create_wiggle_arc(arc9_L13_center, arc9_L13_radius, wiggle_thickness)
+    wiggle_arc10_L13 = create_wiggle_arc(arc10_L13_center, arc10_L13_radius, wiggle_thickness)
+    wiggle_arc11_L13 = create_wiggle_arc(arc11_L13_center, arc11_L13_radius, wiggle_thickness)
+    
+    
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from GoalController_L13
+    
+    meatbone_collided = False  # Track whether the meatbone has been stomped
+    arc1_touched_vertices_L13 = []
+    arc2_touched_vertices_L13 = []
+    arc3_touched_vertices_L13 = []
+    arc4_touched_vertices_L13 = []
+    arc5_touched_vertices_L13 = []
+    arc6_touched_vertices_L13 = []
+    arc7_touched_vertices_L13 = []
+    arc8_touched_vertices_L13 = []
+    arc9_touched_vertices_L13 = []
+    arc10_touched_vertices_L13 = []
+    arc11_touched_vertices_L13 = []
+    
+    touch_threshold_L13 = 0.04 # touch threshold for the arcs
+    
+    meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
+    
+    
+    # Track if Dino is in the wiggle room defualt is not touching so false
+    wiggle_room = False  
+    
+    
+    # Run 'Begin Experiment' code from Timer_L13
+    level_timer = core.Clock()  # Initialize the timer
+    time_limit = 125  # Set the time limit in seconds (2 minutes)
+    
+    lose_sound_L13 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='lose_sound_L13',    name='lose_sound_L13'
+    )
+    lose_sound_L13.setVolume(1.0)
+    eat_sound_L13 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='eat_sound_L13',    name='eat_sound_L13'
+    )
+    eat_sound_L13.setVolume(1.0)
+    
+    # --- Initialize components for Routine "Level_13_checker" ---
+    end_score_text_L13 = visual.TextStim(win=win, name='end_score_text_L13',
+        text='Score: ',
+        font='Arial',
+        pos=(0, .2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    win_sound_L13 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='win_sound_L13',    name='win_sound_L13'
+    )
+    win_sound_L13.setVolume(1.0)
+    fail_sound_L13 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='fail_sound_L13',    name='fail_sound_L13'
+    )
+    fail_sound_L13.setVolume(0.6)
+    
+    # --- Initialize components for Routine "Level_14" ---
+    dino_image_L14 = visual.ImageStim(
+        win=win,
+        name='dino_image_L14', 
+        image='Assets/dino.png', mask=None, anchor='center',
+        ori=0.0, pos=(0,0), draggable=False, size=(0.2, 0.2),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=0.0)
+    floor1_L14 = visual.Rect(
+        win=win, name='floor1_L14',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(-.5,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-1.0, interpolate=True)
+    floor2_L14 = visual.Rect(
+        win=win, name='floor2_L14',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(0,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-2.0, interpolate=True)
+    meatbone_image_L14 = visual.ImageStim(
+        win=win,
+        name='meatbone_image_L14', 
+        image='Assets/meat_bone.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-3.0)
+    score_text_L14 = visual.TextStim(win=win, name='score_text_L14',
+        text='Score: 0',
+        font='Arial',
+        pos=(0.55, 0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-4.0);
+    timer_text_L14 = visual.TextStim(win=win, name='timer_text_L14',
+        text='00 : 00',
+        font='Arial',
+        pos=(-0.55,0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
+    # Run 'Begin Experiment' code from DinoMovement_L14
+    from psychopy.hardware import keyboard
+    from psychopy.visual import Rect
+    import time
+    
+    import serial
+    from psychopy.visual import Circle
+    
+    # Initialize the Keyboard
+    kb = keyboard.Keyboard()
+    
+    #PSURP Inits
+    """
+    # Initialize the serial connection for PSURP
+    ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
+    ser.flush()
+    ser.write("X".encode())  # Initialize PSURP
+    ser.write("RUNE\n".encode())  # Enter streaming mode
+    """
+    
+    # Trail settings
+    trail_positions = []  # Stores Dino's previous positions
+    trail_length = 35  # Maximum number of trail dots
+    trail_dot_size = 0.005  # Size of each dot for trail 
+    trail_dots = []  # List of Circle stimuli for the trail
+    trail_color = 'yellow'  # Color of the trail dots
+    trail_frame_counter = 0  # Counter to control trail dot spawning
+    trail_interval = 5  # Spawn a dot every 5 frames
+    
+    
+    #Button 0 and button 2 force properties
+    B0ForceInNewtons = 0
+    B2ForceInNewtons = 0
+    MIN_FORCE = 0.4  # Minimum force to start movement
+    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
+    
+    
+    # Dino movement variables
+    dino_pos = [0, -0.3]  # Starting position [x, y]
+    dino_speed = 0  # Initial vertical speed
+    gravity = -0.0003  # Downward acceleration 0.00006
+    jump_speed = 0.005  # Jumping speed
+    move_speed = 0.01  # Horizontal movement speed
+    ground_offset = 0.03  # Offset to avoid sinking into the ground visually
+    #min_x = -0.6  # Left boundary
+    #max_x = 19 # right boundary
+    respawn_position = [0, -0.3]  # Starting position for Dino
+    
+    
+    
+    # Floor properties
+    
+    floor1_vertices = floor1_L14.vertices  # Get floor1_L14 vertices
+    floor_top = max(v[1] for v in floor1_vertices)  # Highest point of floor1_L14
+    fall_threshold = min(v[1] for v in floor1_vertices) - 0.2  # Slightly below the lowest floor point
+    
+    
+    # Function to check if Dino is on the floor
+    def is_on_floor(dino_pos):
+        """Check if Dino's bottom is within the bounds of floor1_L14 or floor2_L14."""
+        dino_bottom = dino_pos[1] - (dino_image_L14.size[1] / 2)  # Dino's bottom Y-position
+    
+        # floor1_L14 bounds
+        x_min1 = min(v[0] for v in floor1_vertices)
+        x_max1 = max(v[0] for v in floor1_vertices)
+        
+        # floor2_L14 bounds
+        x_min2 = min(v[0] for v in floor2_vertices)
+        x_max2 = max(v[0] for v in floor2_vertices)
+    
+        # Check floor1_L14 or floor2_L14
+        on_floor1 = x_min1 <= dino_pos[0] <= x_max1 and dino_bottom <= floor1_top
+        on_floor2 = x_min2 <= dino_pos[0] <= x_max2 and dino_bottom <= floor2_top
+    
+        return on_floor1 or on_floor2
+        
+    #calculates the psurp forces
+    def calculate_psurp_forces(serial_data):
+        """Extract and calculate forces from PSURP serial data."""
+        if len(serial_data.decode()) == 12:
+            output = serial_data.decode()
+            
+            # Calculate forces
+            B0HighByte = Base71Lookup.index(output[0])
+            B0LowByte = Base71Lookup.index(output[1])
+            B2HighByte = Base71Lookup.index(output[4])
+            B2LowByte = Base71Lookup.index(output[5])
+            
+            # Forces in Newtons
+            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            
+            return B0ForceInNewtons, B2ForceInNewtons
+        
+        return 0, 0  # Default forces if data is invalid
+    
+    
+    
+    # image path for dino animation
+    frame_paths = [
+        "Assets/dino_frames/f1.png", "Assets/dino_frames/f2.png", 
+        "Assets/dino_frames/f3.png", "Assets/dino_frames/f4.png", 
+        "Assets/dino_frames/f5.png", "Assets/dino_frames/f6.png", 
+        "Assets/dino_frames/f7.png", "Assets/dino_frames/f8.png", 
+        "Assets/dino_frames/f9.png", "Assets/dino_frames/f10.png", 
+        "Assets/dino_frames/f11.png", "Assets/dino_frames/f12.png"
+    ]
+    
+    
+    
+    frame_index = 0  # Start with the first frame
+    frame_index_update_counter = 0  # Counter to manage animation speed
+    total_frames = len(frame_paths)  # Total number of frames in the animation
+    
+    # Initialize the Dino's first frame
+    dino_image_L14.image = frame_paths[frame_index]
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from worldController_L14
+    from psychopy.visual import Rect, ImageStim, ShapeStim
+    import math
+    
+    dirt_texture_L14 = 'Assets/grounds/ground14.png'
+    
+    #height factors for arcs (Y position)
+    low_arc = -0.2  
+    reg_arc = 0
+    high_arc = 0.04
+    
+    small_arc_size = 0.2  # Smallest arc radius
+    med_arc_size = 0.27  # Medium arc radius
+    large_arc_size = 0.35  # Largest arc radius
+    
+    wiggle_thickness = 0.05  # Adjust thickness for all wiggle arcs
+    
+    meatbone_size = [0.15, 0.09]  # Example size (width, height)
+    
+    
+    # Function to calculate vertices of a Rect stimulus
+    def calculate_rect_vertices(rect):
+        """Calculate the vertices of a Rect stimulus."""
+        half_width = rect.width / 2
+        half_height = rect.height / 2
+        center_x, center_y = rect.pos
+        vertices = [
+            [center_x - half_width, center_y - half_height],  # Bottom-left
+            [center_x + half_width, center_y - half_height],  # Bottom-right
+            [center_x + half_width, center_y + half_height],  # Top-right
+            [center_x - half_width, center_y + half_height],  # Top-left
+        ]
+        return vertices
+    
+    # Camera variables
+    camera_offset_x = 0  # Tracks the camera offset to follow Dino
+    #camera_speed = 0.003  # Adjust this speed as needed 0.003
+    # Background properties
+    background_width = 2.0  # Width of a single background image
+    background_height = 1.0
+    
+    background_image_L14 = 'Assets/bgs/L14.png'  # Path to your custom background image
+    
+    # Create two background images for seamless scrolling
+    background1_L14 = ImageStim(win, image=background_image_L14, size=[background_width, background_height], pos=[0, 0])
+    background2_L14 = ImageStim(win, image=background_image_L14, size=[background_width, background_height], pos=[background_width, 0])
+    
+    # floor1_L14 properties
+    floor1_height = 0.3
+    floor1_width = 0.5
+    floor1_pos = [0, -0.5]
+    
+    floor1_L14 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L14,
+        size=(floor1_width, floor1_height),  # Set the size to match the floor dimensions
+        pos=floor1_pos,
+        interpolate=True
+    )
+    floor1_vertices = calculate_rect_vertices(floor1_L14)
+    
+    # floor2_L14 properties - Place it further into the map
+    #floor2_x_static = 15.5  # Fixed X position where floor2_L14 appears18.5
+    floor2_height = 0.3
+    floor2_width = 0.5
+    
+    floor2_L14 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L14,
+        size=(floor2_width, floor2_height),  # Set the size to match the floor dimensions
+        pos=[floor2_x_static, -0.5],  # Position of floor2_L14
+        interpolate=True
+    )
+    floor2_vertices = calculate_rect_vertices(floor2_L14)
+    
+    
+    # Floor thresholds
+    floor1_top = max(v[1] for v in floor1_vertices)
+    floor2_top = max(v[1] for v in floor2_vertices)
+    
+    
+    
+    #meat bone
+    
+    meatbone_size = [0.12, 0.06]  # Example size (width, height)
+    meatbone_image_L14.size = meatbone_size
+    offset = 0.01  # Adjust to align the meatbone properly with floor2_L14
+    
+    
+    #arc stuff
+    
+    # Arc 1 Properties
+    arc1_L14_x = 0.3
+    arc1_L14_center = [arc1_L14_x, reg_arc]
+    arc1_L14_radius = small_arc_size
+    arc1_L14_start_angle = 0
+    arc1_L14_end_angle = 180
+    
+    # Arc 2 Properties
+    arc2_L14_x = 1.1
+    arc2_L14_center = [arc2_L14_x, reg_arc]
+    arc2_L14_radius = large_arc_size
+    arc2_L14_start_angle = 0
+    arc2_L14_end_angle = 180
+    
+    # Arc 3 Properties
+    arc3_L14_x = 1.9
+    arc3_L14_center = [arc3_L14_x, reg_arc]
+    arc3_L14_radius = med_arc_size
+    arc3_L14_start_angle = 0
+    arc3_L14_end_angle = 180
+    
+    # Arc 4 Properties
+    arc4_L14_x = 2.7
+    arc4_L14_center = [arc4_L14_x, reg_arc]
+    arc4_L14_radius = small_arc_size
+    arc4_L14_start_angle = 0
+    arc4_L14_end_angle = 180
+    
+    # Arc 5 Properties
+    arc5_L14_x = 3.5
+    arc5_L14_center = [arc5_L14_x, reg_arc]
+    arc5_L14_radius = large_arc_size
+    arc5_L14_start_angle = 0
+    arc5_L14_end_angle = 180
+    
+    # Arc 6 Properties
+    arc6_L14_x = 4.3
+    arc6_L14_center = [arc6_L14_x, reg_arc]
+    arc6_L14_radius = med_arc_size
+    arc6_L14_start_angle = 0
+    arc6_L14_end_angle = 180
+    
+    # Arc 7 Properties
+    arc7_L14_x = 5.1
+    arc7_L14_center = [arc7_L14_x, reg_arc]
+    arc7_L14_radius = large_arc_size
+    arc7_L14_start_angle = 0
+    arc7_L14_end_angle = 180
+    
+    # Arc 8 Properties
+    arc8_L14_x = 5.9
+    arc8_L14_center = [arc8_L14_x, reg_arc]
+    arc8_L14_radius = med_arc_size
+    arc8_L14_start_angle = 0
+    arc8_L14_end_angle = 180
+    
+    # Arc 9 Properties
+    arc9_L14_x = 6.7
+    arc9_L14_center = [arc9_L14_x, reg_arc]
+    arc9_L14_radius = med_arc_size
+    arc9_L14_start_angle = 0
+    arc9_L14_end_angle = 180
+    
+    # Arc 10 Properties
+    arc10_L14_x = 7.5
+    arc10_L14_center = [arc10_L14_x, reg_arc]
+    arc10_L14_radius = med_arc_size
+    arc10_L14_start_angle = 0
+    arc10_L14_end_angle = 180
+    
+    # Arc 11 Properties
+    arc11_L14_x = 8.3
+    arc11_L14_center = [arc11_L14_x, reg_arc]
+    arc11_L14_radius = med_arc_size
+    arc11_L14_start_angle = 0
+    arc11_L14_end_angle = 180
+    
+    
+    # Generate vertices for Arc 1
+    arc1_L14_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc1_L14_start_angle + i * (arc1_L14_end_angle - arc1_L14_start_angle) / 50)
+        x = arc1_L14_center[0] + arc1_L14_radius * math.cos(angle)
+        y = arc1_L14_center[1] + arc1_L14_radius * math.sin(angle)
+        arc1_L14_vertices.append((x, y))
+    
+    # Generate vertices for Arc 2
+    arc2_L14_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc2_L14_start_angle + i * (arc2_L14_end_angle - arc2_L14_start_angle) / 50)
+        x = arc2_L14_center[0] + arc2_L14_radius * math.cos(angle)
+        y = arc2_L14_center[1] + arc2_L14_radius * math.sin(angle)
+        arc2_L14_vertices.append((x, y))
+        
+        
+    
+    # Generate vertices for Arc 3
+    arc3_L14_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc3_L14_start_angle + i * (arc3_L14_end_angle - arc3_L14_start_angle) / 50)
+        x = arc3_L14_center[0] + arc3_L14_radius * math.cos(angle)
+        y = arc3_L14_center[1] + arc3_L14_radius * math.sin(angle)
+        arc3_L14_vertices.append((x, y))
+    
+    # Generate vertices for Arc 4
+    arc4_L14_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc4_L14_start_angle + i * (arc4_L14_end_angle - arc4_L14_start_angle) / 50)
+        x = arc4_L14_center[0] + arc4_L14_radius * math.cos(angle)
+        y = arc4_L14_center[1] + arc4_L14_radius * math.sin(angle)
+        arc4_L14_vertices.append((x, y))
+    
+    
+    # Generate vertices for Arc 5
+    arc5_L14_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc5_L14_start_angle + i * (arc5_L14_end_angle - arc5_L14_start_angle) / 50)
+        x = arc5_L14_center[0] + arc5_L14_radius * math.cos(angle)
+        y = arc5_L14_center[1] + arc5_L14_radius * math.sin(angle)
+        arc5_L14_vertices.append((x, y))
+        
+    
+    arc6_L14_vertices = []
+    for i in range(51):
+        angle = math.radians(arc6_L14_start_angle + i * (arc6_L14_end_angle - arc6_L14_start_angle) / 50)
+        x = arc6_L14_center[0] + arc6_L14_radius * math.cos(angle)
+        y = arc6_L14_center[1] + arc6_L14_radius * math.sin(angle)
+        arc6_L14_vertices.append((x, y))
+    
+    # Arc 7 vertices
+    arc7_L14_vertices = []
+    for i in range(51):
+        angle = math.radians(arc7_L14_start_angle + i * (arc7_L14_end_angle - arc7_L14_start_angle) / 50)
+        x = arc7_L14_center[0] + arc7_L14_radius * math.cos(angle)
+        y = arc7_L14_center[1] + arc7_L14_radius * math.sin(angle)
+        arc7_L14_vertices.append((x, y))
+    
+    # Arc 8 vertices
+    arc8_L14_vertices = []
+    for i in range(51):
+        angle = math.radians(arc8_L14_start_angle + i * (arc8_L14_end_angle - arc8_L14_start_angle) / 50)
+        x = arc8_L14_center[0] + arc8_L14_radius * math.cos(angle)
+        y = arc8_L14_center[1] + arc8_L14_radius * math.sin(angle)
+        arc8_L14_vertices.append((x, y))
+        
+    # Arc 9 vertices
+    arc9_L14_vertices = []
+    for i in range(51):
+        angle = math.radians(arc9_L14_start_angle + i * (arc9_L14_end_angle - arc9_L14_start_angle) / 50)
+        x = arc9_L14_center[0] + arc9_L14_radius * math.cos(angle)
+        y = arc9_L14_center[1] + arc9_L14_radius * math.sin(angle)
+        arc9_L14_vertices.append((x, y))
+        
+    # Arc 10 vertices
+    arc10_L14_vertices = []
+    for i in range(51):
+        angle = math.radians(arc10_L14_start_angle + i * (arc10_L14_end_angle - arc10_L14_start_angle) / 50)
+        x = arc10_L14_center[0] + arc10_L14_radius * math.cos(angle)
+        y = arc10_L14_center[1] + arc10_L14_radius * math.sin(angle)
+        arc10_L14_vertices.append((x, y))
+        
+    # Arc 11 vertices
+    arc11_L14_vertices = []
+    for i in range(51):
+        angle = math.radians(arc11_L14_start_angle + i * (arc11_L14_end_angle - arc11_L14_start_angle) / 50)
+        x = arc11_L14_center[0] + arc11_L14_radius * math.cos(angle)
+        y = arc11_L14_center[1] + arc11_L14_radius * math.sin(angle)
+        arc11_L14_vertices.append((x, y))
+        
+    # Create the arc ShapeStim
+    arc1_L14 = ShapeStim(
+        win=win,
+        vertices=arc1_L14_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    # Create Arc 2 ShapeStim
+    arc2_L14 = ShapeStim(
+        win=win,
+        vertices=arc2_L14_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Different color for clarity
+        fillColor=None
+    )
+    
+    
+    # Create Arc 3 ShapeStim
+    arc3_L14 = ShapeStim(
+        win=win,
+        vertices=arc3_L14_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 4 ShapeStim
+    arc4_L14 = ShapeStim(
+        win=win,
+        vertices=arc4_L14_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 5 ShapeStim
+    arc5_L14 = ShapeStim(
+        win=win,
+        vertices=arc5_L14_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    arc6_L14 = ShapeStim(
+        win=win,
+        vertices=arc6_L14_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc7_L14 = ShapeStim(
+        win=win,
+        vertices=arc7_L14_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc8_L14 = ShapeStim(
+        win=win,
+        vertices=arc8_L14_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    
+    arc9_L14 = ShapeStim(
+        win=win,
+        vertices=arc9_L14_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc10_L14 = ShapeStim(
+        win=win,
+        vertices=arc10_L14_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc11_L14 = ShapeStim(
+        win=win,
+        vertices=arc11_L14_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    def create_wiggle_arc(center, radius, thickness, color='green', opacity=0.5):
+        """Generate a thick wiggle room arc for a given arc."""
+        outer_arc_vertices = []
+        inner_arc_vertices = []
+    
+        for i in range(51):  # 50 segments for smoothness
+            angle = math.radians(i * (180 / 50))  # Same angles as original arc
+    
+            # Outer arc (slightly larger)
+            outer_x = center[0] + (radius + thickness) * math.cos(angle)
+            outer_y = center[1] + (radius + thickness) * math.sin(angle)
+            outer_arc_vertices.append((outer_x, outer_y))
+    
+            # Inner arc (slightly smaller)
+            inner_x = center[0] + (radius - thickness) * math.cos(angle)
+            inner_y = center[1] + (radius - thickness) * math.sin(angle)
+            inner_arc_vertices.append((inner_x, inner_y))
+    
+        # Reverse inner arc vertices to create a closed shape
+        inner_arc_vertices.reverse()
+        thick_wiggle_arc_vertices = outer_arc_vertices + inner_arc_vertices
+    
+        # Create and return the wiggle room arc
+        return ShapeStim(
+            win=win,
+            vertices=thick_wiggle_arc_vertices,
+            closeShape=True,  # Fill between outer and inner arcs
+            lineWidth=0,  # No outline needed
+            lineColor=None,
+            fillColor=color,
+            opacity=opacity
+        )
+    
+    
+    # Generate wiggle arcs for all arcs
+    wiggle_arc1_L14 = create_wiggle_arc(arc1_L14_center, arc1_L14_radius, wiggle_thickness)
+    wiggle_arc2_L14 = create_wiggle_arc(arc2_L14_center, arc2_L14_radius, wiggle_thickness)
+    wiggle_arc3_L14 = create_wiggle_arc(arc3_L14_center, arc3_L14_radius, wiggle_thickness)
+    wiggle_arc4_L14 = create_wiggle_arc(arc4_L14_center, arc4_L14_radius, wiggle_thickness)
+    wiggle_arc5_L14 = create_wiggle_arc(arc5_L14_center, arc5_L14_radius, wiggle_thickness)
+    wiggle_arc6_L14 = create_wiggle_arc(arc6_L14_center, arc6_L14_radius, wiggle_thickness)
+    wiggle_arc7_L14 = create_wiggle_arc(arc7_L14_center, arc7_L14_radius, wiggle_thickness)
+    wiggle_arc8_L14 = create_wiggle_arc(arc8_L14_center, arc8_L14_radius, wiggle_thickness)
+    wiggle_arc9_L14 = create_wiggle_arc(arc9_L14_center, arc9_L14_radius, wiggle_thickness)
+    wiggle_arc10_L14 = create_wiggle_arc(arc10_L14_center, arc10_L14_radius, wiggle_thickness)
+    wiggle_arc11_L14 = create_wiggle_arc(arc11_L14_center, arc11_L14_radius, wiggle_thickness)
+    
+    
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from GoalController_L14
+    
+    meatbone_collided = False  # Track whether the meatbone has been stomped
+    arc1_touched_vertices_L14 = []
+    arc2_touched_vertices_L14 = []
+    arc3_touched_vertices_L14 = []
+    arc4_touched_vertices_L14 = []
+    arc5_touched_vertices_L14 = []
+    arc6_touched_vertices_L14 = []
+    arc7_touched_vertices_L14 = []
+    arc8_touched_vertices_L14 = []
+    arc9_touched_vertices_L14 = []
+    arc10_touched_vertices_L14 = []
+    arc11_touched_vertices_L14 = []
+    
+    touch_threshold_L14 = 0.04 # touch threshold for the arcs
+    
+    meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
+    
+    
+    # Track if Dino is in the wiggle room defualt is not touching so false
+    wiggle_room = False  
+    
+    
+    # Run 'Begin Experiment' code from Timer_L14
+    level_timer = core.Clock()  # Initialize the timer
+    time_limit = 125  # Set the time limit in seconds (2 minutes)
+    
+    lose_sound_L14 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='lose_sound_L14',    name='lose_sound_L14'
+    )
+    lose_sound_L14.setVolume(1.0)
+    eat_sound_L14 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='eat_sound_L14',    name='eat_sound_L14'
+    )
+    eat_sound_L14.setVolume(1.0)
+    
+    # --- Initialize components for Routine "Level_14_checker" ---
+    end_score_text_L14 = visual.TextStim(win=win, name='end_score_text_L14',
+        text='Score: ',
+        font='Arial',
+        pos=(0, .2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    win_sound_L14 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='win_sound_L14',    name='win_sound_L14'
+    )
+    win_sound_L14.setVolume(1.0)
+    fail_sound_L14 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='fail_sound_L14',    name='fail_sound_L14'
+    )
+    fail_sound_L14.setVolume(0.6)
+    
+    # --- Initialize components for Routine "Level_15" ---
+    dino_image_L15 = visual.ImageStim(
+        win=win,
+        name='dino_image_L15', 
+        image='Assets/dino.png', mask=None, anchor='center',
+        ori=0.0, pos=(0,0), draggable=False, size=(0.2, 0.2),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=0.0)
+    floor1_L15 = visual.Rect(
+        win=win, name='floor1_L15',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(-.5,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-1.0, interpolate=True)
+    floor2_L15 = visual.Rect(
+        win=win, name='floor2_L15',
+        width=(.5,0.3)[0], height=(.5,0.3)[1],
+        ori=0.0, pos=(0,-.5), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor=[-1.0000, -1.0000, -1.0000], fillColor=[-1.0000, -1.0000, -1.0000],
+        opacity=None, depth=-2.0, interpolate=True)
+    meatbone_image_L15 = visual.ImageStim(
+        win=win,
+        name='meatbone_image_L15', 
+        image='Assets/meat_bone.png', mask=None, anchor='center',
+        ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-3.0)
+    score_text_L15 = visual.TextStim(win=win, name='score_text_L15',
+        text='Score: 0',
+        font='Arial',
+        pos=(0.55, 0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-4.0);
+    timer_text_L15 = visual.TextStim(win=win, name='timer_text_L15',
+        text='00 : 00',
+        font='Arial',
+        pos=(-0.55,0.45), draggable=False, height=0.08, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
+    # Run 'Begin Experiment' code from DinoMovement_L15
+    from psychopy.hardware import keyboard
+    from psychopy.visual import Rect
+    import time
+    
+    import serial
+    from psychopy.visual import Circle
+    
+    # Initialize the Keyboard
+    kb = keyboard.Keyboard()
+    
+    #PSURP Inits
+    """
+    # Initialize the serial connection for PSURP
+    ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
+    ser.flush()
+    ser.write("X".encode())  # Initialize PSURP
+    ser.write("RUNE\n".encode())  # Enter streaming mode
+    """
+    
+    # Trail settings
+    trail_positions = []  # Stores Dino's previous positions
+    trail_length = 35  # Maximum number of trail dots
+    trail_dot_size = 0.005  # Size of each dot for trail 
+    trail_dots = []  # List of Circle stimuli for the trail
+    trail_color = 'yellow'  # Color of the trail dots
+    trail_frame_counter = 0  # Counter to control trail dot spawning
+    trail_interval = 5  # Spawn a dot every 5 frames
+    
+    
+    #Button 0 and button 2 force properties
+    B0ForceInNewtons = 0
+    B2ForceInNewtons = 0
+    MIN_FORCE = 0.4  # Minimum force to start movement
+    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
+    
+    
+    # Dino movement variables
+    dino_pos = [0, -0.3]  # Starting position [x, y]
+    dino_speed = 0  # Initial vertical speed
+    gravity = -0.0003  # Downward acceleration 0.00006
+    jump_speed = 0.005  # Jumping speed
+    move_speed = 0.01  # Horizontal movement speed
+    ground_offset = 0.03  # Offset to avoid sinking into the ground visually
+    #min_x = -0.6  # Left boundary
+    #max_x = 19 # right boundary
+    respawn_position = [0, -0.3]  # Starting position for Dino
+    
+    
+    
+    # Floor properties
+    
+    floor1_vertices = floor1_L15.vertices  # Get floor1_L15 vertices
+    floor_top = max(v[1] for v in floor1_vertices)  # Highest point of floor1_L15
+    fall_threshold = min(v[1] for v in floor1_vertices) - 0.2  # Slightly below the lowest floor point
+    
+    
+    # Function to check if Dino is on the floor
+    def is_on_floor(dino_pos):
+        """Check if Dino's bottom is within the bounds of floor1_L15 or floor2_L15."""
+        dino_bottom = dino_pos[1] - (dino_image_L15.size[1] / 2)  # Dino's bottom Y-position
+    
+        # floor1_L15 bounds
+        x_min1 = min(v[0] for v in floor1_vertices)
+        x_max1 = max(v[0] for v in floor1_vertices)
+        
+        # floor2_L15 bounds
+        x_min2 = min(v[0] for v in floor2_vertices)
+        x_max2 = max(v[0] for v in floor2_vertices)
+    
+        # Check floor1_L15 or floor2_L15
+        on_floor1 = x_min1 <= dino_pos[0] <= x_max1 and dino_bottom <= floor1_top
+        on_floor2 = x_min2 <= dino_pos[0] <= x_max2 and dino_bottom <= floor2_top
+    
+        return on_floor1 or on_floor2
+        
+    #calculates the psurp forces
+    def calculate_psurp_forces(serial_data):
+        """Extract and calculate forces from PSURP serial data."""
+        if len(serial_data.decode()) == 12:
+            output = serial_data.decode()
+            
+            # Calculate forces
+            B0HighByte = Base71Lookup.index(output[0])
+            B0LowByte = Base71Lookup.index(output[1])
+            B2HighByte = Base71Lookup.index(output[4])
+            B2LowByte = Base71Lookup.index(output[5])
+            
+            # Forces in Newtons
+            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            
+            return B0ForceInNewtons, B2ForceInNewtons
+        
+        return 0, 0  # Default forces if data is invalid
+    
+    
+    
+    # image path for dino animation
+    frame_paths = [
+        "Assets/dino_frames/f1.png", "Assets/dino_frames/f2.png", 
+        "Assets/dino_frames/f3.png", "Assets/dino_frames/f4.png", 
+        "Assets/dino_frames/f5.png", "Assets/dino_frames/f6.png", 
+        "Assets/dino_frames/f7.png", "Assets/dino_frames/f8.png", 
+        "Assets/dino_frames/f9.png", "Assets/dino_frames/f10.png", 
+        "Assets/dino_frames/f11.png", "Assets/dino_frames/f12.png"
+    ]
+    
+    
+    
+    frame_index = 0  # Start with the first frame
+    frame_index_update_counter = 0  # Counter to manage animation speed
+    total_frames = len(frame_paths)  # Total number of frames in the animation
+    
+    # Initialize the Dino's first frame
+    dino_image_L15.image = frame_paths[frame_index]
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from worldController_L15
+    from psychopy.visual import Rect, ImageStim, ShapeStim
+    import math
+    
+    dirt_texture_L15 = 'Assets/grounds/ground15.png'
+    
+    #height factors for arcs (Y position)
+    low_arc = -0.2  
+    reg_arc = 0
+    high_arc = 0.04
+    
+    small_arc_size = 0.2  # Smallest arc radius
+    med_arc_size = 0.27  # Medium arc radius
+    large_arc_size = 0.35  # Largest arc radius
+    
+    wiggle_thickness = 0.05  # Adjust thickness for all wiggle arcs
+    
+    meatbone_size = [0.15, 0.09]  # Example size (width, height)
+    
+    
+    # Function to calculate vertices of a Rect stimulus
+    def calculate_rect_vertices(rect):
+        """Calculate the vertices of a Rect stimulus."""
+        half_width = rect.width / 2
+        half_height = rect.height / 2
+        center_x, center_y = rect.pos
+        vertices = [
+            [center_x - half_width, center_y - half_height],  # Bottom-left
+            [center_x + half_width, center_y - half_height],  # Bottom-right
+            [center_x + half_width, center_y + half_height],  # Top-right
+            [center_x - half_width, center_y + half_height],  # Top-left
+        ]
+        return vertices
+    
+    # Camera variables
+    camera_offset_x = 0  # Tracks the camera offset to follow Dino
+    #camera_speed = 0.003  # Adjust this speed as needed 0.003
+    # Background properties
+    background_width = 2.0  # Width of a single background image
+    background_height = 1.0
+    
+    background_image_L15 = 'Assets/bgs/L15.png'  # Path to your custom background image
+    
+    # Create two background images for seamless scrolling
+    background1_L15 = ImageStim(win, image=background_image_L15, size=[background_width, background_height], pos=[0, 0])
+    background2_L15 = ImageStim(win, image=background_image_L15, size=[background_width, background_height], pos=[background_width, 0])
+    
+    # floor1_L15 properties
+    floor1_height = 0.3
+    floor1_width = 0.5
+    floor1_pos = [0, -0.5]
+    
+    floor1_L15 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L15,
+        size=(floor1_width, floor1_height),  # Set the size to match the floor dimensions
+        pos=floor1_pos,
+        interpolate=True
+    )
+    floor1_vertices = calculate_rect_vertices(floor1_L15)
+    
+    # floor2_L15 properties - Place it further into the map
+    #floor2_x_static = 15.5  # Fixed X position where floor2_L15 appears18.5
+    floor2_height = 0.3
+    floor2_width = 0.5
+    
+    floor2_L15 = visual.ImageStim(
+        win=win,
+        image=dirt_texture_L15,
+        size=(floor2_width, floor2_height),  # Set the size to match the floor dimensions
+        pos=[floor2_x_static, -0.5],  # Position of floor2_L15
+        interpolate=True
+    )
+    floor2_vertices = calculate_rect_vertices(floor2_L15)
+    
+    
+    # Floor thresholds
+    floor1_top = max(v[1] for v in floor1_vertices)
+    floor2_top = max(v[1] for v in floor2_vertices)
+    
+    
+    
+    #meat bone
+    
+    meatbone_size = [0.12, 0.06]  # Example size (width, height)
+    meatbone_image_L15.size = meatbone_size
+    offset = 0.01  # Adjust to align the meatbone properly with floor2_L15
+    
+    
+    #arc stuff
+    
+    # Arc 1 Properties
+    arc1_L15_x = 0.3
+    arc1_L15_center = [arc1_L15_x, reg_arc]
+    arc1_L15_radius = small_arc_size
+    arc1_L15_start_angle = 0
+    arc1_L15_end_angle = 180
+    
+    # Arc 2 Properties
+    arc2_L15_x = 1.1
+    arc2_L15_center = [arc2_L15_x, reg_arc]
+    arc2_L15_radius = large_arc_size
+    arc2_L15_start_angle = 0
+    arc2_L15_end_angle = 180
+    
+    # Arc 3 Properties
+    arc3_L15_x = 1.9
+    arc3_L15_center = [arc3_L15_x, reg_arc]
+    arc3_L15_radius = med_arc_size
+    arc3_L15_start_angle = 0
+    arc3_L15_end_angle = 180
+    
+    # Arc 4 Properties
+    arc4_L15_x = 2.7
+    arc4_L15_center = [arc4_L15_x, reg_arc]
+    arc4_L15_radius = small_arc_size
+    arc4_L15_start_angle = 0
+    arc4_L15_end_angle = 180
+    
+    # Arc 5 Properties
+    arc5_L15_x = 3.5
+    arc5_L15_center = [arc5_L15_x, reg_arc]
+    arc5_L15_radius = large_arc_size
+    arc5_L15_start_angle = 0
+    arc5_L15_end_angle = 180
+    
+    # Arc 6 Properties
+    arc6_L15_x = 4.3
+    arc6_L15_center = [arc6_L15_x, reg_arc]
+    arc6_L15_radius = med_arc_size
+    arc6_L15_start_angle = 0
+    arc6_L15_end_angle = 180
+    
+    # Arc 7 Properties
+    arc7_L15_x = 5.1
+    arc7_L15_center = [arc7_L15_x, reg_arc]
+    arc7_L15_radius = large_arc_size
+    arc7_L15_start_angle = 0
+    arc7_L15_end_angle = 180
+    
+    # Arc 8 Properties
+    arc8_L15_x = 5.9
+    arc8_L15_center = [arc8_L15_x, reg_arc]
+    arc8_L15_radius = med_arc_size
+    arc8_L15_start_angle = 0
+    arc8_L15_end_angle = 180
+    
+    # Arc 9 Properties
+    arc9_L15_x = 6.7
+    arc9_L15_center = [arc9_L15_x, reg_arc]
+    arc9_L15_radius = med_arc_size
+    arc9_L15_start_angle = 0
+    arc9_L15_end_angle = 180
+    
+    # Arc 10 Properties
+    arc10_L15_x = 7.5
+    arc10_L15_center = [arc10_L15_x, reg_arc]
+    arc10_L15_radius = med_arc_size
+    arc10_L15_start_angle = 0
+    arc10_L15_end_angle = 180
+    
+    # Arc 11 Properties
+    arc11_L15_x = 8.3
+    arc11_L15_center = [arc11_L15_x, reg_arc]
+    arc11_L15_radius = med_arc_size
+    arc11_L15_start_angle = 0
+    arc11_L15_end_angle = 180
+    
+    
+    # Generate vertices for Arc 1
+    arc1_L15_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc1_L15_start_angle + i * (arc1_L15_end_angle - arc1_L15_start_angle) / 50)
+        x = arc1_L15_center[0] + arc1_L15_radius * math.cos(angle)
+        y = arc1_L15_center[1] + arc1_L15_radius * math.sin(angle)
+        arc1_L15_vertices.append((x, y))
+    
+    # Generate vertices for Arc 2
+    arc2_L15_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc2_L15_start_angle + i * (arc2_L15_end_angle - arc2_L15_start_angle) / 50)
+        x = arc2_L15_center[0] + arc2_L15_radius * math.cos(angle)
+        y = arc2_L15_center[1] + arc2_L15_radius * math.sin(angle)
+        arc2_L15_vertices.append((x, y))
+        
+        
+    
+    # Generate vertices for Arc 3
+    arc3_L15_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc3_L15_start_angle + i * (arc3_L15_end_angle - arc3_L15_start_angle) / 50)
+        x = arc3_L15_center[0] + arc3_L15_radius * math.cos(angle)
+        y = arc3_L15_center[1] + arc3_L15_radius * math.sin(angle)
+        arc3_L15_vertices.append((x, y))
+    
+    # Generate vertices for Arc 4
+    arc4_L15_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc4_L15_start_angle + i * (arc4_L15_end_angle - arc4_L15_start_angle) / 50)
+        x = arc4_L15_center[0] + arc4_L15_radius * math.cos(angle)
+        y = arc4_L15_center[1] + arc4_L15_radius * math.sin(angle)
+        arc4_L15_vertices.append((x, y))
+    
+    
+    # Generate vertices for Arc 5
+    arc5_L15_vertices = []
+    for i in range(51):  # 50 segments for smoothness
+        angle = math.radians(arc5_L15_start_angle + i * (arc5_L15_end_angle - arc5_L15_start_angle) / 50)
+        x = arc5_L15_center[0] + arc5_L15_radius * math.cos(angle)
+        y = arc5_L15_center[1] + arc5_L15_radius * math.sin(angle)
+        arc5_L15_vertices.append((x, y))
+        
+    
+    arc6_L15_vertices = []
+    for i in range(51):
+        angle = math.radians(arc6_L15_start_angle + i * (arc6_L15_end_angle - arc6_L15_start_angle) / 50)
+        x = arc6_L15_center[0] + arc6_L15_radius * math.cos(angle)
+        y = arc6_L15_center[1] + arc6_L15_radius * math.sin(angle)
+        arc6_L15_vertices.append((x, y))
+    
+    # Arc 7 vertices
+    arc7_L15_vertices = []
+    for i in range(51):
+        angle = math.radians(arc7_L15_start_angle + i * (arc7_L15_end_angle - arc7_L15_start_angle) / 50)
+        x = arc7_L15_center[0] + arc7_L15_radius * math.cos(angle)
+        y = arc7_L15_center[1] + arc7_L15_radius * math.sin(angle)
+        arc7_L15_vertices.append((x, y))
+    
+    # Arc 8 vertices
+    arc8_L15_vertices = []
+    for i in range(51):
+        angle = math.radians(arc8_L15_start_angle + i * (arc8_L15_end_angle - arc8_L15_start_angle) / 50)
+        x = arc8_L15_center[0] + arc8_L15_radius * math.cos(angle)
+        y = arc8_L15_center[1] + arc8_L15_radius * math.sin(angle)
+        arc8_L15_vertices.append((x, y))
+        
+    # Arc 9 vertices
+    arc9_L15_vertices = []
+    for i in range(51):
+        angle = math.radians(arc9_L15_start_angle + i * (arc9_L15_end_angle - arc9_L15_start_angle) / 50)
+        x = arc9_L15_center[0] + arc9_L15_radius * math.cos(angle)
+        y = arc9_L15_center[1] + arc9_L15_radius * math.sin(angle)
+        arc9_L15_vertices.append((x, y))
+        
+    # Arc 10 vertices
+    arc10_L15_vertices = []
+    for i in range(51):
+        angle = math.radians(arc10_L15_start_angle + i * (arc10_L15_end_angle - arc10_L15_start_angle) / 50)
+        x = arc10_L15_center[0] + arc10_L15_radius * math.cos(angle)
+        y = arc10_L15_center[1] + arc10_L15_radius * math.sin(angle)
+        arc10_L15_vertices.append((x, y))
+        
+    # Arc 11 vertices
+    arc11_L15_vertices = []
+    for i in range(51):
+        angle = math.radians(arc11_L15_start_angle + i * (arc11_L15_end_angle - arc11_L15_start_angle) / 50)
+        x = arc11_L15_center[0] + arc11_L15_radius * math.cos(angle)
+        y = arc11_L15_center[1] + arc11_L15_radius * math.sin(angle)
+        arc11_L15_vertices.append((x, y))
+        
+    # Create the arc ShapeStim
+    arc1_L15 = ShapeStim(
+        win=win,
+        vertices=arc1_L15_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    # Create Arc 2 ShapeStim
+    arc2_L15 = ShapeStim(
+        win=win,
+        vertices=arc2_L15_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Different color for clarity
+        fillColor=None
+    )
+    
+    
+    # Create Arc 3 ShapeStim
+    arc3_L15 = ShapeStim(
+        win=win,
+        vertices=arc3_L15_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 4 ShapeStim
+    arc4_L15 = ShapeStim(
+        win=win,
+        vertices=arc4_L15_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    # Create Arc 5 ShapeStim
+    arc5_L15 = ShapeStim(
+        win=win,
+        vertices=arc5_L15_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',  # Set color as desired
+        fillColor=None
+    )
+    
+    
+    arc6_L15 = ShapeStim(
+        win=win,
+        vertices=arc6_L15_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc7_L15 = ShapeStim(
+        win=win,
+        vertices=arc7_L15_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc8_L15 = ShapeStim(
+        win=win,
+        vertices=arc8_L15_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    
+    arc9_L15 = ShapeStim(
+        win=win,
+        vertices=arc9_L15_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc10_L15 = ShapeStim(
+        win=win,
+        vertices=arc10_L15_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    arc11_L15 = ShapeStim(
+        win=win,
+        vertices=arc11_L15_vertices,
+        closeShape=False,
+        lineWidth=4,
+        lineColor='white',
+        fillColor=None
+    )
+    
+    def create_wiggle_arc(center, radius, thickness, color='grey', opacity=0.5):
+        """Generate a thick wiggle room arc for a given arc."""
+        outer_arc_vertices = []
+        inner_arc_vertices = []
+    
+        for i in range(51):  # 50 segments for smoothness
+            angle = math.radians(i * (180 / 50))  # Same angles as original arc
+    
+            # Outer arc (slightly larger)
+            outer_x = center[0] + (radius + thickness) * math.cos(angle)
+            outer_y = center[1] + (radius + thickness) * math.sin(angle)
+            outer_arc_vertices.append((outer_x, outer_y))
+    
+            # Inner arc (slightly smaller)
+            inner_x = center[0] + (radius - thickness) * math.cos(angle)
+            inner_y = center[1] + (radius - thickness) * math.sin(angle)
+            inner_arc_vertices.append((inner_x, inner_y))
+    
+        # Reverse inner arc vertices to create a closed shape
+        inner_arc_vertices.reverse()
+        thick_wiggle_arc_vertices = outer_arc_vertices + inner_arc_vertices
+    
+        # Create and return the wiggle room arc
+        return ShapeStim(
+            win=win,
+            vertices=thick_wiggle_arc_vertices,
+            closeShape=True,  # Fill between outer and inner arcs
+            lineWidth=0,  # No outline needed
+            lineColor=None,
+            fillColor=color,
+            opacity=opacity
+        )
+    
+    
+    # Generate wiggle arcs for all arcs
+    wiggle_arc1_L15 = create_wiggle_arc(arc1_L15_center, arc1_L15_radius, wiggle_thickness)
+    wiggle_arc2_L15 = create_wiggle_arc(arc2_L15_center, arc2_L15_radius, wiggle_thickness)
+    wiggle_arc3_L15 = create_wiggle_arc(arc3_L15_center, arc3_L15_radius, wiggle_thickness)
+    wiggle_arc4_L15 = create_wiggle_arc(arc4_L15_center, arc4_L15_radius, wiggle_thickness)
+    wiggle_arc5_L15 = create_wiggle_arc(arc5_L15_center, arc5_L15_radius, wiggle_thickness)
+    wiggle_arc6_L15 = create_wiggle_arc(arc6_L15_center, arc6_L15_radius, wiggle_thickness)
+    wiggle_arc7_L15 = create_wiggle_arc(arc7_L15_center, arc7_L15_radius, wiggle_thickness)
+    wiggle_arc8_L15 = create_wiggle_arc(arc8_L15_center, arc8_L15_radius, wiggle_thickness)
+    wiggle_arc9_L15 = create_wiggle_arc(arc9_L15_center, arc9_L15_radius, wiggle_thickness)
+    wiggle_arc10_L15 = create_wiggle_arc(arc10_L15_center, arc10_L15_radius, wiggle_thickness)
+    wiggle_arc11_L15 = create_wiggle_arc(arc11_L15_center, arc11_L15_radius, wiggle_thickness)
+    
+    
+    
+    
+    
+    
+    # Run 'Begin Experiment' code from GoalController_L15
+    
+    meatbone_collided = False  # Track whether the meatbone has been stomped
+    arc1_touched_vertices_L15 = []
+    arc2_touched_vertices_L15 = []
+    arc3_touched_vertices_L15 = []
+    arc4_touched_vertices_L15 = []
+    arc5_touched_vertices_L15 = []
+    arc6_touched_vertices_L15 = []
+    arc7_touched_vertices_L15 = []
+    arc8_touched_vertices_L15 = []
+    arc9_touched_vertices_L15 = []
+    arc10_touched_vertices_L15 = []
+    arc11_touched_vertices_L15 = []
+    
+    touch_threshold_L15 = 0.04 # touch threshold for the arcs
+    
+    meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
+    
+    
+    # Track if Dino is in the wiggle room defualt is not touching so false
+    wiggle_room = False  
+    
+    
+    # Run 'Begin Experiment' code from Timer_L15
+    level_timer = core.Clock()  # Initialize the timer
+    time_limit = 125  # Set the time limit in seconds (2 minutes)
+    
+    lose_sound_L15 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='lose_sound_L15',    name='lose_sound_L15'
+    )
+    lose_sound_L15.setVolume(1.0)
+    eat_sound_L15 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='eat_sound_L15',    name='eat_sound_L15'
+    )
+    eat_sound_L15.setVolume(1.0)
+    
+    # --- Initialize components for Routine "Level_15_checker" ---
+    end_score_text_L15 = visual.TextStim(win=win, name='end_score_text_L15',
+        text='Score: ',
+        font='Arial',
+        pos=(0, .2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    win_sound_L15 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='win_sound_L15',    name='win_sound_L15'
+    )
+    win_sound_L15.setVolume(1.0)
+    fail_sound_L15 = sound.Sound(
+        'A', 
+        secs=-1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='fail_sound_L15',    name='fail_sound_L15'
+    )
+    fail_sound_L15.setVolume(0.6)
+    
     # create some handy timers
     
     # global clock to track the time since experiment started
@@ -4721,7 +12223,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Check for collision for meatbone
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
-                    print("Dino ate the meatbone!")
                     meatbone_image_L1.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
                     eat_sound_L1.play()
@@ -5099,10 +12600,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             
             # Update the text for the end screen
-            end_score_text_L1.text = (
-                f"You hit {total_touched_vertices_L1} out of {total_possible_vertices_L1} vertices\n"
-                f"{percentage:.2f}%"
-            )
+            end_score_text_L1.text = f"Your score: {percentage:.2f}%"
             
             # Start 3 second timer
             end_screen_timer = core.CountdownTimer(3)
@@ -5713,7 +13211,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Check for collision for meatbone
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
-                    print("Dino ate the meatbone!")
                     meatbone_image_L2.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
                     eat_sound_L2.play()
@@ -6096,10 +13593,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             
             # Update the text for the end screen
-            end_score_text_L2.text = (
-                f"You hit {total_touched_vertices_L2} out of {total_possible_vertices_L2} vertices\n"
-                f"{percentage:.2f}%"
-            )
+            end_score_text_L2.text = f"Your score: {percentage:.2f}%"
             
             # Start 3 second timer
             end_screen_timer = core.CountdownTimer(3)
@@ -6710,7 +14204,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Check for collision for meatbone
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
-                    print("Dino ate the meatbone!")
                     meatbone_image_L3.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
                     eat_sound_L3.play()
@@ -7093,10 +14586,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             
             # Update the text for the end screen
-            end_score_text_L3.text = (
-                f"You hit {total_touched_vertices_L3} out of {total_possible_vertices_L3} vertices\n"
-                f"{percentage:.2f}%"
-            )
+            end_score_text_L3.text = f"Your score: {percentage:.2f}%"
             
             # Start 3 second timer
             end_screen_timer = core.CountdownTimer(3)
@@ -7707,7 +15197,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Check for collision for meatbone
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
-                    print("Dino ate the meatbone!")
                     meatbone_image_L4.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
                     eat_sound_L4.play()
@@ -8090,10 +15579,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             
             # Update the text for the end screen
-            end_score_text_L4.text = (
-                f"You hit {total_touched_vertices_L4} out of {total_possible_vertices_L4} vertices\n"
-                f"{percentage:.2f}%"
-            )
+            end_score_text_L4.text = f"Your score: {percentage:.2f}%"
             
             # Start 3 second timer
             end_screen_timer = core.CountdownTimer(3)
@@ -8256,6 +15742,12585 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_4_Loop'
         
+        
+        # set up handler to look after randomisation of conditions etc
+        Level_5_Loop = data.TrialHandler2(
+            name='Level_5_Loop',
+            nReps=1000.0, 
+            method='sequential', 
+            extraInfo=expInfo, 
+            originPath=-1, 
+            trialList=[None], 
+            seed=None, 
+        )
+        thisExp.addLoop(Level_5_Loop)  # add the loop to the experiment
+        thisLevel_5_Loop = Level_5_Loop.trialList[0]  # so we can initialise stimuli with some values
+        # abbreviate parameter names if possible (e.g. rgb = thisLevel_5_Loop.rgb)
+        if thisLevel_5_Loop != None:
+            for paramName in thisLevel_5_Loop:
+                globals()[paramName] = thisLevel_5_Loop[paramName]
+        
+        for thisLevel_5_Loop in Level_5_Loop:
+            currentLoop = Level_5_Loop
+            thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+            # abbreviate parameter names if possible (e.g. rgb = thisLevel_5_Loop.rgb)
+            if thisLevel_5_Loop != None:
+                for paramName in thisLevel_5_Loop:
+                    globals()[paramName] = thisLevel_5_Loop[paramName]
+            
+            # --- Prepare to start Routine "Level_5" ---
+            # create an object to store info about Routine Level_5
+            Level_5 = data.Routine(
+                name='Level_5',
+                components=[dino_image_L5, floor1_L5, floor2_L5, meatbone_image_L5, score_text_L5, timer_text_L5, lose_sound_L5, eat_sound_L5],
+            )
+            Level_5.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from DinoMovement_L5
+            dino_pos = [0, -0.3]  # Reset Dino's position
+            dino_speed = 0  # Reset vertical speed
+            # Initialize the trail dots
+            trail_dots = [
+                Circle(win, radius=trail_dot_size, fillColor=trail_color, lineColor=None, pos=[-1, -1])
+                for _ in range(trail_length)
+            ]
+            
+            # Run 'Begin Routine' code from worldController_L5
+            camera_offset_x = 0
+            # Run 'Begin Routine' code from GoalController_L5
+            score = 0  # Reset the score
+            
+            meatbone_collided = False
+            meatbone_image_L5.opacity = 1
+            
+            
+            wiggle_room = False  
+            
+            arc1_touched_vertices_L5 = []
+            arc2_touched_vertices_L5 = []
+            arc3_touched_vertices_L5 = []
+            arc4_touched_vertices_L5 = []
+            arc5_touched_vertices_L5 = []
+            arc6_touched_vertices_L5 = []
+            arc7_touched_vertices_L5 = []
+            arc8_touched_vertices_L5 = []
+            arc9_touched_vertices_L5 = []
+            arc10_touched_vertices_L5 = []
+            arc11_touched_vertices_L5 = []
+            # Run 'Begin Routine' code from Timer_L5
+            
+            level_timer.reset()  # Reset the timer at the start of the MainGame routine
+            
+            
+            lose_sound_L5.setSound('Assets/sounds/lose.mp3', hamming=True)
+            lose_sound_L5.setVolume(1.0, log=False)
+            lose_sound_L5.seek(0)
+            eat_sound_L5.setSound('Assets/sounds/eat.mp3', hamming=True)
+            eat_sound_L5.setVolume(1.0, log=False)
+            eat_sound_L5.seek(0)
+            # store start times for Level_5
+            Level_5.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_5.tStart = globalClock.getTime(format='float')
+            Level_5.status = STARTED
+            thisExp.addData('Level_5.started', Level_5.tStart)
+            Level_5.maxDuration = None
+            # keep track of which components have finished
+            Level_5Components = Level_5.components
+            for thisComponent in Level_5.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_5" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_5_Loop, data.TrialHandler2) and thisLevel_5_Loop.thisN != Level_5_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_5.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *dino_image_L5* updates
+                
+                # if dino_image_L5 is starting this frame...
+                if dino_image_L5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    dino_image_L5.frameNStart = frameN  # exact frame index
+                    dino_image_L5.tStart = t  # local t and not account for scr refresh
+                    dino_image_L5.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(dino_image_L5, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    dino_image_L5.status = STARTED
+                    dino_image_L5.setAutoDraw(True)
+                
+                # if dino_image_L5 is active this frame...
+                if dino_image_L5.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor1_L5* updates
+                
+                # if floor1_L5 is starting this frame...
+                if floor1_L5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor1_L5.frameNStart = frameN  # exact frame index
+                    floor1_L5.tStart = t  # local t and not account for scr refresh
+                    floor1_L5.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor1_L5, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor1_L5.status = STARTED
+                    floor1_L5.setAutoDraw(True)
+                
+                # if floor1_L5 is active this frame...
+                if floor1_L5.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor2_L5* updates
+                
+                # if floor2_L5 is starting this frame...
+                if floor2_L5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor2_L5.frameNStart = frameN  # exact frame index
+                    floor2_L5.tStart = t  # local t and not account for scr refresh
+                    floor2_L5.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor2_L5, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor2_L5.status = STARTED
+                    floor2_L5.setAutoDraw(True)
+                
+                # if floor2_L5 is active this frame...
+                if floor2_L5.status == STARTED:
+                    # update params
+                    pass
+                
+                # *meatbone_image_L5* updates
+                
+                # if meatbone_image_L5 is starting this frame...
+                if meatbone_image_L5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    meatbone_image_L5.frameNStart = frameN  # exact frame index
+                    meatbone_image_L5.tStart = t  # local t and not account for scr refresh
+                    meatbone_image_L5.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(meatbone_image_L5, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    meatbone_image_L5.status = STARTED
+                    meatbone_image_L5.setAutoDraw(True)
+                
+                # if meatbone_image_L5 is active this frame...
+                if meatbone_image_L5.status == STARTED:
+                    # update params
+                    pass
+                
+                # *score_text_L5* updates
+                
+                # if score_text_L5 is starting this frame...
+                if score_text_L5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    score_text_L5.frameNStart = frameN  # exact frame index
+                    score_text_L5.tStart = t  # local t and not account for scr refresh
+                    score_text_L5.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(score_text_L5, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    score_text_L5.status = STARTED
+                    score_text_L5.setAutoDraw(True)
+                
+                # if score_text_L5 is active this frame...
+                if score_text_L5.status == STARTED:
+                    # update params
+                    pass
+                
+                # *timer_text_L5* updates
+                
+                # if timer_text_L5 is starting this frame...
+                if timer_text_L5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    timer_text_L5.frameNStart = frameN  # exact frame index
+                    timer_text_L5.tStart = t  # local t and not account for scr refresh
+                    timer_text_L5.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(timer_text_L5, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    timer_text_L5.status = STARTED
+                    timer_text_L5.setAutoDraw(True)
+                
+                # if timer_text_L5 is active this frame...
+                if timer_text_L5.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from DinoMovement_L5
+                
+                # Initialize key state flags
+                left_pressed = False
+                right_pressed = False
+                up_pressed = False
+                
+                # Handle input based on the selected control method
+                
+                # Process keyboard input
+                if selected_control == "Keyboard":
+                    keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
+                    for key in keys_pressed:
+                        if key.name == 'left':
+                            left_pressed = True
+                        if key.name == 'right':
+                            right_pressed = True
+                        if key.name == 'up':
+                            up_pressed = True
+                            
+                # Process PSURP input            
+                if selected_control == "PSURP":
+                    # Read serial data
+                    ser.flushInput()
+                    strSerialData = ser.readline()
+                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                
+                    # Apply difficulty-specific movement
+                    if selected_diff == "1":
+                        # Constant movement for Easy mode
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
+                            dino_image_L5.size = [abs(dino_image_L5.size[0]), dino_image_L5.size[1]]  # Face right
+                
+                    elif selected_diff == "2":
+                        # Proportional movement for Hard mode (current implementation)
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
+                            dino_pos[0] += move_amount  # Movement based on force
+                            dino_image_L5.size = [abs(dino_image_L5.size[0]), dino_image_L5.size[1]]  # Face right
+                
+                    # Jump logic remains the same for both difficulties
+                    if B0ForceInNewtons > MIN_FORCE:
+                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                
+                
+                            
+                 
+                # Apply gravity to Dino's vertical speed
+                dino_speed += gravity
+                
+                # Check if Dino is on the floor (keeps dino on top of floor)
+                if is_on_floor(dino_pos) and dino_speed <= 0:  # Falling or stationary
+                    dino_pos[1] = floor1_top + (dino_image_L5.size[1] / 2) - ground_offset  # Align Dino with the floor
+                    dino_speed = 0  # Reset vertical speed
+                
+                # Respawn if Dino falls below the floor threshold
+                if dino_pos[1] < fall_threshold:
+                    lose_sound_L5.play()
+                    continueRoutine = False  # Stop the MainGame routine
+                    
+                # Jumping logic: Allow jump whenever the 'up' key is pressed
+                if up_pressed:  # Check if the up key is pressed
+                    dino_speed = jump_speed  # Apply upward movement
+                
+                # Update Dino's vertical position
+                dino_pos[1] += dino_speed
+                
+                # Continuous horizontal movement
+                if left_pressed and dino_pos[0] > min_x:
+                    dino_pos[0] -= move_speed  # Move Dino to the left
+                    dino_image_L5.size = [-1 * abs(dino_image_L5.size[0]), dino_image_L5.size[1]]
+                
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed  # Move Dino to the right
+                    dino_image_L5.size = [abs(dino_image_L5.size[0]), dino_image_L5.size[1]]  # Reset Dino to face right
+                
+                # Update Dino's position
+                # dino_image_L5.pos = dino_pos  # Use both X and Y values of dino_pos
+                dino_image_L5.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
+                
+                # Increment the frame counter for trail updates
+                trail_frame_counter += 1
+                
+                # Check if it's time to spawn a new dot
+                if trail_frame_counter >= trail_interval:
+                    if len(trail_positions) >= trail_length:
+                        trail_positions.pop(0)  # Remove the oldest position if trail is full
+                
+                    # Add Dino's current position to the trail
+                    trail_positions.append(dino_pos[:])  # Add a copy of Dino's current position
+                
+                    trail_frame_counter = 0  # Reset the counter
+                
+                # Update the trail dots' positions
+                for i, pos in enumerate(trail_positions):
+                    trail_dots[i].pos = [pos[0] - camera_offset_x, pos[1]]  # Adjust for camera offset
+                
+                
+                # Update the Dino's animation
+                if (frame_index_update_counter % 4) == 0:  # Adjust 4 to control animation speed
+                    dino_image_L5.image = frame_paths[frame_index]  # Update the current frame
+                
+                    # Advance to the next frame
+                    frame_index += 1
+                    if frame_index >= total_frames:
+                        frame_index = 0  # Loop back to the first frame
+                
+                
+                
+                # Increment the animation frame counter
+                frame_index_update_counter += 1
+                
+                
+                # Run 'Each Frame' code from worldController_L5
+                
+                # Update the camera offset based on Dino's X position
+                camera_offset_x += camera_speed  # The camera offset follows Dino's position
+                
+                # Move backgrounds relative to Dino's position (seamless wrap-around)
+                background1_L5.pos = [-(camera_offset_x % background_width), 0]
+                background2_L5.pos = [background1_L5.pos[0] + background_width, 0]
+                
+                # Update floor positions relative to Dino's position
+                floor1_L5.pos = [floor1_pos[0] - camera_offset_x, floor1_L5.pos[1]]
+                floor2_L5.pos = [floor2_x_static - camera_offset_x, floor2_L5.pos[1]]  # floor2_L5 moves with Dino
+                
+                
+                # Update meatbone position to match floor2_L5's top
+                meatbone_x = floor2_L5.pos[0]  # Update X position based on floor2_L5
+                meatbone_y = floor2_top + (meatbone_size[1] / 2) - offset  # Keep the meatbone on top of floor2_L5
+                meatbone_image_L5.pos = [meatbone_x, meatbone_y]
+                
+                
+                # Update the arc position relative to the camera offset
+                # Update Arc 1 Position
+                arc1_L5.pos = [arc1_L5_center[0] - camera_offset_x, arc1_L5_center[1]]
+                wiggle_arc1_L5.pos = arc1_L5.pos  # Keep wiggle room on top
+                
+                # Update Arc 2 Position
+                arc2_L5.pos = [arc2_L5_center[0] - camera_offset_x, arc2_L5_center[1]]
+                wiggle_arc2_L5.pos = arc2_L5.pos  # Keep wiggle room on top
+                arc3_L5.pos = [arc3_L5_center[0] - camera_offset_x, arc3_L5_center[1]]
+                wiggle_arc3_L5.pos = arc3_L5.pos  # Keep wiggle room on top
+                # Update Arc 4 Position
+                arc4_L5.pos = [arc4_L5_center[0] - camera_offset_x, arc4_L5_center[1]]
+                wiggle_arc4_L5.pos = arc4_L5.pos  # Keep wiggle room on top
+                # Update Arc 5 Position
+                arc5_L5.pos = [arc5_L5_center[0] - camera_offset_x, arc5_L5_center[1]]
+                wiggle_arc5_L5.pos = arc5_L5.pos  # Keep wiggle room on top
+                
+                arc6_L5.pos = [arc6_L5_center[0] - camera_offset_x, arc6_L5_center[1]]
+                wiggle_arc6_L5.pos = arc6_L5.pos
+                
+                # Update Arc 7 Position
+                arc7_L5.pos = [arc7_L5_center[0] - camera_offset_x, arc7_L5_center[1]]
+                wiggle_arc7_L5.pos = arc7_L5.pos
+                
+                # Update Arc 8 Position
+                arc8_L5.pos = [arc8_L5_center[0] - camera_offset_x, arc8_L5_center[1]]
+                wiggle_arc8_L5.pos = arc8_L5.pos
+                
+                # Update Arc 9 Position
+                arc9_L5.pos = [arc9_L5_center[0] - camera_offset_x, arc9_L5_center[1]]
+                wiggle_arc9_L5.pos = arc9_L5.pos
+                
+                # Update Arc 10 Position
+                arc10_L5.pos = [arc10_L5_center[0] - camera_offset_x, arc10_L5_center[1]]
+                wiggle_arc10_L5.pos = arc10_L5.pos
+                
+                # Update Arc 11 Position
+                arc11_L5.pos = [arc11_L5_center[0] - camera_offset_x, arc11_L5_center[1]]
+                wiggle_arc11_L5.pos = arc11_L5.pos
+                
+                
+                
+                
+                # Draw the backgrounds and floors
+                background1_L5.draw()
+                background2_L5.draw()
+                floor1_L5.draw()
+                floor2_L5.draw()
+                wiggle_arc1_L5.draw()
+                wiggle_arc2_L5.draw()
+                wiggle_arc3_L5.draw()
+                wiggle_arc4_L5.draw()
+                wiggle_arc5_L5.draw()
+                wiggle_arc6_L5.draw()
+                wiggle_arc7_L5.draw()
+                wiggle_arc8_L5.draw()
+                wiggle_arc9_L5.draw()
+                wiggle_arc10_L5.draw()
+                wiggle_arc11_L5.draw()
+                
+                arc1_L5.draw()
+                arc2_L5.draw()
+                arc3_L5.draw()
+                arc4_L5.draw()
+                arc5_L5.draw()
+                arc6_L5.draw()
+                arc7_L5.draw()
+                arc8_L5.draw()
+                arc9_L5.draw()
+                arc10_L5.draw()
+                arc11_L5.draw()
+                
+                # Draw the trail dots
+                for dot in trail_dots:
+                    dot.draw()
+                
+                # Run 'Each Frame' code from GoalController_L5
+                dino_relative_x = dino_pos[0] - camera_offset_x
+                dino_relative_y = dino_pos[1]
+                # Check for collision based on proximity to the updated position
+                dx = dino_relative_x - meatbone_x
+                dy = dino_relative_y - meatbone_y
+                
+                if camera_offset_x >= max_x:
+                    lose_sound_L5.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_x < -1 or dino_relative_x > 1:  # Adjust bounds based on screen width
+                    lose_sound_L5.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_y > 0.6:  # Adjust bounds based on screen width
+                    lose_sound_L5.play()
+                    continueRoutine = False  # Ends the current routine
+                
+                # Check for collision for meatbone
+                if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
+                    meatbone_image_L5.opacity = 0  # Make the meatbone disappear
+                    meatbone_collided = True  # Prevent further collision checks
+                    eat_sound_L5.play()
+                    continueRoutine = False
+                
+                # Check for collision for ARCS
+                for vertex in arc1_L5_vertices:
+                    # Adjust Arc 1 vertex for its X-offset (+1)
+                    adjusted_vertex_x = vertex[0] + arc1_L5_x   # Move Arc 1 vertices by 1 unit to the right
+                    adjusted_vertex_y = vertex[1] + arc1_L5_center[1] # Y remains unchanged, apply the same adjustment as Arc 2 if needed
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 1
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L5 and vertex not in arc1_touched_vertices_L5:
+                        arc1_touched_vertices_L5.append(vertex)
+                        score += 1  # Increment the score for Arc 1
+                
+                
+                for vertex in arc2_L5_vertices:
+                    # Adjust Arc 2 vertex for its X-offset (+2)
+                    adjusted_vertex_x = vertex[0] + arc2_L5_x   # Move Arc 2 vertices by 2 units to the right
+                    adjusted_vertex_y = vertex[1] + arc2_L5_center[1] # Y remains unchanged
+                    
+                    # Calculate distance between Dino and the adjusted vertex of Arc 2
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L5 and vertex not in arc2_touched_vertices_L5:
+                        arc2_touched_vertices_L5.append(vertex)
+                        score += 1  # Increment the score for Arc 2
+                        
+                        
+                for vertex in arc3_L5_vertices:
+                    # Adjust Arc 3 vertex for its static X-offset
+                    adjusted_vertex_x = vertex[0] + arc3_L5_x   # Offset Arc 3 vertices by 3.5 units to the right
+                    adjusted_vertex_y = vertex[1] + arc3_L5_center[1]  # Offset Arc 3 vertices by -0.2 units vertically
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 3
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L5 and vertex not in arc3_touched_vertices_L5:
+                        arc3_touched_vertices_L5.append(vertex)
+                        score += 1  # Increment the score for Arc 3
+                        
+                for vertex in arc4_L5_vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L5_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L5_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 4
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L5 and vertex not in arc4_touched_vertices_L5:
+                        arc4_touched_vertices_L5.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc5_L5_vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L5_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L5_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 5
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L5 and vertex not in arc5_touched_vertices_L5:
+                        arc5_touched_vertices_L5.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc6_L5_vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L5_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L5_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L5 and vertex not in arc6_touched_vertices_L5:
+                        arc6_touched_vertices_L5.append(vertex)
+                        score += 1
+                
+                # Arc 7 touch detection
+                for vertex in arc7_L5_vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L5_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L5_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L5 and vertex not in arc7_touched_vertices_L5:
+                        arc7_touched_vertices_L5.append(vertex)
+                        score += 1
+                
+                # Arc 8 touch detection
+                for vertex in arc8_L5_vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L5_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L5_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L5 and vertex not in arc8_touched_vertices_L5:
+                        arc8_touched_vertices_L5.append(vertex)
+                        score += 1
+                
+                
+                # Arc 9 touch detection
+                for vertex in arc9_L5_vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L5_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L5_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L5 and vertex not in arc9_touched_vertices_L5:
+                        arc9_touched_vertices_L5.append(vertex)
+                        score += 1       
+                
+                # Arc 10 touch detection
+                for vertex in arc10_L5_vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L5_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L5_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L5 and vertex not in arc10_touched_vertices_L5:
+                        arc10_touched_vertices_L5.append(vertex)
+                        score += 1    
+                
+                # Arc 11 touch detection
+                for vertex in arc11_L5_vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L5_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L5_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L5 and vertex not in arc11_touched_vertices_L5:
+                        arc11_touched_vertices_L5.append(vertex)
+                        score += 1    
+                  
+                # WIGGLE ROOM STUFF
+                
+                
+                # Reset to false at the start of each frame
+                wiggle_room = False  
+                for vertex in wiggle_arc1_L5.vertices:
+                    adjusted_vertex_x = vertex[0] + arc1_L5_x 
+                    adjusted_vertex_y = vertex[1] + arc1_L5_center[1] 
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L5:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                for vertex in wiggle_arc2_L5.vertices:
+                    adjusted_vertex_x = vertex[0] + arc2_L5_x 
+                    adjusted_vertex_y = vertex[1] + arc2_L5_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L5:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                        
+                for vertex in wiggle_arc3_L5.vertices:
+                    adjusted_vertex_x = vertex[0] + arc3_L5_x 
+                    adjusted_vertex_y = vertex[1] + arc3_L5_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L5:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                
+                
+                for vertex in wiggle_arc4_L5.vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L5_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L5_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L5:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                
+                
+                for vertex in wiggle_arc5_L5.vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L5_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L5_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L5:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                        
+                for vertex in wiggle_arc6_L5.vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L5_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L5_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L5:
+                        wiggle_room = True
+                        break
+                # Arc 7 wiggle room
+                for vertex in wiggle_arc7_L5.vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L5_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L5_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L5:
+                        wiggle_room = True
+                        break
+                
+                # Arc 8 wiggle room
+                for vertex in wiggle_arc8_L5.vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L5_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L5_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L5:
+                        wiggle_room = True
+                        break
+                        
+                        
+                
+                # Arc 9 wiggle room
+                for vertex in wiggle_arc9_L5.vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L5_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L5_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L5:
+                        wiggle_room = True
+                        break
+                        
+                # Arc 10 wiggle room
+                for vertex in wiggle_arc10_L5.vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L5_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L5_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L5:
+                        wiggle_room = True
+                        break
+                        
+                        
+                # Arc 11 wiggle room
+                for vertex in wiggle_arc11_L5.vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L5_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L5_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L5:
+                        wiggle_room = True
+                        break
+                
+                        
+                        
+                score_text_L5.text = str(score) # update Score
+                
+                
+                
+                # Run 'Each Frame' code from Timer_L5
+                # Calculate remaining time
+                time_remaining = time_limit - level_timer.getTime()
+                
+                # Check if time is up
+                if time_remaining <= 0:
+                    print("Time's up! Returning to MainMenu.")
+                    continueRoutine = False  # End the MainGame routine
+                    time_remaining = 0  # Prevent negative time display
+                
+                # Format the timer as MM:SS
+                minutes = int(time_remaining) // 60
+                seconds = int(time_remaining) % 60
+                
+                # Update the timer display
+                timer_text_L5.text = str(f"{minutes}:{seconds:02d}")
+                
+                
+                # *lose_sound_L5* updates
+                
+                # if lose_sound_L5 is stopping this frame...
+                if lose_sound_L5.status == STARTED:
+                    if bool(False) or lose_sound_L5.isFinished:
+                        # keep track of stop time/frame for later
+                        lose_sound_L5.tStop = t  # not accounting for scr refresh
+                        lose_sound_L5.tStopRefresh = tThisFlipGlobal  # on global time
+                        lose_sound_L5.frameNStop = frameN  # exact frame index
+                        # update status
+                        lose_sound_L5.status = FINISHED
+                        lose_sound_L5.stop()
+                
+                # *eat_sound_L5* updates
+                
+                # if eat_sound_L5 is stopping this frame...
+                if eat_sound_L5.status == STARTED:
+                    if bool(False) or eat_sound_L5.isFinished:
+                        # keep track of stop time/frame for later
+                        eat_sound_L5.tStop = t  # not accounting for scr refresh
+                        eat_sound_L5.tStopRefresh = tThisFlipGlobal  # on global time
+                        eat_sound_L5.frameNStop = frameN  # exact frame index
+                        # update status
+                        eat_sound_L5.status = FINISHED
+                        eat_sound_L5.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[lose_sound_L5, eat_sound_L5]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_5.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_5.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_5" ---
+            for thisComponent in Level_5.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_5
+            Level_5.tStop = globalClock.getTime(format='float')
+            Level_5.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_5.stopped', Level_5.tStop)
+            # Run 'End Routine' code from DinoMovement_L5
+            dino_pos = [-0.5, -0.3]  # Reset Dino's position
+            trail_positions.clear()  # Remove all stored positions
+            # Run 'End Routine' code from GoalController_L5
+            global total_touched_vertices_L5, total_possible_vertices_L5
+            
+            total_touched_vertices_L5 = (
+                len(arc1_touched_vertices_L5) + len(arc2_touched_vertices_L5) + len(arc3_touched_vertices_L5) +
+                len(arc4_touched_vertices_L5) + len(arc5_touched_vertices_L5) + len(arc6_touched_vertices_L5) +
+                len(arc7_touched_vertices_L5) + len(arc8_touched_vertices_L5) + len(arc9_touched_vertices_L5) +
+                len(arc10_touched_vertices_L5) + len(arc11_touched_vertices_L5)
+            )
+            
+            total_possible_vertices_L5 = (
+                len(arc1_L5_vertices) + len(arc2_L5_vertices) + len(arc3_L5_vertices) +
+                len(arc4_L5_vertices) + len(arc5_L5_vertices) + len(arc6_L5_vertices) +
+                len(arc7_L5_vertices) + len(arc8_L5_vertices) + len(arc9_L5_vertices) +
+                len(arc10_L5_vertices) + len(arc11_L5_vertices)
+            )
+            
+            score = 0
+            # the Routine "Level_5" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
+            # --- Prepare to start Routine "Level_5_checker" ---
+            # create an object to store info about Routine Level_5_checker
+            Level_5_checker = data.Routine(
+                name='Level_5_checker',
+                components=[end_score_text_L5, win_sound_L5, fail_sound_L5],
+            )
+            Level_5_checker.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from Checker_L5
+            import csv
+            # Calculate the percentage
+            if total_possible_vertices_L5 > 0:
+                percentage = (total_touched_vertices_L5 / total_possible_vertices_L5) * 100
+            else:
+                percentage = 0  # Avoid division by zero
+                
+            
+            # Update the text for the end screen
+            end_score_text_L5.text = f"Your score: {percentage:.2f}%"
+            
+            # Start 3 second timer
+            end_screen_timer = core.CountdownTimer(3)
+            
+            
+            win_sound_L5.setSound('Assets/sounds/win.mp3', hamming=True)
+            win_sound_L5.setVolume(1.0, log=False)
+            win_sound_L5.seek(0)
+            fail_sound_L5.setSound('Assets/sounds/level_failed.mp3', hamming=True)
+            fail_sound_L5.setVolume(0.6, log=False)
+            fail_sound_L5.seek(0)
+            # store start times for Level_5_checker
+            Level_5_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_5_checker.tStart = globalClock.getTime(format='float')
+            Level_5_checker.status = STARTED
+            thisExp.addData('Level_5_checker.started', Level_5_checker.tStart)
+            Level_5_checker.maxDuration = None
+            # keep track of which components have finished
+            Level_5_checkerComponents = Level_5_checker.components
+            for thisComponent in Level_5_checker.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_5_checker" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_5_Loop, data.TrialHandler2) and thisLevel_5_Loop.thisN != Level_5_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_5_checker.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *end_score_text_L5* updates
+                
+                # if end_score_text_L5 is starting this frame...
+                if end_score_text_L5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    end_score_text_L5.frameNStart = frameN  # exact frame index
+                    end_score_text_L5.tStart = t  # local t and not account for scr refresh
+                    end_score_text_L5.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(end_score_text_L5, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    end_score_text_L5.status = STARTED
+                    end_score_text_L5.setAutoDraw(True)
+                
+                # if end_score_text_L5 is active this frame...
+                if end_score_text_L5.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from Checker_L5
+                # Keep showing the end screen until 3 seconds pass
+                if end_screen_timer.getTime() <= 0:
+                    continueRoutine = False
+                
+                
+                # *win_sound_L5* updates
+                
+                # if win_sound_L5 is stopping this frame...
+                if win_sound_L5.status == STARTED:
+                    if bool(False) or win_sound_L5.isFinished:
+                        # keep track of stop time/frame for later
+                        win_sound_L5.tStop = t  # not accounting for scr refresh
+                        win_sound_L5.tStopRefresh = tThisFlipGlobal  # on global time
+                        win_sound_L5.frameNStop = frameN  # exact frame index
+                        # update status
+                        win_sound_L5.status = FINISHED
+                        win_sound_L5.stop()
+                
+                # *fail_sound_L5* updates
+                
+                # if fail_sound_L5 is stopping this frame...
+                if fail_sound_L5.status == STARTED:
+                    if bool(False) or fail_sound_L5.isFinished:
+                        # keep track of stop time/frame for later
+                        fail_sound_L5.tStop = t  # not accounting for scr refresh
+                        fail_sound_L5.tStopRefresh = tThisFlipGlobal  # on global time
+                        fail_sound_L5.frameNStop = frameN  # exact frame index
+                        # update status
+                        fail_sound_L5.status = FINISHED
+                        fail_sound_L5.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[win_sound_L5, fail_sound_L5]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_5_checker.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_5_checker.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_5_checker" ---
+            for thisComponent in Level_5_checker.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_5_checker
+            Level_5_checker.tStop = globalClock.getTime(format='float')
+            Level_5_checker.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_5_checker.stopped', Level_5_checker.tStop)
+            # Run 'End Routine' code from Checker_L5
+            
+            
+            thisExp.addData('Participant ID', expInfo['participant'])
+            thisExp.addData('Session', expInfo['session'])
+            thisExp.addData('Date', expInfo['date'])
+            thisExp.addData('Score', total_touched_vertices_L5)
+            thisExp.addData('Percentage', percentage)
+            
+            filename = f"data/{expInfo['participant']}_summary.csv"
+            with open(filename, mode='w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(['Participant ID', 'Session', 'Date', 'Score', 'Percentage'])
+                writer.writerow([expInfo['participant'], expInfo['session'], expInfo['date'], total_touched_vertices_L5, percentage])
+            
+            # Decide pass/fail and play correct sound
+            if percentage >= win_threshold and meatbone_collided:
+                Level_5_Loop.finished = True
+                win_sound_L5.play()
+            else:
+                Level_5_Loop.finished = False
+                fail_sound_L5.play()
+                
+            total_touched_vertices_L5 = 0
+            total_possible_vertices_L5 = 0
+            meatbone_collided = False
+            # the Routine "Level_5_checker" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+        # completed 1000.0 repeats of 'Level_5_Loop'
+        
+        
+        # set up handler to look after randomisation of conditions etc
+        Level_6_Loop = data.TrialHandler2(
+            name='Level_6_Loop',
+            nReps=1000.0, 
+            method='sequential', 
+            extraInfo=expInfo, 
+            originPath=-1, 
+            trialList=[None], 
+            seed=None, 
+        )
+        thisExp.addLoop(Level_6_Loop)  # add the loop to the experiment
+        thisLevel_6_Loop = Level_6_Loop.trialList[0]  # so we can initialise stimuli with some values
+        # abbreviate parameter names if possible (e.g. rgb = thisLevel_6_Loop.rgb)
+        if thisLevel_6_Loop != None:
+            for paramName in thisLevel_6_Loop:
+                globals()[paramName] = thisLevel_6_Loop[paramName]
+        
+        for thisLevel_6_Loop in Level_6_Loop:
+            currentLoop = Level_6_Loop
+            thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+            # abbreviate parameter names if possible (e.g. rgb = thisLevel_6_Loop.rgb)
+            if thisLevel_6_Loop != None:
+                for paramName in thisLevel_6_Loop:
+                    globals()[paramName] = thisLevel_6_Loop[paramName]
+            
+            # --- Prepare to start Routine "Level_6" ---
+            # create an object to store info about Routine Level_6
+            Level_6 = data.Routine(
+                name='Level_6',
+                components=[dino_image_L6, floor1_L6, floor2_L6, meatbone_image_L6, score_text_L6, timer_text_L6, lose_sound_L6, eat_sound_L6],
+            )
+            Level_6.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from DinoMovement_L6
+            dino_pos = [0, -0.3]  # Reset Dino's position
+            dino_speed = 0  # Reset vertical speed
+            # Initialize the trail dots
+            trail_dots = [
+                Circle(win, radius=trail_dot_size, fillColor=trail_color, lineColor=None, pos=[-1, -1])
+                for _ in range(trail_length)
+            ]
+            
+            # Run 'Begin Routine' code from worldController_L6
+            camera_offset_x = 0
+            # Run 'Begin Routine' code from GoalController_L6
+            score = 0  # Reset the score
+            
+            meatbone_collided = False
+            meatbone_image_L6.opacity = 1
+            
+            
+            wiggle_room = False  
+            
+            arc1_touched_vertices_L6 = []
+            arc2_touched_vertices_L6 = []
+            arc3_touched_vertices_L6 = []
+            arc4_touched_vertices_L6 = []
+            arc5_touched_vertices_L6 = []
+            arc6_touched_vertices_L6 = []
+            arc7_touched_vertices_L6 = []
+            arc8_touched_vertices_L6 = []
+            arc9_touched_vertices_L6 = []
+            arc10_touched_vertices_L6 = []
+            arc11_touched_vertices_L6 = []
+            # Run 'Begin Routine' code from Timer_L6
+            
+            level_timer.reset()  # Reset the timer at the start of the MainGame routine
+            
+            
+            lose_sound_L6.setSound('Assets/sounds/lose.mp3', hamming=True)
+            lose_sound_L6.setVolume(1.0, log=False)
+            lose_sound_L6.seek(0)
+            eat_sound_L6.setSound('Assets/sounds/eat.mp3', hamming=True)
+            eat_sound_L6.setVolume(1.0, log=False)
+            eat_sound_L6.seek(0)
+            # store start times for Level_6
+            Level_6.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_6.tStart = globalClock.getTime(format='float')
+            Level_6.status = STARTED
+            thisExp.addData('Level_6.started', Level_6.tStart)
+            Level_6.maxDuration = None
+            # keep track of which components have finished
+            Level_6Components = Level_6.components
+            for thisComponent in Level_6.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_6" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_6_Loop, data.TrialHandler2) and thisLevel_6_Loop.thisN != Level_6_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_6.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *dino_image_L6* updates
+                
+                # if dino_image_L6 is starting this frame...
+                if dino_image_L6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    dino_image_L6.frameNStart = frameN  # exact frame index
+                    dino_image_L6.tStart = t  # local t and not account for scr refresh
+                    dino_image_L6.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(dino_image_L6, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    dino_image_L6.status = STARTED
+                    dino_image_L6.setAutoDraw(True)
+                
+                # if dino_image_L6 is active this frame...
+                if dino_image_L6.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor1_L6* updates
+                
+                # if floor1_L6 is starting this frame...
+                if floor1_L6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor1_L6.frameNStart = frameN  # exact frame index
+                    floor1_L6.tStart = t  # local t and not account for scr refresh
+                    floor1_L6.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor1_L6, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor1_L6.status = STARTED
+                    floor1_L6.setAutoDraw(True)
+                
+                # if floor1_L6 is active this frame...
+                if floor1_L6.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor2_L6* updates
+                
+                # if floor2_L6 is starting this frame...
+                if floor2_L6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor2_L6.frameNStart = frameN  # exact frame index
+                    floor2_L6.tStart = t  # local t and not account for scr refresh
+                    floor2_L6.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor2_L6, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor2_L6.status = STARTED
+                    floor2_L6.setAutoDraw(True)
+                
+                # if floor2_L6 is active this frame...
+                if floor2_L6.status == STARTED:
+                    # update params
+                    pass
+                
+                # *meatbone_image_L6* updates
+                
+                # if meatbone_image_L6 is starting this frame...
+                if meatbone_image_L6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    meatbone_image_L6.frameNStart = frameN  # exact frame index
+                    meatbone_image_L6.tStart = t  # local t and not account for scr refresh
+                    meatbone_image_L6.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(meatbone_image_L6, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    meatbone_image_L6.status = STARTED
+                    meatbone_image_L6.setAutoDraw(True)
+                
+                # if meatbone_image_L6 is active this frame...
+                if meatbone_image_L6.status == STARTED:
+                    # update params
+                    pass
+                
+                # *score_text_L6* updates
+                
+                # if score_text_L6 is starting this frame...
+                if score_text_L6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    score_text_L6.frameNStart = frameN  # exact frame index
+                    score_text_L6.tStart = t  # local t and not account for scr refresh
+                    score_text_L6.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(score_text_L6, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    score_text_L6.status = STARTED
+                    score_text_L6.setAutoDraw(True)
+                
+                # if score_text_L6 is active this frame...
+                if score_text_L6.status == STARTED:
+                    # update params
+                    pass
+                
+                # *timer_text_L6* updates
+                
+                # if timer_text_L6 is starting this frame...
+                if timer_text_L6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    timer_text_L6.frameNStart = frameN  # exact frame index
+                    timer_text_L6.tStart = t  # local t and not account for scr refresh
+                    timer_text_L6.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(timer_text_L6, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    timer_text_L6.status = STARTED
+                    timer_text_L6.setAutoDraw(True)
+                
+                # if timer_text_L6 is active this frame...
+                if timer_text_L6.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from DinoMovement_L6
+                
+                # Initialize key state flags
+                left_pressed = False
+                right_pressed = False
+                up_pressed = False
+                
+                # Handle input based on the selected control method
+                
+                # Process keyboard input
+                if selected_control == "Keyboard":
+                    keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
+                    for key in keys_pressed:
+                        if key.name == 'left':
+                            left_pressed = True
+                        if key.name == 'right':
+                            right_pressed = True
+                        if key.name == 'up':
+                            up_pressed = True
+                            
+                # Process PSURP input            
+                if selected_control == "PSURP":
+                    # Read serial data
+                    ser.flushInput()
+                    strSerialData = ser.readline()
+                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                
+                    # Apply difficulty-specific movement
+                    if selected_diff == "1":
+                        # Constant movement for Easy mode
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
+                            dino_image_L6.size = [abs(dino_image_L6.size[0]), dino_image_L6.size[1]]  # Face right
+                
+                    elif selected_diff == "2":
+                        # Proportional movement for Hard mode (current implementation)
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
+                            dino_pos[0] += move_amount  # Movement based on force
+                            dino_image_L6.size = [abs(dino_image_L6.size[0]), dino_image_L6.size[1]]  # Face right
+                
+                    # Jump logic remains the same for both difficulties
+                    if B0ForceInNewtons > MIN_FORCE:
+                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                
+                
+                            
+                 
+                # Apply gravity to Dino's vertical speed
+                dino_speed += gravity
+                
+                # Check if Dino is on the floor (keeps dino on top of floor)
+                if is_on_floor(dino_pos) and dino_speed <= 0:  # Falling or stationary
+                    dino_pos[1] = floor1_top + (dino_image_L6.size[1] / 2) - ground_offset  # Align Dino with the floor
+                    dino_speed = 0  # Reset vertical speed
+                
+                # Respawn if Dino falls below the floor threshold
+                if dino_pos[1] < fall_threshold:
+                    lose_sound_L6.play()
+                    continueRoutine = False  # Stop the MainGame routine
+                    
+                # Jumping logic: Allow jump whenever the 'up' key is pressed
+                if up_pressed:  # Check if the up key is pressed
+                    dino_speed = jump_speed  # Apply upward movement
+                
+                # Update Dino's vertical position
+                dino_pos[1] += dino_speed
+                
+                # Continuous horizontal movement
+                if left_pressed and dino_pos[0] > min_x:
+                    dino_pos[0] -= move_speed  # Move Dino to the left
+                    dino_image_L6.size = [-1 * abs(dino_image_L6.size[0]), dino_image_L6.size[1]]
+                
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed  # Move Dino to the right
+                    dino_image_L6.size = [abs(dino_image_L6.size[0]), dino_image_L6.size[1]]  # Reset Dino to face right
+                
+                # Update Dino's position
+                # dino_image_L6.pos = dino_pos  # Use both X and Y values of dino_pos
+                dino_image_L6.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
+                
+                # Increment the frame counter for trail updates
+                trail_frame_counter += 1
+                
+                # Check if it's time to spawn a new dot
+                if trail_frame_counter >= trail_interval:
+                    if len(trail_positions) >= trail_length:
+                        trail_positions.pop(0)  # Remove the oldest position if trail is full
+                
+                    # Add Dino's current position to the trail
+                    trail_positions.append(dino_pos[:])  # Add a copy of Dino's current position
+                
+                    trail_frame_counter = 0  # Reset the counter
+                
+                # Update the trail dots' positions
+                for i, pos in enumerate(trail_positions):
+                    trail_dots[i].pos = [pos[0] - camera_offset_x, pos[1]]  # Adjust for camera offset
+                
+                
+                # Update the Dino's animation
+                if (frame_index_update_counter % 4) == 0:  # Adjust 4 to control animation speed
+                    dino_image_L6.image = frame_paths[frame_index]  # Update the current frame
+                
+                    # Advance to the next frame
+                    frame_index += 1
+                    if frame_index >= total_frames:
+                        frame_index = 0  # Loop back to the first frame
+                
+                
+                
+                # Increment the animation frame counter
+                frame_index_update_counter += 1
+                
+                
+                # Run 'Each Frame' code from worldController_L6
+                
+                # Update the camera offset based on Dino's X position
+                camera_offset_x += camera_speed  # The camera offset follows Dino's position
+                
+                # Move backgrounds relative to Dino's position (seamless wrap-around)
+                background1_L6.pos = [-(camera_offset_x % background_width), 0]
+                background2_L6.pos = [background1_L6.pos[0] + background_width, 0]
+                
+                # Update floor positions relative to Dino's position
+                floor1_L6.pos = [floor1_pos[0] - camera_offset_x, floor1_L6.pos[1]]
+                floor2_L6.pos = [floor2_x_static - camera_offset_x, floor2_L6.pos[1]]  # floor2_L6 moves with Dino
+                
+                
+                # Update meatbone position to match floor2_L6's top
+                meatbone_x = floor2_L6.pos[0]  # Update X position based on floor2_L6
+                meatbone_y = floor2_top + (meatbone_size[1] / 2) - offset  # Keep the meatbone on top of floor2_L6
+                meatbone_image_L6.pos = [meatbone_x, meatbone_y]
+                
+                
+                # Update the arc position relative to the camera offset
+                # Update Arc 1 Position
+                arc1_L6.pos = [arc1_L6_center[0] - camera_offset_x, arc1_L6_center[1]]
+                wiggle_arc1_L6.pos = arc1_L6.pos  # Keep wiggle room on top
+                
+                # Update Arc 2 Position
+                arc2_L6.pos = [arc2_L6_center[0] - camera_offset_x, arc2_L6_center[1]]
+                wiggle_arc2_L6.pos = arc2_L6.pos  # Keep wiggle room on top
+                arc3_L6.pos = [arc3_L6_center[0] - camera_offset_x, arc3_L6_center[1]]
+                wiggle_arc3_L6.pos = arc3_L6.pos  # Keep wiggle room on top
+                # Update Arc 4 Position
+                arc4_L6.pos = [arc4_L6_center[0] - camera_offset_x, arc4_L6_center[1]]
+                wiggle_arc4_L6.pos = arc4_L6.pos  # Keep wiggle room on top
+                # Update Arc 5 Position
+                arc5_L6.pos = [arc5_L6_center[0] - camera_offset_x, arc5_L6_center[1]]
+                wiggle_arc5_L6.pos = arc5_L6.pos  # Keep wiggle room on top
+                
+                arc6_L6.pos = [arc6_L6_center[0] - camera_offset_x, arc6_L6_center[1]]
+                wiggle_arc6_L6.pos = arc6_L6.pos
+                
+                # Update Arc 7 Position
+                arc7_L6.pos = [arc7_L6_center[0] - camera_offset_x, arc7_L6_center[1]]
+                wiggle_arc7_L6.pos = arc7_L6.pos
+                
+                # Update Arc 8 Position
+                arc8_L6.pos = [arc8_L6_center[0] - camera_offset_x, arc8_L6_center[1]]
+                wiggle_arc8_L6.pos = arc8_L6.pos
+                
+                # Update Arc 9 Position
+                arc9_L6.pos = [arc9_L6_center[0] - camera_offset_x, arc9_L6_center[1]]
+                wiggle_arc9_L6.pos = arc9_L6.pos
+                
+                # Update Arc 10 Position
+                arc10_L6.pos = [arc10_L6_center[0] - camera_offset_x, arc10_L6_center[1]]
+                wiggle_arc10_L6.pos = arc10_L6.pos
+                
+                # Update Arc 11 Position
+                arc11_L6.pos = [arc11_L6_center[0] - camera_offset_x, arc11_L6_center[1]]
+                wiggle_arc11_L6.pos = arc11_L6.pos
+                
+                
+                
+                
+                # Draw the backgrounds and floors
+                background1_L6.draw()
+                background2_L6.draw()
+                floor1_L6.draw()
+                floor2_L6.draw()
+                wiggle_arc1_L6.draw()
+                wiggle_arc2_L6.draw()
+                wiggle_arc3_L6.draw()
+                wiggle_arc4_L6.draw()
+                wiggle_arc5_L6.draw()
+                wiggle_arc6_L6.draw()
+                wiggle_arc7_L6.draw()
+                wiggle_arc8_L6.draw()
+                wiggle_arc9_L6.draw()
+                wiggle_arc10_L6.draw()
+                wiggle_arc11_L6.draw()
+                
+                arc1_L6.draw()
+                arc2_L6.draw()
+                arc3_L6.draw()
+                arc4_L6.draw()
+                arc5_L6.draw()
+                arc6_L6.draw()
+                arc7_L6.draw()
+                arc8_L6.draw()
+                arc9_L6.draw()
+                arc10_L6.draw()
+                arc11_L6.draw()
+                
+                # Draw the trail dots
+                for dot in trail_dots:
+                    dot.draw()
+                
+                # Run 'Each Frame' code from GoalController_L6
+                dino_relative_x = dino_pos[0] - camera_offset_x
+                dino_relative_y = dino_pos[1]
+                # Check for collision based on proximity to the updated position
+                dx = dino_relative_x - meatbone_x
+                dy = dino_relative_y - meatbone_y
+                
+                if camera_offset_x >= max_x:
+                    lose_sound_L6.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_x < -1 or dino_relative_x > 1:  # Adjust bounds based on screen width
+                    lose_sound_L6.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_y > 0.6:  # Adjust bounds based on screen width
+                    lose_sound_L6.play()
+                    continueRoutine = False  # Ends the current routine
+                
+                # Check for collision for meatbone
+                if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
+                    meatbone_image_L6.opacity = 0  # Make the meatbone disappear
+                    meatbone_collided = True  # Prevent further collision checks
+                    eat_sound_L6.play()
+                    continueRoutine = False
+                
+                # Check for collision for ARCS
+                for vertex in arc1_L6_vertices:
+                    # Adjust Arc 1 vertex for its X-offset (+1)
+                    adjusted_vertex_x = vertex[0] + arc1_L6_x   # Move Arc 1 vertices by 1 unit to the right
+                    adjusted_vertex_y = vertex[1] + arc1_L6_center[1] # Y remains unchanged, apply the same adjustment as Arc 2 if needed
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 1
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L6 and vertex not in arc1_touched_vertices_L6:
+                        arc1_touched_vertices_L6.append(vertex)
+                        score += 1  # Increment the score for Arc 1
+                
+                
+                for vertex in arc2_L6_vertices:
+                    # Adjust Arc 2 vertex for its X-offset (+2)
+                    adjusted_vertex_x = vertex[0] + arc2_L6_x   # Move Arc 2 vertices by 2 units to the right
+                    adjusted_vertex_y = vertex[1] + arc2_L6_center[1] # Y remains unchanged
+                    
+                    # Calculate distance between Dino and the adjusted vertex of Arc 2
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L6 and vertex not in arc2_touched_vertices_L6:
+                        arc2_touched_vertices_L6.append(vertex)
+                        score += 1  # Increment the score for Arc 2
+                        
+                        
+                for vertex in arc3_L6_vertices:
+                    # Adjust Arc 3 vertex for its static X-offset
+                    adjusted_vertex_x = vertex[0] + arc3_L6_x   # Offset Arc 3 vertices by 3.5 units to the right
+                    adjusted_vertex_y = vertex[1] + arc3_L6_center[1]  # Offset Arc 3 vertices by -0.2 units vertically
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 3
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L6 and vertex not in arc3_touched_vertices_L6:
+                        arc3_touched_vertices_L6.append(vertex)
+                        score += 1  # Increment the score for Arc 3
+                        
+                for vertex in arc4_L6_vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L6_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L6_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 4
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L6 and vertex not in arc4_touched_vertices_L6:
+                        arc4_touched_vertices_L6.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc5_L6_vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L6_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L6_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 5
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L6 and vertex not in arc5_touched_vertices_L6:
+                        arc5_touched_vertices_L6.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc6_L6_vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L6_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L6_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L6 and vertex not in arc6_touched_vertices_L6:
+                        arc6_touched_vertices_L6.append(vertex)
+                        score += 1
+                
+                # Arc 7 touch detection
+                for vertex in arc7_L6_vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L6_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L6_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L6 and vertex not in arc7_touched_vertices_L6:
+                        arc7_touched_vertices_L6.append(vertex)
+                        score += 1
+                
+                # Arc 8 touch detection
+                for vertex in arc8_L6_vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L6_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L6_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L6 and vertex not in arc8_touched_vertices_L6:
+                        arc8_touched_vertices_L6.append(vertex)
+                        score += 1
+                
+                
+                # Arc 9 touch detection
+                for vertex in arc9_L6_vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L6_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L6_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L6 and vertex not in arc9_touched_vertices_L6:
+                        arc9_touched_vertices_L6.append(vertex)
+                        score += 1       
+                
+                # Arc 10 touch detection
+                for vertex in arc10_L6_vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L6_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L6_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L6 and vertex not in arc10_touched_vertices_L6:
+                        arc10_touched_vertices_L6.append(vertex)
+                        score += 1    
+                
+                # Arc 11 touch detection
+                for vertex in arc11_L6_vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L6_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L6_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L6 and vertex not in arc11_touched_vertices_L6:
+                        arc11_touched_vertices_L6.append(vertex)
+                        score += 1    
+                  
+                # WIGGLE ROOM STUFF
+                
+                
+                # Reset to false at the start of each frame
+                wiggle_room = False  
+                for vertex in wiggle_arc1_L6.vertices:
+                    adjusted_vertex_x = vertex[0] + arc1_L6_x 
+                    adjusted_vertex_y = vertex[1] + arc1_L6_center[1] 
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L6:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                for vertex in wiggle_arc2_L6.vertices:
+                    adjusted_vertex_x = vertex[0] + arc2_L6_x 
+                    adjusted_vertex_y = vertex[1] + arc2_L6_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L6:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                        
+                for vertex in wiggle_arc3_L6.vertices:
+                    adjusted_vertex_x = vertex[0] + arc3_L6_x 
+                    adjusted_vertex_y = vertex[1] + arc3_L6_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L6:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                
+                
+                for vertex in wiggle_arc4_L6.vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L6_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L6_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L6:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                
+                
+                for vertex in wiggle_arc5_L6.vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L6_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L6_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L6:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                        
+                for vertex in wiggle_arc6_L6.vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L6_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L6_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L6:
+                        wiggle_room = True
+                        break
+                # Arc 7 wiggle room
+                for vertex in wiggle_arc7_L6.vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L6_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L6_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L6:
+                        wiggle_room = True
+                        break
+                
+                # Arc 8 wiggle room
+                for vertex in wiggle_arc8_L6.vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L6_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L6_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L6:
+                        wiggle_room = True
+                        break
+                        
+                        
+                
+                # Arc 9 wiggle room
+                for vertex in wiggle_arc9_L6.vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L6_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L6_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L6:
+                        wiggle_room = True
+                        break
+                        
+                # Arc 10 wiggle room
+                for vertex in wiggle_arc10_L6.vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L6_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L6_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L6:
+                        wiggle_room = True
+                        break
+                        
+                        
+                # Arc 11 wiggle room
+                for vertex in wiggle_arc11_L6.vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L6_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L6_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L6:
+                        wiggle_room = True
+                        break
+                
+                        
+                        
+                score_text_L6.text = str(score) # update Score
+                
+                
+                
+                # Run 'Each Frame' code from Timer_L6
+                # Calculate remaining time
+                time_remaining = time_limit - level_timer.getTime()
+                
+                # Check if time is up
+                if time_remaining <= 0:
+                    print("Time's up! Returning to MainMenu.")
+                    continueRoutine = False  # End the MainGame routine
+                    time_remaining = 0  # Prevent negative time display
+                
+                # Format the timer as MM:SS
+                minutes = int(time_remaining) // 60
+                seconds = int(time_remaining) % 60
+                
+                # Update the timer display
+                timer_text_L6.text = str(f"{minutes}:{seconds:02d}")
+                
+                
+                # *lose_sound_L6* updates
+                
+                # if lose_sound_L6 is stopping this frame...
+                if lose_sound_L6.status == STARTED:
+                    if bool(False) or lose_sound_L6.isFinished:
+                        # keep track of stop time/frame for later
+                        lose_sound_L6.tStop = t  # not accounting for scr refresh
+                        lose_sound_L6.tStopRefresh = tThisFlipGlobal  # on global time
+                        lose_sound_L6.frameNStop = frameN  # exact frame index
+                        # update status
+                        lose_sound_L6.status = FINISHED
+                        lose_sound_L6.stop()
+                
+                # *eat_sound_L6* updates
+                
+                # if eat_sound_L6 is stopping this frame...
+                if eat_sound_L6.status == STARTED:
+                    if bool(False) or eat_sound_L6.isFinished:
+                        # keep track of stop time/frame for later
+                        eat_sound_L6.tStop = t  # not accounting for scr refresh
+                        eat_sound_L6.tStopRefresh = tThisFlipGlobal  # on global time
+                        eat_sound_L6.frameNStop = frameN  # exact frame index
+                        # update status
+                        eat_sound_L6.status = FINISHED
+                        eat_sound_L6.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[lose_sound_L6, eat_sound_L6]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_6.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_6.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_6" ---
+            for thisComponent in Level_6.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_6
+            Level_6.tStop = globalClock.getTime(format='float')
+            Level_6.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_6.stopped', Level_6.tStop)
+            # Run 'End Routine' code from DinoMovement_L6
+            dino_pos = [-0.5, -0.3]  # Reset Dino's position
+            trail_positions.clear()  # Remove all stored positions
+            # Run 'End Routine' code from GoalController_L6
+            global total_touched_vertices_L6, total_possible_vertices_L6
+            
+            total_touched_vertices_L6 = (
+                len(arc1_touched_vertices_L6) + len(arc2_touched_vertices_L6) + len(arc3_touched_vertices_L6) +
+                len(arc4_touched_vertices_L6) + len(arc5_touched_vertices_L6) + len(arc6_touched_vertices_L6) +
+                len(arc7_touched_vertices_L6) + len(arc8_touched_vertices_L6) + len(arc9_touched_vertices_L6) +
+                len(arc10_touched_vertices_L6) + len(arc11_touched_vertices_L6)
+            )
+            
+            total_possible_vertices_L6 = (
+                len(arc1_L6_vertices) + len(arc2_L6_vertices) + len(arc3_L6_vertices) +
+                len(arc4_L6_vertices) + len(arc5_L6_vertices) + len(arc6_L6_vertices) +
+                len(arc7_L6_vertices) + len(arc8_L6_vertices) + len(arc9_L6_vertices) +
+                len(arc10_L6_vertices) + len(arc11_L6_vertices)
+            )
+            
+            score = 0
+            # the Routine "Level_6" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
+            # --- Prepare to start Routine "Level_6_checker" ---
+            # create an object to store info about Routine Level_6_checker
+            Level_6_checker = data.Routine(
+                name='Level_6_checker',
+                components=[end_score_text_L6, win_sound_L6, fail_sound_L6],
+            )
+            Level_6_checker.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from Checker_L6
+            import csv
+            # Calculate the percentage
+            if total_possible_vertices_L6 > 0:
+                percentage = (total_touched_vertices_L6 / total_possible_vertices_L6) * 100
+            else:
+                percentage = 0  # Avoid division by zero
+                
+            
+            # Update the text for the end screen
+            end_score_text_L6.text = f"Your score: {percentage:.2f}%"
+            
+            # Start 3 second timer
+            end_screen_timer = core.CountdownTimer(3)
+            
+            
+            win_sound_L6.setSound('Assets/sounds/win.mp3', hamming=True)
+            win_sound_L6.setVolume(1.0, log=False)
+            win_sound_L6.seek(0)
+            fail_sound_L6.setSound('Assets/sounds/level_failed.mp3', hamming=True)
+            fail_sound_L6.setVolume(0.6, log=False)
+            fail_sound_L6.seek(0)
+            # store start times for Level_6_checker
+            Level_6_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_6_checker.tStart = globalClock.getTime(format='float')
+            Level_6_checker.status = STARTED
+            thisExp.addData('Level_6_checker.started', Level_6_checker.tStart)
+            Level_6_checker.maxDuration = None
+            # keep track of which components have finished
+            Level_6_checkerComponents = Level_6_checker.components
+            for thisComponent in Level_6_checker.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_6_checker" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_6_Loop, data.TrialHandler2) and thisLevel_6_Loop.thisN != Level_6_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_6_checker.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *end_score_text_L6* updates
+                
+                # if end_score_text_L6 is starting this frame...
+                if end_score_text_L6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    end_score_text_L6.frameNStart = frameN  # exact frame index
+                    end_score_text_L6.tStart = t  # local t and not account for scr refresh
+                    end_score_text_L6.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(end_score_text_L6, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    end_score_text_L6.status = STARTED
+                    end_score_text_L6.setAutoDraw(True)
+                
+                # if end_score_text_L6 is active this frame...
+                if end_score_text_L6.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from Checker_L6
+                # Keep showing the end screen until 3 seconds pass
+                if end_screen_timer.getTime() <= 0:
+                    continueRoutine = False
+                
+                
+                # *win_sound_L6* updates
+                
+                # if win_sound_L6 is stopping this frame...
+                if win_sound_L6.status == STARTED:
+                    if bool(False) or win_sound_L6.isFinished:
+                        # keep track of stop time/frame for later
+                        win_sound_L6.tStop = t  # not accounting for scr refresh
+                        win_sound_L6.tStopRefresh = tThisFlipGlobal  # on global time
+                        win_sound_L6.frameNStop = frameN  # exact frame index
+                        # update status
+                        win_sound_L6.status = FINISHED
+                        win_sound_L6.stop()
+                
+                # *fail_sound_L6* updates
+                
+                # if fail_sound_L6 is stopping this frame...
+                if fail_sound_L6.status == STARTED:
+                    if bool(False) or fail_sound_L6.isFinished:
+                        # keep track of stop time/frame for later
+                        fail_sound_L6.tStop = t  # not accounting for scr refresh
+                        fail_sound_L6.tStopRefresh = tThisFlipGlobal  # on global time
+                        fail_sound_L6.frameNStop = frameN  # exact frame index
+                        # update status
+                        fail_sound_L6.status = FINISHED
+                        fail_sound_L6.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[win_sound_L6, fail_sound_L6]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_6_checker.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_6_checker.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_6_checker" ---
+            for thisComponent in Level_6_checker.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_6_checker
+            Level_6_checker.tStop = globalClock.getTime(format='float')
+            Level_6_checker.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_6_checker.stopped', Level_6_checker.tStop)
+            # Run 'End Routine' code from Checker_L6
+            
+            
+            thisExp.addData('Participant ID', expInfo['participant'])
+            thisExp.addData('Session', expInfo['session'])
+            thisExp.addData('Date', expInfo['date'])
+            thisExp.addData('Score', total_touched_vertices_L6)
+            thisExp.addData('Percentage', percentage)
+            
+            filename = f"data/{expInfo['participant']}_summary.csv"
+            with open(filename, mode='w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(['Participant ID', 'Session', 'Date', 'Score', 'Percentage'])
+                writer.writerow([expInfo['participant'], expInfo['session'], expInfo['date'], total_touched_vertices_L6, percentage])
+            
+            # Decide pass/fail and play correct sound
+            if percentage >= win_threshold and meatbone_collided:
+                Level_6_Loop.finished = True
+                win_sound_L6.play()
+            else:
+                Level_6_Loop.finished = False
+                fail_sound_L6.play()
+                
+            total_touched_vertices_L6 = 0
+            total_possible_vertices_L6 = 0
+            meatbone_collided = False
+            # the Routine "Level_6_checker" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+        # completed 1000.0 repeats of 'Level_6_Loop'
+        
+        
+        # set up handler to look after randomisation of conditions etc
+        Level_7_Loop = data.TrialHandler2(
+            name='Level_7_Loop',
+            nReps=1000.0, 
+            method='sequential', 
+            extraInfo=expInfo, 
+            originPath=-1, 
+            trialList=[None], 
+            seed=None, 
+        )
+        thisExp.addLoop(Level_7_Loop)  # add the loop to the experiment
+        thisLevel_7_Loop = Level_7_Loop.trialList[0]  # so we can initialise stimuli with some values
+        # abbreviate parameter names if possible (e.g. rgb = thisLevel_7_Loop.rgb)
+        if thisLevel_7_Loop != None:
+            for paramName in thisLevel_7_Loop:
+                globals()[paramName] = thisLevel_7_Loop[paramName]
+        
+        for thisLevel_7_Loop in Level_7_Loop:
+            currentLoop = Level_7_Loop
+            thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+            # abbreviate parameter names if possible (e.g. rgb = thisLevel_7_Loop.rgb)
+            if thisLevel_7_Loop != None:
+                for paramName in thisLevel_7_Loop:
+                    globals()[paramName] = thisLevel_7_Loop[paramName]
+            
+            # --- Prepare to start Routine "Level_7" ---
+            # create an object to store info about Routine Level_7
+            Level_7 = data.Routine(
+                name='Level_7',
+                components=[dino_image_L7, floor1_L7, floor2_L7, meatbone_image_L7, score_text_L7, timer_text_L7, lose_sound_L7, eat_sound_L7],
+            )
+            Level_7.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from DinoMovement_L7
+            dino_pos = [0, -0.3]  # Reset Dino's position
+            dino_speed = 0  # Reset vertical speed
+            # Initialize the trail dots
+            trail_dots = [
+                Circle(win, radius=trail_dot_size, fillColor=trail_color, lineColor=None, pos=[-1, -1])
+                for _ in range(trail_length)
+            ]
+            
+            # Run 'Begin Routine' code from worldController_L7
+            camera_offset_x = 0
+            # Run 'Begin Routine' code from GoalController_L7
+            score = 0  # Reset the score
+            
+            meatbone_collided = False
+            meatbone_image_L7.opacity = 1
+            
+            
+            wiggle_room = False  
+            
+            arc1_touched_vertices_L7 = []
+            arc2_touched_vertices_L7 = []
+            arc3_touched_vertices_L7 = []
+            arc4_touched_vertices_L7 = []
+            arc5_touched_vertices_L7 = []
+            arc6_touched_vertices_L7 = []
+            arc7_touched_vertices_L7 = []
+            arc8_touched_vertices_L7 = []
+            arc9_touched_vertices_L7 = []
+            arc10_touched_vertices_L7 = []
+            arc11_touched_vertices_L7 = []
+            # Run 'Begin Routine' code from Timer_L7
+            
+            level_timer.reset()  # Reset the timer at the start of the MainGame routine
+            
+            
+            lose_sound_L7.setSound('Assets/sounds/lose.mp3', hamming=True)
+            lose_sound_L7.setVolume(1.0, log=False)
+            lose_sound_L7.seek(0)
+            eat_sound_L7.setSound('Assets/sounds/eat.mp3', hamming=True)
+            eat_sound_L7.setVolume(1.0, log=False)
+            eat_sound_L7.seek(0)
+            # store start times for Level_7
+            Level_7.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_7.tStart = globalClock.getTime(format='float')
+            Level_7.status = STARTED
+            thisExp.addData('Level_7.started', Level_7.tStart)
+            Level_7.maxDuration = None
+            # keep track of which components have finished
+            Level_7Components = Level_7.components
+            for thisComponent in Level_7.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_7" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_7_Loop, data.TrialHandler2) and thisLevel_7_Loop.thisN != Level_7_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_7.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *dino_image_L7* updates
+                
+                # if dino_image_L7 is starting this frame...
+                if dino_image_L7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    dino_image_L7.frameNStart = frameN  # exact frame index
+                    dino_image_L7.tStart = t  # local t and not account for scr refresh
+                    dino_image_L7.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(dino_image_L7, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    dino_image_L7.status = STARTED
+                    dino_image_L7.setAutoDraw(True)
+                
+                # if dino_image_L7 is active this frame...
+                if dino_image_L7.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor1_L7* updates
+                
+                # if floor1_L7 is starting this frame...
+                if floor1_L7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor1_L7.frameNStart = frameN  # exact frame index
+                    floor1_L7.tStart = t  # local t and not account for scr refresh
+                    floor1_L7.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor1_L7, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor1_L7.status = STARTED
+                    floor1_L7.setAutoDraw(True)
+                
+                # if floor1_L7 is active this frame...
+                if floor1_L7.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor2_L7* updates
+                
+                # if floor2_L7 is starting this frame...
+                if floor2_L7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor2_L7.frameNStart = frameN  # exact frame index
+                    floor2_L7.tStart = t  # local t and not account for scr refresh
+                    floor2_L7.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor2_L7, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor2_L7.status = STARTED
+                    floor2_L7.setAutoDraw(True)
+                
+                # if floor2_L7 is active this frame...
+                if floor2_L7.status == STARTED:
+                    # update params
+                    pass
+                
+                # *meatbone_image_L7* updates
+                
+                # if meatbone_image_L7 is starting this frame...
+                if meatbone_image_L7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    meatbone_image_L7.frameNStart = frameN  # exact frame index
+                    meatbone_image_L7.tStart = t  # local t and not account for scr refresh
+                    meatbone_image_L7.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(meatbone_image_L7, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    meatbone_image_L7.status = STARTED
+                    meatbone_image_L7.setAutoDraw(True)
+                
+                # if meatbone_image_L7 is active this frame...
+                if meatbone_image_L7.status == STARTED:
+                    # update params
+                    pass
+                
+                # *score_text_L7* updates
+                
+                # if score_text_L7 is starting this frame...
+                if score_text_L7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    score_text_L7.frameNStart = frameN  # exact frame index
+                    score_text_L7.tStart = t  # local t and not account for scr refresh
+                    score_text_L7.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(score_text_L7, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    score_text_L7.status = STARTED
+                    score_text_L7.setAutoDraw(True)
+                
+                # if score_text_L7 is active this frame...
+                if score_text_L7.status == STARTED:
+                    # update params
+                    pass
+                
+                # *timer_text_L7* updates
+                
+                # if timer_text_L7 is starting this frame...
+                if timer_text_L7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    timer_text_L7.frameNStart = frameN  # exact frame index
+                    timer_text_L7.tStart = t  # local t and not account for scr refresh
+                    timer_text_L7.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(timer_text_L7, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    timer_text_L7.status = STARTED
+                    timer_text_L7.setAutoDraw(True)
+                
+                # if timer_text_L7 is active this frame...
+                if timer_text_L7.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from DinoMovement_L7
+                
+                # Initialize key state flags
+                left_pressed = False
+                right_pressed = False
+                up_pressed = False
+                
+                # Handle input based on the selected control method
+                
+                # Process keyboard input
+                if selected_control == "Keyboard":
+                    keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
+                    for key in keys_pressed:
+                        if key.name == 'left':
+                            left_pressed = True
+                        if key.name == 'right':
+                            right_pressed = True
+                        if key.name == 'up':
+                            up_pressed = True
+                            
+                # Process PSURP input            
+                if selected_control == "PSURP":
+                    # Read serial data
+                    ser.flushInput()
+                    strSerialData = ser.readline()
+                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                
+                    # Apply difficulty-specific movement
+                    if selected_diff == "1":
+                        # Constant movement for Easy mode
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
+                            dino_image_L7.size = [abs(dino_image_L7.size[0]), dino_image_L7.size[1]]  # Face right
+                
+                    elif selected_diff == "2":
+                        # Proportional movement for Hard mode (current implementation)
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
+                            dino_pos[0] += move_amount  # Movement based on force
+                            dino_image_L7.size = [abs(dino_image_L7.size[0]), dino_image_L7.size[1]]  # Face right
+                
+                    # Jump logic remains the same for both difficulties
+                    if B0ForceInNewtons > MIN_FORCE:
+                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                
+                
+                            
+                 
+                # Apply gravity to Dino's vertical speed
+                dino_speed += gravity
+                
+                # Check if Dino is on the floor (keeps dino on top of floor)
+                if is_on_floor(dino_pos) and dino_speed <= 0:  # Falling or stationary
+                    dino_pos[1] = floor1_top + (dino_image_L7.size[1] / 2) - ground_offset  # Align Dino with the floor
+                    dino_speed = 0  # Reset vertical speed
+                
+                # Respawn if Dino falls below the floor threshold
+                if dino_pos[1] < fall_threshold:
+                    lose_sound_L7.play()
+                    continueRoutine = False  # Stop the MainGame routine
+                    
+                # Jumping logic: Allow jump whenever the 'up' key is pressed
+                if up_pressed:  # Check if the up key is pressed
+                    dino_speed = jump_speed  # Apply upward movement
+                
+                # Update Dino's vertical position
+                dino_pos[1] += dino_speed
+                
+                # Continuous horizontal movement
+                if left_pressed and dino_pos[0] > min_x:
+                    dino_pos[0] -= move_speed  # Move Dino to the left
+                    dino_image_L7.size = [-1 * abs(dino_image_L7.size[0]), dino_image_L7.size[1]]
+                
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed  # Move Dino to the right
+                    dino_image_L7.size = [abs(dino_image_L7.size[0]), dino_image_L7.size[1]]  # Reset Dino to face right
+                
+                # Update Dino's position
+                # dino_image_L7.pos = dino_pos  # Use both X and Y values of dino_pos
+                dino_image_L7.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
+                
+                # Increment the frame counter for trail updates
+                trail_frame_counter += 1
+                
+                # Check if it's time to spawn a new dot
+                if trail_frame_counter >= trail_interval:
+                    if len(trail_positions) >= trail_length:
+                        trail_positions.pop(0)  # Remove the oldest position if trail is full
+                
+                    # Add Dino's current position to the trail
+                    trail_positions.append(dino_pos[:])  # Add a copy of Dino's current position
+                
+                    trail_frame_counter = 0  # Reset the counter
+                
+                # Update the trail dots' positions
+                for i, pos in enumerate(trail_positions):
+                    trail_dots[i].pos = [pos[0] - camera_offset_x, pos[1]]  # Adjust for camera offset
+                
+                
+                # Update the Dino's animation
+                if (frame_index_update_counter % 4) == 0:  # Adjust 4 to control animation speed
+                    dino_image_L7.image = frame_paths[frame_index]  # Update the current frame
+                
+                    # Advance to the next frame
+                    frame_index += 1
+                    if frame_index >= total_frames:
+                        frame_index = 0  # Loop back to the first frame
+                
+                
+                
+                # Increment the animation frame counter
+                frame_index_update_counter += 1
+                
+                
+                # Run 'Each Frame' code from worldController_L7
+                
+                # Update the camera offset based on Dino's X position
+                camera_offset_x += camera_speed  # The camera offset follows Dino's position
+                
+                # Move backgrounds relative to Dino's position (seamless wrap-around)
+                background1_L7.pos = [-(camera_offset_x % background_width), 0]
+                background2_L7.pos = [background1_L7.pos[0] + background_width, 0]
+                
+                # Update floor positions relative to Dino's position
+                floor1_L7.pos = [floor1_pos[0] - camera_offset_x, floor1_L7.pos[1]]
+                floor2_L7.pos = [floor2_x_static - camera_offset_x, floor2_L7.pos[1]]  # floor2_L7 moves with Dino
+                
+                
+                # Update meatbone position to match floor2_L7's top
+                meatbone_x = floor2_L7.pos[0]  # Update X position based on floor2_L7
+                meatbone_y = floor2_top + (meatbone_size[1] / 2) - offset  # Keep the meatbone on top of floor2_L7
+                meatbone_image_L7.pos = [meatbone_x, meatbone_y]
+                
+                
+                # Update the arc position relative to the camera offset
+                # Update Arc 1 Position
+                arc1_L7.pos = [arc1_L7_center[0] - camera_offset_x, arc1_L7_center[1]]
+                wiggle_arc1_L7.pos = arc1_L7.pos  # Keep wiggle room on top
+                
+                # Update Arc 2 Position
+                arc2_L7.pos = [arc2_L7_center[0] - camera_offset_x, arc2_L7_center[1]]
+                wiggle_arc2_L7.pos = arc2_L7.pos  # Keep wiggle room on top
+                arc3_L7.pos = [arc3_L7_center[0] - camera_offset_x, arc3_L7_center[1]]
+                wiggle_arc3_L7.pos = arc3_L7.pos  # Keep wiggle room on top
+                # Update Arc 4 Position
+                arc4_L7.pos = [arc4_L7_center[0] - camera_offset_x, arc4_L7_center[1]]
+                wiggle_arc4_L7.pos = arc4_L7.pos  # Keep wiggle room on top
+                # Update Arc 5 Position
+                arc5_L7.pos = [arc5_L7_center[0] - camera_offset_x, arc5_L7_center[1]]
+                wiggle_arc5_L7.pos = arc5_L7.pos  # Keep wiggle room on top
+                
+                arc6_L7.pos = [arc6_L7_center[0] - camera_offset_x, arc6_L7_center[1]]
+                wiggle_arc6_L7.pos = arc6_L7.pos
+                
+                # Update Arc 7 Position
+                arc7_L7.pos = [arc7_L7_center[0] - camera_offset_x, arc7_L7_center[1]]
+                wiggle_arc7_L7.pos = arc7_L7.pos
+                
+                # Update Arc 8 Position
+                arc8_L7.pos = [arc8_L7_center[0] - camera_offset_x, arc8_L7_center[1]]
+                wiggle_arc8_L7.pos = arc8_L7.pos
+                
+                # Update Arc 9 Position
+                arc9_L7.pos = [arc9_L7_center[0] - camera_offset_x, arc9_L7_center[1]]
+                wiggle_arc9_L7.pos = arc9_L7.pos
+                
+                # Update Arc 10 Position
+                arc10_L7.pos = [arc10_L7_center[0] - camera_offset_x, arc10_L7_center[1]]
+                wiggle_arc10_L7.pos = arc10_L7.pos
+                
+                # Update Arc 11 Position
+                arc11_L7.pos = [arc11_L7_center[0] - camera_offset_x, arc11_L7_center[1]]
+                wiggle_arc11_L7.pos = arc11_L7.pos
+                
+                
+                
+                
+                # Draw the backgrounds and floors
+                background1_L7.draw()
+                background2_L7.draw()
+                floor1_L7.draw()
+                floor2_L7.draw()
+                wiggle_arc1_L7.draw()
+                wiggle_arc2_L7.draw()
+                wiggle_arc3_L7.draw()
+                wiggle_arc4_L7.draw()
+                wiggle_arc5_L7.draw()
+                wiggle_arc6_L7.draw()
+                wiggle_arc7_L7.draw()
+                wiggle_arc8_L7.draw()
+                wiggle_arc9_L7.draw()
+                wiggle_arc10_L7.draw()
+                wiggle_arc11_L7.draw()
+                
+                arc1_L7.draw()
+                arc2_L7.draw()
+                arc3_L7.draw()
+                arc4_L7.draw()
+                arc5_L7.draw()
+                arc6_L7.draw()
+                arc7_L7.draw()
+                arc8_L7.draw()
+                arc9_L7.draw()
+                arc10_L7.draw()
+                arc11_L7.draw()
+                
+                # Draw the trail dots
+                for dot in trail_dots:
+                    dot.draw()
+                
+                # Run 'Each Frame' code from GoalController_L7
+                dino_relative_x = dino_pos[0] - camera_offset_x
+                dino_relative_y = dino_pos[1]
+                # Check for collision based on proximity to the updated position
+                dx = dino_relative_x - meatbone_x
+                dy = dino_relative_y - meatbone_y
+                
+                if camera_offset_x >= max_x:
+                    lose_sound_L7.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_x < -1 or dino_relative_x > 1:  # Adjust bounds based on screen width
+                    lose_sound_L7.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_y > 0.6:  # Adjust bounds based on screen width
+                    lose_sound_L7.play()
+                    continueRoutine = False  # Ends the current routine
+                
+                # Check for collision for meatbone
+                if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
+                    meatbone_image_L7.opacity = 0  # Make the meatbone disappear
+                    meatbone_collided = True  # Prevent further collision checks
+                    eat_sound_L7.play()
+                    continueRoutine = False
+                
+                # Check for collision for ARCS
+                for vertex in arc1_L7_vertices:
+                    # Adjust Arc 1 vertex for its X-offset (+1)
+                    adjusted_vertex_x = vertex[0] + arc1_L7_x   # Move Arc 1 vertices by 1 unit to the right
+                    adjusted_vertex_y = vertex[1] + arc1_L7_center[1] # Y remains unchanged, apply the same adjustment as Arc 2 if needed
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 1
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L7 and vertex not in arc1_touched_vertices_L7:
+                        arc1_touched_vertices_L7.append(vertex)
+                        score += 1  # Increment the score for Arc 1
+                
+                
+                for vertex in arc2_L7_vertices:
+                    # Adjust Arc 2 vertex for its X-offset (+2)
+                    adjusted_vertex_x = vertex[0] + arc2_L7_x   # Move Arc 2 vertices by 2 units to the right
+                    adjusted_vertex_y = vertex[1] + arc2_L7_center[1] # Y remains unchanged
+                    
+                    # Calculate distance between Dino and the adjusted vertex of Arc 2
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L7 and vertex not in arc2_touched_vertices_L7:
+                        arc2_touched_vertices_L7.append(vertex)
+                        score += 1  # Increment the score for Arc 2
+                        
+                        
+                for vertex in arc3_L7_vertices:
+                    # Adjust Arc 3 vertex for its static X-offset
+                    adjusted_vertex_x = vertex[0] + arc3_L7_x   # Offset Arc 3 vertices by 3.5 units to the right
+                    adjusted_vertex_y = vertex[1] + arc3_L7_center[1]  # Offset Arc 3 vertices by -0.2 units vertically
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 3
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L7 and vertex not in arc3_touched_vertices_L7:
+                        arc3_touched_vertices_L7.append(vertex)
+                        score += 1  # Increment the score for Arc 3
+                        
+                for vertex in arc4_L7_vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L7_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L7_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 4
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L7 and vertex not in arc4_touched_vertices_L7:
+                        arc4_touched_vertices_L7.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc5_L7_vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L7_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L7_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 5
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L7 and vertex not in arc5_touched_vertices_L7:
+                        arc5_touched_vertices_L7.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc6_L7_vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L7_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L7_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L7 and vertex not in arc6_touched_vertices_L7:
+                        arc6_touched_vertices_L7.append(vertex)
+                        score += 1
+                
+                # Arc 7 touch detection
+                for vertex in arc7_L7_vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L7_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L7_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L7 and vertex not in arc7_touched_vertices_L7:
+                        arc7_touched_vertices_L7.append(vertex)
+                        score += 1
+                
+                # Arc 8 touch detection
+                for vertex in arc8_L7_vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L7_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L7_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L7 and vertex not in arc8_touched_vertices_L7:
+                        arc8_touched_vertices_L7.append(vertex)
+                        score += 1
+                
+                
+                # Arc 9 touch detection
+                for vertex in arc9_L7_vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L7_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L7_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L7 and vertex not in arc9_touched_vertices_L7:
+                        arc9_touched_vertices_L7.append(vertex)
+                        score += 1       
+                
+                # Arc 10 touch detection
+                for vertex in arc10_L7_vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L7_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L7_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L7 and vertex not in arc10_touched_vertices_L7:
+                        arc10_touched_vertices_L7.append(vertex)
+                        score += 1    
+                
+                # Arc 11 touch detection
+                for vertex in arc11_L7_vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L7_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L7_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L7 and vertex not in arc11_touched_vertices_L7:
+                        arc11_touched_vertices_L7.append(vertex)
+                        score += 1    
+                  
+                # WIGGLE ROOM STUFF
+                
+                
+                # Reset to false at the start of each frame
+                wiggle_room = False  
+                for vertex in wiggle_arc1_L7.vertices:
+                    adjusted_vertex_x = vertex[0] + arc1_L7_x 
+                    adjusted_vertex_y = vertex[1] + arc1_L7_center[1] 
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L7:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                for vertex in wiggle_arc2_L7.vertices:
+                    adjusted_vertex_x = vertex[0] + arc2_L7_x 
+                    adjusted_vertex_y = vertex[1] + arc2_L7_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L7:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                        
+                for vertex in wiggle_arc3_L7.vertices:
+                    adjusted_vertex_x = vertex[0] + arc3_L7_x 
+                    adjusted_vertex_y = vertex[1] + arc3_L7_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L7:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                
+                
+                for vertex in wiggle_arc4_L7.vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L7_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L7_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L7:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                
+                
+                for vertex in wiggle_arc5_L7.vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L7_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L7_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L7:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                        
+                for vertex in wiggle_arc6_L7.vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L7_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L7_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L7:
+                        wiggle_room = True
+                        break
+                # Arc 7 wiggle room
+                for vertex in wiggle_arc7_L7.vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L7_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L7_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L7:
+                        wiggle_room = True
+                        break
+                
+                # Arc 8 wiggle room
+                for vertex in wiggle_arc8_L7.vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L7_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L7_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L7:
+                        wiggle_room = True
+                        break
+                        
+                        
+                
+                # Arc 9 wiggle room
+                for vertex in wiggle_arc9_L7.vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L7_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L7_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L7:
+                        wiggle_room = True
+                        break
+                        
+                # Arc 10 wiggle room
+                for vertex in wiggle_arc10_L7.vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L7_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L7_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L7:
+                        wiggle_room = True
+                        break
+                        
+                        
+                # Arc 11 wiggle room
+                for vertex in wiggle_arc11_L7.vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L7_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L7_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L7:
+                        wiggle_room = True
+                        break
+                
+                        
+                        
+                score_text_L7.text = str(score) # update Score
+                
+                
+                
+                # Run 'Each Frame' code from Timer_L7
+                # Calculate remaining time
+                time_remaining = time_limit - level_timer.getTime()
+                
+                # Check if time is up
+                if time_remaining <= 0:
+                    print("Time's up! Returning to MainMenu.")
+                    continueRoutine = False  # End the MainGame routine
+                    time_remaining = 0  # Prevent negative time display
+                
+                # Format the timer as MM:SS
+                minutes = int(time_remaining) // 60
+                seconds = int(time_remaining) % 60
+                
+                # Update the timer display
+                timer_text_L7.text = str(f"{minutes}:{seconds:02d}")
+                
+                
+                # *lose_sound_L7* updates
+                
+                # if lose_sound_L7 is stopping this frame...
+                if lose_sound_L7.status == STARTED:
+                    if bool(False) or lose_sound_L7.isFinished:
+                        # keep track of stop time/frame for later
+                        lose_sound_L7.tStop = t  # not accounting for scr refresh
+                        lose_sound_L7.tStopRefresh = tThisFlipGlobal  # on global time
+                        lose_sound_L7.frameNStop = frameN  # exact frame index
+                        # update status
+                        lose_sound_L7.status = FINISHED
+                        lose_sound_L7.stop()
+                
+                # *eat_sound_L7* updates
+                
+                # if eat_sound_L7 is stopping this frame...
+                if eat_sound_L7.status == STARTED:
+                    if bool(False) or eat_sound_L7.isFinished:
+                        # keep track of stop time/frame for later
+                        eat_sound_L7.tStop = t  # not accounting for scr refresh
+                        eat_sound_L7.tStopRefresh = tThisFlipGlobal  # on global time
+                        eat_sound_L7.frameNStop = frameN  # exact frame index
+                        # update status
+                        eat_sound_L7.status = FINISHED
+                        eat_sound_L7.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[lose_sound_L7, eat_sound_L7]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_7.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_7.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_7" ---
+            for thisComponent in Level_7.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_7
+            Level_7.tStop = globalClock.getTime(format='float')
+            Level_7.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_7.stopped', Level_7.tStop)
+            # Run 'End Routine' code from DinoMovement_L7
+            dino_pos = [-0.5, -0.3]  # Reset Dino's position
+            trail_positions.clear()  # Remove all stored positions
+            # Run 'End Routine' code from GoalController_L7
+            global total_touched_vertices_L7, total_possible_vertices_L7
+            
+            total_touched_vertices_L7 = (
+                len(arc1_touched_vertices_L7) + len(arc2_touched_vertices_L7) + len(arc3_touched_vertices_L7) +
+                len(arc4_touched_vertices_L7) + len(arc5_touched_vertices_L7) + len(arc6_touched_vertices_L7) +
+                len(arc7_touched_vertices_L7) + len(arc8_touched_vertices_L7) + len(arc9_touched_vertices_L7) +
+                len(arc10_touched_vertices_L7) + len(arc11_touched_vertices_L7)
+            )
+            
+            total_possible_vertices_L7 = (
+                len(arc1_L7_vertices) + len(arc2_L7_vertices) + len(arc3_L7_vertices) +
+                len(arc4_L7_vertices) + len(arc5_L7_vertices) + len(arc6_L7_vertices) +
+                len(arc7_L7_vertices) + len(arc8_L7_vertices) + len(arc9_L7_vertices) +
+                len(arc10_L7_vertices) + len(arc11_L7_vertices)
+            )
+            
+            score = 0
+            # the Routine "Level_7" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
+            # --- Prepare to start Routine "Level_7_checker" ---
+            # create an object to store info about Routine Level_7_checker
+            Level_7_checker = data.Routine(
+                name='Level_7_checker',
+                components=[end_score_text_L7, win_sound_L7, fail_sound_L7],
+            )
+            Level_7_checker.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from Checker_L7
+            import csv
+            # Calculate the percentage
+            if total_possible_vertices_L7 > 0:
+                percentage = (total_touched_vertices_L7 / total_possible_vertices_L7) * 100
+            else:
+                percentage = 0  # Avoid division by zero
+                
+            
+            # Update the text for the end screen
+            end_score_text_L7.text = f"Your score: {percentage:.2f}%"
+            
+            # Start 3 second timer
+            end_screen_timer = core.CountdownTimer(3)
+            
+            
+            win_sound_L7.setSound('Assets/sounds/win.mp3', hamming=True)
+            win_sound_L7.setVolume(1.0, log=False)
+            win_sound_L7.seek(0)
+            fail_sound_L7.setSound('Assets/sounds/level_failed.mp3', hamming=True)
+            fail_sound_L7.setVolume(0.6, log=False)
+            fail_sound_L7.seek(0)
+            # store start times for Level_7_checker
+            Level_7_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_7_checker.tStart = globalClock.getTime(format='float')
+            Level_7_checker.status = STARTED
+            thisExp.addData('Level_7_checker.started', Level_7_checker.tStart)
+            Level_7_checker.maxDuration = None
+            # keep track of which components have finished
+            Level_7_checkerComponents = Level_7_checker.components
+            for thisComponent in Level_7_checker.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_7_checker" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_7_Loop, data.TrialHandler2) and thisLevel_7_Loop.thisN != Level_7_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_7_checker.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *end_score_text_L7* updates
+                
+                # if end_score_text_L7 is starting this frame...
+                if end_score_text_L7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    end_score_text_L7.frameNStart = frameN  # exact frame index
+                    end_score_text_L7.tStart = t  # local t and not account for scr refresh
+                    end_score_text_L7.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(end_score_text_L7, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    end_score_text_L7.status = STARTED
+                    end_score_text_L7.setAutoDraw(True)
+                
+                # if end_score_text_L7 is active this frame...
+                if end_score_text_L7.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from Checker_L7
+                # Keep showing the end screen until 3 seconds pass
+                if end_screen_timer.getTime() <= 0:
+                    continueRoutine = False
+                
+                
+                # *win_sound_L7* updates
+                
+                # if win_sound_L7 is stopping this frame...
+                if win_sound_L7.status == STARTED:
+                    if bool(False) or win_sound_L7.isFinished:
+                        # keep track of stop time/frame for later
+                        win_sound_L7.tStop = t  # not accounting for scr refresh
+                        win_sound_L7.tStopRefresh = tThisFlipGlobal  # on global time
+                        win_sound_L7.frameNStop = frameN  # exact frame index
+                        # update status
+                        win_sound_L7.status = FINISHED
+                        win_sound_L7.stop()
+                
+                # *fail_sound_L7* updates
+                
+                # if fail_sound_L7 is stopping this frame...
+                if fail_sound_L7.status == STARTED:
+                    if bool(False) or fail_sound_L7.isFinished:
+                        # keep track of stop time/frame for later
+                        fail_sound_L7.tStop = t  # not accounting for scr refresh
+                        fail_sound_L7.tStopRefresh = tThisFlipGlobal  # on global time
+                        fail_sound_L7.frameNStop = frameN  # exact frame index
+                        # update status
+                        fail_sound_L7.status = FINISHED
+                        fail_sound_L7.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[win_sound_L7, fail_sound_L7]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_7_checker.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_7_checker.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_7_checker" ---
+            for thisComponent in Level_7_checker.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_7_checker
+            Level_7_checker.tStop = globalClock.getTime(format='float')
+            Level_7_checker.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_7_checker.stopped', Level_7_checker.tStop)
+            # Run 'End Routine' code from Checker_L7
+            
+            
+            thisExp.addData('Participant ID', expInfo['participant'])
+            thisExp.addData('Session', expInfo['session'])
+            thisExp.addData('Date', expInfo['date'])
+            thisExp.addData('Score', total_touched_vertices_L7)
+            thisExp.addData('Percentage', percentage)
+            
+            filename = f"data/{expInfo['participant']}_summary.csv"
+            with open(filename, mode='w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(['Participant ID', 'Session', 'Date', 'Score', 'Percentage'])
+                writer.writerow([expInfo['participant'], expInfo['session'], expInfo['date'], total_touched_vertices_L7, percentage])
+            
+            # Decide pass/fail and play correct sound
+            if percentage >= win_threshold and meatbone_collided:
+                Level_7_Loop.finished = True
+                win_sound_L7.play()
+            else:
+                Level_7_Loop.finished = False
+                fail_sound_L7.play()
+                
+            total_touched_vertices_L7 = 0
+            total_possible_vertices_L7 = 0
+            meatbone_collided = False
+            # the Routine "Level_7_checker" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+        # completed 1000.0 repeats of 'Level_7_Loop'
+        
+        
+        # set up handler to look after randomisation of conditions etc
+        Level_8_Loop = data.TrialHandler2(
+            name='Level_8_Loop',
+            nReps=1000.0, 
+            method='sequential', 
+            extraInfo=expInfo, 
+            originPath=-1, 
+            trialList=[None], 
+            seed=None, 
+        )
+        thisExp.addLoop(Level_8_Loop)  # add the loop to the experiment
+        thisLevel_8_Loop = Level_8_Loop.trialList[0]  # so we can initialise stimuli with some values
+        # abbreviate parameter names if possible (e.g. rgb = thisLevel_8_Loop.rgb)
+        if thisLevel_8_Loop != None:
+            for paramName in thisLevel_8_Loop:
+                globals()[paramName] = thisLevel_8_Loop[paramName]
+        
+        for thisLevel_8_Loop in Level_8_Loop:
+            currentLoop = Level_8_Loop
+            thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+            # abbreviate parameter names if possible (e.g. rgb = thisLevel_8_Loop.rgb)
+            if thisLevel_8_Loop != None:
+                for paramName in thisLevel_8_Loop:
+                    globals()[paramName] = thisLevel_8_Loop[paramName]
+            
+            # --- Prepare to start Routine "Level_8" ---
+            # create an object to store info about Routine Level_8
+            Level_8 = data.Routine(
+                name='Level_8',
+                components=[dino_image_L8, floor1_L8, floor2_L8, meatbone_image_L8, score_text_L8, timer_text_L8, lose_sound_L8, eat_sound_L8],
+            )
+            Level_8.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from DinoMovement_L8
+            dino_pos = [0, -0.3]  # Reset Dino's position
+            dino_speed = 0  # Reset vertical speed
+            # Initialize the trail dots
+            trail_dots = [
+                Circle(win, radius=trail_dot_size, fillColor=trail_color, lineColor=None, pos=[-1, -1])
+                for _ in range(trail_length)
+            ]
+            
+            # Run 'Begin Routine' code from worldController_L8
+            camera_offset_x = 0
+            # Run 'Begin Routine' code from GoalController_L8
+            score = 0  # Reset the score
+            
+            meatbone_collided = False
+            meatbone_image_L8.opacity = 1
+            
+            
+            wiggle_room = False  
+            
+            arc1_touched_vertices_L8 = []
+            arc2_touched_vertices_L8 = []
+            arc3_touched_vertices_L8 = []
+            arc4_touched_vertices_L8 = []
+            arc5_touched_vertices_L8 = []
+            arc6_touched_vertices_L8 = []
+            arc7_touched_vertices_L8 = []
+            arc8_touched_vertices_L8 = []
+            arc9_touched_vertices_L8 = []
+            arc10_touched_vertices_L8 = []
+            arc11_touched_vertices_L8 = []
+            # Run 'Begin Routine' code from Timer_L8
+            
+            level_timer.reset()  # Reset the timer at the start of the MainGame routine
+            
+            
+            lose_sound_L8.setSound('Assets/sounds/lose.mp3', hamming=True)
+            lose_sound_L8.setVolume(1.0, log=False)
+            lose_sound_L8.seek(0)
+            eat_sound_L8.setSound('Assets/sounds/eat.mp3', hamming=True)
+            eat_sound_L8.setVolume(1.0, log=False)
+            eat_sound_L8.seek(0)
+            # store start times for Level_8
+            Level_8.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_8.tStart = globalClock.getTime(format='float')
+            Level_8.status = STARTED
+            thisExp.addData('Level_8.started', Level_8.tStart)
+            Level_8.maxDuration = None
+            # keep track of which components have finished
+            Level_8Components = Level_8.components
+            for thisComponent in Level_8.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_8" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_8_Loop, data.TrialHandler2) and thisLevel_8_Loop.thisN != Level_8_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_8.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *dino_image_L8* updates
+                
+                # if dino_image_L8 is starting this frame...
+                if dino_image_L8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    dino_image_L8.frameNStart = frameN  # exact frame index
+                    dino_image_L8.tStart = t  # local t and not account for scr refresh
+                    dino_image_L8.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(dino_image_L8, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    dino_image_L8.status = STARTED
+                    dino_image_L8.setAutoDraw(True)
+                
+                # if dino_image_L8 is active this frame...
+                if dino_image_L8.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor1_L8* updates
+                
+                # if floor1_L8 is starting this frame...
+                if floor1_L8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor1_L8.frameNStart = frameN  # exact frame index
+                    floor1_L8.tStart = t  # local t and not account for scr refresh
+                    floor1_L8.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor1_L8, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor1_L8.status = STARTED
+                    floor1_L8.setAutoDraw(True)
+                
+                # if floor1_L8 is active this frame...
+                if floor1_L8.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor2_L8* updates
+                
+                # if floor2_L8 is starting this frame...
+                if floor2_L8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor2_L8.frameNStart = frameN  # exact frame index
+                    floor2_L8.tStart = t  # local t and not account for scr refresh
+                    floor2_L8.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor2_L8, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor2_L8.status = STARTED
+                    floor2_L8.setAutoDraw(True)
+                
+                # if floor2_L8 is active this frame...
+                if floor2_L8.status == STARTED:
+                    # update params
+                    pass
+                
+                # *meatbone_image_L8* updates
+                
+                # if meatbone_image_L8 is starting this frame...
+                if meatbone_image_L8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    meatbone_image_L8.frameNStart = frameN  # exact frame index
+                    meatbone_image_L8.tStart = t  # local t and not account for scr refresh
+                    meatbone_image_L8.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(meatbone_image_L8, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    meatbone_image_L8.status = STARTED
+                    meatbone_image_L8.setAutoDraw(True)
+                
+                # if meatbone_image_L8 is active this frame...
+                if meatbone_image_L8.status == STARTED:
+                    # update params
+                    pass
+                
+                # *score_text_L8* updates
+                
+                # if score_text_L8 is starting this frame...
+                if score_text_L8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    score_text_L8.frameNStart = frameN  # exact frame index
+                    score_text_L8.tStart = t  # local t and not account for scr refresh
+                    score_text_L8.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(score_text_L8, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    score_text_L8.status = STARTED
+                    score_text_L8.setAutoDraw(True)
+                
+                # if score_text_L8 is active this frame...
+                if score_text_L8.status == STARTED:
+                    # update params
+                    pass
+                
+                # *timer_text_L8* updates
+                
+                # if timer_text_L8 is starting this frame...
+                if timer_text_L8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    timer_text_L8.frameNStart = frameN  # exact frame index
+                    timer_text_L8.tStart = t  # local t and not account for scr refresh
+                    timer_text_L8.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(timer_text_L8, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    timer_text_L8.status = STARTED
+                    timer_text_L8.setAutoDraw(True)
+                
+                # if timer_text_L8 is active this frame...
+                if timer_text_L8.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from DinoMovement_L8
+                
+                # Initialize key state flags
+                left_pressed = False
+                right_pressed = False
+                up_pressed = False
+                
+                # Handle input based on the selected control method
+                
+                # Process keyboard input
+                if selected_control == "Keyboard":
+                    keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
+                    for key in keys_pressed:
+                        if key.name == 'left':
+                            left_pressed = True
+                        if key.name == 'right':
+                            right_pressed = True
+                        if key.name == 'up':
+                            up_pressed = True
+                            
+                # Process PSURP input            
+                if selected_control == "PSURP":
+                    # Read serial data
+                    ser.flushInput()
+                    strSerialData = ser.readline()
+                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                
+                    # Apply difficulty-specific movement
+                    if selected_diff == "1":
+                        # Constant movement for Easy mode
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
+                            dino_image_L8.size = [abs(dino_image_L8.size[0]), dino_image_L8.size[1]]  # Face right
+                
+                    elif selected_diff == "2":
+                        # Proportional movement for Hard mode (current implementation)
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
+                            dino_pos[0] += move_amount  # Movement based on force
+                            dino_image_L8.size = [abs(dino_image_L8.size[0]), dino_image_L8.size[1]]  # Face right
+                
+                    # Jump logic remains the same for both difficulties
+                    if B0ForceInNewtons > MIN_FORCE:
+                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                
+                
+                            
+                 
+                # Apply gravity to Dino's vertical speed
+                dino_speed += gravity
+                
+                # Check if Dino is on the floor (keeps dino on top of floor)
+                if is_on_floor(dino_pos) and dino_speed <= 0:  # Falling or stationary
+                    dino_pos[1] = floor1_top + (dino_image_L8.size[1] / 2) - ground_offset  # Align Dino with the floor
+                    dino_speed = 0  # Reset vertical speed
+                
+                # Respawn if Dino falls below the floor threshold
+                if dino_pos[1] < fall_threshold:
+                    lose_sound_L8.play()
+                    continueRoutine = False  # Stop the MainGame routine
+                    
+                # Jumping logic: Allow jump whenever the 'up' key is pressed
+                if up_pressed:  # Check if the up key is pressed
+                    dino_speed = jump_speed  # Apply upward movement
+                
+                # Update Dino's vertical position
+                dino_pos[1] += dino_speed
+                
+                # Continuous horizontal movement
+                if left_pressed and dino_pos[0] > min_x:
+                    dino_pos[0] -= move_speed  # Move Dino to the left
+                    dino_image_L8.size = [-1 * abs(dino_image_L8.size[0]), dino_image_L8.size[1]]
+                
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed  # Move Dino to the right
+                    dino_image_L8.size = [abs(dino_image_L8.size[0]), dino_image_L8.size[1]]  # Reset Dino to face right
+                
+                # Update Dino's position
+                # dino_image_L8.pos = dino_pos  # Use both X and Y values of dino_pos
+                dino_image_L8.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
+                
+                # Increment the frame counter for trail updates
+                trail_frame_counter += 1
+                
+                # Check if it's time to spawn a new dot
+                if trail_frame_counter >= trail_interval:
+                    if len(trail_positions) >= trail_length:
+                        trail_positions.pop(0)  # Remove the oldest position if trail is full
+                
+                    # Add Dino's current position to the trail
+                    trail_positions.append(dino_pos[:])  # Add a copy of Dino's current position
+                
+                    trail_frame_counter = 0  # Reset the counter
+                
+                # Update the trail dots' positions
+                for i, pos in enumerate(trail_positions):
+                    trail_dots[i].pos = [pos[0] - camera_offset_x, pos[1]]  # Adjust for camera offset
+                
+                
+                # Update the Dino's animation
+                if (frame_index_update_counter % 4) == 0:  # Adjust 4 to control animation speed
+                    dino_image_L8.image = frame_paths[frame_index]  # Update the current frame
+                
+                    # Advance to the next frame
+                    frame_index += 1
+                    if frame_index >= total_frames:
+                        frame_index = 0  # Loop back to the first frame
+                
+                
+                
+                # Increment the animation frame counter
+                frame_index_update_counter += 1
+                
+                
+                # Run 'Each Frame' code from worldController_L8
+                
+                # Update the camera offset based on Dino's X position
+                camera_offset_x += camera_speed  # The camera offset follows Dino's position
+                
+                # Move backgrounds relative to Dino's position (seamless wrap-around)
+                background1_L8.pos = [-(camera_offset_x % background_width), 0]
+                background2_L8.pos = [background1_L8.pos[0] + background_width, 0]
+                
+                # Update floor positions relative to Dino's position
+                floor1_L8.pos = [floor1_pos[0] - camera_offset_x, floor1_L8.pos[1]]
+                floor2_L8.pos = [floor2_x_static - camera_offset_x, floor2_L8.pos[1]]  # floor2_L8 moves with Dino
+                
+                
+                # Update meatbone position to match floor2_L8's top
+                meatbone_x = floor2_L8.pos[0]  # Update X position based on floor2_L8
+                meatbone_y = floor2_top + (meatbone_size[1] / 2) - offset  # Keep the meatbone on top of floor2_L8
+                meatbone_image_L8.pos = [meatbone_x, meatbone_y]
+                
+                
+                # Update the arc position relative to the camera offset
+                # Update Arc 1 Position
+                arc1_L8.pos = [arc1_L8_center[0] - camera_offset_x, arc1_L8_center[1]]
+                wiggle_arc1_L8.pos = arc1_L8.pos  # Keep wiggle room on top
+                
+                # Update Arc 2 Position
+                arc2_L8.pos = [arc2_L8_center[0] - camera_offset_x, arc2_L8_center[1]]
+                wiggle_arc2_L8.pos = arc2_L8.pos  # Keep wiggle room on top
+                arc3_L8.pos = [arc3_L8_center[0] - camera_offset_x, arc3_L8_center[1]]
+                wiggle_arc3_L8.pos = arc3_L8.pos  # Keep wiggle room on top
+                # Update Arc 4 Position
+                arc4_L8.pos = [arc4_L8_center[0] - camera_offset_x, arc4_L8_center[1]]
+                wiggle_arc4_L8.pos = arc4_L8.pos  # Keep wiggle room on top
+                # Update Arc 5 Position
+                arc5_L8.pos = [arc5_L8_center[0] - camera_offset_x, arc5_L8_center[1]]
+                wiggle_arc5_L8.pos = arc5_L8.pos  # Keep wiggle room on top
+                
+                arc6_L8.pos = [arc6_L8_center[0] - camera_offset_x, arc6_L8_center[1]]
+                wiggle_arc6_L8.pos = arc6_L8.pos
+                
+                # Update Arc 7 Position
+                arc7_L8.pos = [arc7_L8_center[0] - camera_offset_x, arc7_L8_center[1]]
+                wiggle_arc7_L8.pos = arc7_L8.pos
+                
+                # Update Arc 8 Position
+                arc8_L8.pos = [arc8_L8_center[0] - camera_offset_x, arc8_L8_center[1]]
+                wiggle_arc8_L8.pos = arc8_L8.pos
+                
+                # Update Arc 9 Position
+                arc9_L8.pos = [arc9_L8_center[0] - camera_offset_x, arc9_L8_center[1]]
+                wiggle_arc9_L8.pos = arc9_L8.pos
+                
+                # Update Arc 10 Position
+                arc10_L8.pos = [arc10_L8_center[0] - camera_offset_x, arc10_L8_center[1]]
+                wiggle_arc10_L8.pos = arc10_L8.pos
+                
+                # Update Arc 11 Position
+                arc11_L8.pos = [arc11_L8_center[0] - camera_offset_x, arc11_L8_center[1]]
+                wiggle_arc11_L8.pos = arc11_L8.pos
+                
+                
+                
+                
+                # Draw the backgrounds and floors
+                background1_L8.draw()
+                background2_L8.draw()
+                floor1_L8.draw()
+                floor2_L8.draw()
+                wiggle_arc1_L8.draw()
+                wiggle_arc2_L8.draw()
+                wiggle_arc3_L8.draw()
+                wiggle_arc4_L8.draw()
+                wiggle_arc5_L8.draw()
+                wiggle_arc6_L8.draw()
+                wiggle_arc7_L8.draw()
+                wiggle_arc8_L8.draw()
+                wiggle_arc9_L8.draw()
+                wiggle_arc10_L8.draw()
+                wiggle_arc11_L8.draw()
+                
+                arc1_L8.draw()
+                arc2_L8.draw()
+                arc3_L8.draw()
+                arc4_L8.draw()
+                arc5_L8.draw()
+                arc6_L8.draw()
+                arc7_L8.draw()
+                arc8_L8.draw()
+                arc9_L8.draw()
+                arc10_L8.draw()
+                arc11_L8.draw()
+                
+                # Draw the trail dots
+                for dot in trail_dots:
+                    dot.draw()
+                
+                # Run 'Each Frame' code from GoalController_L8
+                dino_relative_x = dino_pos[0] - camera_offset_x
+                dino_relative_y = dino_pos[1]
+                # Check for collision based on proximity to the updated position
+                dx = dino_relative_x - meatbone_x
+                dy = dino_relative_y - meatbone_y
+                
+                if camera_offset_x >= max_x:
+                    lose_sound_L8.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_x < -1 or dino_relative_x > 1:  # Adjust bounds based on screen width
+                    lose_sound_L8.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_y > 0.6:  # Adjust bounds based on screen width
+                    lose_sound_L8.play()
+                    continueRoutine = False  # Ends the current routine
+                
+                # Check for collision for meatbone
+                if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
+                    meatbone_image_L8.opacity = 0  # Make the meatbone disappear
+                    meatbone_collided = True  # Prevent further collision checks
+                    eat_sound_L8.play()
+                    continueRoutine = False
+                
+                # Check for collision for ARCS
+                for vertex in arc1_L8_vertices:
+                    # Adjust Arc 1 vertex for its X-offset (+1)
+                    adjusted_vertex_x = vertex[0] + arc1_L8_x   # Move Arc 1 vertices by 1 unit to the right
+                    adjusted_vertex_y = vertex[1] + arc1_L8_center[1] # Y remains unchanged, apply the same adjustment as Arc 2 if needed
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 1
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L8 and vertex not in arc1_touched_vertices_L8:
+                        arc1_touched_vertices_L8.append(vertex)
+                        score += 1  # Increment the score for Arc 1
+                
+                
+                for vertex in arc2_L8_vertices:
+                    # Adjust Arc 2 vertex for its X-offset (+2)
+                    adjusted_vertex_x = vertex[0] + arc2_L8_x   # Move Arc 2 vertices by 2 units to the right
+                    adjusted_vertex_y = vertex[1] + arc2_L8_center[1] # Y remains unchanged
+                    
+                    # Calculate distance between Dino and the adjusted vertex of Arc 2
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L8 and vertex not in arc2_touched_vertices_L8:
+                        arc2_touched_vertices_L8.append(vertex)
+                        score += 1  # Increment the score for Arc 2
+                        
+                        
+                for vertex in arc3_L8_vertices:
+                    # Adjust Arc 3 vertex for its static X-offset
+                    adjusted_vertex_x = vertex[0] + arc3_L8_x   # Offset Arc 3 vertices by 3.5 units to the right
+                    adjusted_vertex_y = vertex[1] + arc3_L8_center[1]  # Offset Arc 3 vertices by -0.2 units vertically
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 3
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L8 and vertex not in arc3_touched_vertices_L8:
+                        arc3_touched_vertices_L8.append(vertex)
+                        score += 1  # Increment the score for Arc 3
+                        
+                for vertex in arc4_L8_vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L8_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L8_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 4
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L8 and vertex not in arc4_touched_vertices_L8:
+                        arc4_touched_vertices_L8.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc5_L8_vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L8_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L8_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 5
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L8 and vertex not in arc5_touched_vertices_L8:
+                        arc5_touched_vertices_L8.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc6_L8_vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L8_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L8_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L8 and vertex not in arc6_touched_vertices_L8:
+                        arc6_touched_vertices_L8.append(vertex)
+                        score += 1
+                
+                # Arc 7 touch detection
+                for vertex in arc7_L8_vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L8_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L8_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L8 and vertex not in arc7_touched_vertices_L8:
+                        arc7_touched_vertices_L8.append(vertex)
+                        score += 1
+                
+                # Arc 8 touch detection
+                for vertex in arc8_L8_vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L8_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L8_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L8 and vertex not in arc8_touched_vertices_L8:
+                        arc8_touched_vertices_L8.append(vertex)
+                        score += 1
+                
+                
+                # Arc 9 touch detection
+                for vertex in arc9_L8_vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L8_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L8_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L8 and vertex not in arc9_touched_vertices_L8:
+                        arc9_touched_vertices_L8.append(vertex)
+                        score += 1       
+                
+                # Arc 10 touch detection
+                for vertex in arc10_L8_vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L8_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L8_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L8 and vertex not in arc10_touched_vertices_L8:
+                        arc10_touched_vertices_L8.append(vertex)
+                        score += 1    
+                
+                # Arc 11 touch detection
+                for vertex in arc11_L8_vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L8_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L8_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L8 and vertex not in arc11_touched_vertices_L8:
+                        arc11_touched_vertices_L8.append(vertex)
+                        score += 1    
+                  
+                # WIGGLE ROOM STUFF
+                
+                
+                # Reset to false at the start of each frame
+                wiggle_room = False  
+                for vertex in wiggle_arc1_L8.vertices:
+                    adjusted_vertex_x = vertex[0] + arc1_L8_x 
+                    adjusted_vertex_y = vertex[1] + arc1_L8_center[1] 
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L8:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                for vertex in wiggle_arc2_L8.vertices:
+                    adjusted_vertex_x = vertex[0] + arc2_L8_x 
+                    adjusted_vertex_y = vertex[1] + arc2_L8_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L8:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                        
+                for vertex in wiggle_arc3_L8.vertices:
+                    adjusted_vertex_x = vertex[0] + arc3_L8_x 
+                    adjusted_vertex_y = vertex[1] + arc3_L8_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L8:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                
+                
+                for vertex in wiggle_arc4_L8.vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L8_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L8_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L8:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                
+                
+                for vertex in wiggle_arc5_L8.vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L8_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L8_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L8:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                        
+                for vertex in wiggle_arc6_L8.vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L8_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L8_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L8:
+                        wiggle_room = True
+                        break
+                # Arc 7 wiggle room
+                for vertex in wiggle_arc7_L8.vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L8_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L8_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L8:
+                        wiggle_room = True
+                        break
+                
+                # Arc 8 wiggle room
+                for vertex in wiggle_arc8_L8.vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L8_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L8_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L8:
+                        wiggle_room = True
+                        break
+                        
+                        
+                
+                # Arc 9 wiggle room
+                for vertex in wiggle_arc9_L8.vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L8_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L8_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L8:
+                        wiggle_room = True
+                        break
+                        
+                # Arc 10 wiggle room
+                for vertex in wiggle_arc10_L8.vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L8_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L8_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L8:
+                        wiggle_room = True
+                        break
+                        
+                        
+                # Arc 11 wiggle room
+                for vertex in wiggle_arc11_L8.vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L8_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L8_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L8:
+                        wiggle_room = True
+                        break
+                
+                        
+                        
+                score_text_L8.text = str(score) # update Score
+                
+                
+                
+                # Run 'Each Frame' code from Timer_L8
+                # Calculate remaining time
+                time_remaining = time_limit - level_timer.getTime()
+                
+                # Check if time is up
+                if time_remaining <= 0:
+                    print("Time's up! Returning to MainMenu.")
+                    continueRoutine = False  # End the MainGame routine
+                    time_remaining = 0  # Prevent negative time display
+                
+                # Format the timer as MM:SS
+                minutes = int(time_remaining) // 60
+                seconds = int(time_remaining) % 60
+                
+                # Update the timer display
+                timer_text_L8.text = str(f"{minutes}:{seconds:02d}")
+                
+                
+                # *lose_sound_L8* updates
+                
+                # if lose_sound_L8 is stopping this frame...
+                if lose_sound_L8.status == STARTED:
+                    if bool(False) or lose_sound_L8.isFinished:
+                        # keep track of stop time/frame for later
+                        lose_sound_L8.tStop = t  # not accounting for scr refresh
+                        lose_sound_L8.tStopRefresh = tThisFlipGlobal  # on global time
+                        lose_sound_L8.frameNStop = frameN  # exact frame index
+                        # update status
+                        lose_sound_L8.status = FINISHED
+                        lose_sound_L8.stop()
+                
+                # *eat_sound_L8* updates
+                
+                # if eat_sound_L8 is stopping this frame...
+                if eat_sound_L8.status == STARTED:
+                    if bool(False) or eat_sound_L8.isFinished:
+                        # keep track of stop time/frame for later
+                        eat_sound_L8.tStop = t  # not accounting for scr refresh
+                        eat_sound_L8.tStopRefresh = tThisFlipGlobal  # on global time
+                        eat_sound_L8.frameNStop = frameN  # exact frame index
+                        # update status
+                        eat_sound_L8.status = FINISHED
+                        eat_sound_L8.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[lose_sound_L8, eat_sound_L8]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_8.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_8.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_8" ---
+            for thisComponent in Level_8.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_8
+            Level_8.tStop = globalClock.getTime(format='float')
+            Level_8.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_8.stopped', Level_8.tStop)
+            # Run 'End Routine' code from DinoMovement_L8
+            dino_pos = [-0.5, -0.3]  # Reset Dino's position
+            trail_positions.clear()  # Remove all stored positions
+            # Run 'End Routine' code from GoalController_L8
+            global total_touched_vertices_L8, total_possible_vertices_L8
+            
+            total_touched_vertices_L8 = (
+                len(arc1_touched_vertices_L8) + len(arc2_touched_vertices_L8) + len(arc3_touched_vertices_L8) +
+                len(arc4_touched_vertices_L8) + len(arc5_touched_vertices_L8) + len(arc6_touched_vertices_L8) +
+                len(arc7_touched_vertices_L8) + len(arc8_touched_vertices_L8) + len(arc9_touched_vertices_L8) +
+                len(arc10_touched_vertices_L8) + len(arc11_touched_vertices_L8)
+            )
+            
+            total_possible_vertices_L8 = (
+                len(arc1_L8_vertices) + len(arc2_L8_vertices) + len(arc3_L8_vertices) +
+                len(arc4_L8_vertices) + len(arc5_L8_vertices) + len(arc6_L8_vertices) +
+                len(arc7_L8_vertices) + len(arc8_L8_vertices) + len(arc9_L8_vertices) +
+                len(arc10_L8_vertices) + len(arc11_L8_vertices)
+            )
+            
+            score = 0
+            # the Routine "Level_8" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
+            # --- Prepare to start Routine "Level_8_checker" ---
+            # create an object to store info about Routine Level_8_checker
+            Level_8_checker = data.Routine(
+                name='Level_8_checker',
+                components=[end_score_text_L8, win_sound_L8, fail_sound_L8],
+            )
+            Level_8_checker.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from Checker_L8
+            import csv
+            # Calculate the percentage
+            if total_possible_vertices_L8 > 0:
+                percentage = (total_touched_vertices_L8 / total_possible_vertices_L8) * 100
+            else:
+                percentage = 0  # Avoid division by zero
+                
+            
+            # Update the text for the end screen
+            end_score_text_L8.text = f"Your score: {percentage:.2f}%"
+            
+            # Start 3 second timer
+            end_screen_timer = core.CountdownTimer(3)
+            
+            
+            win_sound_L8.setSound('Assets/sounds/win.mp3', hamming=True)
+            win_sound_L8.setVolume(1.0, log=False)
+            win_sound_L8.seek(0)
+            fail_sound_L8.setSound('Assets/sounds/level_failed.mp3', hamming=True)
+            fail_sound_L8.setVolume(0.6, log=False)
+            fail_sound_L8.seek(0)
+            # store start times for Level_8_checker
+            Level_8_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_8_checker.tStart = globalClock.getTime(format='float')
+            Level_8_checker.status = STARTED
+            thisExp.addData('Level_8_checker.started', Level_8_checker.tStart)
+            Level_8_checker.maxDuration = None
+            # keep track of which components have finished
+            Level_8_checkerComponents = Level_8_checker.components
+            for thisComponent in Level_8_checker.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_8_checker" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_8_Loop, data.TrialHandler2) and thisLevel_8_Loop.thisN != Level_8_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_8_checker.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *end_score_text_L8* updates
+                
+                # if end_score_text_L8 is starting this frame...
+                if end_score_text_L8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    end_score_text_L8.frameNStart = frameN  # exact frame index
+                    end_score_text_L8.tStart = t  # local t and not account for scr refresh
+                    end_score_text_L8.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(end_score_text_L8, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    end_score_text_L8.status = STARTED
+                    end_score_text_L8.setAutoDraw(True)
+                
+                # if end_score_text_L8 is active this frame...
+                if end_score_text_L8.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from Checker_L8
+                # Keep showing the end screen until 3 seconds pass
+                if end_screen_timer.getTime() <= 0:
+                    continueRoutine = False
+                
+                
+                # *win_sound_L8* updates
+                
+                # if win_sound_L8 is stopping this frame...
+                if win_sound_L8.status == STARTED:
+                    if bool(False) or win_sound_L8.isFinished:
+                        # keep track of stop time/frame for later
+                        win_sound_L8.tStop = t  # not accounting for scr refresh
+                        win_sound_L8.tStopRefresh = tThisFlipGlobal  # on global time
+                        win_sound_L8.frameNStop = frameN  # exact frame index
+                        # update status
+                        win_sound_L8.status = FINISHED
+                        win_sound_L8.stop()
+                
+                # *fail_sound_L8* updates
+                
+                # if fail_sound_L8 is stopping this frame...
+                if fail_sound_L8.status == STARTED:
+                    if bool(False) or fail_sound_L8.isFinished:
+                        # keep track of stop time/frame for later
+                        fail_sound_L8.tStop = t  # not accounting for scr refresh
+                        fail_sound_L8.tStopRefresh = tThisFlipGlobal  # on global time
+                        fail_sound_L8.frameNStop = frameN  # exact frame index
+                        # update status
+                        fail_sound_L8.status = FINISHED
+                        fail_sound_L8.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[win_sound_L8, fail_sound_L8]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_8_checker.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_8_checker.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_8_checker" ---
+            for thisComponent in Level_8_checker.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_8_checker
+            Level_8_checker.tStop = globalClock.getTime(format='float')
+            Level_8_checker.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_8_checker.stopped', Level_8_checker.tStop)
+            # Run 'End Routine' code from Checker_L8
+            
+            
+            thisExp.addData('Participant ID', expInfo['participant'])
+            thisExp.addData('Session', expInfo['session'])
+            thisExp.addData('Date', expInfo['date'])
+            thisExp.addData('Score', total_touched_vertices_L8)
+            thisExp.addData('Percentage', percentage)
+            
+            filename = f"data/{expInfo['participant']}_summary.csv"
+            with open(filename, mode='w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(['Participant ID', 'Session', 'Date', 'Score', 'Percentage'])
+                writer.writerow([expInfo['participant'], expInfo['session'], expInfo['date'], total_touched_vertices_L8, percentage])
+            
+            # Decide pass/fail and play correct sound
+            if percentage >= win_threshold and meatbone_collided:
+                Level_8_Loop.finished = True
+                win_sound_L8.play()
+            else:
+                Level_8_Loop.finished = False
+                fail_sound_L8.play()
+                
+            total_touched_vertices_L8 = 0
+            total_possible_vertices_L8 = 0
+            meatbone_collided = False
+            # the Routine "Level_8_checker" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+        # completed 1000.0 repeats of 'Level_8_Loop'
+        
+        
+        # set up handler to look after randomisation of conditions etc
+        Level_9_Loop = data.TrialHandler2(
+            name='Level_9_Loop',
+            nReps=1000.0, 
+            method='sequential', 
+            extraInfo=expInfo, 
+            originPath=-1, 
+            trialList=[None], 
+            seed=None, 
+        )
+        thisExp.addLoop(Level_9_Loop)  # add the loop to the experiment
+        thisLevel_9_Loop = Level_9_Loop.trialList[0]  # so we can initialise stimuli with some values
+        # abbreviate parameter names if possible (e.g. rgb = thisLevel_9_Loop.rgb)
+        if thisLevel_9_Loop != None:
+            for paramName in thisLevel_9_Loop:
+                globals()[paramName] = thisLevel_9_Loop[paramName]
+        
+        for thisLevel_9_Loop in Level_9_Loop:
+            currentLoop = Level_9_Loop
+            thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+            # abbreviate parameter names if possible (e.g. rgb = thisLevel_9_Loop.rgb)
+            if thisLevel_9_Loop != None:
+                for paramName in thisLevel_9_Loop:
+                    globals()[paramName] = thisLevel_9_Loop[paramName]
+            
+            # --- Prepare to start Routine "Level_9" ---
+            # create an object to store info about Routine Level_9
+            Level_9 = data.Routine(
+                name='Level_9',
+                components=[dino_image_L9, floor1_L9, floor2_L9, meatbone_image_L9, score_text_L9, timer_text_L9, lose_sound_L9, eat_sound_L9],
+            )
+            Level_9.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from DinoMovement_L9
+            dino_pos = [0, -0.3]  # Reset Dino's position
+            dino_speed = 0  # Reset vertical speed
+            # Initialize the trail dots
+            trail_dots = [
+                Circle(win, radius=trail_dot_size, fillColor=trail_color, lineColor=None, pos=[-1, -1])
+                for _ in range(trail_length)
+            ]
+            
+            # Run 'Begin Routine' code from worldController_L9
+            camera_offset_x = 0
+            # Run 'Begin Routine' code from GoalController_L9
+            score = 0  # Reset the score
+            
+            meatbone_collided = False
+            meatbone_image_L9.opacity = 1
+            
+            
+            wiggle_room = False  
+            
+            arc1_touched_vertices_L9 = []
+            arc2_touched_vertices_L9 = []
+            arc3_touched_vertices_L9 = []
+            arc4_touched_vertices_L9 = []
+            arc5_touched_vertices_L9 = []
+            arc6_touched_vertices_L9 = []
+            arc7_touched_vertices_L9 = []
+            arc8_touched_vertices_L9 = []
+            arc9_touched_vertices_L9 = []
+            arc10_touched_vertices_L9 = []
+            arc11_touched_vertices_L9 = []
+            # Run 'Begin Routine' code from Timer_L9
+            
+            level_timer.reset()  # Reset the timer at the start of the MainGame routine
+            
+            
+            lose_sound_L9.setSound('Assets/sounds/lose.mp3', hamming=True)
+            lose_sound_L9.setVolume(1.0, log=False)
+            lose_sound_L9.seek(0)
+            eat_sound_L9.setSound('Assets/sounds/eat.mp3', hamming=True)
+            eat_sound_L9.setVolume(1.0, log=False)
+            eat_sound_L9.seek(0)
+            # store start times for Level_9
+            Level_9.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_9.tStart = globalClock.getTime(format='float')
+            Level_9.status = STARTED
+            thisExp.addData('Level_9.started', Level_9.tStart)
+            Level_9.maxDuration = None
+            # keep track of which components have finished
+            Level_9Components = Level_9.components
+            for thisComponent in Level_9.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_9" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_9_Loop, data.TrialHandler2) and thisLevel_9_Loop.thisN != Level_9_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_9.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *dino_image_L9* updates
+                
+                # if dino_image_L9 is starting this frame...
+                if dino_image_L9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    dino_image_L9.frameNStart = frameN  # exact frame index
+                    dino_image_L9.tStart = t  # local t and not account for scr refresh
+                    dino_image_L9.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(dino_image_L9, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    dino_image_L9.status = STARTED
+                    dino_image_L9.setAutoDraw(True)
+                
+                # if dino_image_L9 is active this frame...
+                if dino_image_L9.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor1_L9* updates
+                
+                # if floor1_L9 is starting this frame...
+                if floor1_L9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor1_L9.frameNStart = frameN  # exact frame index
+                    floor1_L9.tStart = t  # local t and not account for scr refresh
+                    floor1_L9.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor1_L9, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor1_L9.status = STARTED
+                    floor1_L9.setAutoDraw(True)
+                
+                # if floor1_L9 is active this frame...
+                if floor1_L9.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor2_L9* updates
+                
+                # if floor2_L9 is starting this frame...
+                if floor2_L9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor2_L9.frameNStart = frameN  # exact frame index
+                    floor2_L9.tStart = t  # local t and not account for scr refresh
+                    floor2_L9.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor2_L9, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor2_L9.status = STARTED
+                    floor2_L9.setAutoDraw(True)
+                
+                # if floor2_L9 is active this frame...
+                if floor2_L9.status == STARTED:
+                    # update params
+                    pass
+                
+                # *meatbone_image_L9* updates
+                
+                # if meatbone_image_L9 is starting this frame...
+                if meatbone_image_L9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    meatbone_image_L9.frameNStart = frameN  # exact frame index
+                    meatbone_image_L9.tStart = t  # local t and not account for scr refresh
+                    meatbone_image_L9.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(meatbone_image_L9, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    meatbone_image_L9.status = STARTED
+                    meatbone_image_L9.setAutoDraw(True)
+                
+                # if meatbone_image_L9 is active this frame...
+                if meatbone_image_L9.status == STARTED:
+                    # update params
+                    pass
+                
+                # *score_text_L9* updates
+                
+                # if score_text_L9 is starting this frame...
+                if score_text_L9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    score_text_L9.frameNStart = frameN  # exact frame index
+                    score_text_L9.tStart = t  # local t and not account for scr refresh
+                    score_text_L9.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(score_text_L9, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    score_text_L9.status = STARTED
+                    score_text_L9.setAutoDraw(True)
+                
+                # if score_text_L9 is active this frame...
+                if score_text_L9.status == STARTED:
+                    # update params
+                    pass
+                
+                # *timer_text_L9* updates
+                
+                # if timer_text_L9 is starting this frame...
+                if timer_text_L9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    timer_text_L9.frameNStart = frameN  # exact frame index
+                    timer_text_L9.tStart = t  # local t and not account for scr refresh
+                    timer_text_L9.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(timer_text_L9, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    timer_text_L9.status = STARTED
+                    timer_text_L9.setAutoDraw(True)
+                
+                # if timer_text_L9 is active this frame...
+                if timer_text_L9.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from DinoMovement_L9
+                
+                # Initialize key state flags
+                left_pressed = False
+                right_pressed = False
+                up_pressed = False
+                
+                # Handle input based on the selected control method
+                
+                # Process keyboard input
+                if selected_control == "Keyboard":
+                    keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
+                    for key in keys_pressed:
+                        if key.name == 'left':
+                            left_pressed = True
+                        if key.name == 'right':
+                            right_pressed = True
+                        if key.name == 'up':
+                            up_pressed = True
+                            
+                # Process PSURP input            
+                if selected_control == "PSURP":
+                    # Read serial data
+                    ser.flushInput()
+                    strSerialData = ser.readline()
+                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                
+                    # Apply difficulty-specific movement
+                    if selected_diff == "1":
+                        # Constant movement for Easy mode
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
+                            dino_image_L9.size = [abs(dino_image_L9.size[0]), dino_image_L9.size[1]]  # Face right
+                
+                    elif selected_diff == "2":
+                        # Proportional movement for Hard mode (current implementation)
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
+                            dino_pos[0] += move_amount  # Movement based on force
+                            dino_image_L9.size = [abs(dino_image_L9.size[0]), dino_image_L9.size[1]]  # Face right
+                
+                    # Jump logic remains the same for both difficulties
+                    if B0ForceInNewtons > MIN_FORCE:
+                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                
+                
+                            
+                 
+                # Apply gravity to Dino's vertical speed
+                dino_speed += gravity
+                
+                # Check if Dino is on the floor (keeps dino on top of floor)
+                if is_on_floor(dino_pos) and dino_speed <= 0:  # Falling or stationary
+                    dino_pos[1] = floor1_top + (dino_image_L9.size[1] / 2) - ground_offset  # Align Dino with the floor
+                    dino_speed = 0  # Reset vertical speed
+                
+                # Respawn if Dino falls below the floor threshold
+                if dino_pos[1] < fall_threshold:
+                    lose_sound_L9.play()
+                    continueRoutine = False  # Stop the MainGame routine
+                    
+                # Jumping logic: Allow jump whenever the 'up' key is pressed
+                if up_pressed:  # Check if the up key is pressed
+                    dino_speed = jump_speed  # Apply upward movement
+                
+                # Update Dino's vertical position
+                dino_pos[1] += dino_speed
+                
+                # Continuous horizontal movement
+                if left_pressed and dino_pos[0] > min_x:
+                    dino_pos[0] -= move_speed  # Move Dino to the left
+                    dino_image_L9.size = [-1 * abs(dino_image_L9.size[0]), dino_image_L9.size[1]]
+                
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed  # Move Dino to the right
+                    dino_image_L9.size = [abs(dino_image_L9.size[0]), dino_image_L9.size[1]]  # Reset Dino to face right
+                
+                # Update Dino's position
+                # dino_image_L9.pos = dino_pos  # Use both X and Y values of dino_pos
+                dino_image_L9.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
+                
+                # Increment the frame counter for trail updates
+                trail_frame_counter += 1
+                
+                # Check if it's time to spawn a new dot
+                if trail_frame_counter >= trail_interval:
+                    if len(trail_positions) >= trail_length:
+                        trail_positions.pop(0)  # Remove the oldest position if trail is full
+                
+                    # Add Dino's current position to the trail
+                    trail_positions.append(dino_pos[:])  # Add a copy of Dino's current position
+                
+                    trail_frame_counter = 0  # Reset the counter
+                
+                # Update the trail dots' positions
+                for i, pos in enumerate(trail_positions):
+                    trail_dots[i].pos = [pos[0] - camera_offset_x, pos[1]]  # Adjust for camera offset
+                
+                
+                # Update the Dino's animation
+                if (frame_index_update_counter % 4) == 0:  # Adjust 4 to control animation speed
+                    dino_image_L9.image = frame_paths[frame_index]  # Update the current frame
+                
+                    # Advance to the next frame
+                    frame_index += 1
+                    if frame_index >= total_frames:
+                        frame_index = 0  # Loop back to the first frame
+                
+                
+                
+                # Increment the animation frame counter
+                frame_index_update_counter += 1
+                
+                
+                # Run 'Each Frame' code from worldController_L9
+                
+                # Update the camera offset based on Dino's X position
+                camera_offset_x += camera_speed  # The camera offset follows Dino's position
+                
+                # Move backgrounds relative to Dino's position (seamless wrap-around)
+                background1_L9.pos = [-(camera_offset_x % background_width), 0]
+                background2_L9.pos = [background1_L9.pos[0] + background_width, 0]
+                
+                # Update floor positions relative to Dino's position
+                floor1_L9.pos = [floor1_pos[0] - camera_offset_x, floor1_L9.pos[1]]
+                floor2_L9.pos = [floor2_x_static - camera_offset_x, floor2_L9.pos[1]]  # floor2_L9 moves with Dino
+                
+                
+                # Update meatbone position to match floor2_L9's top
+                meatbone_x = floor2_L9.pos[0]  # Update X position based on floor2_L9
+                meatbone_y = floor2_top + (meatbone_size[1] / 2) - offset  # Keep the meatbone on top of floor2_L9
+                meatbone_image_L9.pos = [meatbone_x, meatbone_y]
+                
+                
+                # Update the arc position relative to the camera offset
+                # Update Arc 1 Position
+                arc1_L9.pos = [arc1_L9_center[0] - camera_offset_x, arc1_L9_center[1]]
+                wiggle_arc1_L9.pos = arc1_L9.pos  # Keep wiggle room on top
+                
+                # Update Arc 2 Position
+                arc2_L9.pos = [arc2_L9_center[0] - camera_offset_x, arc2_L9_center[1]]
+                wiggle_arc2_L9.pos = arc2_L9.pos  # Keep wiggle room on top
+                arc3_L9.pos = [arc3_L9_center[0] - camera_offset_x, arc3_L9_center[1]]
+                wiggle_arc3_L9.pos = arc3_L9.pos  # Keep wiggle room on top
+                # Update Arc 4 Position
+                arc4_L9.pos = [arc4_L9_center[0] - camera_offset_x, arc4_L9_center[1]]
+                wiggle_arc4_L9.pos = arc4_L9.pos  # Keep wiggle room on top
+                # Update Arc 5 Position
+                arc5_L9.pos = [arc5_L9_center[0] - camera_offset_x, arc5_L9_center[1]]
+                wiggle_arc5_L9.pos = arc5_L9.pos  # Keep wiggle room on top
+                
+                arc6_L9.pos = [arc6_L9_center[0] - camera_offset_x, arc6_L9_center[1]]
+                wiggle_arc6_L9.pos = arc6_L9.pos
+                
+                # Update Arc 7 Position
+                arc7_L9.pos = [arc7_L9_center[0] - camera_offset_x, arc7_L9_center[1]]
+                wiggle_arc7_L9.pos = arc7_L9.pos
+                
+                # Update Arc 8 Position
+                arc8_L9.pos = [arc8_L9_center[0] - camera_offset_x, arc8_L9_center[1]]
+                wiggle_arc8_L9.pos = arc8_L9.pos
+                
+                # Update Arc 9 Position
+                arc9_L9.pos = [arc9_L9_center[0] - camera_offset_x, arc9_L9_center[1]]
+                wiggle_arc9_L9.pos = arc9_L9.pos
+                
+                # Update Arc 10 Position
+                arc10_L9.pos = [arc10_L9_center[0] - camera_offset_x, arc10_L9_center[1]]
+                wiggle_arc10_L9.pos = arc10_L9.pos
+                
+                # Update Arc 11 Position
+                arc11_L9.pos = [arc11_L9_center[0] - camera_offset_x, arc11_L9_center[1]]
+                wiggle_arc11_L9.pos = arc11_L9.pos
+                
+                
+                
+                
+                # Draw the backgrounds and floors
+                background1_L9.draw()
+                background2_L9.draw()
+                floor1_L9.draw()
+                floor2_L9.draw()
+                wiggle_arc1_L9.draw()
+                wiggle_arc2_L9.draw()
+                wiggle_arc3_L9.draw()
+                wiggle_arc4_L9.draw()
+                wiggle_arc5_L9.draw()
+                wiggle_arc6_L9.draw()
+                wiggle_arc7_L9.draw()
+                wiggle_arc8_L9.draw()
+                wiggle_arc9_L9.draw()
+                wiggle_arc10_L9.draw()
+                wiggle_arc11_L9.draw()
+                
+                arc1_L9.draw()
+                arc2_L9.draw()
+                arc3_L9.draw()
+                arc4_L9.draw()
+                arc5_L9.draw()
+                arc6_L9.draw()
+                arc7_L9.draw()
+                arc8_L9.draw()
+                arc9_L9.draw()
+                arc10_L9.draw()
+                arc11_L9.draw()
+                
+                # Draw the trail dots
+                for dot in trail_dots:
+                    dot.draw()
+                
+                # Run 'Each Frame' code from GoalController_L9
+                dino_relative_x = dino_pos[0] - camera_offset_x
+                dino_relative_y = dino_pos[1]
+                # Check for collision based on proximity to the updated position
+                dx = dino_relative_x - meatbone_x
+                dy = dino_relative_y - meatbone_y
+                
+                if camera_offset_x >= max_x:
+                    lose_sound_L9.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_x < -1 or dino_relative_x > 1:  # Adjust bounds based on screen width
+                    lose_sound_L9.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_y > 0.6:  # Adjust bounds based on screen width
+                    lose_sound_L9.play()
+                    continueRoutine = False  # Ends the current routine
+                
+                # Check for collision for meatbone
+                if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
+                    meatbone_image_L9.opacity = 0  # Make the meatbone disappear
+                    meatbone_collided = True  # Prevent further collision checks
+                    eat_sound_L9.play()
+                    continueRoutine = False
+                
+                # Check for collision for ARCS
+                for vertex in arc1_L9_vertices:
+                    # Adjust Arc 1 vertex for its X-offset (+1)
+                    adjusted_vertex_x = vertex[0] + arc1_L9_x   # Move Arc 1 vertices by 1 unit to the right
+                    adjusted_vertex_y = vertex[1] + arc1_L9_center[1] # Y remains unchanged, apply the same adjustment as Arc 2 if needed
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 1
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L9 and vertex not in arc1_touched_vertices_L9:
+                        arc1_touched_vertices_L9.append(vertex)
+                        score += 1  # Increment the score for Arc 1
+                
+                
+                for vertex in arc2_L9_vertices:
+                    # Adjust Arc 2 vertex for its X-offset (+2)
+                    adjusted_vertex_x = vertex[0] + arc2_L9_x   # Move Arc 2 vertices by 2 units to the right
+                    adjusted_vertex_y = vertex[1] + arc2_L9_center[1] # Y remains unchanged
+                    
+                    # Calculate distance between Dino and the adjusted vertex of Arc 2
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L9 and vertex not in arc2_touched_vertices_L9:
+                        arc2_touched_vertices_L9.append(vertex)
+                        score += 1  # Increment the score for Arc 2
+                        
+                        
+                for vertex in arc3_L9_vertices:
+                    # Adjust Arc 3 vertex for its static X-offset
+                    adjusted_vertex_x = vertex[0] + arc3_L9_x   # Offset Arc 3 vertices by 3.5 units to the right
+                    adjusted_vertex_y = vertex[1] + arc3_L9_center[1]  # Offset Arc 3 vertices by -0.2 units vertically
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 3
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L9 and vertex not in arc3_touched_vertices_L9:
+                        arc3_touched_vertices_L9.append(vertex)
+                        score += 1  # Increment the score for Arc 3
+                        
+                for vertex in arc4_L9_vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L9_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L9_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 4
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L9 and vertex not in arc4_touched_vertices_L9:
+                        arc4_touched_vertices_L9.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc5_L9_vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L9_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L9_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 5
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L9 and vertex not in arc5_touched_vertices_L9:
+                        arc5_touched_vertices_L9.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc6_L9_vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L9_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L9_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L9 and vertex not in arc6_touched_vertices_L9:
+                        arc6_touched_vertices_L9.append(vertex)
+                        score += 1
+                
+                # Arc 7 touch detection
+                for vertex in arc7_L9_vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L9_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L9_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L9 and vertex not in arc7_touched_vertices_L9:
+                        arc7_touched_vertices_L9.append(vertex)
+                        score += 1
+                
+                # Arc 8 touch detection
+                for vertex in arc8_L9_vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L9_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L9_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L9 and vertex not in arc8_touched_vertices_L9:
+                        arc8_touched_vertices_L9.append(vertex)
+                        score += 1
+                
+                
+                # Arc 9 touch detection
+                for vertex in arc9_L9_vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L9_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L9_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L9 and vertex not in arc9_touched_vertices_L9:
+                        arc9_touched_vertices_L9.append(vertex)
+                        score += 1       
+                
+                # Arc 10 touch detection
+                for vertex in arc10_L9_vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L9_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L9_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L9 and vertex not in arc10_touched_vertices_L9:
+                        arc10_touched_vertices_L9.append(vertex)
+                        score += 1    
+                
+                # Arc 11 touch detection
+                for vertex in arc11_L9_vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L9_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L9_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L9 and vertex not in arc11_touched_vertices_L9:
+                        arc11_touched_vertices_L9.append(vertex)
+                        score += 1    
+                  
+                # WIGGLE ROOM STUFF
+                
+                
+                # Reset to false at the start of each frame
+                wiggle_room = False  
+                for vertex in wiggle_arc1_L9.vertices:
+                    adjusted_vertex_x = vertex[0] + arc1_L9_x 
+                    adjusted_vertex_y = vertex[1] + arc1_L9_center[1] 
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L9:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                for vertex in wiggle_arc2_L9.vertices:
+                    adjusted_vertex_x = vertex[0] + arc2_L9_x 
+                    adjusted_vertex_y = vertex[1] + arc2_L9_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L9:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                        
+                for vertex in wiggle_arc3_L9.vertices:
+                    adjusted_vertex_x = vertex[0] + arc3_L9_x 
+                    adjusted_vertex_y = vertex[1] + arc3_L9_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L9:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                
+                
+                for vertex in wiggle_arc4_L9.vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L9_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L9_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L9:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                
+                
+                for vertex in wiggle_arc5_L9.vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L9_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L9_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L9:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                        
+                for vertex in wiggle_arc6_L9.vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L9_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L9_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L9:
+                        wiggle_room = True
+                        break
+                # Arc 7 wiggle room
+                for vertex in wiggle_arc7_L9.vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L9_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L9_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L9:
+                        wiggle_room = True
+                        break
+                
+                # Arc 8 wiggle room
+                for vertex in wiggle_arc8_L9.vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L9_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L9_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L9:
+                        wiggle_room = True
+                        break
+                        
+                        
+                
+                # Arc 9 wiggle room
+                for vertex in wiggle_arc9_L9.vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L9_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L9_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L9:
+                        wiggle_room = True
+                        break
+                        
+                # Arc 10 wiggle room
+                for vertex in wiggle_arc10_L9.vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L9_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L9_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L9:
+                        wiggle_room = True
+                        break
+                        
+                        
+                # Arc 11 wiggle room
+                for vertex in wiggle_arc11_L9.vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L9_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L9_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L9:
+                        wiggle_room = True
+                        break
+                
+                        
+                        
+                score_text_L9.text = str(score) # update Score
+                
+                
+                
+                # Run 'Each Frame' code from Timer_L9
+                # Calculate remaining time
+                time_remaining = time_limit - level_timer.getTime()
+                
+                # Check if time is up
+                if time_remaining <= 0:
+                    print("Time's up! Returning to MainMenu.")
+                    continueRoutine = False  # End the MainGame routine
+                    time_remaining = 0  # Prevent negative time display
+                
+                # Format the timer as MM:SS
+                minutes = int(time_remaining) // 60
+                seconds = int(time_remaining) % 60
+                
+                # Update the timer display
+                timer_text_L9.text = str(f"{minutes}:{seconds:02d}")
+                
+                
+                # *lose_sound_L9* updates
+                
+                # if lose_sound_L9 is stopping this frame...
+                if lose_sound_L9.status == STARTED:
+                    if bool(False) or lose_sound_L9.isFinished:
+                        # keep track of stop time/frame for later
+                        lose_sound_L9.tStop = t  # not accounting for scr refresh
+                        lose_sound_L9.tStopRefresh = tThisFlipGlobal  # on global time
+                        lose_sound_L9.frameNStop = frameN  # exact frame index
+                        # update status
+                        lose_sound_L9.status = FINISHED
+                        lose_sound_L9.stop()
+                
+                # *eat_sound_L9* updates
+                
+                # if eat_sound_L9 is stopping this frame...
+                if eat_sound_L9.status == STARTED:
+                    if bool(False) or eat_sound_L9.isFinished:
+                        # keep track of stop time/frame for later
+                        eat_sound_L9.tStop = t  # not accounting for scr refresh
+                        eat_sound_L9.tStopRefresh = tThisFlipGlobal  # on global time
+                        eat_sound_L9.frameNStop = frameN  # exact frame index
+                        # update status
+                        eat_sound_L9.status = FINISHED
+                        eat_sound_L9.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[lose_sound_L9, eat_sound_L9]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_9.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_9.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_9" ---
+            for thisComponent in Level_9.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_9
+            Level_9.tStop = globalClock.getTime(format='float')
+            Level_9.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_9.stopped', Level_9.tStop)
+            # Run 'End Routine' code from DinoMovement_L9
+            dino_pos = [-0.5, -0.3]  # Reset Dino's position
+            trail_positions.clear()  # Remove all stored positions
+            # Run 'End Routine' code from GoalController_L9
+            global total_touched_vertices_L9, total_possible_vertices_L9
+            
+            total_touched_vertices_L9 = (
+                len(arc1_touched_vertices_L9) + len(arc2_touched_vertices_L9) + len(arc3_touched_vertices_L9) +
+                len(arc4_touched_vertices_L9) + len(arc5_touched_vertices_L9) + len(arc6_touched_vertices_L9) +
+                len(arc7_touched_vertices_L9) + len(arc8_touched_vertices_L9) + len(arc9_touched_vertices_L9) +
+                len(arc10_touched_vertices_L9) + len(arc11_touched_vertices_L9)
+            )
+            
+            total_possible_vertices_L9 = (
+                len(arc1_L9_vertices) + len(arc2_L9_vertices) + len(arc3_L9_vertices) +
+                len(arc4_L9_vertices) + len(arc5_L9_vertices) + len(arc6_L9_vertices) +
+                len(arc7_L9_vertices) + len(arc8_L9_vertices) + len(arc9_L9_vertices) +
+                len(arc10_L9_vertices) + len(arc11_L9_vertices)
+            )
+            
+            score = 0
+            # the Routine "Level_9" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
+            # --- Prepare to start Routine "Level_9_checker" ---
+            # create an object to store info about Routine Level_9_checker
+            Level_9_checker = data.Routine(
+                name='Level_9_checker',
+                components=[end_score_text_L9, win_sound_L9, fail_sound_L9],
+            )
+            Level_9_checker.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from Checker_L9
+            import csv
+            # Calculate the percentage
+            if total_possible_vertices_L9 > 0:
+                percentage = (total_touched_vertices_L9 / total_possible_vertices_L9) * 100
+            else:
+                percentage = 0  # Avoid division by zero
+                
+            
+            # Update the text for the end screen
+            end_score_text_L9.text = f"Your score: {percentage:.2f}%"
+            
+            # Start 3 second timer
+            end_screen_timer = core.CountdownTimer(3)
+            
+            
+            win_sound_L9.setSound('Assets/sounds/win.mp3', hamming=True)
+            win_sound_L9.setVolume(1.0, log=False)
+            win_sound_L9.seek(0)
+            fail_sound_L9.setSound('Assets/sounds/level_failed.mp3', hamming=True)
+            fail_sound_L9.setVolume(0.6, log=False)
+            fail_sound_L9.seek(0)
+            # store start times for Level_9_checker
+            Level_9_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_9_checker.tStart = globalClock.getTime(format='float')
+            Level_9_checker.status = STARTED
+            thisExp.addData('Level_9_checker.started', Level_9_checker.tStart)
+            Level_9_checker.maxDuration = None
+            # keep track of which components have finished
+            Level_9_checkerComponents = Level_9_checker.components
+            for thisComponent in Level_9_checker.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_9_checker" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_9_Loop, data.TrialHandler2) and thisLevel_9_Loop.thisN != Level_9_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_9_checker.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *end_score_text_L9* updates
+                
+                # if end_score_text_L9 is starting this frame...
+                if end_score_text_L9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    end_score_text_L9.frameNStart = frameN  # exact frame index
+                    end_score_text_L9.tStart = t  # local t and not account for scr refresh
+                    end_score_text_L9.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(end_score_text_L9, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    end_score_text_L9.status = STARTED
+                    end_score_text_L9.setAutoDraw(True)
+                
+                # if end_score_text_L9 is active this frame...
+                if end_score_text_L9.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from Checker_L9
+                # Keep showing the end screen until 3 seconds pass
+                if end_screen_timer.getTime() <= 0:
+                    continueRoutine = False
+                
+                
+                # *win_sound_L9* updates
+                
+                # if win_sound_L9 is stopping this frame...
+                if win_sound_L9.status == STARTED:
+                    if bool(False) or win_sound_L9.isFinished:
+                        # keep track of stop time/frame for later
+                        win_sound_L9.tStop = t  # not accounting for scr refresh
+                        win_sound_L9.tStopRefresh = tThisFlipGlobal  # on global time
+                        win_sound_L9.frameNStop = frameN  # exact frame index
+                        # update status
+                        win_sound_L9.status = FINISHED
+                        win_sound_L9.stop()
+                
+                # *fail_sound_L9* updates
+                
+                # if fail_sound_L9 is stopping this frame...
+                if fail_sound_L9.status == STARTED:
+                    if bool(False) or fail_sound_L9.isFinished:
+                        # keep track of stop time/frame for later
+                        fail_sound_L9.tStop = t  # not accounting for scr refresh
+                        fail_sound_L9.tStopRefresh = tThisFlipGlobal  # on global time
+                        fail_sound_L9.frameNStop = frameN  # exact frame index
+                        # update status
+                        fail_sound_L9.status = FINISHED
+                        fail_sound_L9.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[win_sound_L9, fail_sound_L9]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_9_checker.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_9_checker.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_9_checker" ---
+            for thisComponent in Level_9_checker.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_9_checker
+            Level_9_checker.tStop = globalClock.getTime(format='float')
+            Level_9_checker.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_9_checker.stopped', Level_9_checker.tStop)
+            # Run 'End Routine' code from Checker_L9
+            
+            
+            thisExp.addData('Participant ID', expInfo['participant'])
+            thisExp.addData('Session', expInfo['session'])
+            thisExp.addData('Date', expInfo['date'])
+            thisExp.addData('Score', total_touched_vertices_L9)
+            thisExp.addData('Percentage', percentage)
+            
+            filename = f"data/{expInfo['participant']}_summary.csv"
+            with open(filename, mode='w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(['Participant ID', 'Session', 'Date', 'Score', 'Percentage'])
+                writer.writerow([expInfo['participant'], expInfo['session'], expInfo['date'], total_touched_vertices_L9, percentage])
+            
+            # Decide pass/fail and play correct sound
+            if percentage >= win_threshold and meatbone_collided:
+                Level_9_Loop.finished = True
+                win_sound_L9.play()
+            else:
+                Level_9_Loop.finished = False
+                fail_sound_L9.play()
+                
+            total_touched_vertices_L9 = 0
+            total_possible_vertices_L9 = 0
+            meatbone_collided = False
+            # the Routine "Level_9_checker" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+        # completed 1000.0 repeats of 'Level_9_Loop'
+        
+        
+        # set up handler to look after randomisation of conditions etc
+        Level_10_Loop = data.TrialHandler2(
+            name='Level_10_Loop',
+            nReps=1000.0, 
+            method='sequential', 
+            extraInfo=expInfo, 
+            originPath=-1, 
+            trialList=[None], 
+            seed=None, 
+        )
+        thisExp.addLoop(Level_10_Loop)  # add the loop to the experiment
+        thisLevel_10_Loop = Level_10_Loop.trialList[0]  # so we can initialise stimuli with some values
+        # abbreviate parameter names if possible (e.g. rgb = thisLevel_10_Loop.rgb)
+        if thisLevel_10_Loop != None:
+            for paramName in thisLevel_10_Loop:
+                globals()[paramName] = thisLevel_10_Loop[paramName]
+        
+        for thisLevel_10_Loop in Level_10_Loop:
+            currentLoop = Level_10_Loop
+            thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+            # abbreviate parameter names if possible (e.g. rgb = thisLevel_10_Loop.rgb)
+            if thisLevel_10_Loop != None:
+                for paramName in thisLevel_10_Loop:
+                    globals()[paramName] = thisLevel_10_Loop[paramName]
+            
+            # --- Prepare to start Routine "Level_10" ---
+            # create an object to store info about Routine Level_10
+            Level_10 = data.Routine(
+                name='Level_10',
+                components=[dino_image_L10, floor1_L10, floor2_L10, meatbone_image_L10, score_text_L10, timer_text_L10, lose_sound_L10, eat_sound_L10],
+            )
+            Level_10.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from DinoMovement_L10
+            dino_pos = [0, -0.3]  # Reset Dino's position
+            dino_speed = 0  # Reset vertical speed
+            # Initialize the trail dots
+            trail_dots = [
+                Circle(win, radius=trail_dot_size, fillColor=trail_color, lineColor=None, pos=[-1, -1])
+                for _ in range(trail_length)
+            ]
+            
+            # Run 'Begin Routine' code from worldController_L10
+            camera_offset_x = 0
+            # Run 'Begin Routine' code from GoalController_L10
+            score = 0  # Reset the score
+            
+            meatbone_collided = False
+            meatbone_image_L10.opacity = 1
+            
+            
+            wiggle_room = False  
+            
+            arc1_touched_vertices_L10 = []
+            arc2_touched_vertices_L10 = []
+            arc3_touched_vertices_L10 = []
+            arc4_touched_vertices_L10 = []
+            arc5_touched_vertices_L10 = []
+            arc6_touched_vertices_L10 = []
+            arc7_touched_vertices_L10 = []
+            arc8_touched_vertices_L10 = []
+            arc9_touched_vertices_L10 = []
+            arc10_touched_vertices_L10 = []
+            arc11_touched_vertices_L10 = []
+            # Run 'Begin Routine' code from Timer_L10
+            
+            level_timer.reset()  # Reset the timer at the start of the MainGame routine
+            
+            
+            lose_sound_L10.setSound('Assets/sounds/lose.mp3', hamming=True)
+            lose_sound_L10.setVolume(1.0, log=False)
+            lose_sound_L10.seek(0)
+            eat_sound_L10.setSound('Assets/sounds/eat.mp3', hamming=True)
+            eat_sound_L10.setVolume(1.0, log=False)
+            eat_sound_L10.seek(0)
+            # store start times for Level_10
+            Level_10.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_10.tStart = globalClock.getTime(format='float')
+            Level_10.status = STARTED
+            thisExp.addData('Level_10.started', Level_10.tStart)
+            Level_10.maxDuration = None
+            # keep track of which components have finished
+            Level_10Components = Level_10.components
+            for thisComponent in Level_10.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_10" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_10_Loop, data.TrialHandler2) and thisLevel_10_Loop.thisN != Level_10_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_10.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *dino_image_L10* updates
+                
+                # if dino_image_L10 is starting this frame...
+                if dino_image_L10.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    dino_image_L10.frameNStart = frameN  # exact frame index
+                    dino_image_L10.tStart = t  # local t and not account for scr refresh
+                    dino_image_L10.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(dino_image_L10, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    dino_image_L10.status = STARTED
+                    dino_image_L10.setAutoDraw(True)
+                
+                # if dino_image_L10 is active this frame...
+                if dino_image_L10.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor1_L10* updates
+                
+                # if floor1_L10 is starting this frame...
+                if floor1_L10.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor1_L10.frameNStart = frameN  # exact frame index
+                    floor1_L10.tStart = t  # local t and not account for scr refresh
+                    floor1_L10.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor1_L10, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor1_L10.status = STARTED
+                    floor1_L10.setAutoDraw(True)
+                
+                # if floor1_L10 is active this frame...
+                if floor1_L10.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor2_L10* updates
+                
+                # if floor2_L10 is starting this frame...
+                if floor2_L10.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor2_L10.frameNStart = frameN  # exact frame index
+                    floor2_L10.tStart = t  # local t and not account for scr refresh
+                    floor2_L10.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor2_L10, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor2_L10.status = STARTED
+                    floor2_L10.setAutoDraw(True)
+                
+                # if floor2_L10 is active this frame...
+                if floor2_L10.status == STARTED:
+                    # update params
+                    pass
+                
+                # *meatbone_image_L10* updates
+                
+                # if meatbone_image_L10 is starting this frame...
+                if meatbone_image_L10.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    meatbone_image_L10.frameNStart = frameN  # exact frame index
+                    meatbone_image_L10.tStart = t  # local t and not account for scr refresh
+                    meatbone_image_L10.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(meatbone_image_L10, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    meatbone_image_L10.status = STARTED
+                    meatbone_image_L10.setAutoDraw(True)
+                
+                # if meatbone_image_L10 is active this frame...
+                if meatbone_image_L10.status == STARTED:
+                    # update params
+                    pass
+                
+                # *score_text_L10* updates
+                
+                # if score_text_L10 is starting this frame...
+                if score_text_L10.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    score_text_L10.frameNStart = frameN  # exact frame index
+                    score_text_L10.tStart = t  # local t and not account for scr refresh
+                    score_text_L10.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(score_text_L10, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    score_text_L10.status = STARTED
+                    score_text_L10.setAutoDraw(True)
+                
+                # if score_text_L10 is active this frame...
+                if score_text_L10.status == STARTED:
+                    # update params
+                    pass
+                
+                # *timer_text_L10* updates
+                
+                # if timer_text_L10 is starting this frame...
+                if timer_text_L10.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    timer_text_L10.frameNStart = frameN  # exact frame index
+                    timer_text_L10.tStart = t  # local t and not account for scr refresh
+                    timer_text_L10.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(timer_text_L10, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    timer_text_L10.status = STARTED
+                    timer_text_L10.setAutoDraw(True)
+                
+                # if timer_text_L10 is active this frame...
+                if timer_text_L10.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from DinoMovement_L10
+                
+                # Initialize key state flags
+                left_pressed = False
+                right_pressed = False
+                up_pressed = False
+                
+                # Handle input based on the selected control method
+                
+                # Process keyboard input
+                if selected_control == "Keyboard":
+                    keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
+                    for key in keys_pressed:
+                        if key.name == 'left':
+                            left_pressed = True
+                        if key.name == 'right':
+                            right_pressed = True
+                        if key.name == 'up':
+                            up_pressed = True
+                            
+                # Process PSURP input            
+                if selected_control == "PSURP":
+                    # Read serial data
+                    ser.flushInput()
+                    strSerialData = ser.readline()
+                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                
+                    # Apply difficulty-specific movement
+                    if selected_diff == "1":
+                        # Constant movement for Easy mode
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
+                            dino_image_L10.size = [abs(dino_image_L10.size[0]), dino_image_L10.size[1]]  # Face right
+                
+                    elif selected_diff == "2":
+                        # Proportional movement for Hard mode (current implementation)
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
+                            dino_pos[0] += move_amount  # Movement based on force
+                            dino_image_L10.size = [abs(dino_image_L10.size[0]), dino_image_L10.size[1]]  # Face right
+                
+                    # Jump logic remains the same for both difficulties
+                    if B0ForceInNewtons > MIN_FORCE:
+                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                
+                
+                            
+                 
+                # Apply gravity to Dino's vertical speed
+                dino_speed += gravity
+                
+                # Check if Dino is on the floor (keeps dino on top of floor)
+                if is_on_floor(dino_pos) and dino_speed <= 0:  # Falling or stationary
+                    dino_pos[1] = floor1_top + (dino_image_L10.size[1] / 2) - ground_offset  # Align Dino with the floor
+                    dino_speed = 0  # Reset vertical speed
+                
+                # Respawn if Dino falls below the floor threshold
+                if dino_pos[1] < fall_threshold:
+                    lose_sound_L10.play()
+                    continueRoutine = False  # Stop the MainGame routine
+                    
+                # Jumping logic: Allow jump whenever the 'up' key is pressed
+                if up_pressed:  # Check if the up key is pressed
+                    dino_speed = jump_speed  # Apply upward movement
+                
+                # Update Dino's vertical position
+                dino_pos[1] += dino_speed
+                
+                # Continuous horizontal movement
+                if left_pressed and dino_pos[0] > min_x:
+                    dino_pos[0] -= move_speed  # Move Dino to the left
+                    dino_image_L10.size = [-1 * abs(dino_image_L10.size[0]), dino_image_L10.size[1]]
+                
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed  # Move Dino to the right
+                    dino_image_L10.size = [abs(dino_image_L10.size[0]), dino_image_L10.size[1]]  # Reset Dino to face right
+                
+                # Update Dino's position
+                # dino_image_L10.pos = dino_pos  # Use both X and Y values of dino_pos
+                dino_image_L10.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
+                
+                # Increment the frame counter for trail updates
+                trail_frame_counter += 1
+                
+                # Check if it's time to spawn a new dot
+                if trail_frame_counter >= trail_interval:
+                    if len(trail_positions) >= trail_length:
+                        trail_positions.pop(0)  # Remove the oldest position if trail is full
+                
+                    # Add Dino's current position to the trail
+                    trail_positions.append(dino_pos[:])  # Add a copy of Dino's current position
+                
+                    trail_frame_counter = 0  # Reset the counter
+                
+                # Update the trail dots' positions
+                for i, pos in enumerate(trail_positions):
+                    trail_dots[i].pos = [pos[0] - camera_offset_x, pos[1]]  # Adjust for camera offset
+                
+                
+                # Update the Dino's animation
+                if (frame_index_update_counter % 4) == 0:  # Adjust 4 to control animation speed
+                    dino_image_L10.image = frame_paths[frame_index]  # Update the current frame
+                
+                    # Advance to the next frame
+                    frame_index += 1
+                    if frame_index >= total_frames:
+                        frame_index = 0  # Loop back to the first frame
+                
+                
+                
+                # Increment the animation frame counter
+                frame_index_update_counter += 1
+                
+                
+                # Run 'Each Frame' code from worldController_L10
+                
+                # Update the camera offset based on Dino's X position
+                camera_offset_x += camera_speed  # The camera offset follows Dino's position
+                
+                # Move backgrounds relative to Dino's position (seamless wrap-around)
+                background1_L10.pos = [-(camera_offset_x % background_width), 0]
+                background2_L10.pos = [background1_L10.pos[0] + background_width, 0]
+                
+                # Update floor positions relative to Dino's position
+                floor1_L10.pos = [floor1_pos[0] - camera_offset_x, floor1_L10.pos[1]]
+                floor2_L10.pos = [floor2_x_static - camera_offset_x, floor2_L10.pos[1]]  # floor2_L10 moves with Dino
+                
+                
+                # Update meatbone position to match floor2_L10's top
+                meatbone_x = floor2_L10.pos[0]  # Update X position based on floor2_L10
+                meatbone_y = floor2_top + (meatbone_size[1] / 2) - offset  # Keep the meatbone on top of floor2_L10
+                meatbone_image_L10.pos = [meatbone_x, meatbone_y]
+                
+                
+                # Update the arc position relative to the camera offset
+                # Update Arc 1 Position
+                arc1_L10.pos = [arc1_L10_center[0] - camera_offset_x, arc1_L10_center[1]]
+                wiggle_arc1_L10.pos = arc1_L10.pos  # Keep wiggle room on top
+                
+                # Update Arc 2 Position
+                arc2_L10.pos = [arc2_L10_center[0] - camera_offset_x, arc2_L10_center[1]]
+                wiggle_arc2_L10.pos = arc2_L10.pos  # Keep wiggle room on top
+                arc3_L10.pos = [arc3_L10_center[0] - camera_offset_x, arc3_L10_center[1]]
+                wiggle_arc3_L10.pos = arc3_L10.pos  # Keep wiggle room on top
+                # Update Arc 4 Position
+                arc4_L10.pos = [arc4_L10_center[0] - camera_offset_x, arc4_L10_center[1]]
+                wiggle_arc4_L10.pos = arc4_L10.pos  # Keep wiggle room on top
+                # Update Arc 5 Position
+                arc5_L10.pos = [arc5_L10_center[0] - camera_offset_x, arc5_L10_center[1]]
+                wiggle_arc5_L10.pos = arc5_L10.pos  # Keep wiggle room on top
+                
+                arc6_L10.pos = [arc6_L10_center[0] - camera_offset_x, arc6_L10_center[1]]
+                wiggle_arc6_L10.pos = arc6_L10.pos
+                
+                # Update Arc 7 Position
+                arc7_L10.pos = [arc7_L10_center[0] - camera_offset_x, arc7_L10_center[1]]
+                wiggle_arc7_L10.pos = arc7_L10.pos
+                
+                # Update Arc 8 Position
+                arc8_L10.pos = [arc8_L10_center[0] - camera_offset_x, arc8_L10_center[1]]
+                wiggle_arc8_L10.pos = arc8_L10.pos
+                
+                # Update Arc 9 Position
+                arc9_L10.pos = [arc9_L10_center[0] - camera_offset_x, arc9_L10_center[1]]
+                wiggle_arc9_L10.pos = arc9_L10.pos
+                
+                # Update Arc 10 Position
+                arc10_L10.pos = [arc10_L10_center[0] - camera_offset_x, arc10_L10_center[1]]
+                wiggle_arc10_L10.pos = arc10_L10.pos
+                
+                # Update Arc 11 Position
+                arc11_L10.pos = [arc11_L10_center[0] - camera_offset_x, arc11_L10_center[1]]
+                wiggle_arc11_L10.pos = arc11_L10.pos
+                
+                
+                
+                
+                # Draw the backgrounds and floors
+                background1_L10.draw()
+                background2_L10.draw()
+                floor1_L10.draw()
+                floor2_L10.draw()
+                wiggle_arc1_L10.draw()
+                wiggle_arc2_L10.draw()
+                wiggle_arc3_L10.draw()
+                wiggle_arc4_L10.draw()
+                wiggle_arc5_L10.draw()
+                wiggle_arc6_L10.draw()
+                wiggle_arc7_L10.draw()
+                wiggle_arc8_L10.draw()
+                wiggle_arc9_L10.draw()
+                wiggle_arc10_L10.draw()
+                wiggle_arc11_L10.draw()
+                
+                arc1_L10.draw()
+                arc2_L10.draw()
+                arc3_L10.draw()
+                arc4_L10.draw()
+                arc5_L10.draw()
+                arc6_L10.draw()
+                arc7_L10.draw()
+                arc8_L10.draw()
+                arc9_L10.draw()
+                arc10_L10.draw()
+                arc11_L10.draw()
+                
+                # Draw the trail dots
+                for dot in trail_dots:
+                    dot.draw()
+                
+                # Run 'Each Frame' code from GoalController_L10
+                dino_relative_x = dino_pos[0] - camera_offset_x
+                dino_relative_y = dino_pos[1]
+                # Check for collision based on proximity to the updated position
+                dx = dino_relative_x - meatbone_x
+                dy = dino_relative_y - meatbone_y
+                
+                if camera_offset_x >= max_x:
+                    lose_sound_L10.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_x < -1 or dino_relative_x > 1:  # Adjust bounds based on screen width
+                    lose_sound_L10.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_y > 0.6:  # Adjust bounds based on screen width
+                    lose_sound_L10.play()
+                    continueRoutine = False  # Ends the current routine
+                
+                # Check for collision for meatbone
+                if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
+                    meatbone_image_L10.opacity = 0  # Make the meatbone disappear
+                    meatbone_collided = True  # Prevent further collision checks
+                    eat_sound_L10.play()
+                    continueRoutine = False
+                
+                # Check for collision for ARCS
+                for vertex in arc1_L10_vertices:
+                    # Adjust Arc 1 vertex for its X-offset (+1)
+                    adjusted_vertex_x = vertex[0] + arc1_L10_x   # Move Arc 1 vertices by 1 unit to the right
+                    adjusted_vertex_y = vertex[1] + arc1_L10_center[1] # Y remains unchanged, apply the same adjustment as Arc 2 if needed
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 1
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L10 and vertex not in arc1_touched_vertices_L10:
+                        arc1_touched_vertices_L10.append(vertex)
+                        score += 1  # Increment the score for Arc 1
+                
+                
+                for vertex in arc2_L10_vertices:
+                    # Adjust Arc 2 vertex for its X-offset (+2)
+                    adjusted_vertex_x = vertex[0] + arc2_L10_x   # Move Arc 2 vertices by 2 units to the right
+                    adjusted_vertex_y = vertex[1] + arc2_L10_center[1] # Y remains unchanged
+                    
+                    # Calculate distance between Dino and the adjusted vertex of Arc 2
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L10 and vertex not in arc2_touched_vertices_L10:
+                        arc2_touched_vertices_L10.append(vertex)
+                        score += 1  # Increment the score for Arc 2
+                        
+                        
+                for vertex in arc3_L10_vertices:
+                    # Adjust Arc 3 vertex for its static X-offset
+                    adjusted_vertex_x = vertex[0] + arc3_L10_x   # Offset Arc 3 vertices by 3.5 units to the right
+                    adjusted_vertex_y = vertex[1] + arc3_L10_center[1]  # Offset Arc 3 vertices by -0.2 units vertically
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 3
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L10 and vertex not in arc3_touched_vertices_L10:
+                        arc3_touched_vertices_L10.append(vertex)
+                        score += 1  # Increment the score for Arc 3
+                        
+                for vertex in arc4_L10_vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L10_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L10_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 4
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L10 and vertex not in arc4_touched_vertices_L10:
+                        arc4_touched_vertices_L10.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc5_L10_vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L10_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L10_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 5
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L10 and vertex not in arc5_touched_vertices_L10:
+                        arc5_touched_vertices_L10.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc6_L10_vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10 and vertex not in arc6_touched_vertices_L10:
+                        arc6_touched_vertices_L10.append(vertex)
+                        score += 1
+                
+                # Arc 7 touch detection
+                for vertex in arc7_L10_vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10 and vertex not in arc7_touched_vertices_L10:
+                        arc7_touched_vertices_L10.append(vertex)
+                        score += 1
+                
+                # Arc 8 touch detection
+                for vertex in arc8_L10_vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10 and vertex not in arc8_touched_vertices_L10:
+                        arc8_touched_vertices_L10.append(vertex)
+                        score += 1
+                
+                
+                # Arc 9 touch detection
+                for vertex in arc9_L10_vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10 and vertex not in arc9_touched_vertices_L10:
+                        arc9_touched_vertices_L10.append(vertex)
+                        score += 1       
+                
+                # Arc 10 touch detection
+                for vertex in arc10_L10_vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10 and vertex not in arc10_touched_vertices_L10:
+                        arc10_touched_vertices_L10.append(vertex)
+                        score += 1    
+                
+                # Arc 11 touch detection
+                for vertex in arc11_L10_vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10 and vertex not in arc11_touched_vertices_L10:
+                        arc11_touched_vertices_L10.append(vertex)
+                        score += 1    
+                  
+                # WIGGLE ROOM STUFF
+                
+                
+                # Reset to false at the start of each frame
+                wiggle_room = False  
+                for vertex in wiggle_arc1_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc1_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc1_L10_center[1] 
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                for vertex in wiggle_arc2_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc2_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc2_L10_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                        
+                for vertex in wiggle_arc3_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc3_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc3_L10_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                
+                
+                for vertex in wiggle_arc4_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L10_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L10_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                
+                
+                for vertex in wiggle_arc5_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L10_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L10_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                        
+                for vertex in wiggle_arc6_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True
+                        break
+                # Arc 7 wiggle room
+                for vertex in wiggle_arc7_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True
+                        break
+                
+                # Arc 8 wiggle room
+                for vertex in wiggle_arc8_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True
+                        break
+                        
+                        
+                
+                # Arc 9 wiggle room
+                for vertex in wiggle_arc9_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True
+                        break
+                        
+                # Arc 10 wiggle room
+                for vertex in wiggle_arc10_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True
+                        break
+                        
+                        
+                # Arc 11 wiggle room
+                for vertex in wiggle_arc11_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True
+                        break
+                
+                        
+                        
+                score_text_L10.text = str(score) # update Score
+                
+                
+                dino_relative_x = dino_pos[0] - camera_offset_x
+                dino_relative_y = dino_pos[1]
+                # Check for collision based on proximity to the updated position
+                dx = dino_relative_x - meatbone_x
+                dy = dino_relative_y - meatbone_y
+                
+                if camera_offset_x >= max_x:
+                    lose_sound_L10.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_x < -1 or dino_relative_x > 1:  # Adjust bounds based on screen width
+                    lose_sound_L10.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_y > 0.6:  # Adjust bounds based on screen width
+                    lose_sound_L10.play()
+                    continueRoutine = False  # Ends the current routine
+                
+                # Check for collision for meatbone
+                if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
+                    print("Dino ate the meatbone!")
+                    meatbone_image_L10.opacity = 0  # Make the meatbone disappear
+                    meatbone_collided = True  # Prevent further collision checks
+                    eat_sound_L10.play()
+                    continueRoutine = False
+                
+                # Check for collision for ARCS
+                for vertex in arc1_L10_vertices:
+                    # Adjust Arc 1 vertex for its X-offset (+1)
+                    adjusted_vertex_x = vertex[0] + arc1_L10_x   # Move Arc 1 vertices by 1 unit to the right
+                    adjusted_vertex_y = vertex[1] + arc1_L10_center[1] # Y remains unchanged, apply the same adjustment as Arc 2 if needed
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 1
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L10 and vertex not in arc1_touched_vertices_L10:
+                        arc1_touched_vertices_L10.append(vertex)
+                        score += 1  # Increment the score for Arc 1
+                
+                
+                for vertex in arc2_L10_vertices:
+                    # Adjust Arc 2 vertex for its X-offset (+2)
+                    adjusted_vertex_x = vertex[0] + arc2_L10_x   # Move Arc 2 vertices by 2 units to the right
+                    adjusted_vertex_y = vertex[1] + arc2_L10_center[1] # Y remains unchanged
+                    
+                    # Calculate distance between Dino and the adjusted vertex of Arc 2
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L10 and vertex not in arc2_touched_vertices_L10:
+                        arc2_touched_vertices_L10.append(vertex)
+                        score += 1  # Increment the score for Arc 2
+                        
+                        
+                for vertex in arc3_L10_vertices:
+                    # Adjust Arc 3 vertex for its static X-offset
+                    adjusted_vertex_x = vertex[0] + arc3_L10_x   # Offset Arc 3 vertices by 3.5 units to the right
+                    adjusted_vertex_y = vertex[1] + arc3_L10_center[1]  # Offset Arc 3 vertices by -0.2 units vertically
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 3
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L10 and vertex not in arc3_touched_vertices_L10:
+                        arc3_touched_vertices_L10.append(vertex)
+                        score += 1  # Increment the score for Arc 3
+                        
+                for vertex in arc4_L10_vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L10_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L10_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 4
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L10 and vertex not in arc4_touched_vertices_L10:
+                        arc4_touched_vertices_L10.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc5_L10_vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L10_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L10_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 5
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L10 and vertex not in arc5_touched_vertices_L10:
+                        arc5_touched_vertices_L10.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc6_L10_vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10 and vertex not in arc6_touched_vertices_L10:
+                        arc6_touched_vertices_L10.append(vertex)
+                        score += 1
+                
+                # Arc 7 touch detection
+                for vertex in arc7_L10_vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10 and vertex not in arc7_touched_vertices_L10:
+                        arc7_touched_vertices_L10.append(vertex)
+                        score += 1
+                
+                # Arc 8 touch detection
+                for vertex in arc8_L10_vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10 and vertex not in arc8_touched_vertices_L10:
+                        arc8_touched_vertices_L10.append(vertex)
+                        score += 1
+                
+                
+                # Arc 9 touch detection
+                for vertex in arc9_L10_vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10 and vertex not in arc9_touched_vertices_L10:
+                        arc9_touched_vertices_L10.append(vertex)
+                        score += 1       
+                
+                # Arc 10 touch detection
+                for vertex in arc10_L10_vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10 and vertex not in arc10_touched_vertices_L10:
+                        arc10_touched_vertices_L10.append(vertex)
+                        score += 1    
+                
+                # Arc 11 touch detection
+                for vertex in arc11_L10_vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10 and vertex not in arc11_touched_vertices_L10:
+                        arc11_touched_vertices_L10.append(vertex)
+                        score += 1    
+                  
+                # WIGGLE ROOM STUFF
+                
+                
+                # Reset to false at the start of each frame
+                wiggle_room = False  
+                for vertex in wiggle_arc1_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc1_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc1_L10_center[1] 
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                for vertex in wiggle_arc2_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc2_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc2_L10_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                        
+                for vertex in wiggle_arc3_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc3_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc3_L10_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                
+                
+                for vertex in wiggle_arc4_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L10_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L10_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                
+                
+                for vertex in wiggle_arc5_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L10_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L10_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                        
+                for vertex in wiggle_arc6_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True
+                        break
+                # Arc 7 wiggle room
+                for vertex in wiggle_arc7_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True
+                        break
+                
+                # Arc 8 wiggle room
+                for vertex in wiggle_arc8_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True
+                        break
+                        
+                        
+                
+                # Arc 9 wiggle room
+                for vertex in wiggle_arc9_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True
+                        break
+                        
+                # Arc 10 wiggle room
+                for vertex in wiggle_arc10_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True
+                        break
+                        
+                        
+                # Arc 11 wiggle room
+                for vertex in wiggle_arc11_L10.vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L10_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L10_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L10:
+                        wiggle_room = True
+                        break
+                
+                        
+                        
+                score_text_L10.text = str(score) # update Score
+                
+                
+                
+                # Run 'Each Frame' code from Timer_L10
+                # Calculate remaining time
+                time_remaining = time_limit - level_timer.getTime()
+                
+                # Check if time is up
+                if time_remaining <= 0:
+                    print("Time's up! Returning to MainMenu.")
+                    continueRoutine = False  # End the MainGame routine
+                    time_remaining = 0  # Prevent negative time display
+                
+                # Format the timer as MM:SS
+                minutes = int(time_remaining) // 60
+                seconds = int(time_remaining) % 60
+                
+                # Update the timer display
+                timer_text_L10.text = str(f"{minutes}:{seconds:02d}")
+                
+                
+                # *lose_sound_L10* updates
+                
+                # if lose_sound_L10 is stopping this frame...
+                if lose_sound_L10.status == STARTED:
+                    if bool(False) or lose_sound_L10.isFinished:
+                        # keep track of stop time/frame for later
+                        lose_sound_L10.tStop = t  # not accounting for scr refresh
+                        lose_sound_L10.tStopRefresh = tThisFlipGlobal  # on global time
+                        lose_sound_L10.frameNStop = frameN  # exact frame index
+                        # update status
+                        lose_sound_L10.status = FINISHED
+                        lose_sound_L10.stop()
+                
+                # *eat_sound_L10* updates
+                
+                # if eat_sound_L10 is stopping this frame...
+                if eat_sound_L10.status == STARTED:
+                    if bool(False) or eat_sound_L10.isFinished:
+                        # keep track of stop time/frame for later
+                        eat_sound_L10.tStop = t  # not accounting for scr refresh
+                        eat_sound_L10.tStopRefresh = tThisFlipGlobal  # on global time
+                        eat_sound_L10.frameNStop = frameN  # exact frame index
+                        # update status
+                        eat_sound_L10.status = FINISHED
+                        eat_sound_L10.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[lose_sound_L10, eat_sound_L10]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_10.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_10.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_10" ---
+            for thisComponent in Level_10.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_10
+            Level_10.tStop = globalClock.getTime(format='float')
+            Level_10.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_10.stopped', Level_10.tStop)
+            # Run 'End Routine' code from DinoMovement_L10
+            dino_pos = [-0.5, -0.3]  # Reset Dino's position
+            trail_positions.clear()  # Remove all stored positions
+            # Run 'End Routine' code from GoalController_L10
+            global total_touched_vertices_L10, total_possible_vertices_L10
+            
+            total_touched_vertices_L10 = (
+                len(arc1_touched_vertices_L10) + len(arc2_touched_vertices_L10) + len(arc3_touched_vertices_L10) +
+                len(arc4_touched_vertices_L10) + len(arc5_touched_vertices_L10) + len(arc6_touched_vertices_L10) +
+                len(arc7_touched_vertices_L10) + len(arc8_touched_vertices_L10) + len(arc9_touched_vertices_L10) +
+                len(arc10_touched_vertices_L10) + len(arc11_touched_vertices_L10)
+            )
+            
+            total_possible_vertices_L10 = (
+                len(arc1_L10_vertices) + len(arc2_L10_vertices) + len(arc3_L10_vertices) +
+                len(arc4_L10_vertices) + len(arc5_L10_vertices) + len(arc6_L10_vertices) +
+                len(arc7_L10_vertices) + len(arc8_L10_vertices) + len(arc9_L10_vertices) +
+                len(arc10_L10_vertices) + len(arc11_L10_vertices)
+            )
+            
+            score = 0
+            # the Routine "Level_10" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
+            # --- Prepare to start Routine "Level_10_checker" ---
+            # create an object to store info about Routine Level_10_checker
+            Level_10_checker = data.Routine(
+                name='Level_10_checker',
+                components=[end_score_text_L10, win_sound_L10, fail_sound_L10],
+            )
+            Level_10_checker.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from Checker_L10
+            import csv
+            # Calculate the percentage
+            if total_possible_vertices_L10 > 0:
+                percentage = (total_touched_vertices_L10 / total_possible_vertices_L10) * 100
+            else:
+                percentage = 0  # Avoid division by zero
+                
+            
+            # Update the text for the end screen
+            end_score_text_L10.text = f"Your score: {percentage:.2f}%"
+            
+            # Start 3 second timer
+            end_screen_timer = core.CountdownTimer(3)
+            
+            
+            win_sound_L10.setSound('Assets/sounds/win.mp3', hamming=True)
+            win_sound_L10.setVolume(1.0, log=False)
+            win_sound_L10.seek(0)
+            fail_sound_L10.setSound('Assets/sounds/level_failed.mp3', hamming=True)
+            fail_sound_L10.setVolume(0.6, log=False)
+            fail_sound_L10.seek(0)
+            # store start times for Level_10_checker
+            Level_10_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_10_checker.tStart = globalClock.getTime(format='float')
+            Level_10_checker.status = STARTED
+            thisExp.addData('Level_10_checker.started', Level_10_checker.tStart)
+            Level_10_checker.maxDuration = None
+            # keep track of which components have finished
+            Level_10_checkerComponents = Level_10_checker.components
+            for thisComponent in Level_10_checker.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_10_checker" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_10_Loop, data.TrialHandler2) and thisLevel_10_Loop.thisN != Level_10_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_10_checker.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *end_score_text_L10* updates
+                
+                # if end_score_text_L10 is starting this frame...
+                if end_score_text_L10.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    end_score_text_L10.frameNStart = frameN  # exact frame index
+                    end_score_text_L10.tStart = t  # local t and not account for scr refresh
+                    end_score_text_L10.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(end_score_text_L10, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    end_score_text_L10.status = STARTED
+                    end_score_text_L10.setAutoDraw(True)
+                
+                # if end_score_text_L10 is active this frame...
+                if end_score_text_L10.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from Checker_L10
+                # Keep showing the end screen until 3 seconds pass
+                if end_screen_timer.getTime() <= 0:
+                    continueRoutine = False
+                
+                
+                # *win_sound_L10* updates
+                
+                # if win_sound_L10 is stopping this frame...
+                if win_sound_L10.status == STARTED:
+                    if bool(False) or win_sound_L10.isFinished:
+                        # keep track of stop time/frame for later
+                        win_sound_L10.tStop = t  # not accounting for scr refresh
+                        win_sound_L10.tStopRefresh = tThisFlipGlobal  # on global time
+                        win_sound_L10.frameNStop = frameN  # exact frame index
+                        # update status
+                        win_sound_L10.status = FINISHED
+                        win_sound_L10.stop()
+                
+                # *fail_sound_L10* updates
+                
+                # if fail_sound_L10 is stopping this frame...
+                if fail_sound_L10.status == STARTED:
+                    if bool(False) or fail_sound_L10.isFinished:
+                        # keep track of stop time/frame for later
+                        fail_sound_L10.tStop = t  # not accounting for scr refresh
+                        fail_sound_L10.tStopRefresh = tThisFlipGlobal  # on global time
+                        fail_sound_L10.frameNStop = frameN  # exact frame index
+                        # update status
+                        fail_sound_L10.status = FINISHED
+                        fail_sound_L10.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[win_sound_L10, fail_sound_L10]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_10_checker.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_10_checker.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_10_checker" ---
+            for thisComponent in Level_10_checker.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_10_checker
+            Level_10_checker.tStop = globalClock.getTime(format='float')
+            Level_10_checker.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_10_checker.stopped', Level_10_checker.tStop)
+            # Run 'End Routine' code from Checker_L10
+            
+            
+            thisExp.addData('Participant ID', expInfo['participant'])
+            thisExp.addData('Session', expInfo['session'])
+            thisExp.addData('Date', expInfo['date'])
+            thisExp.addData('Score', total_touched_vertices_L10)
+            thisExp.addData('Percentage', percentage)
+            
+            filename = f"data/{expInfo['participant']}_summary.csv"
+            with open(filename, mode='w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(['Participant ID', 'Session', 'Date', 'Score', 'Percentage'])
+                writer.writerow([expInfo['participant'], expInfo['session'], expInfo['date'], total_touched_vertices_L10, percentage])
+            
+            # Decide pass/fail and play correct sound
+            if percentage >= win_threshold and meatbone_collided:
+                Level_10_Loop.finished = True
+                win_sound_L10.play()
+            else:
+                Level_10_Loop.finished = False
+                fail_sound_L10.play()
+                
+            total_touched_vertices_L10 = 0
+            total_possible_vertices_L10 = 0
+            meatbone_collided = False
+            # the Routine "Level_10_checker" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+        # completed 1000.0 repeats of 'Level_10_Loop'
+        
+        
+        # set up handler to look after randomisation of conditions etc
+        Level_11_Loop = data.TrialHandler2(
+            name='Level_11_Loop',
+            nReps=1000.0, 
+            method='sequential', 
+            extraInfo=expInfo, 
+            originPath=-1, 
+            trialList=[None], 
+            seed=None, 
+        )
+        thisExp.addLoop(Level_11_Loop)  # add the loop to the experiment
+        thisLevel_11_Loop = Level_11_Loop.trialList[0]  # so we can initialise stimuli with some values
+        # abbreviate parameter names if possible (e.g. rgb = thisLevel_11_Loop.rgb)
+        if thisLevel_11_Loop != None:
+            for paramName in thisLevel_11_Loop:
+                globals()[paramName] = thisLevel_11_Loop[paramName]
+        
+        for thisLevel_11_Loop in Level_11_Loop:
+            currentLoop = Level_11_Loop
+            thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+            # abbreviate parameter names if possible (e.g. rgb = thisLevel_11_Loop.rgb)
+            if thisLevel_11_Loop != None:
+                for paramName in thisLevel_11_Loop:
+                    globals()[paramName] = thisLevel_11_Loop[paramName]
+            
+            # --- Prepare to start Routine "Level_11" ---
+            # create an object to store info about Routine Level_11
+            Level_11 = data.Routine(
+                name='Level_11',
+                components=[dino_image_L11, floor1_L11, floor2_L11, meatbone_image_L11, score_text_L11, timer_text_L11, lose_sound_L11, eat_sound_L11],
+            )
+            Level_11.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from DinoMovement_L11
+            dino_pos = [0, -0.3]  # Reset Dino's position
+            dino_speed = 0  # Reset vertical speed
+            # Initialize the trail dots
+            trail_dots = [
+                Circle(win, radius=trail_dot_size, fillColor=trail_color, lineColor=None, pos=[-1, -1])
+                for _ in range(trail_length)
+            ]
+            
+            # Run 'Begin Routine' code from worldController_L11
+            camera_offset_x = 0
+            # Run 'Begin Routine' code from GoalController_L11
+            score = 0  # Reset the score
+            
+            meatbone_collided = False
+            meatbone_image_L11.opacity = 1
+            
+            
+            wiggle_room = False  
+            
+            arc1_touched_vertices_L11 = []
+            arc2_touched_vertices_L11 = []
+            arc3_touched_vertices_L11 = []
+            arc4_touched_vertices_L11 = []
+            arc5_touched_vertices_L11 = []
+            arc6_touched_vertices_L11 = []
+            arc7_touched_vertices_L11 = []
+            arc8_touched_vertices_L11 = []
+            arc9_touched_vertices_L11 = []
+            arc10_touched_vertices_L11 = []
+            arc11_touched_vertices_L11 = []
+            # Run 'Begin Routine' code from Timer_L11
+            
+            level_timer.reset()  # Reset the timer at the start of the MainGame routine
+            
+            
+            lose_sound_L11.setSound('Assets/sounds/lose.mp3', hamming=True)
+            lose_sound_L11.setVolume(1.0, log=False)
+            lose_sound_L11.seek(0)
+            eat_sound_L11.setSound('Assets/sounds/eat.mp3', hamming=True)
+            eat_sound_L11.setVolume(1.0, log=False)
+            eat_sound_L11.seek(0)
+            # store start times for Level_11
+            Level_11.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_11.tStart = globalClock.getTime(format='float')
+            Level_11.status = STARTED
+            thisExp.addData('Level_11.started', Level_11.tStart)
+            Level_11.maxDuration = None
+            # keep track of which components have finished
+            Level_11Components = Level_11.components
+            for thisComponent in Level_11.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_11" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_11_Loop, data.TrialHandler2) and thisLevel_11_Loop.thisN != Level_11_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_11.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *dino_image_L11* updates
+                
+                # if dino_image_L11 is starting this frame...
+                if dino_image_L11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    dino_image_L11.frameNStart = frameN  # exact frame index
+                    dino_image_L11.tStart = t  # local t and not account for scr refresh
+                    dino_image_L11.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(dino_image_L11, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    dino_image_L11.status = STARTED
+                    dino_image_L11.setAutoDraw(True)
+                
+                # if dino_image_L11 is active this frame...
+                if dino_image_L11.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor1_L11* updates
+                
+                # if floor1_L11 is starting this frame...
+                if floor1_L11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor1_L11.frameNStart = frameN  # exact frame index
+                    floor1_L11.tStart = t  # local t and not account for scr refresh
+                    floor1_L11.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor1_L11, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor1_L11.status = STARTED
+                    floor1_L11.setAutoDraw(True)
+                
+                # if floor1_L11 is active this frame...
+                if floor1_L11.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor2_L11* updates
+                
+                # if floor2_L11 is starting this frame...
+                if floor2_L11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor2_L11.frameNStart = frameN  # exact frame index
+                    floor2_L11.tStart = t  # local t and not account for scr refresh
+                    floor2_L11.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor2_L11, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor2_L11.status = STARTED
+                    floor2_L11.setAutoDraw(True)
+                
+                # if floor2_L11 is active this frame...
+                if floor2_L11.status == STARTED:
+                    # update params
+                    pass
+                
+                # *meatbone_image_L11* updates
+                
+                # if meatbone_image_L11 is starting this frame...
+                if meatbone_image_L11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    meatbone_image_L11.frameNStart = frameN  # exact frame index
+                    meatbone_image_L11.tStart = t  # local t and not account for scr refresh
+                    meatbone_image_L11.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(meatbone_image_L11, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    meatbone_image_L11.status = STARTED
+                    meatbone_image_L11.setAutoDraw(True)
+                
+                # if meatbone_image_L11 is active this frame...
+                if meatbone_image_L11.status == STARTED:
+                    # update params
+                    pass
+                
+                # *score_text_L11* updates
+                
+                # if score_text_L11 is starting this frame...
+                if score_text_L11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    score_text_L11.frameNStart = frameN  # exact frame index
+                    score_text_L11.tStart = t  # local t and not account for scr refresh
+                    score_text_L11.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(score_text_L11, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    score_text_L11.status = STARTED
+                    score_text_L11.setAutoDraw(True)
+                
+                # if score_text_L11 is active this frame...
+                if score_text_L11.status == STARTED:
+                    # update params
+                    pass
+                
+                # *timer_text_L11* updates
+                
+                # if timer_text_L11 is starting this frame...
+                if timer_text_L11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    timer_text_L11.frameNStart = frameN  # exact frame index
+                    timer_text_L11.tStart = t  # local t and not account for scr refresh
+                    timer_text_L11.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(timer_text_L11, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    timer_text_L11.status = STARTED
+                    timer_text_L11.setAutoDraw(True)
+                
+                # if timer_text_L11 is active this frame...
+                if timer_text_L11.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from DinoMovement_L11
+                
+                # Initialize key state flags
+                left_pressed = False
+                right_pressed = False
+                up_pressed = False
+                
+                # Handle input based on the selected control method
+                
+                # Process keyboard input
+                if selected_control == "Keyboard":
+                    keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
+                    for key in keys_pressed:
+                        if key.name == 'left':
+                            left_pressed = True
+                        if key.name == 'right':
+                            right_pressed = True
+                        if key.name == 'up':
+                            up_pressed = True
+                            
+                # Process PSURP input            
+                if selected_control == "PSURP":
+                    # Read serial data
+                    ser.flushInput()
+                    strSerialData = ser.readline()
+                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                
+                    # Apply difficulty-specific movement
+                    if selected_diff == "1":
+                        # Constant movement for Easy mode
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
+                            dino_image_L11.size = [abs(dino_image_L11.size[0]), dino_image_L11.size[1]]  # Face right
+                
+                    elif selected_diff == "2":
+                        # Proportional movement for Hard mode (current implementation)
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
+                            dino_pos[0] += move_amount  # Movement based on force
+                            dino_image_L11.size = [abs(dino_image_L11.size[0]), dino_image_L11.size[1]]  # Face right
+                
+                    # Jump logic remains the same for both difficulties
+                    if B0ForceInNewtons > MIN_FORCE:
+                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                
+                
+                            
+                 
+                # Apply gravity to Dino's vertical speed
+                dino_speed += gravity
+                
+                # Check if Dino is on the floor (keeps dino on top of floor)
+                if is_on_floor(dino_pos) and dino_speed <= 0:  # Falling or stationary
+                    dino_pos[1] = floor1_top + (dino_image_L11.size[1] / 2) - ground_offset  # Align Dino with the floor
+                    dino_speed = 0  # Reset vertical speed
+                
+                # Respawn if Dino falls below the floor threshold
+                if dino_pos[1] < fall_threshold:
+                    lose_sound_L11.play()
+                    continueRoutine = False  # Stop the MainGame routine
+                    
+                # Jumping logic: Allow jump whenever the 'up' key is pressed
+                if up_pressed:  # Check if the up key is pressed
+                    dino_speed = jump_speed  # Apply upward movement
+                
+                # Update Dino's vertical position
+                dino_pos[1] += dino_speed
+                
+                # Continuous horizontal movement
+                if left_pressed and dino_pos[0] > min_x:
+                    dino_pos[0] -= move_speed  # Move Dino to the left
+                    dino_image_L11.size = [-1 * abs(dino_image_L11.size[0]), dino_image_L11.size[1]]
+                
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed  # Move Dino to the right
+                    dino_image_L11.size = [abs(dino_image_L11.size[0]), dino_image_L11.size[1]]  # Reset Dino to face right
+                
+                # Update Dino's position
+                # dino_image_L11.pos = dino_pos  # Use both X and Y values of dino_pos
+                dino_image_L11.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
+                
+                # Increment the frame counter for trail updates
+                trail_frame_counter += 1
+                
+                # Check if it's time to spawn a new dot
+                if trail_frame_counter >= trail_interval:
+                    if len(trail_positions) >= trail_length:
+                        trail_positions.pop(0)  # Remove the oldest position if trail is full
+                
+                    # Add Dino's current position to the trail
+                    trail_positions.append(dino_pos[:])  # Add a copy of Dino's current position
+                
+                    trail_frame_counter = 0  # Reset the counter
+                
+                # Update the trail dots' positions
+                for i, pos in enumerate(trail_positions):
+                    trail_dots[i].pos = [pos[0] - camera_offset_x, pos[1]]  # Adjust for camera offset
+                
+                
+                # Update the Dino's animation
+                if (frame_index_update_counter % 4) == 0:  # Adjust 4 to control animation speed
+                    dino_image_L11.image = frame_paths[frame_index]  # Update the current frame
+                
+                    # Advance to the next frame
+                    frame_index += 1
+                    if frame_index >= total_frames:
+                        frame_index = 0  # Loop back to the first frame
+                
+                
+                
+                # Increment the animation frame counter
+                frame_index_update_counter += 1
+                
+                
+                # Run 'Each Frame' code from worldController_L11
+                
+                # Update the camera offset based on Dino's X position
+                camera_offset_x += camera_speed  # The camera offset follows Dino's position
+                
+                # Move backgrounds relative to Dino's position (seamless wrap-around)
+                background1_L11.pos = [-(camera_offset_x % background_width), 0]
+                background2_L11.pos = [background1_L11.pos[0] + background_width, 0]
+                
+                # Update floor positions relative to Dino's position
+                floor1_L11.pos = [floor1_pos[0] - camera_offset_x, floor1_L11.pos[1]]
+                floor2_L11.pos = [floor2_x_static - camera_offset_x, floor2_L11.pos[1]]  # floor2_L11 moves with Dino
+                
+                
+                # Update meatbone position to match floor2_L11's top
+                meatbone_x = floor2_L11.pos[0]  # Update X position based on floor2_L11
+                meatbone_y = floor2_top + (meatbone_size[1] / 2) - offset  # Keep the meatbone on top of floor2_L11
+                meatbone_image_L11.pos = [meatbone_x, meatbone_y]
+                
+                
+                # Update the arc position relative to the camera offset
+                # Update Arc 1 Position
+                arc1_L11.pos = [arc1_L11_center[0] - camera_offset_x, arc1_L11_center[1]]
+                wiggle_arc1_L11.pos = arc1_L11.pos  # Keep wiggle room on top
+                
+                # Update Arc 2 Position
+                arc2_L11.pos = [arc2_L11_center[0] - camera_offset_x, arc2_L11_center[1]]
+                wiggle_arc2_L11.pos = arc2_L11.pos  # Keep wiggle room on top
+                arc3_L11.pos = [arc3_L11_center[0] - camera_offset_x, arc3_L11_center[1]]
+                wiggle_arc3_L11.pos = arc3_L11.pos  # Keep wiggle room on top
+                # Update Arc 4 Position
+                arc4_L11.pos = [arc4_L11_center[0] - camera_offset_x, arc4_L11_center[1]]
+                wiggle_arc4_L11.pos = arc4_L11.pos  # Keep wiggle room on top
+                # Update Arc 5 Position
+                arc5_L11.pos = [arc5_L11_center[0] - camera_offset_x, arc5_L11_center[1]]
+                wiggle_arc5_L11.pos = arc5_L11.pos  # Keep wiggle room on top
+                
+                arc6_L11.pos = [arc6_L11_center[0] - camera_offset_x, arc6_L11_center[1]]
+                wiggle_arc6_L11.pos = arc6_L11.pos
+                
+                # Update Arc 7 Position
+                arc7_L11.pos = [arc7_L11_center[0] - camera_offset_x, arc7_L11_center[1]]
+                wiggle_arc7_L11.pos = arc7_L11.pos
+                
+                # Update Arc 8 Position
+                arc8_L11.pos = [arc8_L11_center[0] - camera_offset_x, arc8_L11_center[1]]
+                wiggle_arc8_L11.pos = arc8_L11.pos
+                
+                # Update Arc 9 Position
+                arc9_L11.pos = [arc9_L11_center[0] - camera_offset_x, arc9_L11_center[1]]
+                wiggle_arc9_L11.pos = arc9_L11.pos
+                
+                # Update Arc 10 Position
+                arc10_L11.pos = [arc10_L11_center[0] - camera_offset_x, arc10_L11_center[1]]
+                wiggle_arc10_L11.pos = arc10_L11.pos
+                
+                # Update Arc 11 Position
+                arc11_L11.pos = [arc11_L11_center[0] - camera_offset_x, arc11_L11_center[1]]
+                wiggle_arc11_L11.pos = arc11_L11.pos
+                
+                
+                
+                
+                # Draw the backgrounds and floors
+                background1_L11.draw()
+                background2_L11.draw()
+                floor1_L11.draw()
+                floor2_L11.draw()
+                wiggle_arc1_L11.draw()
+                wiggle_arc2_L11.draw()
+                wiggle_arc3_L11.draw()
+                wiggle_arc4_L11.draw()
+                wiggle_arc5_L11.draw()
+                wiggle_arc6_L11.draw()
+                wiggle_arc7_L11.draw()
+                wiggle_arc8_L11.draw()
+                wiggle_arc9_L11.draw()
+                wiggle_arc10_L11.draw()
+                wiggle_arc11_L11.draw()
+                
+                arc1_L11.draw()
+                arc2_L11.draw()
+                arc3_L11.draw()
+                arc4_L11.draw()
+                arc5_L11.draw()
+                arc6_L11.draw()
+                arc7_L11.draw()
+                arc8_L11.draw()
+                arc9_L11.draw()
+                arc10_L11.draw()
+                arc11_L11.draw()
+                
+                # Draw the trail dots
+                for dot in trail_dots:
+                    dot.draw()
+                
+                # Run 'Each Frame' code from GoalController_L11
+                dino_relative_x = dino_pos[0] - camera_offset_x
+                dino_relative_y = dino_pos[1]
+                # Check for collision based on proximity to the updated position
+                dx = dino_relative_x - meatbone_x
+                dy = dino_relative_y - meatbone_y
+                
+                if camera_offset_x >= max_x:
+                    lose_sound_L11.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_x < -1 or dino_relative_x > 1:  # Adjust bounds based on screen width
+                    lose_sound_L11.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_y > 0.6:  # Adjust bounds based on screen width
+                    lose_sound_L11.play()
+                    continueRoutine = False  # Ends the current routine
+                
+                # Check for collision for meatbone
+                if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
+                    meatbone_image_L11.opacity = 0  # Make the meatbone disappear
+                    meatbone_collided = True  # Prevent further collision checks
+                    eat_sound_L11.play()
+                    continueRoutine = False
+                
+                # Check for collision for ARCS
+                for vertex in arc1_L11_vertices:
+                    # Adjust Arc 1 vertex for its X-offset (+1)
+                    adjusted_vertex_x = vertex[0] + arc1_L11_x   # Move Arc 1 vertices by 1 unit to the right
+                    adjusted_vertex_y = vertex[1] + arc1_L11_center[1] # Y remains unchanged, apply the same adjustment as Arc 2 if needed
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 1
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L11 and vertex not in arc1_touched_vertices_L11:
+                        arc1_touched_vertices_L11.append(vertex)
+                        score += 1  # Increment the score for Arc 1
+                
+                
+                for vertex in arc2_L11_vertices:
+                    # Adjust Arc 2 vertex for its X-offset (+2)
+                    adjusted_vertex_x = vertex[0] + arc2_L11_x   # Move Arc 2 vertices by 2 units to the right
+                    adjusted_vertex_y = vertex[1] + arc2_L11_center[1] # Y remains unchanged
+                    
+                    # Calculate distance between Dino and the adjusted vertex of Arc 2
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L11 and vertex not in arc2_touched_vertices_L11:
+                        arc2_touched_vertices_L11.append(vertex)
+                        score += 1  # Increment the score for Arc 2
+                        
+                        
+                for vertex in arc3_L11_vertices:
+                    # Adjust Arc 3 vertex for its static X-offset
+                    adjusted_vertex_x = vertex[0] + arc3_L11_x   # Offset Arc 3 vertices by 3.5 units to the right
+                    adjusted_vertex_y = vertex[1] + arc3_L11_center[1]  # Offset Arc 3 vertices by -0.2 units vertically
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 3
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L11 and vertex not in arc3_touched_vertices_L11:
+                        arc3_touched_vertices_L11.append(vertex)
+                        score += 1  # Increment the score for Arc 3
+                        
+                for vertex in arc4_L11_vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L11_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L11_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 4
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L11 and vertex not in arc4_touched_vertices_L11:
+                        arc4_touched_vertices_L11.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc5_L11_vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L11_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L11_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 5
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L11 and vertex not in arc5_touched_vertices_L11:
+                        arc5_touched_vertices_L11.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc6_L11_vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11 and vertex not in arc6_touched_vertices_L11:
+                        arc6_touched_vertices_L11.append(vertex)
+                        score += 1
+                
+                # Arc 7 touch detection
+                for vertex in arc7_L11_vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11 and vertex not in arc7_touched_vertices_L11:
+                        arc7_touched_vertices_L11.append(vertex)
+                        score += 1
+                
+                # Arc 8 touch detection
+                for vertex in arc8_L11_vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11 and vertex not in arc8_touched_vertices_L11:
+                        arc8_touched_vertices_L11.append(vertex)
+                        score += 1
+                
+                
+                # Arc 9 touch detection
+                for vertex in arc9_L11_vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11 and vertex not in arc9_touched_vertices_L11:
+                        arc9_touched_vertices_L11.append(vertex)
+                        score += 1       
+                
+                # Arc 10 touch detection
+                for vertex in arc10_L11_vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11 and vertex not in arc10_touched_vertices_L11:
+                        arc10_touched_vertices_L11.append(vertex)
+                        score += 1    
+                
+                # Arc 11 touch detection
+                for vertex in arc11_L11_vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11 and vertex not in arc11_touched_vertices_L11:
+                        arc11_touched_vertices_L11.append(vertex)
+                        score += 1    
+                  
+                # WIGGLE ROOM STUFF
+                
+                
+                # Reset to false at the start of each frame
+                wiggle_room = False  
+                for vertex in wiggle_arc1_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc1_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc1_L11_center[1] 
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                for vertex in wiggle_arc2_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc2_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc2_L11_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                        
+                for vertex in wiggle_arc3_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc3_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc3_L11_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                
+                
+                for vertex in wiggle_arc4_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L11_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L11_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                
+                
+                for vertex in wiggle_arc5_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L11_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L11_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                        
+                for vertex in wiggle_arc6_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True
+                        break
+                # Arc 7 wiggle room
+                for vertex in wiggle_arc7_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True
+                        break
+                
+                # Arc 8 wiggle room
+                for vertex in wiggle_arc8_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True
+                        break
+                        
+                        
+                
+                # Arc 9 wiggle room
+                for vertex in wiggle_arc9_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True
+                        break
+                        
+                # Arc 10 wiggle room
+                for vertex in wiggle_arc10_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True
+                        break
+                        
+                        
+                # Arc 11 wiggle room
+                for vertex in wiggle_arc11_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True
+                        break
+                
+                        
+                        
+                score_text_L11.text = str(score) # update Score
+                
+                
+                dino_relative_x = dino_pos[0] - camera_offset_x
+                dino_relative_y = dino_pos[1]
+                # Check for collision based on proximity to the updated position
+                dx = dino_relative_x - meatbone_x
+                dy = dino_relative_y - meatbone_y
+                
+                if camera_offset_x >= max_x:
+                    lose_sound_L11.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_x < -1 or dino_relative_x > 1:  # Adjust bounds based on screen width
+                    lose_sound_L11.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_y > 0.6:  # Adjust bounds based on screen width
+                    lose_sound_L11.play()
+                    continueRoutine = False  # Ends the current routine
+                
+                # Check for collision for meatbone
+                if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
+                    print("Dino ate the meatbone!")
+                    meatbone_image_L11.opacity = 0  # Make the meatbone disappear
+                    meatbone_collided = True  # Prevent further collision checks
+                    eat_sound_L11.play()
+                    continueRoutine = False
+                
+                # Check for collision for ARCS
+                for vertex in arc1_L11_vertices:
+                    # Adjust Arc 1 vertex for its X-offset (+1)
+                    adjusted_vertex_x = vertex[0] + arc1_L11_x   # Move Arc 1 vertices by 1 unit to the right
+                    adjusted_vertex_y = vertex[1] + arc1_L11_center[1] # Y remains unchanged, apply the same adjustment as Arc 2 if needed
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 1
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L11 and vertex not in arc1_touched_vertices_L11:
+                        arc1_touched_vertices_L11.append(vertex)
+                        score += 1  # Increment the score for Arc 1
+                
+                
+                for vertex in arc2_L11_vertices:
+                    # Adjust Arc 2 vertex for its X-offset (+2)
+                    adjusted_vertex_x = vertex[0] + arc2_L11_x   # Move Arc 2 vertices by 2 units to the right
+                    adjusted_vertex_y = vertex[1] + arc2_L11_center[1] # Y remains unchanged
+                    
+                    # Calculate distance between Dino and the adjusted vertex of Arc 2
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L11 and vertex not in arc2_touched_vertices_L11:
+                        arc2_touched_vertices_L11.append(vertex)
+                        score += 1  # Increment the score for Arc 2
+                        
+                        
+                for vertex in arc3_L11_vertices:
+                    # Adjust Arc 3 vertex for its static X-offset
+                    adjusted_vertex_x = vertex[0] + arc3_L11_x   # Offset Arc 3 vertices by 3.5 units to the right
+                    adjusted_vertex_y = vertex[1] + arc3_L11_center[1]  # Offset Arc 3 vertices by -0.2 units vertically
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 3
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L11 and vertex not in arc3_touched_vertices_L11:
+                        arc3_touched_vertices_L11.append(vertex)
+                        score += 1  # Increment the score for Arc 3
+                        
+                for vertex in arc4_L11_vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L11_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L11_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 4
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L11 and vertex not in arc4_touched_vertices_L11:
+                        arc4_touched_vertices_L11.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc5_L11_vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L11_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L11_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 5
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L11 and vertex not in arc5_touched_vertices_L11:
+                        arc5_touched_vertices_L11.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc6_L11_vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11 and vertex not in arc6_touched_vertices_L11:
+                        arc6_touched_vertices_L11.append(vertex)
+                        score += 1
+                
+                # Arc 7 touch detection
+                for vertex in arc7_L11_vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11 and vertex not in arc7_touched_vertices_L11:
+                        arc7_touched_vertices_L11.append(vertex)
+                        score += 1
+                
+                # Arc 8 touch detection
+                for vertex in arc8_L11_vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11 and vertex not in arc8_touched_vertices_L11:
+                        arc8_touched_vertices_L11.append(vertex)
+                        score += 1
+                
+                
+                # Arc 9 touch detection
+                for vertex in arc9_L11_vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11 and vertex not in arc9_touched_vertices_L11:
+                        arc9_touched_vertices_L11.append(vertex)
+                        score += 1       
+                
+                # Arc 10 touch detection
+                for vertex in arc10_L11_vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11 and vertex not in arc10_touched_vertices_L11:
+                        arc10_touched_vertices_L11.append(vertex)
+                        score += 1    
+                
+                # Arc 11 touch detection
+                for vertex in arc11_L11_vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11 and vertex not in arc11_touched_vertices_L11:
+                        arc11_touched_vertices_L11.append(vertex)
+                        score += 1    
+                  
+                # WIGGLE ROOM STUFF
+                
+                
+                # Reset to false at the start of each frame
+                wiggle_room = False  
+                for vertex in wiggle_arc1_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc1_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc1_L11_center[1] 
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                for vertex in wiggle_arc2_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc2_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc2_L11_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                        
+                for vertex in wiggle_arc3_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc3_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc3_L11_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                
+                
+                for vertex in wiggle_arc4_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L11_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L11_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                
+                
+                for vertex in wiggle_arc5_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L11_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L11_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                        
+                for vertex in wiggle_arc6_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True
+                        break
+                # Arc 7 wiggle room
+                for vertex in wiggle_arc7_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True
+                        break
+                
+                # Arc 8 wiggle room
+                for vertex in wiggle_arc8_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True
+                        break
+                        
+                        
+                
+                # Arc 9 wiggle room
+                for vertex in wiggle_arc9_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True
+                        break
+                        
+                # Arc 10 wiggle room
+                for vertex in wiggle_arc10_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True
+                        break
+                        
+                        
+                # Arc 11 wiggle room
+                for vertex in wiggle_arc11_L11.vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L11_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L11_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L11:
+                        wiggle_room = True
+                        break
+                
+                        
+                        
+                score_text_L11.text = str(score) # update Score
+                
+                
+                
+                # Run 'Each Frame' code from Timer_L11
+                # Calculate remaining time
+                time_remaining = time_limit - level_timer.getTime()
+                
+                # Check if time is up
+                if time_remaining <= 0:
+                    print("Time's up! Returning to MainMenu.")
+                    continueRoutine = False  # End the MainGame routine
+                    time_remaining = 0  # Prevent negative time display
+                
+                # Format the timer as MM:SS
+                minutes = int(time_remaining) // 60
+                seconds = int(time_remaining) % 60
+                
+                # Update the timer display
+                timer_text_L11.text = str(f"{minutes}:{seconds:02d}")
+                
+                
+                # *lose_sound_L11* updates
+                
+                # if lose_sound_L11 is stopping this frame...
+                if lose_sound_L11.status == STARTED:
+                    if bool(False) or lose_sound_L11.isFinished:
+                        # keep track of stop time/frame for later
+                        lose_sound_L11.tStop = t  # not accounting for scr refresh
+                        lose_sound_L11.tStopRefresh = tThisFlipGlobal  # on global time
+                        lose_sound_L11.frameNStop = frameN  # exact frame index
+                        # update status
+                        lose_sound_L11.status = FINISHED
+                        lose_sound_L11.stop()
+                
+                # *eat_sound_L11* updates
+                
+                # if eat_sound_L11 is stopping this frame...
+                if eat_sound_L11.status == STARTED:
+                    if bool(False) or eat_sound_L11.isFinished:
+                        # keep track of stop time/frame for later
+                        eat_sound_L11.tStop = t  # not accounting for scr refresh
+                        eat_sound_L11.tStopRefresh = tThisFlipGlobal  # on global time
+                        eat_sound_L11.frameNStop = frameN  # exact frame index
+                        # update status
+                        eat_sound_L11.status = FINISHED
+                        eat_sound_L11.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[lose_sound_L11, eat_sound_L11]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_11.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_11.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_11" ---
+            for thisComponent in Level_11.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_11
+            Level_11.tStop = globalClock.getTime(format='float')
+            Level_11.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_11.stopped', Level_11.tStop)
+            # Run 'End Routine' code from DinoMovement_L11
+            dino_pos = [-0.5, -0.3]  # Reset Dino's position
+            trail_positions.clear()  # Remove all stored positions
+            # Run 'End Routine' code from GoalController_L11
+            global total_touched_vertices_L11, total_possible_vertices_L11
+            
+            total_touched_vertices_L11 = (
+                len(arc1_touched_vertices_L11) + len(arc2_touched_vertices_L11) + len(arc3_touched_vertices_L11) +
+                len(arc4_touched_vertices_L11) + len(arc5_touched_vertices_L11) + len(arc6_touched_vertices_L11) +
+                len(arc7_touched_vertices_L11) + len(arc8_touched_vertices_L11) + len(arc9_touched_vertices_L11) +
+                len(arc10_touched_vertices_L11) + len(arc11_touched_vertices_L11)
+            )
+            
+            total_possible_vertices_L11 = (
+                len(arc1_L11_vertices) + len(arc2_L11_vertices) + len(arc3_L11_vertices) +
+                len(arc4_L11_vertices) + len(arc5_L11_vertices) + len(arc6_L11_vertices) +
+                len(arc7_L11_vertices) + len(arc8_L11_vertices) + len(arc9_L11_vertices) +
+                len(arc10_L11_vertices) + len(arc11_L11_vertices)
+            )
+            
+            score = 0
+            # the Routine "Level_11" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
+            # --- Prepare to start Routine "Level_11_checker" ---
+            # create an object to store info about Routine Level_11_checker
+            Level_11_checker = data.Routine(
+                name='Level_11_checker',
+                components=[end_score_text_L11, win_sound_L11, fail_sound_L11],
+            )
+            Level_11_checker.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from Checker_L11
+            import csv
+            # Calculate the percentage
+            if total_possible_vertices_L11 > 0:
+                percentage = (total_touched_vertices_L11 / total_possible_vertices_L11) * 100
+            else:
+                percentage = 0  # Avoid division by zero
+                
+            
+            # Update the text for the end screen
+            end_score_text_L11.text = f"Your score: {percentage:.2f}%"
+            
+            # Start 3 second timer
+            end_screen_timer = core.CountdownTimer(3)
+            
+            
+            win_sound_L11.setSound('Assets/sounds/win.mp3', hamming=True)
+            win_sound_L11.setVolume(1.0, log=False)
+            win_sound_L11.seek(0)
+            fail_sound_L11.setSound('Assets/sounds/level_failed.mp3', hamming=True)
+            fail_sound_L11.setVolume(0.6, log=False)
+            fail_sound_L11.seek(0)
+            # store start times for Level_11_checker
+            Level_11_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_11_checker.tStart = globalClock.getTime(format='float')
+            Level_11_checker.status = STARTED
+            thisExp.addData('Level_11_checker.started', Level_11_checker.tStart)
+            Level_11_checker.maxDuration = None
+            # keep track of which components have finished
+            Level_11_checkerComponents = Level_11_checker.components
+            for thisComponent in Level_11_checker.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_11_checker" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_11_Loop, data.TrialHandler2) and thisLevel_11_Loop.thisN != Level_11_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_11_checker.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *end_score_text_L11* updates
+                
+                # if end_score_text_L11 is starting this frame...
+                if end_score_text_L11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    end_score_text_L11.frameNStart = frameN  # exact frame index
+                    end_score_text_L11.tStart = t  # local t and not account for scr refresh
+                    end_score_text_L11.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(end_score_text_L11, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    end_score_text_L11.status = STARTED
+                    end_score_text_L11.setAutoDraw(True)
+                
+                # if end_score_text_L11 is active this frame...
+                if end_score_text_L11.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from Checker_L11
+                # Keep showing the end screen until 3 seconds pass
+                if end_screen_timer.getTime() <= 0:
+                    continueRoutine = False
+                
+                
+                # *win_sound_L11* updates
+                
+                # if win_sound_L11 is stopping this frame...
+                if win_sound_L11.status == STARTED:
+                    if bool(False) or win_sound_L11.isFinished:
+                        # keep track of stop time/frame for later
+                        win_sound_L11.tStop = t  # not accounting for scr refresh
+                        win_sound_L11.tStopRefresh = tThisFlipGlobal  # on global time
+                        win_sound_L11.frameNStop = frameN  # exact frame index
+                        # update status
+                        win_sound_L11.status = FINISHED
+                        win_sound_L11.stop()
+                
+                # *fail_sound_L11* updates
+                
+                # if fail_sound_L11 is stopping this frame...
+                if fail_sound_L11.status == STARTED:
+                    if bool(False) or fail_sound_L11.isFinished:
+                        # keep track of stop time/frame for later
+                        fail_sound_L11.tStop = t  # not accounting for scr refresh
+                        fail_sound_L11.tStopRefresh = tThisFlipGlobal  # on global time
+                        fail_sound_L11.frameNStop = frameN  # exact frame index
+                        # update status
+                        fail_sound_L11.status = FINISHED
+                        fail_sound_L11.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[win_sound_L11, fail_sound_L11]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_11_checker.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_11_checker.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_11_checker" ---
+            for thisComponent in Level_11_checker.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_11_checker
+            Level_11_checker.tStop = globalClock.getTime(format='float')
+            Level_11_checker.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_11_checker.stopped', Level_11_checker.tStop)
+            # Run 'End Routine' code from Checker_L11
+            
+            
+            thisExp.addData('Participant ID', expInfo['participant'])
+            thisExp.addData('Session', expInfo['session'])
+            thisExp.addData('Date', expInfo['date'])
+            thisExp.addData('Score', total_touched_vertices_L11)
+            thisExp.addData('Percentage', percentage)
+            
+            filename = f"data/{expInfo['participant']}_summary.csv"
+            with open(filename, mode='w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(['Participant ID', 'Session', 'Date', 'Score', 'Percentage'])
+                writer.writerow([expInfo['participant'], expInfo['session'], expInfo['date'], total_touched_vertices_L11, percentage])
+            
+            # Decide pass/fail and play correct sound
+            if percentage >= win_threshold and meatbone_collided:
+                Level_11_Loop.finished = True
+                win_sound_L11.play()
+            else:
+                Level_11_Loop.finished = False
+                fail_sound_L11.play()
+                
+            total_touched_vertices_L11 = 0
+            total_possible_vertices_L11 = 0
+            meatbone_collided = False
+            # the Routine "Level_11_checker" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+        # completed 1000.0 repeats of 'Level_11_Loop'
+        
+        
+        # set up handler to look after randomisation of conditions etc
+        Level_12_Loop = data.TrialHandler2(
+            name='Level_12_Loop',
+            nReps=1000.0, 
+            method='sequential', 
+            extraInfo=expInfo, 
+            originPath=-1, 
+            trialList=[None], 
+            seed=None, 
+        )
+        thisExp.addLoop(Level_12_Loop)  # add the loop to the experiment
+        thisLevel_12_Loop = Level_12_Loop.trialList[0]  # so we can initialise stimuli with some values
+        # abbreviate parameter names if possible (e.g. rgb = thisLevel_12_Loop.rgb)
+        if thisLevel_12_Loop != None:
+            for paramName in thisLevel_12_Loop:
+                globals()[paramName] = thisLevel_12_Loop[paramName]
+        
+        for thisLevel_12_Loop in Level_12_Loop:
+            currentLoop = Level_12_Loop
+            thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+            # abbreviate parameter names if possible (e.g. rgb = thisLevel_12_Loop.rgb)
+            if thisLevel_12_Loop != None:
+                for paramName in thisLevel_12_Loop:
+                    globals()[paramName] = thisLevel_12_Loop[paramName]
+            
+            # --- Prepare to start Routine "Level_12" ---
+            # create an object to store info about Routine Level_12
+            Level_12 = data.Routine(
+                name='Level_12',
+                components=[dino_image_L12, floor1_L12, floor2_L12, meatbone_image_L12, score_text_L12, timer_text_L12, lose_sound_L12, eat_sound_L12],
+            )
+            Level_12.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from DinoMovement_L12
+            dino_pos = [0, -0.3]  # Reset Dino's position
+            dino_speed = 0  # Reset vertical speed
+            # Initialize the trail dots
+            trail_dots = [
+                Circle(win, radius=trail_dot_size, fillColor=trail_color, lineColor=None, pos=[-1, -1])
+                for _ in range(trail_length)
+            ]
+            
+            # Run 'Begin Routine' code from worldController_L12
+            camera_offset_x = 0
+            # Run 'Begin Routine' code from GoalController_L12
+            score = 0  # Reset the score
+            
+            meatbone_collided = False
+            meatbone_image_L12.opacity = 1
+            
+            
+            wiggle_room = False  
+            
+            arc1_touched_vertices_L12 = []
+            arc2_touched_vertices_L12 = []
+            arc3_touched_vertices_L12 = []
+            arc4_touched_vertices_L12 = []
+            arc5_touched_vertices_L12 = []
+            arc6_touched_vertices_L12 = []
+            arc7_touched_vertices_L12 = []
+            arc8_touched_vertices_L12 = []
+            arc9_touched_vertices_L12 = []
+            arc10_touched_vertices_L12 = []
+            arc11_touched_vertices_L12 = []
+            # Run 'Begin Routine' code from Timer_L12
+            
+            level_timer.reset()  # Reset the timer at the start of the MainGame routine
+            
+            
+            lose_sound_L12.setSound('Assets/sounds/lose.mp3', hamming=True)
+            lose_sound_L12.setVolume(1.0, log=False)
+            lose_sound_L12.seek(0)
+            eat_sound_L12.setSound('Assets/sounds/eat.mp3', hamming=True)
+            eat_sound_L12.setVolume(1.0, log=False)
+            eat_sound_L12.seek(0)
+            # store start times for Level_12
+            Level_12.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_12.tStart = globalClock.getTime(format='float')
+            Level_12.status = STARTED
+            thisExp.addData('Level_12.started', Level_12.tStart)
+            Level_12.maxDuration = None
+            # keep track of which components have finished
+            Level_12Components = Level_12.components
+            for thisComponent in Level_12.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_12" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_12_Loop, data.TrialHandler2) and thisLevel_12_Loop.thisN != Level_12_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_12.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *dino_image_L12* updates
+                
+                # if dino_image_L12 is starting this frame...
+                if dino_image_L12.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    dino_image_L12.frameNStart = frameN  # exact frame index
+                    dino_image_L12.tStart = t  # local t and not account for scr refresh
+                    dino_image_L12.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(dino_image_L12, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    dino_image_L12.status = STARTED
+                    dino_image_L12.setAutoDraw(True)
+                
+                # if dino_image_L12 is active this frame...
+                if dino_image_L12.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor1_L12* updates
+                
+                # if floor1_L12 is starting this frame...
+                if floor1_L12.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor1_L12.frameNStart = frameN  # exact frame index
+                    floor1_L12.tStart = t  # local t and not account for scr refresh
+                    floor1_L12.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor1_L12, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor1_L12.status = STARTED
+                    floor1_L12.setAutoDraw(True)
+                
+                # if floor1_L12 is active this frame...
+                if floor1_L12.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor2_L12* updates
+                
+                # if floor2_L12 is starting this frame...
+                if floor2_L12.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor2_L12.frameNStart = frameN  # exact frame index
+                    floor2_L12.tStart = t  # local t and not account for scr refresh
+                    floor2_L12.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor2_L12, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor2_L12.status = STARTED
+                    floor2_L12.setAutoDraw(True)
+                
+                # if floor2_L12 is active this frame...
+                if floor2_L12.status == STARTED:
+                    # update params
+                    pass
+                
+                # *meatbone_image_L12* updates
+                
+                # if meatbone_image_L12 is starting this frame...
+                if meatbone_image_L12.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    meatbone_image_L12.frameNStart = frameN  # exact frame index
+                    meatbone_image_L12.tStart = t  # local t and not account for scr refresh
+                    meatbone_image_L12.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(meatbone_image_L12, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    meatbone_image_L12.status = STARTED
+                    meatbone_image_L12.setAutoDraw(True)
+                
+                # if meatbone_image_L12 is active this frame...
+                if meatbone_image_L12.status == STARTED:
+                    # update params
+                    pass
+                
+                # *score_text_L12* updates
+                
+                # if score_text_L12 is starting this frame...
+                if score_text_L12.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    score_text_L12.frameNStart = frameN  # exact frame index
+                    score_text_L12.tStart = t  # local t and not account for scr refresh
+                    score_text_L12.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(score_text_L12, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    score_text_L12.status = STARTED
+                    score_text_L12.setAutoDraw(True)
+                
+                # if score_text_L12 is active this frame...
+                if score_text_L12.status == STARTED:
+                    # update params
+                    pass
+                
+                # *timer_text_L12* updates
+                
+                # if timer_text_L12 is starting this frame...
+                if timer_text_L12.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    timer_text_L12.frameNStart = frameN  # exact frame index
+                    timer_text_L12.tStart = t  # local t and not account for scr refresh
+                    timer_text_L12.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(timer_text_L12, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    timer_text_L12.status = STARTED
+                    timer_text_L12.setAutoDraw(True)
+                
+                # if timer_text_L12 is active this frame...
+                if timer_text_L12.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from DinoMovement_L12
+                
+                # Initialize key state flags
+                left_pressed = False
+                right_pressed = False
+                up_pressed = False
+                
+                # Handle input based on the selected control method
+                
+                # Process keyboard input
+                if selected_control == "Keyboard":
+                    keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
+                    for key in keys_pressed:
+                        if key.name == 'left':
+                            left_pressed = True
+                        if key.name == 'right':
+                            right_pressed = True
+                        if key.name == 'up':
+                            up_pressed = True
+                            
+                # Process PSURP input            
+                if selected_control == "PSURP":
+                    # Read serial data
+                    ser.flushInput()
+                    strSerialData = ser.readline()
+                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                
+                    # Apply difficulty-specific movement
+                    if selected_diff == "1":
+                        # Constant movement for Easy mode
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
+                            dino_image_L12.size = [abs(dino_image_L12.size[0]), dino_image_L12.size[1]]  # Face right
+                
+                    elif selected_diff == "2":
+                        # Proportional movement for Hard mode (current implementation)
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
+                            dino_pos[0] += move_amount  # Movement based on force
+                            dino_image_L12.size = [abs(dino_image_L12.size[0]), dino_image_L12.size[1]]  # Face right
+                
+                    # Jump logic remains the same for both difficulties
+                    if B0ForceInNewtons > MIN_FORCE:
+                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                
+                
+                            
+                 
+                # Apply gravity to Dino's vertical speed
+                dino_speed += gravity
+                
+                # Check if Dino is on the floor (keeps dino on top of floor)
+                if is_on_floor(dino_pos) and dino_speed <= 0:  # Falling or stationary
+                    dino_pos[1] = floor1_top + (dino_image_L12.size[1] / 2) - ground_offset  # Align Dino with the floor
+                    dino_speed = 0  # Reset vertical speed
+                
+                # Respawn if Dino falls below the floor threshold
+                if dino_pos[1] < fall_threshold:
+                    lose_sound_L12.play()
+                    continueRoutine = False  # Stop the MainGame routine
+                    
+                # Jumping logic: Allow jump whenever the 'up' key is pressed
+                if up_pressed:  # Check if the up key is pressed
+                    dino_speed = jump_speed  # Apply upward movement
+                
+                # Update Dino's vertical position
+                dino_pos[1] += dino_speed
+                
+                # Continuous horizontal movement
+                if left_pressed and dino_pos[0] > min_x:
+                    dino_pos[0] -= move_speed  # Move Dino to the left
+                    dino_image_L12.size = [-1 * abs(dino_image_L12.size[0]), dino_image_L12.size[1]]
+                
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed  # Move Dino to the right
+                    dino_image_L12.size = [abs(dino_image_L12.size[0]), dino_image_L12.size[1]]  # Reset Dino to face right
+                
+                # Update Dino's position
+                # dino_image_L12.pos = dino_pos  # Use both X and Y values of dino_pos
+                dino_image_L12.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
+                
+                # Increment the frame counter for trail updates
+                trail_frame_counter += 1
+                
+                # Check if it's time to spawn a new dot
+                if trail_frame_counter >= trail_interval:
+                    if len(trail_positions) >= trail_length:
+                        trail_positions.pop(0)  # Remove the oldest position if trail is full
+                
+                    # Add Dino's current position to the trail
+                    trail_positions.append(dino_pos[:])  # Add a copy of Dino's current position
+                
+                    trail_frame_counter = 0  # Reset the counter
+                
+                # Update the trail dots' positions
+                for i, pos in enumerate(trail_positions):
+                    trail_dots[i].pos = [pos[0] - camera_offset_x, pos[1]]  # Adjust for camera offset
+                
+                
+                # Update the Dino's animation
+                if (frame_index_update_counter % 4) == 0:  # Adjust 4 to control animation speed
+                    dino_image_L12.image = frame_paths[frame_index]  # Update the current frame
+                
+                    # Advance to the next frame
+                    frame_index += 1
+                    if frame_index >= total_frames:
+                        frame_index = 0  # Loop back to the first frame
+                
+                
+                
+                # Increment the animation frame counter
+                frame_index_update_counter += 1
+                
+                
+                # Run 'Each Frame' code from worldController_L12
+                
+                # Update the camera offset based on Dino's X position
+                camera_offset_x += camera_speed  # The camera offset follows Dino's position
+                
+                # Move backgrounds relative to Dino's position (seamless wrap-around)
+                background1_L12.pos = [-(camera_offset_x % background_width), 0]
+                background2_L12.pos = [background1_L12.pos[0] + background_width, 0]
+                
+                # Update floor positions relative to Dino's position
+                floor1_L12.pos = [floor1_pos[0] - camera_offset_x, floor1_L12.pos[1]]
+                floor2_L12.pos = [floor2_x_static - camera_offset_x, floor2_L12.pos[1]]  # floor2_L12 moves with Dino
+                
+                
+                # Update meatbone position to match floor2_L12's top
+                meatbone_x = floor2_L12.pos[0]  # Update X position based on floor2_L12
+                meatbone_y = floor2_top + (meatbone_size[1] / 2) - offset  # Keep the meatbone on top of floor2_L12
+                meatbone_image_L12.pos = [meatbone_x, meatbone_y]
+                
+                
+                # Update the arc position relative to the camera offset
+                # Update Arc 1 Position
+                arc1_L12.pos = [arc1_L12_center[0] - camera_offset_x, arc1_L12_center[1]]
+                wiggle_arc1_L12.pos = arc1_L12.pos  # Keep wiggle room on top
+                
+                # Update Arc 2 Position
+                arc2_L12.pos = [arc2_L12_center[0] - camera_offset_x, arc2_L12_center[1]]
+                wiggle_arc2_L12.pos = arc2_L12.pos  # Keep wiggle room on top
+                arc3_L12.pos = [arc3_L12_center[0] - camera_offset_x, arc3_L12_center[1]]
+                wiggle_arc3_L12.pos = arc3_L12.pos  # Keep wiggle room on top
+                # Update Arc 4 Position
+                arc4_L12.pos = [arc4_L12_center[0] - camera_offset_x, arc4_L12_center[1]]
+                wiggle_arc4_L12.pos = arc4_L12.pos  # Keep wiggle room on top
+                # Update Arc 5 Position
+                arc5_L12.pos = [arc5_L12_center[0] - camera_offset_x, arc5_L12_center[1]]
+                wiggle_arc5_L12.pos = arc5_L12.pos  # Keep wiggle room on top
+                
+                arc6_L12.pos = [arc6_L12_center[0] - camera_offset_x, arc6_L12_center[1]]
+                wiggle_arc6_L12.pos = arc6_L12.pos
+                
+                # Update Arc 7 Position
+                arc7_L12.pos = [arc7_L12_center[0] - camera_offset_x, arc7_L12_center[1]]
+                wiggle_arc7_L12.pos = arc7_L12.pos
+                
+                # Update Arc 8 Position
+                arc8_L12.pos = [arc8_L12_center[0] - camera_offset_x, arc8_L12_center[1]]
+                wiggle_arc8_L12.pos = arc8_L12.pos
+                
+                # Update Arc 9 Position
+                arc9_L12.pos = [arc9_L12_center[0] - camera_offset_x, arc9_L12_center[1]]
+                wiggle_arc9_L12.pos = arc9_L12.pos
+                
+                # Update Arc 10 Position
+                arc10_L12.pos = [arc10_L12_center[0] - camera_offset_x, arc10_L12_center[1]]
+                wiggle_arc10_L12.pos = arc10_L12.pos
+                
+                # Update Arc 11 Position
+                arc11_L12.pos = [arc11_L12_center[0] - camera_offset_x, arc11_L12_center[1]]
+                wiggle_arc11_L12.pos = arc11_L12.pos
+                
+                
+                
+                
+                # Draw the backgrounds and floors
+                background1_L12.draw()
+                background2_L12.draw()
+                floor1_L12.draw()
+                floor2_L12.draw()
+                wiggle_arc1_L12.draw()
+                wiggle_arc2_L12.draw()
+                wiggle_arc3_L12.draw()
+                wiggle_arc4_L12.draw()
+                wiggle_arc5_L12.draw()
+                wiggle_arc6_L12.draw()
+                wiggle_arc7_L12.draw()
+                wiggle_arc8_L12.draw()
+                wiggle_arc9_L12.draw()
+                wiggle_arc10_L12.draw()
+                wiggle_arc11_L12.draw()
+                
+                arc1_L12.draw()
+                arc2_L12.draw()
+                arc3_L12.draw()
+                arc4_L12.draw()
+                arc5_L12.draw()
+                arc6_L12.draw()
+                arc7_L12.draw()
+                arc8_L12.draw()
+                arc9_L12.draw()
+                arc10_L12.draw()
+                arc11_L12.draw()
+                
+                # Draw the trail dots
+                for dot in trail_dots:
+                    dot.draw()
+                
+                # Run 'Each Frame' code from GoalController_L12
+                dino_relative_x = dino_pos[0] - camera_offset_x
+                dino_relative_y = dino_pos[1]
+                # Check for collision based on proximity to the updated position
+                dx = dino_relative_x - meatbone_x
+                dy = dino_relative_y - meatbone_y
+                
+                if camera_offset_x >= max_x:
+                    lose_sound_L12.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_x < -1 or dino_relative_x > 1:  # Adjust bounds based on screen width
+                    lose_sound_L12.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_y > 0.6:  # Adjust bounds based on screen width
+                    lose_sound_L12.play()
+                    continueRoutine = False  # Ends the current routine
+                
+                # Check for collision for meatbone
+                if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
+                    meatbone_image_L12.opacity = 0  # Make the meatbone disappear
+                    meatbone_collided = True  # Prevent further collision checks
+                    eat_sound_L12.play()
+                    continueRoutine = False
+                
+                # Check for collision for ARCS
+                for vertex in arc1_L12_vertices:
+                    # Adjust Arc 1 vertex for its X-offset (+1)
+                    adjusted_vertex_x = vertex[0] + arc1_L12_x   # Move Arc 1 vertices by 1 unit to the right
+                    adjusted_vertex_y = vertex[1] + arc1_L12_center[1] # Y remains unchanged, apply the same adjustment as Arc 2 if needed
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 1
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L12 and vertex not in arc1_touched_vertices_L12:
+                        arc1_touched_vertices_L12.append(vertex)
+                        score += 1  # Increment the score for Arc 1
+                
+                
+                for vertex in arc2_L12_vertices:
+                    # Adjust Arc 2 vertex for its X-offset (+2)
+                    adjusted_vertex_x = vertex[0] + arc2_L12_x   # Move Arc 2 vertices by 2 units to the right
+                    adjusted_vertex_y = vertex[1] + arc2_L12_center[1] # Y remains unchanged
+                    
+                    # Calculate distance between Dino and the adjusted vertex of Arc 2
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L12 and vertex not in arc2_touched_vertices_L12:
+                        arc2_touched_vertices_L12.append(vertex)
+                        score += 1  # Increment the score for Arc 2
+                        
+                        
+                for vertex in arc3_L12_vertices:
+                    # Adjust Arc 3 vertex for its static X-offset
+                    adjusted_vertex_x = vertex[0] + arc3_L12_x   # Offset Arc 3 vertices by 3.5 units to the right
+                    adjusted_vertex_y = vertex[1] + arc3_L12_center[1]  # Offset Arc 3 vertices by -0.2 units vertically
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 3
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L12 and vertex not in arc3_touched_vertices_L12:
+                        arc3_touched_vertices_L12.append(vertex)
+                        score += 1  # Increment the score for Arc 3
+                        
+                for vertex in arc4_L12_vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L12_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L12_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 4
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L12 and vertex not in arc4_touched_vertices_L12:
+                        arc4_touched_vertices_L12.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc5_L12_vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L12_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L12_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 5
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L12 and vertex not in arc5_touched_vertices_L12:
+                        arc5_touched_vertices_L12.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc6_L12_vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12 and vertex not in arc6_touched_vertices_L12:
+                        arc6_touched_vertices_L12.append(vertex)
+                        score += 1
+                
+                # Arc 7 touch detection
+                for vertex in arc7_L12_vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12 and vertex not in arc7_touched_vertices_L12:
+                        arc7_touched_vertices_L12.append(vertex)
+                        score += 1
+                
+                # Arc 8 touch detection
+                for vertex in arc8_L12_vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12 and vertex not in arc8_touched_vertices_L12:
+                        arc8_touched_vertices_L12.append(vertex)
+                        score += 1
+                
+                
+                # Arc 9 touch detection
+                for vertex in arc9_L12_vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12 and vertex not in arc9_touched_vertices_L12:
+                        arc9_touched_vertices_L12.append(vertex)
+                        score += 1       
+                
+                # Arc 10 touch detection
+                for vertex in arc10_L12_vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12 and vertex not in arc10_touched_vertices_L12:
+                        arc10_touched_vertices_L12.append(vertex)
+                        score += 1    
+                
+                # Arc 11 touch detection
+                for vertex in arc11_L12_vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12 and vertex not in arc11_touched_vertices_L12:
+                        arc11_touched_vertices_L12.append(vertex)
+                        score += 1    
+                  
+                # WIGGLE ROOM STUFF
+                
+                
+                # Reset to false at the start of each frame
+                wiggle_room = False  
+                for vertex in wiggle_arc1_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc1_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc1_L12_center[1] 
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                for vertex in wiggle_arc2_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc2_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc2_L12_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                        
+                for vertex in wiggle_arc3_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc3_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc3_L12_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                
+                
+                for vertex in wiggle_arc4_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L12_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L12_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                
+                
+                for vertex in wiggle_arc5_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L12_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L12_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                        
+                for vertex in wiggle_arc6_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True
+                        break
+                # Arc 7 wiggle room
+                for vertex in wiggle_arc7_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True
+                        break
+                
+                # Arc 8 wiggle room
+                for vertex in wiggle_arc8_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True
+                        break
+                        
+                        
+                
+                # Arc 9 wiggle room
+                for vertex in wiggle_arc9_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True
+                        break
+                        
+                # Arc 10 wiggle room
+                for vertex in wiggle_arc10_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True
+                        break
+                        
+                        
+                # Arc 11 wiggle room
+                for vertex in wiggle_arc11_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True
+                        break
+                
+                        
+                        
+                score_text_L12.text = str(score) # update Score
+                
+                
+                dino_relative_x = dino_pos[0] - camera_offset_x
+                dino_relative_y = dino_pos[1]
+                # Check for collision based on proximity to the updated position
+                dx = dino_relative_x - meatbone_x
+                dy = dino_relative_y - meatbone_y
+                
+                if camera_offset_x >= max_x:
+                    lose_sound_L12.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_x < -1 or dino_relative_x > 1:  # Adjust bounds based on screen width
+                    lose_sound_L12.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_y > 0.6:  # Adjust bounds based on screen width
+                    lose_sound_L12.play()
+                    continueRoutine = False  # Ends the current routine
+                
+                # Check for collision for meatbone
+                if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
+                    print("Dino ate the meatbone!")
+                    meatbone_image_L12.opacity = 0  # Make the meatbone disappear
+                    meatbone_collided = True  # Prevent further collision checks
+                    eat_sound_L12.play()
+                    continueRoutine = False
+                
+                # Check for collision for ARCS
+                for vertex in arc1_L12_vertices:
+                    # Adjust Arc 1 vertex for its X-offset (+1)
+                    adjusted_vertex_x = vertex[0] + arc1_L12_x   # Move Arc 1 vertices by 1 unit to the right
+                    adjusted_vertex_y = vertex[1] + arc1_L12_center[1] # Y remains unchanged, apply the same adjustment as Arc 2 if needed
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 1
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L12 and vertex not in arc1_touched_vertices_L12:
+                        arc1_touched_vertices_L12.append(vertex)
+                        score += 1  # Increment the score for Arc 1
+                
+                
+                for vertex in arc2_L12_vertices:
+                    # Adjust Arc 2 vertex for its X-offset (+2)
+                    adjusted_vertex_x = vertex[0] + arc2_L12_x   # Move Arc 2 vertices by 2 units to the right
+                    adjusted_vertex_y = vertex[1] + arc2_L12_center[1] # Y remains unchanged
+                    
+                    # Calculate distance between Dino and the adjusted vertex of Arc 2
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L12 and vertex not in arc2_touched_vertices_L12:
+                        arc2_touched_vertices_L12.append(vertex)
+                        score += 1  # Increment the score for Arc 2
+                        
+                        
+                for vertex in arc3_L12_vertices:
+                    # Adjust Arc 3 vertex for its static X-offset
+                    adjusted_vertex_x = vertex[0] + arc3_L12_x   # Offset Arc 3 vertices by 3.5 units to the right
+                    adjusted_vertex_y = vertex[1] + arc3_L12_center[1]  # Offset Arc 3 vertices by -0.2 units vertically
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 3
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L12 and vertex not in arc3_touched_vertices_L12:
+                        arc3_touched_vertices_L12.append(vertex)
+                        score += 1  # Increment the score for Arc 3
+                        
+                for vertex in arc4_L12_vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L12_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L12_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 4
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L12 and vertex not in arc4_touched_vertices_L12:
+                        arc4_touched_vertices_L12.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc5_L12_vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L12_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L12_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 5
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L12 and vertex not in arc5_touched_vertices_L12:
+                        arc5_touched_vertices_L12.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc6_L12_vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12 and vertex not in arc6_touched_vertices_L12:
+                        arc6_touched_vertices_L12.append(vertex)
+                        score += 1
+                
+                # Arc 7 touch detection
+                for vertex in arc7_L12_vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12 and vertex not in arc7_touched_vertices_L12:
+                        arc7_touched_vertices_L12.append(vertex)
+                        score += 1
+                
+                # Arc 8 touch detection
+                for vertex in arc8_L12_vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12 and vertex not in arc8_touched_vertices_L12:
+                        arc8_touched_vertices_L12.append(vertex)
+                        score += 1
+                
+                
+                # Arc 9 touch detection
+                for vertex in arc9_L12_vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12 and vertex not in arc9_touched_vertices_L12:
+                        arc9_touched_vertices_L12.append(vertex)
+                        score += 1       
+                
+                # Arc 10 touch detection
+                for vertex in arc10_L12_vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12 and vertex not in arc10_touched_vertices_L12:
+                        arc10_touched_vertices_L12.append(vertex)
+                        score += 1    
+                
+                # Arc 11 touch detection
+                for vertex in arc11_L12_vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12 and vertex not in arc11_touched_vertices_L12:
+                        arc11_touched_vertices_L12.append(vertex)
+                        score += 1    
+                  
+                # WIGGLE ROOM STUFF
+                
+                
+                # Reset to false at the start of each frame
+                wiggle_room = False  
+                for vertex in wiggle_arc1_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc1_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc1_L12_center[1] 
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                for vertex in wiggle_arc2_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc2_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc2_L12_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                        
+                for vertex in wiggle_arc3_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc3_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc3_L12_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                
+                
+                for vertex in wiggle_arc4_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L12_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L12_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                
+                
+                for vertex in wiggle_arc5_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L12_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L12_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                        
+                for vertex in wiggle_arc6_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True
+                        break
+                # Arc 7 wiggle room
+                for vertex in wiggle_arc7_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True
+                        break
+                
+                # Arc 8 wiggle room
+                for vertex in wiggle_arc8_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True
+                        break
+                        
+                        
+                
+                # Arc 9 wiggle room
+                for vertex in wiggle_arc9_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True
+                        break
+                        
+                # Arc 10 wiggle room
+                for vertex in wiggle_arc10_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True
+                        break
+                        
+                        
+                # Arc 11 wiggle room
+                for vertex in wiggle_arc11_L12.vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L12_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L12_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L12:
+                        wiggle_room = True
+                        break
+                
+                        
+                        
+                score_text_L12.text = str(score) # update Score
+                
+                
+                
+                # Run 'Each Frame' code from Timer_L12
+                # Calculate remaining time
+                time_remaining = time_limit - level_timer.getTime()
+                
+                # Check if time is up
+                if time_remaining <= 0:
+                    print("Time's up! Returning to MainMenu.")
+                    continueRoutine = False  # End the MainGame routine
+                    time_remaining = 0  # Prevent negative time display
+                
+                # Format the timer as MM:SS
+                minutes = int(time_remaining) // 60
+                seconds = int(time_remaining) % 60
+                
+                # Update the timer display
+                timer_text_L12.text = str(f"{minutes}:{seconds:02d}")
+                
+                
+                # *lose_sound_L12* updates
+                
+                # if lose_sound_L12 is stopping this frame...
+                if lose_sound_L12.status == STARTED:
+                    if bool(False) or lose_sound_L12.isFinished:
+                        # keep track of stop time/frame for later
+                        lose_sound_L12.tStop = t  # not accounting for scr refresh
+                        lose_sound_L12.tStopRefresh = tThisFlipGlobal  # on global time
+                        lose_sound_L12.frameNStop = frameN  # exact frame index
+                        # update status
+                        lose_sound_L12.status = FINISHED
+                        lose_sound_L12.stop()
+                
+                # *eat_sound_L12* updates
+                
+                # if eat_sound_L12 is stopping this frame...
+                if eat_sound_L12.status == STARTED:
+                    if bool(False) or eat_sound_L12.isFinished:
+                        # keep track of stop time/frame for later
+                        eat_sound_L12.tStop = t  # not accounting for scr refresh
+                        eat_sound_L12.tStopRefresh = tThisFlipGlobal  # on global time
+                        eat_sound_L12.frameNStop = frameN  # exact frame index
+                        # update status
+                        eat_sound_L12.status = FINISHED
+                        eat_sound_L12.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[lose_sound_L12, eat_sound_L12]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_12.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_12.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_12" ---
+            for thisComponent in Level_12.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_12
+            Level_12.tStop = globalClock.getTime(format='float')
+            Level_12.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_12.stopped', Level_12.tStop)
+            # Run 'End Routine' code from DinoMovement_L12
+            dino_pos = [-0.5, -0.3]  # Reset Dino's position
+            trail_positions.clear()  # Remove all stored positions
+            # Run 'End Routine' code from GoalController_L12
+            global total_touched_vertices_L12, total_possible_vertices_L12
+            
+            total_touched_vertices_L12 = (
+                len(arc1_touched_vertices_L12) + len(arc2_touched_vertices_L12) + len(arc3_touched_vertices_L12) +
+                len(arc4_touched_vertices_L12) + len(arc5_touched_vertices_L12) + len(arc6_touched_vertices_L12) +
+                len(arc7_touched_vertices_L12) + len(arc8_touched_vertices_L12) + len(arc9_touched_vertices_L12) +
+                len(arc10_touched_vertices_L12) + len(arc11_touched_vertices_L12)
+            )
+            
+            total_possible_vertices_L12 = (
+                len(arc1_L12_vertices) + len(arc2_L12_vertices) + len(arc3_L12_vertices) +
+                len(arc4_L12_vertices) + len(arc5_L12_vertices) + len(arc6_L12_vertices) +
+                len(arc7_L12_vertices) + len(arc8_L12_vertices) + len(arc9_L12_vertices) +
+                len(arc10_L12_vertices) + len(arc11_L12_vertices)
+            )
+            
+            score = 0
+            # the Routine "Level_12" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
+            # --- Prepare to start Routine "Level_12_checker" ---
+            # create an object to store info about Routine Level_12_checker
+            Level_12_checker = data.Routine(
+                name='Level_12_checker',
+                components=[end_score_text_L12, win_sound_L12, fail_sound_L12],
+            )
+            Level_12_checker.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from Checker_L12
+            import csv
+            # Calculate the percentage
+            if total_possible_vertices_L12 > 0:
+                percentage = (total_touched_vertices_L12 / total_possible_vertices_L12) * 100
+            else:
+                percentage = 0  # Avoid division by zero
+                
+            
+            # Update the text for the end screen
+            end_score_text_L12.text = f"Your score: {percentage:.2f}%"
+            
+            # Start 3 second timer
+            end_screen_timer = core.CountdownTimer(3)
+            
+            
+            win_sound_L12.setSound('Assets/sounds/win.mp3', hamming=True)
+            win_sound_L12.setVolume(1.0, log=False)
+            win_sound_L12.seek(0)
+            fail_sound_L12.setSound('Assets/sounds/level_failed.mp3', hamming=True)
+            fail_sound_L12.setVolume(0.6, log=False)
+            fail_sound_L12.seek(0)
+            # store start times for Level_12_checker
+            Level_12_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_12_checker.tStart = globalClock.getTime(format='float')
+            Level_12_checker.status = STARTED
+            thisExp.addData('Level_12_checker.started', Level_12_checker.tStart)
+            Level_12_checker.maxDuration = None
+            # keep track of which components have finished
+            Level_12_checkerComponents = Level_12_checker.components
+            for thisComponent in Level_12_checker.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_12_checker" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_12_Loop, data.TrialHandler2) and thisLevel_12_Loop.thisN != Level_12_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_12_checker.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *end_score_text_L12* updates
+                
+                # if end_score_text_L12 is starting this frame...
+                if end_score_text_L12.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    end_score_text_L12.frameNStart = frameN  # exact frame index
+                    end_score_text_L12.tStart = t  # local t and not account for scr refresh
+                    end_score_text_L12.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(end_score_text_L12, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    end_score_text_L12.status = STARTED
+                    end_score_text_L12.setAutoDraw(True)
+                
+                # if end_score_text_L12 is active this frame...
+                if end_score_text_L12.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from Checker_L12
+                # Keep showing the end screen until 3 seconds pass
+                if end_screen_timer.getTime() <= 0:
+                    continueRoutine = False
+                
+                
+                # *win_sound_L12* updates
+                
+                # if win_sound_L12 is stopping this frame...
+                if win_sound_L12.status == STARTED:
+                    if bool(False) or win_sound_L12.isFinished:
+                        # keep track of stop time/frame for later
+                        win_sound_L12.tStop = t  # not accounting for scr refresh
+                        win_sound_L12.tStopRefresh = tThisFlipGlobal  # on global time
+                        win_sound_L12.frameNStop = frameN  # exact frame index
+                        # update status
+                        win_sound_L12.status = FINISHED
+                        win_sound_L12.stop()
+                
+                # *fail_sound_L12* updates
+                
+                # if fail_sound_L12 is stopping this frame...
+                if fail_sound_L12.status == STARTED:
+                    if bool(False) or fail_sound_L12.isFinished:
+                        # keep track of stop time/frame for later
+                        fail_sound_L12.tStop = t  # not accounting for scr refresh
+                        fail_sound_L12.tStopRefresh = tThisFlipGlobal  # on global time
+                        fail_sound_L12.frameNStop = frameN  # exact frame index
+                        # update status
+                        fail_sound_L12.status = FINISHED
+                        fail_sound_L12.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[win_sound_L12, fail_sound_L12]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_12_checker.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_12_checker.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_12_checker" ---
+            for thisComponent in Level_12_checker.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_12_checker
+            Level_12_checker.tStop = globalClock.getTime(format='float')
+            Level_12_checker.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_12_checker.stopped', Level_12_checker.tStop)
+            # Run 'End Routine' code from Checker_L12
+            
+            
+            thisExp.addData('Participant ID', expInfo['participant'])
+            thisExp.addData('Session', expInfo['session'])
+            thisExp.addData('Date', expInfo['date'])
+            thisExp.addData('Score', total_touched_vertices_L12)
+            thisExp.addData('Percentage', percentage)
+            
+            filename = f"data/{expInfo['participant']}_summary.csv"
+            with open(filename, mode='w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(['Participant ID', 'Session', 'Date', 'Score', 'Percentage'])
+                writer.writerow([expInfo['participant'], expInfo['session'], expInfo['date'], total_touched_vertices_L12, percentage])
+            
+            # Decide pass/fail and play correct sound
+            if percentage >= win_threshold and meatbone_collided:
+                Level_12_Loop.finished = True
+                win_sound_L12.play()
+            else:
+                Level_12_Loop.finished = False
+                fail_sound_L12.play()
+                
+            total_touched_vertices_L12 = 0
+            total_possible_vertices_L12 = 0
+            meatbone_collided = False
+            # the Routine "Level_12_checker" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+        # completed 1000.0 repeats of 'Level_12_Loop'
+        
+        
+        # set up handler to look after randomisation of conditions etc
+        Level_13_Loop = data.TrialHandler2(
+            name='Level_13_Loop',
+            nReps=1000.0, 
+            method='sequential', 
+            extraInfo=expInfo, 
+            originPath=-1, 
+            trialList=[None], 
+            seed=None, 
+        )
+        thisExp.addLoop(Level_13_Loop)  # add the loop to the experiment
+        thisLevel_13_Loop = Level_13_Loop.trialList[0]  # so we can initialise stimuli with some values
+        # abbreviate parameter names if possible (e.g. rgb = thisLevel_13_Loop.rgb)
+        if thisLevel_13_Loop != None:
+            for paramName in thisLevel_13_Loop:
+                globals()[paramName] = thisLevel_13_Loop[paramName]
+        
+        for thisLevel_13_Loop in Level_13_Loop:
+            currentLoop = Level_13_Loop
+            thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+            # abbreviate parameter names if possible (e.g. rgb = thisLevel_13_Loop.rgb)
+            if thisLevel_13_Loop != None:
+                for paramName in thisLevel_13_Loop:
+                    globals()[paramName] = thisLevel_13_Loop[paramName]
+            
+            # --- Prepare to start Routine "Level_13" ---
+            # create an object to store info about Routine Level_13
+            Level_13 = data.Routine(
+                name='Level_13',
+                components=[dino_image_L13, floor1_L13, floor2_L13, meatbone_image_L13, score_text_L13, timer_text_L13, lose_sound_L13, eat_sound_L13],
+            )
+            Level_13.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from DinoMovement_L13
+            dino_pos = [0, -0.3]  # Reset Dino's position
+            dino_speed = 0  # Reset vertical speed
+            # Initialize the trail dots
+            trail_dots = [
+                Circle(win, radius=trail_dot_size, fillColor=trail_color, lineColor=None, pos=[-1, -1])
+                for _ in range(trail_length)
+            ]
+            
+            # Run 'Begin Routine' code from worldController_L13
+            camera_offset_x = 0
+            # Run 'Begin Routine' code from GoalController_L13
+            score = 0  # Reset the score
+            
+            meatbone_collided = False
+            meatbone_image_L13.opacity = 1
+            
+            
+            wiggle_room = False  
+            
+            arc1_touched_vertices_L13 = []
+            arc2_touched_vertices_L13 = []
+            arc3_touched_vertices_L13 = []
+            arc4_touched_vertices_L13 = []
+            arc5_touched_vertices_L13 = []
+            arc6_touched_vertices_L13 = []
+            arc7_touched_vertices_L13 = []
+            arc8_touched_vertices_L13 = []
+            arc9_touched_vertices_L13 = []
+            arc10_touched_vertices_L13 = []
+            arc11_touched_vertices_L13 = []
+            # Run 'Begin Routine' code from Timer_L13
+            
+            level_timer.reset()  # Reset the timer at the start of the MainGame routine
+            
+            
+            lose_sound_L13.setSound('Assets/sounds/lose.mp3', hamming=True)
+            lose_sound_L13.setVolume(1.0, log=False)
+            lose_sound_L13.seek(0)
+            eat_sound_L13.setSound('Assets/sounds/eat.mp3', hamming=True)
+            eat_sound_L13.setVolume(1.0, log=False)
+            eat_sound_L13.seek(0)
+            # store start times for Level_13
+            Level_13.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_13.tStart = globalClock.getTime(format='float')
+            Level_13.status = STARTED
+            thisExp.addData('Level_13.started', Level_13.tStart)
+            Level_13.maxDuration = None
+            # keep track of which components have finished
+            Level_13Components = Level_13.components
+            for thisComponent in Level_13.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_13" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_13_Loop, data.TrialHandler2) and thisLevel_13_Loop.thisN != Level_13_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_13.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *dino_image_L13* updates
+                
+                # if dino_image_L13 is starting this frame...
+                if dino_image_L13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    dino_image_L13.frameNStart = frameN  # exact frame index
+                    dino_image_L13.tStart = t  # local t and not account for scr refresh
+                    dino_image_L13.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(dino_image_L13, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    dino_image_L13.status = STARTED
+                    dino_image_L13.setAutoDraw(True)
+                
+                # if dino_image_L13 is active this frame...
+                if dino_image_L13.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor1_L13* updates
+                
+                # if floor1_L13 is starting this frame...
+                if floor1_L13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor1_L13.frameNStart = frameN  # exact frame index
+                    floor1_L13.tStart = t  # local t and not account for scr refresh
+                    floor1_L13.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor1_L13, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor1_L13.status = STARTED
+                    floor1_L13.setAutoDraw(True)
+                
+                # if floor1_L13 is active this frame...
+                if floor1_L13.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor2_L13* updates
+                
+                # if floor2_L13 is starting this frame...
+                if floor2_L13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor2_L13.frameNStart = frameN  # exact frame index
+                    floor2_L13.tStart = t  # local t and not account for scr refresh
+                    floor2_L13.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor2_L13, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor2_L13.status = STARTED
+                    floor2_L13.setAutoDraw(True)
+                
+                # if floor2_L13 is active this frame...
+                if floor2_L13.status == STARTED:
+                    # update params
+                    pass
+                
+                # *meatbone_image_L13* updates
+                
+                # if meatbone_image_L13 is starting this frame...
+                if meatbone_image_L13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    meatbone_image_L13.frameNStart = frameN  # exact frame index
+                    meatbone_image_L13.tStart = t  # local t and not account for scr refresh
+                    meatbone_image_L13.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(meatbone_image_L13, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    meatbone_image_L13.status = STARTED
+                    meatbone_image_L13.setAutoDraw(True)
+                
+                # if meatbone_image_L13 is active this frame...
+                if meatbone_image_L13.status == STARTED:
+                    # update params
+                    pass
+                
+                # *score_text_L13* updates
+                
+                # if score_text_L13 is starting this frame...
+                if score_text_L13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    score_text_L13.frameNStart = frameN  # exact frame index
+                    score_text_L13.tStart = t  # local t and not account for scr refresh
+                    score_text_L13.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(score_text_L13, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    score_text_L13.status = STARTED
+                    score_text_L13.setAutoDraw(True)
+                
+                # if score_text_L13 is active this frame...
+                if score_text_L13.status == STARTED:
+                    # update params
+                    pass
+                
+                # *timer_text_L13* updates
+                
+                # if timer_text_L13 is starting this frame...
+                if timer_text_L13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    timer_text_L13.frameNStart = frameN  # exact frame index
+                    timer_text_L13.tStart = t  # local t and not account for scr refresh
+                    timer_text_L13.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(timer_text_L13, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    timer_text_L13.status = STARTED
+                    timer_text_L13.setAutoDraw(True)
+                
+                # if timer_text_L13 is active this frame...
+                if timer_text_L13.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from DinoMovement_L13
+                
+                # Initialize key state flags
+                left_pressed = False
+                right_pressed = False
+                up_pressed = False
+                
+                # Handle input based on the selected control method
+                
+                # Process keyboard input
+                if selected_control == "Keyboard":
+                    keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
+                    for key in keys_pressed:
+                        if key.name == 'left':
+                            left_pressed = True
+                        if key.name == 'right':
+                            right_pressed = True
+                        if key.name == 'up':
+                            up_pressed = True
+                            
+                # Process PSURP input            
+                if selected_control == "PSURP":
+                    # Read serial data
+                    ser.flushInput()
+                    strSerialData = ser.readline()
+                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                
+                    # Apply difficulty-specific movement
+                    if selected_diff == "1":
+                        # Constant movement for Easy mode
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
+                            dino_image_L13.size = [abs(dino_image_L13.size[0]), dino_image_L13.size[1]]  # Face right
+                
+                    elif selected_diff == "2":
+                        # Proportional movement for Hard mode (current implementation)
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
+                            dino_pos[0] += move_amount  # Movement based on force
+                            dino_image_L13.size = [abs(dino_image_L13.size[0]), dino_image_L13.size[1]]  # Face right
+                
+                    # Jump logic remains the same for both difficulties
+                    if B0ForceInNewtons > MIN_FORCE:
+                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                
+                
+                            
+                 
+                # Apply gravity to Dino's vertical speed
+                dino_speed += gravity
+                
+                # Check if Dino is on the floor (keeps dino on top of floor)
+                if is_on_floor(dino_pos) and dino_speed <= 0:  # Falling or stationary
+                    dino_pos[1] = floor1_top + (dino_image_L13.size[1] / 2) - ground_offset  # Align Dino with the floor
+                    dino_speed = 0  # Reset vertical speed
+                
+                # Respawn if Dino falls below the floor threshold
+                if dino_pos[1] < fall_threshold:
+                    lose_sound_L13.play()
+                    continueRoutine = False  # Stop the MainGame routine
+                    
+                # Jumping logic: Allow jump whenever the 'up' key is pressed
+                if up_pressed:  # Check if the up key is pressed
+                    dino_speed = jump_speed  # Apply upward movement
+                
+                # Update Dino's vertical position
+                dino_pos[1] += dino_speed
+                
+                # Continuous horizontal movement
+                if left_pressed and dino_pos[0] > min_x:
+                    dino_pos[0] -= move_speed  # Move Dino to the left
+                    dino_image_L13.size = [-1 * abs(dino_image_L13.size[0]), dino_image_L13.size[1]]
+                
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed  # Move Dino to the right
+                    dino_image_L13.size = [abs(dino_image_L13.size[0]), dino_image_L13.size[1]]  # Reset Dino to face right
+                
+                # Update Dino's position
+                # dino_image_L13.pos = dino_pos  # Use both X and Y values of dino_pos
+                dino_image_L13.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
+                
+                # Increment the frame counter for trail updates
+                trail_frame_counter += 1
+                
+                # Check if it's time to spawn a new dot
+                if trail_frame_counter >= trail_interval:
+                    if len(trail_positions) >= trail_length:
+                        trail_positions.pop(0)  # Remove the oldest position if trail is full
+                
+                    # Add Dino's current position to the trail
+                    trail_positions.append(dino_pos[:])  # Add a copy of Dino's current position
+                
+                    trail_frame_counter = 0  # Reset the counter
+                
+                # Update the trail dots' positions
+                for i, pos in enumerate(trail_positions):
+                    trail_dots[i].pos = [pos[0] - camera_offset_x, pos[1]]  # Adjust for camera offset
+                
+                
+                # Update the Dino's animation
+                if (frame_index_update_counter % 4) == 0:  # Adjust 4 to control animation speed
+                    dino_image_L13.image = frame_paths[frame_index]  # Update the current frame
+                
+                    # Advance to the next frame
+                    frame_index += 1
+                    if frame_index >= total_frames:
+                        frame_index = 0  # Loop back to the first frame
+                
+                
+                
+                # Increment the animation frame counter
+                frame_index_update_counter += 1
+                
+                
+                # Run 'Each Frame' code from worldController_L13
+                
+                # Update the camera offset based on Dino's X position
+                camera_offset_x += camera_speed  # The camera offset follows Dino's position
+                
+                # Move backgrounds relative to Dino's position (seamless wrap-around)
+                background1_L13.pos = [-(camera_offset_x % background_width), 0]
+                background2_L13.pos = [background1_L13.pos[0] + background_width, 0]
+                
+                # Update floor positions relative to Dino's position
+                floor1_L13.pos = [floor1_pos[0] - camera_offset_x, floor1_L13.pos[1]]
+                floor2_L13.pos = [floor2_x_static - camera_offset_x, floor2_L13.pos[1]]  # floor2_L13 moves with Dino
+                
+                
+                # Update meatbone position to match floor2_L13's top
+                meatbone_x = floor2_L13.pos[0]  # Update X position based on floor2_L13
+                meatbone_y = floor2_top + (meatbone_size[1] / 2) - offset  # Keep the meatbone on top of floor2_L13
+                meatbone_image_L13.pos = [meatbone_x, meatbone_y]
+                
+                
+                # Update the arc position relative to the camera offset
+                # Update Arc 1 Position
+                arc1_L13.pos = [arc1_L13_center[0] - camera_offset_x, arc1_L13_center[1]]
+                wiggle_arc1_L13.pos = arc1_L13.pos  # Keep wiggle room on top
+                
+                # Update Arc 2 Position
+                arc2_L13.pos = [arc2_L13_center[0] - camera_offset_x, arc2_L13_center[1]]
+                wiggle_arc2_L13.pos = arc2_L13.pos  # Keep wiggle room on top
+                arc3_L13.pos = [arc3_L13_center[0] - camera_offset_x, arc3_L13_center[1]]
+                wiggle_arc3_L13.pos = arc3_L13.pos  # Keep wiggle room on top
+                # Update Arc 4 Position
+                arc4_L13.pos = [arc4_L13_center[0] - camera_offset_x, arc4_L13_center[1]]
+                wiggle_arc4_L13.pos = arc4_L13.pos  # Keep wiggle room on top
+                # Update Arc 5 Position
+                arc5_L13.pos = [arc5_L13_center[0] - camera_offset_x, arc5_L13_center[1]]
+                wiggle_arc5_L13.pos = arc5_L13.pos  # Keep wiggle room on top
+                
+                arc6_L13.pos = [arc6_L13_center[0] - camera_offset_x, arc6_L13_center[1]]
+                wiggle_arc6_L13.pos = arc6_L13.pos
+                
+                # Update Arc 7 Position
+                arc7_L13.pos = [arc7_L13_center[0] - camera_offset_x, arc7_L13_center[1]]
+                wiggle_arc7_L13.pos = arc7_L13.pos
+                
+                # Update Arc 8 Position
+                arc8_L13.pos = [arc8_L13_center[0] - camera_offset_x, arc8_L13_center[1]]
+                wiggle_arc8_L13.pos = arc8_L13.pos
+                
+                # Update Arc 9 Position
+                arc9_L13.pos = [arc9_L13_center[0] - camera_offset_x, arc9_L13_center[1]]
+                wiggle_arc9_L13.pos = arc9_L13.pos
+                
+                # Update Arc 10 Position
+                arc10_L13.pos = [arc10_L13_center[0] - camera_offset_x, arc10_L13_center[1]]
+                wiggle_arc10_L13.pos = arc10_L13.pos
+                
+                # Update Arc 11 Position
+                arc11_L13.pos = [arc11_L13_center[0] - camera_offset_x, arc11_L13_center[1]]
+                wiggle_arc11_L13.pos = arc11_L13.pos
+                
+                
+                
+                
+                # Draw the backgrounds and floors
+                background1_L13.draw()
+                background2_L13.draw()
+                floor1_L13.draw()
+                floor2_L13.draw()
+                wiggle_arc1_L13.draw()
+                wiggle_arc2_L13.draw()
+                wiggle_arc3_L13.draw()
+                wiggle_arc4_L13.draw()
+                wiggle_arc5_L13.draw()
+                wiggle_arc6_L13.draw()
+                wiggle_arc7_L13.draw()
+                wiggle_arc8_L13.draw()
+                wiggle_arc9_L13.draw()
+                wiggle_arc10_L13.draw()
+                wiggle_arc11_L13.draw()
+                
+                arc1_L13.draw()
+                arc2_L13.draw()
+                arc3_L13.draw()
+                arc4_L13.draw()
+                arc5_L13.draw()
+                arc6_L13.draw()
+                arc7_L13.draw()
+                arc8_L13.draw()
+                arc9_L13.draw()
+                arc10_L13.draw()
+                arc11_L13.draw()
+                
+                # Draw the trail dots
+                for dot in trail_dots:
+                    dot.draw()
+                
+                # Run 'Each Frame' code from GoalController_L13
+                dino_relative_x = dino_pos[0] - camera_offset_x
+                dino_relative_y = dino_pos[1]
+                # Check for collision based on proximity to the updated position
+                dx = dino_relative_x - meatbone_x
+                dy = dino_relative_y - meatbone_y
+                
+                if camera_offset_x >= max_x:
+                    lose_sound_L13.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_x < -1 or dino_relative_x > 1:  # Adjust bounds based on screen width
+                    lose_sound_L13.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_y > 0.6:  # Adjust bounds based on screen width
+                    lose_sound_L13.play()
+                    continueRoutine = False  # Ends the current routine
+                
+                # Check for collision for meatbone
+                if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
+                    meatbone_image_L13.opacity = 0  # Make the meatbone disappear
+                    meatbone_collided = True  # Prevent further collision checks
+                    eat_sound_L13.play()
+                    continueRoutine = False
+                
+                # Check for collision for ARCS
+                for vertex in arc1_L13_vertices:
+                    # Adjust Arc 1 vertex for its X-offset (+1)
+                    adjusted_vertex_x = vertex[0] + arc1_L13_x   # Move Arc 1 vertices by 1 unit to the right
+                    adjusted_vertex_y = vertex[1] + arc1_L13_center[1] # Y remains unchanged, apply the same adjustment as Arc 2 if needed
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 1
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L13 and vertex not in arc1_touched_vertices_L13:
+                        arc1_touched_vertices_L13.append(vertex)
+                        score += 1  # Increment the score for Arc 1
+                
+                
+                for vertex in arc2_L13_vertices:
+                    # Adjust Arc 2 vertex for its X-offset (+2)
+                    adjusted_vertex_x = vertex[0] + arc2_L13_x   # Move Arc 2 vertices by 2 units to the right
+                    adjusted_vertex_y = vertex[1] + arc2_L13_center[1] # Y remains unchanged
+                    
+                    # Calculate distance between Dino and the adjusted vertex of Arc 2
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L13 and vertex not in arc2_touched_vertices_L13:
+                        arc2_touched_vertices_L13.append(vertex)
+                        score += 1  # Increment the score for Arc 2
+                        
+                        
+                for vertex in arc3_L13_vertices:
+                    # Adjust Arc 3 vertex for its static X-offset
+                    adjusted_vertex_x = vertex[0] + arc3_L13_x   # Offset Arc 3 vertices by 3.5 units to the right
+                    adjusted_vertex_y = vertex[1] + arc3_L13_center[1]  # Offset Arc 3 vertices by -0.2 units vertically
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 3
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L13 and vertex not in arc3_touched_vertices_L13:
+                        arc3_touched_vertices_L13.append(vertex)
+                        score += 1  # Increment the score for Arc 3
+                        
+                for vertex in arc4_L13_vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L13_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L13_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 4
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L13 and vertex not in arc4_touched_vertices_L13:
+                        arc4_touched_vertices_L13.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc5_L13_vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L13_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L13_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 5
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L13 and vertex not in arc5_touched_vertices_L13:
+                        arc5_touched_vertices_L13.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc6_L13_vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13 and vertex not in arc6_touched_vertices_L13:
+                        arc6_touched_vertices_L13.append(vertex)
+                        score += 1
+                
+                # Arc 7 touch detection
+                for vertex in arc7_L13_vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13 and vertex not in arc7_touched_vertices_L13:
+                        arc7_touched_vertices_L13.append(vertex)
+                        score += 1
+                
+                # Arc 8 touch detection
+                for vertex in arc8_L13_vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13 and vertex not in arc8_touched_vertices_L13:
+                        arc8_touched_vertices_L13.append(vertex)
+                        score += 1
+                
+                
+                # Arc 9 touch detection
+                for vertex in arc9_L13_vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13 and vertex not in arc9_touched_vertices_L13:
+                        arc9_touched_vertices_L13.append(vertex)
+                        score += 1       
+                
+                # Arc 10 touch detection
+                for vertex in arc10_L13_vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13 and vertex not in arc10_touched_vertices_L13:
+                        arc10_touched_vertices_L13.append(vertex)
+                        score += 1    
+                
+                # Arc 11 touch detection
+                for vertex in arc11_L13_vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13 and vertex not in arc11_touched_vertices_L13:
+                        arc11_touched_vertices_L13.append(vertex)
+                        score += 1    
+                  
+                # WIGGLE ROOM STUFF
+                
+                
+                # Reset to false at the start of each frame
+                wiggle_room = False  
+                for vertex in wiggle_arc1_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc1_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc1_L13_center[1] 
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                for vertex in wiggle_arc2_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc2_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc2_L13_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                        
+                for vertex in wiggle_arc3_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc3_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc3_L13_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                
+                
+                for vertex in wiggle_arc4_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L13_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L13_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                
+                
+                for vertex in wiggle_arc5_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L13_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L13_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                        
+                for vertex in wiggle_arc6_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True
+                        break
+                # Arc 7 wiggle room
+                for vertex in wiggle_arc7_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True
+                        break
+                
+                # Arc 8 wiggle room
+                for vertex in wiggle_arc8_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True
+                        break
+                        
+                        
+                
+                # Arc 9 wiggle room
+                for vertex in wiggle_arc9_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True
+                        break
+                        
+                # Arc 10 wiggle room
+                for vertex in wiggle_arc10_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True
+                        break
+                        
+                        
+                # Arc 11 wiggle room
+                for vertex in wiggle_arc11_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True
+                        break
+                
+                        
+                        
+                score_text_L13.text = str(score) # update Score
+                
+                
+                dino_relative_x = dino_pos[0] - camera_offset_x
+                dino_relative_y = dino_pos[1]
+                # Check for collision based on proximity to the updated position
+                dx = dino_relative_x - meatbone_x
+                dy = dino_relative_y - meatbone_y
+                
+                if camera_offset_x >= max_x:
+                    lose_sound_L13.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_x < -1 or dino_relative_x > 1:  # Adjust bounds based on screen width
+                    lose_sound_L13.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_y > 0.6:  # Adjust bounds based on screen width
+                    lose_sound_L13.play()
+                    continueRoutine = False  # Ends the current routine
+                
+                # Check for collision for meatbone
+                if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
+                    print("Dino ate the meatbone!")
+                    meatbone_image_L13.opacity = 0  # Make the meatbone disappear
+                    meatbone_collided = True  # Prevent further collision checks
+                    eat_sound_L13.play()
+                    continueRoutine = False
+                
+                # Check for collision for ARCS
+                for vertex in arc1_L13_vertices:
+                    # Adjust Arc 1 vertex for its X-offset (+1)
+                    adjusted_vertex_x = vertex[0] + arc1_L13_x   # Move Arc 1 vertices by 1 unit to the right
+                    adjusted_vertex_y = vertex[1] + arc1_L13_center[1] # Y remains unchanged, apply the same adjustment as Arc 2 if needed
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 1
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L13 and vertex not in arc1_touched_vertices_L13:
+                        arc1_touched_vertices_L13.append(vertex)
+                        score += 1  # Increment the score for Arc 1
+                
+                
+                for vertex in arc2_L13_vertices:
+                    # Adjust Arc 2 vertex for its X-offset (+2)
+                    adjusted_vertex_x = vertex[0] + arc2_L13_x   # Move Arc 2 vertices by 2 units to the right
+                    adjusted_vertex_y = vertex[1] + arc2_L13_center[1] # Y remains unchanged
+                    
+                    # Calculate distance between Dino and the adjusted vertex of Arc 2
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L13 and vertex not in arc2_touched_vertices_L13:
+                        arc2_touched_vertices_L13.append(vertex)
+                        score += 1  # Increment the score for Arc 2
+                        
+                        
+                for vertex in arc3_L13_vertices:
+                    # Adjust Arc 3 vertex for its static X-offset
+                    adjusted_vertex_x = vertex[0] + arc3_L13_x   # Offset Arc 3 vertices by 3.5 units to the right
+                    adjusted_vertex_y = vertex[1] + arc3_L13_center[1]  # Offset Arc 3 vertices by -0.2 units vertically
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 3
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L13 and vertex not in arc3_touched_vertices_L13:
+                        arc3_touched_vertices_L13.append(vertex)
+                        score += 1  # Increment the score for Arc 3
+                        
+                for vertex in arc4_L13_vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L13_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L13_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 4
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L13 and vertex not in arc4_touched_vertices_L13:
+                        arc4_touched_vertices_L13.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc5_L13_vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L13_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L13_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 5
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L13 and vertex not in arc5_touched_vertices_L13:
+                        arc5_touched_vertices_L13.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc6_L13_vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13 and vertex not in arc6_touched_vertices_L13:
+                        arc6_touched_vertices_L13.append(vertex)
+                        score += 1
+                
+                # Arc 7 touch detection
+                for vertex in arc7_L13_vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13 and vertex not in arc7_touched_vertices_L13:
+                        arc7_touched_vertices_L13.append(vertex)
+                        score += 1
+                
+                # Arc 8 touch detection
+                for vertex in arc8_L13_vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13 and vertex not in arc8_touched_vertices_L13:
+                        arc8_touched_vertices_L13.append(vertex)
+                        score += 1
+                
+                
+                # Arc 9 touch detection
+                for vertex in arc9_L13_vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13 and vertex not in arc9_touched_vertices_L13:
+                        arc9_touched_vertices_L13.append(vertex)
+                        score += 1       
+                
+                # Arc 10 touch detection
+                for vertex in arc10_L13_vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13 and vertex not in arc10_touched_vertices_L13:
+                        arc10_touched_vertices_L13.append(vertex)
+                        score += 1    
+                
+                # Arc 11 touch detection
+                for vertex in arc11_L13_vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13 and vertex not in arc11_touched_vertices_L13:
+                        arc11_touched_vertices_L13.append(vertex)
+                        score += 1    
+                  
+                # WIGGLE ROOM STUFF
+                
+                
+                # Reset to false at the start of each frame
+                wiggle_room = False  
+                for vertex in wiggle_arc1_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc1_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc1_L13_center[1] 
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                for vertex in wiggle_arc2_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc2_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc2_L13_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                        
+                for vertex in wiggle_arc3_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc3_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc3_L13_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                
+                
+                for vertex in wiggle_arc4_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L13_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L13_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                
+                
+                for vertex in wiggle_arc5_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L13_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L13_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                        
+                for vertex in wiggle_arc6_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True
+                        break
+                # Arc 7 wiggle room
+                for vertex in wiggle_arc7_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True
+                        break
+                
+                # Arc 8 wiggle room
+                for vertex in wiggle_arc8_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True
+                        break
+                        
+                        
+                
+                # Arc 9 wiggle room
+                for vertex in wiggle_arc9_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True
+                        break
+                        
+                # Arc 10 wiggle room
+                for vertex in wiggle_arc10_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True
+                        break
+                        
+                        
+                # Arc 11 wiggle room
+                for vertex in wiggle_arc11_L13.vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L13_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L13_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L13:
+                        wiggle_room = True
+                        break
+                
+                        
+                        
+                score_text_L13.text = str(score) # update Score
+                
+                
+                
+                # Run 'Each Frame' code from Timer_L13
+                # Calculate remaining time
+                time_remaining = time_limit - level_timer.getTime()
+                
+                # Check if time is up
+                if time_remaining <= 0:
+                    print("Time's up! Returning to MainMenu.")
+                    continueRoutine = False  # End the MainGame routine
+                    time_remaining = 0  # Prevent negative time display
+                
+                # Format the timer as MM:SS
+                minutes = int(time_remaining) // 60
+                seconds = int(time_remaining) % 60
+                
+                # Update the timer display
+                timer_text_L13.text = str(f"{minutes}:{seconds:02d}")
+                
+                
+                # *lose_sound_L13* updates
+                
+                # if lose_sound_L13 is stopping this frame...
+                if lose_sound_L13.status == STARTED:
+                    if bool(False) or lose_sound_L13.isFinished:
+                        # keep track of stop time/frame for later
+                        lose_sound_L13.tStop = t  # not accounting for scr refresh
+                        lose_sound_L13.tStopRefresh = tThisFlipGlobal  # on global time
+                        lose_sound_L13.frameNStop = frameN  # exact frame index
+                        # update status
+                        lose_sound_L13.status = FINISHED
+                        lose_sound_L13.stop()
+                
+                # *eat_sound_L13* updates
+                
+                # if eat_sound_L13 is stopping this frame...
+                if eat_sound_L13.status == STARTED:
+                    if bool(False) or eat_sound_L13.isFinished:
+                        # keep track of stop time/frame for later
+                        eat_sound_L13.tStop = t  # not accounting for scr refresh
+                        eat_sound_L13.tStopRefresh = tThisFlipGlobal  # on global time
+                        eat_sound_L13.frameNStop = frameN  # exact frame index
+                        # update status
+                        eat_sound_L13.status = FINISHED
+                        eat_sound_L13.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[lose_sound_L13, eat_sound_L13]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_13.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_13.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_13" ---
+            for thisComponent in Level_13.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_13
+            Level_13.tStop = globalClock.getTime(format='float')
+            Level_13.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_13.stopped', Level_13.tStop)
+            # Run 'End Routine' code from DinoMovement_L13
+            dino_pos = [-0.5, -0.3]  # Reset Dino's position
+            trail_positions.clear()  # Remove all stored positions
+            # Run 'End Routine' code from GoalController_L13
+            global total_touched_vertices_L13, total_possible_vertices_L13
+            
+            total_touched_vertices_L13 = (
+                len(arc1_touched_vertices_L13) + len(arc2_touched_vertices_L13) + len(arc3_touched_vertices_L13) +
+                len(arc4_touched_vertices_L13) + len(arc5_touched_vertices_L13) + len(arc6_touched_vertices_L13) +
+                len(arc7_touched_vertices_L13) + len(arc8_touched_vertices_L13) + len(arc9_touched_vertices_L13) +
+                len(arc10_touched_vertices_L13) + len(arc11_touched_vertices_L13)
+            )
+            
+            total_possible_vertices_L13 = (
+                len(arc1_L13_vertices) + len(arc2_L13_vertices) + len(arc3_L13_vertices) +
+                len(arc4_L13_vertices) + len(arc5_L13_vertices) + len(arc6_L13_vertices) +
+                len(arc7_L13_vertices) + len(arc8_L13_vertices) + len(arc9_L13_vertices) +
+                len(arc10_L13_vertices) + len(arc11_L13_vertices)
+            )
+            
+            score = 0
+            # the Routine "Level_13" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
+            # --- Prepare to start Routine "Level_13_checker" ---
+            # create an object to store info about Routine Level_13_checker
+            Level_13_checker = data.Routine(
+                name='Level_13_checker',
+                components=[end_score_text_L13, win_sound_L13, fail_sound_L13],
+            )
+            Level_13_checker.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from Checker_L13
+            import csv
+            # Calculate the percentage
+            if total_possible_vertices_L13 > 0:
+                percentage = (total_touched_vertices_L13 / total_possible_vertices_L13) * 100
+            else:
+                percentage = 0  # Avoid division by zero
+                
+            
+            # Update the text for the end screen
+            end_score_text_L13.text = f"Your score: {percentage:.2f}%"
+            
+            # Start 3 second timer
+            end_screen_timer = core.CountdownTimer(3)
+            
+            
+            win_sound_L13.setSound('Assets/sounds/win.mp3', hamming=True)
+            win_sound_L13.setVolume(1.0, log=False)
+            win_sound_L13.seek(0)
+            fail_sound_L13.setSound('Assets/sounds/level_failed.mp3', hamming=True)
+            fail_sound_L13.setVolume(0.6, log=False)
+            fail_sound_L13.seek(0)
+            # store start times for Level_13_checker
+            Level_13_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_13_checker.tStart = globalClock.getTime(format='float')
+            Level_13_checker.status = STARTED
+            thisExp.addData('Level_13_checker.started', Level_13_checker.tStart)
+            Level_13_checker.maxDuration = None
+            # keep track of which components have finished
+            Level_13_checkerComponents = Level_13_checker.components
+            for thisComponent in Level_13_checker.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_13_checker" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_13_Loop, data.TrialHandler2) and thisLevel_13_Loop.thisN != Level_13_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_13_checker.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *end_score_text_L13* updates
+                
+                # if end_score_text_L13 is starting this frame...
+                if end_score_text_L13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    end_score_text_L13.frameNStart = frameN  # exact frame index
+                    end_score_text_L13.tStart = t  # local t and not account for scr refresh
+                    end_score_text_L13.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(end_score_text_L13, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    end_score_text_L13.status = STARTED
+                    end_score_text_L13.setAutoDraw(True)
+                
+                # if end_score_text_L13 is active this frame...
+                if end_score_text_L13.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from Checker_L13
+                # Keep showing the end screen until 3 seconds pass
+                if end_screen_timer.getTime() <= 0:
+                    continueRoutine = False
+                
+                
+                # *win_sound_L13* updates
+                
+                # if win_sound_L13 is stopping this frame...
+                if win_sound_L13.status == STARTED:
+                    if bool(False) or win_sound_L13.isFinished:
+                        # keep track of stop time/frame for later
+                        win_sound_L13.tStop = t  # not accounting for scr refresh
+                        win_sound_L13.tStopRefresh = tThisFlipGlobal  # on global time
+                        win_sound_L13.frameNStop = frameN  # exact frame index
+                        # update status
+                        win_sound_L13.status = FINISHED
+                        win_sound_L13.stop()
+                
+                # *fail_sound_L13* updates
+                
+                # if fail_sound_L13 is stopping this frame...
+                if fail_sound_L13.status == STARTED:
+                    if bool(False) or fail_sound_L13.isFinished:
+                        # keep track of stop time/frame for later
+                        fail_sound_L13.tStop = t  # not accounting for scr refresh
+                        fail_sound_L13.tStopRefresh = tThisFlipGlobal  # on global time
+                        fail_sound_L13.frameNStop = frameN  # exact frame index
+                        # update status
+                        fail_sound_L13.status = FINISHED
+                        fail_sound_L13.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[win_sound_L13, fail_sound_L13]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_13_checker.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_13_checker.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_13_checker" ---
+            for thisComponent in Level_13_checker.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_13_checker
+            Level_13_checker.tStop = globalClock.getTime(format='float')
+            Level_13_checker.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_13_checker.stopped', Level_13_checker.tStop)
+            # Run 'End Routine' code from Checker_L13
+            
+            
+            thisExp.addData('Participant ID', expInfo['participant'])
+            thisExp.addData('Session', expInfo['session'])
+            thisExp.addData('Date', expInfo['date'])
+            thisExp.addData('Score', total_touched_vertices_L13)
+            thisExp.addData('Percentage', percentage)
+            
+            filename = f"data/{expInfo['participant']}_summary.csv"
+            with open(filename, mode='w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(['Participant ID', 'Session', 'Date', 'Score', 'Percentage'])
+                writer.writerow([expInfo['participant'], expInfo['session'], expInfo['date'], total_touched_vertices_L13, percentage])
+            
+            # Decide pass/fail and play correct sound
+            if percentage >= win_threshold and meatbone_collided:
+                Level_13_Loop.finished = True
+                win_sound_L13.play()
+            else:
+                Level_13_Loop.finished = False
+                fail_sound_L13.play()
+                
+            total_touched_vertices_L13 = 0
+            total_possible_vertices_L13 = 0
+            meatbone_collided = False
+            # the Routine "Level_13_checker" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+        # completed 1000.0 repeats of 'Level_13_Loop'
+        
+        
+        # set up handler to look after randomisation of conditions etc
+        Level_14_Loop = data.TrialHandler2(
+            name='Level_14_Loop',
+            nReps=1000.0, 
+            method='sequential', 
+            extraInfo=expInfo, 
+            originPath=-1, 
+            trialList=[None], 
+            seed=None, 
+        )
+        thisExp.addLoop(Level_14_Loop)  # add the loop to the experiment
+        thisLevel_14_Loop = Level_14_Loop.trialList[0]  # so we can initialise stimuli with some values
+        # abbreviate parameter names if possible (e.g. rgb = thisLevel_14_Loop.rgb)
+        if thisLevel_14_Loop != None:
+            for paramName in thisLevel_14_Loop:
+                globals()[paramName] = thisLevel_14_Loop[paramName]
+        
+        for thisLevel_14_Loop in Level_14_Loop:
+            currentLoop = Level_14_Loop
+            thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+            # abbreviate parameter names if possible (e.g. rgb = thisLevel_14_Loop.rgb)
+            if thisLevel_14_Loop != None:
+                for paramName in thisLevel_14_Loop:
+                    globals()[paramName] = thisLevel_14_Loop[paramName]
+            
+            # --- Prepare to start Routine "Level_14" ---
+            # create an object to store info about Routine Level_14
+            Level_14 = data.Routine(
+                name='Level_14',
+                components=[dino_image_L14, floor1_L14, floor2_L14, meatbone_image_L14, score_text_L14, timer_text_L14, lose_sound_L14, eat_sound_L14],
+            )
+            Level_14.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from DinoMovement_L14
+            dino_pos = [0, -0.3]  # Reset Dino's position
+            dino_speed = 0  # Reset vertical speed
+            # Initialize the trail dots
+            trail_dots = [
+                Circle(win, radius=trail_dot_size, fillColor=trail_color, lineColor=None, pos=[-1, -1])
+                for _ in range(trail_length)
+            ]
+            
+            # Run 'Begin Routine' code from worldController_L14
+            camera_offset_x = 0
+            # Run 'Begin Routine' code from GoalController_L14
+            score = 0  # Reset the score
+            
+            meatbone_collided = False
+            meatbone_image_L14.opacity = 1
+            
+            
+            wiggle_room = False  
+            
+            arc1_touched_vertices_L14 = []
+            arc2_touched_vertices_L14 = []
+            arc3_touched_vertices_L14 = []
+            arc4_touched_vertices_L14 = []
+            arc5_touched_vertices_L14 = []
+            arc6_touched_vertices_L14 = []
+            arc7_touched_vertices_L14 = []
+            arc8_touched_vertices_L14 = []
+            arc9_touched_vertices_L14 = []
+            arc10_touched_vertices_L14 = []
+            arc11_touched_vertices_L14 = []
+            # Run 'Begin Routine' code from Timer_L14
+            
+            level_timer.reset()  # Reset the timer at the start of the MainGame routine
+            
+            
+            lose_sound_L14.setSound('Assets/sounds/lose.mp3', hamming=True)
+            lose_sound_L14.setVolume(1.0, log=False)
+            lose_sound_L14.seek(0)
+            eat_sound_L14.setSound('Assets/sounds/eat.mp3', hamming=True)
+            eat_sound_L14.setVolume(1.0, log=False)
+            eat_sound_L14.seek(0)
+            # store start times for Level_14
+            Level_14.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_14.tStart = globalClock.getTime(format='float')
+            Level_14.status = STARTED
+            thisExp.addData('Level_14.started', Level_14.tStart)
+            Level_14.maxDuration = None
+            # keep track of which components have finished
+            Level_14Components = Level_14.components
+            for thisComponent in Level_14.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_14" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_14_Loop, data.TrialHandler2) and thisLevel_14_Loop.thisN != Level_14_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_14.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *dino_image_L14* updates
+                
+                # if dino_image_L14 is starting this frame...
+                if dino_image_L14.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    dino_image_L14.frameNStart = frameN  # exact frame index
+                    dino_image_L14.tStart = t  # local t and not account for scr refresh
+                    dino_image_L14.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(dino_image_L14, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    dino_image_L14.status = STARTED
+                    dino_image_L14.setAutoDraw(True)
+                
+                # if dino_image_L14 is active this frame...
+                if dino_image_L14.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor1_L14* updates
+                
+                # if floor1_L14 is starting this frame...
+                if floor1_L14.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor1_L14.frameNStart = frameN  # exact frame index
+                    floor1_L14.tStart = t  # local t and not account for scr refresh
+                    floor1_L14.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor1_L14, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor1_L14.status = STARTED
+                    floor1_L14.setAutoDraw(True)
+                
+                # if floor1_L14 is active this frame...
+                if floor1_L14.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor2_L14* updates
+                
+                # if floor2_L14 is starting this frame...
+                if floor2_L14.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor2_L14.frameNStart = frameN  # exact frame index
+                    floor2_L14.tStart = t  # local t and not account for scr refresh
+                    floor2_L14.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor2_L14, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor2_L14.status = STARTED
+                    floor2_L14.setAutoDraw(True)
+                
+                # if floor2_L14 is active this frame...
+                if floor2_L14.status == STARTED:
+                    # update params
+                    pass
+                
+                # *meatbone_image_L14* updates
+                
+                # if meatbone_image_L14 is starting this frame...
+                if meatbone_image_L14.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    meatbone_image_L14.frameNStart = frameN  # exact frame index
+                    meatbone_image_L14.tStart = t  # local t and not account for scr refresh
+                    meatbone_image_L14.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(meatbone_image_L14, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    meatbone_image_L14.status = STARTED
+                    meatbone_image_L14.setAutoDraw(True)
+                
+                # if meatbone_image_L14 is active this frame...
+                if meatbone_image_L14.status == STARTED:
+                    # update params
+                    pass
+                
+                # *score_text_L14* updates
+                
+                # if score_text_L14 is starting this frame...
+                if score_text_L14.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    score_text_L14.frameNStart = frameN  # exact frame index
+                    score_text_L14.tStart = t  # local t and not account for scr refresh
+                    score_text_L14.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(score_text_L14, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    score_text_L14.status = STARTED
+                    score_text_L14.setAutoDraw(True)
+                
+                # if score_text_L14 is active this frame...
+                if score_text_L14.status == STARTED:
+                    # update params
+                    pass
+                
+                # *timer_text_L14* updates
+                
+                # if timer_text_L14 is starting this frame...
+                if timer_text_L14.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    timer_text_L14.frameNStart = frameN  # exact frame index
+                    timer_text_L14.tStart = t  # local t and not account for scr refresh
+                    timer_text_L14.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(timer_text_L14, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    timer_text_L14.status = STARTED
+                    timer_text_L14.setAutoDraw(True)
+                
+                # if timer_text_L14 is active this frame...
+                if timer_text_L14.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from DinoMovement_L14
+                
+                # Initialize key state flags
+                left_pressed = False
+                right_pressed = False
+                up_pressed = False
+                
+                # Handle input based on the selected control method
+                
+                # Process keyboard input
+                if selected_control == "Keyboard":
+                    keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
+                    for key in keys_pressed:
+                        if key.name == 'left':
+                            left_pressed = True
+                        if key.name == 'right':
+                            right_pressed = True
+                        if key.name == 'up':
+                            up_pressed = True
+                            
+                # Process PSURP input            
+                if selected_control == "PSURP":
+                    # Read serial data
+                    ser.flushInput()
+                    strSerialData = ser.readline()
+                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                
+                    # Apply difficulty-specific movement
+                    if selected_diff == "1":
+                        # Constant movement for Easy mode
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
+                            dino_image_L14.size = [abs(dino_image_L14.size[0]), dino_image_L14.size[1]]  # Face right
+                
+                    elif selected_diff == "2":
+                        # Proportional movement for Hard mode (current implementation)
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
+                            dino_pos[0] += move_amount  # Movement based on force
+                            dino_image_L14.size = [abs(dino_image_L14.size[0]), dino_image_L14.size[1]]  # Face right
+                
+                    # Jump logic remains the same for both difficulties
+                    if B0ForceInNewtons > MIN_FORCE:
+                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                
+                
+                            
+                 
+                # Apply gravity to Dino's vertical speed
+                dino_speed += gravity
+                
+                # Check if Dino is on the floor (keeps dino on top of floor)
+                if is_on_floor(dino_pos) and dino_speed <= 0:  # Falling or stationary
+                    dino_pos[1] = floor1_top + (dino_image_L14.size[1] / 2) - ground_offset  # Align Dino with the floor
+                    dino_speed = 0  # Reset vertical speed
+                
+                # Respawn if Dino falls below the floor threshold
+                if dino_pos[1] < fall_threshold:
+                    lose_sound_L14.play()
+                    continueRoutine = False  # Stop the MainGame routine
+                    
+                # Jumping logic: Allow jump whenever the 'up' key is pressed
+                if up_pressed:  # Check if the up key is pressed
+                    dino_speed = jump_speed  # Apply upward movement
+                
+                # Update Dino's vertical position
+                dino_pos[1] += dino_speed
+                
+                # Continuous horizontal movement
+                if left_pressed and dino_pos[0] > min_x:
+                    dino_pos[0] -= move_speed  # Move Dino to the left
+                    dino_image_L14.size = [-1 * abs(dino_image_L14.size[0]), dino_image_L14.size[1]]
+                
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed  # Move Dino to the right
+                    dino_image_L14.size = [abs(dino_image_L14.size[0]), dino_image_L14.size[1]]  # Reset Dino to face right
+                
+                # Update Dino's position
+                # dino_image_L14.pos = dino_pos  # Use both X and Y values of dino_pos
+                dino_image_L14.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
+                
+                # Increment the frame counter for trail updates
+                trail_frame_counter += 1
+                
+                # Check if it's time to spawn a new dot
+                if trail_frame_counter >= trail_interval:
+                    if len(trail_positions) >= trail_length:
+                        trail_positions.pop(0)  # Remove the oldest position if trail is full
+                
+                    # Add Dino's current position to the trail
+                    trail_positions.append(dino_pos[:])  # Add a copy of Dino's current position
+                
+                    trail_frame_counter = 0  # Reset the counter
+                
+                # Update the trail dots' positions
+                for i, pos in enumerate(trail_positions):
+                    trail_dots[i].pos = [pos[0] - camera_offset_x, pos[1]]  # Adjust for camera offset
+                
+                
+                # Update the Dino's animation
+                if (frame_index_update_counter % 4) == 0:  # Adjust 4 to control animation speed
+                    dino_image_L14.image = frame_paths[frame_index]  # Update the current frame
+                
+                    # Advance to the next frame
+                    frame_index += 1
+                    if frame_index >= total_frames:
+                        frame_index = 0  # Loop back to the first frame
+                
+                
+                
+                # Increment the animation frame counter
+                frame_index_update_counter += 1
+                
+                
+                # Run 'Each Frame' code from worldController_L14
+                
+                # Update the camera offset based on Dino's X position
+                camera_offset_x += camera_speed  # The camera offset follows Dino's position
+                
+                # Move backgrounds relative to Dino's position (seamless wrap-around)
+                background1_L14.pos = [-(camera_offset_x % background_width), 0]
+                background2_L14.pos = [background1_L14.pos[0] + background_width, 0]
+                
+                # Update floor positions relative to Dino's position
+                floor1_L14.pos = [floor1_pos[0] - camera_offset_x, floor1_L14.pos[1]]
+                floor2_L14.pos = [floor2_x_static - camera_offset_x, floor2_L14.pos[1]]  # floor2_L14 moves with Dino
+                
+                
+                # Update meatbone position to match floor2_L14's top
+                meatbone_x = floor2_L14.pos[0]  # Update X position based on floor2_L14
+                meatbone_y = floor2_top + (meatbone_size[1] / 2) - offset  # Keep the meatbone on top of floor2_L14
+                meatbone_image_L14.pos = [meatbone_x, meatbone_y]
+                
+                
+                # Update the arc position relative to the camera offset
+                # Update Arc 1 Position
+                arc1_L14.pos = [arc1_L14_center[0] - camera_offset_x, arc1_L14_center[1]]
+                wiggle_arc1_L14.pos = arc1_L14.pos  # Keep wiggle room on top
+                
+                # Update Arc 2 Position
+                arc2_L14.pos = [arc2_L14_center[0] - camera_offset_x, arc2_L14_center[1]]
+                wiggle_arc2_L14.pos = arc2_L14.pos  # Keep wiggle room on top
+                arc3_L14.pos = [arc3_L14_center[0] - camera_offset_x, arc3_L14_center[1]]
+                wiggle_arc3_L14.pos = arc3_L14.pos  # Keep wiggle room on top
+                # Update Arc 4 Position
+                arc4_L14.pos = [arc4_L14_center[0] - camera_offset_x, arc4_L14_center[1]]
+                wiggle_arc4_L14.pos = arc4_L14.pos  # Keep wiggle room on top
+                # Update Arc 5 Position
+                arc5_L14.pos = [arc5_L14_center[0] - camera_offset_x, arc5_L14_center[1]]
+                wiggle_arc5_L14.pos = arc5_L14.pos  # Keep wiggle room on top
+                
+                arc6_L14.pos = [arc6_L14_center[0] - camera_offset_x, arc6_L14_center[1]]
+                wiggle_arc6_L14.pos = arc6_L14.pos
+                
+                # Update Arc 7 Position
+                arc7_L14.pos = [arc7_L14_center[0] - camera_offset_x, arc7_L14_center[1]]
+                wiggle_arc7_L14.pos = arc7_L14.pos
+                
+                # Update Arc 8 Position
+                arc8_L14.pos = [arc8_L14_center[0] - camera_offset_x, arc8_L14_center[1]]
+                wiggle_arc8_L14.pos = arc8_L14.pos
+                
+                # Update Arc 9 Position
+                arc9_L14.pos = [arc9_L14_center[0] - camera_offset_x, arc9_L14_center[1]]
+                wiggle_arc9_L14.pos = arc9_L14.pos
+                
+                # Update Arc 10 Position
+                arc10_L14.pos = [arc10_L14_center[0] - camera_offset_x, arc10_L14_center[1]]
+                wiggle_arc10_L14.pos = arc10_L14.pos
+                
+                # Update Arc 11 Position
+                arc11_L14.pos = [arc11_L14_center[0] - camera_offset_x, arc11_L14_center[1]]
+                wiggle_arc11_L14.pos = arc11_L14.pos
+                
+                
+                
+                
+                # Draw the backgrounds and floors
+                background1_L14.draw()
+                background2_L14.draw()
+                floor1_L14.draw()
+                floor2_L14.draw()
+                wiggle_arc1_L14.draw()
+                wiggle_arc2_L14.draw()
+                wiggle_arc3_L14.draw()
+                wiggle_arc4_L14.draw()
+                wiggle_arc5_L14.draw()
+                wiggle_arc6_L14.draw()
+                wiggle_arc7_L14.draw()
+                wiggle_arc8_L14.draw()
+                wiggle_arc9_L14.draw()
+                wiggle_arc10_L14.draw()
+                wiggle_arc11_L14.draw()
+                
+                arc1_L14.draw()
+                arc2_L14.draw()
+                arc3_L14.draw()
+                arc4_L14.draw()
+                arc5_L14.draw()
+                arc6_L14.draw()
+                arc7_L14.draw()
+                arc8_L14.draw()
+                arc9_L14.draw()
+                arc10_L14.draw()
+                arc11_L14.draw()
+                
+                # Draw the trail dots
+                for dot in trail_dots:
+                    dot.draw()
+                
+                # Run 'Each Frame' code from GoalController_L14
+                dino_relative_x = dino_pos[0] - camera_offset_x
+                dino_relative_y = dino_pos[1]
+                # Check for collision based on proximity to the updated position
+                dx = dino_relative_x - meatbone_x
+                dy = dino_relative_y - meatbone_y
+                
+                if camera_offset_x >= max_x:
+                    lose_sound_L14.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_x < -1 or dino_relative_x > 1:  # Adjust bounds based on screen width
+                    lose_sound_L14.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_y > 0.6:  # Adjust bounds based on screen width
+                    lose_sound_L14.play()
+                    continueRoutine = False  # Ends the current routine
+                
+                # Check for collision for meatbone
+                if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
+                    meatbone_image_L14.opacity = 0  # Make the meatbone disappear
+                    meatbone_collided = True  # Prevent further collision checks
+                    eat_sound_L14.play()
+                    continueRoutine = False
+                
+                # Check for collision for ARCS
+                for vertex in arc1_L14_vertices:
+                    # Adjust Arc 1 vertex for its X-offset (+1)
+                    adjusted_vertex_x = vertex[0] + arc1_L14_x   # Move Arc 1 vertices by 1 unit to the right
+                    adjusted_vertex_y = vertex[1] + arc1_L14_center[1] # Y remains unchanged, apply the same adjustment as Arc 2 if needed
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 1
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L14 and vertex not in arc1_touched_vertices_L14:
+                        arc1_touched_vertices_L14.append(vertex)
+                        score += 1  # Increment the score for Arc 1
+                
+                
+                for vertex in arc2_L14_vertices:
+                    # Adjust Arc 2 vertex for its X-offset (+2)
+                    adjusted_vertex_x = vertex[0] + arc2_L14_x   # Move Arc 2 vertices by 2 units to the right
+                    adjusted_vertex_y = vertex[1] + arc2_L14_center[1] # Y remains unchanged
+                    
+                    # Calculate distance between Dino and the adjusted vertex of Arc 2
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L14 and vertex not in arc2_touched_vertices_L14:
+                        arc2_touched_vertices_L14.append(vertex)
+                        score += 1  # Increment the score for Arc 2
+                        
+                        
+                for vertex in arc3_L14_vertices:
+                    # Adjust Arc 3 vertex for its static X-offset
+                    adjusted_vertex_x = vertex[0] + arc3_L14_x   # Offset Arc 3 vertices by 3.5 units to the right
+                    adjusted_vertex_y = vertex[1] + arc3_L14_center[1]  # Offset Arc 3 vertices by -0.2 units vertically
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 3
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L14 and vertex not in arc3_touched_vertices_L14:
+                        arc3_touched_vertices_L14.append(vertex)
+                        score += 1  # Increment the score for Arc 3
+                        
+                for vertex in arc4_L14_vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L14_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L14_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 4
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L14 and vertex not in arc4_touched_vertices_L14:
+                        arc4_touched_vertices_L14.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc5_L14_vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L14_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L14_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 5
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L14 and vertex not in arc5_touched_vertices_L14:
+                        arc5_touched_vertices_L14.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc6_L14_vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14 and vertex not in arc6_touched_vertices_L14:
+                        arc6_touched_vertices_L14.append(vertex)
+                        score += 1
+                
+                # Arc 7 touch detection
+                for vertex in arc7_L14_vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14 and vertex not in arc7_touched_vertices_L14:
+                        arc7_touched_vertices_L14.append(vertex)
+                        score += 1
+                
+                # Arc 8 touch detection
+                for vertex in arc8_L14_vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14 and vertex not in arc8_touched_vertices_L14:
+                        arc8_touched_vertices_L14.append(vertex)
+                        score += 1
+                
+                
+                # Arc 9 touch detection
+                for vertex in arc9_L14_vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14 and vertex not in arc9_touched_vertices_L14:
+                        arc9_touched_vertices_L14.append(vertex)
+                        score += 1       
+                
+                # Arc 10 touch detection
+                for vertex in arc10_L14_vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14 and vertex not in arc10_touched_vertices_L14:
+                        arc10_touched_vertices_L14.append(vertex)
+                        score += 1    
+                
+                # Arc 11 touch detection
+                for vertex in arc11_L14_vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14 and vertex not in arc11_touched_vertices_L14:
+                        arc11_touched_vertices_L14.append(vertex)
+                        score += 1    
+                  
+                # WIGGLE ROOM STUFF
+                
+                
+                # Reset to false at the start of each frame
+                wiggle_room = False  
+                for vertex in wiggle_arc1_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc1_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc1_L14_center[1] 
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                for vertex in wiggle_arc2_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc2_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc2_L14_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                        
+                for vertex in wiggle_arc3_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc3_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc3_L14_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                
+                
+                for vertex in wiggle_arc4_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L14_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L14_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                
+                
+                for vertex in wiggle_arc5_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L14_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L14_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                        
+                for vertex in wiggle_arc6_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True
+                        break
+                # Arc 7 wiggle room
+                for vertex in wiggle_arc7_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True
+                        break
+                
+                # Arc 8 wiggle room
+                for vertex in wiggle_arc8_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True
+                        break
+                        
+                        
+                
+                # Arc 9 wiggle room
+                for vertex in wiggle_arc9_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True
+                        break
+                        
+                # Arc 10 wiggle room
+                for vertex in wiggle_arc10_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True
+                        break
+                        
+                        
+                # Arc 11 wiggle room
+                for vertex in wiggle_arc11_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True
+                        break
+                
+                        
+                        
+                score_text_L14.text = str(score) # update Score
+                
+                
+                dino_relative_x = dino_pos[0] - camera_offset_x
+                dino_relative_y = dino_pos[1]
+                # Check for collision based on proximity to the updated position
+                dx = dino_relative_x - meatbone_x
+                dy = dino_relative_y - meatbone_y
+                
+                if camera_offset_x >= max_x:
+                    lose_sound_L14.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_x < -1 or dino_relative_x > 1:  # Adjust bounds based on screen width
+                    lose_sound_L14.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_y > 0.6:  # Adjust bounds based on screen width
+                    lose_sound_L14.play()
+                    continueRoutine = False  # Ends the current routine
+                
+                # Check for collision for meatbone
+                if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
+                    print("Dino ate the meatbone!")
+                    meatbone_image_L14.opacity = 0  # Make the meatbone disappear
+                    meatbone_collided = True  # Prevent further collision checks
+                    eat_sound_L14.play()
+                    continueRoutine = False
+                
+                # Check for collision for ARCS
+                for vertex in arc1_L14_vertices:
+                    # Adjust Arc 1 vertex for its X-offset (+1)
+                    adjusted_vertex_x = vertex[0] + arc1_L14_x   # Move Arc 1 vertices by 1 unit to the right
+                    adjusted_vertex_y = vertex[1] + arc1_L14_center[1] # Y remains unchanged, apply the same adjustment as Arc 2 if needed
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 1
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L14 and vertex not in arc1_touched_vertices_L14:
+                        arc1_touched_vertices_L14.append(vertex)
+                        score += 1  # Increment the score for Arc 1
+                
+                
+                for vertex in arc2_L14_vertices:
+                    # Adjust Arc 2 vertex for its X-offset (+2)
+                    adjusted_vertex_x = vertex[0] + arc2_L14_x   # Move Arc 2 vertices by 2 units to the right
+                    adjusted_vertex_y = vertex[1] + arc2_L14_center[1] # Y remains unchanged
+                    
+                    # Calculate distance between Dino and the adjusted vertex of Arc 2
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L14 and vertex not in arc2_touched_vertices_L14:
+                        arc2_touched_vertices_L14.append(vertex)
+                        score += 1  # Increment the score for Arc 2
+                        
+                        
+                for vertex in arc3_L14_vertices:
+                    # Adjust Arc 3 vertex for its static X-offset
+                    adjusted_vertex_x = vertex[0] + arc3_L14_x   # Offset Arc 3 vertices by 3.5 units to the right
+                    adjusted_vertex_y = vertex[1] + arc3_L14_center[1]  # Offset Arc 3 vertices by -0.2 units vertically
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 3
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L14 and vertex not in arc3_touched_vertices_L14:
+                        arc3_touched_vertices_L14.append(vertex)
+                        score += 1  # Increment the score for Arc 3
+                        
+                for vertex in arc4_L14_vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L14_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L14_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 4
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L14 and vertex not in arc4_touched_vertices_L14:
+                        arc4_touched_vertices_L14.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc5_L14_vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L14_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L14_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 5
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L14 and vertex not in arc5_touched_vertices_L14:
+                        arc5_touched_vertices_L14.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc6_L14_vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14 and vertex not in arc6_touched_vertices_L14:
+                        arc6_touched_vertices_L14.append(vertex)
+                        score += 1
+                
+                # Arc 7 touch detection
+                for vertex in arc7_L14_vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14 and vertex not in arc7_touched_vertices_L14:
+                        arc7_touched_vertices_L14.append(vertex)
+                        score += 1
+                
+                # Arc 8 touch detection
+                for vertex in arc8_L14_vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14 and vertex not in arc8_touched_vertices_L14:
+                        arc8_touched_vertices_L14.append(vertex)
+                        score += 1
+                
+                
+                # Arc 9 touch detection
+                for vertex in arc9_L14_vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14 and vertex not in arc9_touched_vertices_L14:
+                        arc9_touched_vertices_L14.append(vertex)
+                        score += 1       
+                
+                # Arc 10 touch detection
+                for vertex in arc10_L14_vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14 and vertex not in arc10_touched_vertices_L14:
+                        arc10_touched_vertices_L14.append(vertex)
+                        score += 1    
+                
+                # Arc 11 touch detection
+                for vertex in arc11_L14_vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14 and vertex not in arc11_touched_vertices_L14:
+                        arc11_touched_vertices_L14.append(vertex)
+                        score += 1    
+                  
+                # WIGGLE ROOM STUFF
+                
+                
+                # Reset to false at the start of each frame
+                wiggle_room = False  
+                for vertex in wiggle_arc1_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc1_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc1_L14_center[1] 
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                for vertex in wiggle_arc2_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc2_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc2_L14_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                        
+                for vertex in wiggle_arc3_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc3_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc3_L14_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                
+                
+                for vertex in wiggle_arc4_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L14_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L14_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                
+                
+                for vertex in wiggle_arc5_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L14_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L14_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                        
+                for vertex in wiggle_arc6_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True
+                        break
+                # Arc 7 wiggle room
+                for vertex in wiggle_arc7_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True
+                        break
+                
+                # Arc 8 wiggle room
+                for vertex in wiggle_arc8_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True
+                        break
+                        
+                        
+                
+                # Arc 9 wiggle room
+                for vertex in wiggle_arc9_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True
+                        break
+                        
+                # Arc 10 wiggle room
+                for vertex in wiggle_arc10_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True
+                        break
+                        
+                        
+                # Arc 11 wiggle room
+                for vertex in wiggle_arc11_L14.vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L14_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L14_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L14:
+                        wiggle_room = True
+                        break
+                
+                        
+                        
+                score_text_L14.text = str(score) # update Score
+                
+                
+                
+                # Run 'Each Frame' code from Timer_L14
+                # Calculate remaining time
+                time_remaining = time_limit - level_timer.getTime()
+                
+                # Check if time is up
+                if time_remaining <= 0:
+                    print("Time's up! Returning to MainMenu.")
+                    continueRoutine = False  # End the MainGame routine
+                    time_remaining = 0  # Prevent negative time display
+                
+                # Format the timer as MM:SS
+                minutes = int(time_remaining) // 60
+                seconds = int(time_remaining) % 60
+                
+                # Update the timer display
+                timer_text_L14.text = str(f"{minutes}:{seconds:02d}")
+                
+                
+                # *lose_sound_L14* updates
+                
+                # if lose_sound_L14 is stopping this frame...
+                if lose_sound_L14.status == STARTED:
+                    if bool(False) or lose_sound_L14.isFinished:
+                        # keep track of stop time/frame for later
+                        lose_sound_L14.tStop = t  # not accounting for scr refresh
+                        lose_sound_L14.tStopRefresh = tThisFlipGlobal  # on global time
+                        lose_sound_L14.frameNStop = frameN  # exact frame index
+                        # update status
+                        lose_sound_L14.status = FINISHED
+                        lose_sound_L14.stop()
+                
+                # *eat_sound_L14* updates
+                
+                # if eat_sound_L14 is stopping this frame...
+                if eat_sound_L14.status == STARTED:
+                    if bool(False) or eat_sound_L14.isFinished:
+                        # keep track of stop time/frame for later
+                        eat_sound_L14.tStop = t  # not accounting for scr refresh
+                        eat_sound_L14.tStopRefresh = tThisFlipGlobal  # on global time
+                        eat_sound_L14.frameNStop = frameN  # exact frame index
+                        # update status
+                        eat_sound_L14.status = FINISHED
+                        eat_sound_L14.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[lose_sound_L14, eat_sound_L14]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_14.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_14.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_14" ---
+            for thisComponent in Level_14.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_14
+            Level_14.tStop = globalClock.getTime(format='float')
+            Level_14.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_14.stopped', Level_14.tStop)
+            # Run 'End Routine' code from DinoMovement_L14
+            dino_pos = [-0.5, -0.3]  # Reset Dino's position
+            trail_positions.clear()  # Remove all stored positions
+            # Run 'End Routine' code from GoalController_L14
+            global total_touched_vertices_L14, total_possible_vertices_L14
+            
+            total_touched_vertices_L14 = (
+                len(arc1_touched_vertices_L14) + len(arc2_touched_vertices_L14) + len(arc3_touched_vertices_L14) +
+                len(arc4_touched_vertices_L14) + len(arc5_touched_vertices_L14) + len(arc6_touched_vertices_L14) +
+                len(arc7_touched_vertices_L14) + len(arc8_touched_vertices_L14) + len(arc9_touched_vertices_L14) +
+                len(arc10_touched_vertices_L14) + len(arc11_touched_vertices_L14)
+            )
+            
+            total_possible_vertices_L14 = (
+                len(arc1_L14_vertices) + len(arc2_L14_vertices) + len(arc3_L14_vertices) +
+                len(arc4_L14_vertices) + len(arc5_L14_vertices) + len(arc6_L14_vertices) +
+                len(arc7_L14_vertices) + len(arc8_L14_vertices) + len(arc9_L14_vertices) +
+                len(arc10_L14_vertices) + len(arc11_L14_vertices)
+            )
+            
+            score = 0
+            # the Routine "Level_14" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
+            # --- Prepare to start Routine "Level_14_checker" ---
+            # create an object to store info about Routine Level_14_checker
+            Level_14_checker = data.Routine(
+                name='Level_14_checker',
+                components=[end_score_text_L14, win_sound_L14, fail_sound_L14],
+            )
+            Level_14_checker.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from Checker_L14
+            import csv
+            # Calculate the percentage
+            if total_possible_vertices_L14 > 0:
+                percentage = (total_touched_vertices_L14 / total_possible_vertices_L14) * 100
+            else:
+                percentage = 0  # Avoid division by zero
+                
+            
+            # Update the text for the end screen
+            end_score_text_L14.text = f"Your score: {percentage:.2f}%"
+            
+            # Start 3 second timer
+            end_screen_timer = core.CountdownTimer(3)
+            
+            
+            win_sound_L14.setSound('Assets/sounds/win.mp3', hamming=True)
+            win_sound_L14.setVolume(1.0, log=False)
+            win_sound_L14.seek(0)
+            fail_sound_L14.setSound('Assets/sounds/level_failed.mp3', hamming=True)
+            fail_sound_L14.setVolume(0.6, log=False)
+            fail_sound_L14.seek(0)
+            # store start times for Level_14_checker
+            Level_14_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_14_checker.tStart = globalClock.getTime(format='float')
+            Level_14_checker.status = STARTED
+            thisExp.addData('Level_14_checker.started', Level_14_checker.tStart)
+            Level_14_checker.maxDuration = None
+            # keep track of which components have finished
+            Level_14_checkerComponents = Level_14_checker.components
+            for thisComponent in Level_14_checker.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_14_checker" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_14_Loop, data.TrialHandler2) and thisLevel_14_Loop.thisN != Level_14_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_14_checker.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *end_score_text_L14* updates
+                
+                # if end_score_text_L14 is starting this frame...
+                if end_score_text_L14.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    end_score_text_L14.frameNStart = frameN  # exact frame index
+                    end_score_text_L14.tStart = t  # local t and not account for scr refresh
+                    end_score_text_L14.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(end_score_text_L14, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    end_score_text_L14.status = STARTED
+                    end_score_text_L14.setAutoDraw(True)
+                
+                # if end_score_text_L14 is active this frame...
+                if end_score_text_L14.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from Checker_L14
+                # Keep showing the end screen until 3 seconds pass
+                if end_screen_timer.getTime() <= 0:
+                    continueRoutine = False
+                
+                
+                # *win_sound_L14* updates
+                
+                # if win_sound_L14 is stopping this frame...
+                if win_sound_L14.status == STARTED:
+                    if bool(False) or win_sound_L14.isFinished:
+                        # keep track of stop time/frame for later
+                        win_sound_L14.tStop = t  # not accounting for scr refresh
+                        win_sound_L14.tStopRefresh = tThisFlipGlobal  # on global time
+                        win_sound_L14.frameNStop = frameN  # exact frame index
+                        # update status
+                        win_sound_L14.status = FINISHED
+                        win_sound_L14.stop()
+                
+                # *fail_sound_L14* updates
+                
+                # if fail_sound_L14 is stopping this frame...
+                if fail_sound_L14.status == STARTED:
+                    if bool(False) or fail_sound_L14.isFinished:
+                        # keep track of stop time/frame for later
+                        fail_sound_L14.tStop = t  # not accounting for scr refresh
+                        fail_sound_L14.tStopRefresh = tThisFlipGlobal  # on global time
+                        fail_sound_L14.frameNStop = frameN  # exact frame index
+                        # update status
+                        fail_sound_L14.status = FINISHED
+                        fail_sound_L14.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[win_sound_L14, fail_sound_L14]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_14_checker.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_14_checker.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_14_checker" ---
+            for thisComponent in Level_14_checker.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_14_checker
+            Level_14_checker.tStop = globalClock.getTime(format='float')
+            Level_14_checker.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_14_checker.stopped', Level_14_checker.tStop)
+            # Run 'End Routine' code from Checker_L14
+            
+            
+            thisExp.addData('Participant ID', expInfo['participant'])
+            thisExp.addData('Session', expInfo['session'])
+            thisExp.addData('Date', expInfo['date'])
+            thisExp.addData('Score', total_touched_vertices_L14)
+            thisExp.addData('Percentage', percentage)
+            
+            filename = f"data/{expInfo['participant']}_summary.csv"
+            with open(filename, mode='w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(['Participant ID', 'Session', 'Date', 'Score', 'Percentage'])
+                writer.writerow([expInfo['participant'], expInfo['session'], expInfo['date'], total_touched_vertices_L14, percentage])
+            
+            # Decide pass/fail and play correct sound
+            if percentage >= win_threshold and meatbone_collided:
+                Level_14_Loop.finished = True
+                win_sound_L14.play()
+            else:
+                Level_14_Loop.finished = False
+                fail_sound_L14.play()
+                
+            total_touched_vertices_L14 = 0
+            total_possible_vertices_L14 = 0
+            meatbone_collided = False
+            # the Routine "Level_14_checker" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+        # completed 1000.0 repeats of 'Level_14_Loop'
+        
+        
+        # set up handler to look after randomisation of conditions etc
+        Level_15_Loop = data.TrialHandler2(
+            name='Level_15_Loop',
+            nReps=1000.0, 
+            method='sequential', 
+            extraInfo=expInfo, 
+            originPath=-1, 
+            trialList=[None], 
+            seed=None, 
+        )
+        thisExp.addLoop(Level_15_Loop)  # add the loop to the experiment
+        thisLevel_15_Loop = Level_15_Loop.trialList[0]  # so we can initialise stimuli with some values
+        # abbreviate parameter names if possible (e.g. rgb = thisLevel_15_Loop.rgb)
+        if thisLevel_15_Loop != None:
+            for paramName in thisLevel_15_Loop:
+                globals()[paramName] = thisLevel_15_Loop[paramName]
+        
+        for thisLevel_15_Loop in Level_15_Loop:
+            currentLoop = Level_15_Loop
+            thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+            # abbreviate parameter names if possible (e.g. rgb = thisLevel_15_Loop.rgb)
+            if thisLevel_15_Loop != None:
+                for paramName in thisLevel_15_Loop:
+                    globals()[paramName] = thisLevel_15_Loop[paramName]
+            
+            # --- Prepare to start Routine "Level_15" ---
+            # create an object to store info about Routine Level_15
+            Level_15 = data.Routine(
+                name='Level_15',
+                components=[dino_image_L15, floor1_L15, floor2_L15, meatbone_image_L15, score_text_L15, timer_text_L15, lose_sound_L15, eat_sound_L15],
+            )
+            Level_15.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from DinoMovement_L15
+            dino_pos = [0, -0.3]  # Reset Dino's position
+            dino_speed = 0  # Reset vertical speed
+            # Initialize the trail dots
+            trail_dots = [
+                Circle(win, radius=trail_dot_size, fillColor=trail_color, lineColor=None, pos=[-1, -1])
+                for _ in range(trail_length)
+            ]
+            
+            # Run 'Begin Routine' code from worldController_L15
+            camera_offset_x = 0
+            # Run 'Begin Routine' code from GoalController_L15
+            score = 0  # Reset the score
+            
+            meatbone_collided = False
+            meatbone_image_L15.opacity = 1
+            
+            
+            wiggle_room = False  
+            
+            arc1_touched_vertices_L15 = []
+            arc2_touched_vertices_L15 = []
+            arc3_touched_vertices_L15 = []
+            arc4_touched_vertices_L15 = []
+            arc5_touched_vertices_L15 = []
+            arc6_touched_vertices_L15 = []
+            arc7_touched_vertices_L15 = []
+            arc8_touched_vertices_L15 = []
+            arc9_touched_vertices_L15 = []
+            arc10_touched_vertices_L15 = []
+            arc11_touched_vertices_L15 = []
+            # Run 'Begin Routine' code from Timer_L15
+            
+            level_timer.reset()  # Reset the timer at the start of the MainGame routine
+            
+            
+            lose_sound_L15.setSound('Assets/sounds/lose.mp3', hamming=True)
+            lose_sound_L15.setVolume(1.0, log=False)
+            lose_sound_L15.seek(0)
+            eat_sound_L15.setSound('Assets/sounds/eat.mp3', hamming=True)
+            eat_sound_L15.setVolume(1.0, log=False)
+            eat_sound_L15.seek(0)
+            # store start times for Level_15
+            Level_15.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_15.tStart = globalClock.getTime(format='float')
+            Level_15.status = STARTED
+            thisExp.addData('Level_15.started', Level_15.tStart)
+            Level_15.maxDuration = None
+            # keep track of which components have finished
+            Level_15Components = Level_15.components
+            for thisComponent in Level_15.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_15" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_15_Loop, data.TrialHandler2) and thisLevel_15_Loop.thisN != Level_15_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_15.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *dino_image_L15* updates
+                
+                # if dino_image_L15 is starting this frame...
+                if dino_image_L15.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    dino_image_L15.frameNStart = frameN  # exact frame index
+                    dino_image_L15.tStart = t  # local t and not account for scr refresh
+                    dino_image_L15.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(dino_image_L15, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    dino_image_L15.status = STARTED
+                    dino_image_L15.setAutoDraw(True)
+                
+                # if dino_image_L15 is active this frame...
+                if dino_image_L15.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor1_L15* updates
+                
+                # if floor1_L15 is starting this frame...
+                if floor1_L15.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor1_L15.frameNStart = frameN  # exact frame index
+                    floor1_L15.tStart = t  # local t and not account for scr refresh
+                    floor1_L15.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor1_L15, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor1_L15.status = STARTED
+                    floor1_L15.setAutoDraw(True)
+                
+                # if floor1_L15 is active this frame...
+                if floor1_L15.status == STARTED:
+                    # update params
+                    pass
+                
+                # *floor2_L15* updates
+                
+                # if floor2_L15 is starting this frame...
+                if floor2_L15.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    floor2_L15.frameNStart = frameN  # exact frame index
+                    floor2_L15.tStart = t  # local t and not account for scr refresh
+                    floor2_L15.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(floor2_L15, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    floor2_L15.status = STARTED
+                    floor2_L15.setAutoDraw(True)
+                
+                # if floor2_L15 is active this frame...
+                if floor2_L15.status == STARTED:
+                    # update params
+                    pass
+                
+                # *meatbone_image_L15* updates
+                
+                # if meatbone_image_L15 is starting this frame...
+                if meatbone_image_L15.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    meatbone_image_L15.frameNStart = frameN  # exact frame index
+                    meatbone_image_L15.tStart = t  # local t and not account for scr refresh
+                    meatbone_image_L15.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(meatbone_image_L15, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    meatbone_image_L15.status = STARTED
+                    meatbone_image_L15.setAutoDraw(True)
+                
+                # if meatbone_image_L15 is active this frame...
+                if meatbone_image_L15.status == STARTED:
+                    # update params
+                    pass
+                
+                # *score_text_L15* updates
+                
+                # if score_text_L15 is starting this frame...
+                if score_text_L15.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    score_text_L15.frameNStart = frameN  # exact frame index
+                    score_text_L15.tStart = t  # local t and not account for scr refresh
+                    score_text_L15.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(score_text_L15, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    score_text_L15.status = STARTED
+                    score_text_L15.setAutoDraw(True)
+                
+                # if score_text_L15 is active this frame...
+                if score_text_L15.status == STARTED:
+                    # update params
+                    pass
+                
+                # *timer_text_L15* updates
+                
+                # if timer_text_L15 is starting this frame...
+                if timer_text_L15.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    timer_text_L15.frameNStart = frameN  # exact frame index
+                    timer_text_L15.tStart = t  # local t and not account for scr refresh
+                    timer_text_L15.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(timer_text_L15, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    timer_text_L15.status = STARTED
+                    timer_text_L15.setAutoDraw(True)
+                
+                # if timer_text_L15 is active this frame...
+                if timer_text_L15.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from DinoMovement_L15
+                
+                # Initialize key state flags
+                left_pressed = False
+                right_pressed = False
+                up_pressed = False
+                
+                # Handle input based on the selected control method
+                
+                # Process keyboard input
+                if selected_control == "Keyboard":
+                    keys_pressed = kb.getKeys(['left', 'right', 'up'], waitRelease=False, clear=False)
+                    for key in keys_pressed:
+                        if key.name == 'left':
+                            left_pressed = True
+                        if key.name == 'right':
+                            right_pressed = True
+                        if key.name == 'up':
+                            up_pressed = True
+                            
+                # Process PSURP input            
+                if selected_control == "PSURP":
+                    # Read serial data
+                    ser.flushInput()
+                    strSerialData = ser.readline()
+                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                
+                    # Apply difficulty-specific movement
+                    if selected_diff == "1":
+                        # Constant movement for Easy mode
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
+                            dino_image_L15.size = [abs(dino_image_L15.size[0]), dino_image_L15.size[1]]  # Face right
+                
+                    elif selected_diff == "2":
+                        # Proportional movement for Hard mode (current implementation)
+                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
+                            dino_pos[0] += move_amount  # Movement based on force
+                            dino_image_L15.size = [abs(dino_image_L15.size[0]), dino_image_L15.size[1]]  # Face right
+                
+                    # Jump logic remains the same for both difficulties
+                    if B0ForceInNewtons > MIN_FORCE:
+                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                
+                
+                            
+                 
+                # Apply gravity to Dino's vertical speed
+                dino_speed += gravity
+                
+                # Check if Dino is on the floor (keeps dino on top of floor)
+                if is_on_floor(dino_pos) and dino_speed <= 0:  # Falling or stationary
+                    dino_pos[1] = floor1_top + (dino_image_L15.size[1] / 2) - ground_offset  # Align Dino with the floor
+                    dino_speed = 0  # Reset vertical speed
+                
+                # Respawn if Dino falls below the floor threshold
+                if dino_pos[1] < fall_threshold:
+                    lose_sound_L15.play()
+                    continueRoutine = False  # Stop the MainGame routine
+                    
+                # Jumping logic: Allow jump whenever the 'up' key is pressed
+                if up_pressed:  # Check if the up key is pressed
+                    dino_speed = jump_speed  # Apply upward movement
+                
+                # Update Dino's vertical position
+                dino_pos[1] += dino_speed
+                
+                # Continuous horizontal movement
+                if left_pressed and dino_pos[0] > min_x:
+                    dino_pos[0] -= move_speed  # Move Dino to the left
+                    dino_image_L15.size = [-1 * abs(dino_image_L15.size[0]), dino_image_L15.size[1]]
+                
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed  # Move Dino to the right
+                    dino_image_L15.size = [abs(dino_image_L15.size[0]), dino_image_L15.size[1]]  # Reset Dino to face right
+                
+                # Update Dino's position
+                # dino_image_L15.pos = dino_pos  # Use both X and Y values of dino_pos
+                dino_image_L15.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
+                
+                # Increment the frame counter for trail updates
+                trail_frame_counter += 1
+                
+                # Check if it's time to spawn a new dot
+                if trail_frame_counter >= trail_interval:
+                    if len(trail_positions) >= trail_length:
+                        trail_positions.pop(0)  # Remove the oldest position if trail is full
+                
+                    # Add Dino's current position to the trail
+                    trail_positions.append(dino_pos[:])  # Add a copy of Dino's current position
+                
+                    trail_frame_counter = 0  # Reset the counter
+                
+                # Update the trail dots' positions
+                for i, pos in enumerate(trail_positions):
+                    trail_dots[i].pos = [pos[0] - camera_offset_x, pos[1]]  # Adjust for camera offset
+                
+                
+                # Update the Dino's animation
+                if (frame_index_update_counter % 4) == 0:  # Adjust 4 to control animation speed
+                    dino_image_L15.image = frame_paths[frame_index]  # Update the current frame
+                
+                    # Advance to the next frame
+                    frame_index += 1
+                    if frame_index >= total_frames:
+                        frame_index = 0  # Loop back to the first frame
+                
+                
+                
+                # Increment the animation frame counter
+                frame_index_update_counter += 1
+                
+                
+                # Run 'Each Frame' code from worldController_L15
+                
+                # Update the camera offset based on Dino's X position
+                camera_offset_x += camera_speed  # The camera offset follows Dino's position
+                
+                # Move backgrounds relative to Dino's position (seamless wrap-around)
+                background1_L15.pos = [-(camera_offset_x % background_width), 0]
+                background2_L15.pos = [background1_L15.pos[0] + background_width, 0]
+                
+                # Update floor positions relative to Dino's position
+                floor1_L15.pos = [floor1_pos[0] - camera_offset_x, floor1_L15.pos[1]]
+                floor2_L15.pos = [floor2_x_static - camera_offset_x, floor2_L15.pos[1]]  # floor2_L15 moves with Dino
+                
+                
+                # Update meatbone position to match floor2_L15's top
+                meatbone_x = floor2_L15.pos[0]  # Update X position based on floor2_L15
+                meatbone_y = floor2_top + (meatbone_size[1] / 2) - offset  # Keep the meatbone on top of floor2_L15
+                meatbone_image_L15.pos = [meatbone_x, meatbone_y]
+                
+                
+                # Update the arc position relative to the camera offset
+                # Update Arc 1 Position
+                arc1_L15.pos = [arc1_L15_center[0] - camera_offset_x, arc1_L15_center[1]]
+                wiggle_arc1_L15.pos = arc1_L15.pos  # Keep wiggle room on top
+                
+                # Update Arc 2 Position
+                arc2_L15.pos = [arc2_L15_center[0] - camera_offset_x, arc2_L15_center[1]]
+                wiggle_arc2_L15.pos = arc2_L15.pos  # Keep wiggle room on top
+                arc3_L15.pos = [arc3_L15_center[0] - camera_offset_x, arc3_L15_center[1]]
+                wiggle_arc3_L15.pos = arc3_L15.pos  # Keep wiggle room on top
+                # Update Arc 4 Position
+                arc4_L15.pos = [arc4_L15_center[0] - camera_offset_x, arc4_L15_center[1]]
+                wiggle_arc4_L15.pos = arc4_L15.pos  # Keep wiggle room on top
+                # Update Arc 5 Position
+                arc5_L15.pos = [arc5_L15_center[0] - camera_offset_x, arc5_L15_center[1]]
+                wiggle_arc5_L15.pos = arc5_L15.pos  # Keep wiggle room on top
+                
+                arc6_L15.pos = [arc6_L15_center[0] - camera_offset_x, arc6_L15_center[1]]
+                wiggle_arc6_L15.pos = arc6_L15.pos
+                
+                # Update Arc 7 Position
+                arc7_L15.pos = [arc7_L15_center[0] - camera_offset_x, arc7_L15_center[1]]
+                wiggle_arc7_L15.pos = arc7_L15.pos
+                
+                # Update Arc 8 Position
+                arc8_L15.pos = [arc8_L15_center[0] - camera_offset_x, arc8_L15_center[1]]
+                wiggle_arc8_L15.pos = arc8_L15.pos
+                
+                # Update Arc 9 Position
+                arc9_L15.pos = [arc9_L15_center[0] - camera_offset_x, arc9_L15_center[1]]
+                wiggle_arc9_L15.pos = arc9_L15.pos
+                
+                # Update Arc 10 Position
+                arc10_L15.pos = [arc10_L15_center[0] - camera_offset_x, arc10_L15_center[1]]
+                wiggle_arc10_L15.pos = arc10_L15.pos
+                
+                # Update Arc 11 Position
+                arc11_L15.pos = [arc11_L15_center[0] - camera_offset_x, arc11_L15_center[1]]
+                wiggle_arc11_L15.pos = arc11_L15.pos
+                
+                
+                
+                
+                # Draw the backgrounds and floors
+                background1_L15.draw()
+                background2_L15.draw()
+                floor1_L15.draw()
+                floor2_L15.draw()
+                wiggle_arc1_L15.draw()
+                wiggle_arc2_L15.draw()
+                wiggle_arc3_L15.draw()
+                wiggle_arc4_L15.draw()
+                wiggle_arc5_L15.draw()
+                wiggle_arc6_L15.draw()
+                wiggle_arc7_L15.draw()
+                wiggle_arc8_L15.draw()
+                wiggle_arc9_L15.draw()
+                wiggle_arc10_L15.draw()
+                wiggle_arc11_L15.draw()
+                
+                arc1_L15.draw()
+                arc2_L15.draw()
+                arc3_L15.draw()
+                arc4_L15.draw()
+                arc5_L15.draw()
+                arc6_L15.draw()
+                arc7_L15.draw()
+                arc8_L15.draw()
+                arc9_L15.draw()
+                arc10_L15.draw()
+                arc11_L15.draw()
+                
+                # Draw the trail dots
+                for dot in trail_dots:
+                    dot.draw()
+                
+                # Run 'Each Frame' code from GoalController_L15
+                dino_relative_x = dino_pos[0] - camera_offset_x
+                dino_relative_y = dino_pos[1]
+                # Check for collision based on proximity to the updated position
+                dx = dino_relative_x - meatbone_x
+                dy = dino_relative_y - meatbone_y
+                
+                if camera_offset_x >= max_x:
+                    lose_sound_L15.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_x < -1 or dino_relative_x > 1:  # Adjust bounds based on screen width
+                    lose_sound_L15.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_y > 0.6:  # Adjust bounds based on screen width
+                    lose_sound_L15.play()
+                    continueRoutine = False  # Ends the current routine
+                
+                # Check for collision for meatbone
+                if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
+                    meatbone_image_L15.opacity = 0  # Make the meatbone disappear
+                    meatbone_collided = True  # Prevent further collision checks
+                    eat_sound_L15.play()
+                    continueRoutine = False
+                
+                # Check for collision for ARCS
+                for vertex in arc1_L15_vertices:
+                    # Adjust Arc 1 vertex for its X-offset (+1)
+                    adjusted_vertex_x = vertex[0] + arc1_L15_x   # Move Arc 1 vertices by 1 unit to the right
+                    adjusted_vertex_y = vertex[1] + arc1_L15_center[1] # Y remains unchanged, apply the same adjustment as Arc 2 if needed
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 1
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L15 and vertex not in arc1_touched_vertices_L15:
+                        arc1_touched_vertices_L15.append(vertex)
+                        score += 1  # Increment the score for Arc 1
+                
+                
+                for vertex in arc2_L15_vertices:
+                    # Adjust Arc 2 vertex for its X-offset (+2)
+                    adjusted_vertex_x = vertex[0] + arc2_L15_x   # Move Arc 2 vertices by 2 units to the right
+                    adjusted_vertex_y = vertex[1] + arc2_L15_center[1] # Y remains unchanged
+                    
+                    # Calculate distance between Dino and the adjusted vertex of Arc 2
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L15 and vertex not in arc2_touched_vertices_L15:
+                        arc2_touched_vertices_L15.append(vertex)
+                        score += 1  # Increment the score for Arc 2
+                        
+                        
+                for vertex in arc3_L15_vertices:
+                    # Adjust Arc 3 vertex for its static X-offset
+                    adjusted_vertex_x = vertex[0] + arc3_L15_x   # Offset Arc 3 vertices by 3.5 units to the right
+                    adjusted_vertex_y = vertex[1] + arc3_L15_center[1]  # Offset Arc 3 vertices by -0.2 units vertically
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 3
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L15 and vertex not in arc3_touched_vertices_L15:
+                        arc3_touched_vertices_L15.append(vertex)
+                        score += 1  # Increment the score for Arc 3
+                        
+                for vertex in arc4_L15_vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L15_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L15_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 4
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L15 and vertex not in arc4_touched_vertices_L15:
+                        arc4_touched_vertices_L15.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc5_L15_vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L15_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L15_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 5
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L15 and vertex not in arc5_touched_vertices_L15:
+                        arc5_touched_vertices_L15.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc6_L15_vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15 and vertex not in arc6_touched_vertices_L15:
+                        arc6_touched_vertices_L15.append(vertex)
+                        score += 1
+                
+                # Arc 7 touch detection
+                for vertex in arc7_L15_vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15 and vertex not in arc7_touched_vertices_L15:
+                        arc7_touched_vertices_L15.append(vertex)
+                        score += 1
+                
+                # Arc 8 touch detection
+                for vertex in arc8_L15_vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15 and vertex not in arc8_touched_vertices_L15:
+                        arc8_touched_vertices_L15.append(vertex)
+                        score += 1
+                
+                
+                # Arc 9 touch detection
+                for vertex in arc9_L15_vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15 and vertex not in arc9_touched_vertices_L15:
+                        arc9_touched_vertices_L15.append(vertex)
+                        score += 1       
+                
+                # Arc 10 touch detection
+                for vertex in arc10_L15_vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15 and vertex not in arc10_touched_vertices_L15:
+                        arc10_touched_vertices_L15.append(vertex)
+                        score += 1    
+                
+                # Arc 11 touch detection
+                for vertex in arc11_L15_vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15 and vertex not in arc11_touched_vertices_L15:
+                        arc11_touched_vertices_L15.append(vertex)
+                        score += 1    
+                  
+                # WIGGLE ROOM STUFF
+                
+                
+                # Reset to false at the start of each frame
+                wiggle_room = False  
+                for vertex in wiggle_arc1_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc1_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc1_L15_center[1] 
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                for vertex in wiggle_arc2_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc2_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc2_L15_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                        
+                for vertex in wiggle_arc3_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc3_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc3_L15_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                
+                
+                for vertex in wiggle_arc4_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L15_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L15_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                
+                
+                for vertex in wiggle_arc5_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L15_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L15_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                        
+                for vertex in wiggle_arc6_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True
+                        break
+                # Arc 7 wiggle room
+                for vertex in wiggle_arc7_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True
+                        break
+                
+                # Arc 8 wiggle room
+                for vertex in wiggle_arc8_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True
+                        break
+                        
+                        
+                
+                # Arc 9 wiggle room
+                for vertex in wiggle_arc9_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True
+                        break
+                        
+                # Arc 10 wiggle room
+                for vertex in wiggle_arc10_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True
+                        break
+                        
+                        
+                # Arc 11 wiggle room
+                for vertex in wiggle_arc11_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True
+                        break
+                
+                        
+                        
+                score_text_L15.text = str(score) # update Score
+                
+                
+                dino_relative_x = dino_pos[0] - camera_offset_x
+                dino_relative_y = dino_pos[1]
+                # Check for collision based on proximity to the updated position
+                dx = dino_relative_x - meatbone_x
+                dy = dino_relative_y - meatbone_y
+                
+                if camera_offset_x >= max_x:
+                    lose_sound_L15.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_x < -1 or dino_relative_x > 1:  # Adjust bounds based on screen width
+                    lose_sound_L15.play()
+                    continueRoutine = False  # Ends the current routine
+                    
+                if dino_relative_y > 0.6:  # Adjust bounds based on screen width
+                    lose_sound_L15.play()
+                    continueRoutine = False  # Ends the current routine
+                
+                # Check for collision for meatbone
+                if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
+                    print("Dino ate the meatbone!")
+                    meatbone_image_L15.opacity = 0  # Make the meatbone disappear
+                    meatbone_collided = True  # Prevent further collision checks
+                    eat_sound_L15.play()
+                    continueRoutine = False
+                
+                # Check for collision for ARCS
+                for vertex in arc1_L15_vertices:
+                    # Adjust Arc 1 vertex for its X-offset (+1)
+                    adjusted_vertex_x = vertex[0] + arc1_L15_x   # Move Arc 1 vertices by 1 unit to the right
+                    adjusted_vertex_y = vertex[1] + arc1_L15_center[1] # Y remains unchanged, apply the same adjustment as Arc 2 if needed
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 1
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L15 and vertex not in arc1_touched_vertices_L15:
+                        arc1_touched_vertices_L15.append(vertex)
+                        score += 1  # Increment the score for Arc 1
+                
+                
+                for vertex in arc2_L15_vertices:
+                    # Adjust Arc 2 vertex for its X-offset (+2)
+                    adjusted_vertex_x = vertex[0] + arc2_L15_x   # Move Arc 2 vertices by 2 units to the right
+                    adjusted_vertex_y = vertex[1] + arc2_L15_center[1] # Y remains unchanged
+                    
+                    # Calculate distance between Dino and the adjusted vertex of Arc 2
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L15 and vertex not in arc2_touched_vertices_L15:
+                        arc2_touched_vertices_L15.append(vertex)
+                        score += 1  # Increment the score for Arc 2
+                        
+                        
+                for vertex in arc3_L15_vertices:
+                    # Adjust Arc 3 vertex for its static X-offset
+                    adjusted_vertex_x = vertex[0] + arc3_L15_x   # Offset Arc 3 vertices by 3.5 units to the right
+                    adjusted_vertex_y = vertex[1] + arc3_L15_center[1]  # Offset Arc 3 vertices by -0.2 units vertically
+                
+                    # Calculate distance between Dino and the adjusted vertex of Arc 3
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # Check if Dino is close enough to "touch" the adjusted vertex
+                    if distance <= touch_threshold_L15 and vertex not in arc3_touched_vertices_L15:
+                        arc3_touched_vertices_L15.append(vertex)
+                        score += 1  # Increment the score for Arc 3
+                        
+                for vertex in arc4_L15_vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L15_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L15_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 4
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L15 and vertex not in arc4_touched_vertices_L15:
+                        arc4_touched_vertices_L15.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc5_L15_vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L15_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L15_center[1]  # Y position remains the same
+                
+                    # Calculate distance between Dino and Arc 5
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is close enough, count as a touch
+                    if distance <= touch_threshold_L15 and vertex not in arc5_touched_vertices_L15:
+                        arc5_touched_vertices_L15.append(vertex)
+                        score += 1  # Increment score
+                
+                for vertex in arc6_L15_vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15 and vertex not in arc6_touched_vertices_L15:
+                        arc6_touched_vertices_L15.append(vertex)
+                        score += 1
+                
+                # Arc 7 touch detection
+                for vertex in arc7_L15_vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15 and vertex not in arc7_touched_vertices_L15:
+                        arc7_touched_vertices_L15.append(vertex)
+                        score += 1
+                
+                # Arc 8 touch detection
+                for vertex in arc8_L15_vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15 and vertex not in arc8_touched_vertices_L15:
+                        arc8_touched_vertices_L15.append(vertex)
+                        score += 1
+                
+                
+                # Arc 9 touch detection
+                for vertex in arc9_L15_vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15 and vertex not in arc9_touched_vertices_L15:
+                        arc9_touched_vertices_L15.append(vertex)
+                        score += 1       
+                
+                # Arc 10 touch detection
+                for vertex in arc10_L15_vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15 and vertex not in arc10_touched_vertices_L15:
+                        arc10_touched_vertices_L15.append(vertex)
+                        score += 1    
+                
+                # Arc 11 touch detection
+                for vertex in arc11_L15_vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15 and vertex not in arc11_touched_vertices_L15:
+                        arc11_touched_vertices_L15.append(vertex)
+                        score += 1    
+                  
+                # WIGGLE ROOM STUFF
+                
+                
+                # Reset to false at the start of each frame
+                wiggle_room = False  
+                for vertex in wiggle_arc1_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc1_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc1_L15_center[1] 
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                for vertex in wiggle_arc2_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc2_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc2_L15_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                        
+                        
+                        
+                for vertex in wiggle_arc3_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc3_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc3_L15_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, set to False
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True  
+                        break  # No need to check further, Dino is inside
+                
+                
+                for vertex in wiggle_arc4_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc4_L15_x   # Offset Arc 4 vertices
+                    adjusted_vertex_y = vertex[1] + arc4_L15_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                
+                
+                for vertex in wiggle_arc5_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc5_L15_x   # Offset Arc 5 vertices
+                    adjusted_vertex_y = vertex[1] + arc5_L15_center[1]
+                
+                    # Calculate distance between Dino and wiggle room vertex
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                
+                    # If Dino is inside the wiggle room, mark as safe
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True  
+                        break  # Stop checking once inside
+                        
+                for vertex in wiggle_arc6_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc6_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc6_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True
+                        break
+                # Arc 7 wiggle room
+                for vertex in wiggle_arc7_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc7_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc7_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True
+                        break
+                
+                # Arc 8 wiggle room
+                for vertex in wiggle_arc8_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc8_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc8_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True
+                        break
+                        
+                        
+                
+                # Arc 9 wiggle room
+                for vertex in wiggle_arc9_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc9_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc9_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True
+                        break
+                        
+                # Arc 10 wiggle room
+                for vertex in wiggle_arc10_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc10_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc10_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True
+                        break
+                        
+                        
+                # Arc 11 wiggle room
+                for vertex in wiggle_arc11_L15.vertices:
+                    adjusted_vertex_x = vertex[0] + arc11_L15_x 
+                    adjusted_vertex_y = vertex[1] + arc11_L15_center[1]
+                    distance = ((dino_pos[0] - adjusted_vertex_x) ** 2 + (dino_pos[1] - adjusted_vertex_y) ** 2) ** 0.5
+                    if distance <= touch_threshold_L15:
+                        wiggle_room = True
+                        break
+                
+                        
+                        
+                score_text_L15.text = str(score) # update Score
+                
+                
+                
+                # Run 'Each Frame' code from Timer_L15
+                # Calculate remaining time
+                time_remaining = time_limit - level_timer.getTime()
+                
+                # Check if time is up
+                if time_remaining <= 0:
+                    print("Time's up! Returning to MainMenu.")
+                    continueRoutine = False  # End the MainGame routine
+                    time_remaining = 0  # Prevent negative time display
+                
+                # Format the timer as MM:SS
+                minutes = int(time_remaining) // 60
+                seconds = int(time_remaining) % 60
+                
+                # Update the timer display
+                timer_text_L15.text = str(f"{minutes}:{seconds:02d}")
+                
+                
+                # *lose_sound_L15* updates
+                
+                # if lose_sound_L15 is stopping this frame...
+                if lose_sound_L15.status == STARTED:
+                    if bool(False) or lose_sound_L15.isFinished:
+                        # keep track of stop time/frame for later
+                        lose_sound_L15.tStop = t  # not accounting for scr refresh
+                        lose_sound_L15.tStopRefresh = tThisFlipGlobal  # on global time
+                        lose_sound_L15.frameNStop = frameN  # exact frame index
+                        # update status
+                        lose_sound_L15.status = FINISHED
+                        lose_sound_L15.stop()
+                
+                # *eat_sound_L15* updates
+                
+                # if eat_sound_L15 is stopping this frame...
+                if eat_sound_L15.status == STARTED:
+                    if bool(False) or eat_sound_L15.isFinished:
+                        # keep track of stop time/frame for later
+                        eat_sound_L15.tStop = t  # not accounting for scr refresh
+                        eat_sound_L15.tStopRefresh = tThisFlipGlobal  # on global time
+                        eat_sound_L15.frameNStop = frameN  # exact frame index
+                        # update status
+                        eat_sound_L15.status = FINISHED
+                        eat_sound_L15.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[lose_sound_L15, eat_sound_L15]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_15.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_15.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_15" ---
+            for thisComponent in Level_15.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_15
+            Level_15.tStop = globalClock.getTime(format='float')
+            Level_15.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_15.stopped', Level_15.tStop)
+            # Run 'End Routine' code from DinoMovement_L15
+            dino_pos = [-0.5, -0.3]  # Reset Dino's position
+            trail_positions.clear()  # Remove all stored positions
+            # Run 'End Routine' code from GoalController_L15
+            global total_touched_vertices_L15, total_possible_vertices_L15
+            
+            total_touched_vertices_L15 = (
+                len(arc1_touched_vertices_L15) + len(arc2_touched_vertices_L15) + len(arc3_touched_vertices_L15) +
+                len(arc4_touched_vertices_L15) + len(arc5_touched_vertices_L15) + len(arc6_touched_vertices_L15) +
+                len(arc7_touched_vertices_L15) + len(arc8_touched_vertices_L15) + len(arc9_touched_vertices_L15) +
+                len(arc10_touched_vertices_L15) + len(arc11_touched_vertices_L15)
+            )
+            
+            total_possible_vertices_L15 = (
+                len(arc1_L15_vertices) + len(arc2_L15_vertices) + len(arc3_L15_vertices) +
+                len(arc4_L15_vertices) + len(arc5_L15_vertices) + len(arc6_L15_vertices) +
+                len(arc7_L15_vertices) + len(arc8_L15_vertices) + len(arc9_L15_vertices) +
+                len(arc10_L15_vertices) + len(arc11_L15_vertices)
+            )
+            
+            score = 0
+            # the Routine "Level_15" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
+            # --- Prepare to start Routine "Level_15_checker" ---
+            # create an object to store info about Routine Level_15_checker
+            Level_15_checker = data.Routine(
+                name='Level_15_checker',
+                components=[end_score_text_L15, win_sound_L15, fail_sound_L15],
+            )
+            Level_15_checker.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from Checker_L15
+            import csv
+            # Calculate the percentage
+            if total_possible_vertices_L15 > 0:
+                percentage = (total_touched_vertices_L15 / total_possible_vertices_L15) * 100
+            else:
+                percentage = 0  # Avoid division by zero
+                
+            
+            # Update the text for the end screen
+            end_score_text_L15.text = f"Your score: {percentage:.2f}%"
+            
+            # Start 3 second timer
+            end_screen_timer = core.CountdownTimer(3)
+            
+            
+            win_sound_L15.setSound('Assets/sounds/win.mp3', hamming=True)
+            win_sound_L15.setVolume(1.0, log=False)
+            win_sound_L15.seek(0)
+            fail_sound_L15.setSound('Assets/sounds/level_failed.mp3', hamming=True)
+            fail_sound_L15.setVolume(0.6, log=False)
+            fail_sound_L15.seek(0)
+            # store start times for Level_15_checker
+            Level_15_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Level_15_checker.tStart = globalClock.getTime(format='float')
+            Level_15_checker.status = STARTED
+            thisExp.addData('Level_15_checker.started', Level_15_checker.tStart)
+            Level_15_checker.maxDuration = None
+            # keep track of which components have finished
+            Level_15_checkerComponents = Level_15_checker.components
+            for thisComponent in Level_15_checker.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Level_15_checker" ---
+            # if trial has changed, end Routine now
+            if isinstance(Level_15_Loop, data.TrialHandler2) and thisLevel_15_Loop.thisN != Level_15_Loop.thisTrial.thisN:
+                continueRoutine = False
+            Level_15_checker.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *end_score_text_L15* updates
+                
+                # if end_score_text_L15 is starting this frame...
+                if end_score_text_L15.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    end_score_text_L15.frameNStart = frameN  # exact frame index
+                    end_score_text_L15.tStart = t  # local t and not account for scr refresh
+                    end_score_text_L15.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(end_score_text_L15, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    end_score_text_L15.status = STARTED
+                    end_score_text_L15.setAutoDraw(True)
+                
+                # if end_score_text_L15 is active this frame...
+                if end_score_text_L15.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from Checker_L15
+                # Keep showing the end screen until 3 seconds pass
+                if end_screen_timer.getTime() <= 0:
+                    continueRoutine = False
+                
+                
+                # *win_sound_L15* updates
+                
+                # if win_sound_L15 is stopping this frame...
+                if win_sound_L15.status == STARTED:
+                    if bool(False) or win_sound_L15.isFinished:
+                        # keep track of stop time/frame for later
+                        win_sound_L15.tStop = t  # not accounting for scr refresh
+                        win_sound_L15.tStopRefresh = tThisFlipGlobal  # on global time
+                        win_sound_L15.frameNStop = frameN  # exact frame index
+                        # update status
+                        win_sound_L15.status = FINISHED
+                        win_sound_L15.stop()
+                
+                # *fail_sound_L15* updates
+                
+                # if fail_sound_L15 is stopping this frame...
+                if fail_sound_L15.status == STARTED:
+                    if bool(False) or fail_sound_L15.isFinished:
+                        # keep track of stop time/frame for later
+                        fail_sound_L15.tStop = t  # not accounting for scr refresh
+                        fail_sound_L15.tStopRefresh = tThisFlipGlobal  # on global time
+                        fail_sound_L15.frameNStop = frameN  # exact frame index
+                        # update status
+                        fail_sound_L15.status = FINISHED
+                        fail_sound_L15.stop()
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[win_sound_L15, fail_sound_L15]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Level_15_checker.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Level_15_checker.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Level_15_checker" ---
+            for thisComponent in Level_15_checker.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Level_15_checker
+            Level_15_checker.tStop = globalClock.getTime(format='float')
+            Level_15_checker.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Level_15_checker.stopped', Level_15_checker.tStop)
+            # Run 'End Routine' code from Checker_L15
+            
+            
+            thisExp.addData('Participant ID', expInfo['participant'])
+            thisExp.addData('Session', expInfo['session'])
+            thisExp.addData('Date', expInfo['date'])
+            thisExp.addData('Score', total_touched_vertices_L15)
+            thisExp.addData('Percentage', percentage)
+            
+            filename = f"data/{expInfo['participant']}_summary.csv"
+            with open(filename, mode='w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(['Participant ID', 'Session', 'Date', 'Score', 'Percentage'])
+                writer.writerow([expInfo['participant'], expInfo['session'], expInfo['date'], total_touched_vertices_L15, percentage])
+            
+            # Decide pass/fail and play correct sound
+            if percentage >= win_threshold and meatbone_collided:
+                Level_15_Loop.finished = True
+                win_sound_L15.play()
+            else:
+                Level_15_Loop.finished = False
+                fail_sound_L15.play()
+                
+            total_touched_vertices_L15 = 0
+            total_possible_vertices_L15 = 0
+            meatbone_collided = False
+            # the Routine "Level_15_checker" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+        # completed 1000.0 repeats of 'Level_15_Loop'
+        
         thisExp.nextEntry()
         
     # completed 999.0 repeats of 'GameLoop'
@@ -8291,6 +28356,72 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     ser.close()
     """
     # Run 'End Experiment' code from DinoMovement_L4
+    """
+    ser.flush()
+    ser.write("X".encode())  # Exit command mode
+    ser.close()
+    """
+    # Run 'End Experiment' code from DinoMovement_L5
+    """
+    ser.flush()
+    ser.write("X".encode())  # Exit command mode
+    ser.close()
+    """
+    # Run 'End Experiment' code from DinoMovement_L6
+    """
+    ser.flush()
+    ser.write("X".encode())  # Exit command mode
+    ser.close()
+    """
+    # Run 'End Experiment' code from DinoMovement_L7
+    """
+    ser.flush()
+    ser.write("X".encode())  # Exit command mode
+    ser.close()
+    """
+    # Run 'End Experiment' code from DinoMovement_L8
+    """
+    ser.flush()
+    ser.write("X".encode())  # Exit command mode
+    ser.close()
+    """
+    # Run 'End Experiment' code from DinoMovement_L9
+    """
+    ser.flush()
+    ser.write("X".encode())  # Exit command mode
+    ser.close()
+    """
+    # Run 'End Experiment' code from DinoMovement_L10
+    """
+    ser.flush()
+    ser.write("X".encode())  # Exit command mode
+    ser.close()
+    """
+    # Run 'End Experiment' code from DinoMovement_L11
+    """
+    ser.flush()
+    ser.write("X".encode())  # Exit command mode
+    ser.close()
+    """
+    # Run 'End Experiment' code from DinoMovement_L12
+    """
+    ser.flush()
+    ser.write("X".encode())  # Exit command mode
+    ser.close()
+    """
+    # Run 'End Experiment' code from DinoMovement_L13
+    """
+    ser.flush()
+    ser.write("X".encode())  # Exit command mode
+    ser.close()
+    """
+    # Run 'End Experiment' code from DinoMovement_L14
+    """
+    ser.flush()
+    ser.write("X".encode())  # Exit command mode
+    ser.close()
+    """
+    # Run 'End Experiment' code from DinoMovement_L15
     """
     ser.flush()
     ser.write("X".encode())  # Exit command mode
