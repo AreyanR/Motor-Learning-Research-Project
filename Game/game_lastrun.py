@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on May 12, 2025, at 15:37
+    on May 15, 2025, at 15:31
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -1143,13 +1143,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 1 Properties
     arc1_L1_x = 0.3
     arc1_L1_center = [arc1_L1_x, reg_arc]
-    arc1_L1_radius = small_arc_size
+    arc1_L1_radius = med_arc_size
     arc1_L1_start_angle = 0
     arc1_L1_end_angle = 180
     
     # Arc 2 Properties
     arc2_L1_x = 1.1
-    arc2_L1_center = [arc2_L1_x, low_arc]
+    arc2_L1_center = [arc2_L1_x, reg_arc]
     arc2_L1_radius = med_arc_size
     arc2_L1_start_angle = 0
     arc2_L1_end_angle = 180
@@ -1157,41 +1157,41 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 3 Properties
     arc3_L1_x = 1.9
     arc3_L1_center = [arc3_L1_x, high_arc]
-    arc3_L1_radius = large_arc_size
+    arc3_L1_radius = small_arc_size
     arc3_L1_start_angle = 0
     arc3_L1_end_angle = 180
     
     # Arc 4 Properties
     arc4_L1_x = 2.7
-    arc4_L1_center = [arc4_L1_x, low_arc]
-    arc4_L1_radius = small_arc_size
+    arc4_L1_center = [arc4_L1_x, reg_arc]
+    arc4_L1_radius = med_arc_size
     arc4_L1_start_angle = 0
     arc4_L1_end_angle = 180
     
     # Arc 5 Properties
     arc5_L1_x = 3.5
     arc5_L1_center = [arc5_L1_x, reg_arc]
-    arc5_L1_radius = large_arc_size
+    arc5_L1_radius = med_arc_size
     arc5_L1_start_angle = 0
     arc5_L1_end_angle = 180
     
     # Arc 6 Properties
     arc6_L1_x = 4.3
-    arc6_L1_center = [arc6_L1_x, high_arc]
-    arc6_L1_radius = med_arc_size
+    arc6_L1_center = [arc6_L1_x, low_arc]
+    arc6_L1_radius = large_arc_size
     arc6_L1_start_angle = 0
     arc6_L1_end_angle = 180
     
     # Arc 7 Properties
     arc7_L1_x = 5.1
-    arc7_L1_center = [arc7_L1_x, low_arc]
-    arc7_L1_radius = large_arc_size
+    arc7_L1_center = [arc7_L1_x, reg_arc]
+    arc7_L1_radius = med_arc_size
     arc7_L1_start_angle = 0
     arc7_L1_end_angle = 180
     
     # Arc 8 Properties
     arc8_L1_x = 5.9
-    arc8_L1_center = [arc8_L1_x, high_arc]
+    arc8_L1_center = [arc8_L1_x, reg_arc]
     arc8_L1_radius = med_arc_size
     arc8_L1_start_angle = 0
     arc8_L1_end_angle = 180
@@ -1199,20 +1199,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 9 Properties
     arc9_L1_x = 6.7
     arc9_L1_center = [arc9_L1_x, high_arc]
-    arc9_L1_radius = med_arc_size
+    arc9_L1_radius = large_arc_size
     arc9_L1_start_angle = 0
     arc9_L1_end_angle = 180
     
     # Arc 10 Properties
     arc10_L1_x = 7.5
-    arc10_L1_center = [arc10_L1_x, high_arc]
+    arc10_L1_center = [arc10_L1_x, reg_arc]
     arc10_L1_radius = med_arc_size
     arc10_L1_start_angle = 0
     arc10_L1_end_angle = 180
     
     # Arc 11 Properties
     arc11_L1_x = 8.3
-    arc11_L1_center = [arc11_L1_x, high_arc]
+    arc11_L1_center = [arc11_L1_x, reg_arc]
     arc11_L1_radius = med_arc_size
     arc11_L1_start_angle = 0
     arc11_L1_end_angle = 180
@@ -1454,6 +1454,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Generate wiggle arcs for all arcs
     wiggle_arc1_L1 = create_wiggle_arc(arc1_L1_center, arc1_L1_radius, wiggle_thickness)
+    #wiggle_arc1_L1.vertices = [(x, 2 * arc1_L1_center[1] - y) for (x, y) in wiggle_arc1_L1.vertices]
     wiggle_arc2_L1 = create_wiggle_arc(arc2_L1_center, arc2_L1_radius, wiggle_thickness)
     wiggle_arc3_L1 = create_wiggle_arc(arc3_L1_center, arc3_L1_radius, wiggle_thickness)
     wiggle_arc4_L1 = create_wiggle_arc(arc4_L1_center, arc4_L1_radius, wiggle_thickness)
@@ -1807,50 +1808,50 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 1 Properties
     arc1_L2_x = 0.3
-    arc1_L2_center = [arc1_L2_x, low_arc]
-    arc1_L2_radius = small_arc_size
+    arc1_L2_center = [arc1_L2_x, reg_arc]
+    arc1_L2_radius = med_arc_size
     arc1_L2_start_angle = 0
     arc1_L2_end_angle = 180
     
     # Arc 2 Properties
     arc2_L2_x = 1.1
-    arc2_L2_center = [arc2_L2_x, reg_arc]
-    arc2_L2_radius = large_arc_size
+    arc2_L2_center = [arc2_L2_x, low_arc]
+    arc2_L2_radius = small_arc_size
     arc2_L2_start_angle = 0
     arc2_L2_end_angle = 180
     
     # Arc 3 Properties
     arc3_L2_x = 1.9
-    arc3_L2_center = [arc3_L2_x, high_arc]
+    arc3_L2_center = [arc3_L2_x, reg_arc]
     arc3_L2_radius = med_arc_size
     arc3_L2_start_angle = 0
     arc3_L2_end_angle = 180
     
     # Arc 4 Properties
     arc4_L2_x = 2.7
-    arc4_L2_center = [arc4_L2_x, low_arc]
-    arc4_L2_radius = small_arc_size
+    arc4_L2_center = [arc4_L2_x, high_arc]
+    arc4_L2_radius = large_arc_size
     arc4_L2_start_angle = 0
     arc4_L2_end_angle = 180
     
     # Arc 5 Properties
     arc5_L2_x = 3.5
     arc5_L2_center = [arc5_L2_x, reg_arc]
-    arc5_L2_radius = large_arc_size
+    arc5_L2_radius = med_arc_size
     arc5_L2_start_angle = 0
     arc5_L2_end_angle = 180
     
     # Arc 6 Properties
     arc6_L2_x = 4.3
-    arc6_L2_center = [arc6_L2_x, high_arc]
-    arc6_L2_radius = med_arc_size
+    arc6_L2_center = [arc6_L2_x, low_arc]
+    arc6_L2_radius = large_arc_size
     arc6_L2_start_angle = 0
     arc6_L2_end_angle = 180
     
     # Arc 7 Properties
     arc7_L2_x = 5.1
-    arc7_L2_center = [arc7_L2_x, low_arc]
-    arc7_L2_radius = large_arc_size
+    arc7_L2_center = [arc7_L2_x, reg_arc]
+    arc7_L2_radius = med_arc_size
     arc7_L2_start_angle = 0
     arc7_L2_end_angle = 180
     
@@ -1864,20 +1865,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 9 Properties
     arc9_L2_x = 6.7
     arc9_L2_center = [arc9_L2_x, high_arc]
-    arc9_L2_radius = med_arc_size
+    arc9_L2_radius = small_arc_size
     arc9_L2_start_angle = 0
     arc9_L2_end_angle = 180
     
     # Arc 10 Properties
     arc10_L2_x = 7.5
     arc10_L2_center = [arc10_L2_x, high_arc]
-    arc10_L2_radius = med_arc_size
+    arc10_L2_radius = large_arc_size
     arc10_L2_start_angle = 0
     arc10_L2_end_angle = 180
     
     # Arc 11 Properties
     arc11_L2_x = 8.3
-    arc11_L2_center = [arc11_L2_x, high_arc]
+    arc11_L2_center = [arc11_L2_x, reg_arc]
     arc11_L2_radius = med_arc_size
     arc11_L2_start_angle = 0
     arc11_L2_end_angle = 180
@@ -2464,13 +2465,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 1 Properties
     arc1_L3_x = 0.3
     arc1_L3_center = [arc1_L3_x, reg_arc]
-    arc1_L3_radius = small_arc_size
+    arc1_L3_radius = med_arc_size
     arc1_L3_start_angle = 0
     arc1_L3_end_angle = 180
     
     # Arc 2 Properties
     arc2_L3_x = 1.1
-    arc2_L3_center = [arc2_L3_x, reg_arc]
+    arc2_L3_center = [arc2_L3_x, high_arc]
     arc2_L3_radius = large_arc_size
     arc2_L3_start_angle = 0
     arc2_L3_end_angle = 180
@@ -2484,7 +2485,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 4 Properties
     arc4_L3_x = 2.7
-    arc4_L3_center = [arc4_L3_x, reg_arc]
+    arc4_L3_center = [arc4_L3_x, low_arc]
     arc4_L3_radius = small_arc_size
     arc4_L3_start_angle = 0
     arc4_L3_end_angle = 180
@@ -2492,42 +2493,42 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 5 Properties
     arc5_L3_x = 3.5
     arc5_L3_center = [arc5_L3_x, reg_arc]
-    arc5_L3_radius = large_arc_size
+    arc5_L3_radius = med_arc_size
     arc5_L3_start_angle = 0
     arc5_L3_end_angle = 180
     
     # Arc 6 Properties
     arc6_L3_x = 4.3
-    arc6_L3_center = [arc6_L3_x, reg_arc]
-    arc6_L3_radius = med_arc_size
+    arc6_L3_center = [arc6_L3_x, low_arc]
+    arc6_L3_radius = small_arc_size
     arc6_L3_start_angle = 0
     arc6_L3_end_angle = 180
     
     # Arc 7 Properties
     arc7_L3_x = 5.1
-    arc7_L3_center = [arc7_L3_x, reg_arc]
+    arc7_L3_center = [arc7_L3_x, high_arc]
     arc7_L3_radius = large_arc_size
     arc7_L3_start_angle = 0
     arc7_L3_end_angle = 180
     
     # Arc 8 Properties
     arc8_L3_x = 5.9
-    arc8_L3_center = [arc8_L3_x, reg_arc]
+    arc8_L3_center = [arc8_L3_x, low_arc]
     arc8_L3_radius = med_arc_size
     arc8_L3_start_angle = 0
     arc8_L3_end_angle = 180
     
     # Arc 9 Properties
     arc9_L3_x = 6.7
-    arc9_L3_center = [arc9_L3_x, reg_arc]
+    arc9_L3_center = [arc9_L3_x, high_arc]
     arc9_L3_radius = med_arc_size
     arc9_L3_start_angle = 0
     arc9_L3_end_angle = 180
     
     # Arc 10 Properties
     arc10_L3_x = 7.5
-    arc10_L3_center = [arc10_L3_x, reg_arc]
-    arc10_L3_radius = med_arc_size
+    arc10_L3_center = [arc10_L3_x, low_arc]
+    arc10_L3_radius = large_arc_size
     arc10_L3_start_angle = 0
     arc10_L3_end_angle = 180
     
@@ -3126,36 +3127,36 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 2 Properties
     arc2_L4_x = 1.1
-    arc2_L4_center = [arc2_L4_x, reg_arc]
-    arc2_L4_radius = large_arc_size
+    arc2_L4_center = [arc2_L4_x, low_arc]
+    arc2_L4_radius = med_arc_size
     arc2_L4_start_angle = 0
     arc2_L4_end_angle = 180
     
     # Arc 3 Properties
     arc3_L4_x = 1.9
     arc3_L4_center = [arc3_L4_x, reg_arc]
-    arc3_L4_radius = med_arc_size
+    arc3_L4_radius = large_arc_size
     arc3_L4_start_angle = 0
     arc3_L4_end_angle = 180
     
     # Arc 4 Properties
     arc4_L4_x = 2.7
-    arc4_L4_center = [arc4_L4_x, reg_arc]
-    arc4_L4_radius = small_arc_size
+    arc4_L4_center = [arc4_L4_x, high_arc]
+    arc4_L4_radius = large_arc_size
     arc4_L4_start_angle = 0
     arc4_L4_end_angle = 180
     
     # Arc 5 Properties
     arc5_L4_x = 3.5
     arc5_L4_center = [arc5_L4_x, reg_arc]
-    arc5_L4_radius = large_arc_size
+    arc5_L4_radius = med_arc_size
     arc5_L4_start_angle = 0
     arc5_L4_end_angle = 180
     
     # Arc 6 Properties
     arc6_L4_x = 4.3
-    arc6_L4_center = [arc6_L4_x, reg_arc]
-    arc6_L4_radius = med_arc_size
+    arc6_L4_center = [arc6_L4_x, low_arc]
+    arc6_L4_radius = small_arc_size
     arc6_L4_start_angle = 0
     arc6_L4_end_angle = 180
     
@@ -3175,14 +3176,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 9 Properties
     arc9_L4_x = 6.7
-    arc9_L4_center = [arc9_L4_x, reg_arc]
-    arc9_L4_radius = med_arc_size
+    arc9_L4_center = [arc9_L4_x, high_arc]
+    arc9_L4_radius = small_arc_size
     arc9_L4_start_angle = 0
     arc9_L4_end_angle = 180
     
     # Arc 10 Properties
     arc10_L4_x = 7.5
-    arc10_L4_center = [arc10_L4_x, reg_arc]
+    arc10_L4_center = [arc10_L4_x, low_arc]
     arc10_L4_radius = med_arc_size
     arc10_L4_start_angle = 0
     arc10_L4_end_angle = 180
@@ -3190,7 +3191,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 11 Properties
     arc11_L4_x = 8.3
     arc11_L4_center = [arc11_L4_x, reg_arc]
-    arc11_L4_radius = med_arc_size
+    arc11_L4_radius = large_arc_size
     arc11_L4_start_angle = 0
     arc11_L4_end_angle = 180
     
@@ -3782,15 +3783,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 2 Properties
     arc2_L5_x = 1.1
-    arc2_L5_center = [arc2_L5_x, reg_arc]
-    arc2_L5_radius = large_arc_size
+    arc2_L5_center = [arc2_L5_x, low_arc]
+    arc2_L5_radius = small_arc_size
     arc2_L5_start_angle = 0
     arc2_L5_end_angle = 180
     
     # Arc 3 Properties
     arc3_L5_x = 1.9
-    arc3_L5_center = [arc3_L5_x, reg_arc]
-    arc3_L5_radius = med_arc_size
+    arc3_L5_center = [arc3_L5_x, high_arc]
+    arc3_L5_radius = large_arc_size
     arc3_L5_start_angle = 0
     arc3_L5_end_angle = 180
     
@@ -3803,43 +3804,43 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 5 Properties
     arc5_L5_x = 3.5
-    arc5_L5_center = [arc5_L5_x, reg_arc]
-    arc5_L5_radius = large_arc_size
+    arc5_L5_center = [arc5_L5_x, low_arc]
+    arc5_L5_radius = med_arc_size
     arc5_L5_start_angle = 0
     arc5_L5_end_angle = 180
     
     # Arc 6 Properties
     arc6_L5_x = 4.3
     arc6_L5_center = [arc6_L5_x, reg_arc]
-    arc6_L5_radius = med_arc_size
+    arc6_L5_radius = large_arc_size
     arc6_L5_start_angle = 0
     arc6_L5_end_angle = 180
     
     # Arc 7 Properties
     arc7_L5_x = 5.1
-    arc7_L5_center = [arc7_L5_x, reg_arc]
-    arc7_L5_radius = large_arc_size
+    arc7_L5_center = [arc7_L5_x, high_arc]
+    arc7_L5_radius = small_arc_size
     arc7_L5_start_angle = 0
     arc7_L5_end_angle = 180
     
     # Arc 8 Properties
     arc8_L5_x = 5.9
-    arc8_L5_center = [arc8_L5_x, reg_arc]
-    arc8_L5_radius = med_arc_size
+    arc8_L5_center = [arc8_L5_x, low_arc]
+    arc8_L5_radius = large_arc_size
     arc8_L5_start_angle = 0
     arc8_L5_end_angle = 180
     
     # Arc 9 Properties
     arc9_L5_x = 6.7
-    arc9_L5_center = [arc9_L5_x, reg_arc]
+    arc9_L5_center = [arc9_L5_x, high_arc]
     arc9_L5_radius = med_arc_size
     arc9_L5_start_angle = 0
     arc9_L5_end_angle = 180
     
     # Arc 10 Properties
     arc10_L5_x = 7.5
-    arc10_L5_center = [arc10_L5_x, reg_arc]
-    arc10_L5_radius = med_arc_size
+    arc10_L5_center = [arc10_L5_x, low_arc]
+    arc10_L5_radius = large_arc_size
     arc10_L5_start_angle = 0
     arc10_L5_end_angle = 180
     
@@ -4432,14 +4433,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 1 Properties
     arc1_L6_x = 0.3
     arc1_L6_center = [arc1_L6_x, reg_arc]
-    arc1_L6_radius = small_arc_size
+    arc1_L6_radius = large_arc_size
     arc1_L6_start_angle = 0
     arc1_L6_end_angle = 180
     
     # Arc 2 Properties
     arc2_L6_x = 1.1
-    arc2_L6_center = [arc2_L6_x, reg_arc]
-    arc2_L6_radius = large_arc_size
+    arc2_L6_center = [arc2_L6_x, low_arc]
+    arc2_L6_radius = small_arc_size
     arc2_L6_start_angle = 0
     arc2_L6_end_angle = 180
     
@@ -4452,57 +4453,57 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 4 Properties
     arc4_L6_x = 2.7
-    arc4_L6_center = [arc4_L6_x, reg_arc]
-    arc4_L6_radius = small_arc_size
+    arc4_L6_center = [arc4_L6_x, high_arc]
+    arc4_L6_radius = large_arc_size
     arc4_L6_start_angle = 0
     arc4_L6_end_angle = 180
     
     # Arc 5 Properties
     arc5_L6_x = 3.5
     arc5_L6_center = [arc5_L6_x, reg_arc]
-    arc5_L6_radius = large_arc_size
+    arc5_L6_radius = small_arc_size
     arc5_L6_start_angle = 0
     arc5_L6_end_angle = 180
     
     # Arc 6 Properties
     arc6_L6_x = 4.3
-    arc6_L6_center = [arc6_L6_x, reg_arc]
+    arc6_L6_center = [arc6_L6_x, low_arc]
     arc6_L6_radius = med_arc_size
     arc6_L6_start_angle = 0
     arc6_L6_end_angle = 180
     
     # Arc 7 Properties
     arc7_L6_x = 5.1
-    arc7_L6_center = [arc7_L6_x, reg_arc]
-    arc7_L6_radius = large_arc_size
+    arc7_L6_center = [arc7_L6_x, high_arc]
+    arc7_L6_radius = small_arc_size
     arc7_L6_start_angle = 0
     arc7_L6_end_angle = 180
     
     # Arc 8 Properties
     arc8_L6_x = 5.9
     arc8_L6_center = [arc8_L6_x, reg_arc]
-    arc8_L6_radius = med_arc_size
+    arc8_L6_radius = large_arc_size
     arc8_L6_start_angle = 0
     arc8_L6_end_angle = 180
     
     # Arc 9 Properties
     arc9_L6_x = 6.7
-    arc9_L6_center = [arc9_L6_x, reg_arc]
+    arc9_L6_center = [arc9_L6_x, low_arc]
     arc9_L6_radius = med_arc_size
     arc9_L6_start_angle = 0
     arc9_L6_end_angle = 180
     
     # Arc 10 Properties
     arc10_L6_x = 7.5
-    arc10_L6_center = [arc10_L6_x, reg_arc]
-    arc10_L6_radius = med_arc_size
+    arc10_L6_center = [arc10_L6_x, high_arc]
+    arc10_L6_radius = small_arc_size
     arc10_L6_start_angle = 0
     arc10_L6_end_angle = 180
     
     # Arc 11 Properties
     arc11_L6_x = 8.3
     arc11_L6_center = [arc11_L6_x, reg_arc]
-    arc11_L6_radius = med_arc_size
+    arc11_L6_radius = large_arc_size
     arc11_L6_start_angle = 0
     arc11_L6_end_angle = 180
     
@@ -5094,64 +5095,64 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 2 Properties
     arc2_L7_x = 1.1
-    arc2_L7_center = [arc2_L7_x, reg_arc]
-    arc2_L7_radius = large_arc_size
+    arc2_L7_center = [arc2_L7_x, high_arc]
+    arc2_L7_radius = med_arc_size
     arc2_L7_start_angle = 0
     arc2_L7_end_angle = 180
     
     # Arc 3 Properties
     arc3_L7_x = 1.9
-    arc3_L7_center = [arc3_L7_x, reg_arc]
-    arc3_L7_radius = med_arc_size
+    arc3_L7_center = [arc3_L7_x, low_arc]
+    arc3_L7_radius = large_arc_size
     arc3_L7_start_angle = 0
     arc3_L7_end_angle = 180
     
     # Arc 4 Properties
     arc4_L7_x = 2.7
-    arc4_L7_center = [arc4_L7_x, reg_arc]
+    arc4_L7_center = [arc4_L7_x, high_arc]
     arc4_L7_radius = small_arc_size
     arc4_L7_start_angle = 0
     arc4_L7_end_angle = 180
     
     # Arc 5 Properties
     arc5_L7_x = 3.5
-    arc5_L7_center = [arc5_L7_x, reg_arc]
-    arc5_L7_radius = large_arc_size
+    arc5_L7_center = [arc5_L7_x, low_arc]
+    arc5_L7_radius = med_arc_size
     arc5_L7_start_angle = 0
     arc5_L7_end_angle = 180
     
     # Arc 6 Properties
     arc6_L7_x = 4.3
-    arc6_L7_center = [arc6_L7_x, reg_arc]
-    arc6_L7_radius = med_arc_size
+    arc6_L7_center = [arc6_L7_x, high_arc]
+    arc6_L7_radius = large_arc_size
     arc6_L7_start_angle = 0
     arc6_L7_end_angle = 180
     
     # Arc 7 Properties
     arc7_L7_x = 5.1
     arc7_L7_center = [arc7_L7_x, reg_arc]
-    arc7_L7_radius = large_arc_size
+    arc7_L7_radius = small_arc_size
     arc7_L7_start_angle = 0
     arc7_L7_end_angle = 180
     
     # Arc 8 Properties
     arc8_L7_x = 5.9
-    arc8_L7_center = [arc8_L7_x, reg_arc]
+    arc8_L7_center = [arc8_L7_x, low_arc]
     arc8_L7_radius = med_arc_size
     arc8_L7_start_angle = 0
     arc8_L7_end_angle = 180
     
     # Arc 9 Properties
     arc9_L7_x = 6.7
-    arc9_L7_center = [arc9_L7_x, reg_arc]
-    arc9_L7_radius = med_arc_size
+    arc9_L7_center = [arc9_L7_x, high_arc]
+    arc9_L7_radius = large_arc_size
     arc9_L7_start_angle = 0
     arc9_L7_end_angle = 180
     
     # Arc 10 Properties
     arc10_L7_x = 7.5
-    arc10_L7_center = [arc10_L7_x, reg_arc]
-    arc10_L7_radius = med_arc_size
+    arc10_L7_center = [arc10_L7_x, low_arc]
+    arc10_L7_radius = small_arc_size
     arc10_L7_start_angle = 0
     arc10_L7_end_angle = 180
     
@@ -5744,13 +5745,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 1 Properties
     arc1_L8_x = 0.3
     arc1_L8_center = [arc1_L8_x, reg_arc]
-    arc1_L8_radius = small_arc_size
+    arc1_L8_radius = med_arc_size
     arc1_L8_start_angle = 0
     arc1_L8_end_angle = 180
     
     # Arc 2 Properties
     arc2_L8_x = 1.1
-    arc2_L8_center = [arc2_L8_x, reg_arc]
+    arc2_L8_center = [arc2_L8_x, low_arc]
     arc2_L8_radius = large_arc_size
     arc2_L8_start_angle = 0
     arc2_L8_end_angle = 180
@@ -5758,14 +5759,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 3 Properties
     arc3_L8_x = 1.9
     arc3_L8_center = [arc3_L8_x, reg_arc]
-    arc3_L8_radius = med_arc_size
+    arc3_L8_radius = small_arc_size
     arc3_L8_start_angle = 0
     arc3_L8_end_angle = 180
     
     # Arc 4 Properties
     arc4_L8_x = 2.7
-    arc4_L8_center = [arc4_L8_x, reg_arc]
-    arc4_L8_radius = small_arc_size
+    arc4_L8_center = [arc4_L8_x, high_arc]
+    arc4_L8_radius = med_arc_size
     arc4_L8_start_angle = 0
     arc4_L8_end_angle = 180
     
@@ -5778,8 +5779,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 6 Properties
     arc6_L8_x = 4.3
-    arc6_L8_center = [arc6_L8_x, reg_arc]
-    arc6_L8_radius = med_arc_size
+    arc6_L8_center = [arc6_L8_x, low_arc]
+    arc6_L8_radius = small_arc_size
     arc6_L8_start_angle = 0
     arc6_L8_end_angle = 180
     
@@ -5792,7 +5793,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 8 Properties
     arc8_L8_x = 5.9
-    arc8_L8_center = [arc8_L8_x, reg_arc]
+    arc8_L8_center = [arc8_L8_x, high_arc]
     arc8_L8_radius = med_arc_size
     arc8_L8_start_angle = 0
     arc8_L8_end_angle = 180
@@ -5800,14 +5801,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 9 Properties
     arc9_L8_x = 6.7
     arc9_L8_center = [arc9_L8_x, reg_arc]
-    arc9_L8_radius = med_arc_size
+    arc9_L8_radius = small_arc_size
     arc9_L8_start_angle = 0
     arc9_L8_end_angle = 180
     
     # Arc 10 Properties
     arc10_L8_x = 7.5
-    arc10_L8_center = [arc10_L8_x, reg_arc]
-    arc10_L8_radius = med_arc_size
+    arc10_L8_center = [arc10_L8_x, high_arc]
+    arc10_L8_radius = large_arc_size
     arc10_L8_start_angle = 0
     arc10_L8_end_angle = 180
     
@@ -6406,42 +6407,42 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 2 Properties
     arc2_L9_x = 1.1
-    arc2_L9_center = [arc2_L9_x, reg_arc]
+    arc2_L9_center = [arc2_L9_x, low_arc]
     arc2_L9_radius = large_arc_size
     arc2_L9_start_angle = 0
     arc2_L9_end_angle = 180
     
     # Arc 3 Properties
     arc3_L9_x = 1.9
-    arc3_L9_center = [arc3_L9_x, reg_arc]
+    arc3_L9_center = [arc3_L9_x, high_arc]
     arc3_L9_radius = med_arc_size
     arc3_L9_start_angle = 0
     arc3_L9_end_angle = 180
     
     # Arc 4 Properties
     arc4_L9_x = 2.7
-    arc4_L9_center = [arc4_L9_x, reg_arc]
-    arc4_L9_radius = small_arc_size
+    arc4_L9_center = [arc4_L9_x, low_arc]
+    arc4_L9_radius = large_arc_size
     arc4_L9_start_angle = 0
     arc4_L9_end_angle = 180
     
     # Arc 5 Properties
     arc5_L9_x = 3.5
     arc5_L9_center = [arc5_L9_x, reg_arc]
-    arc5_L9_radius = large_arc_size
+    arc5_L9_radius = small_arc_size
     arc5_L9_start_angle = 0
     arc5_L9_end_angle = 180
     
     # Arc 6 Properties
     arc6_L9_x = 4.3
-    arc6_L9_center = [arc6_L9_x, reg_arc]
+    arc6_L9_center = [arc6_L9_x, low_arc]
     arc6_L9_radius = med_arc_size
     arc6_L9_start_angle = 0
     arc6_L9_end_angle = 180
     
     # Arc 7 Properties
     arc7_L9_x = 5.1
-    arc7_L9_center = [arc7_L9_x, reg_arc]
+    arc7_L9_center = [arc7_L9_x, high_arc]
     arc7_L9_radius = large_arc_size
     arc7_L9_start_angle = 0
     arc7_L9_end_angle = 180
@@ -6449,21 +6450,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 8 Properties
     arc8_L9_x = 5.9
     arc8_L9_center = [arc8_L9_x, reg_arc]
-    arc8_L9_radius = med_arc_size
+    arc8_L9_radius = small_arc_size
     arc8_L9_start_angle = 0
     arc8_L9_end_angle = 180
     
     # Arc 9 Properties
     arc9_L9_x = 6.7
-    arc9_L9_center = [arc9_L9_x, reg_arc]
+    arc9_L9_center = [arc9_L9_x, low_arc]
     arc9_L9_radius = med_arc_size
     arc9_L9_start_angle = 0
     arc9_L9_end_angle = 180
     
     # Arc 10 Properties
     arc10_L9_x = 7.5
-    arc10_L9_center = [arc10_L9_x, reg_arc]
-    arc10_L9_radius = med_arc_size
+    arc10_L9_center = [arc10_L9_x, high_arc]
+    arc10_L9_radius = small_arc_size
     arc10_L9_start_angle = 0
     arc10_L9_end_angle = 180
     
@@ -7056,70 +7057,70 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 1 Properties
     arc1_L10_x = 0.3
     arc1_L10_center = [arc1_L10_x, reg_arc]
-    arc1_L10_radius = small_arc_size
+    arc1_L10_radius = med_arc_size
     arc1_L10_start_angle = 0
     arc1_L10_end_angle = 180
     
     # Arc 2 Properties
     arc2_L10_x = 1.1
-    arc2_L10_center = [arc2_L10_x, reg_arc]
-    arc2_L10_radius = large_arc_size
+    arc2_L10_center = [arc2_L10_x, low_arc]
+    arc2_L10_radius = small_arc_size
     arc2_L10_start_angle = 0
     arc2_L10_end_angle = 180
     
     # Arc 3 Properties
     arc3_L10_x = 1.9
-    arc3_L10_center = [arc3_L10_x, reg_arc]
-    arc3_L10_radius = med_arc_size
+    arc3_L10_center = [arc3_L10_x, high_arc]
+    arc3_L10_radius = large_arc_size
     arc3_L10_start_angle = 0
     arc3_L10_end_angle = 180
     
     # Arc 4 Properties
     arc4_L10_x = 2.7
-    arc4_L10_center = [arc4_L10_x, reg_arc]
-    arc4_L10_radius = small_arc_size
+    arc4_L10_center = [arc4_L10_x, low_arc]
+    arc4_L10_radius = med_arc_size
     arc4_L10_start_angle = 0
     arc4_L10_end_angle = 180
     
     # Arc 5 Properties
     arc5_L10_x = 3.5
     arc5_L10_center = [arc5_L10_x, reg_arc]
-    arc5_L10_radius = large_arc_size
+    arc5_L10_radius = small_arc_size
     arc5_L10_start_angle = 0
     arc5_L10_end_angle = 180
     
     # Arc 6 Properties
     arc6_L10_x = 4.3
-    arc6_L10_center = [arc6_L10_x, reg_arc]
-    arc6_L10_radius = med_arc_size
+    arc6_L10_center = [arc6_L10_x, low_arc]
+    arc6_L10_radius = large_arc_size
     arc6_L10_start_angle = 0
     arc6_L10_end_angle = 180
     
     # Arc 7 Properties
     arc7_L10_x = 5.1
-    arc7_L10_center = [arc7_L10_x, reg_arc]
-    arc7_L10_radius = large_arc_size
+    arc7_L10_center = [arc7_L10_x, high_arc]
+    arc7_L10_radius = med_arc_size
     arc7_L10_start_angle = 0
     arc7_L10_end_angle = 180
     
     # Arc 8 Properties
     arc8_L10_x = 5.9
     arc8_L10_center = [arc8_L10_x, reg_arc]
-    arc8_L10_radius = med_arc_size
+    arc8_L10_radius = small_arc_size
     arc8_L10_start_angle = 0
     arc8_L10_end_angle = 180
     
     # Arc 9 Properties
     arc9_L10_x = 6.7
-    arc9_L10_center = [arc9_L10_x, reg_arc]
-    arc9_L10_radius = med_arc_size
+    arc9_L10_center = [arc9_L10_x, low_arc]
+    arc9_L10_radius = large_arc_size
     arc9_L10_start_angle = 0
     arc9_L10_end_angle = 180
     
     # Arc 10 Properties
     arc10_L10_x = 7.5
-    arc10_L10_center = [arc10_L10_x, reg_arc]
-    arc10_L10_radius = med_arc_size
+    arc10_L10_center = [arc10_L10_x, high_arc]
+    arc10_L10_radius = small_arc_size
     arc10_L10_start_angle = 0
     arc10_L10_end_angle = 180
     
@@ -7712,20 +7713,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 1 Properties
     arc1_L11_x = 0.3
     arc1_L11_center = [arc1_L11_x, reg_arc]
-    arc1_L11_radius = small_arc_size
+    arc1_L11_radius = large_arc_size
     arc1_L11_start_angle = 0
     arc1_L11_end_angle = 180
     
     # Arc 2 Properties
     arc2_L11_x = 1.1
-    arc2_L11_center = [arc2_L11_x, reg_arc]
-    arc2_L11_radius = large_arc_size
+    arc2_L11_center = [arc2_L11_x, low_arc]
+    arc2_L11_radius = small_arc_size
     arc2_L11_start_angle = 0
     arc2_L11_end_angle = 180
     
     # Arc 3 Properties
     arc3_L11_x = 1.9
-    arc3_L11_center = [arc3_L11_x, reg_arc]
+    arc3_L11_center = [arc3_L11_x, high_arc]
     arc3_L11_radius = med_arc_size
     arc3_L11_start_angle = 0
     arc3_L11_end_angle = 180
@@ -7733,14 +7734,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 4 Properties
     arc4_L11_x = 2.7
     arc4_L11_center = [arc4_L11_x, reg_arc]
-    arc4_L11_radius = small_arc_size
+    arc4_L11_radius = large_arc_size
     arc4_L11_start_angle = 0
     arc4_L11_end_angle = 180
     
     # Arc 5 Properties
     arc5_L11_x = 3.5
-    arc5_L11_center = [arc5_L11_x, reg_arc]
-    arc5_L11_radius = large_arc_size
+    arc5_L11_center = [arc5_L11_x, low_arc]
+    arc5_L11_radius = small_arc_size
     arc5_L11_start_angle = 0
     arc5_L11_end_angle = 180
     
@@ -7753,15 +7754,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 7 Properties
     arc7_L11_x = 5.1
-    arc7_L11_center = [arc7_L11_x, reg_arc]
+    arc7_L11_center = [arc7_L11_x, high_arc]
     arc7_L11_radius = large_arc_size
     arc7_L11_start_angle = 0
     arc7_L11_end_angle = 180
     
     # Arc 8 Properties
     arc8_L11_x = 5.9
-    arc8_L11_center = [arc8_L11_x, reg_arc]
-    arc8_L11_radius = med_arc_size
+    arc8_L11_center = [arc8_L11_x, low_arc]
+    arc8_L11_radius = small_arc_size
     arc8_L11_start_angle = 0
     arc8_L11_end_angle = 180
     
@@ -7774,8 +7775,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 10 Properties
     arc10_L11_x = 7.5
-    arc10_L11_center = [arc10_L11_x, reg_arc]
-    arc10_L11_radius = med_arc_size
+    arc10_L11_center = [arc10_L11_x, high_arc]
+    arc10_L11_radius = large_arc_size
     arc10_L11_start_angle = 0
     arc10_L11_end_angle = 180
     
@@ -8368,41 +8369,41 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 1 Properties
     arc1_L12_x = 0.3
     arc1_L12_center = [arc1_L12_x, reg_arc]
-    arc1_L12_radius = small_arc_size
+    arc1_L12_radius = med_arc_size
     arc1_L12_start_angle = 0
     arc1_L12_end_angle = 180
     
     # Arc 2 Properties
     arc2_L12_x = 1.1
-    arc2_L12_center = [arc2_L12_x, reg_arc]
-    arc2_L12_radius = large_arc_size
+    arc2_L12_center = [arc2_L12_x, low_arc]
+    arc2_L12_radius = small_arc_size
     arc2_L12_start_angle = 0
     arc2_L12_end_angle = 180
     
     # Arc 3 Properties
     arc3_L12_x = 1.9
-    arc3_L12_center = [arc3_L12_x, reg_arc]
-    arc3_L12_radius = med_arc_size
+    arc3_L12_center = [arc3_L12_x, high_arc]
+    arc3_L12_radius = large_arc_size
     arc3_L12_start_angle = 0
     arc3_L12_end_angle = 180
     
     # Arc 4 Properties
     arc4_L12_x = 2.7
     arc4_L12_center = [arc4_L12_x, reg_arc]
-    arc4_L12_radius = small_arc_size
+    arc4_L12_radius = med_arc_size
     arc4_L12_start_angle = 0
     arc4_L12_end_angle = 180
     
     # Arc 5 Properties
     arc5_L12_x = 3.5
-    arc5_L12_center = [arc5_L12_x, reg_arc]
+    arc5_L12_center = [arc5_L12_x, low_arc]
     arc5_L12_radius = large_arc_size
     arc5_L12_start_angle = 0
     arc5_L12_end_angle = 180
     
     # Arc 6 Properties
     arc6_L12_x = 4.3
-    arc6_L12_center = [arc6_L12_x, reg_arc]
+    arc6_L12_center = [arc6_L12_x, high_arc]
     arc6_L12_radius = med_arc_size
     arc6_L12_start_angle = 0
     arc6_L12_end_angle = 180
@@ -8410,14 +8411,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 7 Properties
     arc7_L12_x = 5.1
     arc7_L12_center = [arc7_L12_x, reg_arc]
-    arc7_L12_radius = large_arc_size
+    arc7_L12_radius = small_arc_size
     arc7_L12_start_angle = 0
     arc7_L12_end_angle = 180
     
     # Arc 8 Properties
     arc8_L12_x = 5.9
-    arc8_L12_center = [arc8_L12_x, reg_arc]
-    arc8_L12_radius = med_arc_size
+    arc8_L12_center = [arc8_L12_x, low_arc]
+    arc8_L12_radius = large_arc_size
     arc8_L12_start_angle = 0
     arc8_L12_end_angle = 180
     
@@ -8430,15 +8431,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 10 Properties
     arc10_L12_x = 7.5
-    arc10_L12_center = [arc10_L12_x, reg_arc]
-    arc10_L12_radius = med_arc_size
+    arc10_L12_center = [arc10_L12_x, high_arc]
+    arc10_L12_radius = small_arc_size
     arc10_L12_start_angle = 0
     arc10_L12_end_angle = 180
     
     # Arc 11 Properties
     arc11_L12_x = 8.3
     arc11_L12_center = [arc11_L12_x, reg_arc]
-    arc11_L12_radius = med_arc_size
+    arc11_L12_radius = large_arc_size
     arc11_L12_start_angle = 0
     arc11_L12_end_angle = 180
     
@@ -9024,35 +9025,36 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 1 Properties
     arc1_L13_x = 0.3
     arc1_L13_center = [arc1_L13_x, reg_arc]
-    arc1_L13_radius = small_arc_size
+    arc1_L13_radius = med_arc_size
     arc1_L13_start_angle = 0
     arc1_L13_end_angle = 180
     
     # Arc 2 Properties
     arc2_L13_x = 1.1
-    arc2_L13_center = [arc2_L13_x, reg_arc]
-    arc2_L13_radius = large_arc_size
+    arc2_L13_center = [arc2_L13_x, low_arc]
+    arc2_L13_radius = small_arc_size
     arc2_L13_start_angle = 0
     arc2_L13_end_angle = 180
     
     # Arc 3 Properties
     arc3_L13_x = 1.9
-    arc3_L13_center = [arc3_L13_x, reg_arc]
-    arc3_L13_radius = med_arc_size
+    arc3_L13_center = [arc3_L13_x, high_arc]
+    arc3_L13_radius = large_arc_size
     arc3_L13_start_angle = 0
     arc3_L13_end_angle = 180
     
     # Arc 4 Properties
     arc4_L13_x = 2.7
     arc4_L13_center = [arc4_L13_x, reg_arc]
-    arc4_L13_radius = small_arc_size
+    arc4_L13_radius = med_arc_size
     arc4_L13_start_angle = 0
-    arc4_L13_end_angle = 180
+    arc4_L13_end_angle = -180
+    #flipped
     
     # Arc 5 Properties
     arc5_L13_x = 3.5
-    arc5_L13_center = [arc5_L13_x, reg_arc]
-    arc5_L13_radius = large_arc_size
+    arc5_L13_center = [arc5_L13_x, low_arc]
+    arc5_L13_radius = small_arc_size
     arc5_L13_start_angle = 0
     arc5_L13_end_angle = 180
     
@@ -9061,11 +9063,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc6_L13_center = [arc6_L13_x, reg_arc]
     arc6_L13_radius = med_arc_size
     arc6_L13_start_angle = 0
-    arc6_L13_end_angle = 180
+    arc6_L13_end_angle = -180
     
     # Arc 7 Properties
     arc7_L13_x = 5.1
-    arc7_L13_center = [arc7_L13_x, reg_arc]
+    arc7_L13_center = [arc7_L13_x, high_arc]
     arc7_L13_radius = large_arc_size
     arc7_L13_start_angle = 0
     arc7_L13_end_angle = 180
@@ -9075,19 +9077,19 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc8_L13_center = [arc8_L13_x, reg_arc]
     arc8_L13_radius = med_arc_size
     arc8_L13_start_angle = 0
-    arc8_L13_end_angle = 180
+    arc8_L13_end_angle = -180
     
     # Arc 9 Properties
     arc9_L13_x = 6.7
-    arc9_L13_center = [arc9_L13_x, reg_arc]
-    arc9_L13_radius = med_arc_size
+    arc9_L13_center = [arc9_L13_x, low_arc]
+    arc9_L13_radius = small_arc_size
     arc9_L13_start_angle = 0
     arc9_L13_end_angle = 180
     
     # Arc 10 Properties
     arc10_L13_x = 7.5
-    arc10_L13_center = [arc10_L13_x, reg_arc]
-    arc10_L13_radius = med_arc_size
+    arc10_L13_center = [arc10_L13_x, high_arc]
+    arc10_L13_radius = large_arc_size
     arc10_L13_start_angle = 0
     arc10_L13_end_angle = 180
     
@@ -9337,11 +9339,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     wiggle_arc1_L13 = create_wiggle_arc(arc1_L13_center, arc1_L13_radius, wiggle_thickness)
     wiggle_arc2_L13 = create_wiggle_arc(arc2_L13_center, arc2_L13_radius, wiggle_thickness)
     wiggle_arc3_L13 = create_wiggle_arc(arc3_L13_center, arc3_L13_radius, wiggle_thickness)
+    
     wiggle_arc4_L13 = create_wiggle_arc(arc4_L13_center, arc4_L13_radius, wiggle_thickness)
+    wiggle_arc4_L13.vertices = [(x, 2 * arc4_L13_center[1] - y) for (x, y) in wiggle_arc4_L13.vertices]
+    
     wiggle_arc5_L13 = create_wiggle_arc(arc5_L13_center, arc5_L13_radius, wiggle_thickness)
+    
     wiggle_arc6_L13 = create_wiggle_arc(arc6_L13_center, arc6_L13_radius, wiggle_thickness)
+    wiggle_arc6_L13.vertices = [(x, 2 * arc6_L13_center[1] - y) for (x, y) in wiggle_arc6_L13.vertices]
+    
     wiggle_arc7_L13 = create_wiggle_arc(arc7_L13_center, arc7_L13_radius, wiggle_thickness)
+    
     wiggle_arc8_L13 = create_wiggle_arc(arc8_L13_center, arc8_L13_radius, wiggle_thickness)
+    wiggle_arc8_L13.vertices = [(x, 2 * arc8_L13_center[1] - y) for (x, y) in wiggle_arc8_L13.vertices]
+    
     wiggle_arc9_L13 = create_wiggle_arc(arc9_L13_center, arc9_L13_radius, wiggle_thickness)
     wiggle_arc10_L13 = create_wiggle_arc(arc10_L13_center, arc10_L13_radius, wiggle_thickness)
     wiggle_arc11_L13 = create_wiggle_arc(arc11_L13_center, arc11_L13_radius, wiggle_thickness)
@@ -9680,28 +9691,28 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 1 Properties
     arc1_L14_x = 0.3
     arc1_L14_center = [arc1_L14_x, reg_arc]
-    arc1_L14_radius = small_arc_size
+    arc1_L14_radius = med_arc_size
     arc1_L14_start_angle = 0
     arc1_L14_end_angle = 180
     
     # Arc 2 Properties
     arc2_L14_x = 1.1
-    arc2_L14_center = [arc2_L14_x, reg_arc]
-    arc2_L14_radius = large_arc_size
+    arc2_L14_center = [arc2_L14_x, low_arc]
+    arc2_L14_radius = small_arc_size
     arc2_L14_start_angle = 0
     arc2_L14_end_angle = 180
     
     # Arc 3 Properties
     arc3_L14_x = 1.9
     arc3_L14_center = [arc3_L14_x, reg_arc]
-    arc3_L14_radius = med_arc_size
+    arc3_L14_radius = large_arc_size
     arc3_L14_start_angle = 0
     arc3_L14_end_angle = 180
     
     # Arc 4 Properties
     arc4_L14_x = 2.7
-    arc4_L14_center = [arc4_L14_x, reg_arc]
-    arc4_L14_radius = small_arc_size
+    arc4_L14_center = [arc4_L14_x, high_arc]
+    arc4_L14_radius = med_arc_size
     arc4_L14_start_angle = 0
     arc4_L14_end_angle = 180
     
@@ -9710,40 +9721,40 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc5_L14_center = [arc5_L14_x, reg_arc]
     arc5_L14_radius = large_arc_size
     arc5_L14_start_angle = 0
-    arc5_L14_end_angle = 180
+    arc5_L14_end_angle = -180
     
     # Arc 6 Properties
     arc6_L14_x = 4.3
     arc6_L14_center = [arc6_L14_x, reg_arc]
-    arc6_L14_radius = med_arc_size
+    arc6_L14_radius = small_arc_size
     arc6_L14_start_angle = 0
     arc6_L14_end_angle = 180
     
     # Arc 7 Properties
     arc7_L14_x = 5.1
-    arc7_L14_center = [arc7_L14_x, reg_arc]
-    arc7_L14_radius = large_arc_size
+    arc7_L14_center = [arc7_L14_x, high_arc]
+    arc7_L14_radius = med_arc_size
     arc7_L14_start_angle = 0
-    arc7_L14_end_angle = 180
+    arc7_L14_end_angle = -180
     
     # Arc 8 Properties
     arc8_L14_x = 5.9
     arc8_L14_center = [arc8_L14_x, reg_arc]
-    arc8_L14_radius = med_arc_size
+    arc8_L14_radius = large_arc_size
     arc8_L14_start_angle = 0
-    arc8_L14_end_angle = 180
+    arc8_L14_end_angle = -180
     
     # Arc 9 Properties
     arc9_L14_x = 6.7
-    arc9_L14_center = [arc9_L14_x, reg_arc]
-    arc9_L14_radius = med_arc_size
+    arc9_L14_center = [arc9_L14_x, low_arc]
+    arc9_L14_radius = small_arc_size
     arc9_L14_start_angle = 0
     arc9_L14_end_angle = 180
     
     # Arc 10 Properties
     arc10_L14_x = 7.5
-    arc10_L14_center = [arc10_L14_x, reg_arc]
-    arc10_L14_radius = med_arc_size
+    arc10_L14_center = [arc10_L14_x, high_arc]
+    arc10_L14_radius = large_arc_size
     arc10_L14_start_angle = 0
     arc10_L14_end_angle = 180
     
@@ -9752,7 +9763,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc11_L14_center = [arc11_L14_x, reg_arc]
     arc11_L14_radius = med_arc_size
     arc11_L14_start_angle = 0
-    arc11_L14_end_angle = 180
+    arc11_L14_end_angle = -180
     
     
     # Generate vertices for Arc 1
@@ -9991,16 +10002,28 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Generate wiggle arcs for all arcs
     wiggle_arc1_L14 = create_wiggle_arc(arc1_L14_center, arc1_L14_radius, wiggle_thickness)
+    
     wiggle_arc2_L14 = create_wiggle_arc(arc2_L14_center, arc2_L14_radius, wiggle_thickness)
+    
     wiggle_arc3_L14 = create_wiggle_arc(arc3_L14_center, arc3_L14_radius, wiggle_thickness)
     wiggle_arc4_L14 = create_wiggle_arc(arc4_L14_center, arc4_L14_radius, wiggle_thickness)
+    
     wiggle_arc5_L14 = create_wiggle_arc(arc5_L14_center, arc5_L14_radius, wiggle_thickness)
+    wiggle_arc5_L14.vertices = [(x, 2 * arc5_L14_center[1] - y) for (x, y) in wiggle_arc5_L14.vertices]
+    
     wiggle_arc6_L14 = create_wiggle_arc(arc6_L14_center, arc6_L14_radius, wiggle_thickness)
+    
     wiggle_arc7_L14 = create_wiggle_arc(arc7_L14_center, arc7_L14_radius, wiggle_thickness)
+    wiggle_arc7_L14.vertices = [(x, 2 * arc7_L14_center[1] - y) for (x, y) in wiggle_arc7_L14.vertices]
+    
     wiggle_arc8_L14 = create_wiggle_arc(arc8_L14_center, arc8_L14_radius, wiggle_thickness)
+    wiggle_arc8_L14.vertices = [(x, 2 * arc8_L14_center[1] - y) for (x, y) in wiggle_arc8_L14.vertices]
+    
     wiggle_arc9_L14 = create_wiggle_arc(arc9_L14_center, arc9_L14_radius, wiggle_thickness)
     wiggle_arc10_L14 = create_wiggle_arc(arc10_L14_center, arc10_L14_radius, wiggle_thickness)
+    
     wiggle_arc11_L14 = create_wiggle_arc(arc11_L14_center, arc11_L14_radius, wiggle_thickness)
+    wiggle_arc11_L14.vertices = [(x, 2 * arc11_L14_center[1] - y) for (x, y) in wiggle_arc11_L14.vertices]
     
     
     
@@ -10335,49 +10358,49 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 1 Properties
     arc1_L15_x = 0.3
-    arc1_L15_center = [arc1_L15_x, reg_arc]
-    arc1_L15_radius = small_arc_size
+    arc1_L15_center = [arc1_L15_x, high_arc]
+    arc1_L15_radius = med_arc_size
     arc1_L15_start_angle = 0
     arc1_L15_end_angle = 180
     
     # Arc 2 Properties
     arc2_L15_x = 1.1
-    arc2_L15_center = [arc2_L15_x, reg_arc]
-    arc2_L15_radius = large_arc_size
+    arc2_L15_center = [arc2_L15_x, low_arc]
+    arc2_L15_radius = small_arc_size
     arc2_L15_start_angle = 0
-    arc2_L15_end_angle = 180
+    arc2_L15_end_angle = -180
     
     # Arc 3 Properties
     arc3_L15_x = 1.9
     arc3_L15_center = [arc3_L15_x, reg_arc]
-    arc3_L15_radius = med_arc_size
+    arc3_L15_radius = large_arc_size
     arc3_L15_start_angle = 0
     arc3_L15_end_angle = 180
     
     # Arc 4 Properties
     arc4_L15_x = 2.7
-    arc4_L15_center = [arc4_L15_x, reg_arc]
-    arc4_L15_radius = small_arc_size
+    arc4_L15_center = [arc4_L15_x, high_arc]
+    arc4_L15_radius = med_arc_size
     arc4_L15_start_angle = 0
-    arc4_L15_end_angle = 180
+    arc4_L15_end_angle = -180
     
     # Arc 5 Properties
     arc5_L15_x = 3.5
     arc5_L15_center = [arc5_L15_x, reg_arc]
-    arc5_L15_radius = large_arc_size
+    arc5_L15_radius = small_arc_size
     arc5_L15_start_angle = 0
     arc5_L15_end_angle = 180
     
     # Arc 6 Properties
     arc6_L15_x = 4.3
-    arc6_L15_center = [arc6_L15_x, reg_arc]
+    arc6_L15_center = [arc6_L15_x, high_arc]
     arc6_L15_radius = med_arc_size
     arc6_L15_start_angle = 0
-    arc6_L15_end_angle = 180
+    arc6_L15_end_angle = -180
     
     # Arc 7 Properties
     arc7_L15_x = 5.1
-    arc7_L15_center = [arc7_L15_x, reg_arc]
+    arc7_L15_center = [arc7_L15_x, high_arc]
     arc7_L15_radius = large_arc_size
     arc7_L15_start_angle = 0
     arc7_L15_end_angle = 180
@@ -10385,30 +10408,30 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 8 Properties
     arc8_L15_x = 5.9
     arc8_L15_center = [arc8_L15_x, reg_arc]
-    arc8_L15_radius = med_arc_size
+    arc8_L15_radius = small_arc_size
     arc8_L15_start_angle = 0
-    arc8_L15_end_angle = 180
+    arc8_L15_end_angle = -180
     
     # Arc 9 Properties
     arc9_L15_x = 6.7
-    arc9_L15_center = [arc9_L15_x, reg_arc]
+    arc9_L15_center = [arc9_L15_x, low_arc]
     arc9_L15_radius = med_arc_size
     arc9_L15_start_angle = 0
     arc9_L15_end_angle = 180
     
     # Arc 10 Properties
     arc10_L15_x = 7.5
-    arc10_L15_center = [arc10_L15_x, reg_arc]
-    arc10_L15_radius = med_arc_size
+    arc10_L15_center = [arc10_L15_x, high_arc]
+    arc10_L15_radius = large_arc_size
     arc10_L15_start_angle = 0
-    arc10_L15_end_angle = 180
+    arc10_L15_end_angle = -180
     
     # Arc 11 Properties
     arc11_L15_x = 8.3
     arc11_L15_center = [arc11_L15_x, reg_arc]
     arc11_L15_radius = med_arc_size
     arc11_L15_start_angle = 0
-    arc11_L15_end_angle = 180
+    arc11_L15_end_angle = -180
     
     
     # Generate vertices for Arc 1
@@ -10649,14 +10672,27 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     wiggle_arc1_L15 = create_wiggle_arc(arc1_L15_center, arc1_L15_radius, wiggle_thickness)
     wiggle_arc2_L15 = create_wiggle_arc(arc2_L15_center, arc2_L15_radius, wiggle_thickness)
     wiggle_arc3_L15 = create_wiggle_arc(arc3_L15_center, arc3_L15_radius, wiggle_thickness)
+    
     wiggle_arc4_L15 = create_wiggle_arc(arc4_L15_center, arc4_L15_radius, wiggle_thickness)
+    wiggle_arc4_L15.vertices = [(x, 2 * arc4_L15_center[1] - y) for (x, y) in wiggle_arc4_L15.vertices]
+    
     wiggle_arc5_L15 = create_wiggle_arc(arc5_L15_center, arc5_L15_radius, wiggle_thickness)
+    
     wiggle_arc6_L15 = create_wiggle_arc(arc6_L15_center, arc6_L15_radius, wiggle_thickness)
+    wiggle_arc6_L15.vertices = [(x, 2 * arc6_L15_center[1] - y) for (x, y) in wiggle_arc6_L15.vertices]
+    
     wiggle_arc7_L15 = create_wiggle_arc(arc7_L15_center, arc7_L15_radius, wiggle_thickness)
+    
     wiggle_arc8_L15 = create_wiggle_arc(arc8_L15_center, arc8_L15_radius, wiggle_thickness)
+    wiggle_arc8_L15.vertices = [(x, 2 * arc8_L15_center[1] - y) for (x, y) in wiggle_arc8_L15.vertices]
+    
     wiggle_arc9_L15 = create_wiggle_arc(arc9_L15_center, arc9_L15_radius, wiggle_thickness)
+    
     wiggle_arc10_L15 = create_wiggle_arc(arc10_L15_center, arc10_L15_radius, wiggle_thickness)
+    wiggle_arc10_L15.vertices = [(x, 2 * arc10_L15_center[1] - y) for (x, y) in wiggle_arc10_L15.vertices]
+    
     wiggle_arc11_L15 = create_wiggle_arc(arc11_L15_center, arc11_L15_radius, wiggle_thickness)
+    wiggle_arc11_L15.vertices = [(x, 2 * arc11_L15_center[1] - y) for (x, y) in wiggle_arc11_L15.vertices]
     
     
     
