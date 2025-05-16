@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on May 15, 2025, at 15:31
+    on May 15, 2025, at 17:21
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -92,8 +92,8 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 # work out from system args whether we are running in pilot mode
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
-_fullScr = False
-_winSize = [1000,800]
+_fullScr = True
+_winSize = [1920, 1080]
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -159,7 +159,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='D:\\Users\\areya\\Desktop\\work\\Motor-Learning-Research-Project\\Game\\game_lastrun.py',
+        originPath='C:\\Users\\actioncontrollab\\Desktop\\Motor-Learning-Research-Project\\Game\\game_lastrun.py',
         savePickle=True, saveWideText=False,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -208,6 +208,9 @@ def setupWindow(expInfo=None, win=None):
     psychopy.visual.Window
         Window in which to run this experiment.
     """
+    if PILOTING:
+        logging.debug('Fullscreen settings ignored as running in pilot mode.')
+    
     if win is None:
         # if not given a window to setup, make one
         win = visual.Window(
@@ -943,13 +946,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     kb = keyboard.Keyboard()
     
     #PSURP Inits
-    """
+    
     # Initialize the serial connection for PSURP
     ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
     ser.flush()
     ser.write("X".encode())  # Initialize PSURP
     ser.write("RUNE\n".encode())  # Enter streaming mode
-    """
+    
     
     # Trail settings
     trail_positions = []  # Stores Dino's previous positions
@@ -1111,7 +1114,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     floor1_vertices = calculate_rect_vertices(floor1_L1)
     
     # floor2_L1 properties - Place it further into the map
-    floor2_x_static = 1  # Fixed X position where floor2_L1 appears 17.5
+    floor2_x_static = 17.5  # Fixed X position where floor2_L1 appears 17.5
     floor2_height = 0.3
     floor2_width = 0.5
     
@@ -10670,7 +10673,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Generate wiggle arcs for all arcs
     wiggle_arc1_L15 = create_wiggle_arc(arc1_L15_center, arc1_L15_radius, wiggle_thickness)
+    
     wiggle_arc2_L15 = create_wiggle_arc(arc2_L15_center, arc2_L15_radius, wiggle_thickness)
+    wiggle_arc2_L15.vertices = [(x, 2 * arc2_L15_center[1] - y) for (x, y) in wiggle_arc2_L15.vertices]
+    
     wiggle_arc3_L15 = create_wiggle_arc(arc3_L15_center, arc3_L15_radius, wiggle_thickness)
     
     wiggle_arc4_L15 = create_wiggle_arc(arc4_L15_center, arc4_L15_radius, wiggle_thickness)
@@ -10906,10 +10912,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     resetPSURP.tStopRefresh = tThisFlipGlobal
     thisExp.addData('resetPSURP.stopped', resetPSURP.tStop)
     # Run 'End Routine' code from code_2
-    """
+    
     ser.flush()
     ser.write("X".encode())
-    """
+    
     # clear out the data from the IO buffers (Fresh commands)
     # the "X" command puts tje PSURP into command mode
     
@@ -11033,7 +11039,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     TARE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('TARE.stopped', TARE.tStop)
     # Run 'End Routine' code from tare_code
-    """
+    
     ser.write("TAR0\n".encode())
     time.sleep(1)
     ser.write("TAR1\n".encode())
@@ -11045,7 +11051,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     ser.write("TAR4\n".encode())
     time.sleep(1)
     
-    """
+    
     # the tar command zeros out all of the force messurements
     # halt for one second to make sure command was processed 
     
@@ -11167,9 +11173,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     RUNE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('RUNE.stopped', RUNE.tStop)
     # Run 'End Routine' code from Code_RUNE
-    """
+    
     ser.write("RUNE\n".encode())
-    """
+    
     # the rune command sets the PSURP to streaming mode. (for getting vals)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if RUNE.maxDurationReached:
@@ -28374,11 +28380,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         stimOut=params,
         dataOut=['n','all_mean','all_std', 'all_raw'])
     # Run 'End Experiment' code from DinoMovement_L1
-    """
+    
     ser.flush()
     ser.write("X".encode())  # Exit command mode
     ser.close()
-    """
+    
     # Run 'End Experiment' code from DinoMovement_L2
     """
     ser.flush()
