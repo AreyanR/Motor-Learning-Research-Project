@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on May 15, 2025, at 17:21
+    on May 19, 2025, at 14:54
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -159,7 +159,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\actioncontrollab\\Desktop\\Motor-Learning-Research-Project\\Game\\game_lastrun.py',
+        originPath='D:\\Users\\areya\\Desktop\\work\\Motor-Learning-Research-Project\\Game\\game_lastrun.py',
         savePickle=True, saveWideText=False,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -425,6 +425,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key') is None:
+        # initialise break_key
+        break_key = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key',
+        )
     # create speaker 'lose_sound_L7'
     deviceManager.addDevice(
         deviceName='lose_sound_L7',
@@ -946,13 +952,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     kb = keyboard.Keyboard()
     
     #PSURP Inits
-    
+    """
     # Initialize the serial connection for PSURP
     ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
     ser.flush()
     ser.write("X".encode())  # Initialize PSURP
     ser.write("RUNE\n".encode())  # Enter streaming mode
-    
+    """
     
     # Trail settings
     trail_positions = []  # Stores Dino's previous positions
@@ -1114,7 +1120,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     floor1_vertices = calculate_rect_vertices(floor1_L1)
     
     # floor2_L1 properties - Place it further into the map
-    floor2_x_static = 17.5  # Fixed X position where floor2_L1 appears 17.5
+    floor2_x_static = 1  # Fixed X position where floor2_L1 appears 17.5
     floor2_height = 0.3
     floor2_width = 0.5
     
@@ -4832,6 +4838,16 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L6',    name='fail_sound_L6'
     )
     fail_sound_L6.setVolume(0.6)
+    
+    # --- Initialize components for Routine "Break" ---
+    break_text = visual.TextStim(win=win, name='break_text',
+        text='Take a short break. Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    break_key = keyboard.Keyboard(deviceName='break_key')
     
     # --- Initialize components for Routine "Level_7" ---
     dino_image_L7 = visual.ImageStim(
@@ -10912,10 +10928,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     resetPSURP.tStopRefresh = tThisFlipGlobal
     thisExp.addData('resetPSURP.stopped', resetPSURP.tStop)
     # Run 'End Routine' code from code_2
-    
+    """
     ser.flush()
     ser.write("X".encode())
-    
+    """
     # clear out the data from the IO buffers (Fresh commands)
     # the "X" command puts tje PSURP into command mode
     
@@ -11039,7 +11055,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     TARE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('TARE.stopped', TARE.tStop)
     # Run 'End Routine' code from tare_code
-    
+    """
     ser.write("TAR0\n".encode())
     time.sleep(1)
     ser.write("TAR1\n".encode())
@@ -11050,7 +11066,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     time.sleep(1)
     ser.write("TAR4\n".encode())
     time.sleep(1)
-    
+    """
     
     # the tar command zeros out all of the force messurements
     # halt for one second to make sure command was processed 
@@ -11173,9 +11189,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     RUNE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('RUNE.stopped', RUNE.tStop)
     # Run 'End Routine' code from Code_RUNE
-    
+    """
     ser.write("RUNE\n".encode())
-    
+    """
     # the rune command sets the PSURP to streaming mode. (for getting vals)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if RUNE.maxDurationReached:
@@ -17770,6 +17786,149 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_6_Loop'
         
+        
+        # --- Prepare to start Routine "Break" ---
+        # create an object to store info about Routine Break
+        Break = data.Routine(
+            name='Break',
+            components=[break_text, break_key],
+        )
+        Break.status = NOT_STARTED
+        continueRoutine = True
+        # update component parameters for each repeat
+        # create starting attributes for break_key
+        break_key.keys = []
+        break_key.rt = []
+        _break_key_allKeys = []
+        # store start times for Break
+        Break.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+        Break.tStart = globalClock.getTime(format='float')
+        Break.status = STARTED
+        thisExp.addData('Break.started', Break.tStart)
+        Break.maxDuration = None
+        # keep track of which components have finished
+        BreakComponents = Break.components
+        for thisComponent in Break.components:
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        # reset timers
+        t = 0
+        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+        frameN = -1
+        
+        # --- Run Routine "Break" ---
+        # if trial has changed, end Routine now
+        if isinstance(GameLoop, data.TrialHandler2) and thisGameLoop.thisN != GameLoop.thisTrial.thisN:
+            continueRoutine = False
+        Break.forceEnded = routineForceEnded = not continueRoutine
+        while continueRoutine:
+            # get current time
+            t = routineTimer.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            
+            # *break_text* updates
+            
+            # if break_text is starting this frame...
+            if break_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                break_text.frameNStart = frameN  # exact frame index
+                break_text.tStart = t  # local t and not account for scr refresh
+                break_text.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(break_text, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'break_text.started')
+                # update status
+                break_text.status = STARTED
+                break_text.setAutoDraw(True)
+            
+            # if break_text is active this frame...
+            if break_text.status == STARTED:
+                # update params
+                pass
+            
+            # *break_key* updates
+            waitOnFlip = False
+            
+            # if break_key is starting this frame...
+            if break_key.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                break_key.frameNStart = frameN  # exact frame index
+                break_key.tStart = t  # local t and not account for scr refresh
+                break_key.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(break_key, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'break_key.started')
+                # update status
+                break_key.status = STARTED
+                # keyboard checking is just starting
+                waitOnFlip = True
+                win.callOnFlip(break_key.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(break_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
+            if break_key.status == STARTED and not waitOnFlip:
+                theseKeys = break_key.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                _break_key_allKeys.extend(theseKeys)
+                if len(_break_key_allKeys):
+                    break_key.keys = _break_key_allKeys[-1].name  # just the last key pressed
+                    break_key.rt = _break_key_allKeys[-1].rt
+                    break_key.duration = _break_key_allKeys[-1].duration
+                    # a response ends the routine
+                    continueRoutine = False
+            
+            # check for quit (typically the Esc key)
+            if defaultKeyboard.getKeys(keyList=["escape"]):
+                thisExp.status = FINISHED
+            if thisExp.status == FINISHED or endExpNow:
+                endExperiment(thisExp, win=win)
+                return
+            # pause experiment here if requested
+            if thisExp.status == PAUSED:
+                pauseExperiment(
+                    thisExp=thisExp, 
+                    win=win, 
+                    timers=[routineTimer], 
+                    playbackComponents=[]
+                )
+                # skip the frame we paused on
+                continue
+            
+            # check if all components have finished
+            if not continueRoutine:  # a component has requested a forced-end of Routine
+                Break.forceEnded = routineForceEnded = True
+                break
+            continueRoutine = False  # will revert to True if at least one component still running
+            for thisComponent in Break.components:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # --- Ending Routine "Break" ---
+        for thisComponent in Break.components:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        # store stop times for Break
+        Break.tStop = globalClock.getTime(format='float')
+        Break.tStopRefresh = tThisFlipGlobal
+        thisExp.addData('Break.stopped', Break.tStop)
+        # check responses
+        if break_key.keys in ['', [], None]:  # No response was made
+            break_key.keys = None
+        GameLoop.addData('break_key.keys',break_key.keys)
+        if break_key.keys != None:  # we had a response
+            GameLoop.addData('break_key.rt', break_key.rt)
+            GameLoop.addData('break_key.duration', break_key.duration)
+        # the Routine "Break" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
         
         # set up handler to look after randomisation of conditions etc
         Level_7_Loop = data.TrialHandler2(
@@ -28380,11 +28539,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         stimOut=params,
         dataOut=['n','all_mean','all_std', 'all_raw'])
     # Run 'End Experiment' code from DinoMovement_L1
-    
+    """
     ser.flush()
     ser.write("X".encode())  # Exit command mode
     ser.close()
-    
+    """
     # Run 'End Experiment' code from DinoMovement_L2
     """
     ser.flush()
