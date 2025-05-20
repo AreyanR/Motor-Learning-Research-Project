@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on May 19, 2025, at 14:54
+    on May 20, 2025, at 15:26
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -92,8 +92,8 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 # work out from system args whether we are running in pilot mode
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
-_fullScr = True
-_winSize = [1920, 1080]
+_fullScr = False
+_winSize = [1000, 800]
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -208,9 +208,6 @@ def setupWindow(expInfo=None, win=None):
     psychopy.visual.Window
         Window in which to run this experiment.
     """
-    if PILOTING:
-        logging.debug('Fullscreen settings ignored as running in pilot mode.')
-    
     if win is None:
         # if not given a window to setup, make one
         win = visual.Window(
@@ -232,7 +229,7 @@ def setupWindow(expInfo=None, win=None):
     if expInfo is not None:
         # get/measure frame rate if not already in expInfo
         if win._monitorFrameRate is None:
-            win._monitorFrameRate = win.getActualFrameRate(infoMsg='Attempting to measure frame rate of screen, please wait...')
+            win._monitorFrameRate = win.getActualFrameRate(infoMsg='Loading Game')
         expInfo['frameRate'] = win._monitorFrameRate
     win.hideMessage()
     # show a visual indicator if we're in piloting mode
@@ -305,6 +302,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L1') is None:
+        # initialise break_key_L1
+        break_key_L1 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L1',
+        )
     # create speaker 'lose_sound_L2'
     deviceManager.addDevice(
         deviceName='lose_sound_L2',
@@ -329,6 +332,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L2') is None:
+        # initialise break_key_L2
+        break_key_L2 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L2',
+        )
     # create speaker 'lose_sound_L3'
     deviceManager.addDevice(
         deviceName='lose_sound_L3',
@@ -353,6 +362,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L3') is None:
+        # initialise break_key_L3
+        break_key_L3 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L3',
+        )
     # create speaker 'lose_sound_L4'
     deviceManager.addDevice(
         deviceName='lose_sound_L4',
@@ -377,6 +392,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L4') is None:
+        # initialise break_key_L4
+        break_key_L4 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L4',
+        )
     # create speaker 'lose_sound_L5'
     deviceManager.addDevice(
         deviceName='lose_sound_L5',
@@ -401,6 +422,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L5') is None:
+        # initialise break_key_L5
+        break_key_L5 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L5',
+        )
     # create speaker 'lose_sound_L6'
     deviceManager.addDevice(
         deviceName='lose_sound_L6',
@@ -425,11 +452,11 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
-    if deviceManager.getDevice('break_key') is None:
-        # initialise break_key
-        break_key = deviceManager.addDevice(
+    if deviceManager.getDevice('break_key_L6') is None:
+        # initialise break_key_L6
+        break_key_L6 = deviceManager.addDevice(
             deviceClass='keyboard',
-            deviceName='break_key',
+            deviceName='break_key_L6',
         )
     # create speaker 'lose_sound_L7'
     deviceManager.addDevice(
@@ -455,6 +482,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L7') is None:
+        # initialise break_key_L7
+        break_key_L7 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L7',
+        )
     # create speaker 'lose_sound_L8'
     deviceManager.addDevice(
         deviceName='lose_sound_L8',
@@ -479,6 +512,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L8') is None:
+        # initialise break_key_L8
+        break_key_L8 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L8',
+        )
     # create speaker 'lose_sound_L9'
     deviceManager.addDevice(
         deviceName='lose_sound_L9',
@@ -503,6 +542,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L9') is None:
+        # initialise break_key_L9
+        break_key_L9 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L9',
+        )
     # create speaker 'lose_sound_L10'
     deviceManager.addDevice(
         deviceName='lose_sound_L10',
@@ -527,6 +572,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L10') is None:
+        # initialise break_key_L10
+        break_key_L10 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L10',
+        )
     # create speaker 'lose_sound_L11'
     deviceManager.addDevice(
         deviceName='lose_sound_L11',
@@ -551,6 +602,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L11') is None:
+        # initialise break_key_L11
+        break_key_L11 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L11',
+        )
     # create speaker 'lose_sound_L12'
     deviceManager.addDevice(
         deviceName='lose_sound_L12',
@@ -575,6 +632,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L12') is None:
+        # initialise break_key_L12
+        break_key_L12 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L12',
+        )
     # create speaker 'lose_sound_L13'
     deviceManager.addDevice(
         deviceName='lose_sound_L13',
@@ -599,6 +662,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L13') is None:
+        # initialise break_key_L13
+        break_key_L13 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L13',
+        )
     # create speaker 'lose_sound_L14'
     deviceManager.addDevice(
         deviceName='lose_sound_L14',
@@ -623,6 +692,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L14') is None:
+        # initialise break_key_L14
+        break_key_L14 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L14',
+        )
     # create speaker 'lose_sound_L15'
     deviceManager.addDevice(
         deviceName='lose_sound_L15',
@@ -647,6 +722,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L15') is None:
+        # initialise break_key_L15
+        break_key_L15 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L15',
+        )
     # return True if completed successfully
     return True
 
@@ -752,7 +833,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     t_reset_PSURP = visual.TextStim(win=win, name='t_reset_PSURP',
         text='reseting PSURP',
         font='Open Sans',
-        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, 1), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
@@ -1558,6 +1639,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L1',    name='fail_sound_L1'
     )
     fail_sound_L1.setVolume(0.6)
+    break_key_L1 = keyboard.Keyboard(deviceName='break_key_L1')
+    break_text_L1 = visual.TextStim(win=win, name='break_text_L1',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_2" ---
     dino_image_L2 = visual.ImageStim(
@@ -2214,6 +2303,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L2',    name='fail_sound_L2'
     )
     fail_sound_L2.setVolume(0.6)
+    break_key_L2 = keyboard.Keyboard(deviceName='break_key_L2')
+    break_text_L2 = visual.TextStim(win=win, name='break_text_L2',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_3" ---
     dino_image_L3 = visual.ImageStim(
@@ -2870,6 +2967,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L3',    name='fail_sound_L3'
     )
     fail_sound_L3.setVolume(0.6)
+    break_key_L3 = keyboard.Keyboard(deviceName='break_key_L3')
+    break_text_L3 = visual.TextStim(win=win, name='break_text_L3',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_4" ---
     dino_image_L4 = visual.ImageStim(
@@ -3526,6 +3631,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L4',    name='fail_sound_L4'
     )
     fail_sound_L4.setVolume(0.6)
+    break_key_L4 = keyboard.Keyboard(deviceName='break_key_L4')
+    break_text_L4 = visual.TextStim(win=win, name='break_text_L4',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_5" ---
     dino_image_L5 = visual.ImageStim(
@@ -4182,6 +4295,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L5',    name='fail_sound_L5'
     )
     fail_sound_L5.setVolume(0.6)
+    break_key_L5 = keyboard.Keyboard(deviceName='break_key_L5')
+    break_text_L5 = visual.TextStim(win=win, name='break_text_L5',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_6" ---
     dino_image_L6 = visual.ImageStim(
@@ -4838,16 +4959,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L6',    name='fail_sound_L6'
     )
     fail_sound_L6.setVolume(0.6)
-    
-    # --- Initialize components for Routine "Break" ---
-    break_text = visual.TextStim(win=win, name='break_text',
-        text='Take a short break. Press Spacebar to continue.\n',
+    break_key_L6 = keyboard.Keyboard(deviceName='break_key_L6')
+    break_text_L6 = visual.TextStim(win=win, name='break_text_L6',
+        text='Press Spacebar to continue.\n',
         font='Arial',
-        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=0.0);
-    break_key = keyboard.Keyboard(deviceName='break_key')
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_7" ---
     dino_image_L7 = visual.ImageStim(
@@ -5504,6 +5623,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L7',    name='fail_sound_L7'
     )
     fail_sound_L7.setVolume(0.6)
+    break_key_L7 = keyboard.Keyboard(deviceName='break_key_L7')
+    break_text_L7 = visual.TextStim(win=win, name='break_text_L7',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_8" ---
     dino_image_L8 = visual.ImageStim(
@@ -6160,6 +6287,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L8',    name='fail_sound_L8'
     )
     fail_sound_L8.setVolume(0.6)
+    break_key_L8 = keyboard.Keyboard(deviceName='break_key_L8')
+    break_text_L8 = visual.TextStim(win=win, name='break_text_L8',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_9" ---
     dino_image_L9 = visual.ImageStim(
@@ -6816,6 +6951,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L9',    name='fail_sound_L9'
     )
     fail_sound_L9.setVolume(0.6)
+    break_key_L9 = keyboard.Keyboard(deviceName='break_key_L9')
+    break_text_L9 = visual.TextStim(win=win, name='break_text_L9',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_10" ---
     dino_image_L10 = visual.ImageStim(
@@ -7472,6 +7615,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L10',    name='fail_sound_L10'
     )
     fail_sound_L10.setVolume(0.6)
+    break_key_L10 = keyboard.Keyboard(deviceName='break_key_L10')
+    break_text_L10 = visual.TextStim(win=win, name='break_text_L10',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_11" ---
     dino_image_L11 = visual.ImageStim(
@@ -8128,6 +8279,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L11',    name='fail_sound_L11'
     )
     fail_sound_L11.setVolume(0.6)
+    break_key_L11 = keyboard.Keyboard(deviceName='break_key_L11')
+    break_text_L11 = visual.TextStim(win=win, name='break_text_L11',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_12" ---
     dino_image_L12 = visual.ImageStim(
@@ -8784,6 +8943,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L12',    name='fail_sound_L12'
     )
     fail_sound_L12.setVolume(0.6)
+    break_key_L12 = keyboard.Keyboard(deviceName='break_key_L12')
+    break_text_L12 = visual.TextStim(win=win, name='break_text_L12',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_13" ---
     dino_image_L13 = visual.ImageStim(
@@ -9450,6 +9617,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L13',    name='fail_sound_L13'
     )
     fail_sound_L13.setVolume(0.6)
+    break_key_L13 = keyboard.Keyboard(deviceName='break_key_L13')
+    break_text_L13 = visual.TextStim(win=win, name='break_text_L13',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_14" ---
     dino_image_L14 = visual.ImageStim(
@@ -10118,6 +10293,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L14',    name='fail_sound_L14'
     )
     fail_sound_L14.setVolume(0.6)
+    break_key_L14 = keyboard.Keyboard(deviceName='break_key_L14')
+    break_text_L14 = visual.TextStim(win=win, name='break_text_L14',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_15" ---
     dino_image_L15 = visual.ImageStim(
@@ -10790,6 +10973,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L15',    name='fail_sound_L15'
     )
     fail_sound_L15.setVolume(0.6)
+    break_key_L15 = keyboard.Keyboard(deviceName='break_key_L15')
+    break_text_L15 = visual.TextStim(win=win, name='break_text_L15',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # create some handy timers
     
@@ -12643,7 +12834,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_1_checker
             Level_1_checker = data.Routine(
                 name='Level_1_checker',
-                components=[end_score_text_L1, win_sound_L1, fail_sound_L1],
+                components=[end_score_text_L1, win_sound_L1, fail_sound_L1, break_key_L1, break_text_L1],
             )
             Level_1_checker.status = NOT_STARTED
             continueRoutine = True
@@ -12660,8 +12851,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Update the text for the end screen
             end_score_text_L1.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
+            
             
             
             win_sound_L1.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -12670,6 +12860,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L1.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L1.setVolume(0.6, log=False)
             fail_sound_L1.seek(0)
+            # create starting attributes for break_key_L1
+            break_key_L1.keys = []
+            break_key_L1.rt = []
+            _break_key_L1_allKeys = []
             # store start times for Level_1_checker
             Level_1_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_1_checker.tStart = globalClock.getTime(format='float')
@@ -12720,11 +12914,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L1.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L1
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L1* updates
                 
@@ -12751,6 +12940,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L1.status = FINISHED
                         fail_sound_L1.stop()
+                
+                # *break_key_L1* updates
+                waitOnFlip = False
+                
+                # if break_key_L1 is starting this frame...
+                if break_key_L1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L1.frameNStart = frameN  # exact frame index
+                    break_key_L1.tStart = t  # local t and not account for scr refresh
+                    break_key_L1.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L1, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L1.started')
+                    # update status
+                    break_key_L1.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L1.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L1.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L1.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L1.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L1_allKeys.extend(theseKeys)
+                    if len(_break_key_L1_allKeys):
+                        break_key_L1.keys = _break_key_L1_allKeys[-1].name  # just the last key pressed
+                        break_key_L1.rt = _break_key_L1_allKeys[-1].rt
+                        break_key_L1.duration = _break_key_L1_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L1* updates
+                
+                # if break_text_L1 is starting this frame...
+                if break_text_L1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L1.frameNStart = frameN  # exact frame index
+                    break_text_L1.tStart = t  # local t and not account for scr refresh
+                    break_text_L1.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L1, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L1.started')
+                    # update status
+                    break_text_L1.status = STARTED
+                    break_text_L1.setAutoDraw(True)
+                
+                # if break_text_L1 is active this frame...
+                if break_text_L1.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -12817,6 +13054,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L1 = 0
             total_possible_vertices_L1 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L1.keys in ['', [], None]:  # No response was made
+                break_key_L1.keys = None
+            Level_1_Loop.addData('break_key_L1.keys',break_key_L1.keys)
+            if break_key_L1.keys != None:  # we had a response
+                Level_1_Loop.addData('break_key_L1.rt', break_key_L1.rt)
+                Level_1_Loop.addData('break_key_L1.duration', break_key_L1.duration)
             # the Routine "Level_1_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_1_Loop'
@@ -13636,7 +13880,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_2_checker
             Level_2_checker = data.Routine(
                 name='Level_2_checker',
-                components=[end_score_text_L2, win_sound_L2, fail_sound_L2],
+                components=[end_score_text_L2, win_sound_L2, fail_sound_L2, break_key_L2, break_text_L2],
             )
             Level_2_checker.status = NOT_STARTED
             continueRoutine = True
@@ -13653,8 +13897,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Update the text for the end screen
             end_score_text_L2.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
+            
             
             
             win_sound_L2.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -13663,6 +13906,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L2.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L2.setVolume(0.6, log=False)
             fail_sound_L2.seek(0)
+            # create starting attributes for break_key_L2
+            break_key_L2.keys = []
+            break_key_L2.rt = []
+            _break_key_L2_allKeys = []
             # store start times for Level_2_checker
             Level_2_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_2_checker.tStart = globalClock.getTime(format='float')
@@ -13713,11 +13960,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L2.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L2
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L2* updates
                 
@@ -13744,6 +13986,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L2.status = FINISHED
                         fail_sound_L2.stop()
+                
+                # *break_key_L2* updates
+                waitOnFlip = False
+                
+                # if break_key_L2 is starting this frame...
+                if break_key_L2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L2.frameNStart = frameN  # exact frame index
+                    break_key_L2.tStart = t  # local t and not account for scr refresh
+                    break_key_L2.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L2, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L2.started')
+                    # update status
+                    break_key_L2.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L2.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L2.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L2.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L2.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L2_allKeys.extend(theseKeys)
+                    if len(_break_key_L2_allKeys):
+                        break_key_L2.keys = _break_key_L2_allKeys[-1].name  # just the last key pressed
+                        break_key_L2.rt = _break_key_L2_allKeys[-1].rt
+                        break_key_L2.duration = _break_key_L2_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L2* updates
+                
+                # if break_text_L2 is starting this frame...
+                if break_text_L2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L2.frameNStart = frameN  # exact frame index
+                    break_text_L2.tStart = t  # local t and not account for scr refresh
+                    break_text_L2.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L2, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L2.started')
+                    # update status
+                    break_text_L2.status = STARTED
+                    break_text_L2.setAutoDraw(True)
+                
+                # if break_text_L2 is active this frame...
+                if break_text_L2.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -13810,6 +14100,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L2 = 0
             total_possible_vertices_L2 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L2.keys in ['', [], None]:  # No response was made
+                break_key_L2.keys = None
+            Level_2_Loop.addData('break_key_L2.keys',break_key_L2.keys)
+            if break_key_L2.keys != None:  # we had a response
+                Level_2_Loop.addData('break_key_L2.rt', break_key_L2.rt)
+                Level_2_Loop.addData('break_key_L2.duration', break_key_L2.duration)
             # the Routine "Level_2_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_2_Loop'
@@ -14629,7 +14926,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_3_checker
             Level_3_checker = data.Routine(
                 name='Level_3_checker',
-                components=[end_score_text_L3, win_sound_L3, fail_sound_L3],
+                components=[end_score_text_L3, win_sound_L3, fail_sound_L3, break_key_L3, break_text_L3],
             )
             Level_3_checker.status = NOT_STARTED
             continueRoutine = True
@@ -14646,8 +14943,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Update the text for the end screen
             end_score_text_L3.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
+            
             
             
             win_sound_L3.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -14656,6 +14952,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L3.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L3.setVolume(0.6, log=False)
             fail_sound_L3.seek(0)
+            # create starting attributes for break_key_L3
+            break_key_L3.keys = []
+            break_key_L3.rt = []
+            _break_key_L3_allKeys = []
             # store start times for Level_3_checker
             Level_3_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_3_checker.tStart = globalClock.getTime(format='float')
@@ -14706,11 +15006,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L3.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L3
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L3* updates
                 
@@ -14737,6 +15032,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L3.status = FINISHED
                         fail_sound_L3.stop()
+                
+                # *break_key_L3* updates
+                waitOnFlip = False
+                
+                # if break_key_L3 is starting this frame...
+                if break_key_L3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L3.frameNStart = frameN  # exact frame index
+                    break_key_L3.tStart = t  # local t and not account for scr refresh
+                    break_key_L3.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L3, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L3.started')
+                    # update status
+                    break_key_L3.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L3.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L3.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L3.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L3.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L3_allKeys.extend(theseKeys)
+                    if len(_break_key_L3_allKeys):
+                        break_key_L3.keys = _break_key_L3_allKeys[-1].name  # just the last key pressed
+                        break_key_L3.rt = _break_key_L3_allKeys[-1].rt
+                        break_key_L3.duration = _break_key_L3_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L3* updates
+                
+                # if break_text_L3 is starting this frame...
+                if break_text_L3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L3.frameNStart = frameN  # exact frame index
+                    break_text_L3.tStart = t  # local t and not account for scr refresh
+                    break_text_L3.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L3, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L3.started')
+                    # update status
+                    break_text_L3.status = STARTED
+                    break_text_L3.setAutoDraw(True)
+                
+                # if break_text_L3 is active this frame...
+                if break_text_L3.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -14803,6 +15146,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L3 = 0
             total_possible_vertices_L3 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L3.keys in ['', [], None]:  # No response was made
+                break_key_L3.keys = None
+            Level_3_Loop.addData('break_key_L3.keys',break_key_L3.keys)
+            if break_key_L3.keys != None:  # we had a response
+                Level_3_Loop.addData('break_key_L3.rt', break_key_L3.rt)
+                Level_3_Loop.addData('break_key_L3.duration', break_key_L3.duration)
             # the Routine "Level_3_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_3_Loop'
@@ -15622,7 +15972,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_4_checker
             Level_4_checker = data.Routine(
                 name='Level_4_checker',
-                components=[end_score_text_L4, win_sound_L4, fail_sound_L4],
+                components=[end_score_text_L4, win_sound_L4, fail_sound_L4, break_key_L4, break_text_L4],
             )
             Level_4_checker.status = NOT_STARTED
             continueRoutine = True
@@ -15639,9 +15989,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Update the text for the end screen
             end_score_text_L4.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
-            
             
             win_sound_L4.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L4.setVolume(1.0, log=False)
@@ -15649,6 +15996,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L4.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L4.setVolume(0.6, log=False)
             fail_sound_L4.seek(0)
+            # create starting attributes for break_key_L4
+            break_key_L4.keys = []
+            break_key_L4.rt = []
+            _break_key_L4_allKeys = []
             # store start times for Level_4_checker
             Level_4_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_4_checker.tStart = globalClock.getTime(format='float')
@@ -15699,11 +16050,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L4.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L4
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L4* updates
                 
@@ -15730,6 +16076,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L4.status = FINISHED
                         fail_sound_L4.stop()
+                
+                # *break_key_L4* updates
+                waitOnFlip = False
+                
+                # if break_key_L4 is starting this frame...
+                if break_key_L4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L4.frameNStart = frameN  # exact frame index
+                    break_key_L4.tStart = t  # local t and not account for scr refresh
+                    break_key_L4.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L4, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L4.started')
+                    # update status
+                    break_key_L4.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L4.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L4.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L4.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L4.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L4_allKeys.extend(theseKeys)
+                    if len(_break_key_L4_allKeys):
+                        break_key_L4.keys = _break_key_L4_allKeys[-1].name  # just the last key pressed
+                        break_key_L4.rt = _break_key_L4_allKeys[-1].rt
+                        break_key_L4.duration = _break_key_L4_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L4* updates
+                
+                # if break_text_L4 is starting this frame...
+                if break_text_L4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L4.frameNStart = frameN  # exact frame index
+                    break_text_L4.tStart = t  # local t and not account for scr refresh
+                    break_text_L4.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L4, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L4.started')
+                    # update status
+                    break_text_L4.status = STARTED
+                    break_text_L4.setAutoDraw(True)
+                
+                # if break_text_L4 is active this frame...
+                if break_text_L4.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -15796,6 +16190,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L4 = 0
             total_possible_vertices_L4 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L4.keys in ['', [], None]:  # No response was made
+                break_key_L4.keys = None
+            Level_4_Loop.addData('break_key_L4.keys',break_key_L4.keys)
+            if break_key_L4.keys != None:  # we had a response
+                Level_4_Loop.addData('break_key_L4.rt', break_key_L4.rt)
+                Level_4_Loop.addData('break_key_L4.duration', break_key_L4.duration)
             # the Routine "Level_4_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_4_Loop'
@@ -16615,7 +17016,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_5_checker
             Level_5_checker = data.Routine(
                 name='Level_5_checker',
-                components=[end_score_text_L5, win_sound_L5, fail_sound_L5],
+                components=[end_score_text_L5, win_sound_L5, fail_sound_L5, break_key_L5, break_text_L5],
             )
             Level_5_checker.status = NOT_STARTED
             continueRoutine = True
@@ -16632,9 +17033,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Update the text for the end screen
             end_score_text_L5.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
-            
             
             win_sound_L5.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L5.setVolume(1.0, log=False)
@@ -16642,6 +17040,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L5.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L5.setVolume(0.6, log=False)
             fail_sound_L5.seek(0)
+            # create starting attributes for break_key_L5
+            break_key_L5.keys = []
+            break_key_L5.rt = []
+            _break_key_L5_allKeys = []
             # store start times for Level_5_checker
             Level_5_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_5_checker.tStart = globalClock.getTime(format='float')
@@ -16692,11 +17094,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L5.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L5
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L5* updates
                 
@@ -16723,6 +17120,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L5.status = FINISHED
                         fail_sound_L5.stop()
+                
+                # *break_key_L5* updates
+                waitOnFlip = False
+                
+                # if break_key_L5 is starting this frame...
+                if break_key_L5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L5.frameNStart = frameN  # exact frame index
+                    break_key_L5.tStart = t  # local t and not account for scr refresh
+                    break_key_L5.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L5, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L5.started')
+                    # update status
+                    break_key_L5.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L5.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L5.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L5.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L5.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L5_allKeys.extend(theseKeys)
+                    if len(_break_key_L5_allKeys):
+                        break_key_L5.keys = _break_key_L5_allKeys[-1].name  # just the last key pressed
+                        break_key_L5.rt = _break_key_L5_allKeys[-1].rt
+                        break_key_L5.duration = _break_key_L5_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L5* updates
+                
+                # if break_text_L5 is starting this frame...
+                if break_text_L5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L5.frameNStart = frameN  # exact frame index
+                    break_text_L5.tStart = t  # local t and not account for scr refresh
+                    break_text_L5.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L5, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L5.started')
+                    # update status
+                    break_text_L5.status = STARTED
+                    break_text_L5.setAutoDraw(True)
+                
+                # if break_text_L5 is active this frame...
+                if break_text_L5.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -16789,6 +17234,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L5 = 0
             total_possible_vertices_L5 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L5.keys in ['', [], None]:  # No response was made
+                break_key_L5.keys = None
+            Level_5_Loop.addData('break_key_L5.keys',break_key_L5.keys)
+            if break_key_L5.keys != None:  # we had a response
+                Level_5_Loop.addData('break_key_L5.rt', break_key_L5.rt)
+                Level_5_Loop.addData('break_key_L5.duration', break_key_L5.duration)
             # the Routine "Level_5_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_5_Loop'
@@ -17608,7 +18060,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_6_checker
             Level_6_checker = data.Routine(
                 name='Level_6_checker',
-                components=[end_score_text_L6, win_sound_L6, fail_sound_L6],
+                components=[end_score_text_L6, win_sound_L6, fail_sound_L6, break_key_L6, break_text_L6],
             )
             Level_6_checker.status = NOT_STARTED
             continueRoutine = True
@@ -17625,8 +18077,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Update the text for the end screen
             end_score_text_L6.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
             
             
             win_sound_L6.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -17635,6 +18085,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L6.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L6.setVolume(0.6, log=False)
             fail_sound_L6.seek(0)
+            # create starting attributes for break_key_L6
+            break_key_L6.keys = []
+            break_key_L6.rt = []
+            _break_key_L6_allKeys = []
             # store start times for Level_6_checker
             Level_6_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_6_checker.tStart = globalClock.getTime(format='float')
@@ -17685,11 +18139,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L6.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L6
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L6* updates
                 
@@ -17716,6 +18165,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L6.status = FINISHED
                         fail_sound_L6.stop()
+                
+                # *break_key_L6* updates
+                waitOnFlip = False
+                
+                # if break_key_L6 is starting this frame...
+                if break_key_L6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L6.frameNStart = frameN  # exact frame index
+                    break_key_L6.tStart = t  # local t and not account for scr refresh
+                    break_key_L6.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L6, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L6.started')
+                    # update status
+                    break_key_L6.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L6.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L6.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L6.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L6.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L6_allKeys.extend(theseKeys)
+                    if len(_break_key_L6_allKeys):
+                        break_key_L6.keys = _break_key_L6_allKeys[-1].name  # just the last key pressed
+                        break_key_L6.rt = _break_key_L6_allKeys[-1].rt
+                        break_key_L6.duration = _break_key_L6_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L6* updates
+                
+                # if break_text_L6 is starting this frame...
+                if break_text_L6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L6.frameNStart = frameN  # exact frame index
+                    break_text_L6.tStart = t  # local t and not account for scr refresh
+                    break_text_L6.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L6, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L6.started')
+                    # update status
+                    break_text_L6.status = STARTED
+                    break_text_L6.setAutoDraw(True)
+                
+                # if break_text_L6 is active this frame...
+                if break_text_L6.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -17782,153 +18279,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L6 = 0
             total_possible_vertices_L6 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L6.keys in ['', [], None]:  # No response was made
+                break_key_L6.keys = None
+            Level_6_Loop.addData('break_key_L6.keys',break_key_L6.keys)
+            if break_key_L6.keys != None:  # we had a response
+                Level_6_Loop.addData('break_key_L6.rt', break_key_L6.rt)
+                Level_6_Loop.addData('break_key_L6.duration', break_key_L6.duration)
             # the Routine "Level_6_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_6_Loop'
         
-        
-        # --- Prepare to start Routine "Break" ---
-        # create an object to store info about Routine Break
-        Break = data.Routine(
-            name='Break',
-            components=[break_text, break_key],
-        )
-        Break.status = NOT_STARTED
-        continueRoutine = True
-        # update component parameters for each repeat
-        # create starting attributes for break_key
-        break_key.keys = []
-        break_key.rt = []
-        _break_key_allKeys = []
-        # store start times for Break
-        Break.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
-        Break.tStart = globalClock.getTime(format='float')
-        Break.status = STARTED
-        thisExp.addData('Break.started', Break.tStart)
-        Break.maxDuration = None
-        # keep track of which components have finished
-        BreakComponents = Break.components
-        for thisComponent in Break.components:
-            thisComponent.tStart = None
-            thisComponent.tStop = None
-            thisComponent.tStartRefresh = None
-            thisComponent.tStopRefresh = None
-            if hasattr(thisComponent, 'status'):
-                thisComponent.status = NOT_STARTED
-        # reset timers
-        t = 0
-        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-        frameN = -1
-        
-        # --- Run Routine "Break" ---
-        # if trial has changed, end Routine now
-        if isinstance(GameLoop, data.TrialHandler2) and thisGameLoop.thisN != GameLoop.thisTrial.thisN:
-            continueRoutine = False
-        Break.forceEnded = routineForceEnded = not continueRoutine
-        while continueRoutine:
-            # get current time
-            t = routineTimer.getTime()
-            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-            # update/draw components on each frame
-            
-            # *break_text* updates
-            
-            # if break_text is starting this frame...
-            if break_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                break_text.frameNStart = frameN  # exact frame index
-                break_text.tStart = t  # local t and not account for scr refresh
-                break_text.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(break_text, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'break_text.started')
-                # update status
-                break_text.status = STARTED
-                break_text.setAutoDraw(True)
-            
-            # if break_text is active this frame...
-            if break_text.status == STARTED:
-                # update params
-                pass
-            
-            # *break_key* updates
-            waitOnFlip = False
-            
-            # if break_key is starting this frame...
-            if break_key.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                break_key.frameNStart = frameN  # exact frame index
-                break_key.tStart = t  # local t and not account for scr refresh
-                break_key.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(break_key, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'break_key.started')
-                # update status
-                break_key.status = STARTED
-                # keyboard checking is just starting
-                waitOnFlip = True
-                win.callOnFlip(break_key.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(break_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
-            if break_key.status == STARTED and not waitOnFlip:
-                theseKeys = break_key.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-                _break_key_allKeys.extend(theseKeys)
-                if len(_break_key_allKeys):
-                    break_key.keys = _break_key_allKeys[-1].name  # just the last key pressed
-                    break_key.rt = _break_key_allKeys[-1].rt
-                    break_key.duration = _break_key_allKeys[-1].duration
-                    # a response ends the routine
-                    continueRoutine = False
-            
-            # check for quit (typically the Esc key)
-            if defaultKeyboard.getKeys(keyList=["escape"]):
-                thisExp.status = FINISHED
-            if thisExp.status == FINISHED or endExpNow:
-                endExperiment(thisExp, win=win)
-                return
-            # pause experiment here if requested
-            if thisExp.status == PAUSED:
-                pauseExperiment(
-                    thisExp=thisExp, 
-                    win=win, 
-                    timers=[routineTimer], 
-                    playbackComponents=[]
-                )
-                # skip the frame we paused on
-                continue
-            
-            # check if all components have finished
-            if not continueRoutine:  # a component has requested a forced-end of Routine
-                Break.forceEnded = routineForceEnded = True
-                break
-            continueRoutine = False  # will revert to True if at least one component still running
-            for thisComponent in Break.components:
-                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                    continueRoutine = True
-                    break  # at least one component has not yet finished
-            
-            # refresh the screen
-            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-                win.flip()
-        
-        # --- Ending Routine "Break" ---
-        for thisComponent in Break.components:
-            if hasattr(thisComponent, "setAutoDraw"):
-                thisComponent.setAutoDraw(False)
-        # store stop times for Break
-        Break.tStop = globalClock.getTime(format='float')
-        Break.tStopRefresh = tThisFlipGlobal
-        thisExp.addData('Break.stopped', Break.tStop)
-        # check responses
-        if break_key.keys in ['', [], None]:  # No response was made
-            break_key.keys = None
-        GameLoop.addData('break_key.keys',break_key.keys)
-        if break_key.keys != None:  # we had a response
-            GameLoop.addData('break_key.rt', break_key.rt)
-            GameLoop.addData('break_key.duration', break_key.duration)
-        # the Routine "Break" was not non-slip safe, so reset the non-slip timer
-        routineTimer.reset()
         
         # set up handler to look after randomisation of conditions etc
         Level_7_Loop = data.TrialHandler2(
@@ -18744,7 +19105,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_7_checker
             Level_7_checker = data.Routine(
                 name='Level_7_checker',
-                components=[end_score_text_L7, win_sound_L7, fail_sound_L7],
+                components=[end_score_text_L7, win_sound_L7, fail_sound_L7, break_key_L7, break_text_L7],
             )
             Level_7_checker.status = NOT_STARTED
             continueRoutine = True
@@ -18761,16 +19122,16 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Update the text for the end screen
             end_score_text_L7.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
-            
-            
             win_sound_L7.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L7.setVolume(1.0, log=False)
             win_sound_L7.seek(0)
             fail_sound_L7.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L7.setVolume(0.6, log=False)
             fail_sound_L7.seek(0)
+            # create starting attributes for break_key_L7
+            break_key_L7.keys = []
+            break_key_L7.rt = []
+            _break_key_L7_allKeys = []
             # store start times for Level_7_checker
             Level_7_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_7_checker.tStart = globalClock.getTime(format='float')
@@ -18821,11 +19182,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L7.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L7
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L7* updates
                 
@@ -18852,6 +19208,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L7.status = FINISHED
                         fail_sound_L7.stop()
+                
+                # *break_key_L7* updates
+                waitOnFlip = False
+                
+                # if break_key_L7 is starting this frame...
+                if break_key_L7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L7.frameNStart = frameN  # exact frame index
+                    break_key_L7.tStart = t  # local t and not account for scr refresh
+                    break_key_L7.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L7, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L7.started')
+                    # update status
+                    break_key_L7.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L7.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L7.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L7.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L7.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L7_allKeys.extend(theseKeys)
+                    if len(_break_key_L7_allKeys):
+                        break_key_L7.keys = _break_key_L7_allKeys[-1].name  # just the last key pressed
+                        break_key_L7.rt = _break_key_L7_allKeys[-1].rt
+                        break_key_L7.duration = _break_key_L7_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L7* updates
+                
+                # if break_text_L7 is starting this frame...
+                if break_text_L7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L7.frameNStart = frameN  # exact frame index
+                    break_text_L7.tStart = t  # local t and not account for scr refresh
+                    break_text_L7.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L7, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L7.started')
+                    # update status
+                    break_text_L7.status = STARTED
+                    break_text_L7.setAutoDraw(True)
+                
+                # if break_text_L7 is active this frame...
+                if break_text_L7.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -18918,6 +19322,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L7 = 0
             total_possible_vertices_L7 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L7.keys in ['', [], None]:  # No response was made
+                break_key_L7.keys = None
+            Level_7_Loop.addData('break_key_L7.keys',break_key_L7.keys)
+            if break_key_L7.keys != None:  # we had a response
+                Level_7_Loop.addData('break_key_L7.rt', break_key_L7.rt)
+                Level_7_Loop.addData('break_key_L7.duration', break_key_L7.duration)
             # the Routine "Level_7_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_7_Loop'
@@ -19737,7 +20148,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_8_checker
             Level_8_checker = data.Routine(
                 name='Level_8_checker',
-                components=[end_score_text_L8, win_sound_L8, fail_sound_L8],
+                components=[end_score_text_L8, win_sound_L8, fail_sound_L8, break_key_L8, break_text_L8],
             )
             Level_8_checker.status = NOT_STARTED
             continueRoutine = True
@@ -19754,8 +20165,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Update the text for the end screen
             end_score_text_L8.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
             
             
             win_sound_L8.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -19764,6 +20173,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L8.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L8.setVolume(0.6, log=False)
             fail_sound_L8.seek(0)
+            # create starting attributes for break_key_L8
+            break_key_L8.keys = []
+            break_key_L8.rt = []
+            _break_key_L8_allKeys = []
             # store start times for Level_8_checker
             Level_8_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_8_checker.tStart = globalClock.getTime(format='float')
@@ -19814,11 +20227,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L8.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L8
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L8* updates
                 
@@ -19845,6 +20253,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L8.status = FINISHED
                         fail_sound_L8.stop()
+                
+                # *break_key_L8* updates
+                waitOnFlip = False
+                
+                # if break_key_L8 is starting this frame...
+                if break_key_L8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L8.frameNStart = frameN  # exact frame index
+                    break_key_L8.tStart = t  # local t and not account for scr refresh
+                    break_key_L8.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L8, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L8.started')
+                    # update status
+                    break_key_L8.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L8.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L8.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L8.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L8.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L8_allKeys.extend(theseKeys)
+                    if len(_break_key_L8_allKeys):
+                        break_key_L8.keys = _break_key_L8_allKeys[-1].name  # just the last key pressed
+                        break_key_L8.rt = _break_key_L8_allKeys[-1].rt
+                        break_key_L8.duration = _break_key_L8_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L8* updates
+                
+                # if break_text_L8 is starting this frame...
+                if break_text_L8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L8.frameNStart = frameN  # exact frame index
+                    break_text_L8.tStart = t  # local t and not account for scr refresh
+                    break_text_L8.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L8, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L8.started')
+                    # update status
+                    break_text_L8.status = STARTED
+                    break_text_L8.setAutoDraw(True)
+                
+                # if break_text_L8 is active this frame...
+                if break_text_L8.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -19911,6 +20367,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L8 = 0
             total_possible_vertices_L8 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L8.keys in ['', [], None]:  # No response was made
+                break_key_L8.keys = None
+            Level_8_Loop.addData('break_key_L8.keys',break_key_L8.keys)
+            if break_key_L8.keys != None:  # we had a response
+                Level_8_Loop.addData('break_key_L8.rt', break_key_L8.rt)
+                Level_8_Loop.addData('break_key_L8.duration', break_key_L8.duration)
             # the Routine "Level_8_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_8_Loop'
@@ -20730,7 +21193,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_9_checker
             Level_9_checker = data.Routine(
                 name='Level_9_checker',
-                components=[end_score_text_L9, win_sound_L9, fail_sound_L9],
+                components=[end_score_text_L9, win_sound_L9, fail_sound_L9, break_key_L9, break_text_L9],
             )
             Level_9_checker.status = NOT_STARTED
             continueRoutine = True
@@ -20747,8 +21210,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Update the text for the end screen
             end_score_text_L9.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
             
             
             win_sound_L9.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -20757,6 +21218,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L9.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L9.setVolume(0.6, log=False)
             fail_sound_L9.seek(0)
+            # create starting attributes for break_key_L9
+            break_key_L9.keys = []
+            break_key_L9.rt = []
+            _break_key_L9_allKeys = []
             # store start times for Level_9_checker
             Level_9_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_9_checker.tStart = globalClock.getTime(format='float')
@@ -20807,11 +21272,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L9.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L9
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L9* updates
                 
@@ -20838,6 +21298,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L9.status = FINISHED
                         fail_sound_L9.stop()
+                
+                # *break_key_L9* updates
+                waitOnFlip = False
+                
+                # if break_key_L9 is starting this frame...
+                if break_key_L9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L9.frameNStart = frameN  # exact frame index
+                    break_key_L9.tStart = t  # local t and not account for scr refresh
+                    break_key_L9.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L9, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L9.started')
+                    # update status
+                    break_key_L9.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L9.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L9.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L9.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L9.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L9_allKeys.extend(theseKeys)
+                    if len(_break_key_L9_allKeys):
+                        break_key_L9.keys = _break_key_L9_allKeys[-1].name  # just the last key pressed
+                        break_key_L9.rt = _break_key_L9_allKeys[-1].rt
+                        break_key_L9.duration = _break_key_L9_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L9* updates
+                
+                # if break_text_L9 is starting this frame...
+                if break_text_L9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L9.frameNStart = frameN  # exact frame index
+                    break_text_L9.tStart = t  # local t and not account for scr refresh
+                    break_text_L9.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L9, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L9.started')
+                    # update status
+                    break_text_L9.status = STARTED
+                    break_text_L9.setAutoDraw(True)
+                
+                # if break_text_L9 is active this frame...
+                if break_text_L9.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -20904,6 +21412,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L9 = 0
             total_possible_vertices_L9 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L9.keys in ['', [], None]:  # No response was made
+                break_key_L9.keys = None
+            Level_9_Loop.addData('break_key_L9.keys',break_key_L9.keys)
+            if break_key_L9.keys != None:  # we had a response
+                Level_9_Loop.addData('break_key_L9.rt', break_key_L9.rt)
+                Level_9_Loop.addData('break_key_L9.duration', break_key_L9.duration)
             # the Routine "Level_9_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_9_Loop'
@@ -21999,7 +22514,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_10_checker
             Level_10_checker = data.Routine(
                 name='Level_10_checker',
-                components=[end_score_text_L10, win_sound_L10, fail_sound_L10],
+                components=[end_score_text_L10, win_sound_L10, fail_sound_L10, break_key_L10, break_text_L10],
             )
             Level_10_checker.status = NOT_STARTED
             continueRoutine = True
@@ -22016,9 +22531,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Update the text for the end screen
             end_score_text_L10.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
-            
             
             win_sound_L10.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L10.setVolume(1.0, log=False)
@@ -22026,6 +22538,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L10.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L10.setVolume(0.6, log=False)
             fail_sound_L10.seek(0)
+            # create starting attributes for break_key_L10
+            break_key_L10.keys = []
+            break_key_L10.rt = []
+            _break_key_L10_allKeys = []
             # store start times for Level_10_checker
             Level_10_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_10_checker.tStart = globalClock.getTime(format='float')
@@ -22076,11 +22592,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L10.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L10
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L10* updates
                 
@@ -22107,6 +22618,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L10.status = FINISHED
                         fail_sound_L10.stop()
+                
+                # *break_key_L10* updates
+                waitOnFlip = False
+                
+                # if break_key_L10 is starting this frame...
+                if break_key_L10.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L10.frameNStart = frameN  # exact frame index
+                    break_key_L10.tStart = t  # local t and not account for scr refresh
+                    break_key_L10.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L10, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L10.started')
+                    # update status
+                    break_key_L10.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L10.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L10.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L10.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L10.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L10_allKeys.extend(theseKeys)
+                    if len(_break_key_L10_allKeys):
+                        break_key_L10.keys = _break_key_L10_allKeys[-1].name  # just the last key pressed
+                        break_key_L10.rt = _break_key_L10_allKeys[-1].rt
+                        break_key_L10.duration = _break_key_L10_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L10* updates
+                
+                # if break_text_L10 is starting this frame...
+                if break_text_L10.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L10.frameNStart = frameN  # exact frame index
+                    break_text_L10.tStart = t  # local t and not account for scr refresh
+                    break_text_L10.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L10, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L10.started')
+                    # update status
+                    break_text_L10.status = STARTED
+                    break_text_L10.setAutoDraw(True)
+                
+                # if break_text_L10 is active this frame...
+                if break_text_L10.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -22173,6 +22732,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L10 = 0
             total_possible_vertices_L10 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L10.keys in ['', [], None]:  # No response was made
+                break_key_L10.keys = None
+            Level_10_Loop.addData('break_key_L10.keys',break_key_L10.keys)
+            if break_key_L10.keys != None:  # we had a response
+                Level_10_Loop.addData('break_key_L10.rt', break_key_L10.rt)
+                Level_10_Loop.addData('break_key_L10.duration', break_key_L10.duration)
             # the Routine "Level_10_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_10_Loop'
@@ -23268,7 +23834,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_11_checker
             Level_11_checker = data.Routine(
                 name='Level_11_checker',
-                components=[end_score_text_L11, win_sound_L11, fail_sound_L11],
+                components=[end_score_text_L11, win_sound_L11, fail_sound_L11, break_key_L11, break_text_L11],
             )
             Level_11_checker.status = NOT_STARTED
             continueRoutine = True
@@ -23285,9 +23851,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Update the text for the end screen
             end_score_text_L11.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
-            
             
             win_sound_L11.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L11.setVolume(1.0, log=False)
@@ -23295,6 +23858,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L11.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L11.setVolume(0.6, log=False)
             fail_sound_L11.seek(0)
+            # create starting attributes for break_key_L11
+            break_key_L11.keys = []
+            break_key_L11.rt = []
+            _break_key_L11_allKeys = []
             # store start times for Level_11_checker
             Level_11_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_11_checker.tStart = globalClock.getTime(format='float')
@@ -23345,11 +23912,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L11.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L11
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L11* updates
                 
@@ -23376,6 +23938,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L11.status = FINISHED
                         fail_sound_L11.stop()
+                
+                # *break_key_L11* updates
+                waitOnFlip = False
+                
+                # if break_key_L11 is starting this frame...
+                if break_key_L11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L11.frameNStart = frameN  # exact frame index
+                    break_key_L11.tStart = t  # local t and not account for scr refresh
+                    break_key_L11.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L11, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L11.started')
+                    # update status
+                    break_key_L11.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L11.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L11.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L11.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L11.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L11_allKeys.extend(theseKeys)
+                    if len(_break_key_L11_allKeys):
+                        break_key_L11.keys = _break_key_L11_allKeys[-1].name  # just the last key pressed
+                        break_key_L11.rt = _break_key_L11_allKeys[-1].rt
+                        break_key_L11.duration = _break_key_L11_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L11* updates
+                
+                # if break_text_L11 is starting this frame...
+                if break_text_L11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L11.frameNStart = frameN  # exact frame index
+                    break_text_L11.tStart = t  # local t and not account for scr refresh
+                    break_text_L11.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L11, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L11.started')
+                    # update status
+                    break_text_L11.status = STARTED
+                    break_text_L11.setAutoDraw(True)
+                
+                # if break_text_L11 is active this frame...
+                if break_text_L11.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -23442,6 +24052,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L11 = 0
             total_possible_vertices_L11 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L11.keys in ['', [], None]:  # No response was made
+                break_key_L11.keys = None
+            Level_11_Loop.addData('break_key_L11.keys',break_key_L11.keys)
+            if break_key_L11.keys != None:  # we had a response
+                Level_11_Loop.addData('break_key_L11.rt', break_key_L11.rt)
+                Level_11_Loop.addData('break_key_L11.duration', break_key_L11.duration)
             # the Routine "Level_11_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_11_Loop'
@@ -24537,7 +25154,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_12_checker
             Level_12_checker = data.Routine(
                 name='Level_12_checker',
-                components=[end_score_text_L12, win_sound_L12, fail_sound_L12],
+                components=[end_score_text_L12, win_sound_L12, fail_sound_L12, break_key_L12, break_text_L12],
             )
             Level_12_checker.status = NOT_STARTED
             continueRoutine = True
@@ -24554,8 +25171,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Update the text for the end screen
             end_score_text_L12.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
             
             
             win_sound_L12.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -24564,6 +25179,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L12.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L12.setVolume(0.6, log=False)
             fail_sound_L12.seek(0)
+            # create starting attributes for break_key_L12
+            break_key_L12.keys = []
+            break_key_L12.rt = []
+            _break_key_L12_allKeys = []
             # store start times for Level_12_checker
             Level_12_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_12_checker.tStart = globalClock.getTime(format='float')
@@ -24614,11 +25233,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L12.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L12
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L12* updates
                 
@@ -24645,6 +25259,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L12.status = FINISHED
                         fail_sound_L12.stop()
+                
+                # *break_key_L12* updates
+                waitOnFlip = False
+                
+                # if break_key_L12 is starting this frame...
+                if break_key_L12.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L12.frameNStart = frameN  # exact frame index
+                    break_key_L12.tStart = t  # local t and not account for scr refresh
+                    break_key_L12.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L12, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L12.started')
+                    # update status
+                    break_key_L12.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L12.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L12.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L12.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L12.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L12_allKeys.extend(theseKeys)
+                    if len(_break_key_L12_allKeys):
+                        break_key_L12.keys = _break_key_L12_allKeys[-1].name  # just the last key pressed
+                        break_key_L12.rt = _break_key_L12_allKeys[-1].rt
+                        break_key_L12.duration = _break_key_L12_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L12* updates
+                
+                # if break_text_L12 is starting this frame...
+                if break_text_L12.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L12.frameNStart = frameN  # exact frame index
+                    break_text_L12.tStart = t  # local t and not account for scr refresh
+                    break_text_L12.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L12, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L12.started')
+                    # update status
+                    break_text_L12.status = STARTED
+                    break_text_L12.setAutoDraw(True)
+                
+                # if break_text_L12 is active this frame...
+                if break_text_L12.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -24711,6 +25373,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L12 = 0
             total_possible_vertices_L12 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L12.keys in ['', [], None]:  # No response was made
+                break_key_L12.keys = None
+            Level_12_Loop.addData('break_key_L12.keys',break_key_L12.keys)
+            if break_key_L12.keys != None:  # we had a response
+                Level_12_Loop.addData('break_key_L12.rt', break_key_L12.rt)
+                Level_12_Loop.addData('break_key_L12.duration', break_key_L12.duration)
             # the Routine "Level_12_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_12_Loop'
@@ -25806,7 +26475,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_13_checker
             Level_13_checker = data.Routine(
                 name='Level_13_checker',
-                components=[end_score_text_L13, win_sound_L13, fail_sound_L13],
+                components=[end_score_text_L13, win_sound_L13, fail_sound_L13, break_key_L13, break_text_L13],
             )
             Level_13_checker.status = NOT_STARTED
             continueRoutine = True
@@ -25833,6 +26502,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L13.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L13.setVolume(0.6, log=False)
             fail_sound_L13.seek(0)
+            # create starting attributes for break_key_L13
+            break_key_L13.keys = []
+            break_key_L13.rt = []
+            _break_key_L13_allKeys = []
             # store start times for Level_13_checker
             Level_13_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_13_checker.tStart = globalClock.getTime(format='float')
@@ -25915,6 +26588,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         fail_sound_L13.status = FINISHED
                         fail_sound_L13.stop()
                 
+                # *break_key_L13* updates
+                waitOnFlip = False
+                
+                # if break_key_L13 is starting this frame...
+                if break_key_L13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L13.frameNStart = frameN  # exact frame index
+                    break_key_L13.tStart = t  # local t and not account for scr refresh
+                    break_key_L13.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L13, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L13.started')
+                    # update status
+                    break_key_L13.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L13.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L13.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L13.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L13.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L13_allKeys.extend(theseKeys)
+                    if len(_break_key_L13_allKeys):
+                        break_key_L13.keys = _break_key_L13_allKeys[-1].name  # just the last key pressed
+                        break_key_L13.rt = _break_key_L13_allKeys[-1].rt
+                        break_key_L13.duration = _break_key_L13_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L13* updates
+                
+                # if break_text_L13 is starting this frame...
+                if break_text_L13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L13.frameNStart = frameN  # exact frame index
+                    break_text_L13.tStart = t  # local t and not account for scr refresh
+                    break_text_L13.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L13, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L13.started')
+                    # update status
+                    break_text_L13.status = STARTED
+                    break_text_L13.setAutoDraw(True)
+                
+                # if break_text_L13 is active this frame...
+                if break_text_L13.status == STARTED:
+                    # update params
+                    pass
+                
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
                     thisExp.status = FINISHED
@@ -25980,6 +26701,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L13 = 0
             total_possible_vertices_L13 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L13.keys in ['', [], None]:  # No response was made
+                break_key_L13.keys = None
+            Level_13_Loop.addData('break_key_L13.keys',break_key_L13.keys)
+            if break_key_L13.keys != None:  # we had a response
+                Level_13_Loop.addData('break_key_L13.rt', break_key_L13.rt)
+                Level_13_Loop.addData('break_key_L13.duration', break_key_L13.duration)
             # the Routine "Level_13_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_13_Loop'
@@ -27075,7 +27803,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_14_checker
             Level_14_checker = data.Routine(
                 name='Level_14_checker',
-                components=[end_score_text_L14, win_sound_L14, fail_sound_L14],
+                components=[end_score_text_L14, win_sound_L14, fail_sound_L14, break_key_L14, break_text_L14],
             )
             Level_14_checker.status = NOT_STARTED
             continueRoutine = True
@@ -27092,8 +27820,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Update the text for the end screen
             end_score_text_L14.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
+            
             
             
             win_sound_L14.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -27102,6 +27829,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L14.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L14.setVolume(0.6, log=False)
             fail_sound_L14.seek(0)
+            # create starting attributes for break_key_L14
+            break_key_L14.keys = []
+            break_key_L14.rt = []
+            _break_key_L14_allKeys = []
             # store start times for Level_14_checker
             Level_14_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_14_checker.tStart = globalClock.getTime(format='float')
@@ -27152,11 +27883,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L14.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L14
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L14* updates
                 
@@ -27183,6 +27909,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L14.status = FINISHED
                         fail_sound_L14.stop()
+                
+                # *break_key_L14* updates
+                waitOnFlip = False
+                
+                # if break_key_L14 is starting this frame...
+                if break_key_L14.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L14.frameNStart = frameN  # exact frame index
+                    break_key_L14.tStart = t  # local t and not account for scr refresh
+                    break_key_L14.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L14, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L14.started')
+                    # update status
+                    break_key_L14.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L14.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L14.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L14.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L14.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L14_allKeys.extend(theseKeys)
+                    if len(_break_key_L14_allKeys):
+                        break_key_L14.keys = _break_key_L14_allKeys[-1].name  # just the last key pressed
+                        break_key_L14.rt = _break_key_L14_allKeys[-1].rt
+                        break_key_L14.duration = _break_key_L14_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L14* updates
+                
+                # if break_text_L14 is starting this frame...
+                if break_text_L14.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L14.frameNStart = frameN  # exact frame index
+                    break_text_L14.tStart = t  # local t and not account for scr refresh
+                    break_text_L14.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L14, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L14.started')
+                    # update status
+                    break_text_L14.status = STARTED
+                    break_text_L14.setAutoDraw(True)
+                
+                # if break_text_L14 is active this frame...
+                if break_text_L14.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -27249,6 +28023,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L14 = 0
             total_possible_vertices_L14 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L14.keys in ['', [], None]:  # No response was made
+                break_key_L14.keys = None
+            Level_14_Loop.addData('break_key_L14.keys',break_key_L14.keys)
+            if break_key_L14.keys != None:  # we had a response
+                Level_14_Loop.addData('break_key_L14.rt', break_key_L14.rt)
+                Level_14_Loop.addData('break_key_L14.duration', break_key_L14.duration)
             # the Routine "Level_14_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_14_Loop'
@@ -28344,7 +29125,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_15_checker
             Level_15_checker = data.Routine(
                 name='Level_15_checker',
-                components=[end_score_text_L15, win_sound_L15, fail_sound_L15],
+                components=[end_score_text_L15, win_sound_L15, fail_sound_L15, break_key_L15, break_text_L15],
             )
             Level_15_checker.status = NOT_STARTED
             continueRoutine = True
@@ -28361,9 +29142,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Update the text for the end screen
             end_score_text_L15.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
-            
             
             win_sound_L15.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L15.setVolume(1.0, log=False)
@@ -28371,6 +29149,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L15.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L15.setVolume(0.6, log=False)
             fail_sound_L15.seek(0)
+            # create starting attributes for break_key_L15
+            break_key_L15.keys = []
+            break_key_L15.rt = []
+            _break_key_L15_allKeys = []
             # store start times for Level_15_checker
             Level_15_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_15_checker.tStart = globalClock.getTime(format='float')
@@ -28421,11 +29203,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L15.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L15
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L15* updates
                 
@@ -28452,6 +29229,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L15.status = FINISHED
                         fail_sound_L15.stop()
+                
+                # *break_key_L15* updates
+                waitOnFlip = False
+                
+                # if break_key_L15 is starting this frame...
+                if break_key_L15.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L15.frameNStart = frameN  # exact frame index
+                    break_key_L15.tStart = t  # local t and not account for scr refresh
+                    break_key_L15.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L15, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L15.started')
+                    # update status
+                    break_key_L15.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L15.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L15.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L15.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L15.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L15_allKeys.extend(theseKeys)
+                    if len(_break_key_L15_allKeys):
+                        break_key_L15.keys = _break_key_L15_allKeys[-1].name  # just the last key pressed
+                        break_key_L15.rt = _break_key_L15_allKeys[-1].rt
+                        break_key_L15.duration = _break_key_L15_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L15* updates
+                
+                # if break_text_L15 is starting this frame...
+                if break_text_L15.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L15.frameNStart = frameN  # exact frame index
+                    break_text_L15.tStart = t  # local t and not account for scr refresh
+                    break_text_L15.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L15, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L15.started')
+                    # update status
+                    break_text_L15.status = STARTED
+                    break_text_L15.setAutoDraw(True)
+                
+                # if break_text_L15 is active this frame...
+                if break_text_L15.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -28518,6 +29343,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L15 = 0
             total_possible_vertices_L15 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L15.keys in ['', [], None]:  # No response was made
+                break_key_L15.keys = None
+            Level_15_Loop.addData('break_key_L15.keys',break_key_L15.keys)
+            if break_key_L15.keys != None:  # we had a response
+                Level_15_Loop.addData('break_key_L15.rt', break_key_L15.rt)
+                Level_15_Loop.addData('break_key_L15.duration', break_key_L15.duration)
             # the Routine "Level_15_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_15_Loop'
