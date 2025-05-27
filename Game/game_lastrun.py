@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on May 20, 2025, at 15:26
+    on May 27, 2025, at 16:45
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -34,6 +34,9 @@ import psychopy.iohub as io
 from psychopy.hardware import keyboard
 
 # Run 'Before Experiment' code from AboutCode
+
+
+# Run 'Before Experiment' code from calibrator_code
 
 
 # Run 'Before Experiment' code from DinoMovement_L1
@@ -833,7 +836,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     t_reset_PSURP = visual.TextStim(win=win, name='t_reset_PSURP',
         text='reseting PSURP',
         font='Open Sans',
-        pos=(0, 1), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
@@ -895,14 +898,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     exit_button = visual.Rect(
         win=win, name='exit_button',
         width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
-        ori=0.0, pos=(0, -.3), draggable=False, anchor='center',
+        ori=0.0, pos=(0, -.4), draggable=False, anchor='center',
         lineWidth=1.0,
         colorSpace='rgb', lineColor='white', fillColor=None,
         opacity=None, depth=-5.0, interpolate=True)
     Exit = visual.TextStim(win=win, name='Exit',
         text='Exit',
         font='Arial',
-        pos=(0, -.3), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, -.4), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-6.0);
@@ -934,6 +937,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         lineWidth=1.0,
         colorSpace='rgb', lineColor='white', fillColor=None,
         opacity=None, depth=-10.0, interpolate=True)
+    calibrator_text = visual.TextStim(win=win, name='calibrator_text',
+        text='Calibrator',
+        font='Arial',
+        pos=(0, -.3), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-11.0);
+    calibrator_button = visual.Rect(
+        win=win, name='calibrator_button',
+        width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
+        ori=0.0, pos=(0, -.3), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor='white', fillColor=None,
+        opacity=None, depth=-12.0, interpolate=True)
     # Run 'Begin Experiment' code from code
     # Default control method
     # starts game in keyboard mode
@@ -975,6 +992,32 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     mouse_2 = event.Mouse(win=win)
     x, y = [None, None]
     mouse_2.mouseClock = core.Clock()
+    
+    # --- Initialize components for Routine "Calibrator" ---
+    forces_text = visual.TextStim(win=win, name='forces_text',
+        text=None,
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.03, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=1.0, 
+        languageStyle='LTR',
+        depth=0.0);
+    back_button_2 = visual.Rect(
+        win=win, name='back_button_2',
+        width=(0.2, 0.1)[0], height=(0.2, 0.1)[1],
+        ori=0.0, pos=(-0.5, 0.44), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor='white', fillColor=None,
+        opacity=None, depth=-1.0, interpolate=True)
+    back_text_2 = visual.TextStim(win=win, name='back_text_2',
+        text='Back',
+        font='Arial',
+        pos=(-0.5, 0.44), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-2.0);
+    mouse_3 = event.Mouse(win=win)
+    x, y = [None, None]
+    mouse_3.mouseClock = core.Clock()
     
     # --- Initialize components for Routine "Level_1" ---
     dino_image_L1 = visual.ImageStim(
@@ -1138,6 +1181,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     dino_image_L1.image = frame_paths[frame_index]
     
     
+    #camera_offset_x = dino_pos[0]  # lock camera to Dino's X
     
     
     # Run 'Begin Experiment' code from worldController_L1
@@ -1201,7 +1245,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     floor1_vertices = calculate_rect_vertices(floor1_L1)
     
     # floor2_L1 properties - Place it further into the map
-    floor2_x_static = 1  # Fixed X position where floor2_L1 appears 17.5
+    floor2_x_static = 17.5  # Fixed X position where floor2_L1 appears 17.5
     floor2_height = 0.3
     floor2_width = 0.5
     
@@ -11453,7 +11497,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine MainMenu
             MainMenu = data.Routine(
                 name='MainMenu',
-                components=[TitleText, start_button, StartGame, about_button, about, exit_button, Exit, controller_selection, control_feedback, mode_feedback, mode_button, mouse],
+                components=[TitleText, start_button, StartGame, about_button, about, exit_button, Exit, controller_selection, control_feedback, mode_feedback, mode_button, calibrator_text, calibrator_button, mouse],
             )
             MainMenu.status = NOT_STARTED
             continueRoutine = True
@@ -11705,6 +11749,42 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if mode_button.status == STARTED:
                     # update params
                     pass
+                
+                # *calibrator_text* updates
+                
+                # if calibrator_text is starting this frame...
+                if calibrator_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    calibrator_text.frameNStart = frameN  # exact frame index
+                    calibrator_text.tStart = t  # local t and not account for scr refresh
+                    calibrator_text.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(calibrator_text, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    calibrator_text.status = STARTED
+                    calibrator_text.setAutoDraw(True)
+                
+                # if calibrator_text is active this frame...
+                if calibrator_text.status == STARTED:
+                    # update params
+                    pass
+                
+                # *calibrator_button* updates
+                
+                # if calibrator_button is starting this frame...
+                if calibrator_button.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    calibrator_button.frameNStart = frameN  # exact frame index
+                    calibrator_button.tStart = t  # local t and not account for scr refresh
+                    calibrator_button.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(calibrator_button, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    calibrator_button.status = STARTED
+                    calibrator_button.setAutoDraw(True)
+                
+                # if calibrator_button is active this frame...
+                if calibrator_button.status == STARTED:
+                    # update params
+                    pass
                 # Run 'Each Frame' code from code
                 # Check if the mouse is clicked and which button is clicked
                 if mouse.isPressedIn(start_button):
@@ -11749,6 +11829,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     core.wait(0.2)
                     continueRoutine = False
                 
+                if mouse.isPressedIn(calibrator_button):
+                    goto = 'Calibrator'
+                    core.wait(0.2)
+                    continueRoutine = False
                     
                     
                 
@@ -12020,6 +12104,198 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             menu_loop.addData('mouse_2.rightButton', mouse_2.rightButton)
             menu_loop.addData('mouse_2.time', mouse_2.time)
             # the Routine "AboutScreen" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
+            # --- Prepare to start Routine "Calibrator" ---
+            # create an object to store info about Routine Calibrator
+            Calibrator = data.Routine(
+                name='Calibrator',
+                components=[forces_text, back_button_2, back_text_2, mouse_3],
+            )
+            Calibrator.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from calibrator_code
+            if goto != 'Calibrator':
+                continueRoutine = False
+            
+            # setup some python lists for storing info about the mouse_3
+            mouse_3.x = []
+            mouse_3.y = []
+            mouse_3.leftButton = []
+            mouse_3.midButton = []
+            mouse_3.rightButton = []
+            mouse_3.time = []
+            gotValidClick = False  # until a click is received
+            # store start times for Calibrator
+            Calibrator.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Calibrator.tStart = globalClock.getTime(format='float')
+            Calibrator.status = STARTED
+            thisExp.addData('Calibrator.started', Calibrator.tStart)
+            Calibrator.maxDuration = None
+            # keep track of which components have finished
+            CalibratorComponents = Calibrator.components
+            for thisComponent in Calibrator.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Calibrator" ---
+            # if trial has changed, end Routine now
+            if isinstance(menu_loop, data.TrialHandler2) and thisMenu_loop.thisN != menu_loop.thisTrial.thisN:
+                continueRoutine = False
+            Calibrator.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *forces_text* updates
+                
+                # if forces_text is starting this frame...
+                if forces_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    forces_text.frameNStart = frameN  # exact frame index
+                    forces_text.tStart = t  # local t and not account for scr refresh
+                    forces_text.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(forces_text, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'forces_text.started')
+                    # update status
+                    forces_text.status = STARTED
+                    forces_text.setAutoDraw(True)
+                
+                # if forces_text is active this frame...
+                if forces_text.status == STARTED:
+                    # update params
+                    pass
+                
+                # *back_button_2* updates
+                
+                # if back_button_2 is starting this frame...
+                if back_button_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    back_button_2.frameNStart = frameN  # exact frame index
+                    back_button_2.tStart = t  # local t and not account for scr refresh
+                    back_button_2.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(back_button_2, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    back_button_2.status = STARTED
+                    back_button_2.setAutoDraw(True)
+                
+                # if back_button_2 is active this frame...
+                if back_button_2.status == STARTED:
+                    # update params
+                    pass
+                
+                # *back_text_2* updates
+                
+                # if back_text_2 is starting this frame...
+                if back_text_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    back_text_2.frameNStart = frameN  # exact frame index
+                    back_text_2.tStart = t  # local t and not account for scr refresh
+                    back_text_2.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(back_text_2, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    back_text_2.status = STARTED
+                    back_text_2.setAutoDraw(True)
+                
+                # if back_text_2 is active this frame...
+                if back_text_2.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from calibrator_code
+                if mouse.isPressedIn(back_button):
+                    goto = 'MainMenu'
+                    core.wait(0.2)
+                    continueRoutine = False
+                
+                # *mouse_3* updates
+                
+                # if mouse_3 is starting this frame...
+                if mouse_3.status == NOT_STARTED and t >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    mouse_3.frameNStart = frameN  # exact frame index
+                    mouse_3.tStart = t  # local t and not account for scr refresh
+                    mouse_3.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(mouse_3, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    mouse_3.status = STARTED
+                    mouse_3.mouseClock.reset()
+                    prevButtonState = mouse_3.getPressed()  # if button is down already this ISN'T a new click
+                if mouse_3.status == STARTED:  # only update if started and not finished!
+                    buttons = mouse_3.getPressed()
+                    if buttons != prevButtonState:  # button state changed?
+                        prevButtonState = buttons
+                        if sum(buttons) > 0:  # state changed to a new click
+                            pass
+                            x, y = mouse_3.getPos()
+                            mouse_3.x.append(x)
+                            mouse_3.y.append(y)
+                            buttons = mouse_3.getPressed()
+                            mouse_3.leftButton.append(buttons[0])
+                            mouse_3.midButton.append(buttons[1])
+                            mouse_3.rightButton.append(buttons[2])
+                            mouse_3.time.append(mouse_3.mouseClock.getTime())
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Calibrator.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Calibrator.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Calibrator" ---
+            for thisComponent in Calibrator.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Calibrator
+            Calibrator.tStop = globalClock.getTime(format='float')
+            Calibrator.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Calibrator.stopped', Calibrator.tStop)
+            # store data for menu_loop (TrialHandler)
+            menu_loop.addData('mouse_3.x', mouse_3.x)
+            menu_loop.addData('mouse_3.y', mouse_3.y)
+            menu_loop.addData('mouse_3.leftButton', mouse_3.leftButton)
+            menu_loop.addData('mouse_3.midButton', mouse_3.midButton)
+            menu_loop.addData('mouse_3.rightButton', mouse_3.rightButton)
+            menu_loop.addData('mouse_3.time', mouse_3.time)
+            # the Routine "Calibrator" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 999.0 repeats of 'menu_loop'
         
@@ -12320,7 +12596,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # Update Dino's position
                 # dino_image_L1.pos = dino_pos  # Use both X and Y values of dino_pos
                 dino_image_L1.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
-                
+                #dino_image_L1.pos = [0, dino_pos[1]]
                 # Increment the frame counter for trail updates
                 trail_frame_counter += 1
                 
