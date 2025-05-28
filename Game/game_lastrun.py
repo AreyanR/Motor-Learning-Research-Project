@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on May 27, 2025, at 16:45
+    on May 27, 2025, at 17:06
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -1181,7 +1181,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     dino_image_L1.image = frame_paths[frame_index]
     
     
-    #camera_offset_x = dino_pos[0]  # lock camera to Dino's X
+    camera_offset_x = dino_pos[0]  # lock camera to Dino's X
     
     
     # Run 'Begin Experiment' code from worldController_L1
@@ -12583,20 +12583,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Update Dino's vertical position
                 dino_pos[1] += dino_speed
+                dino_pos[0] = camera_offset_x
                 
-                # Continuous horizontal movement
-                if left_pressed and dino_pos[0] > min_x:
-                    dino_pos[0] -= move_speed  # Move Dino to the left
-                    dino_image_L1.size = [-1 * abs(dino_image_L1.size[0]), dino_image_L1.size[1]]
-                
-                if right_pressed and dino_pos[0] < max_x:
-                    dino_pos[0] += move_speed  # Move Dino to the right
-                    dino_image_L1.size = [abs(dino_image_L1.size[0]), dino_image_L1.size[1]]  # Reset Dino to face right
-                
-                # Update Dino's position
                 # dino_image_L1.pos = dino_pos  # Use both X and Y values of dino_pos
                 dino_image_L1.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
-                #dino_image_L1.pos = [0, dino_pos[1]]
                 # Increment the frame counter for trail updates
                 trail_frame_counter += 1
                 
