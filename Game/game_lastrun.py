@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on May 28, 2025, at 18:16
+    on May 28, 2025, at 21:09
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -37,8 +37,7 @@ from psychopy.hardware import keyboard
 
 
 # Run 'Before Experiment' code from calibrator_code
-
-
+Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 # Run 'Before Experiment' code from DinoMovement_L1
 Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 # Run 'Before Experiment' code from DinoMovement_L2
@@ -162,7 +161,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='D:\\Users\\areya\\Desktop\\work\\Motor-Learning-Research-Project\\Game\\game_lastrun.py',
+        originPath='C:\\Users\\actioncontrollab\\Desktop\\Motor-Learning-Research-Project\\Game\\game_lastrun.py',
         savePickle=True, saveWideText=False,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -1015,9 +1014,82 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
+    # Run 'Begin Experiment' code from calibrator_code
+    import serial
+    global minF, maxF
+    
+    # Initialize the serial connection for PSURP
+    ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
+    ser.flush()
+    ser.write("X".encode())  # Initialize PSURP
+    ser.write("RUNE\n".encode())  # Enter streaming mode
+    
+    
+        
+    def calculate_psurp_forces_normalized(serial_data, minF, maxF):
+        """Extract and return only normalized forces from PSURP serial data."""
+        if len(serial_data.decode()) == 12:
+            output = serial_data.decode()
+    
+            B0HighByte = Base71Lookup.index(output[0])
+            B0LowByte = Base71Lookup.index(output[1])
+            B2HighByte = Base71Lookup.index(output[4])
+            B2LowByte = Base71Lookup.index(output[5])
+    
+            B0Force = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2Force = ((B2HighByte * 71) + B2LowByte) * 0.0098
+    
+            # Normalize and clamp between 0 and 1
+            if maxF != minF:
+                B0Norm = max(0, min((B0Force - minF) / (maxF - minF), 1))
+                B2Norm = max(0, min((B2Force - minF) / (maxF - minF), 1))
+            else:
+                B0Norm = 0
+                B2Norm = 0
+    
+            return B0Norm, B2Norm
+    
+        return 0, 0
+    
+    
     mouse_3 = event.Mouse(win=win)
     x, y = [None, None]
     mouse_3.mouseClock = core.Clock()
+    force_display = visual.TextStim(win=win, name='force_display',
+        text='values here',
+        font='Arial',
+        pos=(0, 0.3), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
+    min_slider = visual.Slider(win=win, name='min_slider',
+        startValue=0.1, size=(0.8, 0.1), pos=(0, 0), units=win.units,
+        labels=(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9), ticks=(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9), granularity=0.0,
+        style='rating', styleTweaks=(), opacity=None,
+        labelColor='LightGray', markerColor='Red', lineColor='White', colorSpace='rgb',
+        font='Open Sans', labelHeight=0.05,
+        flip=False, ori=0.0, depth=-6, readOnly=False)
+    max_slider = visual.Slider(win=win, name='max_slider',
+        startValue=0.1, size=(0.8, 0.1), pos=(0, -0.3), units=win.units,
+        labels=(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1), ticks=(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1), granularity=0.0,
+        style='rating', styleTweaks=(), opacity=None,
+        labelColor='LightGray', markerColor='Red', lineColor='White', colorSpace='rgb',
+        font='Open Sans', labelHeight=0.05,
+        flip=False, ori=0.0, depth=-7, readOnly=False)
+    min_text = visual.TextStim(win=win, name='min_text',
+        text='Min:',
+        font='Arial',
+        pos=(-0.5, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-8.0);
+    max_text = visual.TextStim(win=win, name='max_text',
+        text='Max:',
+        font='Arial',
+        pos=(-0.5, -0.3), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-9.0);
     
     # --- Initialize components for Routine "Level_1" ---
     dino_image_L1 = visual.ImageStim(
@@ -11165,10 +11237,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     resetPSURP.tStopRefresh = tThisFlipGlobal
     thisExp.addData('resetPSURP.stopped', resetPSURP.tStop)
     # Run 'End Routine' code from code_2
-    """
+    
     ser.flush()
     ser.write("X".encode())
-    """
+    
     # clear out the data from the IO buffers (Fresh commands)
     # the "X" command puts tje PSURP into command mode
     
@@ -11292,7 +11364,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     TARE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('TARE.stopped', TARE.tStop)
     # Run 'End Routine' code from tare_code
-    """
+    
     ser.write("TAR0\n".encode())
     time.sleep(1)
     ser.write("TAR1\n".encode())
@@ -11303,7 +11375,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     time.sleep(1)
     ser.write("TAR4\n".encode())
     time.sleep(1)
-    """
+    
     
     # the tar command zeros out all of the force messurements
     # halt for one second to make sure command was processed 
@@ -11426,9 +11498,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     RUNE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('RUNE.stopped', RUNE.tStop)
     # Run 'End Routine' code from Code_RUNE
-    """
+    
     ser.write("RUNE\n".encode())
-    """
+    
     # the rune command sets the PSURP to streaming mode. (for getting vals)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if RUNE.maxDurationReached:
@@ -12112,7 +12184,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Calibrator
             Calibrator = data.Routine(
                 name='Calibrator',
-                components=[forces_text, back_button_2, back_text_2, mouse_3],
+                components=[forces_text, back_button_2, back_text_2, mouse_3, force_display, min_slider, max_slider, min_text, max_text],
             )
             Calibrator.status = NOT_STARTED
             continueRoutine = True
@@ -12120,6 +12192,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Run 'Begin Routine' code from calibrator_code
             if goto != 'Calibrator':
                 continueRoutine = False
+                
+                
             
             # setup some python lists for storing info about the mouse_3
             mouse_3.x = []
@@ -12129,6 +12203,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             mouse_3.rightButton = []
             mouse_3.time = []
             gotValidClick = False  # until a click is received
+            min_slider.reset()
+            max_slider.reset()
             # store start times for Calibrator
             Calibrator.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Calibrator.tStart = globalClock.getTime(format='float')
@@ -12222,6 +12298,25 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     goto = 'MainMenu'
                     core.wait(0.2)
                     continueRoutine = False
+                    
+                minF = min_slider.getRating()
+                maxF = max_slider.getRating()
+                
+                
+                if minF is not None and maxF is not None:
+                    ser.flushInput()
+                    strSerialData = ser.readline()
+                
+                    # Use the same serial data in both functions
+                    raw_B0, raw_B2 = calculate_psurp_forces(strSerialData)
+                    norm_B0, norm_B2 = calculate_psurp_forces_normalized(strSerialData, minF, maxF)
+                
+                
+                    # Display raw and normalized values
+                    force_display.text = f"B0: {raw_B0:.2f} N ({norm_B0:.2f})\nB2: {raw_B2:.2f} N ({norm_B2:.2f})"
+                else:
+                    force_display.text = "Adjust sliders to set min/max force."
+                
                 
                 # *mouse_3* updates
                 
@@ -12250,6 +12345,106 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                             mouse_3.midButton.append(buttons[1])
                             mouse_3.rightButton.append(buttons[2])
                             mouse_3.time.append(mouse_3.mouseClock.getTime())
+                
+                # *force_display* updates
+                
+                # if force_display is starting this frame...
+                if force_display.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    force_display.frameNStart = frameN  # exact frame index
+                    force_display.tStart = t  # local t and not account for scr refresh
+                    force_display.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(force_display, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'force_display.started')
+                    # update status
+                    force_display.status = STARTED
+                    force_display.setAutoDraw(True)
+                
+                # if force_display is active this frame...
+                if force_display.status == STARTED:
+                    # update params
+                    pass
+                
+                # *min_slider* updates
+                
+                # if min_slider is starting this frame...
+                if min_slider.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    min_slider.frameNStart = frameN  # exact frame index
+                    min_slider.tStart = t  # local t and not account for scr refresh
+                    min_slider.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(min_slider, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'min_slider.started')
+                    # update status
+                    min_slider.status = STARTED
+                    min_slider.setAutoDraw(True)
+                
+                # if min_slider is active this frame...
+                if min_slider.status == STARTED:
+                    # update params
+                    pass
+                
+                # *max_slider* updates
+                
+                # if max_slider is starting this frame...
+                if max_slider.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    max_slider.frameNStart = frameN  # exact frame index
+                    max_slider.tStart = t  # local t and not account for scr refresh
+                    max_slider.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(max_slider, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'max_slider.started')
+                    # update status
+                    max_slider.status = STARTED
+                    max_slider.setAutoDraw(True)
+                
+                # if max_slider is active this frame...
+                if max_slider.status == STARTED:
+                    # update params
+                    pass
+                
+                # *min_text* updates
+                
+                # if min_text is starting this frame...
+                if min_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    min_text.frameNStart = frameN  # exact frame index
+                    min_text.tStart = t  # local t and not account for scr refresh
+                    min_text.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(min_text, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'min_text.started')
+                    # update status
+                    min_text.status = STARTED
+                    min_text.setAutoDraw(True)
+                
+                # if min_text is active this frame...
+                if min_text.status == STARTED:
+                    # update params
+                    pass
+                
+                # *max_text* updates
+                
+                # if max_text is starting this frame...
+                if max_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    max_text.frameNStart = frameN  # exact frame index
+                    max_text.tStart = t  # local t and not account for scr refresh
+                    max_text.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(max_text, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'max_text.started')
+                    # update status
+                    max_text.status = STARTED
+                    max_text.setAutoDraw(True)
+                
+                # if max_text is active this frame...
+                if max_text.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -12290,6 +12485,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             Calibrator.tStop = globalClock.getTime(format='float')
             Calibrator.tStopRefresh = tThisFlipGlobal
             thisExp.addData('Calibrator.stopped', Calibrator.tStop)
+            # Run 'End Routine' code from calibrator_code
+            minF = min_slider.getRating()
+            maxF = max_slider.getRating()
+            
             # store data for menu_loop (TrialHandler)
             menu_loop.addData('mouse_3.x', mouse_3.x)
             menu_loop.addData('mouse_3.y', mouse_3.y)
@@ -12297,6 +12496,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             menu_loop.addData('mouse_3.midButton', mouse_3.midButton)
             menu_loop.addData('mouse_3.rightButton', mouse_3.rightButton)
             menu_loop.addData('mouse_3.time', mouse_3.time)
+            menu_loop.addData('min_slider.response', min_slider.getRating())
+            menu_loop.addData('min_slider.rt', min_slider.getRT())
+            menu_loop.addData('max_slider.response', max_slider.getRating())
+            menu_loop.addData('max_slider.rt', max_slider.getRT())
             # the Routine "Calibrator" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 999.0 repeats of 'menu_loop'
@@ -12549,15 +12752,16 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     if selected_diff == "1":
                         # Constant movement for Easy mode
                         if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
-                            dino_image_L1.size = [abs(dino_image_L1.size[0]), dino_image_L1.size[1]]  # Face right
+                           pass
                 
                     elif selected_diff == "2":
                         # Proportional movement for Hard mode (current implementation)
                         if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
                             move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
-                            dino_pos[0] += move_amount  # Movement based on force
+                            camera_offset_x += move_amount  # Move camera instead of dino
                             dino_image_L1.size = [abs(dino_image_L1.size[0]), dino_image_L1.size[1]]  # Face right
+                        else:
+                            camera_speed = og_camera_speed
                 
                     # Jump logic remains the same for both difficulties
                     if B0ForceInNewtons > MIN_FORCE:
@@ -29643,6 +29847,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     GameLoop.saveAsText(filename + 'GameLoop.csv', delim=',',
         stimOut=params,
         dataOut=['n','all_mean','all_std', 'all_raw'])
+    # Run 'End Experiment' code from calibrator_code
+    
+    ser.flush()
+    ser.write("X".encode())  # Exit command mode
+    ser.close()
+    
     # Run 'End Experiment' code from DinoMovement_L1
     """
     ser.flush()
