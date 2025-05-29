@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on May 12, 2025, at 15:23
+    on May 29, 2025, at 00:28
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -36,6 +36,8 @@ from psychopy.hardware import keyboard
 # Run 'Before Experiment' code from AboutCode
 
 
+# Run 'Before Experiment' code from calibrator_code
+Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 # Run 'Before Experiment' code from DinoMovement_L1
 Base71Lookup = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 # Run 'Before Experiment' code from DinoMovement_L2
@@ -93,7 +95,7 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = False
-_winSize = [1000,800]
+_winSize = [1000, 800]
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -229,7 +231,7 @@ def setupWindow(expInfo=None, win=None):
     if expInfo is not None:
         # get/measure frame rate if not already in expInfo
         if win._monitorFrameRate is None:
-            win._monitorFrameRate = win.getActualFrameRate(infoMsg='Attempting to measure frame rate of screen, please wait...')
+            win._monitorFrameRate = win.getActualFrameRate(infoMsg='Loading Game')
         expInfo['frameRate'] = win._monitorFrameRate
     win.hideMessage()
     # show a visual indicator if we're in piloting mode
@@ -302,6 +304,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L1') is None:
+        # initialise break_key_L1
+        break_key_L1 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L1',
+        )
     # create speaker 'lose_sound_L2'
     deviceManager.addDevice(
         deviceName='lose_sound_L2',
@@ -326,6 +334,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L2') is None:
+        # initialise break_key_L2
+        break_key_L2 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L2',
+        )
     # create speaker 'lose_sound_L3'
     deviceManager.addDevice(
         deviceName='lose_sound_L3',
@@ -350,6 +364,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L3') is None:
+        # initialise break_key_L3
+        break_key_L3 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L3',
+        )
     # create speaker 'lose_sound_L4'
     deviceManager.addDevice(
         deviceName='lose_sound_L4',
@@ -374,6 +394,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L4') is None:
+        # initialise break_key_L4
+        break_key_L4 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L4',
+        )
     # create speaker 'lose_sound_L5'
     deviceManager.addDevice(
         deviceName='lose_sound_L5',
@@ -398,6 +424,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L5') is None:
+        # initialise break_key_L5
+        break_key_L5 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L5',
+        )
     # create speaker 'lose_sound_L6'
     deviceManager.addDevice(
         deviceName='lose_sound_L6',
@@ -422,6 +454,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L6') is None:
+        # initialise break_key_L6
+        break_key_L6 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L6',
+        )
     # create speaker 'lose_sound_L7'
     deviceManager.addDevice(
         deviceName='lose_sound_L7',
@@ -446,6 +484,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L7') is None:
+        # initialise break_key_L7
+        break_key_L7 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L7',
+        )
     # create speaker 'lose_sound_L8'
     deviceManager.addDevice(
         deviceName='lose_sound_L8',
@@ -470,6 +514,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L8') is None:
+        # initialise break_key_L8
+        break_key_L8 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L8',
+        )
     # create speaker 'lose_sound_L9'
     deviceManager.addDevice(
         deviceName='lose_sound_L9',
@@ -494,6 +544,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L9') is None:
+        # initialise break_key_L9
+        break_key_L9 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L9',
+        )
     # create speaker 'lose_sound_L10'
     deviceManager.addDevice(
         deviceName='lose_sound_L10',
@@ -518,6 +574,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L10') is None:
+        # initialise break_key_L10
+        break_key_L10 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L10',
+        )
     # create speaker 'lose_sound_L11'
     deviceManager.addDevice(
         deviceName='lose_sound_L11',
@@ -542,6 +604,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L11') is None:
+        # initialise break_key_L11
+        break_key_L11 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L11',
+        )
     # create speaker 'lose_sound_L12'
     deviceManager.addDevice(
         deviceName='lose_sound_L12',
@@ -566,6 +634,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L12') is None:
+        # initialise break_key_L12
+        break_key_L12 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L12',
+        )
     # create speaker 'lose_sound_L13'
     deviceManager.addDevice(
         deviceName='lose_sound_L13',
@@ -590,6 +664,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L13') is None:
+        # initialise break_key_L13
+        break_key_L13 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L13',
+        )
     # create speaker 'lose_sound_L14'
     deviceManager.addDevice(
         deviceName='lose_sound_L14',
@@ -614,6 +694,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L14') is None:
+        # initialise break_key_L14
+        break_key_L14 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L14',
+        )
     # create speaker 'lose_sound_L15'
     deviceManager.addDevice(
         deviceName='lose_sound_L15',
@@ -638,6 +724,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceClass='psychopy.hardware.speaker.SpeakerDevice',
         index=-1
     )
+    if deviceManager.getDevice('break_key_L15') is None:
+        # initialise break_key_L15
+        break_key_L15 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='break_key_L15',
+        )
     # return True if completed successfully
     return True
 
@@ -805,14 +897,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     exit_button = visual.Rect(
         win=win, name='exit_button',
         width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
-        ori=0.0, pos=(0, -.3), draggable=False, anchor='center',
+        ori=0.0, pos=(0, -.4), draggable=False, anchor='center',
         lineWidth=1.0,
         colorSpace='rgb', lineColor='white', fillColor=None,
         opacity=None, depth=-5.0, interpolate=True)
     Exit = visual.TextStim(win=win, name='Exit',
         text='Exit',
         font='Arial',
-        pos=(0, -.3), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, -.4), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-6.0);
@@ -844,6 +936,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         lineWidth=1.0,
         colorSpace='rgb', lineColor='white', fillColor=None,
         opacity=None, depth=-10.0, interpolate=True)
+    calibrator_text = visual.TextStim(win=win, name='calibrator_text',
+        text='Calibrator',
+        font='Arial',
+        pos=(0, -.3), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-11.0);
+    calibrator_button = visual.Rect(
+        win=win, name='calibrator_button',
+        width=(0.4, 0.1)[0], height=(0.4, 0.1)[1],
+        ori=0.0, pos=(0, -.3), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor='white', fillColor=None,
+        opacity=None, depth=-12.0, interpolate=True)
     # Run 'Begin Experiment' code from code
     # Default control method
     # starts game in keyboard mode
@@ -885,6 +991,106 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     mouse_2 = event.Mouse(win=win)
     x, y = [None, None]
     mouse_2.mouseClock = core.Clock()
+    
+    # --- Initialize components for Routine "Calibrator" ---
+    forces_text = visual.TextStim(win=win, name='forces_text',
+        text=None,
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.03, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=1.0, 
+        languageStyle='LTR',
+        depth=0.0);
+    back_button_2 = visual.Rect(
+        win=win, name='back_button_2',
+        width=(0.2, 0.1)[0], height=(0.2, 0.1)[1],
+        ori=0.0, pos=(-0.5, 0.44), draggable=False, anchor='center',
+        lineWidth=1.0,
+        colorSpace='rgb', lineColor='white', fillColor=None,
+        opacity=None, depth=-1.0, interpolate=True)
+    back_text_2 = visual.TextStim(win=win, name='back_text_2',
+        text='Back',
+        font='Arial',
+        pos=(-0.5, 0.44), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-2.0);
+    # Run 'Begin Experiment' code from calibrator_code
+    import serial
+    global minF, maxF
+    """
+    # Initialize the serial connection for PSURP
+    ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
+    ser.flush()
+    ser.write("X".encode())  # Initialize PSURP
+    ser.write("RUNE\n".encode())  # Enter streaming mode
+    """
+    minF = 0.1
+    maxF = 0.9
+        
+    def calculate_psurp_forces_normalized(serial_data, minF, maxF):
+        """Extract and return only normalized forces from PSURP serial data."""
+        if len(serial_data.decode()) == 12:
+            output = serial_data.decode()
+    
+            B0HighByte = Base71Lookup.index(output[0])
+            B0LowByte = Base71Lookup.index(output[1])
+            B2HighByte = Base71Lookup.index(output[4])
+            B2LowByte = Base71Lookup.index(output[5])
+    
+            B0Force = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2Force = ((B2HighByte * 71) + B2LowByte) * 0.0098
+    
+            # Normalize and clamp between 0 and 1
+            if maxF != minF:
+                B0Norm = max(0, min((B0Force - minF) / (maxF - minF), 1))
+                B2Norm = max(0, min((B2Force - minF) / (maxF - minF), 1))
+            else:
+                B0Norm = 0
+                B2Norm = 0
+    
+            return B0Norm, B2Norm
+    
+        return 0, 0
+    
+    
+    mouse_3 = event.Mouse(win=win)
+    x, y = [None, None]
+    mouse_3.mouseClock = core.Clock()
+    force_display = visual.TextStim(win=win, name='force_display',
+        text='values here',
+        font='Arial',
+        pos=(0, 0.3), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
+    min_slider = visual.Slider(win=win, name='min_slider',
+        startValue=0.1, size=(0.8, 0.1), pos=(0, 0), units=win.units,
+        labels=(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9), ticks=(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9), granularity=0.1,
+        style='slider', styleTweaks=(), opacity=None,
+        labelColor='LightGray', markerColor='Red', lineColor='White', colorSpace='rgb',
+        font='Open Sans', labelHeight=0.05,
+        flip=False, ori=0.0, depth=-6, readOnly=False)
+    max_slider = visual.Slider(win=win, name='max_slider',
+        startValue=0.1, size=(0.8, 0.1), pos=(0, -0.3), units=win.units,
+        labels=(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1), ticks=(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1), granularity=0.1,
+        style='slider', styleTweaks=(), opacity=None,
+        labelColor='LightGray', markerColor='Red', lineColor='White', colorSpace='rgb',
+        font='Open Sans', labelHeight=0.05,
+        flip=False, ori=0.0, depth=-7, readOnly=False)
+    min_text = visual.TextStim(win=win, name='min_text',
+        text='Min:',
+        font='Arial',
+        pos=(-0.5, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-8.0);
+    max_text = visual.TextStim(win=win, name='max_text',
+        text='Max:',
+        font='Arial',
+        pos=(-0.5, -0.3), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-9.0);
     
     # --- Initialize components for Routine "Level_1" ---
     dino_image_L1 = visual.ImageStim(
@@ -1048,6 +1254,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     dino_image_L1.image = frame_paths[frame_index]
     
     
+    camera_offset_x = dino_pos[0]  # lock camera to Dino's X
     
     
     # Run 'Begin Experiment' code from worldController_L1
@@ -1087,6 +1294,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Camera variables
     camera_offset_x = 0  # Tracks the camera offset to follow Dino
     camera_speed = 0.003  # Adjust this speed as needed 0.003
+    og_camera_speed = 0.003
+    camera_mov_speed = 0.007
     # Background properties
     background_width = 2.0  # Width of a single background image
     background_height = 1.0
@@ -1111,7 +1320,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     floor1_vertices = calculate_rect_vertices(floor1_L1)
     
     # floor2_L1 properties - Place it further into the map
-    floor2_x_static = 1  # Fixed X position where floor2_L1 appears 17.5
+    floor2_x_static = 17.5  # Fixed X position where floor2_L1 appears 17.5
     floor2_height = 0.3
     floor2_width = 0.5
     
@@ -1143,13 +1352,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 1 Properties
     arc1_L1_x = 0.3
     arc1_L1_center = [arc1_L1_x, reg_arc]
-    arc1_L1_radius = small_arc_size
+    arc1_L1_radius = med_arc_size
     arc1_L1_start_angle = 0
     arc1_L1_end_angle = 180
     
     # Arc 2 Properties
     arc2_L1_x = 1.1
-    arc2_L1_center = [arc2_L1_x, low_arc]
+    arc2_L1_center = [arc2_L1_x, reg_arc]
     arc2_L1_radius = med_arc_size
     arc2_L1_start_angle = 0
     arc2_L1_end_angle = 180
@@ -1157,41 +1366,41 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 3 Properties
     arc3_L1_x = 1.9
     arc3_L1_center = [arc3_L1_x, high_arc]
-    arc3_L1_radius = large_arc_size
+    arc3_L1_radius = small_arc_size
     arc3_L1_start_angle = 0
     arc3_L1_end_angle = 180
     
     # Arc 4 Properties
     arc4_L1_x = 2.7
-    arc4_L1_center = [arc4_L1_x, low_arc]
-    arc4_L1_radius = small_arc_size
+    arc4_L1_center = [arc4_L1_x, reg_arc]
+    arc4_L1_radius = med_arc_size
     arc4_L1_start_angle = 0
     arc4_L1_end_angle = 180
     
     # Arc 5 Properties
     arc5_L1_x = 3.5
     arc5_L1_center = [arc5_L1_x, reg_arc]
-    arc5_L1_radius = large_arc_size
+    arc5_L1_radius = med_arc_size
     arc5_L1_start_angle = 0
     arc5_L1_end_angle = 180
     
     # Arc 6 Properties
     arc6_L1_x = 4.3
-    arc6_L1_center = [arc6_L1_x, high_arc]
-    arc6_L1_radius = med_arc_size
+    arc6_L1_center = [arc6_L1_x, low_arc]
+    arc6_L1_radius = large_arc_size
     arc6_L1_start_angle = 0
     arc6_L1_end_angle = 180
     
     # Arc 7 Properties
     arc7_L1_x = 5.1
-    arc7_L1_center = [arc7_L1_x, low_arc]
-    arc7_L1_radius = large_arc_size
+    arc7_L1_center = [arc7_L1_x, reg_arc]
+    arc7_L1_radius = med_arc_size
     arc7_L1_start_angle = 0
     arc7_L1_end_angle = 180
     
     # Arc 8 Properties
     arc8_L1_x = 5.9
-    arc8_L1_center = [arc8_L1_x, high_arc]
+    arc8_L1_center = [arc8_L1_x, reg_arc]
     arc8_L1_radius = med_arc_size
     arc8_L1_start_angle = 0
     arc8_L1_end_angle = 180
@@ -1199,20 +1408,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 9 Properties
     arc9_L1_x = 6.7
     arc9_L1_center = [arc9_L1_x, high_arc]
-    arc9_L1_radius = med_arc_size
+    arc9_L1_radius = large_arc_size
     arc9_L1_start_angle = 0
     arc9_L1_end_angle = 180
     
     # Arc 10 Properties
     arc10_L1_x = 7.5
-    arc10_L1_center = [arc10_L1_x, high_arc]
+    arc10_L1_center = [arc10_L1_x, reg_arc]
     arc10_L1_radius = med_arc_size
     arc10_L1_start_angle = 0
     arc10_L1_end_angle = 180
     
     # Arc 11 Properties
     arc11_L1_x = 8.3
-    arc11_L1_center = [arc11_L1_x, high_arc]
+    arc11_L1_center = [arc11_L1_x, reg_arc]
     arc11_L1_radius = med_arc_size
     arc11_L1_start_angle = 0
     arc11_L1_end_angle = 180
@@ -1454,6 +1663,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Generate wiggle arcs for all arcs
     wiggle_arc1_L1 = create_wiggle_arc(arc1_L1_center, arc1_L1_radius, wiggle_thickness)
+    #wiggle_arc1_L1.vertices = [(x, 2 * arc1_L1_center[1] - y) for (x, y) in wiggle_arc1_L1.vertices]
     wiggle_arc2_L1 = create_wiggle_arc(arc2_L1_center, arc2_L1_radius, wiggle_thickness)
     wiggle_arc3_L1 = create_wiggle_arc(arc3_L1_center, arc3_L1_radius, wiggle_thickness)
     wiggle_arc4_L1 = create_wiggle_arc(arc4_L1_center, arc4_L1_radius, wiggle_thickness)
@@ -1548,6 +1758,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L1',    name='fail_sound_L1'
     )
     fail_sound_L1.setVolume(0.6)
+    break_key_L1 = keyboard.Keyboard(deviceName='break_key_L1')
+    break_text_L1 = visual.TextStim(win=win, name='break_text_L1',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_2" ---
     dino_image_L2 = visual.ImageStim(
@@ -1807,50 +2025,50 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 1 Properties
     arc1_L2_x = 0.3
-    arc1_L2_center = [arc1_L2_x, low_arc]
-    arc1_L2_radius = small_arc_size
+    arc1_L2_center = [arc1_L2_x, reg_arc]
+    arc1_L2_radius = med_arc_size
     arc1_L2_start_angle = 0
     arc1_L2_end_angle = 180
     
     # Arc 2 Properties
     arc2_L2_x = 1.1
-    arc2_L2_center = [arc2_L2_x, reg_arc]
-    arc2_L2_radius = large_arc_size
+    arc2_L2_center = [arc2_L2_x, low_arc]
+    arc2_L2_radius = small_arc_size
     arc2_L2_start_angle = 0
     arc2_L2_end_angle = 180
     
     # Arc 3 Properties
     arc3_L2_x = 1.9
-    arc3_L2_center = [arc3_L2_x, high_arc]
+    arc3_L2_center = [arc3_L2_x, reg_arc]
     arc3_L2_radius = med_arc_size
     arc3_L2_start_angle = 0
     arc3_L2_end_angle = 180
     
     # Arc 4 Properties
     arc4_L2_x = 2.7
-    arc4_L2_center = [arc4_L2_x, low_arc]
-    arc4_L2_radius = small_arc_size
+    arc4_L2_center = [arc4_L2_x, high_arc]
+    arc4_L2_radius = large_arc_size
     arc4_L2_start_angle = 0
     arc4_L2_end_angle = 180
     
     # Arc 5 Properties
     arc5_L2_x = 3.5
     arc5_L2_center = [arc5_L2_x, reg_arc]
-    arc5_L2_radius = large_arc_size
+    arc5_L2_radius = med_arc_size
     arc5_L2_start_angle = 0
     arc5_L2_end_angle = 180
     
     # Arc 6 Properties
     arc6_L2_x = 4.3
-    arc6_L2_center = [arc6_L2_x, high_arc]
-    arc6_L2_radius = med_arc_size
+    arc6_L2_center = [arc6_L2_x, low_arc]
+    arc6_L2_radius = large_arc_size
     arc6_L2_start_angle = 0
     arc6_L2_end_angle = 180
     
     # Arc 7 Properties
     arc7_L2_x = 5.1
-    arc7_L2_center = [arc7_L2_x, low_arc]
-    arc7_L2_radius = large_arc_size
+    arc7_L2_center = [arc7_L2_x, reg_arc]
+    arc7_L2_radius = med_arc_size
     arc7_L2_start_angle = 0
     arc7_L2_end_angle = 180
     
@@ -1864,20 +2082,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 9 Properties
     arc9_L2_x = 6.7
     arc9_L2_center = [arc9_L2_x, high_arc]
-    arc9_L2_radius = med_arc_size
+    arc9_L2_radius = small_arc_size
     arc9_L2_start_angle = 0
     arc9_L2_end_angle = 180
     
     # Arc 10 Properties
     arc10_L2_x = 7.5
     arc10_L2_center = [arc10_L2_x, high_arc]
-    arc10_L2_radius = med_arc_size
+    arc10_L2_radius = large_arc_size
     arc10_L2_start_angle = 0
     arc10_L2_end_angle = 180
     
     # Arc 11 Properties
     arc11_L2_x = 8.3
-    arc11_L2_center = [arc11_L2_x, high_arc]
+    arc11_L2_center = [arc11_L2_x, reg_arc]
     arc11_L2_radius = med_arc_size
     arc11_L2_start_angle = 0
     arc11_L2_end_angle = 180
@@ -2204,6 +2422,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L2',    name='fail_sound_L2'
     )
     fail_sound_L2.setVolume(0.6)
+    break_key_L2 = keyboard.Keyboard(deviceName='break_key_L2')
+    break_text_L2 = visual.TextStim(win=win, name='break_text_L2',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_3" ---
     dino_image_L3 = visual.ImageStim(
@@ -2464,13 +2690,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 1 Properties
     arc1_L3_x = 0.3
     arc1_L3_center = [arc1_L3_x, reg_arc]
-    arc1_L3_radius = small_arc_size
+    arc1_L3_radius = med_arc_size
     arc1_L3_start_angle = 0
     arc1_L3_end_angle = 180
     
     # Arc 2 Properties
     arc2_L3_x = 1.1
-    arc2_L3_center = [arc2_L3_x, reg_arc]
+    arc2_L3_center = [arc2_L3_x, high_arc]
     arc2_L3_radius = large_arc_size
     arc2_L3_start_angle = 0
     arc2_L3_end_angle = 180
@@ -2484,7 +2710,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 4 Properties
     arc4_L3_x = 2.7
-    arc4_L3_center = [arc4_L3_x, reg_arc]
+    arc4_L3_center = [arc4_L3_x, low_arc]
     arc4_L3_radius = small_arc_size
     arc4_L3_start_angle = 0
     arc4_L3_end_angle = 180
@@ -2492,42 +2718,42 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 5 Properties
     arc5_L3_x = 3.5
     arc5_L3_center = [arc5_L3_x, reg_arc]
-    arc5_L3_radius = large_arc_size
+    arc5_L3_radius = med_arc_size
     arc5_L3_start_angle = 0
     arc5_L3_end_angle = 180
     
     # Arc 6 Properties
     arc6_L3_x = 4.3
-    arc6_L3_center = [arc6_L3_x, reg_arc]
-    arc6_L3_radius = med_arc_size
+    arc6_L3_center = [arc6_L3_x, low_arc]
+    arc6_L3_radius = small_arc_size
     arc6_L3_start_angle = 0
     arc6_L3_end_angle = 180
     
     # Arc 7 Properties
     arc7_L3_x = 5.1
-    arc7_L3_center = [arc7_L3_x, reg_arc]
+    arc7_L3_center = [arc7_L3_x, high_arc]
     arc7_L3_radius = large_arc_size
     arc7_L3_start_angle = 0
     arc7_L3_end_angle = 180
     
     # Arc 8 Properties
     arc8_L3_x = 5.9
-    arc8_L3_center = [arc8_L3_x, reg_arc]
+    arc8_L3_center = [arc8_L3_x, low_arc]
     arc8_L3_radius = med_arc_size
     arc8_L3_start_angle = 0
     arc8_L3_end_angle = 180
     
     # Arc 9 Properties
     arc9_L3_x = 6.7
-    arc9_L3_center = [arc9_L3_x, reg_arc]
+    arc9_L3_center = [arc9_L3_x, high_arc]
     arc9_L3_radius = med_arc_size
     arc9_L3_start_angle = 0
     arc9_L3_end_angle = 180
     
     # Arc 10 Properties
     arc10_L3_x = 7.5
-    arc10_L3_center = [arc10_L3_x, reg_arc]
-    arc10_L3_radius = med_arc_size
+    arc10_L3_center = [arc10_L3_x, low_arc]
+    arc10_L3_radius = large_arc_size
     arc10_L3_start_angle = 0
     arc10_L3_end_angle = 180
     
@@ -2860,6 +3086,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L3',    name='fail_sound_L3'
     )
     fail_sound_L3.setVolume(0.6)
+    break_key_L3 = keyboard.Keyboard(deviceName='break_key_L3')
+    break_text_L3 = visual.TextStim(win=win, name='break_text_L3',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_4" ---
     dino_image_L4 = visual.ImageStim(
@@ -3126,36 +3360,36 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 2 Properties
     arc2_L4_x = 1.1
-    arc2_L4_center = [arc2_L4_x, reg_arc]
-    arc2_L4_radius = large_arc_size
+    arc2_L4_center = [arc2_L4_x, low_arc]
+    arc2_L4_radius = med_arc_size
     arc2_L4_start_angle = 0
     arc2_L4_end_angle = 180
     
     # Arc 3 Properties
     arc3_L4_x = 1.9
     arc3_L4_center = [arc3_L4_x, reg_arc]
-    arc3_L4_radius = med_arc_size
+    arc3_L4_radius = large_arc_size
     arc3_L4_start_angle = 0
     arc3_L4_end_angle = 180
     
     # Arc 4 Properties
     arc4_L4_x = 2.7
-    arc4_L4_center = [arc4_L4_x, reg_arc]
-    arc4_L4_radius = small_arc_size
+    arc4_L4_center = [arc4_L4_x, high_arc]
+    arc4_L4_radius = large_arc_size
     arc4_L4_start_angle = 0
     arc4_L4_end_angle = 180
     
     # Arc 5 Properties
     arc5_L4_x = 3.5
     arc5_L4_center = [arc5_L4_x, reg_arc]
-    arc5_L4_radius = large_arc_size
+    arc5_L4_radius = med_arc_size
     arc5_L4_start_angle = 0
     arc5_L4_end_angle = 180
     
     # Arc 6 Properties
     arc6_L4_x = 4.3
-    arc6_L4_center = [arc6_L4_x, reg_arc]
-    arc6_L4_radius = med_arc_size
+    arc6_L4_center = [arc6_L4_x, low_arc]
+    arc6_L4_radius = small_arc_size
     arc6_L4_start_angle = 0
     arc6_L4_end_angle = 180
     
@@ -3175,14 +3409,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 9 Properties
     arc9_L4_x = 6.7
-    arc9_L4_center = [arc9_L4_x, reg_arc]
-    arc9_L4_radius = med_arc_size
+    arc9_L4_center = [arc9_L4_x, high_arc]
+    arc9_L4_radius = small_arc_size
     arc9_L4_start_angle = 0
     arc9_L4_end_angle = 180
     
     # Arc 10 Properties
     arc10_L4_x = 7.5
-    arc10_L4_center = [arc10_L4_x, reg_arc]
+    arc10_L4_center = [arc10_L4_x, low_arc]
     arc10_L4_radius = med_arc_size
     arc10_L4_start_angle = 0
     arc10_L4_end_angle = 180
@@ -3190,7 +3424,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 11 Properties
     arc11_L4_x = 8.3
     arc11_L4_center = [arc11_L4_x, reg_arc]
-    arc11_L4_radius = med_arc_size
+    arc11_L4_radius = large_arc_size
     arc11_L4_start_angle = 0
     arc11_L4_end_angle = 180
     
@@ -3516,6 +3750,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L4',    name='fail_sound_L4'
     )
     fail_sound_L4.setVolume(0.6)
+    break_key_L4 = keyboard.Keyboard(deviceName='break_key_L4')
+    break_text_L4 = visual.TextStim(win=win, name='break_text_L4',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_5" ---
     dino_image_L5 = visual.ImageStim(
@@ -3782,15 +4024,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 2 Properties
     arc2_L5_x = 1.1
-    arc2_L5_center = [arc2_L5_x, reg_arc]
-    arc2_L5_radius = large_arc_size
+    arc2_L5_center = [arc2_L5_x, low_arc]
+    arc2_L5_radius = small_arc_size
     arc2_L5_start_angle = 0
     arc2_L5_end_angle = 180
     
     # Arc 3 Properties
     arc3_L5_x = 1.9
-    arc3_L5_center = [arc3_L5_x, reg_arc]
-    arc3_L5_radius = med_arc_size
+    arc3_L5_center = [arc3_L5_x, high_arc]
+    arc3_L5_radius = large_arc_size
     arc3_L5_start_angle = 0
     arc3_L5_end_angle = 180
     
@@ -3803,43 +4045,43 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 5 Properties
     arc5_L5_x = 3.5
-    arc5_L5_center = [arc5_L5_x, reg_arc]
-    arc5_L5_radius = large_arc_size
+    arc5_L5_center = [arc5_L5_x, low_arc]
+    arc5_L5_radius = med_arc_size
     arc5_L5_start_angle = 0
     arc5_L5_end_angle = 180
     
     # Arc 6 Properties
     arc6_L5_x = 4.3
     arc6_L5_center = [arc6_L5_x, reg_arc]
-    arc6_L5_radius = med_arc_size
+    arc6_L5_radius = large_arc_size
     arc6_L5_start_angle = 0
     arc6_L5_end_angle = 180
     
     # Arc 7 Properties
     arc7_L5_x = 5.1
-    arc7_L5_center = [arc7_L5_x, reg_arc]
-    arc7_L5_radius = large_arc_size
+    arc7_L5_center = [arc7_L5_x, high_arc]
+    arc7_L5_radius = small_arc_size
     arc7_L5_start_angle = 0
     arc7_L5_end_angle = 180
     
     # Arc 8 Properties
     arc8_L5_x = 5.9
-    arc8_L5_center = [arc8_L5_x, reg_arc]
-    arc8_L5_radius = med_arc_size
+    arc8_L5_center = [arc8_L5_x, low_arc]
+    arc8_L5_radius = large_arc_size
     arc8_L5_start_angle = 0
     arc8_L5_end_angle = 180
     
     # Arc 9 Properties
     arc9_L5_x = 6.7
-    arc9_L5_center = [arc9_L5_x, reg_arc]
+    arc9_L5_center = [arc9_L5_x, high_arc]
     arc9_L5_radius = med_arc_size
     arc9_L5_start_angle = 0
     arc9_L5_end_angle = 180
     
     # Arc 10 Properties
     arc10_L5_x = 7.5
-    arc10_L5_center = [arc10_L5_x, reg_arc]
-    arc10_L5_radius = med_arc_size
+    arc10_L5_center = [arc10_L5_x, low_arc]
+    arc10_L5_radius = large_arc_size
     arc10_L5_start_angle = 0
     arc10_L5_end_angle = 180
     
@@ -4172,6 +4414,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L5',    name='fail_sound_L5'
     )
     fail_sound_L5.setVolume(0.6)
+    break_key_L5 = keyboard.Keyboard(deviceName='break_key_L5')
+    break_text_L5 = visual.TextStim(win=win, name='break_text_L5',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_6" ---
     dino_image_L6 = visual.ImageStim(
@@ -4432,14 +4682,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 1 Properties
     arc1_L6_x = 0.3
     arc1_L6_center = [arc1_L6_x, reg_arc]
-    arc1_L6_radius = small_arc_size
+    arc1_L6_radius = large_arc_size
     arc1_L6_start_angle = 0
     arc1_L6_end_angle = 180
     
     # Arc 2 Properties
     arc2_L6_x = 1.1
-    arc2_L6_center = [arc2_L6_x, reg_arc]
-    arc2_L6_radius = large_arc_size
+    arc2_L6_center = [arc2_L6_x, low_arc]
+    arc2_L6_radius = small_arc_size
     arc2_L6_start_angle = 0
     arc2_L6_end_angle = 180
     
@@ -4452,57 +4702,57 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 4 Properties
     arc4_L6_x = 2.7
-    arc4_L6_center = [arc4_L6_x, reg_arc]
-    arc4_L6_radius = small_arc_size
+    arc4_L6_center = [arc4_L6_x, high_arc]
+    arc4_L6_radius = large_arc_size
     arc4_L6_start_angle = 0
     arc4_L6_end_angle = 180
     
     # Arc 5 Properties
     arc5_L6_x = 3.5
     arc5_L6_center = [arc5_L6_x, reg_arc]
-    arc5_L6_radius = large_arc_size
+    arc5_L6_radius = small_arc_size
     arc5_L6_start_angle = 0
     arc5_L6_end_angle = 180
     
     # Arc 6 Properties
     arc6_L6_x = 4.3
-    arc6_L6_center = [arc6_L6_x, reg_arc]
+    arc6_L6_center = [arc6_L6_x, low_arc]
     arc6_L6_radius = med_arc_size
     arc6_L6_start_angle = 0
     arc6_L6_end_angle = 180
     
     # Arc 7 Properties
     arc7_L6_x = 5.1
-    arc7_L6_center = [arc7_L6_x, reg_arc]
-    arc7_L6_radius = large_arc_size
+    arc7_L6_center = [arc7_L6_x, high_arc]
+    arc7_L6_radius = small_arc_size
     arc7_L6_start_angle = 0
     arc7_L6_end_angle = 180
     
     # Arc 8 Properties
     arc8_L6_x = 5.9
     arc8_L6_center = [arc8_L6_x, reg_arc]
-    arc8_L6_radius = med_arc_size
+    arc8_L6_radius = large_arc_size
     arc8_L6_start_angle = 0
     arc8_L6_end_angle = 180
     
     # Arc 9 Properties
     arc9_L6_x = 6.7
-    arc9_L6_center = [arc9_L6_x, reg_arc]
+    arc9_L6_center = [arc9_L6_x, low_arc]
     arc9_L6_radius = med_arc_size
     arc9_L6_start_angle = 0
     arc9_L6_end_angle = 180
     
     # Arc 10 Properties
     arc10_L6_x = 7.5
-    arc10_L6_center = [arc10_L6_x, reg_arc]
-    arc10_L6_radius = med_arc_size
+    arc10_L6_center = [arc10_L6_x, high_arc]
+    arc10_L6_radius = small_arc_size
     arc10_L6_start_angle = 0
     arc10_L6_end_angle = 180
     
     # Arc 11 Properties
     arc11_L6_x = 8.3
     arc11_L6_center = [arc11_L6_x, reg_arc]
-    arc11_L6_radius = med_arc_size
+    arc11_L6_radius = large_arc_size
     arc11_L6_start_angle = 0
     arc11_L6_end_angle = 180
     
@@ -4828,6 +5078,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L6',    name='fail_sound_L6'
     )
     fail_sound_L6.setVolume(0.6)
+    break_key_L6 = keyboard.Keyboard(deviceName='break_key_L6')
+    break_text_L6 = visual.TextStim(win=win, name='break_text_L6',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_7" ---
     dino_image_L7 = visual.ImageStim(
@@ -5094,64 +5352,64 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 2 Properties
     arc2_L7_x = 1.1
-    arc2_L7_center = [arc2_L7_x, reg_arc]
-    arc2_L7_radius = large_arc_size
+    arc2_L7_center = [arc2_L7_x, high_arc]
+    arc2_L7_radius = med_arc_size
     arc2_L7_start_angle = 0
     arc2_L7_end_angle = 180
     
     # Arc 3 Properties
     arc3_L7_x = 1.9
-    arc3_L7_center = [arc3_L7_x, reg_arc]
-    arc3_L7_radius = med_arc_size
+    arc3_L7_center = [arc3_L7_x, low_arc]
+    arc3_L7_radius = large_arc_size
     arc3_L7_start_angle = 0
     arc3_L7_end_angle = 180
     
     # Arc 4 Properties
     arc4_L7_x = 2.7
-    arc4_L7_center = [arc4_L7_x, reg_arc]
+    arc4_L7_center = [arc4_L7_x, high_arc]
     arc4_L7_radius = small_arc_size
     arc4_L7_start_angle = 0
     arc4_L7_end_angle = 180
     
     # Arc 5 Properties
     arc5_L7_x = 3.5
-    arc5_L7_center = [arc5_L7_x, reg_arc]
-    arc5_L7_radius = large_arc_size
+    arc5_L7_center = [arc5_L7_x, low_arc]
+    arc5_L7_radius = med_arc_size
     arc5_L7_start_angle = 0
     arc5_L7_end_angle = 180
     
     # Arc 6 Properties
     arc6_L7_x = 4.3
-    arc6_L7_center = [arc6_L7_x, reg_arc]
-    arc6_L7_radius = med_arc_size
+    arc6_L7_center = [arc6_L7_x, high_arc]
+    arc6_L7_radius = large_arc_size
     arc6_L7_start_angle = 0
     arc6_L7_end_angle = 180
     
     # Arc 7 Properties
     arc7_L7_x = 5.1
     arc7_L7_center = [arc7_L7_x, reg_arc]
-    arc7_L7_radius = large_arc_size
+    arc7_L7_radius = small_arc_size
     arc7_L7_start_angle = 0
     arc7_L7_end_angle = 180
     
     # Arc 8 Properties
     arc8_L7_x = 5.9
-    arc8_L7_center = [arc8_L7_x, reg_arc]
+    arc8_L7_center = [arc8_L7_x, low_arc]
     arc8_L7_radius = med_arc_size
     arc8_L7_start_angle = 0
     arc8_L7_end_angle = 180
     
     # Arc 9 Properties
     arc9_L7_x = 6.7
-    arc9_L7_center = [arc9_L7_x, reg_arc]
-    arc9_L7_radius = med_arc_size
+    arc9_L7_center = [arc9_L7_x, high_arc]
+    arc9_L7_radius = large_arc_size
     arc9_L7_start_angle = 0
     arc9_L7_end_angle = 180
     
     # Arc 10 Properties
     arc10_L7_x = 7.5
-    arc10_L7_center = [arc10_L7_x, reg_arc]
-    arc10_L7_radius = med_arc_size
+    arc10_L7_center = [arc10_L7_x, low_arc]
+    arc10_L7_radius = small_arc_size
     arc10_L7_start_angle = 0
     arc10_L7_end_angle = 180
     
@@ -5484,6 +5742,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L7',    name='fail_sound_L7'
     )
     fail_sound_L7.setVolume(0.6)
+    break_key_L7 = keyboard.Keyboard(deviceName='break_key_L7')
+    break_text_L7 = visual.TextStim(win=win, name='break_text_L7',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_8" ---
     dino_image_L8 = visual.ImageStim(
@@ -5744,13 +6010,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 1 Properties
     arc1_L8_x = 0.3
     arc1_L8_center = [arc1_L8_x, reg_arc]
-    arc1_L8_radius = small_arc_size
+    arc1_L8_radius = med_arc_size
     arc1_L8_start_angle = 0
     arc1_L8_end_angle = 180
     
     # Arc 2 Properties
     arc2_L8_x = 1.1
-    arc2_L8_center = [arc2_L8_x, reg_arc]
+    arc2_L8_center = [arc2_L8_x, low_arc]
     arc2_L8_radius = large_arc_size
     arc2_L8_start_angle = 0
     arc2_L8_end_angle = 180
@@ -5758,14 +6024,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 3 Properties
     arc3_L8_x = 1.9
     arc3_L8_center = [arc3_L8_x, reg_arc]
-    arc3_L8_radius = med_arc_size
+    arc3_L8_radius = small_arc_size
     arc3_L8_start_angle = 0
     arc3_L8_end_angle = 180
     
     # Arc 4 Properties
     arc4_L8_x = 2.7
-    arc4_L8_center = [arc4_L8_x, reg_arc]
-    arc4_L8_radius = small_arc_size
+    arc4_L8_center = [arc4_L8_x, high_arc]
+    arc4_L8_radius = med_arc_size
     arc4_L8_start_angle = 0
     arc4_L8_end_angle = 180
     
@@ -5778,8 +6044,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 6 Properties
     arc6_L8_x = 4.3
-    arc6_L8_center = [arc6_L8_x, reg_arc]
-    arc6_L8_radius = med_arc_size
+    arc6_L8_center = [arc6_L8_x, low_arc]
+    arc6_L8_radius = small_arc_size
     arc6_L8_start_angle = 0
     arc6_L8_end_angle = 180
     
@@ -5792,7 +6058,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 8 Properties
     arc8_L8_x = 5.9
-    arc8_L8_center = [arc8_L8_x, reg_arc]
+    arc8_L8_center = [arc8_L8_x, high_arc]
     arc8_L8_radius = med_arc_size
     arc8_L8_start_angle = 0
     arc8_L8_end_angle = 180
@@ -5800,14 +6066,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 9 Properties
     arc9_L8_x = 6.7
     arc9_L8_center = [arc9_L8_x, reg_arc]
-    arc9_L8_radius = med_arc_size
+    arc9_L8_radius = small_arc_size
     arc9_L8_start_angle = 0
     arc9_L8_end_angle = 180
     
     # Arc 10 Properties
     arc10_L8_x = 7.5
-    arc10_L8_center = [arc10_L8_x, reg_arc]
-    arc10_L8_radius = med_arc_size
+    arc10_L8_center = [arc10_L8_x, high_arc]
+    arc10_L8_radius = large_arc_size
     arc10_L8_start_angle = 0
     arc10_L8_end_angle = 180
     
@@ -6140,6 +6406,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L8',    name='fail_sound_L8'
     )
     fail_sound_L8.setVolume(0.6)
+    break_key_L8 = keyboard.Keyboard(deviceName='break_key_L8')
+    break_text_L8 = visual.TextStim(win=win, name='break_text_L8',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_9" ---
     dino_image_L9 = visual.ImageStim(
@@ -6406,42 +6680,42 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 2 Properties
     arc2_L9_x = 1.1
-    arc2_L9_center = [arc2_L9_x, reg_arc]
+    arc2_L9_center = [arc2_L9_x, low_arc]
     arc2_L9_radius = large_arc_size
     arc2_L9_start_angle = 0
     arc2_L9_end_angle = 180
     
     # Arc 3 Properties
     arc3_L9_x = 1.9
-    arc3_L9_center = [arc3_L9_x, reg_arc]
+    arc3_L9_center = [arc3_L9_x, high_arc]
     arc3_L9_radius = med_arc_size
     arc3_L9_start_angle = 0
     arc3_L9_end_angle = 180
     
     # Arc 4 Properties
     arc4_L9_x = 2.7
-    arc4_L9_center = [arc4_L9_x, reg_arc]
-    arc4_L9_radius = small_arc_size
+    arc4_L9_center = [arc4_L9_x, low_arc]
+    arc4_L9_radius = large_arc_size
     arc4_L9_start_angle = 0
     arc4_L9_end_angle = 180
     
     # Arc 5 Properties
     arc5_L9_x = 3.5
     arc5_L9_center = [arc5_L9_x, reg_arc]
-    arc5_L9_radius = large_arc_size
+    arc5_L9_radius = small_arc_size
     arc5_L9_start_angle = 0
     arc5_L9_end_angle = 180
     
     # Arc 6 Properties
     arc6_L9_x = 4.3
-    arc6_L9_center = [arc6_L9_x, reg_arc]
+    arc6_L9_center = [arc6_L9_x, low_arc]
     arc6_L9_radius = med_arc_size
     arc6_L9_start_angle = 0
     arc6_L9_end_angle = 180
     
     # Arc 7 Properties
     arc7_L9_x = 5.1
-    arc7_L9_center = [arc7_L9_x, reg_arc]
+    arc7_L9_center = [arc7_L9_x, high_arc]
     arc7_L9_radius = large_arc_size
     arc7_L9_start_angle = 0
     arc7_L9_end_angle = 180
@@ -6449,21 +6723,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 8 Properties
     arc8_L9_x = 5.9
     arc8_L9_center = [arc8_L9_x, reg_arc]
-    arc8_L9_radius = med_arc_size
+    arc8_L9_radius = small_arc_size
     arc8_L9_start_angle = 0
     arc8_L9_end_angle = 180
     
     # Arc 9 Properties
     arc9_L9_x = 6.7
-    arc9_L9_center = [arc9_L9_x, reg_arc]
+    arc9_L9_center = [arc9_L9_x, low_arc]
     arc9_L9_radius = med_arc_size
     arc9_L9_start_angle = 0
     arc9_L9_end_angle = 180
     
     # Arc 10 Properties
     arc10_L9_x = 7.5
-    arc10_L9_center = [arc10_L9_x, reg_arc]
-    arc10_L9_radius = med_arc_size
+    arc10_L9_center = [arc10_L9_x, high_arc]
+    arc10_L9_radius = small_arc_size
     arc10_L9_start_angle = 0
     arc10_L9_end_angle = 180
     
@@ -6796,6 +7070,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L9',    name='fail_sound_L9'
     )
     fail_sound_L9.setVolume(0.6)
+    break_key_L9 = keyboard.Keyboard(deviceName='break_key_L9')
+    break_text_L9 = visual.TextStim(win=win, name='break_text_L9',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_10" ---
     dino_image_L10 = visual.ImageStim(
@@ -7056,70 +7338,70 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 1 Properties
     arc1_L10_x = 0.3
     arc1_L10_center = [arc1_L10_x, reg_arc]
-    arc1_L10_radius = small_arc_size
+    arc1_L10_radius = med_arc_size
     arc1_L10_start_angle = 0
     arc1_L10_end_angle = 180
     
     # Arc 2 Properties
     arc2_L10_x = 1.1
-    arc2_L10_center = [arc2_L10_x, reg_arc]
-    arc2_L10_radius = large_arc_size
+    arc2_L10_center = [arc2_L10_x, low_arc]
+    arc2_L10_radius = small_arc_size
     arc2_L10_start_angle = 0
     arc2_L10_end_angle = 180
     
     # Arc 3 Properties
     arc3_L10_x = 1.9
-    arc3_L10_center = [arc3_L10_x, reg_arc]
-    arc3_L10_radius = med_arc_size
+    arc3_L10_center = [arc3_L10_x, high_arc]
+    arc3_L10_radius = large_arc_size
     arc3_L10_start_angle = 0
     arc3_L10_end_angle = 180
     
     # Arc 4 Properties
     arc4_L10_x = 2.7
-    arc4_L10_center = [arc4_L10_x, reg_arc]
-    arc4_L10_radius = small_arc_size
+    arc4_L10_center = [arc4_L10_x, low_arc]
+    arc4_L10_radius = med_arc_size
     arc4_L10_start_angle = 0
     arc4_L10_end_angle = 180
     
     # Arc 5 Properties
     arc5_L10_x = 3.5
     arc5_L10_center = [arc5_L10_x, reg_arc]
-    arc5_L10_radius = large_arc_size
+    arc5_L10_radius = small_arc_size
     arc5_L10_start_angle = 0
     arc5_L10_end_angle = 180
     
     # Arc 6 Properties
     arc6_L10_x = 4.3
-    arc6_L10_center = [arc6_L10_x, reg_arc]
-    arc6_L10_radius = med_arc_size
+    arc6_L10_center = [arc6_L10_x, low_arc]
+    arc6_L10_radius = large_arc_size
     arc6_L10_start_angle = 0
     arc6_L10_end_angle = 180
     
     # Arc 7 Properties
     arc7_L10_x = 5.1
-    arc7_L10_center = [arc7_L10_x, reg_arc]
-    arc7_L10_radius = large_arc_size
+    arc7_L10_center = [arc7_L10_x, high_arc]
+    arc7_L10_radius = med_arc_size
     arc7_L10_start_angle = 0
     arc7_L10_end_angle = 180
     
     # Arc 8 Properties
     arc8_L10_x = 5.9
     arc8_L10_center = [arc8_L10_x, reg_arc]
-    arc8_L10_radius = med_arc_size
+    arc8_L10_radius = small_arc_size
     arc8_L10_start_angle = 0
     arc8_L10_end_angle = 180
     
     # Arc 9 Properties
     arc9_L10_x = 6.7
-    arc9_L10_center = [arc9_L10_x, reg_arc]
-    arc9_L10_radius = med_arc_size
+    arc9_L10_center = [arc9_L10_x, low_arc]
+    arc9_L10_radius = large_arc_size
     arc9_L10_start_angle = 0
     arc9_L10_end_angle = 180
     
     # Arc 10 Properties
     arc10_L10_x = 7.5
-    arc10_L10_center = [arc10_L10_x, reg_arc]
-    arc10_L10_radius = med_arc_size
+    arc10_L10_center = [arc10_L10_x, high_arc]
+    arc10_L10_radius = small_arc_size
     arc10_L10_start_angle = 0
     arc10_L10_end_angle = 180
     
@@ -7452,6 +7734,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L10',    name='fail_sound_L10'
     )
     fail_sound_L10.setVolume(0.6)
+    break_key_L10 = keyboard.Keyboard(deviceName='break_key_L10')
+    break_text_L10 = visual.TextStim(win=win, name='break_text_L10',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_11" ---
     dino_image_L11 = visual.ImageStim(
@@ -7712,20 +8002,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 1 Properties
     arc1_L11_x = 0.3
     arc1_L11_center = [arc1_L11_x, reg_arc]
-    arc1_L11_radius = small_arc_size
+    arc1_L11_radius = large_arc_size
     arc1_L11_start_angle = 0
     arc1_L11_end_angle = 180
     
     # Arc 2 Properties
     arc2_L11_x = 1.1
-    arc2_L11_center = [arc2_L11_x, reg_arc]
-    arc2_L11_radius = large_arc_size
+    arc2_L11_center = [arc2_L11_x, low_arc]
+    arc2_L11_radius = small_arc_size
     arc2_L11_start_angle = 0
     arc2_L11_end_angle = 180
     
     # Arc 3 Properties
     arc3_L11_x = 1.9
-    arc3_L11_center = [arc3_L11_x, reg_arc]
+    arc3_L11_center = [arc3_L11_x, high_arc]
     arc3_L11_radius = med_arc_size
     arc3_L11_start_angle = 0
     arc3_L11_end_angle = 180
@@ -7733,14 +8023,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 4 Properties
     arc4_L11_x = 2.7
     arc4_L11_center = [arc4_L11_x, reg_arc]
-    arc4_L11_radius = small_arc_size
+    arc4_L11_radius = large_arc_size
     arc4_L11_start_angle = 0
     arc4_L11_end_angle = 180
     
     # Arc 5 Properties
     arc5_L11_x = 3.5
-    arc5_L11_center = [arc5_L11_x, reg_arc]
-    arc5_L11_radius = large_arc_size
+    arc5_L11_center = [arc5_L11_x, low_arc]
+    arc5_L11_radius = small_arc_size
     arc5_L11_start_angle = 0
     arc5_L11_end_angle = 180
     
@@ -7753,15 +8043,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 7 Properties
     arc7_L11_x = 5.1
-    arc7_L11_center = [arc7_L11_x, reg_arc]
+    arc7_L11_center = [arc7_L11_x, high_arc]
     arc7_L11_radius = large_arc_size
     arc7_L11_start_angle = 0
     arc7_L11_end_angle = 180
     
     # Arc 8 Properties
     arc8_L11_x = 5.9
-    arc8_L11_center = [arc8_L11_x, reg_arc]
-    arc8_L11_radius = med_arc_size
+    arc8_L11_center = [arc8_L11_x, low_arc]
+    arc8_L11_radius = small_arc_size
     arc8_L11_start_angle = 0
     arc8_L11_end_angle = 180
     
@@ -7774,8 +8064,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 10 Properties
     arc10_L11_x = 7.5
-    arc10_L11_center = [arc10_L11_x, reg_arc]
-    arc10_L11_radius = med_arc_size
+    arc10_L11_center = [arc10_L11_x, high_arc]
+    arc10_L11_radius = large_arc_size
     arc10_L11_start_angle = 0
     arc10_L11_end_angle = 180
     
@@ -8108,6 +8398,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L11',    name='fail_sound_L11'
     )
     fail_sound_L11.setVolume(0.6)
+    break_key_L11 = keyboard.Keyboard(deviceName='break_key_L11')
+    break_text_L11 = visual.TextStim(win=win, name='break_text_L11',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_12" ---
     dino_image_L12 = visual.ImageStim(
@@ -8368,41 +8666,41 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 1 Properties
     arc1_L12_x = 0.3
     arc1_L12_center = [arc1_L12_x, reg_arc]
-    arc1_L12_radius = small_arc_size
+    arc1_L12_radius = med_arc_size
     arc1_L12_start_angle = 0
     arc1_L12_end_angle = 180
     
     # Arc 2 Properties
     arc2_L12_x = 1.1
-    arc2_L12_center = [arc2_L12_x, reg_arc]
-    arc2_L12_radius = large_arc_size
+    arc2_L12_center = [arc2_L12_x, low_arc]
+    arc2_L12_radius = small_arc_size
     arc2_L12_start_angle = 0
     arc2_L12_end_angle = 180
     
     # Arc 3 Properties
     arc3_L12_x = 1.9
-    arc3_L12_center = [arc3_L12_x, reg_arc]
-    arc3_L12_radius = med_arc_size
+    arc3_L12_center = [arc3_L12_x, high_arc]
+    arc3_L12_radius = large_arc_size
     arc3_L12_start_angle = 0
     arc3_L12_end_angle = 180
     
     # Arc 4 Properties
     arc4_L12_x = 2.7
     arc4_L12_center = [arc4_L12_x, reg_arc]
-    arc4_L12_radius = small_arc_size
+    arc4_L12_radius = med_arc_size
     arc4_L12_start_angle = 0
     arc4_L12_end_angle = 180
     
     # Arc 5 Properties
     arc5_L12_x = 3.5
-    arc5_L12_center = [arc5_L12_x, reg_arc]
+    arc5_L12_center = [arc5_L12_x, low_arc]
     arc5_L12_radius = large_arc_size
     arc5_L12_start_angle = 0
     arc5_L12_end_angle = 180
     
     # Arc 6 Properties
     arc6_L12_x = 4.3
-    arc6_L12_center = [arc6_L12_x, reg_arc]
+    arc6_L12_center = [arc6_L12_x, high_arc]
     arc6_L12_radius = med_arc_size
     arc6_L12_start_angle = 0
     arc6_L12_end_angle = 180
@@ -8410,14 +8708,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 7 Properties
     arc7_L12_x = 5.1
     arc7_L12_center = [arc7_L12_x, reg_arc]
-    arc7_L12_radius = large_arc_size
+    arc7_L12_radius = small_arc_size
     arc7_L12_start_angle = 0
     arc7_L12_end_angle = 180
     
     # Arc 8 Properties
     arc8_L12_x = 5.9
-    arc8_L12_center = [arc8_L12_x, reg_arc]
-    arc8_L12_radius = med_arc_size
+    arc8_L12_center = [arc8_L12_x, low_arc]
+    arc8_L12_radius = large_arc_size
     arc8_L12_start_angle = 0
     arc8_L12_end_angle = 180
     
@@ -8430,15 +8728,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 10 Properties
     arc10_L12_x = 7.5
-    arc10_L12_center = [arc10_L12_x, reg_arc]
-    arc10_L12_radius = med_arc_size
+    arc10_L12_center = [arc10_L12_x, high_arc]
+    arc10_L12_radius = small_arc_size
     arc10_L12_start_angle = 0
     arc10_L12_end_angle = 180
     
     # Arc 11 Properties
     arc11_L12_x = 8.3
     arc11_L12_center = [arc11_L12_x, reg_arc]
-    arc11_L12_radius = med_arc_size
+    arc11_L12_radius = large_arc_size
     arc11_L12_start_angle = 0
     arc11_L12_end_angle = 180
     
@@ -8764,6 +9062,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L12',    name='fail_sound_L12'
     )
     fail_sound_L12.setVolume(0.6)
+    break_key_L12 = keyboard.Keyboard(deviceName='break_key_L12')
+    break_text_L12 = visual.TextStim(win=win, name='break_text_L12',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_13" ---
     dino_image_L13 = visual.ImageStim(
@@ -9024,35 +9330,36 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 1 Properties
     arc1_L13_x = 0.3
     arc1_L13_center = [arc1_L13_x, reg_arc]
-    arc1_L13_radius = small_arc_size
+    arc1_L13_radius = med_arc_size
     arc1_L13_start_angle = 0
     arc1_L13_end_angle = 180
     
     # Arc 2 Properties
     arc2_L13_x = 1.1
-    arc2_L13_center = [arc2_L13_x, reg_arc]
-    arc2_L13_radius = large_arc_size
+    arc2_L13_center = [arc2_L13_x, low_arc]
+    arc2_L13_radius = small_arc_size
     arc2_L13_start_angle = 0
     arc2_L13_end_angle = 180
     
     # Arc 3 Properties
     arc3_L13_x = 1.9
-    arc3_L13_center = [arc3_L13_x, reg_arc]
-    arc3_L13_radius = med_arc_size
+    arc3_L13_center = [arc3_L13_x, high_arc]
+    arc3_L13_radius = large_arc_size
     arc3_L13_start_angle = 0
     arc3_L13_end_angle = 180
     
     # Arc 4 Properties
     arc4_L13_x = 2.7
     arc4_L13_center = [arc4_L13_x, reg_arc]
-    arc4_L13_radius = small_arc_size
+    arc4_L13_radius = med_arc_size
     arc4_L13_start_angle = 0
-    arc4_L13_end_angle = 180
+    arc4_L13_end_angle = -180
+    #flipped
     
     # Arc 5 Properties
     arc5_L13_x = 3.5
-    arc5_L13_center = [arc5_L13_x, reg_arc]
-    arc5_L13_radius = large_arc_size
+    arc5_L13_center = [arc5_L13_x, low_arc]
+    arc5_L13_radius = small_arc_size
     arc5_L13_start_angle = 0
     arc5_L13_end_angle = 180
     
@@ -9061,11 +9368,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc6_L13_center = [arc6_L13_x, reg_arc]
     arc6_L13_radius = med_arc_size
     arc6_L13_start_angle = 0
-    arc6_L13_end_angle = 180
+    arc6_L13_end_angle = -180
     
     # Arc 7 Properties
     arc7_L13_x = 5.1
-    arc7_L13_center = [arc7_L13_x, reg_arc]
+    arc7_L13_center = [arc7_L13_x, high_arc]
     arc7_L13_radius = large_arc_size
     arc7_L13_start_angle = 0
     arc7_L13_end_angle = 180
@@ -9075,19 +9382,19 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc8_L13_center = [arc8_L13_x, reg_arc]
     arc8_L13_radius = med_arc_size
     arc8_L13_start_angle = 0
-    arc8_L13_end_angle = 180
+    arc8_L13_end_angle = -180
     
     # Arc 9 Properties
     arc9_L13_x = 6.7
-    arc9_L13_center = [arc9_L13_x, reg_arc]
-    arc9_L13_radius = med_arc_size
+    arc9_L13_center = [arc9_L13_x, low_arc]
+    arc9_L13_radius = small_arc_size
     arc9_L13_start_angle = 0
     arc9_L13_end_angle = 180
     
     # Arc 10 Properties
     arc10_L13_x = 7.5
-    arc10_L13_center = [arc10_L13_x, reg_arc]
-    arc10_L13_radius = med_arc_size
+    arc10_L13_center = [arc10_L13_x, high_arc]
+    arc10_L13_radius = large_arc_size
     arc10_L13_start_angle = 0
     arc10_L13_end_angle = 180
     
@@ -9337,11 +9644,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     wiggle_arc1_L13 = create_wiggle_arc(arc1_L13_center, arc1_L13_radius, wiggle_thickness)
     wiggle_arc2_L13 = create_wiggle_arc(arc2_L13_center, arc2_L13_radius, wiggle_thickness)
     wiggle_arc3_L13 = create_wiggle_arc(arc3_L13_center, arc3_L13_radius, wiggle_thickness)
+    
     wiggle_arc4_L13 = create_wiggle_arc(arc4_L13_center, arc4_L13_radius, wiggle_thickness)
+    wiggle_arc4_L13.vertices = [(x, 2 * arc4_L13_center[1] - y) for (x, y) in wiggle_arc4_L13.vertices]
+    
     wiggle_arc5_L13 = create_wiggle_arc(arc5_L13_center, arc5_L13_radius, wiggle_thickness)
+    
     wiggle_arc6_L13 = create_wiggle_arc(arc6_L13_center, arc6_L13_radius, wiggle_thickness)
+    wiggle_arc6_L13.vertices = [(x, 2 * arc6_L13_center[1] - y) for (x, y) in wiggle_arc6_L13.vertices]
+    
     wiggle_arc7_L13 = create_wiggle_arc(arc7_L13_center, arc7_L13_radius, wiggle_thickness)
+    
     wiggle_arc8_L13 = create_wiggle_arc(arc8_L13_center, arc8_L13_radius, wiggle_thickness)
+    wiggle_arc8_L13.vertices = [(x, 2 * arc8_L13_center[1] - y) for (x, y) in wiggle_arc8_L13.vertices]
+    
     wiggle_arc9_L13 = create_wiggle_arc(arc9_L13_center, arc9_L13_radius, wiggle_thickness)
     wiggle_arc10_L13 = create_wiggle_arc(arc10_L13_center, arc10_L13_radius, wiggle_thickness)
     wiggle_arc11_L13 = create_wiggle_arc(arc11_L13_center, arc11_L13_radius, wiggle_thickness)
@@ -9420,6 +9736,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L13',    name='fail_sound_L13'
     )
     fail_sound_L13.setVolume(0.6)
+    break_key_L13 = keyboard.Keyboard(deviceName='break_key_L13')
+    break_text_L13 = visual.TextStim(win=win, name='break_text_L13',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_14" ---
     dino_image_L14 = visual.ImageStim(
@@ -9680,28 +10004,28 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 1 Properties
     arc1_L14_x = 0.3
     arc1_L14_center = [arc1_L14_x, reg_arc]
-    arc1_L14_radius = small_arc_size
+    arc1_L14_radius = med_arc_size
     arc1_L14_start_angle = 0
     arc1_L14_end_angle = 180
     
     # Arc 2 Properties
     arc2_L14_x = 1.1
-    arc2_L14_center = [arc2_L14_x, reg_arc]
-    arc2_L14_radius = large_arc_size
+    arc2_L14_center = [arc2_L14_x, low_arc]
+    arc2_L14_radius = small_arc_size
     arc2_L14_start_angle = 0
     arc2_L14_end_angle = 180
     
     # Arc 3 Properties
     arc3_L14_x = 1.9
     arc3_L14_center = [arc3_L14_x, reg_arc]
-    arc3_L14_radius = med_arc_size
+    arc3_L14_radius = large_arc_size
     arc3_L14_start_angle = 0
     arc3_L14_end_angle = 180
     
     # Arc 4 Properties
     arc4_L14_x = 2.7
-    arc4_L14_center = [arc4_L14_x, reg_arc]
-    arc4_L14_radius = small_arc_size
+    arc4_L14_center = [arc4_L14_x, high_arc]
+    arc4_L14_radius = med_arc_size
     arc4_L14_start_angle = 0
     arc4_L14_end_angle = 180
     
@@ -9710,40 +10034,40 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc5_L14_center = [arc5_L14_x, reg_arc]
     arc5_L14_radius = large_arc_size
     arc5_L14_start_angle = 0
-    arc5_L14_end_angle = 180
+    arc5_L14_end_angle = -180
     
     # Arc 6 Properties
     arc6_L14_x = 4.3
     arc6_L14_center = [arc6_L14_x, reg_arc]
-    arc6_L14_radius = med_arc_size
+    arc6_L14_radius = small_arc_size
     arc6_L14_start_angle = 0
     arc6_L14_end_angle = 180
     
     # Arc 7 Properties
     arc7_L14_x = 5.1
-    arc7_L14_center = [arc7_L14_x, reg_arc]
-    arc7_L14_radius = large_arc_size
+    arc7_L14_center = [arc7_L14_x, high_arc]
+    arc7_L14_radius = med_arc_size
     arc7_L14_start_angle = 0
-    arc7_L14_end_angle = 180
+    arc7_L14_end_angle = -180
     
     # Arc 8 Properties
     arc8_L14_x = 5.9
     arc8_L14_center = [arc8_L14_x, reg_arc]
-    arc8_L14_radius = med_arc_size
+    arc8_L14_radius = large_arc_size
     arc8_L14_start_angle = 0
-    arc8_L14_end_angle = 180
+    arc8_L14_end_angle = -180
     
     # Arc 9 Properties
     arc9_L14_x = 6.7
-    arc9_L14_center = [arc9_L14_x, reg_arc]
-    arc9_L14_radius = med_arc_size
+    arc9_L14_center = [arc9_L14_x, low_arc]
+    arc9_L14_radius = small_arc_size
     arc9_L14_start_angle = 0
     arc9_L14_end_angle = 180
     
     # Arc 10 Properties
     arc10_L14_x = 7.5
-    arc10_L14_center = [arc10_L14_x, reg_arc]
-    arc10_L14_radius = med_arc_size
+    arc10_L14_center = [arc10_L14_x, high_arc]
+    arc10_L14_radius = large_arc_size
     arc10_L14_start_angle = 0
     arc10_L14_end_angle = 180
     
@@ -9752,7 +10076,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc11_L14_center = [arc11_L14_x, reg_arc]
     arc11_L14_radius = med_arc_size
     arc11_L14_start_angle = 0
-    arc11_L14_end_angle = 180
+    arc11_L14_end_angle = -180
     
     
     # Generate vertices for Arc 1
@@ -9991,16 +10315,28 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Generate wiggle arcs for all arcs
     wiggle_arc1_L14 = create_wiggle_arc(arc1_L14_center, arc1_L14_radius, wiggle_thickness)
+    
     wiggle_arc2_L14 = create_wiggle_arc(arc2_L14_center, arc2_L14_radius, wiggle_thickness)
+    
     wiggle_arc3_L14 = create_wiggle_arc(arc3_L14_center, arc3_L14_radius, wiggle_thickness)
     wiggle_arc4_L14 = create_wiggle_arc(arc4_L14_center, arc4_L14_radius, wiggle_thickness)
+    
     wiggle_arc5_L14 = create_wiggle_arc(arc5_L14_center, arc5_L14_radius, wiggle_thickness)
+    wiggle_arc5_L14.vertices = [(x, 2 * arc5_L14_center[1] - y) for (x, y) in wiggle_arc5_L14.vertices]
+    
     wiggle_arc6_L14 = create_wiggle_arc(arc6_L14_center, arc6_L14_radius, wiggle_thickness)
+    
     wiggle_arc7_L14 = create_wiggle_arc(arc7_L14_center, arc7_L14_radius, wiggle_thickness)
+    wiggle_arc7_L14.vertices = [(x, 2 * arc7_L14_center[1] - y) for (x, y) in wiggle_arc7_L14.vertices]
+    
     wiggle_arc8_L14 = create_wiggle_arc(arc8_L14_center, arc8_L14_radius, wiggle_thickness)
+    wiggle_arc8_L14.vertices = [(x, 2 * arc8_L14_center[1] - y) for (x, y) in wiggle_arc8_L14.vertices]
+    
     wiggle_arc9_L14 = create_wiggle_arc(arc9_L14_center, arc9_L14_radius, wiggle_thickness)
     wiggle_arc10_L14 = create_wiggle_arc(arc10_L14_center, arc10_L14_radius, wiggle_thickness)
+    
     wiggle_arc11_L14 = create_wiggle_arc(arc11_L14_center, arc11_L14_radius, wiggle_thickness)
+    wiggle_arc11_L14.vertices = [(x, 2 * arc11_L14_center[1] - y) for (x, y) in wiggle_arc11_L14.vertices]
     
     
     
@@ -10076,6 +10412,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L14',    name='fail_sound_L14'
     )
     fail_sound_L14.setVolume(0.6)
+    break_key_L14 = keyboard.Keyboard(deviceName='break_key_L14')
+    break_text_L14 = visual.TextStim(win=win, name='break_text_L14',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # --- Initialize components for Routine "Level_15" ---
     dino_image_L15 = visual.ImageStim(
@@ -10335,49 +10679,49 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 1 Properties
     arc1_L15_x = 0.3
-    arc1_L15_center = [arc1_L15_x, reg_arc]
-    arc1_L15_radius = small_arc_size
+    arc1_L15_center = [arc1_L15_x, high_arc]
+    arc1_L15_radius = med_arc_size
     arc1_L15_start_angle = 0
     arc1_L15_end_angle = 180
     
     # Arc 2 Properties
     arc2_L15_x = 1.1
-    arc2_L15_center = [arc2_L15_x, reg_arc]
-    arc2_L15_radius = large_arc_size
+    arc2_L15_center = [arc2_L15_x, low_arc]
+    arc2_L15_radius = small_arc_size
     arc2_L15_start_angle = 0
-    arc2_L15_end_angle = 180
+    arc2_L15_end_angle = -180
     
     # Arc 3 Properties
     arc3_L15_x = 1.9
     arc3_L15_center = [arc3_L15_x, reg_arc]
-    arc3_L15_radius = med_arc_size
+    arc3_L15_radius = large_arc_size
     arc3_L15_start_angle = 0
     arc3_L15_end_angle = 180
     
     # Arc 4 Properties
     arc4_L15_x = 2.7
-    arc4_L15_center = [arc4_L15_x, reg_arc]
-    arc4_L15_radius = small_arc_size
+    arc4_L15_center = [arc4_L15_x, high_arc]
+    arc4_L15_radius = med_arc_size
     arc4_L15_start_angle = 0
-    arc4_L15_end_angle = 180
+    arc4_L15_end_angle = -180
     
     # Arc 5 Properties
     arc5_L15_x = 3.5
     arc5_L15_center = [arc5_L15_x, reg_arc]
-    arc5_L15_radius = large_arc_size
+    arc5_L15_radius = small_arc_size
     arc5_L15_start_angle = 0
     arc5_L15_end_angle = 180
     
     # Arc 6 Properties
     arc6_L15_x = 4.3
-    arc6_L15_center = [arc6_L15_x, reg_arc]
+    arc6_L15_center = [arc6_L15_x, high_arc]
     arc6_L15_radius = med_arc_size
     arc6_L15_start_angle = 0
-    arc6_L15_end_angle = 180
+    arc6_L15_end_angle = -180
     
     # Arc 7 Properties
     arc7_L15_x = 5.1
-    arc7_L15_center = [arc7_L15_x, reg_arc]
+    arc7_L15_center = [arc7_L15_x, high_arc]
     arc7_L15_radius = large_arc_size
     arc7_L15_start_angle = 0
     arc7_L15_end_angle = 180
@@ -10385,30 +10729,30 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Arc 8 Properties
     arc8_L15_x = 5.9
     arc8_L15_center = [arc8_L15_x, reg_arc]
-    arc8_L15_radius = med_arc_size
+    arc8_L15_radius = small_arc_size
     arc8_L15_start_angle = 0
-    arc8_L15_end_angle = 180
+    arc8_L15_end_angle = -180
     
     # Arc 9 Properties
     arc9_L15_x = 6.7
-    arc9_L15_center = [arc9_L15_x, reg_arc]
+    arc9_L15_center = [arc9_L15_x, low_arc]
     arc9_L15_radius = med_arc_size
     arc9_L15_start_angle = 0
     arc9_L15_end_angle = 180
     
     # Arc 10 Properties
     arc10_L15_x = 7.5
-    arc10_L15_center = [arc10_L15_x, reg_arc]
-    arc10_L15_radius = med_arc_size
+    arc10_L15_center = [arc10_L15_x, high_arc]
+    arc10_L15_radius = large_arc_size
     arc10_L15_start_angle = 0
-    arc10_L15_end_angle = 180
+    arc10_L15_end_angle = -180
     
     # Arc 11 Properties
     arc11_L15_x = 8.3
     arc11_L15_center = [arc11_L15_x, reg_arc]
     arc11_L15_radius = med_arc_size
     arc11_L15_start_angle = 0
-    arc11_L15_end_angle = 180
+    arc11_L15_end_angle = -180
     
     
     # Generate vertices for Arc 1
@@ -10647,16 +10991,32 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Generate wiggle arcs for all arcs
     wiggle_arc1_L15 = create_wiggle_arc(arc1_L15_center, arc1_L15_radius, wiggle_thickness)
+    
     wiggle_arc2_L15 = create_wiggle_arc(arc2_L15_center, arc2_L15_radius, wiggle_thickness)
+    wiggle_arc2_L15.vertices = [(x, 2 * arc2_L15_center[1] - y) for (x, y) in wiggle_arc2_L15.vertices]
+    
     wiggle_arc3_L15 = create_wiggle_arc(arc3_L15_center, arc3_L15_radius, wiggle_thickness)
+    
     wiggle_arc4_L15 = create_wiggle_arc(arc4_L15_center, arc4_L15_radius, wiggle_thickness)
+    wiggle_arc4_L15.vertices = [(x, 2 * arc4_L15_center[1] - y) for (x, y) in wiggle_arc4_L15.vertices]
+    
     wiggle_arc5_L15 = create_wiggle_arc(arc5_L15_center, arc5_L15_radius, wiggle_thickness)
+    
     wiggle_arc6_L15 = create_wiggle_arc(arc6_L15_center, arc6_L15_radius, wiggle_thickness)
+    wiggle_arc6_L15.vertices = [(x, 2 * arc6_L15_center[1] - y) for (x, y) in wiggle_arc6_L15.vertices]
+    
     wiggle_arc7_L15 = create_wiggle_arc(arc7_L15_center, arc7_L15_radius, wiggle_thickness)
+    
     wiggle_arc8_L15 = create_wiggle_arc(arc8_L15_center, arc8_L15_radius, wiggle_thickness)
+    wiggle_arc8_L15.vertices = [(x, 2 * arc8_L15_center[1] - y) for (x, y) in wiggle_arc8_L15.vertices]
+    
     wiggle_arc9_L15 = create_wiggle_arc(arc9_L15_center, arc9_L15_radius, wiggle_thickness)
+    
     wiggle_arc10_L15 = create_wiggle_arc(arc10_L15_center, arc10_L15_radius, wiggle_thickness)
+    wiggle_arc10_L15.vertices = [(x, 2 * arc10_L15_center[1] - y) for (x, y) in wiggle_arc10_L15.vertices]
+    
     wiggle_arc11_L15 = create_wiggle_arc(arc11_L15_center, arc11_L15_radius, wiggle_thickness)
+    wiggle_arc11_L15.vertices = [(x, 2 * arc11_L15_center[1] - y) for (x, y) in wiggle_arc11_L15.vertices]
     
     
     
@@ -10732,6 +11092,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='fail_sound_L15',    name='fail_sound_L15'
     )
     fail_sound_L15.setVolume(0.6)
+    break_key_L15 = keyboard.Keyboard(deviceName='break_key_L15')
+    break_text_L15 = visual.TextStim(win=win, name='break_text_L15',
+        text='Press Spacebar to continue.\n',
+        font='Arial',
+        pos=(0, -0.2), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
     
     # create some handy timers
     
@@ -11008,8 +11376,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     time.sleep(1)
     ser.write("TAR4\n".encode())
     time.sleep(1)
-    
     """
+    
     # the tar command zeros out all of the force messurements
     # halt for one second to make sure command was processed 
     
@@ -11204,7 +11572,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine MainMenu
             MainMenu = data.Routine(
                 name='MainMenu',
-                components=[TitleText, start_button, StartGame, about_button, about, exit_button, Exit, controller_selection, control_feedback, mode_feedback, mode_button, mouse],
+                components=[TitleText, start_button, StartGame, about_button, about, exit_button, Exit, controller_selection, control_feedback, mode_feedback, mode_button, calibrator_text, calibrator_button, mouse],
             )
             MainMenu.status = NOT_STARTED
             continueRoutine = True
@@ -11456,6 +11824,42 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if mode_button.status == STARTED:
                     # update params
                     pass
+                
+                # *calibrator_text* updates
+                
+                # if calibrator_text is starting this frame...
+                if calibrator_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    calibrator_text.frameNStart = frameN  # exact frame index
+                    calibrator_text.tStart = t  # local t and not account for scr refresh
+                    calibrator_text.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(calibrator_text, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    calibrator_text.status = STARTED
+                    calibrator_text.setAutoDraw(True)
+                
+                # if calibrator_text is active this frame...
+                if calibrator_text.status == STARTED:
+                    # update params
+                    pass
+                
+                # *calibrator_button* updates
+                
+                # if calibrator_button is starting this frame...
+                if calibrator_button.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    calibrator_button.frameNStart = frameN  # exact frame index
+                    calibrator_button.tStart = t  # local t and not account for scr refresh
+                    calibrator_button.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(calibrator_button, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    calibrator_button.status = STARTED
+                    calibrator_button.setAutoDraw(True)
+                
+                # if calibrator_button is active this frame...
+                if calibrator_button.status == STARTED:
+                    # update params
+                    pass
                 # Run 'Each Frame' code from code
                 # Check if the mouse is clicked and which button is clicked
                 if mouse.isPressedIn(start_button):
@@ -11500,9 +11904,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     core.wait(0.2)
                     continueRoutine = False
                 
+                if mouse.isPressedIn(calibrator_button):
+                    goto = 'Calibrator'
+                    core.wait(0.2)
+                    continueRoutine = False
                     
-                    
-                
+                if mouse.getPressed()[0]:  # [0] is left mouse button
+                    print(f"minF: {minF}, maxF: {maxF}")
                 
                 # *mouse* updates
                 
@@ -11772,6 +12180,331 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             menu_loop.addData('mouse_2.time', mouse_2.time)
             # the Routine "AboutScreen" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
+            
+            # --- Prepare to start Routine "Calibrator" ---
+            # create an object to store info about Routine Calibrator
+            Calibrator = data.Routine(
+                name='Calibrator',
+                components=[forces_text, back_button_2, back_text_2, mouse_3, force_display, min_slider, max_slider, min_text, max_text],
+            )
+            Calibrator.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from calibrator_code
+            if goto != 'Calibrator':
+                continueRoutine = False
+                
+                
+            
+            # setup some python lists for storing info about the mouse_3
+            mouse_3.x = []
+            mouse_3.y = []
+            mouse_3.leftButton = []
+            mouse_3.midButton = []
+            mouse_3.rightButton = []
+            mouse_3.time = []
+            gotValidClick = False  # until a click is received
+            min_slider.reset()
+            max_slider.reset()
+            # store start times for Calibrator
+            Calibrator.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            Calibrator.tStart = globalClock.getTime(format='float')
+            Calibrator.status = STARTED
+            thisExp.addData('Calibrator.started', Calibrator.tStart)
+            Calibrator.maxDuration = None
+            # keep track of which components have finished
+            CalibratorComponents = Calibrator.components
+            for thisComponent in Calibrator.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "Calibrator" ---
+            # if trial has changed, end Routine now
+            if isinstance(menu_loop, data.TrialHandler2) and thisMenu_loop.thisN != menu_loop.thisTrial.thisN:
+                continueRoutine = False
+            Calibrator.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *forces_text* updates
+                
+                # if forces_text is starting this frame...
+                if forces_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    forces_text.frameNStart = frameN  # exact frame index
+                    forces_text.tStart = t  # local t and not account for scr refresh
+                    forces_text.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(forces_text, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'forces_text.started')
+                    # update status
+                    forces_text.status = STARTED
+                    forces_text.setAutoDraw(True)
+                
+                # if forces_text is active this frame...
+                if forces_text.status == STARTED:
+                    # update params
+                    pass
+                
+                # *back_button_2* updates
+                
+                # if back_button_2 is starting this frame...
+                if back_button_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    back_button_2.frameNStart = frameN  # exact frame index
+                    back_button_2.tStart = t  # local t and not account for scr refresh
+                    back_button_2.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(back_button_2, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    back_button_2.status = STARTED
+                    back_button_2.setAutoDraw(True)
+                
+                # if back_button_2 is active this frame...
+                if back_button_2.status == STARTED:
+                    # update params
+                    pass
+                
+                # *back_text_2* updates
+                
+                # if back_text_2 is starting this frame...
+                if back_text_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    back_text_2.frameNStart = frameN  # exact frame index
+                    back_text_2.tStart = t  # local t and not account for scr refresh
+                    back_text_2.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(back_text_2, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    back_text_2.status = STARTED
+                    back_text_2.setAutoDraw(True)
+                
+                # if back_text_2 is active this frame...
+                if back_text_2.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from calibrator_code
+                if mouse.isPressedIn(back_button):
+                    goto = 'MainMenu'
+                    core.wait(0.2)
+                    continueRoutine = False
+                    
+                
+                """
+                if minF is not None and maxF is not None:
+                    ser.flushInput()
+                    strSerialData = ser.readline()
+                
+                    # Use the same serial data in both functions
+                    raw_B0, raw_B2 = calculate_psurp_forces(strSerialData)
+                    norm_B0, norm_B2 = calculate_psurp_forces_normalized(strSerialData, minF, maxF)
+                
+                
+                    # Display raw and normalized values
+                    force_display.text = f"B0: {raw_B0:.2f} N ({norm_B0:.2f})\nB2: {raw_B2:.2f} N ({norm_B2:.2f})"
+                else:
+                    force_display.text = "Adjust sliders to set min/max force."
+                """
+                
+                if mouse.getPressed()[0]:  # [0] is left mouse button
+                    print(f"minF: {minF}, maxF: {maxF}")
+                
+                # *mouse_3* updates
+                
+                # if mouse_3 is starting this frame...
+                if mouse_3.status == NOT_STARTED and t >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    mouse_3.frameNStart = frameN  # exact frame index
+                    mouse_3.tStart = t  # local t and not account for scr refresh
+                    mouse_3.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(mouse_3, 'tStartRefresh')  # time at next scr refresh
+                    # update status
+                    mouse_3.status = STARTED
+                    mouse_3.mouseClock.reset()
+                    prevButtonState = mouse_3.getPressed()  # if button is down already this ISN'T a new click
+                if mouse_3.status == STARTED:  # only update if started and not finished!
+                    buttons = mouse_3.getPressed()
+                    if buttons != prevButtonState:  # button state changed?
+                        prevButtonState = buttons
+                        if sum(buttons) > 0:  # state changed to a new click
+                            pass
+                            x, y = mouse_3.getPos()
+                            mouse_3.x.append(x)
+                            mouse_3.y.append(y)
+                            buttons = mouse_3.getPressed()
+                            mouse_3.leftButton.append(buttons[0])
+                            mouse_3.midButton.append(buttons[1])
+                            mouse_3.rightButton.append(buttons[2])
+                            mouse_3.time.append(mouse_3.mouseClock.getTime())
+                
+                # *force_display* updates
+                
+                # if force_display is starting this frame...
+                if force_display.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    force_display.frameNStart = frameN  # exact frame index
+                    force_display.tStart = t  # local t and not account for scr refresh
+                    force_display.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(force_display, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'force_display.started')
+                    # update status
+                    force_display.status = STARTED
+                    force_display.setAutoDraw(True)
+                
+                # if force_display is active this frame...
+                if force_display.status == STARTED:
+                    # update params
+                    pass
+                
+                # *min_slider* updates
+                
+                # if min_slider is starting this frame...
+                if min_slider.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    min_slider.frameNStart = frameN  # exact frame index
+                    min_slider.tStart = t  # local t and not account for scr refresh
+                    min_slider.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(min_slider, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'min_slider.started')
+                    # update status
+                    min_slider.status = STARTED
+                    min_slider.setAutoDraw(True)
+                
+                # if min_slider is active this frame...
+                if min_slider.status == STARTED:
+                    # update params
+                    pass
+                
+                # *max_slider* updates
+                
+                # if max_slider is starting this frame...
+                if max_slider.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    max_slider.frameNStart = frameN  # exact frame index
+                    max_slider.tStart = t  # local t and not account for scr refresh
+                    max_slider.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(max_slider, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'max_slider.started')
+                    # update status
+                    max_slider.status = STARTED
+                    max_slider.setAutoDraw(True)
+                
+                # if max_slider is active this frame...
+                if max_slider.status == STARTED:
+                    # update params
+                    pass
+                
+                # *min_text* updates
+                
+                # if min_text is starting this frame...
+                if min_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    min_text.frameNStart = frameN  # exact frame index
+                    min_text.tStart = t  # local t and not account for scr refresh
+                    min_text.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(min_text, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'min_text.started')
+                    # update status
+                    min_text.status = STARTED
+                    min_text.setAutoDraw(True)
+                
+                # if min_text is active this frame...
+                if min_text.status == STARTED:
+                    # update params
+                    pass
+                
+                # *max_text* updates
+                
+                # if max_text is starting this frame...
+                if max_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    max_text.frameNStart = frameN  # exact frame index
+                    max_text.tStart = t  # local t and not account for scr refresh
+                    max_text.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(max_text, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'max_text.started')
+                    # update status
+                    max_text.status = STARTED
+                    max_text.setAutoDraw(True)
+                
+                # if max_text is active this frame...
+                if max_text.status == STARTED:
+                    # update params
+                    pass
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    Calibrator.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in Calibrator.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "Calibrator" ---
+            for thisComponent in Calibrator.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for Calibrator
+            Calibrator.tStop = globalClock.getTime(format='float')
+            Calibrator.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('Calibrator.stopped', Calibrator.tStop)
+            # Run 'End Routine' code from calibrator_code
+            
+            minF = min_slider.getRating()
+            maxF = max_slider.getRating()
+            
+            # store data for menu_loop (TrialHandler)
+            menu_loop.addData('mouse_3.x', mouse_3.x)
+            menu_loop.addData('mouse_3.y', mouse_3.y)
+            menu_loop.addData('mouse_3.leftButton', mouse_3.leftButton)
+            menu_loop.addData('mouse_3.midButton', mouse_3.midButton)
+            menu_loop.addData('mouse_3.rightButton', mouse_3.rightButton)
+            menu_loop.addData('mouse_3.time', mouse_3.time)
+            menu_loop.addData('min_slider.response', min_slider.getRating())
+            menu_loop.addData('min_slider.rt', min_slider.getRT())
+            menu_loop.addData('max_slider.response', max_slider.getRating())
+            menu_loop.addData('max_slider.rt', max_slider.getRT())
+            # the Routine "Calibrator" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
         # completed 999.0 repeats of 'menu_loop'
         
         
@@ -11992,6 +12725,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # update params
                     pass
                 # Run 'Each Frame' code from DinoMovement_L1
+                if mouse.getPressed()[0]:  # [0] is left mouse button
+                    print(f"minF: {minF}, maxF: {maxF}")
+                
                 
                 # Initialize key state flags
                 left_pressed = False
@@ -12022,22 +12758,28 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     if selected_diff == "1":
                         # Constant movement for Easy mode
                         if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
-                            dino_image_L1.size = [abs(dino_image_L1.size[0]), dino_image_L1.size[1]]  # Face right
+                           pass
                 
                     elif selected_diff == "2":
                         # Proportional movement for Hard mode (current implementation)
                         if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
                             move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
-                            dino_pos[0] += move_amount  # Movement based on force
+                            camera_offset_x += move_amount  # Move camera instead of dino
                             dino_image_L1.size = [abs(dino_image_L1.size[0]), dino_image_L1.size[1]]  # Face right
+                        else:
+                            camera_speed = og_camera_speed
                 
                     # Jump logic remains the same for both difficulties
                     if B0ForceInNewtons > MIN_FORCE:
                         dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
                 
                 
-                            
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed
+                    camera_speed =+ camera_mov_speed  # Speed up when pressing right
+                    dino_image_L1.size = [abs(dino_image_L1.size[0]), dino_image_L1.size[1]]
+                else:
+                    camera_speed = og_camera_speed # Default speed      
                  
                 # Apply gravity to Dino's vertical speed
                 dino_speed += gravity
@@ -12058,20 +12800,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Update Dino's vertical position
                 dino_pos[1] += dino_speed
+                dino_pos[0] = camera_offset_x
                 
-                # Continuous horizontal movement
-                if left_pressed and dino_pos[0] > min_x:
-                    dino_pos[0] -= move_speed  # Move Dino to the left
-                    dino_image_L1.size = [-1 * abs(dino_image_L1.size[0]), dino_image_L1.size[1]]
-                
-                if right_pressed and dino_pos[0] < max_x:
-                    dino_pos[0] += move_speed  # Move Dino to the right
-                    dino_image_L1.size = [abs(dino_image_L1.size[0]), dino_image_L1.size[1]]  # Reset Dino to face right
-                
-                # Update Dino's position
                 # dino_image_L1.pos = dino_pos  # Use both X and Y values of dino_pos
                 dino_image_L1.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
-                
                 # Increment the frame counter for trail updates
                 trail_frame_counter += 1
                 
@@ -12223,7 +12955,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Check for collision for meatbone
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
-                    print("Dino ate the meatbone!")
                     meatbone_image_L1.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
                     eat_sound_L1.play()
@@ -12586,7 +13317,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_1_checker
             Level_1_checker = data.Routine(
                 name='Level_1_checker',
-                components=[end_score_text_L1, win_sound_L1, fail_sound_L1],
+                components=[end_score_text_L1, win_sound_L1, fail_sound_L1, break_key_L1, break_text_L1],
             )
             Level_1_checker.status = NOT_STARTED
             continueRoutine = True
@@ -12601,13 +13332,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             
             # Update the text for the end screen
-            end_score_text_L1.text = (
-                f"You hit {total_touched_vertices_L1} out of {total_possible_vertices_L1} vertices\n"
-                f"{percentage:.2f}%"
-            )
+            end_score_text_L1.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
+            
             
             
             win_sound_L1.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -12616,6 +13343,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L1.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L1.setVolume(0.6, log=False)
             fail_sound_L1.seek(0)
+            # create starting attributes for break_key_L1
+            break_key_L1.keys = []
+            break_key_L1.rt = []
+            _break_key_L1_allKeys = []
             # store start times for Level_1_checker
             Level_1_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_1_checker.tStart = globalClock.getTime(format='float')
@@ -12666,11 +13397,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L1.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L1
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L1* updates
                 
@@ -12697,6 +13423,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L1.status = FINISHED
                         fail_sound_L1.stop()
+                
+                # *break_key_L1* updates
+                waitOnFlip = False
+                
+                # if break_key_L1 is starting this frame...
+                if break_key_L1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L1.frameNStart = frameN  # exact frame index
+                    break_key_L1.tStart = t  # local t and not account for scr refresh
+                    break_key_L1.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L1, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L1.started')
+                    # update status
+                    break_key_L1.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L1.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L1.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L1.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L1.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L1_allKeys.extend(theseKeys)
+                    if len(_break_key_L1_allKeys):
+                        break_key_L1.keys = _break_key_L1_allKeys[-1].name  # just the last key pressed
+                        break_key_L1.rt = _break_key_L1_allKeys[-1].rt
+                        break_key_L1.duration = _break_key_L1_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L1* updates
+                
+                # if break_text_L1 is starting this frame...
+                if break_text_L1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L1.frameNStart = frameN  # exact frame index
+                    break_text_L1.tStart = t  # local t and not account for scr refresh
+                    break_text_L1.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L1, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L1.started')
+                    # update status
+                    break_text_L1.status = STARTED
+                    break_text_L1.setAutoDraw(True)
+                
+                # if break_text_L1 is active this frame...
+                if break_text_L1.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -12763,6 +13537,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L1 = 0
             total_possible_vertices_L1 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L1.keys in ['', [], None]:  # No response was made
+                break_key_L1.keys = None
+            Level_1_Loop.addData('break_key_L1.keys',break_key_L1.keys)
+            if break_key_L1.keys != None:  # we had a response
+                Level_1_Loop.addData('break_key_L1.rt', break_key_L1.rt)
+                Level_1_Loop.addData('break_key_L1.duration', break_key_L1.duration)
             # the Routine "Level_1_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_1_Loop'
@@ -13215,7 +13996,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Check for collision for meatbone
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
-                    print("Dino ate the meatbone!")
                     meatbone_image_L2.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
                     eat_sound_L2.play()
@@ -13583,7 +14363,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_2_checker
             Level_2_checker = data.Routine(
                 name='Level_2_checker',
-                components=[end_score_text_L2, win_sound_L2, fail_sound_L2],
+                components=[end_score_text_L2, win_sound_L2, fail_sound_L2, break_key_L2, break_text_L2],
             )
             Level_2_checker.status = NOT_STARTED
             continueRoutine = True
@@ -13598,13 +14378,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             
             # Update the text for the end screen
-            end_score_text_L2.text = (
-                f"You hit {total_touched_vertices_L2} out of {total_possible_vertices_L2} vertices\n"
-                f"{percentage:.2f}%"
-            )
+            end_score_text_L2.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
+            
             
             
             win_sound_L2.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -13613,6 +14389,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L2.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L2.setVolume(0.6, log=False)
             fail_sound_L2.seek(0)
+            # create starting attributes for break_key_L2
+            break_key_L2.keys = []
+            break_key_L2.rt = []
+            _break_key_L2_allKeys = []
             # store start times for Level_2_checker
             Level_2_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_2_checker.tStart = globalClock.getTime(format='float')
@@ -13663,11 +14443,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L2.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L2
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L2* updates
                 
@@ -13694,6 +14469,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L2.status = FINISHED
                         fail_sound_L2.stop()
+                
+                # *break_key_L2* updates
+                waitOnFlip = False
+                
+                # if break_key_L2 is starting this frame...
+                if break_key_L2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L2.frameNStart = frameN  # exact frame index
+                    break_key_L2.tStart = t  # local t and not account for scr refresh
+                    break_key_L2.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L2, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L2.started')
+                    # update status
+                    break_key_L2.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L2.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L2.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L2.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L2.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L2_allKeys.extend(theseKeys)
+                    if len(_break_key_L2_allKeys):
+                        break_key_L2.keys = _break_key_L2_allKeys[-1].name  # just the last key pressed
+                        break_key_L2.rt = _break_key_L2_allKeys[-1].rt
+                        break_key_L2.duration = _break_key_L2_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L2* updates
+                
+                # if break_text_L2 is starting this frame...
+                if break_text_L2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L2.frameNStart = frameN  # exact frame index
+                    break_text_L2.tStart = t  # local t and not account for scr refresh
+                    break_text_L2.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L2, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L2.started')
+                    # update status
+                    break_text_L2.status = STARTED
+                    break_text_L2.setAutoDraw(True)
+                
+                # if break_text_L2 is active this frame...
+                if break_text_L2.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -13760,6 +14583,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L2 = 0
             total_possible_vertices_L2 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L2.keys in ['', [], None]:  # No response was made
+                break_key_L2.keys = None
+            Level_2_Loop.addData('break_key_L2.keys',break_key_L2.keys)
+            if break_key_L2.keys != None:  # we had a response
+                Level_2_Loop.addData('break_key_L2.rt', break_key_L2.rt)
+                Level_2_Loop.addData('break_key_L2.duration', break_key_L2.duration)
             # the Routine "Level_2_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_2_Loop'
@@ -14212,7 +15042,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Check for collision for meatbone
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
-                    print("Dino ate the meatbone!")
                     meatbone_image_L3.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
                     eat_sound_L3.play()
@@ -14580,7 +15409,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_3_checker
             Level_3_checker = data.Routine(
                 name='Level_3_checker',
-                components=[end_score_text_L3, win_sound_L3, fail_sound_L3],
+                components=[end_score_text_L3, win_sound_L3, fail_sound_L3, break_key_L3, break_text_L3],
             )
             Level_3_checker.status = NOT_STARTED
             continueRoutine = True
@@ -14595,13 +15424,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             
             # Update the text for the end screen
-            end_score_text_L3.text = (
-                f"You hit {total_touched_vertices_L3} out of {total_possible_vertices_L3} vertices\n"
-                f"{percentage:.2f}%"
-            )
+            end_score_text_L3.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
+            
             
             
             win_sound_L3.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -14610,6 +15435,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L3.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L3.setVolume(0.6, log=False)
             fail_sound_L3.seek(0)
+            # create starting attributes for break_key_L3
+            break_key_L3.keys = []
+            break_key_L3.rt = []
+            _break_key_L3_allKeys = []
             # store start times for Level_3_checker
             Level_3_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_3_checker.tStart = globalClock.getTime(format='float')
@@ -14660,11 +15489,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L3.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L3
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L3* updates
                 
@@ -14691,6 +15515,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L3.status = FINISHED
                         fail_sound_L3.stop()
+                
+                # *break_key_L3* updates
+                waitOnFlip = False
+                
+                # if break_key_L3 is starting this frame...
+                if break_key_L3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L3.frameNStart = frameN  # exact frame index
+                    break_key_L3.tStart = t  # local t and not account for scr refresh
+                    break_key_L3.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L3, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L3.started')
+                    # update status
+                    break_key_L3.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L3.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L3.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L3.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L3.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L3_allKeys.extend(theseKeys)
+                    if len(_break_key_L3_allKeys):
+                        break_key_L3.keys = _break_key_L3_allKeys[-1].name  # just the last key pressed
+                        break_key_L3.rt = _break_key_L3_allKeys[-1].rt
+                        break_key_L3.duration = _break_key_L3_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L3* updates
+                
+                # if break_text_L3 is starting this frame...
+                if break_text_L3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L3.frameNStart = frameN  # exact frame index
+                    break_text_L3.tStart = t  # local t and not account for scr refresh
+                    break_text_L3.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L3, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L3.started')
+                    # update status
+                    break_text_L3.status = STARTED
+                    break_text_L3.setAutoDraw(True)
+                
+                # if break_text_L3 is active this frame...
+                if break_text_L3.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -14757,6 +15629,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L3 = 0
             total_possible_vertices_L3 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L3.keys in ['', [], None]:  # No response was made
+                break_key_L3.keys = None
+            Level_3_Loop.addData('break_key_L3.keys',break_key_L3.keys)
+            if break_key_L3.keys != None:  # we had a response
+                Level_3_Loop.addData('break_key_L3.rt', break_key_L3.rt)
+                Level_3_Loop.addData('break_key_L3.duration', break_key_L3.duration)
             # the Routine "Level_3_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_3_Loop'
@@ -15209,7 +16088,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Check for collision for meatbone
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
-                    print("Dino ate the meatbone!")
                     meatbone_image_L4.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
                     eat_sound_L4.play()
@@ -15577,7 +16455,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_4_checker
             Level_4_checker = data.Routine(
                 name='Level_4_checker',
-                components=[end_score_text_L4, win_sound_L4, fail_sound_L4],
+                components=[end_score_text_L4, win_sound_L4, fail_sound_L4, break_key_L4, break_text_L4],
             )
             Level_4_checker.status = NOT_STARTED
             continueRoutine = True
@@ -15592,13 +16470,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             
             # Update the text for the end screen
-            end_score_text_L4.text = (
-                f"You hit {total_touched_vertices_L4} out of {total_possible_vertices_L4} vertices\n"
-                f"{percentage:.2f}%"
-            )
-            
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
+            end_score_text_L4.text = f"Your score: {percentage:.2f}%"
             
             
             win_sound_L4.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -15607,6 +16479,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L4.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L4.setVolume(0.6, log=False)
             fail_sound_L4.seek(0)
+            # create starting attributes for break_key_L4
+            break_key_L4.keys = []
+            break_key_L4.rt = []
+            _break_key_L4_allKeys = []
             # store start times for Level_4_checker
             Level_4_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_4_checker.tStart = globalClock.getTime(format='float')
@@ -15657,11 +16533,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L4.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L4
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L4* updates
                 
@@ -15688,6 +16559,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L4.status = FINISHED
                         fail_sound_L4.stop()
+                
+                # *break_key_L4* updates
+                waitOnFlip = False
+                
+                # if break_key_L4 is starting this frame...
+                if break_key_L4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L4.frameNStart = frameN  # exact frame index
+                    break_key_L4.tStart = t  # local t and not account for scr refresh
+                    break_key_L4.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L4, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L4.started')
+                    # update status
+                    break_key_L4.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L4.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L4.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L4.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L4.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L4_allKeys.extend(theseKeys)
+                    if len(_break_key_L4_allKeys):
+                        break_key_L4.keys = _break_key_L4_allKeys[-1].name  # just the last key pressed
+                        break_key_L4.rt = _break_key_L4_allKeys[-1].rt
+                        break_key_L4.duration = _break_key_L4_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L4* updates
+                
+                # if break_text_L4 is starting this frame...
+                if break_text_L4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L4.frameNStart = frameN  # exact frame index
+                    break_text_L4.tStart = t  # local t and not account for scr refresh
+                    break_text_L4.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L4, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L4.started')
+                    # update status
+                    break_text_L4.status = STARTED
+                    break_text_L4.setAutoDraw(True)
+                
+                # if break_text_L4 is active this frame...
+                if break_text_L4.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -15754,6 +16673,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L4 = 0
             total_possible_vertices_L4 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L4.keys in ['', [], None]:  # No response was made
+                break_key_L4.keys = None
+            Level_4_Loop.addData('break_key_L4.keys',break_key_L4.keys)
+            if break_key_L4.keys != None:  # we had a response
+                Level_4_Loop.addData('break_key_L4.rt', break_key_L4.rt)
+                Level_4_Loop.addData('break_key_L4.duration', break_key_L4.duration)
             # the Routine "Level_4_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_4_Loop'
@@ -16206,7 +17132,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Check for collision for meatbone
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
-                    print("Dino ate the meatbone!")
                     meatbone_image_L5.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
                     eat_sound_L5.play()
@@ -16574,7 +17499,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_5_checker
             Level_5_checker = data.Routine(
                 name='Level_5_checker',
-                components=[end_score_text_L5, win_sound_L5, fail_sound_L5],
+                components=[end_score_text_L5, win_sound_L5, fail_sound_L5, break_key_L5, break_text_L5],
             )
             Level_5_checker.status = NOT_STARTED
             continueRoutine = True
@@ -16589,13 +17514,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             
             # Update the text for the end screen
-            end_score_text_L5.text = (
-                f"You hit {total_touched_vertices_L5} out of {total_possible_vertices_L5} vertices\n"
-                f"{percentage:.2f}%"
-            )
-            
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
+            end_score_text_L5.text = f"Your score: {percentage:.2f}%"
             
             
             win_sound_L5.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -16604,6 +17523,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L5.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L5.setVolume(0.6, log=False)
             fail_sound_L5.seek(0)
+            # create starting attributes for break_key_L5
+            break_key_L5.keys = []
+            break_key_L5.rt = []
+            _break_key_L5_allKeys = []
             # store start times for Level_5_checker
             Level_5_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_5_checker.tStart = globalClock.getTime(format='float')
@@ -16654,11 +17577,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L5.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L5
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L5* updates
                 
@@ -16685,6 +17603,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L5.status = FINISHED
                         fail_sound_L5.stop()
+                
+                # *break_key_L5* updates
+                waitOnFlip = False
+                
+                # if break_key_L5 is starting this frame...
+                if break_key_L5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L5.frameNStart = frameN  # exact frame index
+                    break_key_L5.tStart = t  # local t and not account for scr refresh
+                    break_key_L5.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L5, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L5.started')
+                    # update status
+                    break_key_L5.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L5.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L5.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L5.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L5.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L5_allKeys.extend(theseKeys)
+                    if len(_break_key_L5_allKeys):
+                        break_key_L5.keys = _break_key_L5_allKeys[-1].name  # just the last key pressed
+                        break_key_L5.rt = _break_key_L5_allKeys[-1].rt
+                        break_key_L5.duration = _break_key_L5_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L5* updates
+                
+                # if break_text_L5 is starting this frame...
+                if break_text_L5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L5.frameNStart = frameN  # exact frame index
+                    break_text_L5.tStart = t  # local t and not account for scr refresh
+                    break_text_L5.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L5, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L5.started')
+                    # update status
+                    break_text_L5.status = STARTED
+                    break_text_L5.setAutoDraw(True)
+                
+                # if break_text_L5 is active this frame...
+                if break_text_L5.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -16751,6 +17717,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L5 = 0
             total_possible_vertices_L5 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L5.keys in ['', [], None]:  # No response was made
+                break_key_L5.keys = None
+            Level_5_Loop.addData('break_key_L5.keys',break_key_L5.keys)
+            if break_key_L5.keys != None:  # we had a response
+                Level_5_Loop.addData('break_key_L5.rt', break_key_L5.rt)
+                Level_5_Loop.addData('break_key_L5.duration', break_key_L5.duration)
             # the Routine "Level_5_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_5_Loop'
@@ -17203,7 +18176,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Check for collision for meatbone
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
-                    print("Dino ate the meatbone!")
                     meatbone_image_L6.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
                     eat_sound_L6.play()
@@ -17571,7 +18543,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_6_checker
             Level_6_checker = data.Routine(
                 name='Level_6_checker',
-                components=[end_score_text_L6, win_sound_L6, fail_sound_L6],
+                components=[end_score_text_L6, win_sound_L6, fail_sound_L6, break_key_L6, break_text_L6],
             )
             Level_6_checker.status = NOT_STARTED
             continueRoutine = True
@@ -17586,13 +18558,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             
             # Update the text for the end screen
-            end_score_text_L6.text = (
-                f"You hit {total_touched_vertices_L6} out of {total_possible_vertices_L6} vertices\n"
-                f"{percentage:.2f}%"
-            )
+            end_score_text_L6.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
             
             
             win_sound_L6.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -17601,6 +18568,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L6.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L6.setVolume(0.6, log=False)
             fail_sound_L6.seek(0)
+            # create starting attributes for break_key_L6
+            break_key_L6.keys = []
+            break_key_L6.rt = []
+            _break_key_L6_allKeys = []
             # store start times for Level_6_checker
             Level_6_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_6_checker.tStart = globalClock.getTime(format='float')
@@ -17651,11 +18622,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L6.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L6
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L6* updates
                 
@@ -17682,6 +18648,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L6.status = FINISHED
                         fail_sound_L6.stop()
+                
+                # *break_key_L6* updates
+                waitOnFlip = False
+                
+                # if break_key_L6 is starting this frame...
+                if break_key_L6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L6.frameNStart = frameN  # exact frame index
+                    break_key_L6.tStart = t  # local t and not account for scr refresh
+                    break_key_L6.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L6, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L6.started')
+                    # update status
+                    break_key_L6.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L6.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L6.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L6.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L6.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L6_allKeys.extend(theseKeys)
+                    if len(_break_key_L6_allKeys):
+                        break_key_L6.keys = _break_key_L6_allKeys[-1].name  # just the last key pressed
+                        break_key_L6.rt = _break_key_L6_allKeys[-1].rt
+                        break_key_L6.duration = _break_key_L6_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L6* updates
+                
+                # if break_text_L6 is starting this frame...
+                if break_text_L6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L6.frameNStart = frameN  # exact frame index
+                    break_text_L6.tStart = t  # local t and not account for scr refresh
+                    break_text_L6.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L6, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L6.started')
+                    # update status
+                    break_text_L6.status = STARTED
+                    break_text_L6.setAutoDraw(True)
+                
+                # if break_text_L6 is active this frame...
+                if break_text_L6.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -17748,6 +18762,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L6 = 0
             total_possible_vertices_L6 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L6.keys in ['', [], None]:  # No response was made
+                break_key_L6.keys = None
+            Level_6_Loop.addData('break_key_L6.keys',break_key_L6.keys)
+            if break_key_L6.keys != None:  # we had a response
+                Level_6_Loop.addData('break_key_L6.rt', break_key_L6.rt)
+                Level_6_Loop.addData('break_key_L6.duration', break_key_L6.duration)
             # the Routine "Level_6_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_6_Loop'
@@ -18200,7 +19221,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Check for collision for meatbone
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
-                    print("Dino ate the meatbone!")
                     meatbone_image_L7.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
                     eat_sound_L7.play()
@@ -18568,7 +19588,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_7_checker
             Level_7_checker = data.Routine(
                 name='Level_7_checker',
-                components=[end_score_text_L7, win_sound_L7, fail_sound_L7],
+                components=[end_score_text_L7, win_sound_L7, fail_sound_L7, break_key_L7, break_text_L7],
             )
             Level_7_checker.status = NOT_STARTED
             continueRoutine = True
@@ -18583,14 +19603,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             
             # Update the text for the end screen
-            end_score_text_L7.text = (
-                f"You hit {total_touched_vertices_L7} out of {total_possible_vertices_L7} vertices\n"
-                f"{percentage:.2f}%"
-            )
-            
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
-            
+            end_score_text_L7.text = f"Your score: {percentage:.2f}%"
             
             win_sound_L7.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L7.setVolume(1.0, log=False)
@@ -18598,6 +19611,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L7.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L7.setVolume(0.6, log=False)
             fail_sound_L7.seek(0)
+            # create starting attributes for break_key_L7
+            break_key_L7.keys = []
+            break_key_L7.rt = []
+            _break_key_L7_allKeys = []
             # store start times for Level_7_checker
             Level_7_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_7_checker.tStart = globalClock.getTime(format='float')
@@ -18648,11 +19665,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L7.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L7
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L7* updates
                 
@@ -18679,6 +19691,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L7.status = FINISHED
                         fail_sound_L7.stop()
+                
+                # *break_key_L7* updates
+                waitOnFlip = False
+                
+                # if break_key_L7 is starting this frame...
+                if break_key_L7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L7.frameNStart = frameN  # exact frame index
+                    break_key_L7.tStart = t  # local t and not account for scr refresh
+                    break_key_L7.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L7, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L7.started')
+                    # update status
+                    break_key_L7.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L7.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L7.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L7.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L7.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L7_allKeys.extend(theseKeys)
+                    if len(_break_key_L7_allKeys):
+                        break_key_L7.keys = _break_key_L7_allKeys[-1].name  # just the last key pressed
+                        break_key_L7.rt = _break_key_L7_allKeys[-1].rt
+                        break_key_L7.duration = _break_key_L7_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L7* updates
+                
+                # if break_text_L7 is starting this frame...
+                if break_text_L7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L7.frameNStart = frameN  # exact frame index
+                    break_text_L7.tStart = t  # local t and not account for scr refresh
+                    break_text_L7.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L7, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L7.started')
+                    # update status
+                    break_text_L7.status = STARTED
+                    break_text_L7.setAutoDraw(True)
+                
+                # if break_text_L7 is active this frame...
+                if break_text_L7.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -18745,6 +19805,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L7 = 0
             total_possible_vertices_L7 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L7.keys in ['', [], None]:  # No response was made
+                break_key_L7.keys = None
+            Level_7_Loop.addData('break_key_L7.keys',break_key_L7.keys)
+            if break_key_L7.keys != None:  # we had a response
+                Level_7_Loop.addData('break_key_L7.rt', break_key_L7.rt)
+                Level_7_Loop.addData('break_key_L7.duration', break_key_L7.duration)
             # the Routine "Level_7_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_7_Loop'
@@ -19197,7 +20264,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Check for collision for meatbone
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
-                    print("Dino ate the meatbone!")
                     meatbone_image_L8.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
                     eat_sound_L8.play()
@@ -19565,7 +20631,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_8_checker
             Level_8_checker = data.Routine(
                 name='Level_8_checker',
-                components=[end_score_text_L8, win_sound_L8, fail_sound_L8],
+                components=[end_score_text_L8, win_sound_L8, fail_sound_L8, break_key_L8, break_text_L8],
             )
             Level_8_checker.status = NOT_STARTED
             continueRoutine = True
@@ -19580,13 +20646,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             
             # Update the text for the end screen
-            end_score_text_L8.text = (
-                f"You hit {total_touched_vertices_L8} out of {total_possible_vertices_L8} vertices\n"
-                f"{percentage:.2f}%"
-            )
+            end_score_text_L8.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
             
             
             win_sound_L8.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -19595,6 +20656,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L8.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L8.setVolume(0.6, log=False)
             fail_sound_L8.seek(0)
+            # create starting attributes for break_key_L8
+            break_key_L8.keys = []
+            break_key_L8.rt = []
+            _break_key_L8_allKeys = []
             # store start times for Level_8_checker
             Level_8_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_8_checker.tStart = globalClock.getTime(format='float')
@@ -19645,11 +20710,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L8.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L8
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L8* updates
                 
@@ -19676,6 +20736,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L8.status = FINISHED
                         fail_sound_L8.stop()
+                
+                # *break_key_L8* updates
+                waitOnFlip = False
+                
+                # if break_key_L8 is starting this frame...
+                if break_key_L8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L8.frameNStart = frameN  # exact frame index
+                    break_key_L8.tStart = t  # local t and not account for scr refresh
+                    break_key_L8.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L8, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L8.started')
+                    # update status
+                    break_key_L8.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L8.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L8.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L8.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L8.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L8_allKeys.extend(theseKeys)
+                    if len(_break_key_L8_allKeys):
+                        break_key_L8.keys = _break_key_L8_allKeys[-1].name  # just the last key pressed
+                        break_key_L8.rt = _break_key_L8_allKeys[-1].rt
+                        break_key_L8.duration = _break_key_L8_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L8* updates
+                
+                # if break_text_L8 is starting this frame...
+                if break_text_L8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L8.frameNStart = frameN  # exact frame index
+                    break_text_L8.tStart = t  # local t and not account for scr refresh
+                    break_text_L8.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L8, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L8.started')
+                    # update status
+                    break_text_L8.status = STARTED
+                    break_text_L8.setAutoDraw(True)
+                
+                # if break_text_L8 is active this frame...
+                if break_text_L8.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -19742,6 +20850,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L8 = 0
             total_possible_vertices_L8 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L8.keys in ['', [], None]:  # No response was made
+                break_key_L8.keys = None
+            Level_8_Loop.addData('break_key_L8.keys',break_key_L8.keys)
+            if break_key_L8.keys != None:  # we had a response
+                Level_8_Loop.addData('break_key_L8.rt', break_key_L8.rt)
+                Level_8_Loop.addData('break_key_L8.duration', break_key_L8.duration)
             # the Routine "Level_8_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_8_Loop'
@@ -20194,7 +21309,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Check for collision for meatbone
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
-                    print("Dino ate the meatbone!")
                     meatbone_image_L9.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
                     eat_sound_L9.play()
@@ -20562,7 +21676,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_9_checker
             Level_9_checker = data.Routine(
                 name='Level_9_checker',
-                components=[end_score_text_L9, win_sound_L9, fail_sound_L9],
+                components=[end_score_text_L9, win_sound_L9, fail_sound_L9, break_key_L9, break_text_L9],
             )
             Level_9_checker.status = NOT_STARTED
             continueRoutine = True
@@ -20577,13 +21691,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             
             # Update the text for the end screen
-            end_score_text_L9.text = (
-                f"You hit {total_touched_vertices_L9} out of {total_possible_vertices_L9} vertices\n"
-                f"{percentage:.2f}%"
-            )
+            end_score_text_L9.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
             
             
             win_sound_L9.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -20592,6 +21701,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L9.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L9.setVolume(0.6, log=False)
             fail_sound_L9.seek(0)
+            # create starting attributes for break_key_L9
+            break_key_L9.keys = []
+            break_key_L9.rt = []
+            _break_key_L9_allKeys = []
             # store start times for Level_9_checker
             Level_9_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_9_checker.tStart = globalClock.getTime(format='float')
@@ -20642,11 +21755,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L9.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L9
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L9* updates
                 
@@ -20673,6 +21781,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L9.status = FINISHED
                         fail_sound_L9.stop()
+                
+                # *break_key_L9* updates
+                waitOnFlip = False
+                
+                # if break_key_L9 is starting this frame...
+                if break_key_L9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L9.frameNStart = frameN  # exact frame index
+                    break_key_L9.tStart = t  # local t and not account for scr refresh
+                    break_key_L9.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L9, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L9.started')
+                    # update status
+                    break_key_L9.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L9.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L9.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L9.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L9.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L9_allKeys.extend(theseKeys)
+                    if len(_break_key_L9_allKeys):
+                        break_key_L9.keys = _break_key_L9_allKeys[-1].name  # just the last key pressed
+                        break_key_L9.rt = _break_key_L9_allKeys[-1].rt
+                        break_key_L9.duration = _break_key_L9_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L9* updates
+                
+                # if break_text_L9 is starting this frame...
+                if break_text_L9.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L9.frameNStart = frameN  # exact frame index
+                    break_text_L9.tStart = t  # local t and not account for scr refresh
+                    break_text_L9.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L9, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L9.started')
+                    # update status
+                    break_text_L9.status = STARTED
+                    break_text_L9.setAutoDraw(True)
+                
+                # if break_text_L9 is active this frame...
+                if break_text_L9.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -20739,6 +21895,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L9 = 0
             total_possible_vertices_L9 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L9.keys in ['', [], None]:  # No response was made
+                break_key_L9.keys = None
+            Level_9_Loop.addData('break_key_L9.keys',break_key_L9.keys)
+            if break_key_L9.keys != None:  # we had a response
+                Level_9_Loop.addData('break_key_L9.rt', break_key_L9.rt)
+                Level_9_Loop.addData('break_key_L9.duration', break_key_L9.duration)
             # the Routine "Level_9_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_9_Loop'
@@ -21191,7 +22354,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Check for collision for meatbone
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
-                    print("Dino ate the meatbone!")
                     meatbone_image_L10.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
                     eat_sound_L10.play()
@@ -21835,7 +22997,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_10_checker
             Level_10_checker = data.Routine(
                 name='Level_10_checker',
-                components=[end_score_text_L10, win_sound_L10, fail_sound_L10],
+                components=[end_score_text_L10, win_sound_L10, fail_sound_L10, break_key_L10, break_text_L10],
             )
             Level_10_checker.status = NOT_STARTED
             continueRoutine = True
@@ -21850,13 +23012,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             
             # Update the text for the end screen
-            end_score_text_L10.text = (
-                f"You hit {total_touched_vertices_L10} out of {total_possible_vertices_L10} vertices\n"
-                f"{percentage:.2f}%"
-            )
-            
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
+            end_score_text_L10.text = f"Your score: {percentage:.2f}%"
             
             
             win_sound_L10.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -21865,6 +23021,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L10.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L10.setVolume(0.6, log=False)
             fail_sound_L10.seek(0)
+            # create starting attributes for break_key_L10
+            break_key_L10.keys = []
+            break_key_L10.rt = []
+            _break_key_L10_allKeys = []
             # store start times for Level_10_checker
             Level_10_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_10_checker.tStart = globalClock.getTime(format='float')
@@ -21915,11 +23075,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L10.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L10
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L10* updates
                 
@@ -21946,6 +23101,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L10.status = FINISHED
                         fail_sound_L10.stop()
+                
+                # *break_key_L10* updates
+                waitOnFlip = False
+                
+                # if break_key_L10 is starting this frame...
+                if break_key_L10.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L10.frameNStart = frameN  # exact frame index
+                    break_key_L10.tStart = t  # local t and not account for scr refresh
+                    break_key_L10.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L10, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L10.started')
+                    # update status
+                    break_key_L10.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L10.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L10.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L10.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L10.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L10_allKeys.extend(theseKeys)
+                    if len(_break_key_L10_allKeys):
+                        break_key_L10.keys = _break_key_L10_allKeys[-1].name  # just the last key pressed
+                        break_key_L10.rt = _break_key_L10_allKeys[-1].rt
+                        break_key_L10.duration = _break_key_L10_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L10* updates
+                
+                # if break_text_L10 is starting this frame...
+                if break_text_L10.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L10.frameNStart = frameN  # exact frame index
+                    break_text_L10.tStart = t  # local t and not account for scr refresh
+                    break_text_L10.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L10, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L10.started')
+                    # update status
+                    break_text_L10.status = STARTED
+                    break_text_L10.setAutoDraw(True)
+                
+                # if break_text_L10 is active this frame...
+                if break_text_L10.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -22012,6 +23215,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L10 = 0
             total_possible_vertices_L10 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L10.keys in ['', [], None]:  # No response was made
+                break_key_L10.keys = None
+            Level_10_Loop.addData('break_key_L10.keys',break_key_L10.keys)
+            if break_key_L10.keys != None:  # we had a response
+                Level_10_Loop.addData('break_key_L10.rt', break_key_L10.rt)
+                Level_10_Loop.addData('break_key_L10.duration', break_key_L10.duration)
             # the Routine "Level_10_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_10_Loop'
@@ -22464,7 +23674,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Check for collision for meatbone
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
-                    print("Dino ate the meatbone!")
                     meatbone_image_L11.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
                     eat_sound_L11.play()
@@ -23108,7 +24317,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_11_checker
             Level_11_checker = data.Routine(
                 name='Level_11_checker',
-                components=[end_score_text_L11, win_sound_L11, fail_sound_L11],
+                components=[end_score_text_L11, win_sound_L11, fail_sound_L11, break_key_L11, break_text_L11],
             )
             Level_11_checker.status = NOT_STARTED
             continueRoutine = True
@@ -23123,13 +24332,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             
             # Update the text for the end screen
-            end_score_text_L11.text = (
-                f"You hit {total_touched_vertices_L11} out of {total_possible_vertices_L11} vertices\n"
-                f"{percentage:.2f}%"
-            )
-            
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
+            end_score_text_L11.text = f"Your score: {percentage:.2f}%"
             
             
             win_sound_L11.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -23138,6 +24341,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L11.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L11.setVolume(0.6, log=False)
             fail_sound_L11.seek(0)
+            # create starting attributes for break_key_L11
+            break_key_L11.keys = []
+            break_key_L11.rt = []
+            _break_key_L11_allKeys = []
             # store start times for Level_11_checker
             Level_11_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_11_checker.tStart = globalClock.getTime(format='float')
@@ -23188,11 +24395,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L11.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L11
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L11* updates
                 
@@ -23219,6 +24421,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L11.status = FINISHED
                         fail_sound_L11.stop()
+                
+                # *break_key_L11* updates
+                waitOnFlip = False
+                
+                # if break_key_L11 is starting this frame...
+                if break_key_L11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L11.frameNStart = frameN  # exact frame index
+                    break_key_L11.tStart = t  # local t and not account for scr refresh
+                    break_key_L11.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L11, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L11.started')
+                    # update status
+                    break_key_L11.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L11.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L11.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L11.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L11.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L11_allKeys.extend(theseKeys)
+                    if len(_break_key_L11_allKeys):
+                        break_key_L11.keys = _break_key_L11_allKeys[-1].name  # just the last key pressed
+                        break_key_L11.rt = _break_key_L11_allKeys[-1].rt
+                        break_key_L11.duration = _break_key_L11_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L11* updates
+                
+                # if break_text_L11 is starting this frame...
+                if break_text_L11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L11.frameNStart = frameN  # exact frame index
+                    break_text_L11.tStart = t  # local t and not account for scr refresh
+                    break_text_L11.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L11, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L11.started')
+                    # update status
+                    break_text_L11.status = STARTED
+                    break_text_L11.setAutoDraw(True)
+                
+                # if break_text_L11 is active this frame...
+                if break_text_L11.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -23285,6 +24535,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L11 = 0
             total_possible_vertices_L11 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L11.keys in ['', [], None]:  # No response was made
+                break_key_L11.keys = None
+            Level_11_Loop.addData('break_key_L11.keys',break_key_L11.keys)
+            if break_key_L11.keys != None:  # we had a response
+                Level_11_Loop.addData('break_key_L11.rt', break_key_L11.rt)
+                Level_11_Loop.addData('break_key_L11.duration', break_key_L11.duration)
             # the Routine "Level_11_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_11_Loop'
@@ -23737,7 +24994,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Check for collision for meatbone
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
-                    print("Dino ate the meatbone!")
                     meatbone_image_L12.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
                     eat_sound_L12.play()
@@ -24381,7 +25637,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_12_checker
             Level_12_checker = data.Routine(
                 name='Level_12_checker',
-                components=[end_score_text_L12, win_sound_L12, fail_sound_L12],
+                components=[end_score_text_L12, win_sound_L12, fail_sound_L12, break_key_L12, break_text_L12],
             )
             Level_12_checker.status = NOT_STARTED
             continueRoutine = True
@@ -24396,13 +25652,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             
             # Update the text for the end screen
-            end_score_text_L12.text = (
-                f"You hit {total_touched_vertices_L12} out of {total_possible_vertices_L12} vertices\n"
-                f"{percentage:.2f}%"
-            )
+            end_score_text_L12.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
             
             
             win_sound_L12.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -24411,6 +25662,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L12.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L12.setVolume(0.6, log=False)
             fail_sound_L12.seek(0)
+            # create starting attributes for break_key_L12
+            break_key_L12.keys = []
+            break_key_L12.rt = []
+            _break_key_L12_allKeys = []
             # store start times for Level_12_checker
             Level_12_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_12_checker.tStart = globalClock.getTime(format='float')
@@ -24461,11 +25716,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L12.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L12
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L12* updates
                 
@@ -24492,6 +25742,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L12.status = FINISHED
                         fail_sound_L12.stop()
+                
+                # *break_key_L12* updates
+                waitOnFlip = False
+                
+                # if break_key_L12 is starting this frame...
+                if break_key_L12.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L12.frameNStart = frameN  # exact frame index
+                    break_key_L12.tStart = t  # local t and not account for scr refresh
+                    break_key_L12.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L12, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L12.started')
+                    # update status
+                    break_key_L12.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L12.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L12.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L12.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L12.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L12_allKeys.extend(theseKeys)
+                    if len(_break_key_L12_allKeys):
+                        break_key_L12.keys = _break_key_L12_allKeys[-1].name  # just the last key pressed
+                        break_key_L12.rt = _break_key_L12_allKeys[-1].rt
+                        break_key_L12.duration = _break_key_L12_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L12* updates
+                
+                # if break_text_L12 is starting this frame...
+                if break_text_L12.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L12.frameNStart = frameN  # exact frame index
+                    break_text_L12.tStart = t  # local t and not account for scr refresh
+                    break_text_L12.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L12, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L12.started')
+                    # update status
+                    break_text_L12.status = STARTED
+                    break_text_L12.setAutoDraw(True)
+                
+                # if break_text_L12 is active this frame...
+                if break_text_L12.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -24558,6 +25856,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L12 = 0
             total_possible_vertices_L12 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L12.keys in ['', [], None]:  # No response was made
+                break_key_L12.keys = None
+            Level_12_Loop.addData('break_key_L12.keys',break_key_L12.keys)
+            if break_key_L12.keys != None:  # we had a response
+                Level_12_Loop.addData('break_key_L12.rt', break_key_L12.rt)
+                Level_12_Loop.addData('break_key_L12.duration', break_key_L12.duration)
             # the Routine "Level_12_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_12_Loop'
@@ -25010,7 +26315,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Check for collision for meatbone
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
-                    print("Dino ate the meatbone!")
                     meatbone_image_L13.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
                     eat_sound_L13.play()
@@ -25654,7 +26958,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_13_checker
             Level_13_checker = data.Routine(
                 name='Level_13_checker',
-                components=[end_score_text_L13, win_sound_L13, fail_sound_L13],
+                components=[end_score_text_L13, win_sound_L13, fail_sound_L13, break_key_L13, break_text_L13],
             )
             Level_13_checker.status = NOT_STARTED
             continueRoutine = True
@@ -25669,10 +26973,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             
             # Update the text for the end screen
-            end_score_text_L13.text = (
-                f"You hit {total_touched_vertices_L13} out of {total_possible_vertices_L13} vertices\n"
-                f"{percentage:.2f}%"
-            )
+            end_score_text_L13.text = f"Your score: {percentage:.2f}%"
             
             # Start 3 second timer
             end_screen_timer = core.CountdownTimer(3)
@@ -25684,6 +26985,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L13.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L13.setVolume(0.6, log=False)
             fail_sound_L13.seek(0)
+            # create starting attributes for break_key_L13
+            break_key_L13.keys = []
+            break_key_L13.rt = []
+            _break_key_L13_allKeys = []
             # store start times for Level_13_checker
             Level_13_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_13_checker.tStart = globalClock.getTime(format='float')
@@ -25766,6 +27071,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         fail_sound_L13.status = FINISHED
                         fail_sound_L13.stop()
                 
+                # *break_key_L13* updates
+                waitOnFlip = False
+                
+                # if break_key_L13 is starting this frame...
+                if break_key_L13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L13.frameNStart = frameN  # exact frame index
+                    break_key_L13.tStart = t  # local t and not account for scr refresh
+                    break_key_L13.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L13, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L13.started')
+                    # update status
+                    break_key_L13.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L13.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L13.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L13.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L13.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L13_allKeys.extend(theseKeys)
+                    if len(_break_key_L13_allKeys):
+                        break_key_L13.keys = _break_key_L13_allKeys[-1].name  # just the last key pressed
+                        break_key_L13.rt = _break_key_L13_allKeys[-1].rt
+                        break_key_L13.duration = _break_key_L13_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L13* updates
+                
+                # if break_text_L13 is starting this frame...
+                if break_text_L13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L13.frameNStart = frameN  # exact frame index
+                    break_text_L13.tStart = t  # local t and not account for scr refresh
+                    break_text_L13.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L13, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L13.started')
+                    # update status
+                    break_text_L13.status = STARTED
+                    break_text_L13.setAutoDraw(True)
+                
+                # if break_text_L13 is active this frame...
+                if break_text_L13.status == STARTED:
+                    # update params
+                    pass
+                
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
                     thisExp.status = FINISHED
@@ -25831,6 +27184,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L13 = 0
             total_possible_vertices_L13 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L13.keys in ['', [], None]:  # No response was made
+                break_key_L13.keys = None
+            Level_13_Loop.addData('break_key_L13.keys',break_key_L13.keys)
+            if break_key_L13.keys != None:  # we had a response
+                Level_13_Loop.addData('break_key_L13.rt', break_key_L13.rt)
+                Level_13_Loop.addData('break_key_L13.duration', break_key_L13.duration)
             # the Routine "Level_13_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_13_Loop'
@@ -26283,7 +27643,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Check for collision for meatbone
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
-                    print("Dino ate the meatbone!")
                     meatbone_image_L14.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
                     eat_sound_L14.play()
@@ -26927,7 +28286,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_14_checker
             Level_14_checker = data.Routine(
                 name='Level_14_checker',
-                components=[end_score_text_L14, win_sound_L14, fail_sound_L14],
+                components=[end_score_text_L14, win_sound_L14, fail_sound_L14, break_key_L14, break_text_L14],
             )
             Level_14_checker.status = NOT_STARTED
             continueRoutine = True
@@ -26942,13 +28301,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             
             # Update the text for the end screen
-            end_score_text_L14.text = (
-                f"You hit {total_touched_vertices_L14} out of {total_possible_vertices_L14} vertices\n"
-                f"{percentage:.2f}%"
-            )
+            end_score_text_L14.text = f"Your score: {percentage:.2f}%"
             
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
+            
             
             
             win_sound_L14.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -26957,6 +28312,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L14.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L14.setVolume(0.6, log=False)
             fail_sound_L14.seek(0)
+            # create starting attributes for break_key_L14
+            break_key_L14.keys = []
+            break_key_L14.rt = []
+            _break_key_L14_allKeys = []
             # store start times for Level_14_checker
             Level_14_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_14_checker.tStart = globalClock.getTime(format='float')
@@ -27007,11 +28366,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L14.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L14
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L14* updates
                 
@@ -27038,6 +28392,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L14.status = FINISHED
                         fail_sound_L14.stop()
+                
+                # *break_key_L14* updates
+                waitOnFlip = False
+                
+                # if break_key_L14 is starting this frame...
+                if break_key_L14.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L14.frameNStart = frameN  # exact frame index
+                    break_key_L14.tStart = t  # local t and not account for scr refresh
+                    break_key_L14.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L14, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L14.started')
+                    # update status
+                    break_key_L14.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L14.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L14.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L14.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L14.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L14_allKeys.extend(theseKeys)
+                    if len(_break_key_L14_allKeys):
+                        break_key_L14.keys = _break_key_L14_allKeys[-1].name  # just the last key pressed
+                        break_key_L14.rt = _break_key_L14_allKeys[-1].rt
+                        break_key_L14.duration = _break_key_L14_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L14* updates
+                
+                # if break_text_L14 is starting this frame...
+                if break_text_L14.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L14.frameNStart = frameN  # exact frame index
+                    break_text_L14.tStart = t  # local t and not account for scr refresh
+                    break_text_L14.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L14, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L14.started')
+                    # update status
+                    break_text_L14.status = STARTED
+                    break_text_L14.setAutoDraw(True)
+                
+                # if break_text_L14 is active this frame...
+                if break_text_L14.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -27104,6 +28506,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L14 = 0
             total_possible_vertices_L14 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L14.keys in ['', [], None]:  # No response was made
+                break_key_L14.keys = None
+            Level_14_Loop.addData('break_key_L14.keys',break_key_L14.keys)
+            if break_key_L14.keys != None:  # we had a response
+                Level_14_Loop.addData('break_key_L14.rt', break_key_L14.rt)
+                Level_14_Loop.addData('break_key_L14.duration', break_key_L14.duration)
             # the Routine "Level_14_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_14_Loop'
@@ -27556,7 +28965,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Check for collision for meatbone
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
-                    print("Dino ate the meatbone!")
                     meatbone_image_L15.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
                     eat_sound_L15.play()
@@ -28200,7 +29608,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Level_15_checker
             Level_15_checker = data.Routine(
                 name='Level_15_checker',
-                components=[end_score_text_L15, win_sound_L15, fail_sound_L15],
+                components=[end_score_text_L15, win_sound_L15, fail_sound_L15, break_key_L15, break_text_L15],
             )
             Level_15_checker.status = NOT_STARTED
             continueRoutine = True
@@ -28215,13 +29623,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             
             # Update the text for the end screen
-            end_score_text_L15.text = (
-                f"You hit {total_touched_vertices_L15} out of {total_possible_vertices_L15} vertices\n"
-                f"{percentage:.2f}%"
-            )
-            
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
+            end_score_text_L15.text = f"Your score: {percentage:.2f}%"
             
             
             win_sound_L15.setSound('Assets/sounds/win.mp3', hamming=True)
@@ -28230,6 +29632,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fail_sound_L15.setSound('Assets/sounds/level_failed.mp3', hamming=True)
             fail_sound_L15.setVolume(0.6, log=False)
             fail_sound_L15.seek(0)
+            # create starting attributes for break_key_L15
+            break_key_L15.keys = []
+            break_key_L15.rt = []
+            _break_key_L15_allKeys = []
             # store start times for Level_15_checker
             Level_15_checker.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Level_15_checker.tStart = globalClock.getTime(format='float')
@@ -28280,11 +29686,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if end_score_text_L15.status == STARTED:
                     # update params
                     pass
-                # Run 'Each Frame' code from Checker_L15
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
-                
                 
                 # *win_sound_L15* updates
                 
@@ -28311,6 +29712,54 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fail_sound_L15.status = FINISHED
                         fail_sound_L15.stop()
+                
+                # *break_key_L15* updates
+                waitOnFlip = False
+                
+                # if break_key_L15 is starting this frame...
+                if break_key_L15.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_key_L15.frameNStart = frameN  # exact frame index
+                    break_key_L15.tStart = t  # local t and not account for scr refresh
+                    break_key_L15.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_key_L15, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_key_L15.started')
+                    # update status
+                    break_key_L15.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(break_key_L15.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(break_key_L15.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if break_key_L15.status == STARTED and not waitOnFlip:
+                    theseKeys = break_key_L15.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _break_key_L15_allKeys.extend(theseKeys)
+                    if len(_break_key_L15_allKeys):
+                        break_key_L15.keys = _break_key_L15_allKeys[-1].name  # just the last key pressed
+                        break_key_L15.rt = _break_key_L15_allKeys[-1].rt
+                        break_key_L15.duration = _break_key_L15_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *break_text_L15* updates
+                
+                # if break_text_L15 is starting this frame...
+                if break_text_L15.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    break_text_L15.frameNStart = frameN  # exact frame index
+                    break_text_L15.tStart = t  # local t and not account for scr refresh
+                    break_text_L15.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(break_text_L15, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'break_text_L15.started')
+                    # update status
+                    break_text_L15.status = STARTED
+                    break_text_L15.setAutoDraw(True)
+                
+                # if break_text_L15 is active this frame...
+                if break_text_L15.status == STARTED:
+                    # update params
+                    pass
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -28377,6 +29826,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             total_touched_vertices_L15 = 0
             total_possible_vertices_L15 = 0
             meatbone_collided = False
+            # check responses
+            if break_key_L15.keys in ['', [], None]:  # No response was made
+                break_key_L15.keys = None
+            Level_15_Loop.addData('break_key_L15.keys',break_key_L15.keys)
+            if break_key_L15.keys != None:  # we had a response
+                Level_15_Loop.addData('break_key_L15.rt', break_key_L15.rt)
+                Level_15_Loop.addData('break_key_L15.duration', break_key_L15.duration)
             # the Routine "Level_15_checker" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1000.0 repeats of 'Level_15_Loop'
@@ -28397,6 +29853,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     GameLoop.saveAsText(filename + 'GameLoop.csv', delim=',',
         stimOut=params,
         dataOut=['n','all_mean','all_std', 'all_raw'])
+    # Run 'End Experiment' code from calibrator_code
+    """
+    ser.flush()
+    ser.write("X".encode())  # Exit command mode
+    ser.close()
+    """
     # Run 'End Experiment' code from DinoMovement_L1
     """
     ser.flush()

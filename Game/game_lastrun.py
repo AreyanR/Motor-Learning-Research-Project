@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on May 28, 2025, at 21:09
+    on May 29, 2025, at 00:31
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -161,7 +161,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\actioncontrollab\\Desktop\\Motor-Learning-Research-Project\\Game\\game_lastrun.py',
+        originPath='D:\\Users\\areya\\Desktop\\work\\Motor-Learning-Research-Project\\Game\\game_lastrun.py',
         savePickle=True, saveWideText=False,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -1017,14 +1017,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from calibrator_code
     import serial
     global minF, maxF
-    
+    """
     # Initialize the serial connection for PSURP
     ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
     ser.flush()
     ser.write("X".encode())  # Initialize PSURP
     ser.write("RUNE\n".encode())  # Enter streaming mode
-    
-    
+    """
+    minF = 0.1
+    maxF = 0.9
         
     def calculate_psurp_forces_normalized(serial_data, minF, maxF):
         """Extract and return only normalized forces from PSURP serial data."""
@@ -1064,15 +1065,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=-5.0);
     min_slider = visual.Slider(win=win, name='min_slider',
         startValue=0.1, size=(0.8, 0.1), pos=(0, 0), units=win.units,
-        labels=(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9), ticks=(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9), granularity=0.0,
-        style='rating', styleTweaks=(), opacity=None,
+        labels=(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9), ticks=(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9), granularity=0.1,
+        style='slider', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor='Red', lineColor='White', colorSpace='rgb',
         font='Open Sans', labelHeight=0.05,
         flip=False, ori=0.0, depth=-6, readOnly=False)
     max_slider = visual.Slider(win=win, name='max_slider',
         startValue=0.1, size=(0.8, 0.1), pos=(0, -0.3), units=win.units,
-        labels=(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1), ticks=(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1), granularity=0.0,
-        style='rating', styleTweaks=(), opacity=None,
+        labels=(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1), ticks=(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1), granularity=0.1,
+        style='slider', styleTweaks=(), opacity=None,
         labelColor='LightGray', markerColor='Red', lineColor='White', colorSpace='rgb',
         font='Open Sans', labelHeight=0.05,
         flip=False, ori=0.0, depth=-7, readOnly=False)
@@ -11237,10 +11238,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     resetPSURP.tStopRefresh = tThisFlipGlobal
     thisExp.addData('resetPSURP.stopped', resetPSURP.tStop)
     # Run 'End Routine' code from code_2
-    
+    """
     ser.flush()
     ser.write("X".encode())
-    
+    """
     # clear out the data from the IO buffers (Fresh commands)
     # the "X" command puts tje PSURP into command mode
     
@@ -11364,7 +11365,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     TARE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('TARE.stopped', TARE.tStop)
     # Run 'End Routine' code from tare_code
-    
+    """
     ser.write("TAR0\n".encode())
     time.sleep(1)
     ser.write("TAR1\n".encode())
@@ -11375,7 +11376,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     time.sleep(1)
     ser.write("TAR4\n".encode())
     time.sleep(1)
-    
+    """
     
     # the tar command zeros out all of the force messurements
     # halt for one second to make sure command was processed 
@@ -11498,9 +11499,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     RUNE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('RUNE.stopped', RUNE.tStop)
     # Run 'End Routine' code from Code_RUNE
-    
+    """
     ser.write("RUNE\n".encode())
-    
+    """
     # the rune command sets the PSURP to streaming mode. (for getting vals)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if RUNE.maxDurationReached:
@@ -11908,8 +11909,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     core.wait(0.2)
                     continueRoutine = False
                     
-                    
-                
+                if mouse.getPressed()[0]:  # [0] is left mouse button
+                    print(f"minF: {minF}, maxF: {maxF}")
                 
                 # *mouse* updates
                 
@@ -12103,6 +12104,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     core.wait(0.2)
                     continueRoutine = False
                 
+                if mouse.getPressed()[0]:  # [0] is left mouse button
+                    print(f"minF: {minF}, maxF: {maxF}")
                 # *mouse_2* updates
                 
                 # if mouse_2 is starting this frame...
@@ -12295,14 +12298,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     pass
                 # Run 'Each Frame' code from calibrator_code
                 if mouse.isPressedIn(back_button):
+                    minF = min_slider.getRating()
+                    maxF = max_slider.getRating()
                     goto = 'MainMenu'
                     core.wait(0.2)
                     continueRoutine = False
                     
-                minF = min_slider.getRating()
-                maxF = max_slider.getRating()
                 
-                
+                """
                 if minF is not None and maxF is not None:
                     ser.flushInput()
                     strSerialData = ser.readline()
@@ -12316,7 +12319,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     force_display.text = f"B0: {raw_B0:.2f} N ({norm_B0:.2f})\nB2: {raw_B2:.2f} N ({norm_B2:.2f})"
                 else:
                     force_display.text = "Adjust sliders to set min/max force."
+                """
                 
+                if mouse.getPressed()[0]:  # [0] is left mouse button
+                    print(f"minF: {minF}, maxF: {maxF}")
                 
                 # *mouse_3* updates
                 
@@ -12486,8 +12492,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             Calibrator.tStopRefresh = tThisFlipGlobal
             thisExp.addData('Calibrator.stopped', Calibrator.tStop)
             # Run 'End Routine' code from calibrator_code
-            minF = min_slider.getRating()
-            maxF = max_slider.getRating()
+            
+            
             
             # store data for menu_loop (TrialHandler)
             menu_loop.addData('mouse_3.x', mouse_3.x)
@@ -12722,6 +12728,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # update params
                     pass
                 # Run 'Each Frame' code from DinoMovement_L1
+                if mouse.getPressed()[0]:  # [0] is left mouse button
+                    print(f"minF: {minF}, maxF: {maxF}")
+                
                 
                 # Initialize key state flags
                 left_pressed = False
@@ -29848,11 +29857,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         stimOut=params,
         dataOut=['n','all_mean','all_std', 'all_raw'])
     # Run 'End Experiment' code from calibrator_code
-    
+    """
     ser.flush()
     ser.write("X".encode())  # Exit command mode
     ser.close()
-    
+    """
     # Run 'End Experiment' code from DinoMovement_L1
     """
     ser.flush()
