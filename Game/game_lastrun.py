@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on May 27, 2025, at 17:06
+    on May 28, 2025, at 18:16
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -1221,6 +1221,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Camera variables
     camera_offset_x = 0  # Tracks the camera offset to follow Dino
     camera_speed = 0.003  # Adjust this speed as needed 0.003
+    og_camera_speed = 0.003
+    camera_mov_speed = 0.007
     # Background properties
     background_width = 2.0  # Width of a single background image
     background_height = 1.0
@@ -12562,7 +12564,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
                 
                 
-                            
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed
+                    camera_speed =+ camera_mov_speed  # Speed up when pressing right
+                    dino_image_L1.size = [abs(dino_image_L1.size[0]), dino_image_L1.size[1]]
+                else:
+                    camera_speed = og_camera_speed # Default speed      
                  
                 # Apply gravity to Dino's vertical speed
                 dino_speed += gravity
