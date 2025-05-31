@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on May 29, 2025, at 00:31
+    on May 30, 2025, at 18:52
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -161,7 +161,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='D:\\Users\\areya\\Desktop\\work\\Motor-Learning-Research-Project\\Game\\game_lastrun.py',
+        originPath='C:\\Users\\actioncontrollab\\Desktop\\Motor-Learning-Research-Project\\Game\\game_lastrun.py',
         savePickle=True, saveWideText=False,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -1008,7 +1008,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         colorSpace='rgb', lineColor='white', fillColor=None,
         opacity=None, depth=-1.0, interpolate=True)
     back_text_2 = visual.TextStim(win=win, name='back_text_2',
-        text='Back',
+        text='Save',
         font='Arial',
         pos=(-0.5, 0.44), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1017,13 +1017,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from calibrator_code
     import serial
     global minF, maxF
-    """
+    
     # Initialize the serial connection for PSURP
     ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
     ser.flush()
     ser.write("X".encode())  # Initialize PSURP
     ser.write("RUNE\n".encode())  # Enter streaming mode
-    """
+    
     minF = 0.1
     maxF = 0.9
         
@@ -1171,7 +1171,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     B0ForceInNewtons = 0
     B2ForceInNewtons = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
-    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
+    FORCE_MULTIPLIER = 0.05  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -1683,6 +1683,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Run 'Begin Experiment' code from GoalController_L1
     
+    
     meatbone_collided = False  # Track whether the meatbone has been stomped
     arc1_touched_vertices_L1 = []
     arc2_touched_vertices_L1 = []
@@ -1695,6 +1696,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc9_touched_vertices_L1 = []
     arc10_touched_vertices_L1 = []
     arc11_touched_vertices_L1 = []
+    
     
     touch_threshold_L1 = 0.04 # touch threshold for the arcs
     
@@ -1716,6 +1718,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from Timer_L1
     level_timer = core.Clock()  # Initialize the timer
     time_limit = 125  # Set the time limit in seconds (2 minutes)
+    
+    global time_bonus_L1
+    
+    time_bonus_L1 = 0  # Initialize the global variable
     
     lose_sound_L1 = sound.Sound(
         'A', 
@@ -10500,7 +10506,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     B0ForceInNewtons = 0
     B2ForceInNewtons = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
-    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
+    FORCE_MULTIPLIER = 0.0055 # Adjust this to control how much force affects movement
     
     
     # Dino movement variables
@@ -11238,10 +11244,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     resetPSURP.tStopRefresh = tThisFlipGlobal
     thisExp.addData('resetPSURP.stopped', resetPSURP.tStop)
     # Run 'End Routine' code from code_2
-    """
+    
     ser.flush()
     ser.write("X".encode())
-    """
+    
     # clear out the data from the IO buffers (Fresh commands)
     # the "X" command puts tje PSURP into command mode
     
@@ -11365,7 +11371,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     TARE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('TARE.stopped', TARE.tStop)
     # Run 'End Routine' code from tare_code
-    """
+    
     ser.write("TAR0\n".encode())
     time.sleep(1)
     ser.write("TAR1\n".encode())
@@ -11376,7 +11382,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     time.sleep(1)
     ser.write("TAR4\n".encode())
     time.sleep(1)
-    """
+    
     
     # the tar command zeros out all of the force messurements
     # halt for one second to make sure command was processed 
@@ -11499,9 +11505,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     RUNE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('RUNE.stopped', RUNE.tStop)
     # Run 'End Routine' code from Code_RUNE
-    """
+    
     ser.write("RUNE\n".encode())
-    """
+    
     # the rune command sets the PSURP to streaming mode. (for getting vals)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if RUNE.maxDurationReached:
@@ -11909,8 +11915,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     core.wait(0.2)
                     continueRoutine = False
                     
-                if mouse.getPressed()[0]:  # [0] is left mouse button
-                    print(f"minF: {minF}, maxF: {maxF}")
+                
                 
                 # *mouse* updates
                 
@@ -12104,8 +12109,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     core.wait(0.2)
                     continueRoutine = False
                 
-                if mouse.getPressed()[0]:  # [0] is left mouse button
-                    print(f"minF: {minF}, maxF: {maxF}")
+                
                 # *mouse_2* updates
                 
                 # if mouse_2 is starting this frame...
@@ -12305,7 +12309,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     continueRoutine = False
                     
                 
-                """
+                
                 if minF is not None and maxF is not None:
                     ser.flushInput()
                     strSerialData = ser.readline()
@@ -12319,10 +12323,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     force_display.text = f"B0: {raw_B0:.2f} N ({norm_B0:.2f})\nB2: {raw_B2:.2f} N ({norm_B2:.2f})"
                 else:
                     force_display.text = "Adjust sliders to set min/max force."
-                """
                 
+                """
                 if mouse.getPressed()[0]:  # [0] is left mouse button
                     print(f"minF: {minF}, maxF: {maxF}")
+                    
+                """
                 
                 # *mouse_3* updates
                 
@@ -12728,9 +12734,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # update params
                     pass
                 # Run 'Each Frame' code from DinoMovement_L1
-                if mouse.getPressed()[0]:  # [0] is left mouse button
-                    print(f"minF: {minF}, maxF: {maxF}")
-                
                 
                 # Initialize key state flags
                 left_pressed = False
@@ -12755,17 +12758,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # Read serial data
                     ser.flushInput()
                     strSerialData = ser.readline()
-                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces_normalized(strSerialData, minF, maxF)
                 
                     # Apply difficulty-specific movement
                     if selected_diff == "1":
                         # Constant movement for Easy mode
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                        if B2ForceInNewtons > minF and dino_pos[0] < max_x:
                            pass
                 
                     elif selected_diff == "2":
                         # Proportional movement for Hard mode (current implementation)
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
+                        if B2ForceInNewtons > minF and dino_pos[0] < max_x:
                             move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
                             camera_offset_x += move_amount  # Move camera instead of dino
                             dino_image_L1.size = [abs(dino_image_L1.size[0]), dino_image_L1.size[1]]  # Face right
@@ -12773,8 +12776,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                             camera_speed = og_camera_speed
                 
                     # Jump logic remains the same for both difficulties
-                    if B0ForceInNewtons > MIN_FORCE:
-                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                    if B0ForceInNewtons > minF:
+                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER # Jump height based on force
                 
                 
                 if right_pressed and dino_pos[0] < max_x:
@@ -13298,6 +13301,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Run 'End Routine' code from GoalController_L1
             global total_touched_vertices_L1, total_possible_vertices_L1
             
+            
+            
+            
             total_touched_vertices_L1 = (
                 len(arc1_touched_vertices_L1) + len(arc2_touched_vertices_L1) + len(arc3_touched_vertices_L1) +
                 len(arc4_touched_vertices_L1) + len(arc5_touched_vertices_L1) + len(arc6_touched_vertices_L1) +
@@ -13313,6 +13319,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
+            # Run 'End Routine' code from Timer_L1
+            
+            time_bonus_L1 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_1" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -13327,18 +13336,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             # Run 'Begin Routine' code from Checker_L1
             import csv
+            
             # Calculate the percentage
             if total_possible_vertices_L1 > 0:
+                total_touched_vertices_L1 += time_bonus_L1
                 percentage = (total_touched_vertices_L1 / total_possible_vertices_L1) * 100
             else:
                 percentage = 0  # Avoid division by zero
-                
+            
             
             # Update the text for the end screen
-            end_score_text_L1.text = f"Your score: {percentage:.2f}%"
-            
-            
-            
+            end_score_text_L1.text = (
+                f"Your score: {percentage:.2f}%\n"
+                f"Bonus time score: +{time_bonus_L1} point(s)"
+            )
             
             win_sound_L1.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L1.setVolume(1.0, log=False)
@@ -29857,11 +29868,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         stimOut=params,
         dataOut=['n','all_mean','all_std', 'all_raw'])
     # Run 'End Experiment' code from calibrator_code
-    """
+    
     ser.flush()
     ser.write("X".encode())  # Exit command mode
     ser.close()
-    """
+    
     # Run 'End Experiment' code from DinoMovement_L1
     """
     ser.flush()
