@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on May 30, 2025, at 20:35
+    on June 01, 2025, at 15:09
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -1171,7 +1171,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     B0ForceInNorm = 0
     B2ForceInNorm = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
-    FORCE_MULTIPLIER = 0.05  # Adjust this to control how much force affects movement
+    FORCE_MULTIPLIER = 0.0055
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -1852,7 +1852,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     B0ForceInNorm = 0
     B2ForceInNorm = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
-    FORCE_MULTIPLIER = 0.05  # Adjust this to control how much force affects movement
+    #FORCE_MULTIPLIER = 0.05  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -2516,11 +2516,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     #Button 0 and button 2 force properties
-    B0ForceInNewtons = 0
-    B2ForceInNewtons = 0
+    B0ForceInNorm = 0
+    B2ForceInNorm = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
-    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
-    
+    #FORCE_MULTIPLIER = 0.05  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -2529,8 +2528,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     jump_speed = 0.005  # Jumping speed
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
-    #min_x = -0.6  # Left boundary
-    #max_x = 19 # right boundary
+    min_x = -0.6  # Left boundary
+    max_x = 19 # right boundary
     respawn_position = [0, -0.3]  # Starting position for Dino
     
     
@@ -2574,10 +2573,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             B2LowByte = Base71Lookup.index(output[5])
             
             # Forces in Newtons
-            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
-            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            B0ForceInNorm = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNorm = ((B2HighByte * 71) + B2LowByte) * 0.0098
             
-            return B0ForceInNewtons, B2ForceInNewtons
+            return B0ForceInNorm, B2ForceInNorm
         
         return 0, 0  # Default forces if data is invalid
     
@@ -2603,6 +2602,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     dino_image_L3.image = frame_paths[frame_index]
     
     
+    camera_offset_x = dino_pos[0]  # lock camera to Dino's X
     
     
     # Run 'Begin Experiment' code from worldController_L3
@@ -3054,6 +3054,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     level_timer = core.Clock()  # Initialize the timer
     time_limit = 125  # Set the time limit in seconds (2 minutes)
     
+    global time_bonus_L3
+    time_bonus_L3 = 0
+    
     lose_sound_L3 = sound.Sound(
         'A', 
         secs=-1, 
@@ -3180,11 +3183,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     #Button 0 and button 2 force properties
-    B0ForceInNewtons = 0
-    B2ForceInNewtons = 0
+    B0ForceInNorm = 0
+    B2ForceInNorm = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
-    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
-    
+    FORCE_MULTIPLIER = 0.05  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -3193,8 +3195,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     jump_speed = 0.005  # Jumping speed
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
-    #min_x = -0.6  # Left boundary
-    #max_x = 19 # right boundary
+    min_x = -0.6  # Left boundary
+    max_x = 19 # right boundary
     respawn_position = [0, -0.3]  # Starting position for Dino
     
     
@@ -3238,10 +3240,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             B2LowByte = Base71Lookup.index(output[5])
             
             # Forces in Newtons
-            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
-            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            B0ForceInNorm = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNorm = ((B2HighByte * 71) + B2LowByte) * 0.0098
             
-            return B0ForceInNewtons, B2ForceInNewtons
+            return B0ForceInNorm, B2ForceInNorm
         
         return 0, 0  # Default forces if data is invalid
     
@@ -3267,6 +3269,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     dino_image_L4.image = frame_paths[frame_index]
     
     
+    camera_offset_x = dino_pos[0]  # lock camera to Dino's X
     
     
     # Run 'Begin Experiment' code from worldController_L4
@@ -3718,6 +3721,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     level_timer = core.Clock()  # Initialize the timer
     time_limit = 125  # Set the time limit in seconds (2 minutes)
     
+    global time_bonus_L4
+    time_bonus_L4 = 0
+    
     lose_sound_L4 = sound.Sound(
         'A', 
         secs=-1, 
@@ -3844,11 +3850,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     #Button 0 and button 2 force properties
-    B0ForceInNewtons = 0
-    B2ForceInNewtons = 0
+    B0ForceInNorm = 0
+    B2ForceInNorm = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
-    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
-    
+    #FORCE_MULTIPLIER = 0.05  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -3857,8 +3862,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     jump_speed = 0.005  # Jumping speed
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
-    #min_x = -0.6  # Left boundary
-    #max_x = 19 # right boundary
+    min_x = -0.6  # Left boundary
+    max_x = 19 # right boundary
     respawn_position = [0, -0.3]  # Starting position for Dino
     
     
@@ -3902,10 +3907,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             B2LowByte = Base71Lookup.index(output[5])
             
             # Forces in Newtons
-            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
-            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            B0ForceInNorm = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNorm = ((B2HighByte * 71) + B2LowByte) * 0.0098
             
-            return B0ForceInNewtons, B2ForceInNewtons
+            return B0ForceInNorm, B2ForceInNorm
         
         return 0, 0  # Default forces if data is invalid
     
@@ -3931,6 +3936,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     dino_image_L5.image = frame_paths[frame_index]
     
     
+    camera_offset_x = dino_pos[0]  # lock camera to Dino's X
     
     
     # Run 'Begin Experiment' code from worldController_L5
@@ -4382,6 +4388,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     level_timer = core.Clock()  # Initialize the timer
     time_limit = 125  # Set the time limit in seconds (2 minutes)
     
+    global time_bonus_L5
+    time_bonus_L5 = 0
+    
     lose_sound_L5 = sound.Sound(
         'A', 
         secs=-1, 
@@ -4508,11 +4517,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     #Button 0 and button 2 force properties
-    B0ForceInNewtons = 0
-    B2ForceInNewtons = 0
+    B0ForceInNorm = 0
+    B2ForceInNorm = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
-    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
-    
+    #FORCE_MULTIPLIER = 0.05  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -4521,8 +4529,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     jump_speed = 0.005  # Jumping speed
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
-    #min_x = -0.6  # Left boundary
-    #max_x = 19 # right boundary
+    min_x = -0.6  # Left boundary
+    max_x = 19 # right boundary
     respawn_position = [0, -0.3]  # Starting position for Dino
     
     
@@ -4566,10 +4574,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             B2LowByte = Base71Lookup.index(output[5])
             
             # Forces in Newtons
-            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
-            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            B0ForceInNorm = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNorm = ((B2HighByte * 71) + B2LowByte) * 0.0098
             
-            return B0ForceInNewtons, B2ForceInNewtons
+            return B0ForceInNorm, B2ForceInNorm
         
         return 0, 0  # Default forces if data is invalid
     
@@ -4595,6 +4603,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     dino_image_L6.image = frame_paths[frame_index]
     
     
+    camera_offset_x = dino_pos[0]  # lock camera to Dino's X
     
     
     # Run 'Begin Experiment' code from worldController_L6
@@ -5046,6 +5055,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     level_timer = core.Clock()  # Initialize the timer
     time_limit = 125  # Set the time limit in seconds (2 minutes)
     
+    global time_bonus_L6
+    time_bonus_L6 = 0
+    
     lose_sound_L6 = sound.Sound(
         'A', 
         secs=-1, 
@@ -5172,11 +5184,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     #Button 0 and button 2 force properties
-    B0ForceInNewtons = 0
-    B2ForceInNewtons = 0
+    B0ForceInNorm = 0
+    B2ForceInNorm = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
-    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
-    
+    #FORCE_MULTIPLIER = 0.05  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -5185,8 +5196,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     jump_speed = 0.005  # Jumping speed
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
-    #min_x = -0.6  # Left boundary
-    #max_x = 19 # right boundary
+    min_x = -0.6  # Left boundary
+    max_x = 19 # right boundary
     respawn_position = [0, -0.3]  # Starting position for Dino
     
     
@@ -5230,10 +5241,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             B2LowByte = Base71Lookup.index(output[5])
             
             # Forces in Newtons
-            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
-            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            B0ForceInNorm = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNorm = ((B2HighByte * 71) + B2LowByte) * 0.0098
             
-            return B0ForceInNewtons, B2ForceInNewtons
+            return B0ForceInNorm, B2ForceInNorm
         
         return 0, 0  # Default forces if data is invalid
     
@@ -5259,6 +5270,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     dino_image_L7.image = frame_paths[frame_index]
     
     
+    camera_offset_x = dino_pos[0]  # lock camera to Dino's X
     
     
     # Run 'Begin Experiment' code from worldController_L7
@@ -5710,6 +5722,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     level_timer = core.Clock()  # Initialize the timer
     time_limit = 125  # Set the time limit in seconds (2 minutes)
     
+    global time_bonus_L7
+    time_bonus_L7 = 0
+    
     lose_sound_L7 = sound.Sound(
         'A', 
         secs=-1, 
@@ -5836,11 +5851,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     #Button 0 and button 2 force properties
-    B0ForceInNewtons = 0
-    B2ForceInNewtons = 0
+    B0ForceInNorm = 0
+    B2ForceInNorm = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
-    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
-    
+    #FORCE_MULTIPLIER = 0.05  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -5849,8 +5863,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     jump_speed = 0.005  # Jumping speed
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
-    #min_x = -0.6  # Left boundary
-    #max_x = 19 # right boundary
+    min_x = -0.6  # Left boundary
+    max_x = 19 # right boundary
     respawn_position = [0, -0.3]  # Starting position for Dino
     
     
@@ -5894,10 +5908,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             B2LowByte = Base71Lookup.index(output[5])
             
             # Forces in Newtons
-            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
-            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            B0ForceInNorm = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNorm = ((B2HighByte * 71) + B2LowByte) * 0.0098
             
-            return B0ForceInNewtons, B2ForceInNewtons
+            return B0ForceInNorm, B2ForceInNorm
         
         return 0, 0  # Default forces if data is invalid
     
@@ -5923,6 +5937,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     dino_image_L8.image = frame_paths[frame_index]
     
     
+    camera_offset_x = dino_pos[0]  # lock camera to Dino's X
     
     
     # Run 'Begin Experiment' code from worldController_L8
@@ -6374,6 +6389,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     level_timer = core.Clock()  # Initialize the timer
     time_limit = 125  # Set the time limit in seconds (2 minutes)
     
+    global time_bonus_L8
+    time_bonus_L8 = 0
+    
     lose_sound_L8 = sound.Sound(
         'A', 
         secs=-1, 
@@ -6500,11 +6518,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     #Button 0 and button 2 force properties
-    B0ForceInNewtons = 0
-    B2ForceInNewtons = 0
+    B0ForceInNorm = 0
+    B2ForceInNorm = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
-    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
-    
+    #FORCE_MULTIPLIER = 0.05  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -6513,8 +6530,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     jump_speed = 0.005  # Jumping speed
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
-    #min_x = -0.6  # Left boundary
-    #max_x = 19 # right boundary
+    min_x = -0.6  # Left boundary
+    max_x = 19 # right boundary
     respawn_position = [0, -0.3]  # Starting position for Dino
     
     
@@ -6558,10 +6575,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             B2LowByte = Base71Lookup.index(output[5])
             
             # Forces in Newtons
-            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
-            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            B0ForceInNorm = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNorm = ((B2HighByte * 71) + B2LowByte) * 0.0098
             
-            return B0ForceInNewtons, B2ForceInNewtons
+            return B0ForceInNorm, B2ForceInNorm
         
         return 0, 0  # Default forces if data is invalid
     
@@ -6587,6 +6604,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     dino_image_L9.image = frame_paths[frame_index]
     
     
+    camera_offset_x = dino_pos[0]  # lock camera to Dino's X
     
     
     # Run 'Begin Experiment' code from worldController_L9
@@ -7038,6 +7056,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     level_timer = core.Clock()  # Initialize the timer
     time_limit = 125  # Set the time limit in seconds (2 minutes)
     
+    global time_bonus_L9
+    time_bonus_L9 = 0
+    
     lose_sound_L9 = sound.Sound(
         'A', 
         secs=-1, 
@@ -7164,11 +7185,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     #Button 0 and button 2 force properties
-    B0ForceInNewtons = 0
-    B2ForceInNewtons = 0
+    B0ForceInNorm = 0
+    B2ForceInNorm = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
-    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
-    
+    #FORCE_MULTIPLIER = 0.05  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -7177,8 +7197,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     jump_speed = 0.005  # Jumping speed
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
-    #min_x = -0.6  # Left boundary
-    #max_x = 19 # right boundary
+    min_x = -0.6  # Left boundary
+    max_x = 19 # right boundary
     respawn_position = [0, -0.3]  # Starting position for Dino
     
     
@@ -7222,10 +7242,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             B2LowByte = Base71Lookup.index(output[5])
             
             # Forces in Newtons
-            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
-            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            B0ForceInNorm = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNorm = ((B2HighByte * 71) + B2LowByte) * 0.0098
             
-            return B0ForceInNewtons, B2ForceInNewtons
+            return B0ForceInNorm, B2ForceInNorm
         
         return 0, 0  # Default forces if data is invalid
     
@@ -7251,6 +7271,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     dino_image_L10.image = frame_paths[frame_index]
     
     
+    camera_offset_x = dino_pos[0]  # lock camera to Dino's X
     
     
     # Run 'Begin Experiment' code from worldController_L10
@@ -7702,6 +7723,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     level_timer = core.Clock()  # Initialize the timer
     time_limit = 125  # Set the time limit in seconds (2 minutes)
     
+    global time_bonus_L10
+    time_bonus_L10 = 0
+    
     lose_sound_L10 = sound.Sound(
         'A', 
         secs=-1, 
@@ -7828,11 +7852,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     #Button 0 and button 2 force properties
-    B0ForceInNewtons = 0
-    B2ForceInNewtons = 0
+    B0ForceInNorm = 0
+    B2ForceInNorm = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
-    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
-    
+    #FORCE_MULTIPLIER = 0.05  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -7841,8 +7864,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     jump_speed = 0.005  # Jumping speed
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
-    #min_x = -0.6  # Left boundary
-    #max_x = 19 # right boundary
+    min_x = -0.6  # Left boundary
+    max_x = 19 # right boundary
     respawn_position = [0, -0.3]  # Starting position for Dino
     
     
@@ -7886,10 +7909,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             B2LowByte = Base71Lookup.index(output[5])
             
             # Forces in Newtons
-            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
-            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            B0ForceInNorm = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNorm = ((B2HighByte * 71) + B2LowByte) * 0.0098
             
-            return B0ForceInNewtons, B2ForceInNewtons
+            return B0ForceInNorm, B2ForceInNorm
         
         return 0, 0  # Default forces if data is invalid
     
@@ -7915,6 +7938,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     dino_image_L11.image = frame_paths[frame_index]
     
     
+    camera_offset_x = dino_pos[0]  # lock camera to Dino's X
     
     
     # Run 'Begin Experiment' code from worldController_L11
@@ -8366,6 +8390,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     level_timer = core.Clock()  # Initialize the timer
     time_limit = 125  # Set the time limit in seconds (2 minutes)
     
+    global time_bonus_L11
+    time_bonus_L11 = 0
+    
     lose_sound_L11 = sound.Sound(
         'A', 
         secs=-1, 
@@ -8492,11 +8519,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     #Button 0 and button 2 force properties
-    B0ForceInNewtons = 0
-    B2ForceInNewtons = 0
+    B0ForceInNorm = 0
+    B2ForceInNorm = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
-    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
-    
+    #FORCE_MULTIPLIER = 0.05  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -8505,8 +8531,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     jump_speed = 0.005  # Jumping speed
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
-    #min_x = -0.6  # Left boundary
-    #max_x = 19 # right boundary
+    min_x = -0.6  # Left boundary
+    max_x = 19 # right boundary
     respawn_position = [0, -0.3]  # Starting position for Dino
     
     
@@ -8550,10 +8576,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             B2LowByte = Base71Lookup.index(output[5])
             
             # Forces in Newtons
-            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
-            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            B0ForceInNorm = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNorm = ((B2HighByte * 71) + B2LowByte) * 0.0098
             
-            return B0ForceInNewtons, B2ForceInNewtons
+            return B0ForceInNorm, B2ForceInNorm
         
         return 0, 0  # Default forces if data is invalid
     
@@ -8579,6 +8605,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     dino_image_L12.image = frame_paths[frame_index]
     
     
+    camera_offset_x = dino_pos[0]  # lock camera to Dino's X
     
     
     # Run 'Begin Experiment' code from worldController_L12
@@ -9030,6 +9057,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     level_timer = core.Clock()  # Initialize the timer
     time_limit = 125  # Set the time limit in seconds (2 minutes)
     
+    global time_bonus_L12
+    time_bonus_L12 = 0
+    
     lose_sound_L12 = sound.Sound(
         'A', 
         secs=-1, 
@@ -9156,11 +9186,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     #Button 0 and button 2 force properties
-    B0ForceInNewtons = 0
-    B2ForceInNewtons = 0
+    B0ForceInNorm = 0
+    B2ForceInNorm = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
-    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
-    
+    #FORCE_MULTIPLIER = 0.05  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -9169,8 +9198,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     jump_speed = 0.005  # Jumping speed
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
-    #min_x = -0.6  # Left boundary
-    #max_x = 19 # right boundary
+    min_x = -0.6  # Left boundary
+    max_x = 19 # right boundary
     respawn_position = [0, -0.3]  # Starting position for Dino
     
     
@@ -9214,10 +9243,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             B2LowByte = Base71Lookup.index(output[5])
             
             # Forces in Newtons
-            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
-            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            B0ForceInNorm = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNorm = ((B2HighByte * 71) + B2LowByte) * 0.0098
             
-            return B0ForceInNewtons, B2ForceInNewtons
+            return B0ForceInNorm, B2ForceInNorm
         
         return 0, 0  # Default forces if data is invalid
     
@@ -9243,6 +9272,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     dino_image_L13.image = frame_paths[frame_index]
     
     
+    camera_offset_x = dino_pos[0]  # lock camera to Dino's X
     
     
     # Run 'Begin Experiment' code from worldController_L13
@@ -9704,6 +9734,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     level_timer = core.Clock()  # Initialize the timer
     time_limit = 125  # Set the time limit in seconds (2 minutes)
     
+    global time_bonus_L13
+    time_bonus_L13 = 0
+    
     lose_sound_L13 = sound.Sound(
         'A', 
         secs=-1, 
@@ -9830,11 +9863,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     #Button 0 and button 2 force properties
-    B0ForceInNewtons = 0
-    B2ForceInNewtons = 0
+    B0ForceInNorm = 0
+    B2ForceInNorm = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
-    FORCE_MULTIPLIER = 0.001  # Adjust this to control how much force affects movement
-    
+    #FORCE_MULTIPLIER = 0.05  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -9843,8 +9875,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     jump_speed = 0.005  # Jumping speed
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
-    #min_x = -0.6  # Left boundary
-    #max_x = 19 # right boundary
+    min_x = -0.6  # Left boundary
+    max_x = 19 # right boundary
     respawn_position = [0, -0.3]  # Starting position for Dino
     
     
@@ -9888,10 +9920,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             B2LowByte = Base71Lookup.index(output[5])
             
             # Forces in Newtons
-            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
-            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            B0ForceInNorm = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNorm = ((B2HighByte * 71) + B2LowByte) * 0.0098
             
-            return B0ForceInNewtons, B2ForceInNewtons
+            return B0ForceInNorm, B2ForceInNorm
         
         return 0, 0  # Default forces if data is invalid
     
@@ -9917,6 +9949,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     dino_image_L14.image = frame_paths[frame_index]
     
     
+    camera_offset_x = dino_pos[0]  # lock camera to Dino's X
     
     
     # Run 'Begin Experiment' code from worldController_L14
@@ -10380,6 +10413,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     level_timer = core.Clock()  # Initialize the timer
     time_limit = 125  # Set the time limit in seconds (2 minutes)
     
+    global time_bonus_L14
+    time_bonus_L14 = 0
+    
     lose_sound_L14 = sound.Sound(
         'A', 
         secs=-1, 
@@ -10506,11 +10542,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     #Button 0 and button 2 force properties
-    B0ForceInNewtons = 0
-    B2ForceInNewtons = 0
+    B0ForceInNorm = 0
+    B2ForceInNorm = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
-    FORCE_MULTIPLIER = 0.0055 # Adjust this to control how much force affects movement
-    
+    #FORCE_MULTIPLIER = 0.05  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -10519,8 +10554,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     jump_speed = 0.005  # Jumping speed
     move_speed = 0.01  # Horizontal movement speed
     ground_offset = 0.03  # Offset to avoid sinking into the ground visually
-    #min_x = -0.6  # Left boundary
-    #max_x = 19 # right boundary
+    min_x = -0.6  # Left boundary
+    max_x = 19 # right boundary
     respawn_position = [0, -0.3]  # Starting position for Dino
     
     
@@ -10564,10 +10599,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             B2LowByte = Base71Lookup.index(output[5])
             
             # Forces in Newtons
-            B0ForceInNewtons = ((B0HighByte * 71) + B0LowByte) * 0.0098
-            B2ForceInNewtons = ((B2HighByte * 71) + B2LowByte) * 0.0098
+            B0ForceInNorm = ((B0HighByte * 71) + B0LowByte) * 0.0098
+            B2ForceInNorm = ((B2HighByte * 71) + B2LowByte) * 0.0098
             
-            return B0ForceInNewtons, B2ForceInNewtons
+            return B0ForceInNorm, B2ForceInNorm
         
         return 0, 0  # Default forces if data is invalid
     
@@ -10593,6 +10628,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     dino_image_L15.image = frame_paths[frame_index]
     
     
+    camera_offset_x = dino_pos[0]  # lock camera to Dino's X
     
     
     # Run 'Begin Experiment' code from worldController_L15
@@ -11059,6 +11095,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from Timer_L15
     level_timer = core.Clock()  # Initialize the timer
     time_limit = 125  # Set the time limit in seconds (2 minutes)
+    
+    global time_bonus_L15
+    time_bonus_L15 = 0
     
     lose_sound_L15 = sound.Sound(
         'A', 
@@ -14855,28 +14894,34 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # Read serial data
                     ser.flushInput()
                     strSerialData = ser.readline()
-                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                    B0ForceInNorm, B2ForceInNorm = calculate_psurp_forces_normalized(strSerialData, minF, maxF)
                 
                     # Apply difficulty-specific movement
                     if selected_diff == "1":
                         # Constant movement for Easy mode
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
-                            dino_image_L3.size = [abs(dino_image_L3.size[0]), dino_image_L3.size[1]]  # Face right
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                           pass
                 
                     elif selected_diff == "2":
                         # Proportional movement for Hard mode (current implementation)
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
-                            dino_pos[0] += move_amount  # Movement based on force
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNorm * FORCE_MULTIPLIER
+                            camera_offset_x += move_amount  # Move camera instead of dino
                             dino_image_L3.size = [abs(dino_image_L3.size[0]), dino_image_L3.size[1]]  # Face right
+                        else:
+                            camera_speed = og_camera_speed
                 
                     # Jump logic remains the same for both difficulties
-                    if B0ForceInNewtons > MIN_FORCE:
-                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                    if B0ForceInNorm > minF:
+                        dino_speed = B0ForceInNorm * FORCE_MULTIPLIER # Jump height based on force
                 
                 
-                            
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed
+                    camera_speed =+ camera_mov_speed  # Speed up when pressing right
+                    dino_image_L3.size = [abs(dino_image_L3.size[0]), dino_image_L3.size[1]]
+                else:
+                    camera_speed = og_camera_speed # Default speed      
                  
                 # Apply gravity to Dino's vertical speed
                 dino_speed += gravity
@@ -14897,20 +14942,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Update Dino's vertical position
                 dino_pos[1] += dino_speed
+                dino_pos[0] = camera_offset_x
                 
-                # Continuous horizontal movement
-                if left_pressed and dino_pos[0] > min_x:
-                    dino_pos[0] -= move_speed  # Move Dino to the left
-                    dino_image_L3.size = [-1 * abs(dino_image_L3.size[0]), dino_image_L3.size[1]]
-                
-                if right_pressed and dino_pos[0] < max_x:
-                    dino_pos[0] += move_speed  # Move Dino to the right
-                    dino_image_L3.size = [abs(dino_image_L3.size[0]), dino_image_L3.size[1]]  # Reset Dino to face right
-                
-                # Update Dino's position
                 # dino_image_L3.pos = dino_pos  # Use both X and Y values of dino_pos
                 dino_image_L3.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
-                
                 # Increment the frame counter for trail updates
                 trail_frame_counter += 1
                 
@@ -15421,6 +15456,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
+            # Run 'End Routine' code from Timer_L3
+            time_bonus_L3 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_3" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -15435,18 +15472,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             # Run 'Begin Routine' code from Checker_L3
             import csv
+            
             # Calculate the percentage
             if total_possible_vertices_L3 > 0:
+                total_touched_vertices_L3 += time_bonus_L3
                 percentage = (total_touched_vertices_L3 / total_possible_vertices_L3) * 100
             else:
                 percentage = 0  # Avoid division by zero
-                
+            
             
             # Update the text for the end screen
-            end_score_text_L3.text = f"Your score: {percentage:.2f}%"
-            
-            
-            
+            end_score_text_L3.text = (
+                f"Your score: {percentage:.2f}%\n"
+                f"Bonus time score: +{time_bonus_L3} point(s)"
+            )
             
             win_sound_L3.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L3.setVolume(1.0, log=False)
@@ -15647,6 +15686,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             total_touched_vertices_L3 = 0
             total_possible_vertices_L3 = 0
+            time_bonus_L3 = 0
             meatbone_collided = False
             # check responses
             if break_key_L3.keys in ['', [], None]:  # No response was made
@@ -15901,28 +15941,34 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # Read serial data
                     ser.flushInput()
                     strSerialData = ser.readline()
-                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                    B0ForceInNorm, B2ForceInNorm = calculate_psurp_forces_normalized(strSerialData, minF, maxF)
                 
                     # Apply difficulty-specific movement
                     if selected_diff == "1":
                         # Constant movement for Easy mode
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
-                            dino_image_L4.size = [abs(dino_image_L4.size[0]), dino_image_L4.size[1]]  # Face right
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                           pass
                 
                     elif selected_diff == "2":
                         # Proportional movement for Hard mode (current implementation)
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
-                            dino_pos[0] += move_amount  # Movement based on force
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNorm * FORCE_MULTIPLIER
+                            camera_offset_x += move_amount  # Move camera instead of dino
                             dino_image_L4.size = [abs(dino_image_L4.size[0]), dino_image_L4.size[1]]  # Face right
+                        else:
+                            camera_speed = og_camera_speed
                 
                     # Jump logic remains the same for both difficulties
-                    if B0ForceInNewtons > MIN_FORCE:
-                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                    if B0ForceInNorm > minF:
+                        dino_speed = B0ForceInNorm * FORCE_MULTIPLIER # Jump height based on force
                 
                 
-                            
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed
+                    camera_speed =+ camera_mov_speed  # Speed up when pressing right
+                    dino_image_L4.size = [abs(dino_image_L4.size[0]), dino_image_L4.size[1]]
+                else:
+                    camera_speed = og_camera_speed # Default speed      
                  
                 # Apply gravity to Dino's vertical speed
                 dino_speed += gravity
@@ -15943,20 +15989,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Update Dino's vertical position
                 dino_pos[1] += dino_speed
+                dino_pos[0] = camera_offset_x
                 
-                # Continuous horizontal movement
-                if left_pressed and dino_pos[0] > min_x:
-                    dino_pos[0] -= move_speed  # Move Dino to the left
-                    dino_image_L4.size = [-1 * abs(dino_image_L4.size[0]), dino_image_L4.size[1]]
-                
-                if right_pressed and dino_pos[0] < max_x:
-                    dino_pos[0] += move_speed  # Move Dino to the right
-                    dino_image_L4.size = [abs(dino_image_L4.size[0]), dino_image_L4.size[1]]  # Reset Dino to face right
-                
-                # Update Dino's position
                 # dino_image_L4.pos = dino_pos  # Use both X and Y values of dino_pos
                 dino_image_L4.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
-                
                 # Increment the frame counter for trail updates
                 trail_frame_counter += 1
                 
@@ -16467,6 +16503,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
+            # Run 'End Routine' code from Timer_L4
+            time_bonus_L4 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_4" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -16481,16 +16519,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             # Run 'Begin Routine' code from Checker_L4
             import csv
+            
             # Calculate the percentage
             if total_possible_vertices_L4 > 0:
+                total_touched_vertices_L4 += time_bonus_L4
                 percentage = (total_touched_vertices_L4 / total_possible_vertices_L4) * 100
             else:
                 percentage = 0  # Avoid division by zero
-                
+            
             
             # Update the text for the end screen
-            end_score_text_L4.text = f"Your score: {percentage:.2f}%"
-            
+            end_score_text_L4.text = (
+                f"Your score: {percentage:.2f}%\n"
+                f"Bonus time score: +{time_bonus_L4} point(s)"
+            )
             
             win_sound_L4.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L4.setVolume(1.0, log=False)
@@ -16691,6 +16733,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             total_touched_vertices_L4 = 0
             total_possible_vertices_L4 = 0
+            time_bonus_L4 = 0
             meatbone_collided = False
             # check responses
             if break_key_L4.keys in ['', [], None]:  # No response was made
@@ -16945,28 +16988,34 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # Read serial data
                     ser.flushInput()
                     strSerialData = ser.readline()
-                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                    B0ForceInNorm, B2ForceInNorm = calculate_psurp_forces_normalized(strSerialData, minF, maxF)
                 
                     # Apply difficulty-specific movement
                     if selected_diff == "1":
                         # Constant movement for Easy mode
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
-                            dino_image_L5.size = [abs(dino_image_L5.size[0]), dino_image_L5.size[1]]  # Face right
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                           pass
                 
                     elif selected_diff == "2":
                         # Proportional movement for Hard mode (current implementation)
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
-                            dino_pos[0] += move_amount  # Movement based on force
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNorm * FORCE_MULTIPLIER
+                            camera_offset_x += move_amount  # Move camera instead of dino
                             dino_image_L5.size = [abs(dino_image_L5.size[0]), dino_image_L5.size[1]]  # Face right
+                        else:
+                            camera_speed = og_camera_speed
                 
                     # Jump logic remains the same for both difficulties
-                    if B0ForceInNewtons > MIN_FORCE:
-                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                    if B0ForceInNorm > minF:
+                        dino_speed = B0ForceInNorm * FORCE_MULTIPLIER # Jump height based on force
                 
                 
-                            
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed
+                    camera_speed =+ camera_mov_speed  # Speed up when pressing right
+                    dino_image_L5.size = [abs(dino_image_L5.size[0]), dino_image_L5.size[1]]
+                else:
+                    camera_speed = og_camera_speed # Default speed      
                  
                 # Apply gravity to Dino's vertical speed
                 dino_speed += gravity
@@ -16987,20 +17036,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Update Dino's vertical position
                 dino_pos[1] += dino_speed
+                dino_pos[0] = camera_offset_x
                 
-                # Continuous horizontal movement
-                if left_pressed and dino_pos[0] > min_x:
-                    dino_pos[0] -= move_speed  # Move Dino to the left
-                    dino_image_L5.size = [-1 * abs(dino_image_L5.size[0]), dino_image_L5.size[1]]
-                
-                if right_pressed and dino_pos[0] < max_x:
-                    dino_pos[0] += move_speed  # Move Dino to the right
-                    dino_image_L5.size = [abs(dino_image_L5.size[0]), dino_image_L5.size[1]]  # Reset Dino to face right
-                
-                # Update Dino's position
                 # dino_image_L5.pos = dino_pos  # Use both X and Y values of dino_pos
                 dino_image_L5.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
-                
                 # Increment the frame counter for trail updates
                 trail_frame_counter += 1
                 
@@ -17511,6 +17550,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
+            # Run 'End Routine' code from Timer_L5
+            time_bonus_L5 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_5" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -17525,16 +17566,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             # Run 'Begin Routine' code from Checker_L5
             import csv
+            
             # Calculate the percentage
             if total_possible_vertices_L5 > 0:
+                total_touched_vertices_L5 += time_bonus_L5
                 percentage = (total_touched_vertices_L5 / total_possible_vertices_L5) * 100
             else:
                 percentage = 0  # Avoid division by zero
-                
+            
             
             # Update the text for the end screen
-            end_score_text_L5.text = f"Your score: {percentage:.2f}%"
-            
+            end_score_text_L5.text = (
+                f"Your score: {percentage:.2f}%\n"
+                f"Bonus time score: +{time_bonus_L5} point(s)"
+            )
             
             win_sound_L5.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L5.setVolume(1.0, log=False)
@@ -17735,6 +17780,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             total_touched_vertices_L5 = 0
             total_possible_vertices_L5 = 0
+            time_bonus_L5 = 0
             meatbone_collided = False
             # check responses
             if break_key_L5.keys in ['', [], None]:  # No response was made
@@ -17989,28 +18035,34 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # Read serial data
                     ser.flushInput()
                     strSerialData = ser.readline()
-                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                    B0ForceInNorm, B2ForceInNorm = calculate_psurp_forces_normalized(strSerialData, minF, maxF)
                 
                     # Apply difficulty-specific movement
                     if selected_diff == "1":
                         # Constant movement for Easy mode
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
-                            dino_image_L6.size = [abs(dino_image_L6.size[0]), dino_image_L6.size[1]]  # Face right
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                           pass
                 
                     elif selected_diff == "2":
                         # Proportional movement for Hard mode (current implementation)
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
-                            dino_pos[0] += move_amount  # Movement based on force
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNorm * FORCE_MULTIPLIER
+                            camera_offset_x += move_amount  # Move camera instead of dino
                             dino_image_L6.size = [abs(dino_image_L6.size[0]), dino_image_L6.size[1]]  # Face right
+                        else:
+                            camera_speed = og_camera_speed
                 
                     # Jump logic remains the same for both difficulties
-                    if B0ForceInNewtons > MIN_FORCE:
-                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                    if B0ForceInNorm > minF:
+                        dino_speed = B0ForceInNorm * FORCE_MULTIPLIER # Jump height based on force
                 
                 
-                            
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed
+                    camera_speed =+ camera_mov_speed  # Speed up when pressing right
+                    dino_image_L6.size = [abs(dino_image_L6.size[0]), dino_image_L6.size[1]]
+                else:
+                    camera_speed = og_camera_speed # Default speed      
                  
                 # Apply gravity to Dino's vertical speed
                 dino_speed += gravity
@@ -18031,20 +18083,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Update Dino's vertical position
                 dino_pos[1] += dino_speed
+                dino_pos[0] = camera_offset_x
                 
-                # Continuous horizontal movement
-                if left_pressed and dino_pos[0] > min_x:
-                    dino_pos[0] -= move_speed  # Move Dino to the left
-                    dino_image_L6.size = [-1 * abs(dino_image_L6.size[0]), dino_image_L6.size[1]]
-                
-                if right_pressed and dino_pos[0] < max_x:
-                    dino_pos[0] += move_speed  # Move Dino to the right
-                    dino_image_L6.size = [abs(dino_image_L6.size[0]), dino_image_L6.size[1]]  # Reset Dino to face right
-                
-                # Update Dino's position
                 # dino_image_L6.pos = dino_pos  # Use both X and Y values of dino_pos
                 dino_image_L6.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
-                
                 # Increment the frame counter for trail updates
                 trail_frame_counter += 1
                 
@@ -18555,6 +18597,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
+            # Run 'End Routine' code from Timer_L6
+            time_bonus_L6 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_6" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -18569,17 +18613,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             # Run 'Begin Routine' code from Checker_L6
             import csv
+            
             # Calculate the percentage
             if total_possible_vertices_L6 > 0:
+                total_touched_vertices_L6 += time_bonus_L6
                 percentage = (total_touched_vertices_L6 / total_possible_vertices_L6) * 100
             else:
                 percentage = 0  # Avoid division by zero
-                
+            
             
             # Update the text for the end screen
-            end_score_text_L6.text = f"Your score: {percentage:.2f}%"
-            
-            
+            end_score_text_L6.text = (
+                f"Your score: {percentage:.2f}%\n"
+                f"Bonus time score: +{time_bonus_L6} point(s)"
+            )
             
             win_sound_L6.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L6.setVolume(1.0, log=False)
@@ -18780,6 +18827,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             total_touched_vertices_L6 = 0
             total_possible_vertices_L6 = 0
+            time_bonus_L6 = 0
             meatbone_collided = False
             # check responses
             if break_key_L6.keys in ['', [], None]:  # No response was made
@@ -19034,28 +19082,34 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # Read serial data
                     ser.flushInput()
                     strSerialData = ser.readline()
-                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                    B0ForceInNorm, B2ForceInNorm = calculate_psurp_forces_normalized(strSerialData, minF, maxF)
                 
                     # Apply difficulty-specific movement
                     if selected_diff == "1":
                         # Constant movement for Easy mode
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
-                            dino_image_L7.size = [abs(dino_image_L7.size[0]), dino_image_L7.size[1]]  # Face right
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                           pass
                 
                     elif selected_diff == "2":
                         # Proportional movement for Hard mode (current implementation)
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
-                            dino_pos[0] += move_amount  # Movement based on force
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNorm * FORCE_MULTIPLIER
+                            camera_offset_x += move_amount  # Move camera instead of dino
                             dino_image_L7.size = [abs(dino_image_L7.size[0]), dino_image_L7.size[1]]  # Face right
+                        else:
+                            camera_speed = og_camera_speed
                 
                     # Jump logic remains the same for both difficulties
-                    if B0ForceInNewtons > MIN_FORCE:
-                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                    if B0ForceInNorm > minF:
+                        dino_speed = B0ForceInNorm * FORCE_MULTIPLIER # Jump height based on force
                 
                 
-                            
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed
+                    camera_speed =+ camera_mov_speed  # Speed up when pressing right
+                    dino_image_L7.size = [abs(dino_image_L7.size[0]), dino_image_L7.size[1]]
+                else:
+                    camera_speed = og_camera_speed # Default speed      
                  
                 # Apply gravity to Dino's vertical speed
                 dino_speed += gravity
@@ -19076,20 +19130,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Update Dino's vertical position
                 dino_pos[1] += dino_speed
+                dino_pos[0] = camera_offset_x
                 
-                # Continuous horizontal movement
-                if left_pressed and dino_pos[0] > min_x:
-                    dino_pos[0] -= move_speed  # Move Dino to the left
-                    dino_image_L7.size = [-1 * abs(dino_image_L7.size[0]), dino_image_L7.size[1]]
-                
-                if right_pressed and dino_pos[0] < max_x:
-                    dino_pos[0] += move_speed  # Move Dino to the right
-                    dino_image_L7.size = [abs(dino_image_L7.size[0]), dino_image_L7.size[1]]  # Reset Dino to face right
-                
-                # Update Dino's position
                 # dino_image_L7.pos = dino_pos  # Use both X and Y values of dino_pos
                 dino_image_L7.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
-                
                 # Increment the frame counter for trail updates
                 trail_frame_counter += 1
                 
@@ -19600,6 +19644,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
+            # Run 'End Routine' code from Timer_L7
+            time_bonus_L7 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_7" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -19614,15 +19660,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             # Run 'Begin Routine' code from Checker_L7
             import csv
+            
             # Calculate the percentage
             if total_possible_vertices_L7 > 0:
+                total_touched_vertices_L7 += time_bonus_L7
                 percentage = (total_touched_vertices_L7 / total_possible_vertices_L7) * 100
             else:
                 percentage = 0  # Avoid division by zero
-                
+            
             
             # Update the text for the end screen
-            end_score_text_L7.text = f"Your score: {percentage:.2f}%"
+            end_score_text_L7.text = (
+                f"Your score: {percentage:.2f}%\n"
+                f"Bonus time score: +{time_bonus_L7} point(s)"
+            )
             
             win_sound_L7.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L7.setVolume(1.0, log=False)
@@ -19823,6 +19874,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             total_touched_vertices_L7 = 0
             total_possible_vertices_L7 = 0
+            time_bonus_L7 = 0
             meatbone_collided = False
             # check responses
             if break_key_L7.keys in ['', [], None]:  # No response was made
@@ -20077,28 +20129,34 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # Read serial data
                     ser.flushInput()
                     strSerialData = ser.readline()
-                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                    B0ForceInNorm, B2ForceInNorm = calculate_psurp_forces_normalized(strSerialData, minF, maxF)
                 
                     # Apply difficulty-specific movement
                     if selected_diff == "1":
                         # Constant movement for Easy mode
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
-                            dino_image_L8.size = [abs(dino_image_L8.size[0]), dino_image_L8.size[1]]  # Face right
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                           pass
                 
                     elif selected_diff == "2":
                         # Proportional movement for Hard mode (current implementation)
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
-                            dino_pos[0] += move_amount  # Movement based on force
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNorm * FORCE_MULTIPLIER
+                            camera_offset_x += move_amount  # Move camera instead of dino
                             dino_image_L8.size = [abs(dino_image_L8.size[0]), dino_image_L8.size[1]]  # Face right
+                        else:
+                            camera_speed = og_camera_speed
                 
                     # Jump logic remains the same for both difficulties
-                    if B0ForceInNewtons > MIN_FORCE:
-                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                    if B0ForceInNorm > minF:
+                        dino_speed = B0ForceInNorm * FORCE_MULTIPLIER # Jump height based on force
                 
                 
-                            
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed
+                    camera_speed =+ camera_mov_speed  # Speed up when pressing right
+                    dino_image_L8.size = [abs(dino_image_L8.size[0]), dino_image_L8.size[1]]
+                else:
+                    camera_speed = og_camera_speed # Default speed      
                  
                 # Apply gravity to Dino's vertical speed
                 dino_speed += gravity
@@ -20119,20 +20177,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Update Dino's vertical position
                 dino_pos[1] += dino_speed
+                dino_pos[0] = camera_offset_x
                 
-                # Continuous horizontal movement
-                if left_pressed and dino_pos[0] > min_x:
-                    dino_pos[0] -= move_speed  # Move Dino to the left
-                    dino_image_L8.size = [-1 * abs(dino_image_L8.size[0]), dino_image_L8.size[1]]
-                
-                if right_pressed and dino_pos[0] < max_x:
-                    dino_pos[0] += move_speed  # Move Dino to the right
-                    dino_image_L8.size = [abs(dino_image_L8.size[0]), dino_image_L8.size[1]]  # Reset Dino to face right
-                
-                # Update Dino's position
                 # dino_image_L8.pos = dino_pos  # Use both X and Y values of dino_pos
                 dino_image_L8.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
-                
                 # Increment the frame counter for trail updates
                 trail_frame_counter += 1
                 
@@ -20643,6 +20691,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
+            # Run 'End Routine' code from Timer_L8
+            time_bonus_L8 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_8" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -20657,17 +20707,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             # Run 'Begin Routine' code from Checker_L8
             import csv
+            
             # Calculate the percentage
             if total_possible_vertices_L8 > 0:
+                total_touched_vertices_L8 += time_bonus_L8
                 percentage = (total_touched_vertices_L8 / total_possible_vertices_L8) * 100
             else:
                 percentage = 0  # Avoid division by zero
-                
+            
             
             # Update the text for the end screen
-            end_score_text_L8.text = f"Your score: {percentage:.2f}%"
-            
-            
+            end_score_text_L8.text = (
+                f"Your score: {percentage:.2f}%\n"
+                f"Bonus time score: +{time_bonus_L8} point(s)"
+            )
             
             win_sound_L8.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L8.setVolume(1.0, log=False)
@@ -20868,6 +20921,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             total_touched_vertices_L8 = 0
             total_possible_vertices_L8 = 0
+            time_bonus_L8 = 0
             meatbone_collided = False
             # check responses
             if break_key_L8.keys in ['', [], None]:  # No response was made
@@ -21122,28 +21176,34 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # Read serial data
                     ser.flushInput()
                     strSerialData = ser.readline()
-                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                    B0ForceInNorm, B2ForceInNorm = calculate_psurp_forces_normalized(strSerialData, minF, maxF)
                 
                     # Apply difficulty-specific movement
                     if selected_diff == "1":
                         # Constant movement for Easy mode
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
-                            dino_image_L9.size = [abs(dino_image_L9.size[0]), dino_image_L9.size[1]]  # Face right
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                           pass
                 
                     elif selected_diff == "2":
                         # Proportional movement for Hard mode (current implementation)
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
-                            dino_pos[0] += move_amount  # Movement based on force
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNorm * FORCE_MULTIPLIER
+                            camera_offset_x += move_amount  # Move camera instead of dino
                             dino_image_L9.size = [abs(dino_image_L9.size[0]), dino_image_L9.size[1]]  # Face right
+                        else:
+                            camera_speed = og_camera_speed
                 
                     # Jump logic remains the same for both difficulties
-                    if B0ForceInNewtons > MIN_FORCE:
-                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                    if B0ForceInNorm > minF:
+                        dino_speed = B0ForceInNorm * FORCE_MULTIPLIER # Jump height based on force
                 
                 
-                            
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed
+                    camera_speed =+ camera_mov_speed  # Speed up when pressing right
+                    dino_image_L9.size = [abs(dino_image_L9.size[0]), dino_image_L9.size[1]]
+                else:
+                    camera_speed = og_camera_speed # Default speed      
                  
                 # Apply gravity to Dino's vertical speed
                 dino_speed += gravity
@@ -21164,20 +21224,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Update Dino's vertical position
                 dino_pos[1] += dino_speed
+                dino_pos[0] = camera_offset_x
                 
-                # Continuous horizontal movement
-                if left_pressed and dino_pos[0] > min_x:
-                    dino_pos[0] -= move_speed  # Move Dino to the left
-                    dino_image_L9.size = [-1 * abs(dino_image_L9.size[0]), dino_image_L9.size[1]]
-                
-                if right_pressed and dino_pos[0] < max_x:
-                    dino_pos[0] += move_speed  # Move Dino to the right
-                    dino_image_L9.size = [abs(dino_image_L9.size[0]), dino_image_L9.size[1]]  # Reset Dino to face right
-                
-                # Update Dino's position
                 # dino_image_L9.pos = dino_pos  # Use both X and Y values of dino_pos
                 dino_image_L9.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
-                
                 # Increment the frame counter for trail updates
                 trail_frame_counter += 1
                 
@@ -21688,6 +21738,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
+            # Run 'End Routine' code from Timer_L9
+            time_bonus_L9 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_9" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -21702,17 +21754,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             # Run 'Begin Routine' code from Checker_L9
             import csv
+            
             # Calculate the percentage
             if total_possible_vertices_L9 > 0:
+                total_touched_vertices_L9 += time_bonus_L9
                 percentage = (total_touched_vertices_L9 / total_possible_vertices_L9) * 100
             else:
                 percentage = 0  # Avoid division by zero
-                
+            
             
             # Update the text for the end screen
-            end_score_text_L9.text = f"Your score: {percentage:.2f}%"
-            
-            
+            end_score_text_L9.text = (
+                f"Your score: {percentage:.2f}%\n"
+                f"Bonus time score: +{time_bonus_L9} point(s)"
+            )
             
             win_sound_L9.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L9.setVolume(1.0, log=False)
@@ -21913,6 +21968,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             total_touched_vertices_L9 = 0
             total_possible_vertices_L9 = 0
+            time_bonus_L9 = 0
             meatbone_collided = False
             # check responses
             if break_key_L9.keys in ['', [], None]:  # No response was made
@@ -22167,28 +22223,34 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # Read serial data
                     ser.flushInput()
                     strSerialData = ser.readline()
-                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                    B0ForceInNorm, B2ForceInNorm = calculate_psurp_forces_normalized(strSerialData, minF, maxF)
                 
                     # Apply difficulty-specific movement
                     if selected_diff == "1":
                         # Constant movement for Easy mode
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
-                            dino_image_L10.size = [abs(dino_image_L10.size[0]), dino_image_L10.size[1]]  # Face right
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                           pass
                 
                     elif selected_diff == "2":
                         # Proportional movement for Hard mode (current implementation)
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
-                            dino_pos[0] += move_amount  # Movement based on force
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNorm * FORCE_MULTIPLIER
+                            camera_offset_x += move_amount  # Move camera instead of dino
                             dino_image_L10.size = [abs(dino_image_L10.size[0]), dino_image_L10.size[1]]  # Face right
+                        else:
+                            camera_speed = og_camera_speed
                 
                     # Jump logic remains the same for both difficulties
-                    if B0ForceInNewtons > MIN_FORCE:
-                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                    if B0ForceInNorm > minF:
+                        dino_speed = B0ForceInNorm * FORCE_MULTIPLIER # Jump height based on force
                 
                 
-                            
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed
+                    camera_speed =+ camera_mov_speed  # Speed up when pressing right
+                    dino_image_L10.size = [abs(dino_image_L10.size[0]), dino_image_L10.size[1]]
+                else:
+                    camera_speed = og_camera_speed # Default speed      
                  
                 # Apply gravity to Dino's vertical speed
                 dino_speed += gravity
@@ -22209,20 +22271,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Update Dino's vertical position
                 dino_pos[1] += dino_speed
+                dino_pos[0] = camera_offset_x
                 
-                # Continuous horizontal movement
-                if left_pressed and dino_pos[0] > min_x:
-                    dino_pos[0] -= move_speed  # Move Dino to the left
-                    dino_image_L10.size = [-1 * abs(dino_image_L10.size[0]), dino_image_L10.size[1]]
-                
-                if right_pressed and dino_pos[0] < max_x:
-                    dino_pos[0] += move_speed  # Move Dino to the right
-                    dino_image_L10.size = [abs(dino_image_L10.size[0]), dino_image_L10.size[1]]  # Reset Dino to face right
-                
-                # Update Dino's position
                 # dino_image_L10.pos = dino_pos  # Use both X and Y values of dino_pos
                 dino_image_L10.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
-                
                 # Increment the frame counter for trail updates
                 trail_frame_counter += 1
                 
@@ -23009,6 +23061,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
+            # Run 'End Routine' code from Timer_L10
+            time_bonus_L10 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_10" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -23023,16 +23077,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             # Run 'Begin Routine' code from Checker_L10
             import csv
+            
             # Calculate the percentage
             if total_possible_vertices_L10 > 0:
+                total_touched_vertices_L10 += time_bonus_L10
                 percentage = (total_touched_vertices_L10 / total_possible_vertices_L10) * 100
             else:
                 percentage = 0  # Avoid division by zero
-                
+            
             
             # Update the text for the end screen
-            end_score_text_L10.text = f"Your score: {percentage:.2f}%"
-            
+            end_score_text_L10.text = (
+                f"Your score: {percentage:.2f}%\n"
+                f"Bonus time score: +{time_bonus_L10} point(s)"
+            )
             
             win_sound_L10.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L10.setVolume(1.0, log=False)
@@ -23233,6 +23291,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             total_touched_vertices_L10 = 0
             total_possible_vertices_L10 = 0
+            time_bonus_L10 = 0
             meatbone_collided = False
             # check responses
             if break_key_L10.keys in ['', [], None]:  # No response was made
@@ -23487,28 +23546,34 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # Read serial data
                     ser.flushInput()
                     strSerialData = ser.readline()
-                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                    B0ForceInNorm, B2ForceInNorm = calculate_psurp_forces_normalized(strSerialData, minF, maxF)
                 
                     # Apply difficulty-specific movement
                     if selected_diff == "1":
                         # Constant movement for Easy mode
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
-                            dino_image_L11.size = [abs(dino_image_L11.size[0]), dino_image_L11.size[1]]  # Face right
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                           pass
                 
                     elif selected_diff == "2":
                         # Proportional movement for Hard mode (current implementation)
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
-                            dino_pos[0] += move_amount  # Movement based on force
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNorm * FORCE_MULTIPLIER
+                            camera_offset_x += move_amount  # Move camera instead of dino
                             dino_image_L11.size = [abs(dino_image_L11.size[0]), dino_image_L11.size[1]]  # Face right
+                        else:
+                            camera_speed = og_camera_speed
                 
                     # Jump logic remains the same for both difficulties
-                    if B0ForceInNewtons > MIN_FORCE:
-                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                    if B0ForceInNorm > minF:
+                        dino_speed = B0ForceInNorm * FORCE_MULTIPLIER # Jump height based on force
                 
                 
-                            
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed
+                    camera_speed =+ camera_mov_speed  # Speed up when pressing right
+                    dino_image_L11.size = [abs(dino_image_L11.size[0]), dino_image_L11.size[1]]
+                else:
+                    camera_speed = og_camera_speed # Default speed      
                  
                 # Apply gravity to Dino's vertical speed
                 dino_speed += gravity
@@ -23529,20 +23594,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Update Dino's vertical position
                 dino_pos[1] += dino_speed
+                dino_pos[0] = camera_offset_x
                 
-                # Continuous horizontal movement
-                if left_pressed and dino_pos[0] > min_x:
-                    dino_pos[0] -= move_speed  # Move Dino to the left
-                    dino_image_L11.size = [-1 * abs(dino_image_L11.size[0]), dino_image_L11.size[1]]
-                
-                if right_pressed and dino_pos[0] < max_x:
-                    dino_pos[0] += move_speed  # Move Dino to the right
-                    dino_image_L11.size = [abs(dino_image_L11.size[0]), dino_image_L11.size[1]]  # Reset Dino to face right
-                
-                # Update Dino's position
                 # dino_image_L11.pos = dino_pos  # Use both X and Y values of dino_pos
                 dino_image_L11.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
-                
                 # Increment the frame counter for trail updates
                 trail_frame_counter += 1
                 
@@ -24329,6 +24384,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
+            # Run 'End Routine' code from Timer_L11
+            time_bonus_L11 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_11" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -24343,16 +24400,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             # Run 'Begin Routine' code from Checker_L11
             import csv
+            
             # Calculate the percentage
             if total_possible_vertices_L11 > 0:
+                total_touched_vertices_L11 += time_bonus_L11
                 percentage = (total_touched_vertices_L11 / total_possible_vertices_L11) * 100
             else:
                 percentage = 0  # Avoid division by zero
-                
+            
             
             # Update the text for the end screen
-            end_score_text_L11.text = f"Your score: {percentage:.2f}%"
-            
+            end_score_text_L11.text = (
+                f"Your score: {percentage:.2f}%\n"
+                f"Bonus time score: +{time_bonus_L11} point(s)"
+            )
             
             win_sound_L11.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L11.setVolume(1.0, log=False)
@@ -24553,6 +24614,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             total_touched_vertices_L11 = 0
             total_possible_vertices_L11 = 0
+            time_bonus_L11 = 0
             meatbone_collided = False
             # check responses
             if break_key_L11.keys in ['', [], None]:  # No response was made
@@ -24807,28 +24869,34 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # Read serial data
                     ser.flushInput()
                     strSerialData = ser.readline()
-                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                    B0ForceInNorm, B2ForceInNorm = calculate_psurp_forces_normalized(strSerialData, minF, maxF)
                 
                     # Apply difficulty-specific movement
                     if selected_diff == "1":
                         # Constant movement for Easy mode
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
-                            dino_image_L12.size = [abs(dino_image_L12.size[0]), dino_image_L12.size[1]]  # Face right
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                           pass
                 
                     elif selected_diff == "2":
                         # Proportional movement for Hard mode (current implementation)
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
-                            dino_pos[0] += move_amount  # Movement based on force
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNorm * FORCE_MULTIPLIER
+                            camera_offset_x += move_amount  # Move camera instead of dino
                             dino_image_L12.size = [abs(dino_image_L12.size[0]), dino_image_L12.size[1]]  # Face right
+                        else:
+                            camera_speed = og_camera_speed
                 
                     # Jump logic remains the same for both difficulties
-                    if B0ForceInNewtons > MIN_FORCE:
-                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                    if B0ForceInNorm > minF:
+                        dino_speed = B0ForceInNorm * FORCE_MULTIPLIER # Jump height based on force
                 
                 
-                            
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed
+                    camera_speed =+ camera_mov_speed  # Speed up when pressing right
+                    dino_image_L12.size = [abs(dino_image_L12.size[0]), dino_image_L12.size[1]]
+                else:
+                    camera_speed = og_camera_speed # Default speed      
                  
                 # Apply gravity to Dino's vertical speed
                 dino_speed += gravity
@@ -24849,20 +24917,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Update Dino's vertical position
                 dino_pos[1] += dino_speed
+                dino_pos[0] = camera_offset_x
                 
-                # Continuous horizontal movement
-                if left_pressed and dino_pos[0] > min_x:
-                    dino_pos[0] -= move_speed  # Move Dino to the left
-                    dino_image_L12.size = [-1 * abs(dino_image_L12.size[0]), dino_image_L12.size[1]]
-                
-                if right_pressed and dino_pos[0] < max_x:
-                    dino_pos[0] += move_speed  # Move Dino to the right
-                    dino_image_L12.size = [abs(dino_image_L12.size[0]), dino_image_L12.size[1]]  # Reset Dino to face right
-                
-                # Update Dino's position
                 # dino_image_L12.pos = dino_pos  # Use both X and Y values of dino_pos
                 dino_image_L12.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
-                
                 # Increment the frame counter for trail updates
                 trail_frame_counter += 1
                 
@@ -25649,6 +25707,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
+            # Run 'End Routine' code from Timer_L12
+            time_bonus_L12 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_12" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -25663,17 +25723,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             # Run 'Begin Routine' code from Checker_L12
             import csv
+            
             # Calculate the percentage
             if total_possible_vertices_L12 > 0:
+                total_touched_vertices_L12 += time_bonus_L12
                 percentage = (total_touched_vertices_L12 / total_possible_vertices_L12) * 100
             else:
                 percentage = 0  # Avoid division by zero
-                
+            
             
             # Update the text for the end screen
-            end_score_text_L12.text = f"Your score: {percentage:.2f}%"
-            
-            
+            end_score_text_L12.text = (
+                f"Your score: {percentage:.2f}%\n"
+                f"Bonus time score: +{time_bonus_L12} point(s)"
+            )
             
             win_sound_L12.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L12.setVolume(1.0, log=False)
@@ -25874,6 +25937,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             total_touched_vertices_L12 = 0
             total_possible_vertices_L12 = 0
+            time_bonus_L12 = 0
             meatbone_collided = False
             # check responses
             if break_key_L12.keys in ['', [], None]:  # No response was made
@@ -26128,28 +26192,34 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # Read serial data
                     ser.flushInput()
                     strSerialData = ser.readline()
-                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                    B0ForceInNorm, B2ForceInNorm = calculate_psurp_forces_normalized(strSerialData, minF, maxF)
                 
                     # Apply difficulty-specific movement
                     if selected_diff == "1":
                         # Constant movement for Easy mode
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
-                            dino_image_L13.size = [abs(dino_image_L13.size[0]), dino_image_L13.size[1]]  # Face right
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                           pass
                 
                     elif selected_diff == "2":
                         # Proportional movement for Hard mode (current implementation)
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
-                            dino_pos[0] += move_amount  # Movement based on force
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNorm * FORCE_MULTIPLIER
+                            camera_offset_x += move_amount  # Move camera instead of dino
                             dino_image_L13.size = [abs(dino_image_L13.size[0]), dino_image_L13.size[1]]  # Face right
+                        else:
+                            camera_speed = og_camera_speed
                 
                     # Jump logic remains the same for both difficulties
-                    if B0ForceInNewtons > MIN_FORCE:
-                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                    if B0ForceInNorm > minF:
+                        dino_speed = B0ForceInNorm * FORCE_MULTIPLIER # Jump height based on force
                 
                 
-                            
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed
+                    camera_speed =+ camera_mov_speed  # Speed up when pressing right
+                    dino_image_L13.size = [abs(dino_image_L13.size[0]), dino_image_L13.size[1]]
+                else:
+                    camera_speed = og_camera_speed # Default speed      
                  
                 # Apply gravity to Dino's vertical speed
                 dino_speed += gravity
@@ -26170,20 +26240,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Update Dino's vertical position
                 dino_pos[1] += dino_speed
+                dino_pos[0] = camera_offset_x
                 
-                # Continuous horizontal movement
-                if left_pressed and dino_pos[0] > min_x:
-                    dino_pos[0] -= move_speed  # Move Dino to the left
-                    dino_image_L13.size = [-1 * abs(dino_image_L13.size[0]), dino_image_L13.size[1]]
-                
-                if right_pressed and dino_pos[0] < max_x:
-                    dino_pos[0] += move_speed  # Move Dino to the right
-                    dino_image_L13.size = [abs(dino_image_L13.size[0]), dino_image_L13.size[1]]  # Reset Dino to face right
-                
-                # Update Dino's position
                 # dino_image_L13.pos = dino_pos  # Use both X and Y values of dino_pos
                 dino_image_L13.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
-                
                 # Increment the frame counter for trail updates
                 trail_frame_counter += 1
                 
@@ -26970,6 +27030,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
+            # Run 'End Routine' code from Timer_L13
+            time_bonus_L13 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_13" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -26984,19 +27046,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             # Run 'Begin Routine' code from Checker_L13
             import csv
+            
             # Calculate the percentage
             if total_possible_vertices_L13 > 0:
+                total_touched_vertices_L13 += time_bonus_L13
                 percentage = (total_touched_vertices_L13 / total_possible_vertices_L13) * 100
             else:
                 percentage = 0  # Avoid division by zero
-                
+            
             
             # Update the text for the end screen
-            end_score_text_L13.text = f"Your score: {percentage:.2f}%"
-            
-            # Start 3 second timer
-            end_screen_timer = core.CountdownTimer(3)
-            
+            end_score_text_L13.text = (
+                f"Your score: {percentage:.2f}%\n"
+                f"Bonus time score: +{time_bonus_L13} point(s)"
+            )
             
             win_sound_L13.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L13.setVolume(1.0, log=False)
@@ -27059,9 +27122,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # update params
                     pass
                 # Run 'Each Frame' code from Checker_L13
-                # Keep showing the end screen until 3 seconds pass
-                if end_screen_timer.getTime() <= 0:
-                    continueRoutine = False
+                
                 
                 
                 # *win_sound_L13* updates
@@ -27202,6 +27263,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             total_touched_vertices_L13 = 0
             total_possible_vertices_L13 = 0
+            time_bonus_L13 = 0
             meatbone_collided = False
             # check responses
             if break_key_L13.keys in ['', [], None]:  # No response was made
@@ -27456,28 +27518,34 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # Read serial data
                     ser.flushInput()
                     strSerialData = ser.readline()
-                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                    B0ForceInNorm, B2ForceInNorm = calculate_psurp_forces_normalized(strSerialData, minF, maxF)
                 
                     # Apply difficulty-specific movement
                     if selected_diff == "1":
                         # Constant movement for Easy mode
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
-                            dino_image_L14.size = [abs(dino_image_L14.size[0]), dino_image_L14.size[1]]  # Face right
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                           pass
                 
                     elif selected_diff == "2":
                         # Proportional movement for Hard mode (current implementation)
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
-                            dino_pos[0] += move_amount  # Movement based on force
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNorm * FORCE_MULTIPLIER
+                            camera_offset_x += move_amount  # Move camera instead of dino
                             dino_image_L14.size = [abs(dino_image_L14.size[0]), dino_image_L14.size[1]]  # Face right
+                        else:
+                            camera_speed = og_camera_speed
                 
                     # Jump logic remains the same for both difficulties
-                    if B0ForceInNewtons > MIN_FORCE:
-                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                    if B0ForceInNorm > minF:
+                        dino_speed = B0ForceInNorm * FORCE_MULTIPLIER # Jump height based on force
                 
                 
-                            
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed
+                    camera_speed =+ camera_mov_speed  # Speed up when pressing right
+                    dino_image_L14.size = [abs(dino_image_L14.size[0]), dino_image_L14.size[1]]
+                else:
+                    camera_speed = og_camera_speed # Default speed      
                  
                 # Apply gravity to Dino's vertical speed
                 dino_speed += gravity
@@ -27498,20 +27566,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Update Dino's vertical position
                 dino_pos[1] += dino_speed
+                dino_pos[0] = camera_offset_x
                 
-                # Continuous horizontal movement
-                if left_pressed and dino_pos[0] > min_x:
-                    dino_pos[0] -= move_speed  # Move Dino to the left
-                    dino_image_L14.size = [-1 * abs(dino_image_L14.size[0]), dino_image_L14.size[1]]
-                
-                if right_pressed and dino_pos[0] < max_x:
-                    dino_pos[0] += move_speed  # Move Dino to the right
-                    dino_image_L14.size = [abs(dino_image_L14.size[0]), dino_image_L14.size[1]]  # Reset Dino to face right
-                
-                # Update Dino's position
                 # dino_image_L14.pos = dino_pos  # Use both X and Y values of dino_pos
                 dino_image_L14.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
-                
                 # Increment the frame counter for trail updates
                 trail_frame_counter += 1
                 
@@ -28298,6 +28356,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
+            # Run 'End Routine' code from Timer_L14
+            time_bonus_L14 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_14" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -28312,18 +28372,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             # Run 'Begin Routine' code from Checker_L14
             import csv
+            
             # Calculate the percentage
             if total_possible_vertices_L14 > 0:
+                total_touched_vertices_L14 += time_bonus_L14
                 percentage = (total_touched_vertices_L14 / total_possible_vertices_L14) * 100
             else:
                 percentage = 0  # Avoid division by zero
-                
+            
             
             # Update the text for the end screen
-            end_score_text_L14.text = f"Your score: {percentage:.2f}%"
-            
-            
-            
+            end_score_text_L14.text = (
+                f"Your score: {percentage:.2f}%\n"
+                f"Bonus time score: +{time_bonus_L14} point(s)"
+            )
             
             win_sound_L14.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L14.setVolume(1.0, log=False)
@@ -28524,6 +28586,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             total_touched_vertices_L14 = 0
             total_possible_vertices_L14 = 0
+            time_bonus_L14 = 0
             meatbone_collided = False
             # check responses
             if break_key_L14.keys in ['', [], None]:  # No response was made
@@ -28778,28 +28841,34 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # Read serial data
                     ser.flushInput()
                     strSerialData = ser.readline()
-                    B0ForceInNewtons, B2ForceInNewtons = calculate_psurp_forces(strSerialData)
+                    B0ForceInNorm, B2ForceInNorm = calculate_psurp_forces_normalized(strSerialData, minF, maxF)
                 
                     # Apply difficulty-specific movement
                     if selected_diff == "1":
                         # Constant movement for Easy mode
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            dino_pos[0] += 0.005  # Constant movement speed (adjust as needed)
-                            dino_image_L15.size = [abs(dino_image_L15.size[0]), dino_image_L15.size[1]]  # Face right
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                           pass
                 
                     elif selected_diff == "2":
                         # Proportional movement for Hard mode (current implementation)
-                        if B2ForceInNewtons > MIN_FORCE and dino_pos[0] < max_x:
-                            move_amount = B2ForceInNewtons * FORCE_MULTIPLIER
-                            dino_pos[0] += move_amount  # Movement based on force
+                        if B2ForceInNorm > minF and dino_pos[0] < max_x:
+                            move_amount = B2ForceInNorm * FORCE_MULTIPLIER
+                            camera_offset_x += move_amount  # Move camera instead of dino
                             dino_image_L15.size = [abs(dino_image_L15.size[0]), dino_image_L15.size[1]]  # Face right
+                        else:
+                            camera_speed = og_camera_speed
                 
                     # Jump logic remains the same for both difficulties
-                    if B0ForceInNewtons > MIN_FORCE:
-                        dino_speed = B0ForceInNewtons * FORCE_MULTIPLIER  # Jump height based on force
+                    if B0ForceInNorm > minF:
+                        dino_speed = B0ForceInNorm * FORCE_MULTIPLIER # Jump height based on force
                 
                 
-                            
+                if right_pressed and dino_pos[0] < max_x:
+                    dino_pos[0] += move_speed
+                    camera_speed =+ camera_mov_speed  # Speed up when pressing right
+                    dino_image_L15.size = [abs(dino_image_L15.size[0]), dino_image_L15.size[1]]
+                else:
+                    camera_speed = og_camera_speed # Default speed      
                  
                 # Apply gravity to Dino's vertical speed
                 dino_speed += gravity
@@ -28820,20 +28889,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # Update Dino's vertical position
                 dino_pos[1] += dino_speed
+                dino_pos[0] = camera_offset_x
                 
-                # Continuous horizontal movement
-                if left_pressed and dino_pos[0] > min_x:
-                    dino_pos[0] -= move_speed  # Move Dino to the left
-                    dino_image_L15.size = [-1 * abs(dino_image_L15.size[0]), dino_image_L15.size[1]]
-                
-                if right_pressed and dino_pos[0] < max_x:
-                    dino_pos[0] += move_speed  # Move Dino to the right
-                    dino_image_L15.size = [abs(dino_image_L15.size[0]), dino_image_L15.size[1]]  # Reset Dino to face right
-                
-                # Update Dino's position
                 # dino_image_L15.pos = dino_pos  # Use both X and Y values of dino_pos
                 dino_image_L15.pos = [dino_pos[0] - camera_offset_x, dino_pos[1]]
-                
                 # Increment the frame counter for trail updates
                 trail_frame_counter += 1
                 
@@ -29620,6 +29679,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
+            # Run 'End Routine' code from Timer_L15
+            time_bonus_L15 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_15" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -29634,16 +29695,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             # Run 'Begin Routine' code from Checker_L15
             import csv
+            
             # Calculate the percentage
             if total_possible_vertices_L15 > 0:
+                total_touched_vertices_L15 += time_bonus_L15
                 percentage = (total_touched_vertices_L15 / total_possible_vertices_L15) * 100
             else:
                 percentage = 0  # Avoid division by zero
-                
+            
             
             # Update the text for the end screen
-            end_score_text_L15.text = f"Your score: {percentage:.2f}%"
-            
+            end_score_text_L15.text = (
+                f"Your score: {percentage:.2f}%\n"
+                f"Bonus time score: +{time_bonus_L15} point(s)"
+            )
             
             win_sound_L15.setSound('Assets/sounds/win.mp3', hamming=True)
             win_sound_L15.setVolume(1.0, log=False)
@@ -29844,6 +29909,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
             total_touched_vertices_L15 = 0
             total_possible_vertices_L15 = 0
+            time_bonus_L15 = 0
             meatbone_collided = False
             # check responses
             if break_key_L15.keys in ['', [], None]:  # No response was made
