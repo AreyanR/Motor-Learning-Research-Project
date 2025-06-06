@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 01, 2025, at 15:09
+    on June 06, 2025, at 16:00
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -161,7 +161,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='D:\\Users\\areya\\Desktop\\work\\Motor-Learning-Research-Project\\Game\\game.py',
+        originPath='C:\\Users\\actioncontrollab\\Desktop\\Motor-Learning-Research-Project\\Game\\game.py',
         savePickle=True, saveWideText=False,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -1017,13 +1017,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from calibrator_code
     import serial
     global minF, maxF
-    """
+    
     # Initialize the serial connection for PSURP
     ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
     ser.flush()
     ser.write("X".encode())  # Initialize PSURP
     ser.write("RUNE\n".encode())  # Enter streaming mode
-    """
+    
     minF = 0.1
     maxF = 0.9
         
@@ -11286,10 +11286,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     resetPSURP.tStopRefresh = tThisFlipGlobal
     thisExp.addData('resetPSURP.stopped', resetPSURP.tStop)
     # Run 'End Routine' code from code_2
-    """
+    
     ser.flush()
     ser.write("X".encode())
-    """
+    
     # clear out the data from the IO buffers (Fresh commands)
     # the "X" command puts tje PSURP into command mode
     
@@ -11413,7 +11413,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     TARE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('TARE.stopped', TARE.tStop)
     # Run 'End Routine' code from tare_code
-    """
+    
     ser.write("TAR0\n".encode())
     time.sleep(1)
     ser.write("TAR1\n".encode())
@@ -11424,7 +11424,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     time.sleep(1)
     ser.write("TAR4\n".encode())
     time.sleep(1)
-    """
+    
     
     # the tar command zeros out all of the force messurements
     # halt for one second to make sure command was processed 
@@ -11547,9 +11547,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     RUNE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('RUNE.stopped', RUNE.tStop)
     # Run 'End Routine' code from Code_RUNE
-    """
+    
     ser.write("RUNE\n".encode())
-    """
+    
     # the rune command sets the PSURP to streaming mode. (for getting vals)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if RUNE.maxDurationReached:
@@ -12351,7 +12351,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     continueRoutine = False
                     
                 
-                """
+                
                 if minF is not None and maxF is not None:
                     ser.flushInput()
                     strSerialData = ser.readline()
@@ -12366,7 +12366,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 else:
                     force_display.text = "Adjust sliders to set min/max force."
                 
-                """
+                
                 if mouse.getPressed()[0]:  # [0] is left mouse button
                     print(f"minF: {minF}, maxF: {maxF}")
                     
@@ -12819,7 +12819,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                     # Jump logic remains the same for both difficulties
                     if B0ForceInNorm > minF:
-                        dino_speed = B0ForceInNorm * FORCE_MULTIPLIER # Jump height based on force
+                        dino_speed = (B0ForceInNorm - minF) * FORCE_MULTIPLIER
+                
                 
                 
                 if right_pressed and dino_pos[0] < max_x:
@@ -29939,11 +29940,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         stimOut=params,
         dataOut=['n','all_mean','all_std', 'all_raw'])
     # Run 'End Experiment' code from calibrator_code
-    """
+    
     ser.flush()
     ser.write("X".encode())  # Exit command mode
     ser.close()
-    """
+    
     # Run 'End Experiment' code from DinoMovement_L1
     """
     ser.flush()
