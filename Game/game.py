@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 06, 2025, at 16:00
+    on June 09, 2025, at 18:54
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -3186,7 +3186,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     B0ForceInNorm = 0
     B2ForceInNorm = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
-    FORCE_MULTIPLIER = 0.05  # Adjust this to control how much force affects movement
+    #FORCE_MULTIPLIER = 0.05  # Adjust this to control how much force affects movement
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -12816,10 +12816,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                             dino_image_L1.size = [abs(dino_image_L1.size[0]), dino_image_L1.size[1]]  # Face right
                         else:
                             camera_speed = og_camera_speed
-                
-                    # Jump logic remains the same for both difficulties
-                    if B0ForceInNorm > minF:
-                        dino_speed = (B0ForceInNorm - minF) * FORCE_MULTIPLIER
+                            
+                    # Compute how high the dino is above the floor
+                    height_above_ground = dino_pos[1] - floor1_top
+                    height_force_threshold = minF + (height_above_ground * 0.1)
+                    if B0ForceInNorm > height_force_threshold:
+                        thrust = (B0ForceInNorm - height_force_threshold) * FORCE_MULTIPLIER
+                        dino_speed = thrust  # Let thrust fight gravity gradually
                 
                 
                 

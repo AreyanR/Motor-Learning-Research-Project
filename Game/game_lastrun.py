@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 06, 2025, at 16:11
+    on June 09, 2025, at 20:28
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -1172,6 +1172,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     B2ForceInNorm = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
     FORCE_MULTIPLIER = 0.0055
+    resistance_factor = 0.0003
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -1183,7 +1184,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     min_x = -0.6  # Left boundary
     max_x = 19 # right boundary
     respawn_position = [0, -0.3]  # Starting position for Dino
-    
     
     
     # Floor properties
@@ -12601,7 +12601,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 Circle(win, radius=trail_dot_size, fillColor=trail_color, lineColor=None, pos=[-1, -1])
                 for _ in range(trail_length)
             ]
-            
             # Run 'Begin Routine' code from worldController_L1
             camera_offset_x = 0
             # Run 'Begin Routine' code from GoalController_L1
@@ -12816,12 +12815,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                             dino_image_L1.size = [abs(dino_image_L1.size[0]), dino_image_L1.size[1]]  # Face right
                         else:
                             camera_speed = og_camera_speed
+                          
+                          
+                          # makes it harder to stay up wheil you are hgiher up
+                    height_above_ground = dino_pos[1] - floor1_top
+                    height_force_threshold = minF + (height_above_ground * resistance_factor) 
                 
-                    # Jump logic remains the same for both difficulties
-                    if B0ForceInNorm > minF:
-                        dino_speed = (B0ForceInNorm - minF) * FORCE_MULTIPLIER
                 
+                    if B0ForceInNorm > height_force_threshold:
+                        dino_speed = (B0ForceInNorm - height_force_threshold) * FORCE_MULTIPLIER
                 
+                    
                 
                 if right_pressed and dino_pos[0] < max_x:
                     dino_pos[0] += move_speed
