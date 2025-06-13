@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 09, 2025, at 20:28
+    on June 13, 2025, at 13:25
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -1172,7 +1172,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     B2ForceInNorm = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
     FORCE_MULTIPLIER = 0.0055
-    resistance_factor = 0.0003
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -4375,7 +4374,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc10_touched_vertices_L5 = []
     arc11_touched_vertices_L5 = []
     
-    touch_threshold_L5 = 0.04 # touch threshold for the arcs
+    touch_threshold_L5 = 0.03 # touch threshold for the arcs
     
     meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
     
@@ -5042,7 +5041,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc10_touched_vertices_L6 = []
     arc11_touched_vertices_L6 = []
     
-    touch_threshold_L6 = 0.04 # touch threshold for the arcs
+    touch_threshold_L6 = 0.03 # touch threshold for the arcs
     
     meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
     
@@ -5709,7 +5708,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc10_touched_vertices_L7 = []
     arc11_touched_vertices_L7 = []
     
-    touch_threshold_L7 = 0.04 # touch threshold for the arcs
+    touch_threshold_L7 = 0.03 # touch threshold for the arcs
     
     meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
     
@@ -12817,13 +12816,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                             camera_speed = og_camera_speed
                           
                           
-                          # makes it harder to stay up wheil you are hgiher up
-                    height_above_ground = dino_pos[1] - floor1_top
-                    height_force_threshold = minF + (height_above_ground * resistance_factor) 
-                
-                
-                    if B0ForceInNorm > height_force_threshold:
-                        dino_speed = (B0ForceInNorm - height_force_threshold) * FORCE_MULTIPLIER
+                    if B0ForceInNorm > minF:
+                        dino_speed = B0ForceInNorm * FORCE_MULTIPLIER # Jump height based on force
                 
                     
                 
