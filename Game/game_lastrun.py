@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 13, 2025, at 13:25
+    on June 13, 2025, at 16:05
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -161,7 +161,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\actioncontrollab\\Desktop\\Motor-Learning-Research-Project\\Game\\game_lastrun.py',
+        originPath='D:\\Users\\areya\\Desktop\\work\\Motor-Learning-Research-Project\\Game\\game_lastrun.py',
         savePickle=True, saveWideText=False,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -1017,13 +1017,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from calibrator_code
     import serial
     global minF, maxF
-    
+    """
     # Initialize the serial connection for PSURP
     ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
     ser.flush()
     ser.write("X".encode())  # Initialize PSURP
     ser.write("RUNE\n".encode())  # Enter streaming mode
-    
+    """
     minF = 0.1
     maxF = 0.9
         
@@ -6375,7 +6375,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc10_touched_vertices_L8 = []
     arc11_touched_vertices_L8 = []
     
-    touch_threshold_L8 = 0.04 # touch threshold for the arcs
+    touch_threshold_L8 = 0.03 # touch threshold for the arcs
     
     meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
     
@@ -7042,7 +7042,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc10_touched_vertices_L9 = []
     arc11_touched_vertices_L9 = []
     
-    touch_threshold_L9 = 0.04 # touch threshold for the arcs
+    touch_threshold_L9 = 0.03 # touch threshold for the arcs
     
     meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
     
@@ -7709,7 +7709,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc10_touched_vertices_L10 = []
     arc11_touched_vertices_L10 = []
     
-    touch_threshold_L10 = 0.04 # touch threshold for the arcs
+    touch_threshold_L10 = 0.03 # touch threshold for the arcs
     
     meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
     
@@ -8376,7 +8376,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc10_touched_vertices_L11 = []
     arc11_touched_vertices_L11 = []
     
-    touch_threshold_L11 = 0.04 # touch threshold for the arcs
+    touch_threshold_L11 = 0.02 # touch threshold for the arcs
     
     meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
     
@@ -9043,7 +9043,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc10_touched_vertices_L12 = []
     arc11_touched_vertices_L12 = []
     
-    touch_threshold_L12 = 0.04 # touch threshold for the arcs
+    touch_threshold_L12 = 0.02 # touch threshold for the arcs
     
     meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
     
@@ -9720,7 +9720,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc10_touched_vertices_L13 = []
     arc11_touched_vertices_L13 = []
     
-    touch_threshold_L13 = 0.04 # touch threshold for the arcs
+    touch_threshold_L13 = 0.02 # touch threshold for the arcs
     
     meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
     
@@ -10399,7 +10399,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc10_touched_vertices_L14 = []
     arc11_touched_vertices_L14 = []
     
-    touch_threshold_L14 = 0.04 # touch threshold for the arcs
+    touch_threshold_L14 = 0.02 # touch threshold for the arcs
     
     meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
     
@@ -11082,7 +11082,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     arc10_touched_vertices_L15 = []
     arc11_touched_vertices_L15 = []
     
-    touch_threshold_L15 = 0.04 # touch threshold for the arcs
+    touch_threshold_L15 = 0.02 # touch threshold for the arcs
     
     meat_collision_threshold = 0.1  # You can adjust this to fit your game scale
     
@@ -11285,10 +11285,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     resetPSURP.tStopRefresh = tThisFlipGlobal
     thisExp.addData('resetPSURP.stopped', resetPSURP.tStop)
     # Run 'End Routine' code from code_2
-    
+    """
     ser.flush()
     ser.write("X".encode())
-    
+    """
     # clear out the data from the IO buffers (Fresh commands)
     # the "X" command puts tje PSURP into command mode
     
@@ -11412,7 +11412,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     TARE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('TARE.stopped', TARE.tStop)
     # Run 'End Routine' code from tare_code
-    
+    """
     ser.write("TAR0\n".encode())
     time.sleep(1)
     ser.write("TAR1\n".encode())
@@ -11423,7 +11423,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     time.sleep(1)
     ser.write("TAR4\n".encode())
     time.sleep(1)
-    
+    """
     
     # the tar command zeros out all of the force messurements
     # halt for one second to make sure command was processed 
@@ -11546,9 +11546,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     RUNE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('RUNE.stopped', RUNE.tStop)
     # Run 'End Routine' code from Code_RUNE
-    
+    """
     ser.write("RUNE\n".encode())
-    
+    """
     # the rune command sets the PSURP to streaming mode. (for getting vals)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if RUNE.maxDurationReached:
@@ -12349,7 +12349,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     core.wait(0.2)
                     continueRoutine = False
                     
-                
+                """
                 
                 if minF is not None and maxF is not None:
                     ser.flushInput()
@@ -12365,9 +12365,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 else:
                     force_display.text = "Adjust sliders to set min/max force."
                 
+                """
                 
-                if mouse.getPressed()[0]:  # [0] is left mouse button
-                    print(f"minF: {minF}, maxF: {maxF}")
                     
                 
                 
@@ -13004,6 +13003,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
                     meatbone_image_L1.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
+                    time_bonus_L1 = int(time_remaining)  # Update global bonus timer
                     eat_sound_L1.play()
                     continueRoutine = False
                 
@@ -13362,7 +13362,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             score = 0
             # Run 'End Routine' code from Timer_L1
             
-            time_bonus_L1 = int(time_remaining)  # Update global bonus timer
+            
             # the Routine "Level_1" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -14050,6 +14050,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
                     meatbone_image_L2.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
+                    time_bonus_L2 = int(time_remaining)  # Update global bonus timer
                     eat_sound_L2.play()
                     continueRoutine = False
                 
@@ -14408,8 +14409,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
-            # Run 'End Routine' code from Timer_L2
-            time_bonus_L2 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_2" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -15097,6 +15096,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
                     meatbone_image_L3.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
+                    time_bonus_L3 = int(time_remaining)  # Update global bonus timer
                     eat_sound_L3.play()
                     continueRoutine = False
                 
@@ -15455,8 +15455,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
-            # Run 'End Routine' code from Timer_L3
-            time_bonus_L3 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_3" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -16144,6 +16142,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
                     meatbone_image_L4.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
+                    time_bonus_L4 = int(time_remaining)  # Update global bonus timer
                     eat_sound_L4.play()
                     continueRoutine = False
                 
@@ -16502,8 +16501,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
-            # Run 'End Routine' code from Timer_L4
-            time_bonus_L4 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_4" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -17191,6 +17188,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
                     meatbone_image_L5.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
+                    time_bonus_L5 = int(time_remaining)  # Update global bonus timer
                     eat_sound_L5.play()
                     continueRoutine = False
                 
@@ -17549,8 +17547,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
-            # Run 'End Routine' code from Timer_L5
-            time_bonus_L5 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_5" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -18238,6 +18234,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
                     meatbone_image_L6.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
+                    time_bonus_L6 = int(time_remaining)  # Update global bonus timer
                     eat_sound_L6.play()
                     continueRoutine = False
                 
@@ -18596,8 +18593,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
-            # Run 'End Routine' code from Timer_L6
-            time_bonus_L6 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_6" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -19285,6 +19280,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
                     meatbone_image_L7.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
+                    time_bonus_L7 = int(time_remaining)  # Update global bonus timer
                     eat_sound_L7.play()
                     continueRoutine = False
                 
@@ -19643,8 +19639,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
-            # Run 'End Routine' code from Timer_L7
-            time_bonus_L7 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_7" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -20332,6 +20326,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
                     meatbone_image_L8.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
+                    time_bonus_L8 = int(time_remaining)  # Update global bonus timer
                     eat_sound_L8.play()
                     continueRoutine = False
                 
@@ -20690,8 +20685,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
-            # Run 'End Routine' code from Timer_L8
-            time_bonus_L8 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_8" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -21379,6 +21372,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
                     meatbone_image_L9.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
+                    time_bonus_L9 = int(time_remaining)  # Update global bonus timer
                     eat_sound_L9.play()
                     continueRoutine = False
                 
@@ -21737,8 +21731,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
-            # Run 'End Routine' code from Timer_L9
-            time_bonus_L9 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_9" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -22426,6 +22418,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
                     meatbone_image_L10.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
+                    time_bonus_L10 = int(time_remaining)  # Update global bonus timer
                     eat_sound_L10.play()
                     continueRoutine = False
                 
@@ -23060,8 +23053,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
-            # Run 'End Routine' code from Timer_L10
-            time_bonus_L10 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_10" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -23749,6 +23740,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
                     meatbone_image_L11.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
+                    time_bonus_L11 = int(time_remaining)  # Update global bonus timer
                     eat_sound_L11.play()
                     continueRoutine = False
                 
@@ -24383,8 +24375,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
-            # Run 'End Routine' code from Timer_L11
-            time_bonus_L11 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_11" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -25072,6 +25062,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
                     meatbone_image_L12.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
+                    time_bonus_L12 = int(time_remaining)  # Update global bonus timer
                     eat_sound_L12.play()
                     continueRoutine = False
                 
@@ -25706,8 +25697,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
-            # Run 'End Routine' code from Timer_L12
-            time_bonus_L12 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_12" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -26395,6 +26384,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
                     meatbone_image_L13.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
+                    time_bonus_L13 = int(time_remaining)  # Update global bonus timer
                     eat_sound_L13.play()
                     continueRoutine = False
                 
@@ -27029,8 +27019,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
-            # Run 'End Routine' code from Timer_L13
-            time_bonus_L13 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_13" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -27721,6 +27709,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
                     meatbone_image_L14.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
+                    time_bonus_L14 = int(time_remaining)  # Update global bonus timer
                     eat_sound_L14.play()
                     continueRoutine = False
                 
@@ -28355,8 +28344,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
-            # Run 'End Routine' code from Timer_L14
-            time_bonus_L14 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_14" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -29044,6 +29031,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if not meatbone_collided and (dx ** 2 + dy ** 2) ** 0.5 <= meat_collision_threshold:
                     meatbone_image_L15.opacity = 0  # Make the meatbone disappear
                     meatbone_collided = True  # Prevent further collision checks
+                    time_bonus_L15 = int(time_remaining)  # Update global bonus timer
                     eat_sound_L15.play()
                     continueRoutine = False
                 
@@ -29678,8 +29666,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             )
             
             score = 0
-            # Run 'End Routine' code from Timer_L15
-            time_bonus_L15 = int(time_remaining)  # Update global bonus timer
             # the Routine "Level_15" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -29938,11 +29924,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         stimOut=params,
         dataOut=['n','all_mean','all_std', 'all_raw'])
     # Run 'End Experiment' code from calibrator_code
-    
+    """
     ser.flush()
     ser.write("X".encode())  # Exit command mode
     ser.close()
-    
+    """
     # Run 'End Experiment' code from DinoMovement_L1
     """
     ser.flush()
