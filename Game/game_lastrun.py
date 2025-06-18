@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 17, 2025, at 15:23
+    on June 18, 2025, at 15:23
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -94,8 +94,8 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 # work out from system args whether we are running in pilot mode
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
-_fullScr = False
-_winSize = [1000, 800]
+_fullScr = True
+_winSize = [1920, 1080]
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -161,7 +161,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='D:\\Users\\areya\\Desktop\\work\\Motor-Learning-Research-Project\\Game\\game_lastrun.py',
+        originPath='C:\\Users\\actioncontrollab\\Desktop\\Motor-Learning-Research-Project\\Game\\game_lastrun.py',
         savePickle=True, saveWideText=False,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -210,6 +210,9 @@ def setupWindow(expInfo=None, win=None):
     psychopy.visual.Window
         Window in which to run this experiment.
     """
+    if PILOTING:
+        logging.debug('Fullscreen settings ignored as running in pilot mode.')
+    
     if win is None:
         # if not given a window to setup, make one
         win = visual.Window(
@@ -952,7 +955,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         opacity=None, depth=-12.0, interpolate=True)
     # Run 'Begin Experiment' code from code
     # starts game in keyboard mode
-    selected_control = "Keyboard"
+    selected_control = "PSURP"
     selected_diff = "1" # start on diff 1 and keyboard mode
     thisExp.savePickle = False
     thisExp.saveWideText = False  # stops saving the .csv or .tsv file
@@ -1016,13 +1019,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from calibrator_code
     import serial
     global minF, maxF
-    """
+    
     # Initialize the serial connection for PSURP
     ser = serial.Serial("COM4", 230400, timeout=0.1)  # Replace "COM4" with your port
     ser.flush()
     ser.write("X".encode())  # Initialize PSURP
     ser.write("RUNE\n".encode())  # Enter streaming mode
-    """
+    
     minF = 0.1
     maxF = 0.9
         
@@ -1170,7 +1173,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     B0ForceInNorm = 0
     B2ForceInNorm = 0
     MIN_FORCE = 0.4  # Minimum force to start movement
-    FORCE_MULTIPLIER = 0.0055
+    FORCE_MULTIPLIER = 0.0055 
     
     # Dino movement variables
     dino_pos = [0, -0.3]  # Starting position [x, y]
@@ -1182,6 +1185,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     min_x = -0.6  # Left boundary
     max_x = 19 # right boundary
     respawn_position = [0, -0.3]  # Starting position for Dino
+    
     
     
     # Floor properties
@@ -1291,8 +1295,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Camera variables
     camera_offset_x = 0  # Tracks the camera offset to follow Dino
-    camera_speed = 0.003  # Adjust this speed as needed 0.003
-    og_camera_speed = 0.003
+    camera_speed = 0.004  # Adjust this speed as needed 0.003
+    og_camera_speed = camera_speed
     camera_mov_speed = 0.007
     # Background properties
     background_width = 2.0  # Width of a single background image
@@ -1348,7 +1352,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     #arc stuff
     
     # Arc 1 Properties
-    arc1_L1_x = 0.3
+    arc1_L1_x = 0.35
     arc1_L1_center = [arc1_L1_x, reg_arc]
     arc1_L1_radius = med_arc_size
     arc1_L1_start_angle = 0
@@ -2028,7 +2032,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     #arc stuff
     
     # Arc 1 Properties
-    arc1_L2_x = 0.3
+    arc1_L2_x = 0.35
     arc1_L2_center = [arc1_L2_x, reg_arc]
     arc1_L2_radius = med_arc_size
     arc1_L2_start_angle = 0
@@ -2695,7 +2699,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     #arc stuff
     
     # Arc 1 Properties
-    arc1_L3_x = 0.3
+    arc1_L3_x = 0.35
     arc1_L3_center = [arc1_L3_x, reg_arc]
     arc1_L3_radius = med_arc_size
     arc1_L3_start_angle = 0
@@ -3362,7 +3366,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     #arc stuff
     
     # Arc 1 Properties
-    arc1_L4_x = 0.3
+    arc1_L4_x = 0.35
     arc1_L4_center = [arc1_L4_x, reg_arc]
     arc1_L4_radius = small_arc_size
     arc1_L4_start_angle = 0
@@ -4029,7 +4033,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     #arc stuff
     
     # Arc 1 Properties
-    arc1_L5_x = 0.3
+    arc1_L5_x = 0.35
     arc1_L5_center = [arc1_L5_x, reg_arc]
     arc1_L5_radius = small_arc_size
     arc1_L5_start_angle = 0
@@ -4696,7 +4700,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     #arc stuff
     
     # Arc 1 Properties
-    arc1_L6_x = 0.3
+    arc1_L6_x = 0.35
     arc1_L6_center = [arc1_L6_x, reg_arc]
     arc1_L6_radius = large_arc_size
     arc1_L6_start_angle = 0
@@ -5363,7 +5367,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     #arc stuff
     
     # Arc 1 Properties
-    arc1_L7_x = 0.3
+    arc1_L7_x = 0.35
     arc1_L7_center = [arc1_L7_x, reg_arc]
     arc1_L7_radius = small_arc_size
     arc1_L7_start_angle = 0
@@ -6030,7 +6034,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     #arc stuff
     
     # Arc 1 Properties
-    arc1_L8_x = 0.3
+    arc1_L8_x = 0.35
     arc1_L8_center = [arc1_L8_x, reg_arc]
     arc1_L8_radius = med_arc_size
     arc1_L8_start_angle = 0
@@ -6697,7 +6701,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     #arc stuff
     
     # Arc 1 Properties
-    arc1_L9_x = 0.3
+    arc1_L9_x = 0.35
     arc1_L9_center = [arc1_L9_x, reg_arc]
     arc1_L9_radius = small_arc_size
     arc1_L9_start_angle = 0
@@ -7364,7 +7368,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     #arc stuff
     
     # Arc 1 Properties
-    arc1_L10_x = 0.3
+    arc1_L10_x = 0.35
     arc1_L10_center = [arc1_L10_x, reg_arc]
     arc1_L10_radius = med_arc_size
     arc1_L10_start_angle = 0
@@ -8031,7 +8035,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     #arc stuff
     
     # Arc 1 Properties
-    arc1_L11_x = 0.3
+    arc1_L11_x = 0.35
     arc1_L11_center = [arc1_L11_x, reg_arc]
     arc1_L11_radius = large_arc_size
     arc1_L11_start_angle = 0
@@ -8698,7 +8702,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     #arc stuff
     
     # Arc 1 Properties
-    arc1_L12_x = 0.3
+    arc1_L12_x = 0.35
     arc1_L12_center = [arc1_L12_x, reg_arc]
     arc1_L12_radius = med_arc_size
     arc1_L12_start_angle = 0
@@ -9321,7 +9325,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     background2_L13 = ImageStim(win, image=background_image_L13, size=[background_width, background_height], pos=[background_width, 0])
     
     # floor1_L13 properties
-    floor1_height = 0.3
+    floor1_height = 0.35
     floor1_width = 0.5
     floor1_pos = [0, -0.5]
     
@@ -10042,7 +10046,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     #arc stuff
     
     # Arc 1 Properties
-    arc1_L14_x = 0.3
+    arc1_L14_x = 0.35
     arc1_L14_center = [arc1_L14_x, reg_arc]
     arc1_L14_radius = med_arc_size
     arc1_L14_start_angle = 0
@@ -10721,7 +10725,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     #arc stuff
     
     # Arc 1 Properties
-    arc1_L15_x = 0.3
+    arc1_L15_x = 0.35
     arc1_L15_center = [arc1_L15_x, high_arc]
     arc1_L15_radius = med_arc_size
     arc1_L15_start_angle = 0
@@ -10729,7 +10733,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Arc 2 Properties
     arc2_L15_x = 1.1
-    arc2_L15_center = [arc2_L15_x, low_arc]
+    arc2_L15_center = [arc2_L15_x, reg_arc]
     arc2_L15_radius = small_arc_size
     arc2_L15_start_angle = 0
     arc2_L15_end_angle = -180
@@ -11284,10 +11288,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     resetPSURP.tStopRefresh = tThisFlipGlobal
     thisExp.addData('resetPSURP.stopped', resetPSURP.tStop)
     # Run 'End Routine' code from code_2
-    """
+    
     ser.flush()
     ser.write("X".encode())
-    """
+    
     # clear out the data from the IO buffers (Fresh commands)
     # the "X" command puts tje PSURP into command mode
     
@@ -11411,7 +11415,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     TARE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('TARE.stopped', TARE.tStop)
     # Run 'End Routine' code from tare_code
-    """
+    
     ser.write("TAR0\n".encode())
     time.sleep(1)
     ser.write("TAR1\n".encode())
@@ -11422,7 +11426,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     time.sleep(1)
     ser.write("TAR4\n".encode())
     time.sleep(1)
-    """
+    
     
     # the tar command zeros out all of the force messurements
     # halt for one second to make sure command was processed 
@@ -11545,9 +11549,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     RUNE.tStopRefresh = tThisFlipGlobal
     thisExp.addData('RUNE.stopped', RUNE.tStop)
     # Run 'End Routine' code from Code_RUNE
-    """
+    
     ser.write("RUNE\n".encode())
-    """
+    
     # the rune command sets the PSURP to streaming mode. (for getting vals)
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if RUNE.maxDurationReached:
@@ -12349,7 +12353,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     core.wait(0.2)
                     continueRoutine = False
                     
-                """
+                
                 
                 if minF is not None and maxF is not None:
                     ser.flushInput()
@@ -12365,7 +12369,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 else:
                     force_display.text = "Adjust sliders to set min/max force."
                 
-                """
+                
                 
                     
                 
@@ -29924,11 +29928,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         stimOut=params,
         dataOut=['n','all_mean','all_std', 'all_raw'])
     # Run 'End Experiment' code from calibrator_code
-    """
+    
     ser.flush()
     ser.write("X".encode())  # Exit command mode
     ser.close()
-    """
+    
     # Run 'End Experiment' code from DinoMovement_L1
     """
     ser.flush()
