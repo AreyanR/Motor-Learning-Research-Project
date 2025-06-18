@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 13, 2025, at 16:05
+    on June 17, 2025, at 15:23
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -951,10 +951,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         colorSpace='rgb', lineColor='white', fillColor=None,
         opacity=None, depth=-12.0, interpolate=True)
     # Run 'Begin Experiment' code from code
-    # Default control method
     # starts game in keyboard mode
     selected_control = "Keyboard"
-    selected_diff = "1"
+    selected_diff = "1" # start on diff 1 and keyboard mode
     thisExp.savePickle = False
     thisExp.saveWideText = False  # stops saving the .csv or .tsv file
     
@@ -1319,7 +1318,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     floor1_vertices = calculate_rect_vertices(floor1_L1)
     
     # floor2_L1 properties - Place it further into the map
-    floor2_x_static = 1  # Fixed X position where floor2_L1 appears 17.5
+    floor2_x_static = 17.5  # Fixed X position where floor2_L1 appears 17.5
     floor2_height = 0.3
     floor2_width = 0.5
     
@@ -11629,6 +11628,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             control_feedback.text = f"Selected Control: {selected_control}"
             mode_feedback.text = f"Mode: {selected_diff}"
             
+            #Controls the flow for the pannels
             goto = 'MainMenu'
             if goto != 'MainMenu':
                 continueRoutine = False
