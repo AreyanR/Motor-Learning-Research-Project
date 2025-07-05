@@ -28,8 +28,8 @@ Simultaneously, force data from the PSURP controller are collected to provide de
 │   ├── Data                        # data from trials goes here
 │   └── Game.psyexp                 # the game itself
 │
-├── PSURP/                           # Communication PSURP device
-│   └── PSURP.psyexp                # PsychoPy communication code
+├── PSURP/                          
+│   └── PSURP.psyexp                # PsychoPy communication
 ```
 
 ## Game Design
