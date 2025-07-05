@@ -8,7 +8,7 @@ This project is an interactive 2D side-scrolling platformer game developed to st
 
 Participants use the PSURP device to control an on-screen dinosaur that must trace static arcs displayed on the screen with high precision. Participants are scored based on how accurately they follow these arcs, with higher accuracy resulting in higher scores. This creates a performance-based feedback system that incentivizes motor control and learning.
 
-The game is deliberately challenging and designed to elicit gradual improvement over time, allowing researchers to measure motor learning processes across repeated exposures. During gameplay, participants may also undergo transcranial brain stimulation, enabling the study of brain-behavior relationships during complex motor tasks.
+The game is deliberately challenging and designed to influence gradual improvement over time, allowing researchers to measure motor learning processes across repeated exposures. During gameplay, participants may also undergo transcranial brain stimulation, enabling the study of brain-behavior relationships during complex motor tasks.
 
 Simultaneously, force data from the PSURP controller are collected to provide detailed measures of response timing and motor execution. This multimodal setup supports the analysis of learning in a controlled valid task environment.
 
@@ -18,12 +18,12 @@ Simultaneously, force data from the PSURP controller are collected to provide de
 
 ```
 /Motor-Learning-Research-Project
-├── Game/                            # Game used for trials
+├── Game/
 │   ├── Assets
 │   │   ├── bgs                     # backgrounds
 │   │   ├── grounds                 # grounds for each level
 │   │   ├── dino_frames             # each frame for dino animation
-│   │   └── sounds                  # 3 sounds used in game
+│   │   └── sounds                  # sounds used in game
 │   │
 │   ├── Data                        # data from trials goes here
 │   └── Game.psyexp                 # the game itself
@@ -39,7 +39,7 @@ The game features 15 levels, each with unique arc patterns and floor designs, co
 
 Players must achieve at least 80% accuracy to advance to the next level.
 
-Each level has 2:00 minutes to complete.
+Each level has 2 minutes to complete.
 
 
 ### Game Modes
@@ -77,8 +77,8 @@ Performs force calibration on the PSURP device. This zeros the baseline force va
 The main menu provides a centralized hub where participants can:
 - Play the game
 - Select game mode (Mode 1 or Mode 2)
-- Access the About screen for project information
 - Navigate to the calibrator for device setup
+- Access the About screen for project information
 - Exit the game
 
 ### About Screen
@@ -118,22 +118,19 @@ All participant data is stored in the Data folder, including:
 
 ### Development Timeline and Challenges
 
-The project evolved through several distinct phases, each presenting unique technical hurdles:
-
-**Phase 1: Hardware Integration**
-The first stage centered on establishing stable, real-time communication with the Black Box PSURP device. This involved designing custom protocols for accurate data acquisition, building robust error handling for connection reliability.
+**Phase 1: Hardware Integration**  
+This phase focused on setting up reliable, real-time communication with the Black Box Toolkit’s PSURP device. Custom code was developed to accurately read force values from the controller and to manage communication issues such as dropped signals or initialization errors, ensuring clean data collection throughout the experiment.
 
 
+**Phase 2: Game Engine Development**  
+The second phase focused on building a fully interactive game within PsychoPy’s Builder environment—despite it not being designed for game development. This stage required the creation of custom systems for character movement, gravity mechanics, and accuracy tracking. A side-scrolling camera system was developed from scratch, along with real-time scoring logic to assess motor performance based on how closely players followed the target paths.
 
-**Phase 2: Game Engine Development**
-Next, the focus shifted to building an interactive game within PsychoPy’s experimental framework—an unconventional environment for game development. This required implementing custom systems for physics-based movement, arc collisions, and precision tracking. A smooth side-scrolling camera system was built from scratch, along with real-time scoring logic to evaluate path accuracy and motor performance.
-
-**Phase 3: Asset Creation and Animation**
-The final phase refined the user experience through cohesive visuals and responsive animation. Frame-by-frame character animations were implemented using PsychoPy’s stimulus system, and consistent art assets were developed across all 15 levels. Asset loading and rendering were also optimized to ensure smooth, uninterrupted gameplay during experimental trials.
+**Phase 3: Asset Creation and Animation**  
+The final phase enhanced the visual and interactive experience through custom art and animation. Character animations were implemented using frame-by-frame sequences, and consistent visual assets were created for all 15 levels.
 
 
 ### Technical Innovation
 
-This project reimagines how PsychoPy can be used, extending it beyond traditional lab tasks into a more interactive and immersive research platform. By combining precise motor control tracking with engaging gameplay, it transforms standard experimental procedures into dynamic experiences without sacrificing scientific precision.
+This project demonstrates how PsychoPy can be pushed far beyond its typical use in structured lab tasks. By integrating precise motor tracking with real-time physics, animation, and interactive gameplay, the system transforms a traditional behavioral task into a fully immersive experience.
 
-The system allows researchers to study motor learning, adaptation, and sensorimotor integration in a way that feels more natural to participants, while still maintaining tight control over variables. It bridges the gap between the structured environment of the lab and the complexity of real-world motor behavior, offering a new approach to designing behavioral experiments that are both rigorous and relevant.
+This approach enables researchers to study motor learning, in a format that feels more natural and engaging to participants. At the same time, it maintains strict control over timing, stimuli, and data collection. The result is a hybrid system that bridges the gap between rigid lab protocols and the dynamic complexity of real-world motor behavior, opening new possibilities for how behavioral experiments can be designed and delivered.
