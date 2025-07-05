@@ -62,15 +62,15 @@ In Mode 2, if players complete the level faster than the allowed time, the lefto
 The primary goal is to reach the metabone at the end of each level while tracing the arcs as accurately as possible. Players must maintain high precision throughout their path to the goal.  
 
 
-## System Components
+## System Routines
 
-### Loading Routines
+### Loading
 
 #### ResetPSURP
 Initializes and resets the PSURP device at the start of the experiment. This ensures the controller is in a known state and clears any residual data before gameplay begins.
 
 #### TARE & RUNE
-Performs force calibration on the PSURP device. This zeros the baseline force values, accounting for drift or hand placement variations before gameplay starts.
+Performs force calibration on the PSURP device. This zeros the baseline force values, accounting for drift before gameplay starts.
 
  
 ### Main Menu
@@ -114,7 +114,6 @@ Post-level evaluation system that assesses participant performance and determine
 All participant data is stored in the Data folder, including:
 - Individual level performance scores
 - Calibrator settings and force thresholds
-- Accuracy measurements and trajectory data
 
 ### Development Timeline and Challenges
 
@@ -123,7 +122,7 @@ This phase focused on setting up reliable, real-time communication with the Blac
 
 
 **Phase 2: Game Engine Development**  
-The second phase focused on building a fully interactive game within PsychoPy’s Builder environment—despite it not being designed for game development. This stage required the creation of custom systems for character movement, gravity mechanics, and accuracy tracking. A side-scrolling camera system was developed from scratch, along with real-time scoring logic to assess motor performance based on how closely players followed the target paths.
+The second phase focused on building a fully interactive game within PsychoPy’s Builder environment, despite it not being designed for game development. This stage required the creation of custom systems for character movement, gravity mechanics, and accuracy tracking. A side-scrolling camera system was developed from scratch, along with real-time scoring logic to assess motor performance based on how closely players followed the target paths.
 
 **Phase 3: Asset Creation and Animation**  
 The final phase enhanced the visual and interactive experience through custom art and animation. Character animations were implemented using frame-by-frame sequences, and consistent visual assets were created for all 15 levels.
