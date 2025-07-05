@@ -26,10 +26,10 @@ Simultaneously, force data from the PSURP controller are collected to provide de
 │   │   └── sounds                  # sounds used in game
 │   │
 │   ├── Data                        # data from trials goes here
-│   └── Game.psyexp                 # the game itself
+│   └── Game.psyexp                 # the game exe
 │
 ├── PSURP/                          
-│   └── PSURP.psyexp                # PsychoPy communication
+│   └── PSURP.psyexp                # PSURP communication exe
 ```
 
 ## Game Design
