@@ -64,7 +64,7 @@ The primary goal is to reach the metabone at the end of each level while tracing
 
 ## System Routines
 
-### Loading
+### StartUp 
 
 #### ResetPSURP
 Initializes and resets the PSURP device at the start of the experiment. This ensures the controller is in a known state and clears any residual data before gameplay begins.
